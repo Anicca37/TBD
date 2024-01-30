@@ -12,10 +12,15 @@ public class ClockManipulation : MonoBehaviour
 
     public Material defaultMaterial;
     public Material highlightMaterial;
+    public GameObject defaultIcon;
+    public GameObject grabIcon;
 
     public Light directionalLight;
 
+    public float interactRange = 10f;
+    private bool canInteract = false;
     private bool isHighlighted = false;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -25,21 +30,61 @@ public class ClockManipulation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // check if the player height is above the height of the chair
+        // check if the player can reach the clock
         float playerHeight = playerBody.position.y;
-        if (playerHeight >= chairHeight)
+        checkInteractable();
+
+        if (playerHeight >= chairHeight && canInteract)
         {
-            HighlightClockHands(true);
+            if (Input.GetButtonDown("Fire1"))
+            {
+                HighlightClockHands(!isHighlighted);
+                defaultIcon.SetActive(!isHighlighted);
+                grabIcon.SetActive(isHighlighted);
+                LockPlayerMovement(isHighlighted);
+            }
         }
         else
         {
             HighlightClockHands(false);
+            defaultIcon.SetActive(true);
+            grabIcon.SetActive(false);
+            LockPlayerMovement(false);
         }
         if (isHighlighted)
         {
             HandleClockAdjustment();
         }
 
+    }
+
+    void checkInteractable()
+    {
+        RaycastHit hit;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out hit, interactRange))
+        {
+            if (hit.collider.CompareTag("Interactable"))
+            {
+                canInteract = true;
+            }
+        }
+        else
+        {
+            canInteract = false;
+        }
+    }
+
+    void LockPlayerMovement(bool lockMovement)
+    {
+        if (lockMovement)
+        {
+            playerBody.GetComponent<CharacterController>().enabled = false;
+        }
+        else
+        {
+            playerBody.GetComponent<CharacterController>().enabled = true;
+        }
     }
 
     void HighlightClockHands(bool highlight)

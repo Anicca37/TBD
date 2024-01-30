@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7819051928693236198}
   - component: {fileID: 284465023931408010}
+  - component: {fileID: 1397452980979419957}
   m_Layer: 0
   m_Name: Clock
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57,7 +58,31 @@ MonoBehaviour:
   rotationSpeed: 10
   defaultMaterial: {fileID: 2100000, guid: d4ad2d7a6886bc14f80429d9939ac0f6, type: 2}
   highlightMaterial: {fileID: 2100000, guid: e2451553c141ce44a9c4988a57a9b874, type: 2}
+  defaultIcon: {fileID: 0}
+  grabIcon: {fileID: 0}
   directionalLight: {fileID: 0}
+  interactRange: 10
+--- !u!135 &1397452980979419957
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3315971166203093636}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3665682542557703589
 GameObject:
   m_ObjectHideFlags: 0
