@@ -334,6 +334,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1350630251 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5118629688310482985, guid: 99a5768928e218e489203c7fac3deabf, type: 3}
+  m_PrefabInstance: {fileID: 1748710799}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1388553648
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,6 +530,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 284465023931408010, guid: 9dcacb3360ef1384d89cb95ebcb077e0, type: 3}
+      propertyPath: playerBody
+      value: 
+      objectReference: {fileID: 1350630251}
     - target: {fileID: 3315971166203093636, guid: 9dcacb3360ef1384d89cb95ebcb077e0, type: 3}
       propertyPath: m_Name
       value: Clock
@@ -569,7 +578,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 0}
+      propertyPath: playerBody
+      value: 
+      objectReference: {fileID: 1350630251}
+    - target: {fileID: 0}
+      propertyPath: isHighlighted
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: isPlayerControlEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
