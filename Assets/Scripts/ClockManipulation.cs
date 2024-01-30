@@ -36,7 +36,7 @@ public class ClockManipulation : MonoBehaviour
 
         if (playerHeight >= chairHeight && canInteract)
         {
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButtonDown("Fire2"))
             {
                 HighlightClockHands(!isHighlighted);
                 defaultIcon.SetActive(!isHighlighted);
