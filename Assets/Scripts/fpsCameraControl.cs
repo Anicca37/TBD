@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fps_camera_test : MonoBehaviour
+public class fpsCameraControl : MonoBehaviour
 {
     public float mouseSensitivity = 100f;
 
