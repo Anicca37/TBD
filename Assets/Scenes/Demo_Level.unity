@@ -557,18 +557,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2049531463963290808, guid: 0182f02c68258c44598755453f599d2c, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3.6074178
-      objectReference: {fileID: 0}
-    - target: {fileID: 2049531463963290808, guid: 0182f02c68258c44598755453f599d2c, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 3.6074178
-      objectReference: {fileID: 0}
-    - target: {fileID: 2049531463963290808, guid: 0182f02c68258c44598755453f599d2c, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 3.6074178
-      objectReference: {fileID: 0}
-    - target: {fileID: 2049531463963290808, guid: 0182f02c68258c44598755453f599d2c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.24
       objectReference: {fileID: 0}
@@ -780,10 +768,6 @@ PrefabInstance:
       propertyPath: playerBody
       value: 
       objectReference: {fileID: 1350630251}
-    - target: {fileID: 284465023931408010, guid: 9dcacb3360ef1384d89cb95ebcb077e0, type: 3}
-      propertyPath: chairHeight
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 284465023931408010, guid: 9dcacb3360ef1384d89cb95ebcb077e0, type: 3}
       propertyPath: directionalLight
       value: 
