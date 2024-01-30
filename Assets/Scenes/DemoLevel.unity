@@ -512,6 +512,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 276871284}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &473888770 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5179340181984459728, guid: 9dcacb3360ef1384d89cb95ebcb077e0, type: 3}
+  m_PrefabInstance: {fileID: 1924559208}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &478666624
 GameObject:
   m_ObjectHideFlags: 0
@@ -866,7 +871,7 @@ Transform:
   - {fileID: 1511538845}
   - {fileID: 1638387266}
   - {fileID: 122237509}
-  - {fileID: 1764329041}
+  - {fileID: 1747489721}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1511538844
@@ -1211,6 +1216,55 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0182f02c68258c44598755453f599d2c, type: 3}
+--- !u!1 &1747489720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1747489721}
+  - component: {fileID: 1747489722}
+  m_Layer: 0
+  m_Name: DoorController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1747489721
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747489720}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16.288599, y: 2.0701256, z: 17.203709}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1764329041}
+  m_Father: {fileID: 1388553649}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1747489722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747489720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fd573f99d000c94389a2a27a5db52db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clockControllers:
+  - {fileID: 473888770}
+  minAngle: 90
+  maxAngle: 180
 --- !u!1001 &1748710799
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1282,7 +1336,7 @@ GameObject:
   - component: {fileID: 1764329042}
   m_Layer: 0
   m_Name: Door
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1296,12 +1350,12 @@ Transform:
   m_GameObject: {fileID: 1764329040}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 16.3, y: 3.32, z: 13.5}
+  m_LocalPosition: {x: 0.011400223, y: 1.2498744, z: -3.7037086}
   m_LocalScale: {x: 7.5, y: 9.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1857031504}
-  m_Father: {fileID: 1388553649}
+  m_Father: {fileID: 1747489721}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &1764329042
 BoxCollider:
@@ -1533,6 +1587,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clock
       objectReference: {fileID: 0}
+    - target: {fileID: 5179340181984459728, guid: 9dcacb3360ef1384d89cb95ebcb077e0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5179340181984459728, guid: 9dcacb3360ef1384d89cb95ebcb077e0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5179340181984459728, guid: 9dcacb3360ef1384d89cb95ebcb077e0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6951733728770608540, guid: 9dcacb3360ef1384d89cb95ebcb077e0, type: 3}
       propertyPath: m_TagString
       value: Untagged
@@ -1745,7 +1811,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "NOTICE: \nDoor locks after 12!"
+  m_text: "NOTICE: \nDoor opens \nfrom 6 to 9!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

@@ -51,6 +51,7 @@ public class ClockManipulation : MonoBehaviour
             grabIcon.SetActive(false);
             LockPlayerMovement(false);
         }
+        
         if (isHighlighted)
         {
             HandleClockAdjustment();
@@ -110,14 +111,14 @@ public class ClockManipulation : MonoBehaviour
             {
                 controller.Rotate(Vector3.forward, scrollInput * rotationSpeed);
             }
+
             // change the light rotation and color
             if (directionalLight != null)
             {
                 directionalLight.transform.Rotate(Vector3.up, scrollInput * rotationSpeed, Space.Self);
                 float time = Mathf.Repeat(directionalLight.transform.rotation.eulerAngles.y, 360f) / 360f;
                 directionalLight.color = Color.Lerp(Color.black, Color.white, time);
-            }
-            
+            }         
         }
     }
 }
