@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8230165543663345082}
   - component: {fileID: 3486841178209704575}
   - component: {fileID: 2181259188175529619}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Leg (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 992193520947504324}
   - component: {fileID: 4042264586778000203}
   - component: {fileID: 2716728924236505574}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Leg (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4638927357766828515}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Chair_legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -212,7 +212,7 @@ GameObject:
   - component: {fileID: 3628807611011117896}
   - component: {fileID: 942467592526569815}
   - component: {fileID: 7077921672803892286}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Leg (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -295,7 +295,7 @@ GameObject:
   - component: {fileID: 5303839599649457981}
   - component: {fileID: 433187816430075674}
   - component: {fileID: 1039709110083997554}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -378,9 +378,9 @@ GameObject:
   - component: {fileID: 2049531463963290808}
   - component: {fileID: 5586927325473884334}
   - component: {fileID: 3971002310379700799}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Chair
-  m_TagString: Untagged
+  m_TagString: Pickupable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -461,7 +461,7 @@ GameObject:
   - component: {fileID: 1725361723671714380}
   - component: {fileID: 6978794196158494916}
   - component: {fileID: 343565743665491351}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Chair_base
   m_TagString: Untagged
   m_Icon: {fileID: 0}

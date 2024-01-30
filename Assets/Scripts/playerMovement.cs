@@ -8,8 +8,8 @@ public class playerMovement : MonoBehaviour
     public float walkSpeed = 12f;
     public float runSpeed = 24f; // Double the walk speed for running
     public float movementSpeed; // Current movement speed
-    public float jumpHeight = 5f;
-    public float gravity = -9.8f;
+    public float jumpHeight = 3f;
+    public float gravity = -12.8f;
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;

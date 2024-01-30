@@ -110,8 +110,8 @@ MonoBehaviour:
   walkSpeed: 12
   runSpeed: 24
   movementSpeed: 0
-  jumpHeight: 5
-  gravity: -9.8
+  jumpHeight: 3
+  gravity: -12.8
   groundCheck: {fileID: 1284986978386880318}
   groundDistance: 0.4
   groundMask:
@@ -129,9 +129,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d41f621db78114f4ba581276116f0d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickupableTag: pickupable
+  pickupableTag: Pickupable
   attachPoint: {fileID: 6686517100237193317}
-  pickupRange: 99
+  pickupRange: 10
 --- !u!1 &6370624094172780220
 GameObject:
   m_ObjectHideFlags: 0

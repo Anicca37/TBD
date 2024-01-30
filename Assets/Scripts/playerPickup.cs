@@ -7,7 +7,7 @@ public class playerPickup : MonoBehaviour
 
     private GameObject currentPickup;
     private Rigidbody currentPickupRb;
-    public float pickupRange = 5f;
+    public float pickupRange = 10f;
 
     void Update()
     {
