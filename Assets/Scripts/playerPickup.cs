@@ -45,8 +45,8 @@ public class playerPickup : MonoBehaviour
 
                 // Attach the pickup to the attachPoint
                 currentPickup.transform.parent = attachPoint;
-                currentPickup.transform.localPosition = Vector3.zero;
-                currentPickup.transform.localRotation = Quaternion.identity;
+                // currentPickup.transform.localPosition = Vector3.zero;
+                // currentPickup.transform.localRotation = Quaternion.identity;
             }
         }
     }
