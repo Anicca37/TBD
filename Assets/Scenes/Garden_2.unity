@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 3487225}
   - component: {fileID: 3487228}
   - component: {fileID: 3487227}
-  - component: {fileID: 3487226}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -157,27 +156,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1169643983}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &3487226
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3487224}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &3487227
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1181,7 +1159,6 @@ GameObject:
   - component: {fileID: 214205954}
   - component: {fileID: 214205957}
   - component: {fileID: 214205956}
-  - component: {fileID: 214205955}
   m_Layer: 0
   m_Name: petal (1)
   m_TagString: Untagged
@@ -1204,27 +1181,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1169643983}
   m_LocalEulerAnglesHint: {x: -70.549, y: 0, z: 0}
---- !u!135 &214205955
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 214205953}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &214205956
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1582,7 +1538,6 @@ GameObject:
   - component: {fileID: 345652132}
   - component: {fileID: 345652135}
   - component: {fileID: 345652134}
-  - component: {fileID: 345652133}
   m_Layer: 0
   m_Name: petal (2)
   m_TagString: Untagged
@@ -1605,27 +1560,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1607983269}
   m_LocalEulerAnglesHint: {x: 52.007, y: 25.292, z: 9.744}
---- !u!135 &345652133
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 345652131}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &345652134
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1687,7 +1621,6 @@ GameObject:
   - component: {fileID: 354225034}
   - component: {fileID: 354225033}
   - component: {fileID: 354225032}
-  - component: {fileID: 354225031}
   m_Layer: 0
   m_Name: petal (4)
   m_TagString: Untagged
@@ -1695,27 +1628,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!135 &354225031
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 354225030}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &354225032
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2012,6 +1924,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 415651516}
+  - component: {fileID: 415651518}
+  - component: {fileID: 415651517}
   m_Layer: 0
   m_Name: purple flower
   m_TagString: Purple
@@ -2040,6 +1954,55 @@ Transform:
   - {fileID: 1475416172}
   m_Father: {fileID: 429626560}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &415651517
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415651515}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
+--- !u!54 &415651518
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415651515}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &429626559
 GameObject:
   m_ObjectHideFlags: 0
@@ -2461,7 +2424,6 @@ GameObject:
   - component: {fileID: 581978270}
   - component: {fileID: 581978273}
   - component: {fileID: 581978272}
-  - component: {fileID: 581978271}
   m_Layer: 0
   m_Name: petal (3)
   m_TagString: Untagged
@@ -2484,27 +2446,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2019803994}
   m_LocalEulerAnglesHint: {x: -49.99, y: -186.369, z: 180.819}
---- !u!135 &581978271
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 581978269}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &581978272
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2640,7 +2581,6 @@ GameObject:
   - component: {fileID: 598858439}
   - component: {fileID: 598858442}
   - component: {fileID: 598858441}
-  - component: {fileID: 598858440}
   m_Layer: 0
   m_Name: petal (2)
   m_TagString: Untagged
@@ -2663,27 +2603,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1197623332}
   m_LocalEulerAnglesHint: {x: 52.007, y: 25.292, z: 9.744}
---- !u!135 &598858440
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 598858438}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &598858441
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3386,7 +3305,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -3468,7 +3387,6 @@ GameObject:
   - component: {fileID: 756234783}
   - component: {fileID: 756234786}
   - component: {fileID: 756234785}
-  - component: {fileID: 756234784}
   m_Layer: 0
   m_Name: petal (3)
   m_TagString: Untagged
@@ -3491,27 +3409,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1607983269}
   m_LocalEulerAnglesHint: {x: -49.99, y: -186.369, z: 180.819}
---- !u!135 &756234784
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 756234782}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &756234785
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3913,7 +3810,6 @@ GameObject:
   - component: {fileID: 815413800}
   - component: {fileID: 815413803}
   - component: {fileID: 815413802}
-  - component: {fileID: 815413801}
   m_Layer: 0
   m_Name: petal
   m_TagString: Untagged
@@ -3936,27 +3832,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1169643983}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &815413801
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 815413799}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &815413802
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4018,7 +3893,6 @@ GameObject:
   - component: {fileID: 851497637}
   - component: {fileID: 851497640}
   - component: {fileID: 851497639}
-  - component: {fileID: 851497638}
   m_Layer: 0
   m_Name: petal (1)
   m_TagString: Untagged
@@ -4041,27 +3915,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2019803994}
   m_LocalEulerAnglesHint: {x: -70.549, y: 0, z: 0}
---- !u!135 &851497638
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 851497636}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &851497639
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4197,7 +4050,6 @@ GameObject:
   - component: {fileID: 869562002}
   - component: {fileID: 869562005}
   - component: {fileID: 869562004}
-  - component: {fileID: 869562003}
   m_Layer: 0
   m_Name: petal
   m_TagString: Untagged
@@ -4220,27 +4072,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1197623332}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &869562003
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 869562001}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &869562004
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5537,7 +5368,6 @@ GameObject:
   - component: {fileID: 1156015074}
   - component: {fileID: 1156015077}
   - component: {fileID: 1156015076}
-  - component: {fileID: 1156015075}
   m_Layer: 0
   m_Name: petal (4)
   m_TagString: Untagged
@@ -5560,27 +5390,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1607983269}
   m_LocalEulerAnglesHint: {x: -24.207, y: 0, z: 0}
---- !u!135 &1156015075
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1156015073}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1156015076
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5745,6 +5554,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1169643983}
+  - component: {fileID: 1169643985}
+  - component: {fileID: 1169643984}
   m_Layer: 0
   m_Name: red flower
   m_TagString: Red
@@ -5773,6 +5584,55 @@ Transform:
   - {fileID: 3487225}
   m_Father: {fileID: 429626560}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &1169643984
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169643982}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
+--- !u!54 &1169643985
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169643982}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1173953358
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5886,7 +5746,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -6040,6 +5900,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1197623332}
+  - component: {fileID: 1197623334}
+  - component: {fileID: 1197623333}
   m_Layer: 0
   m_Name: pink flower
   m_TagString: Pink
@@ -6068,6 +5930,55 @@ Transform:
   - {fileID: 1953993126}
   m_Father: {fileID: 429626560}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &1197623333
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197623331}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
+--- !u!54 &1197623334
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197623331}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1217032251
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6176,7 +6087,6 @@ GameObject:
   - component: {fileID: 1218419255}
   - component: {fileID: 1218419254}
   - component: {fileID: 1218419253}
-  - component: {fileID: 1218419252}
   m_Layer: 0
   m_Name: petal (2)
   m_TagString: Untagged
@@ -6184,27 +6094,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!135 &1218419252
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1218419251}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1218419253
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6281,7 +6170,6 @@ GameObject:
   - component: {fileID: 1273104326}
   - component: {fileID: 1273104329}
   - component: {fileID: 1273104328}
-  - component: {fileID: 1273104327}
   m_Layer: 0
   m_Name: petal (4)
   m_TagString: Untagged
@@ -6304,27 +6192,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2019803994}
   m_LocalEulerAnglesHint: {x: -24.207, y: 0, z: 0}
---- !u!135 &1273104327
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1273104325}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1273104328
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6608,7 +6475,6 @@ GameObject:
   - component: {fileID: 1304880541}
   - component: {fileID: 1304880540}
   - component: {fileID: 1304880539}
-  - component: {fileID: 1304880538}
   m_Layer: 0
   m_Name: petal (1)
   m_TagString: Untagged
@@ -6616,27 +6482,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!135 &1304880538
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1304880537}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1304880539
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7404,7 +7249,6 @@ GameObject:
   - component: {fileID: 1423943343}
   - component: {fileID: 1423943346}
   - component: {fileID: 1423943345}
-  - component: {fileID: 1423943344}
   m_Layer: 0
   m_Name: petal (2)
   m_TagString: Untagged
@@ -7427,27 +7271,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2019803994}
   m_LocalEulerAnglesHint: {x: 52.007, y: 25.292, z: 9.744}
---- !u!135 &1423943344
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1423943342}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1423943345
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7583,7 +7406,6 @@ GameObject:
   - component: {fileID: 1428767098}
   - component: {fileID: 1428767101}
   - component: {fileID: 1428767100}
-  - component: {fileID: 1428767099}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -7606,27 +7428,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2019803994}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1428767099
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1428767097}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1428767100
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7762,7 +7563,6 @@ GameObject:
   - component: {fileID: 1475416172}
   - component: {fileID: 1475416171}
   - component: {fileID: 1475416170}
-  - component: {fileID: 1475416169}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -7770,27 +7570,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!135 &1475416169
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1475416168}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1475416170
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7975,7 +7754,6 @@ GameObject:
   - component: {fileID: 1525786140}
   - component: {fileID: 1525786143}
   - component: {fileID: 1525786142}
-  - component: {fileID: 1525786141}
   m_Layer: 0
   m_Name: petal (4)
   m_TagString: Untagged
@@ -7998,27 +7776,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1169643983}
   m_LocalEulerAnglesHint: {x: -24.207, y: 0, z: 0}
---- !u!135 &1525786141
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1525786139}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1525786142
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8186,7 +7943,6 @@ GameObject:
   - component: {fileID: 1594840182}
   - component: {fileID: 1594840181}
   - component: {fileID: 1594840180}
-  - component: {fileID: 1594840179}
   m_Layer: 0
   m_Name: petal (3)
   m_TagString: Untagged
@@ -8194,27 +7950,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!135 &1594840179
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1594840178}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1594840180
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8363,6 +8098,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1607983269}
+  - component: {fileID: 1607983271}
+  - component: {fileID: 1607983270}
   m_Layer: 0
   m_Name: blue flower
   m_TagString: Blue
@@ -8391,6 +8128,55 @@ Transform:
   - {fileID: 1989461799}
   m_Father: {fileID: 429626560}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &1607983270
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607983268}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
+--- !u!54 &1607983271
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607983268}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1612683850
 GameObject:
   m_ObjectHideFlags: 0
@@ -9152,7 +8938,6 @@ GameObject:
   - component: {fileID: 1803783597}
   - component: {fileID: 1803783600}
   - component: {fileID: 1803783599}
-  - component: {fileID: 1803783598}
   m_Layer: 0
   m_Name: petal (4)
   m_TagString: Untagged
@@ -9175,27 +8960,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1197623332}
   m_LocalEulerAnglesHint: {x: -24.207, y: 0, z: 0}
---- !u!135 &1803783598
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1803783596}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1803783599
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9318,7 +9082,6 @@ GameObject:
   - component: {fileID: 1807112837}
   - component: {fileID: 1807112840}
   - component: {fileID: 1807112839}
-  - component: {fileID: 1807112838}
   m_Layer: 0
   m_Name: petal
   m_TagString: Untagged
@@ -9341,27 +9104,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2019803994}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1807112838
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1807112836}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1807112839
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9699,7 +9441,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -9855,7 +9597,6 @@ GameObject:
   - component: {fileID: 1850136885}
   - component: {fileID: 1850136888}
   - component: {fileID: 1850136887}
-  - component: {fileID: 1850136886}
   m_Layer: 0
   m_Name: petal (3)
   m_TagString: Untagged
@@ -9878,27 +9619,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1197623332}
   m_LocalEulerAnglesHint: {x: -49.99, y: -186.369, z: 180.819}
---- !u!135 &1850136886
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1850136884}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1850136887
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10158,7 +9878,6 @@ GameObject:
   - component: {fileID: 1888514730}
   - component: {fileID: 1888514733}
   - component: {fileID: 1888514732}
-  - component: {fileID: 1888514731}
   m_Layer: 0
   m_Name: petal
   m_TagString: Untagged
@@ -10181,27 +9900,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1607983269}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1888514731
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1888514729}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1888514732
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10579,7 +10277,6 @@ GameObject:
   - component: {fileID: 1920493205}
   - component: {fileID: 1920493204}
   - component: {fileID: 1920493203}
-  - component: {fileID: 1920493202}
   m_Layer: 0
   m_Name: petal
   m_TagString: Untagged
@@ -10587,27 +10284,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!135 &1920493202
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1920493201}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1920493203
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10758,7 +10434,6 @@ GameObject:
   - component: {fileID: 1933756287}
   - component: {fileID: 1933756290}
   - component: {fileID: 1933756289}
-  - component: {fileID: 1933756288}
   m_Layer: 0
   m_Name: petal (2)
   m_TagString: Untagged
@@ -10781,27 +10456,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1169643983}
   m_LocalEulerAnglesHint: {x: 52.007, y: 25.292, z: 9.744}
---- !u!135 &1933756288
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1933756286}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1933756289
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10863,7 +10517,6 @@ GameObject:
   - component: {fileID: 1948788547}
   - component: {fileID: 1948788550}
   - component: {fileID: 1948788549}
-  - component: {fileID: 1948788548}
   m_Layer: 0
   m_Name: petal (1)
   m_TagString: Untagged
@@ -10886,27 +10539,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1607983269}
   m_LocalEulerAnglesHint: {x: -70.549, y: 0, z: 0}
---- !u!135 &1948788548
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1948788546}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1948788549
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10991,7 +10623,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -11073,7 +10705,6 @@ GameObject:
   - component: {fileID: 1953993126}
   - component: {fileID: 1953993129}
   - component: {fileID: 1953993128}
-  - component: {fileID: 1953993127}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -11096,27 +10727,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1197623332}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1953993127
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1953993125}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1953993128
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11178,7 +10788,6 @@ GameObject:
   - component: {fileID: 1989461799}
   - component: {fileID: 1989461802}
   - component: {fileID: 1989461801}
-  - component: {fileID: 1989461800}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -11201,27 +10810,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1607983269}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1989461800
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1989461798}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1989461801
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11283,7 +10871,6 @@ GameObject:
   - component: {fileID: 1992800110}
   - component: {fileID: 1992800113}
   - component: {fileID: 1992800112}
-  - component: {fileID: 1992800111}
   m_Layer: 0
   m_Name: petal (1)
   m_TagString: Untagged
@@ -11306,27 +10893,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1197623332}
   m_LocalEulerAnglesHint: {x: -70.549, y: 0, z: 0}
---- !u!135 &1992800111
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1992800109}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1992800112
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11411,7 +10977,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -11599,6 +11165,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2019803994}
+  - component: {fileID: 2019803996}
+  - component: {fileID: 2019803995}
   m_Layer: 0
   m_Name: orange flower
   m_TagString: Orange
@@ -11627,6 +11195,55 @@ Transform:
   - {fileID: 1428767098}
   m_Father: {fileID: 429626560}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &2019803995
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019803993}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
+--- !u!54 &2019803996
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019803993}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &2031922585
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12003,7 +11620,6 @@ GameObject:
   - component: {fileID: 2134029941}
   - component: {fileID: 2134029944}
   - component: {fileID: 2134029943}
-  - component: {fileID: 2134029942}
   m_Layer: 0
   m_Name: petal (3)
   m_TagString: Untagged
@@ -12026,27 +11642,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1169643983}
   m_LocalEulerAnglesHint: {x: -49.99, y: -186.369, z: 180.819}
---- !u!135 &2134029942
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2134029940}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2134029943
 MeshRenderer:
   m_ObjectHideFlags: 0
