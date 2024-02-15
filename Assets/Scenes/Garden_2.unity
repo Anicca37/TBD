@@ -2013,8 +2013,8 @@ GameObject:
   m_Component:
   - component: {fileID: 415651516}
   m_Layer: 0
-  m_Name: Flower
-  m_TagString: Untagged
+  m_Name: purple flower
+  m_TagString: Purple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2027,9 +2027,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 415651515}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.115788, y: 12.284848, z: 5.3947806}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 33.801674, y: -30.785152, z: 1.2}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1920493205}
@@ -2038,7 +2038,7 @@ Transform:
   - {fileID: 1304880541}
   - {fileID: 1594840182}
   - {fileID: 1475416172}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 429626560}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &429626559
 GameObject:
@@ -2065,10 +2065,15 @@ Transform:
   m_GameObject: {fileID: 429626559}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -51.91746, y: 43.07, z: 4.857525}
+  m_LocalPosition: {x: -56.7, y: 41.8, z: 4.857525}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 415651516}
+  - {fileID: 1169643983}
+  - {fileID: 1607983269}
+  - {fileID: 2019803994}
+  - {fileID: 1197623332}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &503434129
@@ -3360,8 +3365,8 @@ GameObject:
   - component: {fileID: 742033332}
   - component: {fileID: 742033331}
   m_Layer: 0
-  m_Name: rock
-  m_TagString: Untagged
+  m_Name: orange rock
+  m_TagString: Orange
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3446,7 +3451,7 @@ Transform:
   m_GameObject: {fileID: 742033330}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.10946983, z: -0, w: 0.9939901}
-  m_LocalPosition: {x: 38.617462, y: 43.07091, z: -1.757525}
+  m_LocalPosition: {x: 39.3, y: 43.07091, z: -0.1}
   m_LocalScale: {x: 3.5000002, y: 2, z: 6.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5741,8 +5746,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1169643983}
   m_Layer: 0
-  m_Name: Flower (4)
-  m_TagString: Untagged
+  m_Name: red flower
+  m_TagString: Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5755,9 +5760,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1169643982}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.115788, y: 12.284848, z: -25.9}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 33.801674, y: -30.785152, z: -34.9}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 815413800}
@@ -5766,7 +5771,7 @@ Transform:
   - {fileID: 214205954}
   - {fileID: 2134029941}
   - {fileID: 3487225}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 429626560}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1173953358
 PrefabInstance:
@@ -5860,8 +5865,8 @@ GameObject:
   - component: {fileID: 1192464401}
   - component: {fileID: 1192464400}
   m_Layer: 0
-  m_Name: rock (2)
-  m_TagString: Untagged
+  m_Name: blue rock
+  m_TagString: Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6036,8 +6041,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1197623332}
   m_Layer: 0
-  m_Name: Flower (2)
-  m_TagString: Untagged
+  m_Name: pink flower
+  m_TagString: Pink
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6050,9 +6055,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1197623331}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.115788, y: 12.284848, z: 18.3}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 33.801674, y: -30.785152, z: 20.1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 869562002}
@@ -6061,7 +6066,7 @@ Transform:
   - {fileID: 1992800110}
   - {fileID: 1850136885}
   - {fileID: 1953993126}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 429626560}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1217032251
 PrefabInstance:
@@ -8359,8 +8364,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1607983269}
   m_Layer: 0
-  m_Name: Flower (3)
-  m_TagString: Untagged
+  m_Name: blue flower
+  m_TagString: Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8373,9 +8378,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1607983268}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.115788, y: 12.284848, z: 35.9}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 33.801674, y: -30.785152, z: 39.6}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1888514730}
@@ -8384,7 +8389,7 @@ Transform:
   - {fileID: 1948788547}
   - {fileID: 756234783}
   - {fileID: 1989461799}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 429626560}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1612683850
 GameObject:
@@ -9673,8 +9678,8 @@ GameObject:
   - component: {fileID: 1837797533}
   - component: {fileID: 1837797532}
   m_Layer: 0
-  m_Name: rock (3)
-  m_TagString: Untagged
+  m_Name: red rock
+  m_TagString: Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9759,7 +9764,7 @@ Transform:
   m_GameObject: {fileID: 1837797531}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.10946983, z: -0, w: 0.9939901}
-  m_LocalPosition: {x: 38.71746, y: 43.07091, z: 8.842475}
+  m_LocalPosition: {x: 39, y: 43.07091, z: 19.6}
   m_LocalScale: {x: 3.5000002, y: 2, z: 6.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10965,8 +10970,8 @@ GameObject:
   - component: {fileID: 1951745124}
   - component: {fileID: 1951745123}
   m_Layer: 0
-  m_Name: rock (1)
-  m_TagString: Untagged
+  m_Name: purple rock
+  m_TagString: Purple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11051,7 +11056,7 @@ Transform:
   m_GameObject: {fileID: 1951745122}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.10462727, z: -0, w: 0.99451154}
-  m_LocalPosition: {x: 38.2, y: 43.07091, z: -22.4}
+  m_LocalPosition: {x: 38.3, y: 43.07091, z: -20.1}
   m_LocalScale: {x: 3.4999998, y: 2, z: 6.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11385,8 +11390,8 @@ GameObject:
   - component: {fileID: 2004017853}
   - component: {fileID: 2004017852}
   m_Layer: 0
-  m_Name: rock (4)
-  m_TagString: Untagged
+  m_Name: pink rock
+  m_TagString: Pink
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11471,7 +11476,7 @@ Transform:
   m_GameObject: {fileID: 2004017851}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.0058559924, z: -0, w: 0.9999829}
-  m_LocalPosition: {x: 38.617462, y: 43.07091, z: 20.642475}
+  m_LocalPosition: {x: 38.4, y: 43.07091, z: 41.1}
   m_LocalScale: {x: 3.5000005, y: 2, z: 6.500001}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11595,8 +11600,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2019803994}
   m_Layer: 0
-  m_Name: Flower (1)
-  m_TagString: Untagged
+  m_Name: orange flower
+  m_TagString: Orange
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11609,9 +11614,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2019803993}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.115788, y: 12.284848, z: -10.8}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 33.801674, y: -30.785152, z: -17.6}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1807112837}
@@ -11620,7 +11625,7 @@ Transform:
   - {fileID: 851497637}
   - {fileID: 581978270}
   - {fileID: 1428767098}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 429626560}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2031922585
 PrefabInstance:
@@ -12105,8 +12110,3 @@ SceneRoots:
   - {fileID: 686175732}
   - {fileID: 429626560}
   - {fileID: 761384227}
-  - {fileID: 415651516}
-  - {fileID: 1169643983}
-  - {fileID: 1607983269}
-  - {fileID: 2019803994}
-  - {fileID: 1197623332}
