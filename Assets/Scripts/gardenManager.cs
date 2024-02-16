@@ -7,8 +7,8 @@ public class GardenManager : MonoBehaviour
     public GameObject VenusFlytrap;
     public ClockManipulation clockController;
     
-    private bool isFloralMatched = true;
-    private bool isWindChimesPlayed = true;
+    private bool isFloralMatched = false;
+    private bool isWindChimesPlayed = false;
     private bool isClockSet = false;
 
     void Awake()
