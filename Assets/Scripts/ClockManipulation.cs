@@ -21,11 +21,14 @@ public class ClockManipulation : MonoBehaviour
     public float interactRange = 10f;
     private bool canInteract = false;
     private bool isHighlighted = false;
+
+    private string currentScene = "";
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        Debug.Log("Current Scene: " + currentScene);
     }
 
     // Update is called once per frame
@@ -135,7 +138,13 @@ public class ClockManipulation : MonoBehaviour
                 {
                     directionalLight.color = Color.Lerp(Color.white, Color.black, timeOfDay * 2);
                 }
-            }         
+            } 
+
+            // check current scene
+            if (currentScene == "Garden_2")
+            {
+                GardenManager.Instance.CompletePuzzle("Clock");  
+            }
         }
     }
 

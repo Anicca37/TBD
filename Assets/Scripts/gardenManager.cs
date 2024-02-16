@@ -1,13 +1,14 @@
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GardenManager : MonoBehaviour
 {
-    public static GameManager Instance;
+    public static GardenManager Instance;
 
+    public GameObject VenusFlytrap;
     public ClockManipulation clockController;
-
-    private bool isFloralMatched = false;
-    private bool isWindChimesPlayed = false;
+    
+    private bool isFloralMatched = true;
+    private bool isWindChimesPlayed = true;
     private bool isClockSet = false;
 
     void Awake()
@@ -16,6 +17,9 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+
+            // set VenusFlytrap to inactive
+            VenusFlytrap.SetActive(false);
         }
         else
         {
@@ -49,10 +53,11 @@ public class GameManager : MonoBehaviour
                 }
                 else
                 {
-                    // clockController.checkClockSet()
-                    isClockSet = true;
-                    
-                    MakeVenusFlytrapBloom(); // Sequence correct
+                    if (clockController.checkClockSet(0f, 180f))
+                    {
+                        isClockSet = true;
+                        MakeVenusFlytrapBloom(); // Sequence correct
+                    }
                 }
                 break;
             case "Scales": // Scales interacted at any point floods the garden
@@ -74,6 +79,9 @@ public class GameManager : MonoBehaviour
     void MakeVenusFlytrapBloom()
     {
         Debug.Log("Venus flytrap blooms, revealing escape path.");
+        
+        // set VenusFlytrap to active
+        VenusFlytrap.SetActive(true);
     }
 
     void AttractBirds()
@@ -100,6 +108,9 @@ public class GameManager : MonoBehaviour
         isFloralMatched = false;
         isWindChimesPlayed = false;
         isClockSet = false;
+
+        VenusFlytrap.SetActive(false);
+        
         // Optionally, reload the scene to visually reset everything
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }

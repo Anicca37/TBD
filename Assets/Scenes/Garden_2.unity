@@ -4470,6 +4470,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45293210072c31b41b263071c6eb2585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  VenusFlytrap: {fileID: 1181773697}
+  clockController: {fileID: 1108567185}
 --- !u!4 &1070179845
 Transform:
   m_ObjectHideFlags: 0
@@ -4683,6 +4685,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7142122417593800428, guid: eaea56da31203be49ba8401ade319be8, type: 3}
   m_PrefabInstance: {fileID: 1100652765}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1108567185 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 284465023931408010, guid: 9dcacb3360ef1384d89cb95ebcb077e0, type: 3}
+  m_PrefabInstance: {fileID: 57598431}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8821c1668860eae45acfad390f9de553, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1118666203
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4951,7 +4964,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1181773698}
   m_Layer: 0
-  m_Name: Venus Flytrap
+  m_Name: VenusFlytrap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4966,8 +4979,8 @@ Transform:
   m_GameObject: {fileID: 1181773697}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.554682, y: 6.6934643, z: 9.665964}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 31.787, y: 2.72, z: -27.993}
+  m_LocalScale: {x: 3.9257, y: 3.9257, z: 3.9257}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1566048846}
