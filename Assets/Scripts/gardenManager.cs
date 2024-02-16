@@ -4,6 +4,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    public ClockManipulation clockController;
+
     private bool isFloralMatched = false;
     private bool isWindChimesPlayed = false;
     private bool isClockSet = false;
@@ -47,7 +49,9 @@ public class GameManager : MonoBehaviour
                 }
                 else
                 {
+                    // clockController.checkClockSet()
                     isClockSet = true;
+                    
                     MakeVenusFlytrapBloom(); // Sequence correct
                 }
                 break;

@@ -138,4 +138,19 @@ public class ClockManipulation : MonoBehaviour
             }         
         }
     }
+
+    public bool checkClockSet(float minAngle, float maxAngle)
+    {
+        // check if the clock hand is set to the correct time
+        foreach (Transform controller in clockControllers)
+        {
+            float angle = controller.localEulerAngles.z;
+            if (angle >= minAngle && angle <= maxAngle)
+            {
+                Debug.Log("Clock is set!");
+                return true;
+            }
+        }
+        return false;
+    }
 }

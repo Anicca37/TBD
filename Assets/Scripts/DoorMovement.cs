@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DoorMovement : MonoBehaviour
 {
-    public Transform[] clockControllers;
+    public ClockManipulation clockController;
     public float minAngle = 90f;
     public float maxAngle = 180f;
 
@@ -38,16 +38,6 @@ public class DoorMovement : MonoBehaviour
 
     bool CanDoorOpen(float minAngle, float maxAngle)
     {
-        // check if the door can be opened
-        foreach (Transform controller in clockControllers)
-        {
-            float angle = controller.localEulerAngles.z;
-            if (angle >= minAngle && angle <= maxAngle)
-            {
-                Debug.Log("Door is open!");
-                return true;
-            }
-        }
-        return false;
+        return clockController.checkClockSet(minAngle, maxAngle);
     }
 }
