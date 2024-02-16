@@ -25,12 +25,17 @@ public class ColorMatch : MonoBehaviour
 
     void SnapFlowerToStone(GameObject flower)
     {
-        flower.transform.position = transform.position; // Snap to stone position
+        float yOffset = 1f; 
+
         var flowerRb = flower.GetComponent<Rigidbody>();
         if (flowerRb != null)
         {
-            flowerRb.isKinematic = false; // Keep it movable
+            flowerRb.detectCollisions = false; 
+            Destroy(flowerRb); 
         }
+
+        Vector3 newPosition = new Vector3(transform.position.x, transform.position.y + yOffset, transform.position.z);
+        flower.transform.position = newPosition;
     }
 
     void TriggerWindEffect()
