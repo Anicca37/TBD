@@ -36,7 +36,7 @@ public class ClockManipulation : MonoBehaviour
     {
         // check if the player can reach the clock
         float playerHeight = playerBody.position.y;
-        checkInteractable();
+        CheckInteractable();
 
         if (playerHeight >= chairHeight && canInteract)
         {
@@ -45,7 +45,7 @@ public class ClockManipulation : MonoBehaviour
                 HighlightClockHands(!isHighlighted);
                 defaultIcon.SetActive(!isHighlighted);
                 grabIcon.SetActive(isHighlighted);
-                // LockPlayerMovement(isHighlighted);
+                LockPlayerMovement(isHighlighted);
             }
         }
         else
@@ -53,7 +53,7 @@ public class ClockManipulation : MonoBehaviour
             HighlightClockHands(false);
             defaultIcon.SetActive(true);
             grabIcon.SetActive(false);
-            // LockPlayerMovement(false);
+            LockPlayerMovement(false);
         }
         
         if (isHighlighted)
@@ -63,7 +63,7 @@ public class ClockManipulation : MonoBehaviour
 
     }
 
-    void checkInteractable()
+    void CheckInteractable()
     {
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -84,11 +84,11 @@ public class ClockManipulation : MonoBehaviour
     {
         if (lockMovement)
         {
-            playerBody.GetComponent<CharacterController>().enabled = false;
+            playerBody.GetComponent<playerMovement>().enabled = false;
         }
         else
         {
-            playerBody.GetComponent<CharacterController>().enabled = true;
+            playerBody.GetComponent<playerMovement>().enabled = true;
         }
     }
 
@@ -148,7 +148,7 @@ public class ClockManipulation : MonoBehaviour
         }
     }
 
-    public bool checkClockSet(float minAngle, float maxAngle)
+    public bool CheckClockSet(float minAngle, float maxAngle)
     {
         // check if the clock hand is set to the correct time
         foreach (Transform controller in clockControllers)

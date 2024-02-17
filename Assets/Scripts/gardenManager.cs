@@ -5,6 +5,7 @@ public class GardenManager : MonoBehaviour
     public static GardenManager Instance;
 
     public GameObject VenusFlytrap;
+    public GameObject EscapeCanvas;
     public ClockManipulation clockController;
     
     private bool isFloralMatched = false;
@@ -16,10 +17,11 @@ public class GardenManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            // DontDestroyOnLoad(gameObject);
 
             // set VenusFlytrap to inactive
             VenusFlytrap.SetActive(false);
+            EscapeCanvas.SetActive(false);
         }
         else
         {
@@ -53,7 +55,7 @@ public class GardenManager : MonoBehaviour
                 }
                 else
                 {
-                    if (clockController.checkClockSet(0f, 180f))
+                    if (clockController.CheckClockSet(0f, 180f))
                     {
                         isClockSet = true;
                         MakeVenusFlytrapBloom(); // Sequence correct
@@ -62,6 +64,12 @@ public class GardenManager : MonoBehaviour
                 break;
             case "Scales": // Scales interacted at any point floods the garden
                 FloodGarden();
+                break;
+            case "Escape":
+                if (isFloralMatched && isWindChimesPlayed && isClockSet)
+                {
+                    EscapeGarden();
+                }
                 break;
         }
     }
@@ -102,6 +110,14 @@ public class GardenManager : MonoBehaviour
         ResetPuzzles(); // Resets the puzzles due to flooding
     }
 
+    void EscapeGarden()
+    {
+        Debug.Log("Escaping the garden.");
+
+        // set EscapeCanvas to active
+        EscapeCanvas.SetActive(true);
+    }
+
     void ResetPuzzles()
     {
         Debug.Log("Resetting puzzles.");
@@ -110,6 +126,7 @@ public class GardenManager : MonoBehaviour
         isClockSet = false;
 
         VenusFlytrap.SetActive(false);
+        EscapeCanvas.SetActive(false);
         
         // Optionally, reload the scene to visually reset everything
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
