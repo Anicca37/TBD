@@ -8,7 +8,7 @@ public class ClockManipulation : MonoBehaviour
     public Transform[] clockHands;
     public Transform[] clockControllers;
     public float chairHeight = 4.45f;
-    public float rotationSpeed = 10f;
+    public float rotationSpeed = 20f;
 
     public Material defaultMaterial;
     public Material highlightMaterial;
@@ -16,15 +16,19 @@ public class ClockManipulation : MonoBehaviour
     public GameObject grabIcon;
 
     public Light directionalLight;
+    private bool isDay = true;
 
     public float interactRange = 10f;
     private bool canInteract = false;
     private bool isHighlighted = false;
+
+    private string currentScene = "";
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        Debug.Log("Current Scene: " + currentScene);
     }
 
     // Update is called once per frame
@@ -32,7 +36,7 @@ public class ClockManipulation : MonoBehaviour
     {
         // check if the player can reach the clock
         float playerHeight = playerBody.position.y;
-        checkInteractable();
+        CheckInteractable();
 
         if (playerHeight >= chairHeight && canInteract)
         {
@@ -59,7 +63,7 @@ public class ClockManipulation : MonoBehaviour
 
     }
 
-    void checkInteractable()
+    void CheckInteractable()
     {
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -80,11 +84,11 @@ public class ClockManipulation : MonoBehaviour
     {
         if (lockMovement)
         {
-            playerBody.GetComponent<CharacterController>().enabled = false;
+            playerBody.GetComponent<playerMovement>().enabled = false;
         }
         else
         {
-            playerBody.GetComponent<CharacterController>().enabled = true;
+            playerBody.GetComponent<playerMovement>().enabled = true;
         }
     }
 
@@ -115,10 +119,47 @@ public class ClockManipulation : MonoBehaviour
             // change the light rotation and color
             if (directionalLight != null)
             {
-                directionalLight.transform.Rotate(Vector3.up, scrollInput * rotationSpeed, Space.Self);
-                float time = Mathf.Repeat(directionalLight.transform.rotation.eulerAngles.y, 360f) / 360f;
-                directionalLight.color = Color.Lerp(Color.black, Color.white, time);
-            }         
+                directionalLight.transform.Rotate(Vector3.up, scrollInput * rotationSpeed / 2, Space.Self);
+                float timeOfDay = Mathf.Repeat(directionalLight.transform.rotation.eulerAngles.y, 360f) / 360f;
+                if (timeOfDay <= 0.5f)
+                {
+                    isDay = false;
+                }
+                else
+                {
+                    isDay = true;
+                }
+
+                if (isDay)
+                {
+                    directionalLight.color = Color.Lerp(Color.black, Color.white, (timeOfDay - 0.5f) * 2);
+                }
+                else
+                {
+                    directionalLight.color = Color.Lerp(Color.white, Color.black, timeOfDay * 2);
+                }
+            } 
+
+            // check current scene
+            if (currentScene == "Garden_2")
+            {
+                GardenManager.Instance.CompletePuzzle("Clock");  
+            }
         }
+    }
+
+    public bool CheckClockSet(float minAngle, float maxAngle)
+    {
+        // check if the clock hand is set to the correct time
+        foreach (Transform controller in clockControllers)
+        {
+            float angle = controller.localEulerAngles.z;
+            if (angle >= minAngle && angle <= maxAngle)
+            {
+                Debug.Log("Clock is set!");
+                return true;
+            }
+        }
+        return false;
     }
 }

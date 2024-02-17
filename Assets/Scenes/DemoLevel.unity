@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.44949442, g: 0.49649101, b: 0.55914664, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -539,11 +539,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e77891da6235c544874e211040bf806, type: 3}
---- !u!4 &473888770 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5179340181984459728, guid: 9dcacb3360ef1384d89cb95ebcb077e0, type: 3}
-  m_PrefabInstance: {fileID: 1924559208}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &478666624
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,6 +749,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1388553649}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1060398352 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 284465023931408010, guid: 9dcacb3360ef1384d89cb95ebcb077e0, type: 3}
+  m_PrefabInstance: {fileID: 1924559208}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8821c1668860eae45acfad390f9de553, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1350630251 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5118629688310482985, guid: 99a5768928e218e489203c7fac3deabf, type: 3}
@@ -1110,8 +1116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fd573f99d000c94389a2a27a5db52db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clockControllers:
-  - {fileID: 473888770}
+  clockController: {fileID: 1060398352}
   minAngle: 90
   maxAngle: 180
 --- !u!1001 &1748710799
@@ -1440,14 +1445,6 @@ PrefabInstance:
     - target: {fileID: 3315971166203093636, guid: 9dcacb3360ef1384d89cb95ebcb077e0, type: 3}
       propertyPath: m_Name
       value: Clock
-      objectReference: {fileID: 0}
-    - target: {fileID: 5179340181984459728, guid: 9dcacb3360ef1384d89cb95ebcb077e0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5179340181984459728, guid: 9dcacb3360ef1384d89cb95ebcb077e0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5179340181984459728, guid: 9dcacb3360ef1384d89cb95ebcb077e0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
