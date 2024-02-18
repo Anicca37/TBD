@@ -1,10 +1,14 @@
 using System.Collections;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GardenManager : MonoBehaviour
 {
-    public static GameManager Instance;
+    public static GardenManager Instance;
 
+    public GameObject VenusFlytrap;
+    public GameObject EscapeCanvas;
+    public ClockManipulation clockController;
+    
     private bool isFloralMatched = false;
     private bool isWindChimesPlayed = false;
     private bool isClockSet = false;
@@ -25,7 +29,11 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            // DontDestroyOnLoad(gameObject);
+
+            // set VenusFlytrap to inactive
+            VenusFlytrap.SetActive(false);
+            EscapeCanvas.SetActive(false);
         }
         else
         {
@@ -59,12 +67,21 @@ public class GameManager : MonoBehaviour
                 }
                 else
                 {
-                    isClockSet = true;
-                    MakeVenusFlytrapBloom(); // Sequence correct
+                    if (clockController.CheckClockSet(0f, 180f))
+                    {
+                        isClockSet = true;
+                        MakeVenusFlytrapBloom(); // Sequence correct
+                    }
                 }
                 break;
             case "Scales": // Scales interacted at any point floods the garden
                 FloodGarden();
+                break;
+            case "Escape":
+                if (isFloralMatched && isWindChimesPlayed && isClockSet)
+                {
+                    EscapeGarden();
+                }
                 break;
         }
     }
@@ -82,6 +99,9 @@ public class GameManager : MonoBehaviour
     void MakeVenusFlytrapBloom()
     {
         Debug.Log("Venus flytrap blooms, revealing escape path.");
+        
+        // set VenusFlytrap to active
+        VenusFlytrap.SetActive(true);
     }
 
     void AttractBirds()
@@ -159,12 +179,24 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void EscapeGarden()
+    {
+        Debug.Log("Escaping the garden.");
+
+        // set EscapeCanvas to active
+        EscapeCanvas.SetActive(true);
+    }
+
     void ResetPuzzles()
     {
         Debug.Log("Resetting puzzles.");
         isFloralMatched = false;
         isWindChimesPlayed = false;
         isClockSet = false;
+
+        VenusFlytrap.SetActive(false);
+        EscapeCanvas.SetActive(false);
+        
         // Optionally, reload the scene to visually reset everything
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }

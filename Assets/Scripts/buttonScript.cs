@@ -10,10 +10,10 @@ public class buttonScript : MonoBehaviour
         
     }
 
-    public GameManager gameManager;
+    public GardenManager GardenManager;
 
     void OnMouseDown()
     {
-        gameManager.CompletePuzzle("Scales");
+        GardenManager.CompletePuzzle("Scales");
     }
 }
