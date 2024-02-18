@@ -9,9 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8395136518667444088}
-  - component: {fileID: 7283675403239132146}
   m_Layer: 0
-  m_Name: Chime (3)
+  m_Name: Chime4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,20 +33,6 @@ Transform:
   - {fileID: 3763044455632800940}
   m_Father: {fileID: 2672366577348035656}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7283675403239132146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 97391801547090522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ca263e343f69490ea15d7d870af3fa7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  swingStrength: 50
-  directionOnClicked: {x: 1, y: 0, z: 0}
 --- !u!1 &974684992248279900
 GameObject:
   m_ObjectHideFlags: 0
@@ -57,9 +42,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7169238441813407380}
-  - component: {fileID: 5897232261294350858}
   m_Layer: 0
-  m_Name: Chime (2)
+  m_Name: Chime3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82,20 +66,6 @@ Transform:
   - {fileID: 5273783872702647272}
   m_Father: {fileID: 2672366577348035656}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5897232261294350858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 974684992248279900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ca263e343f69490ea15d7d870af3fa7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  swingStrength: 50
-  directionOnClicked: {x: 1, y: 0, z: 0}
 --- !u!1 &981023830569252798
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,9 +257,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2713333119219699561}
-  - component: {fileID: 7788471935449723260}
   m_Layer: 0
-  m_Name: Chime
+  m_Name: Chime1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -312,20 +281,6 @@ Transform:
   - {fileID: 6174739915407961741}
   m_Father: {fileID: 2672366577348035656}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7788471935449723260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1062663965456621811}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ca263e343f69490ea15d7d870af3fa7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  swingStrength: 50
-  directionOnClicked: {x: 0, y: 0, z: 1}
 --- !u!1 &2065655286304330499
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,8 +295,9 @@ GameObject:
   - component: {fileID: 790643561832284166}
   - component: {fileID: 5723580510107033923}
   - component: {fileID: 7026471992809701770}
+  - component: {fileID: 6141318426168630512}
   m_Layer: 0
-  m_Name: Chime
+  m_Name: Chime2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -508,6 +464,22 @@ CharacterJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &6141318426168630512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065655286304330499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ca263e343f69490ea15d7d870af3fa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windParticleSystem: {fileID: 0}
+  windController: {fileID: 0}
+  birdsParticleSystem: {fileID: 0}
+  treeGrowthController: {fileID: 0}
 --- !u!1 &2818559290995928732
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,8 +494,9 @@ GameObject:
   - component: {fileID: 2777671873007651094}
   - component: {fileID: 3928987012160592106}
   - component: {fileID: 3932401118446383494}
+  - component: {fileID: 7313482730390869573}
   m_Layer: 0
-  m_Name: Chime
+  m_Name: Chime3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -690,6 +663,22 @@ CharacterJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &7313482730390869573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2818559290995928732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ca263e343f69490ea15d7d870af3fa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windParticleSystem: {fileID: 0}
+  windController: {fileID: 0}
+  birdsParticleSystem: {fileID: 0}
+  treeGrowthController: {fileID: 0}
 --- !u!1 &2979028837131870974
 GameObject:
   m_ObjectHideFlags: 0
@@ -715,7 +704,7 @@ Transform:
   m_GameObject: {fileID: 2979028837131870974}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.79, y: -2.28, z: 25.62}
+  m_LocalPosition: {x: 12.79, y: -2, z: 25.62}
   m_LocalScale: {x: 1, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1100,9 +1089,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1756522597592545765}
-  - component: {fileID: 1608513659162197323}
   m_Layer: 0
-  m_Name: Chime (1)
+  m_Name: Chime2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1125,20 +1113,6 @@ Transform:
   - {fileID: 1661135721407140960}
   m_Father: {fileID: 2672366577348035656}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1608513659162197323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4132688278664919733}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ca263e343f69490ea15d7d870af3fa7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  swingStrength: 50
-  directionOnClicked: {x: 0, y: 0, z: -1}
 --- !u!1 &4431641709598077909
 GameObject:
   m_ObjectHideFlags: 0
@@ -1699,8 +1673,9 @@ GameObject:
   - component: {fileID: 6501800325148638947}
   - component: {fileID: 3580626451341082956}
   - component: {fileID: 6625760525103821932}
+  - component: {fileID: 8079438918474222604}
   m_Layer: 0
-  m_Name: Chime
+  m_Name: Chime4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1867,6 +1842,22 @@ CharacterJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &8079438918474222604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7468951358664601901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ca263e343f69490ea15d7d870af3fa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windParticleSystem: {fileID: 0}
+  windController: {fileID: 0}
+  birdsParticleSystem: {fileID: 0}
+  treeGrowthController: {fileID: 0}
 --- !u!1 &9021592505707426766
 GameObject:
   m_ObjectHideFlags: 0
@@ -1881,8 +1872,9 @@ GameObject:
   - component: {fileID: 7366106075973903948}
   - component: {fileID: 1486793539776025546}
   - component: {fileID: 8319090332529272752}
+  - component: {fileID: 8701552999150966100}
   m_Layer: 0
-  m_Name: Chime
+  m_Name: Chime1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2049,3 +2041,19 @@ CharacterJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &8701552999150966100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9021592505707426766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ca263e343f69490ea15d7d870af3fa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windParticleSystem: {fileID: 0}
+  windController: {fileID: 0}
+  birdsParticleSystem: {fileID: 0}
+  treeGrowthController: {fileID: 0}

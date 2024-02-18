@@ -15850,27 +15850,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7142122417593800428, guid: eaea56da31203be49ba8401ade319be8, type: 3}
   m_PrefabInstance: {fileID: 1290621425}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1292927377 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2065655286304330499, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
-  m_PrefabInstance: {fileID: 7789726273362593852}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1292927384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1292927377}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ca263e343f69490ea15d7d870af3fa7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  windParticleSystem: {fileID: 1744744879}
-  windController: {fileID: 300739278}
-  birdsParticleSystem: {fileID: 1615447517}
-  treeGrowthController: {fileID: 1330794614}
 --- !u!1001 &1301034831
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17028,48 +17007,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7142122417593800428, guid: eaea56da31203be49ba8401ade319be8, type: 3}
   m_PrefabInstance: {fileID: 1438516406}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1532658559 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9021592505707426766, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
-  m_PrefabInstance: {fileID: 7789726273362593852}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1532658566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1532658559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ca263e343f69490ea15d7d870af3fa7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  windParticleSystem: {fileID: 1744744879}
-  windController: {fileID: 300739278}
-  birdsParticleSystem: {fileID: 1615447517}
-  treeGrowthController: {fileID: 1330794614}
---- !u!1 &1550854215 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2818559290995928732, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
-  m_PrefabInstance: {fileID: 7789726273362593852}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1550854222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1550854215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ca263e343f69490ea15d7d870af3fa7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  windParticleSystem: {fileID: 1744744879}
-  windController: {fileID: 300739278}
-  birdsParticleSystem: {fileID: 1615447517}
-  treeGrowthController: {fileID: 1330794614}
 --- !u!1 &1593337009
 GameObject:
   m_ObjectHideFlags: 0
@@ -22935,27 +22872,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1738083553 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7468951358664601901, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
-  m_PrefabInstance: {fileID: 7789726273362593852}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1738083560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1738083553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ca263e343f69490ea15d7d870af3fa7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  windParticleSystem: {fileID: 1744744879}
-  windController: {fileID: 300739278}
-  birdsParticleSystem: {fileID: 1615447517}
-  treeGrowthController: {fileID: 1330794614}
 --- !u!1 &1744744878
 GameObject:
   m_ObjectHideFlags: 0
@@ -29496,22 +29412,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 97391801547090522, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
-      propertyPath: m_Name
-      value: Chime4
-      objectReference: {fileID: 0}
-    - target: {fileID: 974684992248279900, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
-      propertyPath: m_Name
-      value: Chime3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1062663965456621811, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
-      propertyPath: m_Name
-      value: Chime1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2065655286304330499, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
-      propertyPath: m_Name
-      value: Chime2
-      objectReference: {fileID: 0}
     - target: {fileID: 2672366577348035656, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.79
@@ -29552,50 +29452,78 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2818559290995928732, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
-      propertyPath: m_Name
-      value: Chime3
-      objectReference: {fileID: 0}
     - target: {fileID: 2979028837131870974, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
       propertyPath: m_Name
       value: Wind Chime
       objectReference: {fileID: 0}
-    - target: {fileID: 3373294576130435729, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4132688278664919733, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
-      propertyPath: m_Name
-      value: Chime2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7468951358664601901, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
-      propertyPath: m_Name
-      value: Chime4
-      objectReference: {fileID: 0}
-    - target: {fileID: 9021592505707426766, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
-      propertyPath: m_Name
-      value: Chime1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7788471935449723260, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
-    - {fileID: 1608513659162197323, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
-    - {fileID: 5897232261294350858, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
-    - {fileID: 7283675403239132146, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
+    - target: {fileID: 6141318426168630512, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
+      propertyPath: windController
+      value: 
+      objectReference: {fileID: 300739278}
+    - target: {fileID: 6141318426168630512, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
+      propertyPath: windParticleSystem
+      value: 
+      objectReference: {fileID: 1744744879}
+    - target: {fileID: 6141318426168630512, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
+      propertyPath: birdsParticleSystem
+      value: 
+      objectReference: {fileID: 1615447517}
+    - target: {fileID: 6141318426168630512, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
+      propertyPath: treeGrowthController
+      value: 
+      objectReference: {fileID: 1330794614}
+    - target: {fileID: 7313482730390869573, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
+      propertyPath: windController
+      value: 
+      objectReference: {fileID: 300739278}
+    - target: {fileID: 7313482730390869573, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
+      propertyPath: windParticleSystem
+      value: 
+      objectReference: {fileID: 1744744879}
+    - target: {fileID: 7313482730390869573, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
+      propertyPath: birdsParticleSystem
+      value: 
+      objectReference: {fileID: 1615447517}
+    - target: {fileID: 7313482730390869573, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
+      propertyPath: treeGrowthController
+      value: 
+      objectReference: {fileID: 1330794614}
+    - target: {fileID: 8079438918474222604, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
+      propertyPath: windController
+      value: 
+      objectReference: {fileID: 300739278}
+    - target: {fileID: 8079438918474222604, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
+      propertyPath: windParticleSystem
+      value: 
+      objectReference: {fileID: 1744744879}
+    - target: {fileID: 8079438918474222604, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
+      propertyPath: birdsParticleSystem
+      value: 
+      objectReference: {fileID: 1615447517}
+    - target: {fileID: 8079438918474222604, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
+      propertyPath: treeGrowthController
+      value: 
+      objectReference: {fileID: 1330794614}
+    - target: {fileID: 8701552999150966100, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
+      propertyPath: windController
+      value: 
+      objectReference: {fileID: 300739278}
+    - target: {fileID: 8701552999150966100, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
+      propertyPath: windParticleSystem
+      value: 
+      objectReference: {fileID: 1744744879}
+    - target: {fileID: 8701552999150966100, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
+      propertyPath: birdsParticleSystem
+      value: 
+      objectReference: {fileID: 1615447517}
+    - target: {fileID: 8701552999150966100, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
+      propertyPath: treeGrowthController
+      value: 
+      objectReference: {fileID: 1330794614}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 9021592505707426766, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1532658566}
-    - targetCorrespondingSourceObject: {fileID: 2065655286304330499, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1292927384}
-    - targetCorrespondingSourceObject: {fileID: 2818559290995928732, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1550854222}
-    - targetCorrespondingSourceObject: {fileID: 7468951358664601901, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1738083560}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
 --- !u!1001 &8583546628129720928
 PrefabInstance:
