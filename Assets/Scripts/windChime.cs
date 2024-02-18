@@ -12,10 +12,10 @@ public class windChime : MonoBehaviour
 
     void OnMouseDown()
     {
-        // Debug.Log("GM.Instance: " + GameManager.Instance);
+        // Debug.Log("GM.Instance: " + GardenManager.Instance);
         // check if the floral puzzle is matched
         // if (!true)
-        if (GameManager.Instance.IsFloralMatched())
+        if (GardenManager.Instance.IsFloralMatched())
         {
             switch (gameObject.name)
             {
@@ -37,8 +37,9 @@ public class windChime : MonoBehaviour
         }
         else
         {
-            Debug.Log("Ah! So many birds!");
+            // Debug.Log("Ah! So many birds!");
             TriggerBirdsAndGrowPlants();
+            GardenManager.Instance.CompletePuzzle("WindChimes");
         }
     }
 
@@ -74,6 +75,6 @@ public class windChime : MonoBehaviour
         birdsParticleSystem.Clear();
         treeGrowthController.ClearAllTrees();
 
-        GameManager.Instance.ResetPuzzles(); //?
+        // GardenManager.Instance.ResetPuzzles(); //?
     }
 }

@@ -43,7 +43,7 @@ public class WindController : MonoBehaviour
         seedRb.isKinematic = true; // prevent further interactions
         if (!hasCompletedWindChimesPuzzle)
         {
-            GameManager.Instance.BlowSeedsOntoScales();
+            GardenManager.Instance.CompletePuzzle("WindChimes");
             hasCompletedWindChimesPuzzle = true;
         }
     }
