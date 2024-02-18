@@ -20,7 +20,7 @@ public class TreeGrowthController : MonoBehaviour
 
     void GrowClusterAroundPoint(Vector3 mainPoint)
     {
-        for (int i = 0; i < 10; i++) // 10 trees around each main point
+        for (int i = 0; i < 15; i++) // 15 trees around each main point
         {
             Vector3 randomPoint = mainPoint + Random.insideUnitSphere * clusterRadius;
             randomPoint.y = mainPoint.y;
@@ -36,12 +36,12 @@ public class TreeGrowthController : MonoBehaviour
         float timer = 0;
         while (timer < growthDuration)
         {
-            tree.transform.localScale = Vector3.Lerp(Vector3.zero, Vector3.one, timer / growthDuration);
+            tree.transform.localScale = Vector3.Lerp(Vector3.zero, Vector3.one * 3, timer / growthDuration);
             timer += Time.deltaTime;
             yield return null;
         }
 
-        tree.transform.localScale = Vector3.one;
+        tree.transform.localScale = Vector3.one * 3;
     }
 
     public void ClearAllTrees()
