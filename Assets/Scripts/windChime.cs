@@ -7,7 +7,6 @@ public class windChime : MonoBehaviour
     public ParticleSystem windParticleSystem;
     public WindController windController;
     public ParticleSystem birdsParticleSystem;
-    public ParticleSystem plantsParticleSystem;
     public TreeGrowthController treeGrowthController; // Assign in the inspector
 
 
@@ -73,10 +72,8 @@ public class windChime : MonoBehaviour
         // reset to initial state
         birdsParticleSystem.Stop();
         birdsParticleSystem.Clear();
-        plantsParticleSystem.Stop();
-        plantsParticleSystem.Clear();
         treeGrowthController.ClearAllTrees();
 
-        // GameManager.Instance.ResetPuzzles(); //?
+        GameManager.Instance.ResetPuzzles(); //?
     }
 }

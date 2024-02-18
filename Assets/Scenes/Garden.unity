@@ -672,6 +672,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7142122417593800428, guid: eaea56da31203be49ba8401ade319be8, type: 3}
   m_PrefabInstance: {fileID: 107921333}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &131046440
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 131046442}
+  - component: {fileID: 131046441}
+  m_Layer: 0
+  m_Name: SeedController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &131046441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131046440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3094d4cabc554fc7a7192aa244b95ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particleSystem: {fileID: 1085288348}
+  seedPrefab: {fileID: 211625153449225937, guid: fb6ec0f7ca5cb40338256eebee304eba, type: 3}
+--- !u!4 &131046442
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131046440}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 27.732967, y: 20.711475, z: -12.369854}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &140081071
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15656,63 +15702,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb6ec0f7ca5cb40338256eebee304eba, type: 3}
---- !u!1001 &1272303707
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 191266, guid: c44bd9bdc114d4a60932c0087d9d1732, type: 3}
-      propertyPath: m_Name
-      value: Oak_Tree
-      objectReference: {fileID: 0}
-    - target: {fileID: 405256, guid: c44bd9bdc114d4a60932c0087d9d1732, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 16.58
-      objectReference: {fileID: 0}
-    - target: {fileID: 405256, guid: c44bd9bdc114d4a60932c0087d9d1732, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.35607448
-      objectReference: {fileID: 0}
-    - target: {fileID: 405256, guid: c44bd9bdc114d4a60932c0087d9d1732, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 29.53
-      objectReference: {fileID: 0}
-    - target: {fileID: 405256, guid: c44bd9bdc114d4a60932c0087d9d1732, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 405256, guid: c44bd9bdc114d4a60932c0087d9d1732, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.000000021855694
-      objectReference: {fileID: 0}
-    - target: {fileID: 405256, guid: c44bd9bdc114d4a60932c0087d9d1732, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 405256, guid: c44bd9bdc114d4a60932c0087d9d1732, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 405256, guid: c44bd9bdc114d4a60932c0087d9d1732, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 405256, guid: c44bd9bdc114d4a60932c0087d9d1732, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 405256, guid: c44bd9bdc114d4a60932c0087d9d1732, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c44bd9bdc114d4a60932c0087d9d1732, type: 3}
 --- !u!1001 &1284609702
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15881,7 +15870,6 @@ MonoBehaviour:
   windParticleSystem: {fileID: 1744744879}
   windController: {fileID: 300739278}
   birdsParticleSystem: {fileID: 1615447517}
-  plantsParticleSystem: {fileID: 961174280}
   treeGrowthController: {fileID: 1330794614}
 --- !u!1001 &1301034831
 PrefabInstance:
@@ -16511,7 +16499,7 @@ MonoBehaviour:
   - {x: 19.78, y: 0.3560764, z: 20.73}
   - {x: 16.58, y: 0.3560764, z: 29.5}
   growthDuration: 5
-  clusterRadius: 7
+  clusterRadius: 10
 --- !u!4 &1330794615
 Transform:
   m_ObjectHideFlags: 0
@@ -17060,7 +17048,6 @@ MonoBehaviour:
   windParticleSystem: {fileID: 1744744879}
   windController: {fileID: 300739278}
   birdsParticleSystem: {fileID: 1615447517}
-  plantsParticleSystem: {fileID: 961174280}
   treeGrowthController: {fileID: 1330794614}
 --- !u!1 &1550854215 stripped
 GameObject:
@@ -17082,7 +17069,6 @@ MonoBehaviour:
   windParticleSystem: {fileID: 1744744879}
   windController: {fileID: 300739278}
   birdsParticleSystem: {fileID: 1615447517}
-  plantsParticleSystem: {fileID: 961174280}
   treeGrowthController: {fileID: 1330794614}
 --- !u!1 &1593337009
 GameObject:
@@ -22922,7 +22908,6 @@ MonoBehaviour:
   windParticleSystem: {fileID: 1744744879}
   windController: {fileID: 300739278}
   birdsParticleSystem: {fileID: 1615447517}
-  plantsParticleSystem: {fileID: 961174280}
   treeGrowthController: {fileID: 1330794614}
 --- !u!1 &1744744878
 GameObject:
@@ -29653,11 +29638,11 @@ SceneRoots:
   - {fileID: 961174278}
   - {fileID: 1306754974}
   - {fileID: 300739279}
+  - {fileID: 1330794615}
+  - {fileID: 131046442}
   - {fileID: 8583546628129720928}
   - {fileID: 1938029230}
   - {fileID: 1266901174}
   - {fileID: 1072707979}
   - {fileID: 1676920046}
   - {fileID: 1654729102}
-  - {fileID: 1330794615}
-  - {fileID: 1272303707}

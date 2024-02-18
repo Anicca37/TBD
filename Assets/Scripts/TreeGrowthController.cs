@@ -20,7 +20,7 @@ public class TreeGrowthController : MonoBehaviour
 
     void GrowClusterAroundPoint(Vector3 mainPoint)
     {
-        for (int i = 0; i < 5; i++) // 5 trees around each main point
+        for (int i = 0; i < 10; i++) // 10 trees around each main point
         {
             Vector3 randomPoint = mainPoint + Random.insideUnitSphere * clusterRadius;
             randomPoint.y = mainPoint.y;
