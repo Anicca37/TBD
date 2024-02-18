@@ -19,9 +19,16 @@ public class GardenManager : MonoBehaviour
 
     [SerializeField] private ParticleSystem fountainParticleSystem;
     public Material waterMaterial; // Assign a blue water-like material in the inspector
-    private float riseSpeed = 0.5f;
-    private float targetHeight = 5f;
+
     private bool isGardenFlooded = false;
+    [SerializeField] private float riseSpeed = 0.5f;
+    private float floodDelay = 1.0f; // Time to wait before checking the rise
+    [SerializeField] private float riseAmount = 10f; // Amount to rise
+    private float initialYPosition; // Starting Y position of the water
+    private bool startFlood = false;
+
+    
+
 
 
     void Awake()
@@ -116,55 +123,62 @@ public class GardenManager : MonoBehaviour
         ResetPuzzles(); 
     }
 
-    void FloodGarden()
-{
-    if (!isGardenFlooded) // Check if the garden isn't already flooded
+     void FloodGarden()
     {
-        Debug.Log("Fountain floods the garden, reset required.");
-        isGardenFlooded = true; // Prevent multiple floods
-        CreateAndRiseWater();
-        // Moved ResetPuzzles call to the end of the RiseWater coroutine
+        if (!isGardenFlooded)
+        {
+            Debug.Log("Fountain floods the garden, reset required.");
+            isGardenFlooded = true;
+            AdjustFountainParticles();
+            CreateAndRiseWater();
+        }
     }
-}
+
 
     void CreateAndRiseWater()
-{
-    // Duplicate the floor object and modify it to become the water object
-    waterObject = Instantiate(floorObject, floorObject.transform.position, Quaternion.identity);
-    waterObject.transform.localScale = new Vector3(waterObject.transform.localScale.x * 1.05f, waterObject.transform.localScale.y, waterObject.transform.localScale.z * 1.05f); // Make the water object slightly larger
-    waterObject.GetComponent<Renderer>().material = waterMaterial; // Change the material to water
-    waterObject.transform.position -= new Vector3(0, 0.5f, 0); // Start below the floor to rise up
-
-    // Optionally, disable or remove unnecessary components (e.g., colliders) from the water object
-    if (waterObject.GetComponent<Collider>())
     {
-        Destroy(waterObject.GetComponent<Collider>()); // Assuming you don't need collision
+        waterObject = Instantiate(floorObject, floorObject.transform.position, Quaternion.identity);
+        waterObject.transform.localScale *= 1.05f;
+        waterObject.GetComponent<Renderer>().material = waterMaterial;
+        if (waterObject.GetComponent<Collider>())
+            Destroy(waterObject.GetComponent<Collider>());
+        
+        initialYPosition = waterObject.transform.position.y; // Record the starting Y position
     }
 
-    StartCoroutine(RiseWater());
-}
-
-
-    IEnumerator RiseWater()
+    void Update()
 {
-    float targetHeight = 2f; // Define how high the water should rise
-    while (waterObject.transform.position.y < targetHeight)
+    if (isGardenFlooded && waterObject != null && !startFlood)
     {
-        waterObject.transform.position += Vector3.up * riseSpeed * Time.deltaTime;
-        yield return null;
+        // Calculate the target position based on the desired rise amount
+        float targetYPosition = initialYPosition + riseAmount;
+        
+        // Calculate the new Y position for this frame, ensuring we don't exceed the target position
+        float newYPosition = Mathf.Min(waterObject.transform.position.y + (riseSpeed * Time.deltaTime), targetYPosition);
+        
+        // Apply the new Y position
+        waterObject.transform.position = new Vector3(waterObject.transform.position.x, newYPosition, waterObject.transform.position.z);
+        
+        // Check if we've reached or exceeded the target rise amount
+        if (newYPosition >= targetYPosition)
+        {
+            startFlood = true; // Mark the flooding as complete
+            Invoke("ResetPuzzles", floodDelay); // Schedule the reset after a brief delay
+        }
     }
-    // After reaching the target height, call ResetPuzzles to reset the game
-    ResetPuzzles();
 }
+
 
     void AdjustFountainParticles()
     {
         if (fountainParticleSystem != null)
         {
+            Debug.Log("fountain being modified");
+
             var main = fountainParticleSystem.main;
             main.startSpeed = 20; // Increase for faster particles
             main.startSize = 1.5f; // Increase for bigger particles
-            main.maxParticles = 10000; // Increase for more particles
+            main.maxParticles = 1000; // Increase for more particles
 
             var emission = fountainParticleSystem.emission;
             emission.rateOverTime = 500; // Increase for a denser stream
