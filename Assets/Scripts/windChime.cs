@@ -37,7 +37,7 @@ public class windChime : MonoBehaviour
         }
         else
         {
-            // Debug.Log("Ah! So many birds!");
+            Debug.Log("Ah! So many birds!");
             TriggerBirdsAndGrowPlants();
             // GardenManager.Instance.CompletePuzzle("WindChimes");
         }
