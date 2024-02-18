@@ -23,10 +23,15 @@ public class GardenManager : MonoBehaviour
             VenusFlytrap.SetActive(false);
             EscapeCanvas.SetActive(false);
         }
-        else
+        else if (Instance != this)
         {
             Destroy(gameObject);
         }
+    }
+
+    public bool IsFloralMatched()
+    {
+        return isFloralMatched;
     }
 
     public void CompletePuzzle(string puzzleName)
@@ -79,8 +84,9 @@ public class GardenManager : MonoBehaviour
         Debug.Log("Wind directed to Wind Chimes.");
     }
 
-    void BlowSeedsOntoScales()
+    public void BlowSeedsOntoScales()
     {
+        isWindChimesPlayed = true;
         Debug.Log("Seeds blown onto scales, balancing them.");
     }
 
@@ -101,7 +107,7 @@ public class GardenManager : MonoBehaviour
     void StatuesSingLoudly()
     {
         Debug.Log("Statues sing loudly.");
-        ResetPuzzles(); 
+        ResetPuzzles();
     }
 
     void FloodGarden()
@@ -131,4 +137,5 @@ public class GardenManager : MonoBehaviour
         // Optionally, reload the scene to visually reset everything
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
+
 }
