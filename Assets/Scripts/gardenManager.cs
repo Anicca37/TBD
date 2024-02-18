@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -7,6 +8,17 @@ public class GameManager : MonoBehaviour
     private bool isFloralMatched = false;
     private bool isWindChimesPlayed = false;
     private bool isClockSet = false;
+
+
+    public GameObject floorObject; // Assign your garden floor in the inspector
+    private GameObject waterObject;
+
+    [SerializeField] private ParticleSystem fountainParticleSystem;
+    public Material waterMaterial; // Assign a blue water-like material in the inspector
+    private float riseSpeed = 0.5f;
+    private float targetHeight = 5f;
+    private bool isGardenFlooded = false;
+
 
     void Awake()
     {
@@ -85,9 +97,66 @@ public class GameManager : MonoBehaviour
     }
 
     void FloodGarden()
+{
+    if (!isGardenFlooded) // Check if the garden isn't already flooded
     {
         Debug.Log("Fountain floods the garden, reset required.");
-        ResetPuzzles(); // Resets the puzzles due to flooding
+        isGardenFlooded = true; // Prevent multiple floods
+        CreateAndRiseWater();
+        // Moved ResetPuzzles call to the end of the RiseWater coroutine
+    }
+}
+
+    void CreateAndRiseWater()
+{
+    // Duplicate the floor object and modify it to become the water object
+    waterObject = Instantiate(floorObject, floorObject.transform.position, Quaternion.identity);
+    waterObject.transform.localScale = new Vector3(waterObject.transform.localScale.x * 1.05f, waterObject.transform.localScale.y, waterObject.transform.localScale.z * 1.05f); // Make the water object slightly larger
+    waterObject.GetComponent<Renderer>().material = waterMaterial; // Change the material to water
+    waterObject.transform.position -= new Vector3(0, 0.5f, 0); // Start below the floor to rise up
+
+    // Optionally, disable or remove unnecessary components (e.g., colliders) from the water object
+    if (waterObject.GetComponent<Collider>())
+    {
+        Destroy(waterObject.GetComponent<Collider>()); // Assuming you don't need collision
+    }
+
+    StartCoroutine(RiseWater());
+}
+
+
+    IEnumerator RiseWater()
+{
+    float targetHeight = 2f; // Define how high the water should rise
+    while (waterObject.transform.position.y < targetHeight)
+    {
+        waterObject.transform.position += Vector3.up * riseSpeed * Time.deltaTime;
+        yield return null;
+    }
+    // After reaching the target height, call ResetPuzzles to reset the game
+    ResetPuzzles();
+}
+
+    void AdjustFountainParticles()
+    {
+        if (fountainParticleSystem != null)
+        {
+            var main = fountainParticleSystem.main;
+            main.startSpeed = 20; // Increase for faster particles
+            main.startSize = 1.5f; // Increase for bigger particles
+            main.maxParticles = 10000; // Increase for more particles
+
+            var emission = fountainParticleSystem.emission;
+            emission.rateOverTime = 500; // Increase for a denser stream
+
+            var shape = fountainParticleSystem.shape;
+            shape.angle = 25; // Increase for a wider output
+            fountainParticleSystem.Play();
+        }
+        else
+        {
+            Debug.LogWarning("Fountain Particle System not assigned.");
+        }
     }
 
     void ResetPuzzles()
