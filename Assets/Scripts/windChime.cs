@@ -5,38 +5,53 @@ using UnityEngine;
 public class windChime : MonoBehaviour
 {
     public ParticleSystem windParticleSystem;
+    public WindController windController;
+
 
     void OnMouseDown()
     {
-        switch (gameObject.name)
+        // Debug.Log("GM.Instance: " + GameManager.Instance);
+        // check if the floral puzzle is matched
+
+        if (true)
+        // if (GameManager.Instance.IsFloralMatched())
         {
-            case "Chime1":
-                ChangeWindDirection(Vector3.forward); // n
-                break;
-            case "Chime2":
-                ChangeWindDirection(Vector3.back); // s
-                break;
-            case "Chime3":
-                ChangeWindDirection(Vector3.right); // e
-                break;
-            case "Chime4":
-                ChangeWindDirection(Vector3.left); // w
-                break;
-            default:
-                break;
+            switch (gameObject.name)
+            {
+                case "Chime1":
+                    ChangeWindDirection(Vector3.forward); // North
+                    break;
+                case "Chime2":
+                    ChangeWindDirection(Vector3.back); // South
+                    break;
+                case "Chime3":
+                    ChangeWindDirection(Vector3.right); // East
+                    break;
+                case "Chime4":
+                    ChangeWindDirection(Vector3.left); // West
+                    break;
+                default:
+                    break;
+            }
+        }
+        else
+        {
+            Debug.Log("Cool wind chimes.");
         }
     }
-
     void ChangeWindDirection(Vector3 direction)
     {
-        // particle's shape
         var shape = windParticleSystem.shape;
-
-        // convert the direction to a rotation
         Quaternion rotation = Quaternion.LookRotation(direction);
         shape.rotation = rotation.eulerAngles;
 
+        if (direction == Vector3.right) // East
+        {
+            windController.LaunchSeedsEastward();
+        }
+
         Debug.Log($"Changing wind direction to {direction}");
     }
+
 
 }

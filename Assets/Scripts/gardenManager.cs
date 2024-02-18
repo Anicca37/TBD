@@ -15,10 +15,15 @@ public class GameManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        else
+        else if (Instance != this)
         {
             Destroy(gameObject);
         }
+    }
+
+    public bool IsFloralMatched()
+    {
+        return isFloralMatched;
     }
 
     public void CompletePuzzle(string puzzleName)
@@ -62,8 +67,9 @@ public class GameManager : MonoBehaviour
         Debug.Log("Wind directed to Wind Chimes.");
     }
 
-    void BlowSeedsOntoScales()
+    public void BlowSeedsOntoScales()
     {
+        isWindChimesPlayed = true;
         Debug.Log("Seeds blown onto scales, balancing them.");
     }
 
@@ -81,7 +87,7 @@ public class GameManager : MonoBehaviour
     void StatuesSingLoudly()
     {
         Debug.Log("Statues sing loudly.");
-        ResetPuzzles(); 
+        ResetPuzzles();
     }
 
     void FloodGarden()
@@ -99,4 +105,5 @@ public class GameManager : MonoBehaviour
         // Optionally, reload the scene to visually reset everything
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
+
 }
