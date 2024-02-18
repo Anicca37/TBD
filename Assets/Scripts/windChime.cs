@@ -2,54 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-using UnityEngine;
-
 public class windChime : MonoBehaviour
 {
-    public float swingStrength = 1000f; // adjust??
-    public Vector3 directionOnClicked;
-    private WindManager windManager;
+    public ParticleSystem windParticleSystem;
 
-    void Start()
+    void OnMouseDown()
     {
-        windManager = FindObjectOfType<WindManager>();
-    }
-
-    void Update()
-    {
-        // right click on mouse
-        if (Input.GetMouseButtonDown(1))
+        switch (gameObject.name)
         {
-            // cast a ray from the camera to the mouse position
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
-            // perform the raycast
-            if (Physics.Raycast(ray, out hit))
-            {
-                Debug.Log("Hit something: " + hit.collider.gameObject.name);
-
-                // check if chime was clicked
-                if (hit.collider.gameObject == gameObject)
-                {
-                    Debug.Log("Chime was clicked, applying force."
-                    + hit.collider.gameObject.name);
-                    Rigidbody rb = gameObject.GetComponent<Rigidbody>();
-
-                    // apply a force to the chime to swing it
-                    if (rb != null)
-                    {
-                        rb.AddForce(Vector3.up * swingStrength, ForceMode.Impulse); // upward direction
-                    }
-
-                    // change wind direction w/ WindManager
-                    if (windManager != null)
-                    {
-                        windManager.ChangeWindDirection(directionOnClicked);
-                    }
-                }
-            }
+            case "Chime1":
+                ChangeWindDirection(Vector3.forward); // n
+                break;
+            case "Chime2":
+                ChangeWindDirection(Vector3.back); // s
+                break;
+            case "Chime3":
+                ChangeWindDirection(Vector3.right); // e
+                break;
+            case "Chime4":
+                ChangeWindDirection(Vector3.left); // w
+                break;
+            default:
+                break;
         }
     }
+
+    void ChangeWindDirection(Vector3 direction)
+    {
+        // particle's shape
+        var shape = windParticleSystem.shape;
+
+        // convert the direction to a rotation
+        Quaternion rotation = Quaternion.LookRotation(direction);
+        shape.rotation = rotation.eulerAngles;
+
+        Debug.Log($"Changing wind direction to {direction}");
+    }
+
 }
