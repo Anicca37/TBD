@@ -7,6 +7,11 @@ TagManager:
   - Pickupable
   - Interactable
   - targetSurface
+  - Blue
+  - Orange
+  - Purple
+  - Pink
+  - Red
   layers:
   - Default
   - TransparentFX
