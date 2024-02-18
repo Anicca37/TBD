@@ -6,15 +6,17 @@ public class windChime : MonoBehaviour
 {
     public ParticleSystem windParticleSystem;
     public WindController windController;
+    public ParticleSystem birdsParticleSystem;
+    public ParticleSystem plantsParticleSystem;
+    public TreeGrowthController treeGrowthController; // Assign in the inspector
 
 
     void OnMouseDown()
     {
         // Debug.Log("GM.Instance: " + GameManager.Instance);
         // check if the floral puzzle is matched
-
-        if (true)
-        // if (GameManager.Instance.IsFloralMatched())
+        // if (!true)
+        if (GameManager.Instance.IsFloralMatched())
         {
             switch (gameObject.name)
             {
@@ -36,9 +38,11 @@ public class windChime : MonoBehaviour
         }
         else
         {
-            Debug.Log("Cool wind chimes.");
+            Debug.Log("Ah! So many birds!");
+            TriggerBirdsAndGrowPlants();
         }
     }
+
     void ChangeWindDirection(Vector3 direction)
     {
         var shape = windParticleSystem.shape;
@@ -52,6 +56,27 @@ public class windChime : MonoBehaviour
 
         Debug.Log($"Changing wind direction to {direction}");
     }
+    void TriggerBirdsAndGrowPlants()
+    {
+        birdsParticleSystem.Play(); // bird flock
+        Invoke("GrowTreesAfterBirds", birdsParticleSystem.main.duration); // delay tree growth after birds
+        Invoke("ResetGarden", 20f); // reset after 20sec
+    }
 
+    void GrowTreesAfterBirds()
+    {
+        treeGrowthController.GrowTreesAtMainPoints();
+    }
 
+    void ResetGarden()
+    {
+        // reset to initial state
+        birdsParticleSystem.Stop();
+        birdsParticleSystem.Clear();
+        plantsParticleSystem.Stop();
+        plantsParticleSystem.Clear();
+        treeGrowthController.ClearAllTrees();
+
+        // GameManager.Instance.ResetPuzzles(); //?
+    }
 }
