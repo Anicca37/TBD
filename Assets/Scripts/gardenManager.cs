@@ -9,8 +9,8 @@ public class GardenManager : MonoBehaviour
     public GameObject EscapeCanvas;
     public ClockManipulation clockController;
     
-    private bool isFloralMatched = false;
-    private bool isWindChimesPlayed = false;
+    private bool isFloralMatched = true;
+    private bool isWindChimesPlayed = true;
     private bool isClockSet = false;
 
 
@@ -79,7 +79,7 @@ public class GardenManager : MonoBehaviour
                 }
                 else
                 {
-                    if (clockController.CheckClockSet(0f, 180f))
+                    if (clockController.CheckClockSet(1f, 180f, "Clockwise"))
                     {
                         isClockSet = true;
                         MakeVenusFlytrapBloom(); // Sequence correct
