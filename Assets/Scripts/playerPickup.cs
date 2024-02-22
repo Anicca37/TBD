@@ -51,7 +51,7 @@ public class playerPickup : MonoBehaviour
         }
     }
 
-    void DropObject()
+    public void DropObject()
     {
         // Detach the current pickup from the attachPoint
         currentPickup.transform.parent = null;

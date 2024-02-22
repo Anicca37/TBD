@@ -20,6 +20,7 @@ public class ColorMatch : MonoBehaviour
             TriggerWindEffect();
             matchedFlowersCount++;
             CheckAllFlowersMatched();
+            AutomaticallyDropFlower(other.gameObject);
         }
     }
 
@@ -49,5 +50,12 @@ public class ColorMatch : MonoBehaviour
         {
             GardenManager.Instance.CompletePuzzle("Floral");
         }
+    }
+
+    void AutomaticallyDropFlower(GameObject flower)
+    {
+        playerPickup playerPickupScript = flower.GetComponentInParent<playerPickup>();
+        playerPickupScript.DropObject();
+      
     }
 }
