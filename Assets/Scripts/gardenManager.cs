@@ -17,7 +17,6 @@ public class GardenManager : MonoBehaviour
     public GameObject floorObject; // Assign your garden floor in the inspector
     private GameObject waterObject;
 
-    [SerializeField] private ParticleSystem fountainParticleSystem;
     public Material waterMaterial; // Assign a blue water-like material in the inspector
 
     private bool isGardenFlooded = false;
@@ -27,6 +26,7 @@ public class GardenManager : MonoBehaviour
     private float initialYPosition; // Starting Y position of the water
     private bool startFlood = false;
 
+    public FountainScript fountainScript;
     
 
 
@@ -177,25 +177,13 @@ public class GardenManager : MonoBehaviour
 
     void AdjustFountainParticles()
     {
-        if (fountainParticleSystem != null)
+        if (fountainScript != null)
         {
-            Debug.Log("fountain being modified");
-
-            var main = fountainParticleSystem.main;
-            main.startSpeed = 20; // Increase for faster particles
-            main.startSize = 1.5f; // Increase for bigger particles
-            main.maxParticles = 1000; // Increase for more particles
-
-            var emission = fountainParticleSystem.emission;
-            emission.rateOverTime = 500; // Increase for a denser stream
-
-            var shape = fountainParticleSystem.shape;
-            shape.angle = 25; // Increase for a wider output
-            fountainParticleSystem.Play();
+           fountainScript.ActivateFountainEffects();    
         }
         else
         {
-            Debug.LogWarning("Fountain Particle System not assigned.");
+            Debug.LogWarning("FountainScript not assigned.");
         }
     }
 
