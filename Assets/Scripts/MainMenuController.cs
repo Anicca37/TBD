@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 public class MainMenuController : MonoBehaviour
 {
     public GameObject menuSprite;
+    public GameObject selectLevelController;
+
     public GameObject startOptionSelectedSprite;
     public GameObject levelsOptionSelectedSprite;
     public GameObject exitOptionSelectedSprite;
@@ -13,6 +15,14 @@ public class MainMenuController : MonoBehaviour
     private MenuOption selectedOption;
 
     private void Start()
+    {
+        selectLevelController.GetComponent<SelectLevelController>().enabled = false;
+        // default selection
+        selectedOption = MenuOption.Start;
+        startOptionSelectedSprite.SetActive(true);
+    }
+
+    public void InitializeMenu()
     {
         // default selection
         selectedOption = MenuOption.Start;
@@ -88,7 +98,11 @@ public class MainMenuController : MonoBehaviour
                 SceneManager.LoadScene("DemoLevel");
                 break;
             case MenuOption.Levels:
-                SceneManager.LoadScene("Garden_2");
+                levelsOptionSelectedSprite.SetActive(false);
+                // disable mainmenucontroller and enable selectlevelcontroller
+                selectLevelController.GetComponent<SelectLevelController>().enabled = true;
+                selectLevelController.GetComponent<SelectLevelController>().InitializeLevelSelect();
+                gameObject.GetComponent<MainMenuController>().enabled = false;
                 break;
             case MenuOption.Exit:
                 Application.Quit();
