@@ -190,7 +190,7 @@ public class GardenManager : MonoBehaviour
         EscapeCanvas.SetActive(true);
     }
 
-    void ResetPuzzles()
+    public void ResetPuzzles()
     {
         Debug.Log("Resetting puzzles.");
         isFloralMatched = false;

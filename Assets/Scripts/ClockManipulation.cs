@@ -15,6 +15,7 @@ public class ClockManipulation : MonoBehaviour
     public Material highlightMaterial;
     public GameObject defaultIcon;
     public GameObject grabIcon;
+    public GameObject PauseMenuController;
 
     public Light directionalLight;
     private bool isDay = true;
@@ -44,16 +45,22 @@ public class ClockManipulation : MonoBehaviour
             if (Input.GetButtonDown("Fire2"))
             {
                 HighlightClockHands(!isHighlighted);
-                defaultIcon.SetActive(!isHighlighted);
-                grabIcon.SetActive(isHighlighted);
+                if (!PauseMenuController.GetComponent<PauseMenuController>().isGamePaused())
+                {
+                    defaultIcon.SetActive(!isHighlighted);
+                    grabIcon.SetActive(isHighlighted);
+                }
                 LockPlayerMovement(isHighlighted);
             }
         }
         else
         {
             HighlightClockHands(false);
-            defaultIcon.SetActive(true);
-            grabIcon.SetActive(false);
+            if (!PauseMenuController.GetComponent<PauseMenuController>().isGamePaused())
+            {
+                defaultIcon.SetActive(true);
+                grabIcon.SetActive(false);
+            }
             LockPlayerMovement(false);
         }
         
