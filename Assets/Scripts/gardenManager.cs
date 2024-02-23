@@ -9,8 +9,8 @@ public class GardenManager : MonoBehaviour
     public GameObject EscapeCanvas;
     public ClockManipulation clockController;
     
-    private bool isFloralMatched = true;
-    private bool isWindChimesPlayed = true;
+    private bool isFloralMatched = false;
+    private bool isWindChimesPlayed = false;
     private bool isClockSet = false;
 
 
@@ -28,9 +28,6 @@ public class GardenManager : MonoBehaviour
 
     public FountainScript fountainScript;
     
-
-
-
     void Awake()
     {
         if (Instance == null)
@@ -140,7 +137,6 @@ public class GardenManager : MonoBehaviour
         }
     }
 
-
     void CreateAndRiseWater()
     {
         waterObject = Instantiate(floorObject, floorObject.transform.position, Quaternion.identity);
@@ -153,27 +149,26 @@ public class GardenManager : MonoBehaviour
     }
 
     void Update()
-{
-    if (isGardenFlooded && waterObject != null && !startFlood)
     {
-        // Calculate the target position based on the desired rise amount
-        float targetYPosition = initialYPosition + riseAmount;
-        
-        // Calculate the new Y position for this frame, ensuring we don't exceed the target position
-        float newYPosition = Mathf.Min(waterObject.transform.position.y + (riseSpeed * Time.deltaTime), targetYPosition);
-        
-        // Apply the new Y position
-        waterObject.transform.position = new Vector3(waterObject.transform.position.x, newYPosition, waterObject.transform.position.z);
-        
-        // Check if we've reached or exceeded the target rise amount
-        if (newYPosition >= targetYPosition)
+        if (isGardenFlooded && waterObject != null && !startFlood)
         {
-            startFlood = true; // Mark the flooding as complete
-            Invoke("ResetPuzzles", floodDelay); // Schedule the reset after a brief delay
+            // Calculate the target position based on the desired rise amount
+            float targetYPosition = initialYPosition + riseAmount;
+            
+            // Calculate the new Y position for this frame, ensuring we don't exceed the target position
+            float newYPosition = Mathf.Min(waterObject.transform.position.y + (riseSpeed * Time.deltaTime), targetYPosition);
+            
+            // Apply the new Y position
+            waterObject.transform.position = new Vector3(waterObject.transform.position.x, newYPosition, waterObject.transform.position.z);
+            
+            // Check if we've reached or exceeded the target rise amount
+            if (newYPosition >= targetYPosition)
+            {
+                startFlood = true; // Mark the flooding as complete
+                Invoke("ResetPuzzles", floodDelay); // Schedule the reset after a brief delay
+            }
         }
     }
-}
-
 
     void AdjustFountainParticles()
     {
