@@ -1235,10 +1235,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectLevelSprite: {fileID: 928002902}
   mainMenuController: {fileID: 496508057}
-  tutorialLevelSprite: {fileID: 1325978819}
-  ballpitLevelSprite: {fileID: 1481138018}
-  gardenLevelSprite: {fileID: 911096181}
-  menuSprite: {fileID: 1951505978}
+  tutorialLevelSelectedSprite: {fileID: 1325978819}
+  ballpitLevelSelectedSprite: {fileID: 1481138018}
+  gardenLevelSelectedSprite: {fileID: 911096181}
+  menuSelectedSprite: {fileID: 1951505978}
 --- !u!4 &1718045658
 Transform:
   m_ObjectHideFlags: 0
@@ -1266,7 +1266,7 @@ GameObject:
   - component: {fileID: 1951505981}
   - component: {fileID: 1951505980}
   m_Layer: 5
-  m_Name: MenuSelected
+  m_Name: LevelMenuSelected
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

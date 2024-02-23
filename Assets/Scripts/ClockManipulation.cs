@@ -30,7 +30,6 @@ public class ClockManipulation : MonoBehaviour
     void Start()
     {
         currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
-        Debug.Log("Current Scene: " + currentScene);
     }
 
     // Update is called once per frame

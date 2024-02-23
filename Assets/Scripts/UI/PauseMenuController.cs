@@ -14,6 +14,7 @@ public class PauseMenuController : MonoBehaviour
     public GameObject Crosshair;
     public GameObject HandGrab;
     private GameObject playerBody;
+    private EscapeMenuController escapeMenuController;
 
     private enum MenuOption { Resume, Restart, Menu };
     private MenuOption selectedOption;
@@ -21,6 +22,7 @@ public class PauseMenuController : MonoBehaviour
     private void Start()
     {
         playerBody = GameObject.Find("Player");
+        escapeMenuController = GameObject.Find("EscapeMenuController").GetComponent<EscapeMenuController>();
     }
 
     private void InitializePauseMenu()
@@ -39,7 +41,7 @@ public class PauseMenuController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !escapeMenuController.isPlayerEscaped())
         {
             isPaused = true;
             InitializePauseMenu();
@@ -126,7 +128,6 @@ public class PauseMenuController : MonoBehaviour
                 {
                     TutorialManager.Instance.ResetPuzzles();
                 }
-
                 break;
             case MenuOption.Menu:
                 SceneManager.LoadScene("UI");

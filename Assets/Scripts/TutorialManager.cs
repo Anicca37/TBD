@@ -7,6 +7,8 @@ public class TutorialManager : MonoBehaviour
 {
     public static TutorialManager Instance;
 
+    public GameObject EscapeController;
+
     void Awake()
     {
         if (Instance == null)
@@ -23,5 +25,20 @@ public class TutorialManager : MonoBehaviour
     public void ResetPuzzles()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("Player has entered the tutorial area.");
+            EscapeTutorial();
+        }
+    }
+
+    private void EscapeTutorial()
+    {
+        Debug.Log("Escaping the office.");
+        EscapeController.GetComponent<EscapeMenuController>().OnEscapeActivated();
     }
 }
