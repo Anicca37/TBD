@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.45022285, g: 0.5002563, b: 0.5753819, a: 1}
+  m_IndirectSpecularColor: {r: 0.4502223, g: 0.5002558, b: 0.57538116, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8102,11 +8102,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7142122417593800428, guid: eaea56da31203be49ba8401ade319be8, type: 3}
   m_PrefabInstance: {fileID: 538954319}
   m_PrefabAsset: {fileID: 0}
---- !u!198 &573075941 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 6210205980619907146, guid: 3577c2383fdec4ab2bf0fab48766d582, type: 3}
-  m_PrefabInstance: {fileID: 255891218}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &548912524
 GameObject:
   m_ObjectHideFlags: 0
@@ -8945,7 +8940,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 45, y: 3, z: 25}
+    m_Scale: {x: 43, y: 4, z: 23}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -9143,7 +9138,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 60
+      scalar: 70
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -13038,7 +13033,7 @@ Transform:
   m_GameObject: {fileID: 570882531}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.8, y: 15, z: 6}
+  m_LocalPosition: {x: 14.8, y: 14, z: 6}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -16429,8 +16424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VenusFlytrap: {fileID: 1181773697}
-  EscapeCanvas: {fileID: 1469241865}
-  clockController: {fileID: 1108567185}
+  ClockController: {fileID: 0}
   EscapeController: {fileID: 1395428262}
   floorObject: {fileID: 573257741}
   waterMaterial: {fileID: 2100000, guid: 73d248bf1b093484894fc6605b6d8ed0, type: 2}
@@ -16704,17 +16698,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7142122417593800428, guid: eaea56da31203be49ba8401ade319be8, type: 3}
   m_PrefabInstance: {fileID: 1100652765}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1108567185 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 284465023931408010, guid: 9dcacb3360ef1384d89cb95ebcb077e0, type: 3}
-  m_PrefabInstance: {fileID: 57598431}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8821c1668860eae45acfad390f9de553, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1118666203
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26271,14 +26254,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   treePrefab: {fileID: 137650, guid: 826b6a0b570e8460990010fa615b5a2a, type: 3}
   growthPoints:
-  - {x: 90, y: 6.589914, z: -35}
-  - {x: 50, y: 6.589914, z: -35}
-  - {x: -50, y: 6.589914, z: 0}
-  - {x: 0, y: 6.589914, z: -30}
-  - {x: -60, y: 6.589914, z: 20}
-  - {x: 80, y: 6.589914, z: 30}
-  - {x: 70, y: 6.589914, z: 40}
-  - {x: 0, y: 6.589914, z: 45}
+  - {x: 100, y: 6.589914, z: -35}
+  - {x: 60, y: 6.589914, z: -35}
+  - {x: -80, y: 6.589914, z: -10}
+  - {x: 15, y: 6.589914, z: -30}
+  - {x: -70, y: 6.589914, z: 20}
+  - {x: 90, y: 6.589914, z: 30}
+  - {x: 80, y: 6.589914, z: 40}
+  - {x: 15, y: 6.589914, z: 40}
   growthDuration: 2
   clusterRadius: 40
 --- !u!4 &1725256080
@@ -34688,8 +34671,6 @@ SceneRoots:
   - {fileID: 1094483342}
   - {fileID: 1725256080}
   - {fileID: 354239352}
-  - {fileID: 255891218}
-  - {fileID: 18261170}
   - {fileID: 247624687}
   - {fileID: 6440860645988233500}
   - {fileID: 5248739366339256104}

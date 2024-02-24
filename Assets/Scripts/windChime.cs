@@ -60,7 +60,7 @@ public class windChime : MonoBehaviour
     {
         birdsParticleSystem.Play(); // bird flock
         Invoke("GrowTreesAfterBirds", birdsParticleSystem.main.duration); // delay tree growth after birds
-        Invoke("ResetGarden", 20f); // reset after 20sec
+        Invoke("ResetGarden", 15f); // reset after 15sec
     }
 
     void GrowTreesAfterBirds()
@@ -74,7 +74,6 @@ public class windChime : MonoBehaviour
         birdsParticleSystem.Stop();
         birdsParticleSystem.Clear();
         treeGrowthController.ClearAllTrees();
-
-        // GardenManager.Instance.ResetPuzzles(); //?
+        GardenManager.Instance.ResetPuzzles(); //?
     }
 }
