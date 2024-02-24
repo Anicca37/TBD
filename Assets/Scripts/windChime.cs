@@ -7,12 +7,23 @@ public class windChime : MonoBehaviour
     public ParticleSystem windParticleSystem;
     public WindController windController;
     public ParticleSystem birdsParticleSystem;
-    public TreeGrowthController treeGrowthController; // Assign in the inspector
+    public TreeGrowthController treeGrowthController;
 
-
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(1)) // mouse click
+        {
+            // check if the mouse is over gameobject
+            RaycastHit hitInfo = new RaycastHit();
+            bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
+            if (hit && hitInfo.transform.gameObject == gameObject)
+            {
+                OnMouseDown();
+            }
+        }
+    }
     void OnMouseDown()
     {
-        // Debug.Log("GM.Instance: " + GardenManager.Instance);
         // check if the floral puzzle is matched
         // if (!true)
         if (GardenManager.Instance.IsFloralMatched())
