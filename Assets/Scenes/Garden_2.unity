@@ -2085,6 +2085,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6850090475905800775, guid: 31d0a4d4e05eff94cae9eb30c1ee755f, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6850090475905800775, guid: 31d0a4d4e05eff94cae9eb30c1ee755f, type: 3}
       propertyPath: ShapeModule.angle
       value: 3
       objectReference: {fileID: 0}
@@ -2106,7 +2110,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6850090475905800775, guid: 31d0a4d4e05eff94cae9eb30c1ee755f, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6850090475905800775, guid: 31d0a4d4e05eff94cae9eb30c1ee755f, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key0.b
@@ -14643,6 +14647,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorName: orange
   windEffectPrefab: {fileID: 7318692212211332876, guid: 31d0a4d4e05eff94cae9eb30c1ee755f, type: 3}
+  windParticleSystem: {fileID: 1982393337}
 --- !u!1 &752771304 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 211625153449225937, guid: fb6ec0f7ca5cb40338256eebee304eba, type: 3}
@@ -17572,6 +17577,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorName: blue
   windEffectPrefab: {fileID: 7318692212211332876, guid: 31d0a4d4e05eff94cae9eb30c1ee755f, type: 3}
+  windParticleSystem: {fileID: 1982393337}
 --- !u!1001 &1195525443
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27150,6 +27156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorName: red
   windEffectPrefab: {fileID: 7318692212211332876, guid: 31d0a4d4e05eff94cae9eb30c1ee755f, type: 3}
+  windParticleSystem: {fileID: 1982393337}
 --- !u!1 &1839363576
 GameObject:
   m_ObjectHideFlags: 0
@@ -28565,6 +28572,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorName: purple
   windEffectPrefab: {fileID: 7318692212211332876, guid: 31d0a4d4e05eff94cae9eb30c1ee755f, type: 3}
+  windParticleSystem: {fileID: 1982393337}
 --- !u!1 &1953993125
 GameObject:
   m_ObjectHideFlags: 0
@@ -28648,6 +28656,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1953993125}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!198 &1982393337 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 6850090475905800775, guid: 31d0a4d4e05eff94cae9eb30c1ee755f, type: 3}
+  m_PrefabInstance: {fileID: 322930500}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1984765164
 GameObject:
   m_ObjectHideFlags: 0
@@ -33765,6 +33778,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorName: pink
   windEffectPrefab: {fileID: 7318692212211332876, guid: 31d0a4d4e05eff94cae9eb30c1ee755f, type: 3}
+  windParticleSystem: {fileID: 1982393337}
 --- !u!1 &2009925088
 GameObject:
   m_ObjectHideFlags: 0
