@@ -20,7 +20,7 @@ public class VenusFlytrapController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Player has entered the Venus Flytrap");
+            Debug.Log("Player entered the Venus Flytrap");
             GardenManager.Instance.CompletePuzzle("Escape");
         }
     }

@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections;
 using UnityEngine;
 
 public class GardenManager : MonoBehaviour
@@ -6,18 +7,16 @@ public class GardenManager : MonoBehaviour
     public static GardenManager Instance;
 
     public GameObject VenusFlytrap;
-    public GameObject EscapeCanvas;
-    public ClockManipulation clockController;
-    
+    public ClockManipulation ClockController;
+    public GameObject EscapeController;
+
     private bool isFloralMatched = false;
     private bool isWindChimesPlayed = false;
     private bool isClockSet = false;
 
-
     public GameObject floorObject; // Assign your garden floor in the inspector
     private GameObject waterObject;
 
-    [SerializeField] private ParticleSystem fountainParticleSystem;
     public Material waterMaterial; // Assign a blue water-like material in the inspector
 
     private bool isGardenFlooded = false;
@@ -27,9 +26,7 @@ public class GardenManager : MonoBehaviour
     private float initialYPosition; // Starting Y position of the water
     private bool startFlood = false;
 
-    
-
-
+    public FountainScript fountainScript;
 
     void Awake()
     {
@@ -40,7 +37,6 @@ public class GardenManager : MonoBehaviour
 
             // set VenusFlytrap to inactive
             VenusFlytrap.SetActive(false);
-            EscapeCanvas.SetActive(false);
         }
         else if (Instance != this)
         {
@@ -79,7 +75,7 @@ public class GardenManager : MonoBehaviour
                 }
                 else
                 {
-                    if (clockController.CheckClockSet(0f, 180f))
+                    if (ClockController.CheckClockSet(1f, 180f, "Clockwise"))
                     {
                         isClockSet = true;
                         MakeVenusFlytrapBloom(); // Sequence correct
@@ -112,7 +108,7 @@ public class GardenManager : MonoBehaviour
     void MakeVenusFlytrapBloom()
     {
         Debug.Log("Venus flytrap blooms, revealing escape path.");
-        
+
         // set VenusFlytrap to active
         VenusFlytrap.SetActive(true);
     }
@@ -129,7 +125,7 @@ public class GardenManager : MonoBehaviour
         ResetPuzzles();
     }
 
-     void FloodGarden()
+    void FloodGarden()
     {
         if (!isGardenFlooded)
         {
@@ -140,7 +136,6 @@ public class GardenManager : MonoBehaviour
         }
     }
 
-
     void CreateAndRiseWater()
     {
         waterObject = Instantiate(floorObject, floorObject.transform.position, Quaternion.identity);
@@ -148,66 +143,51 @@ public class GardenManager : MonoBehaviour
         waterObject.GetComponent<Renderer>().material = waterMaterial;
         if (waterObject.GetComponent<Collider>())
             Destroy(waterObject.GetComponent<Collider>());
-        
+
         initialYPosition = waterObject.transform.position.y; // Record the starting Y position
     }
 
     void Update()
-{
-    if (isGardenFlooded && waterObject != null && !startFlood)
     {
-        // Calculate the target position based on the desired rise amount
-        float targetYPosition = initialYPosition + riseAmount;
-        
-        // Calculate the new Y position for this frame, ensuring we don't exceed the target position
-        float newYPosition = Mathf.Min(waterObject.transform.position.y + (riseSpeed * Time.deltaTime), targetYPosition);
-        
-        // Apply the new Y position
-        waterObject.transform.position = new Vector3(waterObject.transform.position.x, newYPosition, waterObject.transform.position.z);
-        
-        // Check if we've reached or exceeded the target rise amount
-        if (newYPosition >= targetYPosition)
+        if (isGardenFlooded && waterObject != null && !startFlood)
         {
-            startFlood = true; // Mark the flooding as complete
-            Invoke("ResetPuzzles", floodDelay); // Schedule the reset after a brief delay
+            // Calculate the target position based on the desired rise amount
+            float targetYPosition = initialYPosition + riseAmount;
+
+            // Calculate the new Y position for this frame, ensuring we don't exceed the target position
+            float newYPosition = Mathf.Min(waterObject.transform.position.y + (riseSpeed * Time.deltaTime), targetYPosition);
+
+            // Apply the new Y position
+            waterObject.transform.position = new Vector3(waterObject.transform.position.x, newYPosition, waterObject.transform.position.z);
+
+            // Check if we've reached or exceeded the target rise amount
+            if (newYPosition >= targetYPosition)
+            {
+                startFlood = true; // Mark the flooding as complete
+                Invoke("ResetPuzzles", floodDelay); // Schedule the reset after a brief delay
+            }
         }
     }
-}
-
 
     void AdjustFountainParticles()
     {
-        if (fountainParticleSystem != null)
+        if (fountainScript != null)
         {
-            Debug.Log("fountain being modified");
-
-            var main = fountainParticleSystem.main;
-            main.startSpeed = 20; // Increase for faster particles
-            main.startSize = 1.5f; // Increase for bigger particles
-            main.maxParticles = 1000; // Increase for more particles
-
-            var emission = fountainParticleSystem.emission;
-            emission.rateOverTime = 500; // Increase for a denser stream
-
-            var shape = fountainParticleSystem.shape;
-            shape.angle = 25; // Increase for a wider output
-            fountainParticleSystem.Play();
+            fountainScript.ActivateFountainEffects();
         }
         else
         {
-            Debug.LogWarning("Fountain Particle System not assigned.");
+            Debug.LogWarning("FountainScript not assigned.");
         }
     }
 
     void EscapeGarden()
     {
         Debug.Log("Escaping the garden.");
-
-        // set EscapeCanvas to active
-        EscapeCanvas.SetActive(true);
+        EscapeController.GetComponent<EscapeMenuController>().OnEscapeActivated();
     }
 
-    void ResetPuzzles()
+    public void ResetPuzzles()
     {
         Debug.Log("Resetting puzzles.");
         isFloralMatched = false;
@@ -215,8 +195,7 @@ public class GardenManager : MonoBehaviour
         isClockSet = false;
 
         VenusFlytrap.SetActive(false);
-        EscapeCanvas.SetActive(false);
-        
+
         // Optionally, reload the scene to visually reset everything
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }

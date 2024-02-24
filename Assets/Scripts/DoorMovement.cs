@@ -36,8 +36,8 @@ public class DoorMovement : MonoBehaviour
         }
     }
 
-    bool CanDoorOpen(float minAngle, float maxAngle)
+    private bool CanDoorOpen(float minAngle, float maxAngle)
     {
-        return clockController.CheckClockSet(minAngle, maxAngle);
+        return clockController.CheckClockSet(minAngle, maxAngle, "Either");
     }
 }

@@ -7,13 +7,15 @@ public class ClockManipulation : MonoBehaviour
     public Transform playerBody;
     public Transform[] clockHands;
     public Transform[] clockControllers;
-    public float chairHeight = 4.45f;
+    public float defaultHeight = 4.45f;
     public float rotationSpeed = 20f;
+    private float rotationAmount = 0f;
 
     public Material defaultMaterial;
     public Material highlightMaterial;
     public GameObject defaultIcon;
     public GameObject grabIcon;
+    public GameObject PauseMenuController;
 
     public Light directionalLight;
     private bool isDay = true;
@@ -28,7 +30,6 @@ public class ClockManipulation : MonoBehaviour
     void Start()
     {
         currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
-        Debug.Log("Current Scene: " + currentScene);
     }
 
     // Update is called once per frame
@@ -38,21 +39,27 @@ public class ClockManipulation : MonoBehaviour
         float playerHeight = playerBody.position.y;
         CheckInteractable();
 
-        if (playerHeight >= chairHeight && canInteract)
+        if (playerHeight >= defaultHeight && canInteract)
         {
             if (Input.GetButtonDown("Fire2"))
             {
                 HighlightClockHands(!isHighlighted);
-                defaultIcon.SetActive(!isHighlighted);
-                grabIcon.SetActive(isHighlighted);
+                if (!PauseMenuController.GetComponent<PauseMenuController>().isGamePaused())
+                {
+                    defaultIcon.SetActive(!isHighlighted);
+                    grabIcon.SetActive(isHighlighted);
+                }
                 LockPlayerMovement(isHighlighted);
             }
         }
         else
         {
             HighlightClockHands(false);
-            defaultIcon.SetActive(true);
-            grabIcon.SetActive(false);
+            if (!PauseMenuController.GetComponent<PauseMenuController>().isGamePaused())
+            {
+                defaultIcon.SetActive(true);
+                grabIcon.SetActive(false);
+            }
             LockPlayerMovement(false);
         }
         
@@ -108,12 +115,24 @@ public class ClockManipulation : MonoBehaviour
     void HandleClockAdjustment()
     {
         float scrollInput = Input.GetAxis("Mouse ScrollWheel");
+
         if (scrollInput != 0f)
         {
             // rotate the clock hand
             foreach (Transform controller in clockControllers)
             {
                 controller.Rotate(Vector3.forward, scrollInput * rotationSpeed);
+
+                // update rotation amount
+                rotationAmount += scrollInput * rotationSpeed;
+                if (rotationAmount > 720f)
+                {
+                    rotationAmount -= 720f;
+                }
+                else if (rotationAmount < -720f)
+                {
+                    rotationAmount += 720f;
+                }
             }
 
             // change the light rotation and color
@@ -148,13 +167,28 @@ public class ClockManipulation : MonoBehaviour
         }
     }
 
-    public bool CheckClockSet(float minAngle, float maxAngle)
+    public bool CheckClockSet(float minAngle, float maxAngle, string clockwise)
     {
         // check if the clock hand is set to the correct time
         foreach (Transform controller in clockControllers)
         {
             float angle = controller.localEulerAngles.z;
-            if (angle >= minAngle && angle <= maxAngle)
+            bool isClockSet = false;
+
+            if (clockwise == "Either")
+            {
+                isClockSet = angle > minAngle && angle < maxAngle;
+            }
+            else if (clockwise == "Clockwise")
+            {
+                isClockSet = rotationAmount < 0 && angle > minAngle && angle < maxAngle;
+            }
+            else if (clockwise == "CounterClockwise")
+            {
+                isClockSet = rotationAmount > 0 && angle > minAngle && angle < maxAngle;
+            }
+
+            if (isClockSet)
             {
                 Debug.Log("Clock is set!");
                 return true;
