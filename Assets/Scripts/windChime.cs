@@ -7,39 +7,54 @@ public class windChime : MonoBehaviour
     public ParticleSystem windParticleSystem;
     public WindController windController;
     public ParticleSystem birdsParticleSystem;
-    public TreeGrowthController treeGrowthController; // Assign in the inspector
+    public TreeGrowthController treeGrowthController;
 
-
-    void OnMouseDown()
+    void Update()
     {
-        // Debug.Log("GM.Instance: " + GardenManager.Instance);
-        // check if the floral puzzle is matched
-        // if (!true)
-        if (GardenManager.Instance.IsFloralMatched())
+        if (Input.GetMouseButtonDown(1)) // mouse click
         {
-            switch (gameObject.name)
+            // check if the mouse is over gameobject
+            RaycastHit hitInfo = new RaycastHit();
+            bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
+            if (hit && hitInfo.transform.gameObject == gameObject)
             {
-                case "Chime1":
-                    ChangeWindDirection(Vector3.forward); // North
-                    break;
-                case "Chime2":
-                    ChangeWindDirection(Vector3.back); // South
-                    break;
-                case "Chime3":
-                    ChangeWindDirection(Vector3.right); // East
-                    break;
-                case "Chime4":
-                    ChangeWindDirection(Vector3.left); // West
-                    break;
-                default:
-                    break;
+                OnMouseOver();
             }
         }
-        else
+    }
+    void OnMouseOver()
+    {
+        // check if the floral puzzle is matched
+        // if (!true)
+        if (Input.GetMouseButtonDown(1))
         {
-            // Debug.Log("Ah! So many birds!");
-            TriggerBirdsAndGrowPlants();
-            // GardenManager.Instance.CompletePuzzle("WindChimes");
+
+            if (GardenManager.Instance.IsFloralMatched())
+            {
+                switch (gameObject.name)
+                {
+                    case "Chime1":
+                        ChangeWindDirection(Vector3.forward); // North
+                        break;
+                    case "Chime2":
+                        ChangeWindDirection(Vector3.back); // South
+                        break;
+                    case "Chime3":
+                        ChangeWindDirection(Vector3.right); // East
+                        break;
+                    case "Chime4":
+                        ChangeWindDirection(Vector3.left); // West
+                        break;
+                    default:
+                        break;
+                }
+            }
+            else
+            {
+                Debug.Log("Ah! So many birds!");
+                TriggerBirdsAndGrowPlants();
+                // GardenManager.Instance.CompletePuzzle("WindChimes");
+            }
         }
     }
 
@@ -60,7 +75,7 @@ public class windChime : MonoBehaviour
     {
         birdsParticleSystem.Play(); // bird flock
         Invoke("GrowTreesAfterBirds", birdsParticleSystem.main.duration); // delay tree growth after birds
-        Invoke("ResetGarden", 20f); // reset after 20sec
+        Invoke("ResetGarden", 15f); // reset after 15sec
     }
 
     void GrowTreesAfterBirds()
@@ -74,7 +89,6 @@ public class windChime : MonoBehaviour
         birdsParticleSystem.Stop();
         birdsParticleSystem.Clear();
         treeGrowthController.ClearAllTrees();
-
-        // GardenManager.Instance.ResetPuzzles(); //?
+        GardenManager.Instance.ResetPuzzles(); //?
     }
 }

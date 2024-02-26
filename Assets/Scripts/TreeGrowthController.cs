@@ -48,7 +48,7 @@ public class TreeGrowthController : MonoBehaviour
     {
         foreach (GameObject obj in GameObject.FindObjectsOfType<GameObject>()) // find all trees in the scene
         {
-            if (obj.name.StartsWith("Oak_Tree(Clone)"))
+            if (obj.name.StartsWith("Poplar_Tree(Clone)"))
             {
                 Destroy(obj);
             }

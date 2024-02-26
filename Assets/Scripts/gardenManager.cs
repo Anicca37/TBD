@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections;
 using UnityEngine;
 
 public class GardenManager : MonoBehaviour
@@ -8,7 +9,7 @@ public class GardenManager : MonoBehaviour
     public GameObject VenusFlytrap;
     public ClockManipulation ClockController;
     public GameObject EscapeController;
-    
+
     private bool isFloralMatched = false;
     private bool isWindChimesPlayed = false;
     private bool isClockSet = false;
@@ -26,7 +27,7 @@ public class GardenManager : MonoBehaviour
     private bool startFlood = false;
 
     public FountainScript fountainScript;
-    
+
     void Awake()
     {
         if (Instance == null)
@@ -107,7 +108,7 @@ public class GardenManager : MonoBehaviour
     void MakeVenusFlytrapBloom()
     {
         Debug.Log("Venus flytrap blooms, revealing escape path.");
-        
+
         // set VenusFlytrap to active
         VenusFlytrap.SetActive(true);
     }
@@ -142,7 +143,7 @@ public class GardenManager : MonoBehaviour
         waterObject.GetComponent<Renderer>().material = waterMaterial;
         if (waterObject.GetComponent<Collider>())
             Destroy(waterObject.GetComponent<Collider>());
-        
+
         initialYPosition = waterObject.transform.position.y; // Record the starting Y position
     }
 
@@ -152,13 +153,13 @@ public class GardenManager : MonoBehaviour
         {
             // Calculate the target position based on the desired rise amount
             float targetYPosition = initialYPosition + riseAmount;
-            
+
             // Calculate the new Y position for this frame, ensuring we don't exceed the target position
             float newYPosition = Mathf.Min(waterObject.transform.position.y + (riseSpeed * Time.deltaTime), targetYPosition);
-            
+
             // Apply the new Y position
             waterObject.transform.position = new Vector3(waterObject.transform.position.x, newYPosition, waterObject.transform.position.z);
-            
+
             // Check if we've reached or exceeded the target rise amount
             if (newYPosition >= targetYPosition)
             {
@@ -172,7 +173,7 @@ public class GardenManager : MonoBehaviour
     {
         if (fountainScript != null)
         {
-           fountainScript.ActivateFountainEffects();    
+            fountainScript.ActivateFountainEffects();
         }
         else
         {
@@ -194,7 +195,7 @@ public class GardenManager : MonoBehaviour
         isClockSet = false;
 
         VenusFlytrap.SetActive(false);
-        
+
         // Optionally, reload the scene to visually reset everything
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
