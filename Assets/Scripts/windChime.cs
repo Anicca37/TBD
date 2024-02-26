@@ -18,39 +18,43 @@ public class windChime : MonoBehaviour
             bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
             if (hit && hitInfo.transform.gameObject == gameObject)
             {
-                OnMouseDown();
+                OnMouseOver();
             }
         }
     }
-    void OnMouseDown()
+    void OnMouseOver()
     {
         // check if the floral puzzle is matched
         // if (!true)
-        if (GardenManager.Instance.IsFloralMatched())
+        if (Input.GetMouseButtonDown(1))
         {
-            switch (gameObject.name)
+
+            if (GardenManager.Instance.IsFloralMatched())
             {
-                case "Chime1":
-                    ChangeWindDirection(Vector3.forward); // North
-                    break;
-                case "Chime2":
-                    ChangeWindDirection(Vector3.back); // South
-                    break;
-                case "Chime3":
-                    ChangeWindDirection(Vector3.right); // East
-                    break;
-                case "Chime4":
-                    ChangeWindDirection(Vector3.left); // West
-                    break;
-                default:
-                    break;
+                switch (gameObject.name)
+                {
+                    case "Chime1":
+                        ChangeWindDirection(Vector3.forward); // North
+                        break;
+                    case "Chime2":
+                        ChangeWindDirection(Vector3.back); // South
+                        break;
+                    case "Chime3":
+                        ChangeWindDirection(Vector3.right); // East
+                        break;
+                    case "Chime4":
+                        ChangeWindDirection(Vector3.left); // West
+                        break;
+                    default:
+                        break;
+                }
             }
-        }
-        else
-        {
-            Debug.Log("Ah! So many birds!");
-            TriggerBirdsAndGrowPlants();
-            // GardenManager.Instance.CompletePuzzle("WindChimes");
+            else
+            {
+                Debug.Log("Ah! So many birds!");
+                TriggerBirdsAndGrowPlants();
+                // GardenManager.Instance.CompletePuzzle("WindChimes");
+            }
         }
     }
 
