@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class ColorMatch : MonoBehaviour
 {
-    public string colorName; // Assign in the Inspector
-    public GameObject windEffectPrefab; // Assign your wind effect prefab here
+    public string colorName; 
+    public GameObject windEffectPrefab; 
     public static int matchedFlowersCount = 0;
-    private const int totalFlowers = 5; // Total number of flowers to match
+    private const int totalFlowers = 5;
+    public ParticleSystem windParticleSystem;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -49,6 +50,7 @@ public class ColorMatch : MonoBehaviour
         if (matchedFlowersCount >= totalFlowers)
         {
             GardenManager.Instance.CompletePuzzle("Floral");
+            windParticleSystem.Play();
         }
     }
 
