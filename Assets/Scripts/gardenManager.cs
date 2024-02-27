@@ -28,6 +28,10 @@ public class GardenManager : MonoBehaviour
 
     public FountainScript fountainScript;
 
+    public GameObject scaleBeam;
+
+    private bool isScaleBalanced;
+
     void Awake()
     {
         if (Instance == null)
@@ -82,9 +86,16 @@ public class GardenManager : MonoBehaviour
                     }
                 }
                 break;
-            case "Scales": // Scales interacted at any point floods the garden
-                FloodGarden();
+            case "Scales":
+                if (isWindChimesPlayed)
+                {
+                    BalanceScales();
+                    break;
+                }
+
+                FloodGarden(); 
                 break;
+
             case "Escape":
                 if (isFloralMatched && isWindChimesPlayed && isClockSet)
                 {
@@ -92,6 +103,12 @@ public class GardenManager : MonoBehaviour
                 }
                 break;
         }
+    }
+
+    void BalanceScales()
+    {
+        scaleBeam.transform.eulerAngles = new Vector3(0, 0, 0);
+        isScaleBalanced = true;
     }
 
     void DirectWindToWindChimes()
