@@ -31278,6 +31278,7 @@ MonoBehaviour:
   riseSpeed: 0.7
   riseAmount: 2.93
   fountainScript: {fileID: 971958512}
+  scaleBeam: {fileID: 412049688}
 --- !u!4 &1070179845
 Transform:
   m_ObjectHideFlags: 0

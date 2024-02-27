@@ -12,8 +12,24 @@ public class buttonScript : MonoBehaviour
 
     public GardenManager GardenManager;
 
-    void OnMouseDown()
+    void Update()
     {
-        GardenManager.CompletePuzzle("Scales");
+        // Check if the right mouse button was clicked (button index 1)
+        if (Input.GetMouseButtonDown(1))
+        {
+            // Perform a raycast from the camera to the mouse position
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            if (Physics.Raycast(ray, out hit))
+            {
+                // Check if the raycast hit this game object
+                if (hit.collider.gameObject == this.gameObject)
+                {
+                    // Right mouse button was clicked on this object, complete the puzzle
+                    GardenManager.CompletePuzzle("Scales");
+                }
+            }
+        }
     }
 }
