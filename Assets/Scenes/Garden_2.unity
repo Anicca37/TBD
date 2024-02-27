@@ -2947,7 +2947,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.2543576, y: 8, z: 2.5701935}
+  m_Size: {x: 5, y: 10, z: 2.5701935}
   m_Center: {x: 7.52718, y: -1, z: 1.0760411}
 --- !u!114 &130668230
 MonoBehaviour:
@@ -4613,7 +4613,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.2543576, y: 8, z: 2.5701935}
+  m_Size: {x: 5, y: 10, z: 2.5701935}
   m_Center: {x: 7.52718, y: -1, z: 1.0760411}
 --- !u!1 &230618595 stripped
 GameObject:
@@ -33110,7 +33110,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.2543576, y: 8, z: 2.5701935}
+  m_Size: {x: 5, y: 10, z: 2.5701935}
   m_Center: {x: 7.52718, y: -1, z: 1.0760411}
 --- !u!114 &1166105733
 MonoBehaviour:
@@ -37688,7 +37688,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.2543576, y: 8, z: 2.5701935}
+  m_Size: {x: 5, y: 10, z: 2.5701935}
   m_Center: {x: 7.52718, y: -1, z: 1.0760411}
 --- !u!114 &1404086565
 MonoBehaviour:
@@ -52354,7 +52354,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.2543576, y: 8, z: 2.5701935}
+  m_Size: {x: 5, y: 10, z: 2.5701935}
   m_Center: {x: 7.52718, y: -1, z: 1.0760411}
 --- !u!114 &1901873309
 MonoBehaviour:
@@ -61544,6 +61544,14 @@ PrefabInstance:
     - target: {fileID: 7707627760686205662, guid: 7c560a46e8bc30a47a8e86797e6949ed, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7742563500529424866, guid: 7c560a46e8bc30a47a8e86797e6949ed, type: 3}
+      propertyPath: m_fontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7742563500529424866, guid: 7c560a46e8bc30a47a8e86797e6949ed, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

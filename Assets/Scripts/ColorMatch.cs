@@ -37,7 +37,7 @@ public class ColorMatch : MonoBehaviour
 
     void SnapFlowerToStone(GameObject flower)
     {
-        float yOffset = 1f; 
+        float yOffset = 1.2f; 
 
         var flowerRb = flower.GetComponent<Rigidbody>();
         if (flowerRb != null)
@@ -68,6 +68,7 @@ public class ColorMatch : MonoBehaviour
     {
         playerPickup playerPickupScript = flower.GetComponentInParent<playerPickup>();
         playerPickupScript.DropObject();
+        flower.tag = "Untagged";
       
     }
 }
