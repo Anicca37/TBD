@@ -30,7 +30,7 @@ public class GardenManager : MonoBehaviour
 
     public GameObject scaleBeam;
 
-    private bool isScaleBalanced;
+    private bool isScaleBalanced = false;
 
     void Awake()
     {
@@ -73,7 +73,7 @@ public class GardenManager : MonoBehaviour
                 }
                 break;
             case "Clock":
-                if (!isFloralMatched || !isWindChimesPlayed) // Clock set too early
+                if (!isFloralMatched || !isWindChimesPlayed || !isScaleBalanced) // Clock set too early
                 {
                     StatuesSingLoudly();
                 }
@@ -97,7 +97,7 @@ public class GardenManager : MonoBehaviour
                 break;
 
             case "Escape":
-                if (isFloralMatched && isWindChimesPlayed && isClockSet)
+                if (isFloralMatched && isWindChimesPlayed && isClockSet && isScaleBalanced)
                 {
                     EscapeGarden();
                 }
