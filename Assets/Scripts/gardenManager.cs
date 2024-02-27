@@ -195,6 +195,7 @@ public class GardenManager : MonoBehaviour
         isClockSet = false;
 
         VenusFlytrap.SetActive(false);
+        ColorMatch.ResetMatchedFlowersCount();
 
         // Optionally, reload the scene to visually reset everything
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);

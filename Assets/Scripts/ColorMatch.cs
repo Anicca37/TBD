@@ -10,6 +10,16 @@ public class ColorMatch : MonoBehaviour
     private const int totalFlowers = 5;
     public ParticleSystem windParticleSystem;
 
+    public static void ResetMatchedFlowersCount()
+    {
+        matchedFlowersCount = 0;
+    }
+
+    void Start()
+    {
+        ResetMatchedFlowersCount();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         FlowerScript flowerScript = other.GetComponent<FlowerScript>();
