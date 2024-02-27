@@ -26,8 +26,8 @@ public class EscapeMenuController : MonoBehaviour
         Crosshair.SetActive(false);
         HandGrab.SetActive(false);
         // default selection
-        selectedOption = MenuOption.Restart;
-        restartOptionSelectedSprite.SetActive(true);
+        selectedOption = MenuOption.Next;
+        nextOptionSelectedSprite.SetActive(true);
     }
 
     public bool isPlayerEscaped()
@@ -70,19 +70,19 @@ public class EscapeMenuController : MonoBehaviour
         switch (selectedOption)
         {
             case MenuOption.Restart:
-                selectedOption = MenuOption.Menu;
+                selectedOption = MenuOption.Next;
                 restartOptionSelectedSprite.SetActive(false);
-                menuOptionSelectedSprite.SetActive(true);
+                nextOptionSelectedSprite.SetActive(true);
                 break;
             case MenuOption.Next:
-                selectedOption = MenuOption.Restart;
+                selectedOption = MenuOption.Menu;
                 nextOptionSelectedSprite.SetActive(false);
-                restartOptionSelectedSprite.SetActive(true);
+                menuOptionSelectedSprite.SetActive(true);
                 break;
             case MenuOption.Menu:
-                selectedOption = MenuOption.Next;
+                selectedOption = MenuOption.Restart;
                 menuOptionSelectedSprite.SetActive(false);
-                nextOptionSelectedSprite.SetActive(true);
+                restartOptionSelectedSprite.SetActive(true);
                 break;
         }
     }
@@ -92,19 +92,19 @@ public class EscapeMenuController : MonoBehaviour
         switch (selectedOption)
         {
             case MenuOption.Restart:
-                selectedOption = MenuOption.Next;
-                restartOptionSelectedSprite.SetActive(false);
-                nextOptionSelectedSprite.SetActive(true);
-                break;
-            case MenuOption.Next:
                 selectedOption = MenuOption.Menu;
-                nextOptionSelectedSprite.SetActive(false);
+                restartOptionSelectedSprite.SetActive(false);
                 menuOptionSelectedSprite.SetActive(true);
                 break;
-            case MenuOption.Menu:
+            case MenuOption.Next:
                 selectedOption = MenuOption.Restart;
-                menuOptionSelectedSprite.SetActive(false);
+                nextOptionSelectedSprite.SetActive(false);
                 restartOptionSelectedSprite.SetActive(true);
+                break;
+            case MenuOption.Menu:
+                selectedOption = MenuOption.Next;
+                menuOptionSelectedSprite.SetActive(false);
+                nextOptionSelectedSprite.SetActive(true);
                 break;
         }
     }
