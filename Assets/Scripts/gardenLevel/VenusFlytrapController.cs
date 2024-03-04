@@ -16,7 +16,7 @@ public class VenusFlytrapController : MonoBehaviour
         
     }
 
-    void OnTriggerStay(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {

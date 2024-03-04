@@ -11,7 +11,7 @@ public class playerPickup : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetButtonDown("Fire1"))
         {
             // Check if the player is not already carrying an object
             if (currentPickup == null)
