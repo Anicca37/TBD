@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class fpsCameraControl : MonoBehaviour
 {
-    public float mouseSensitivity = 70f;
+    private float mouseSensitivity = 500f;
 
     public Transform player;
 
