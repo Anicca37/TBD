@@ -70,15 +70,15 @@ public class ClockManipulation : MonoBehaviour
         {
             Vector3 center = currentCamera.WorldToScreenPoint(clockControllers[0].position);
             float anglePrevious = Mathf.Atan2(center.x - lastMousePosition.x, lastMousePosition.y - center.y);
-            // Vector3 currentMousePosition = Input.mousePosition;
-            // float angleNow = Mathf.Atan2(center.x - currentMousePosition.x, currentMousePosition.y - center.y);
             float mouseX = Input.GetAxis("Mouse X");
             float mouseY = Input.GetAxis("Mouse Y");
             float angleNow = Mathf.Atan2(center.x - (lastMousePosition.x + mouseX), (lastMousePosition.y + mouseY) - center.y);
             float dragAmount = angleNow - anglePrevious;
-           // lastMousePosition = currentMousePosition;
             lastMousePosition += new Vector3(mouseX, mouseY, 0f);
-            HandleClockAdjustment(dragAmount);
+            if (dragAmount <= 6f && dragAmount >= -6f){
+                // handle precision issue
+                HandleClockAdjustment(dragAmount);
+            }
         }
     }
 
@@ -129,29 +129,26 @@ public class ClockManipulation : MonoBehaviour
 
     void HandleClockAdjustment(float dragAmount)
     {
-        // float scrollInput = Input.GetAxis("Mouse ScrollWheel");
-
         // rotate the clock hand
         foreach (Transform controller in clockControllers)
         {
             controller.Rotate(new Vector3(0, 0, dragAmount * Mathf.Rad2Deg));
             // update rotation amount
             rotationAmount += dragAmount * Mathf.Rad2Deg;
-            if (rotationAmount > 360f)
+            if (rotationAmount > 720f)
             {
-                rotationAmount -= 360f;
+                rotationAmount -= 720f;
             }
-            else if (rotationAmount < -360f)
+            else if (rotationAmount < -720f)
             {
-                rotationAmount += 360f;
+                rotationAmount += 720f;
             }
-            Debug.Log("Rotation amount: " + dragAmount + " " + rotationAmount);
         }
 
         // change the directional light rotation and color
         if (directionalLight != null)
         {
-            directionalLight.transform.Rotate(new Vector3(0, dragAmount * Mathf.Rad2Deg, 0), Space.Self);
+            directionalLight.transform.Rotate(new Vector3(0, dragAmount * Mathf.Rad2Deg / 2, 0), Space.Self);
             float timeOfDay = Mathf.Repeat(directionalLight.transform.rotation.eulerAngles.y, 360f) / 360f;
             if (timeOfDay <= 0.5f)
             {

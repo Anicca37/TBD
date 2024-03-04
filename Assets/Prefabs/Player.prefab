@@ -497,7 +497,7 @@ Camera:
   m_GameObject: {fileID: 8279854834289805441}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.23787706, g: 0.22174263, b: 0.31132078, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -559,7 +559,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba8afc7389db6e74d8ed1180fc841e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 500
   player: {fileID: 5118629688310482985}
 --- !u!1 &8858376182416302382
 GameObject:
