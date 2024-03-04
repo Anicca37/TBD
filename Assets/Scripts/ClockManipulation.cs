@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class ClockManipulation : MonoBehaviour
 {
-    public Transform playerBody;
+    public GameObject playerBody;
+    public GameObject mainCamera;
+    public GameObject clockCamera;
+    private Camera currentCamera;
+
     public Transform[] clockHands;
     public Transform[] clockControllers;
     public float defaultHeight = 4.45f;
-    public float rotationSpeed = 20f;
     private float rotationAmount = 0f;
+    private Vector3 lastMousePosition;
 
     public Material defaultMaterial;
     public Material highlightMaterial;
@@ -21,149 +25,158 @@ public class ClockManipulation : MonoBehaviour
     private bool isDay = true;
 
     public float interactRange = 10f;
-    private bool canInteract = false;
-    private bool isHighlighted = false;
 
-    private string currentScene = "";
-    
     // Start is called before the first frame update
     void Start()
     {
-        currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        currentCamera = mainCamera.GetComponent<Camera>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        // check if the player can reach the clock
-        float playerHeight = playerBody.position.y;
-        CheckInteractable();
-
-        if (playerHeight >= defaultHeight && canInteract)
-        {
-            if (Input.GetButtonDown("Fire2"))
-            {
-                HighlightClockHands(!isHighlighted);
-                if (!PauseMenuController.GetComponent<PauseMenuController>().isGamePaused())
-                {
-                    defaultIcon.SetActive(!isHighlighted);
-                    grabIcon.SetActive(isHighlighted);
-                }
-                LockPlayerMovement(isHighlighted);
-            }
-        }
-        else
-        {
-            HighlightClockHands(false);
-            if (!PauseMenuController.GetComponent<PauseMenuController>().isGamePaused())
-            {
-                defaultIcon.SetActive(true);
-                grabIcon.SetActive(false);
-            }
-            LockPlayerMovement(false);
-        }
-        
-        if (isHighlighted)
-        {
-            HandleClockAdjustment();
-        }
 
     }
 
-    void CheckInteractable()
+    void LockGameControl(bool highlight)
+    {
+        HighlightClockHands(highlight);
+        if (!PauseMenuController.GetComponent<PauseMenuController>().isGamePaused())
+        {
+            defaultIcon.SetActive(!highlight);
+            grabIcon.SetActive(highlight);
+        }
+        LockPlayerMovement(highlight);
+        LockCameraRotation(highlight);
+    }
+
+    void OnMouseDown()
+    {
+        if (CheckInteractable(playerBody.transform.position.y))
+        {
+            lastMousePosition = Input.mousePosition;
+            LockGameControl(true);
+        }
+    }
+
+    void OnMouseUp()
+    {
+        LockGameControl(false);
+    }
+
+    void OnMouseDrag()
+    {
+        if (CheckInteractable(playerBody.transform.position.y))
+        {
+            Vector3 center = currentCamera.WorldToScreenPoint(clockControllers[0].position);
+            float anglePrevious = Mathf.Atan2(center.x - lastMousePosition.x, lastMousePosition.y - center.y);
+            // Vector3 currentMousePosition = Input.mousePosition;
+            // float angleNow = Mathf.Atan2(center.x - currentMousePosition.x, currentMousePosition.y - center.y);
+            float mouseX = Input.GetAxis("Mouse X");
+            float mouseY = Input.GetAxis("Mouse Y");
+            float angleNow = Mathf.Atan2(center.x - (lastMousePosition.x + mouseX), (lastMousePosition.y + mouseY) - center.y);
+            float dragAmount = angleNow - anglePrevious;
+           // lastMousePosition = currentMousePosition;
+            lastMousePosition += new Vector3(mouseX, mouseY, 0f);
+            HandleClockAdjustment(dragAmount);
+        }
+    }
+
+    bool CheckInteractable(float playerHeight)
     {
         RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray ray = currentCamera.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit, interactRange))
         {
-            if (hit.collider.CompareTag("Interactable"))
+            if (hit.collider.CompareTag("Interactable") && playerHeight >= defaultHeight)
             {
-                canInteract = true;
+                return true;
             }
         }
-        else
-        {
-            canInteract = false;
-        }
+        return false;
     }
 
     void LockPlayerMovement(bool lockMovement)
     {
-        if (lockMovement)
+        playerBody.GetComponent<playerMovement>().enabled = !lockMovement;
+    }
+
+    void LockCameraRotation(bool lockRotation)
+    {
+        mainCamera.SetActive(!lockRotation);
+        clockCamera.SetActive(lockRotation);
+        if (lockRotation)
         {
-            playerBody.GetComponent<playerMovement>().enabled = false;
+            currentCamera = clockCamera.GetComponent<Camera>();
         }
         else
         {
-            playerBody.GetComponent<playerMovement>().enabled = true;
+            currentCamera = mainCamera.GetComponent<Camera>();
         }
     }
 
     void HighlightClockHands(bool highlight)
     {
-        isHighlighted = highlight;
         foreach (Transform clockHand in clockHands)
         {
             Renderer renderer = clockHand.GetComponent<Renderer>();
             if (renderer != null)
             {
-                renderer.material = isHighlighted ? highlightMaterial : defaultMaterial;
+                renderer.material = highlight ? highlightMaterial : defaultMaterial;
             }
         }
     }
 
-    void HandleClockAdjustment()
+    void HandleClockAdjustment(float dragAmount)
     {
-        float scrollInput = Input.GetAxis("Mouse ScrollWheel");
+        // float scrollInput = Input.GetAxis("Mouse ScrollWheel");
 
-        if (scrollInput != 0f)
+        // rotate the clock hand
+        foreach (Transform controller in clockControllers)
         {
-            // rotate the clock hand
-            foreach (Transform controller in clockControllers)
+            controller.Rotate(new Vector3(0, 0, dragAmount * Mathf.Rad2Deg));
+            // update rotation amount
+            rotationAmount += dragAmount * Mathf.Rad2Deg;
+            if (rotationAmount > 360f)
             {
-                controller.Rotate(Vector3.forward, scrollInput * rotationSpeed);
+                rotationAmount -= 360f;
+            }
+            else if (rotationAmount < -360f)
+            {
+                rotationAmount += 360f;
+            }
+            Debug.Log("Rotation amount: " + dragAmount + " " + rotationAmount);
+        }
 
-                // update rotation amount
-                rotationAmount += scrollInput * rotationSpeed;
-                if (rotationAmount > 720f)
-                {
-                    rotationAmount -= 720f;
-                }
-                else if (rotationAmount < -720f)
-                {
-                    rotationAmount += 720f;
-                }
+        // change the directional light rotation and color
+        if (directionalLight != null)
+        {
+            directionalLight.transform.Rotate(new Vector3(0, dragAmount * Mathf.Rad2Deg, 0), Space.Self);
+            float timeOfDay = Mathf.Repeat(directionalLight.transform.rotation.eulerAngles.y, 360f) / 360f;
+            if (timeOfDay <= 0.5f)
+            {
+                isDay = false;
+            }
+            else
+            {
+                isDay = true;
             }
 
-            // change the light rotation and color
-            if (directionalLight != null)
+            if (isDay)
             {
-                directionalLight.transform.Rotate(Vector3.up, scrollInput * rotationSpeed / 2, Space.Self);
-                float timeOfDay = Mathf.Repeat(directionalLight.transform.rotation.eulerAngles.y, 360f) / 360f;
-                if (timeOfDay <= 0.5f)
-                {
-                    isDay = false;
-                }
-                else
-                {
-                    isDay = true;
-                }
-
-                if (isDay)
-                {
-                    directionalLight.color = Color.Lerp(Color.black, Color.white, (timeOfDay - 0.5f) * 2);
-                }
-                else
-                {
-                    directionalLight.color = Color.Lerp(Color.white, Color.black, timeOfDay * 2);
-                }
-            } 
-
-            // check current scene
-            if (currentScene == "Garden_2")
-            {
-                GardenManager.Instance.CompletePuzzle("Clock");  
+                directionalLight.color = Color.Lerp(Color.black, Color.white, (timeOfDay - 0.5f) * 2);
             }
+            else
+            {
+                directionalLight.color = Color.Lerp(Color.white, Color.black, timeOfDay * 2);
+            }
+        }
+
+        // check current scene
+        string currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        if (currentScene == "Garden_2")
+        {
+            GardenManager.Instance.CompletePuzzle("Clock");
         }
     }
 
