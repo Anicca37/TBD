@@ -11,7 +11,7 @@ public class windChime : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(1)) // mouse click
+        if (Input.GetMouseButtonDown(0)) // mouse click
         {
             // check if the mouse is over gameobject
             RaycastHit hitInfo = new RaycastHit();
@@ -26,7 +26,7 @@ public class windChime : MonoBehaviour
     {
         // check if the floral puzzle is matched
         // if (!true)
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(0))
         {
 
             if (GardenManager.Instance.IsFloralMatched())
