@@ -1,83 +1,106 @@
+// using UnityEngine;
+
+// [RequireComponent(typeof(Renderer))] // Ensure there is a Renderer component
+// public class InteractableOutline : MonoBehaviour
+// {
+//     private Renderer renderer; // Reference to the Renderer component
+//     private Material originalMaterial; // To keep track of the original material
+//     public Material outlineMaterial; // The outline material to swap to
+//     public bool isLookingAt = false; // Controlled by another script, e.g., player gaze detection
+
+//     void Start()
+//     {
+//         renderer = GetComponent<Renderer>();
+//         originalMaterial = renderer.material; // Save the original material
+//     }
+
+//     void Update()
+//     {
+//         // Check if the player is looking at the object and swap materials accordingly
+//         if (isLookingAt)
+//         {
+//             if (renderer.material != outlineMaterial)
+//             {
+//                 renderer.material = outlineMaterial; // Apply the outline material
+//             }
+//         }
+//         else
+//         {
+//             if (renderer.material != originalMaterial)
+//             {
+//                 renderer.material = originalMaterial; // Revert to the original material
+//             }
+//         }
+//     }
+
+//     // Optionally, a method to manually set 'isLookingAt', could be called by a raycast from the player's camera
+//     public void SetIsLookingAt(bool lookingAt)
+//     {
+//         isLookingAt = lookingAt;
+//     }
+// }
+
+//^ for just one object, use code above
+//for all children objects as well, use code underneath
+
 using UnityEngine;
 
-[RequireComponent(typeof(Light), typeof(ParticleSystem))] // Ensure there are Light and ParticleSystem components
-public class InteractableGlow : MonoBehaviour
+public class InteractableOutline : MonoBehaviour
 {
-    private Light glowLight; // Reference to the Light component
-    private ParticleSystem particles; // Reference to the ParticleSystem component
-    public bool isActive = true; // Public variable to control the state, enabled by default
+    // Struct to hold the renderer and its original materials
+    private struct RendererMaterials
+    {
+        public Renderer Renderer;
+        public Material[] OriginalMaterials;
+    }
 
-    // Start is called before the first frame update
+    private RendererMaterials[] childRenderersMaterials; // Array to hold all child renderers and their materials
+    public Material outlineMaterial; // The outline material to swap to
+    public bool isLookingAt = false; // Controlled by another script
+
     void Start()
     {
+        // Get all renderers in this object and its children
+        Renderer[] childRenderers = GetComponentsInChildren<Renderer>();
+        childRenderersMaterials = new RendererMaterials[childRenderers.Length];
 
-
-        // Configure the light
-        glowLight = GetComponent<Light>();
-        glowLight.color = Color.yellow;
-        glowLight.intensity = 0.25f;
-        glowLight.range = 10f;
-        glowLight.enabled = isActive;
-
-        // Disable shadows to prevent the object from occluding the light
-        glowLight.shadows = LightShadows.None;
-
-
-        // Configure the ParticleSystem
-        particles = GetComponent<ParticleSystem>();
-
-        // Set scaling mode to Local to prevent parent scaling affecting the particles
-        var main = particles.main;
-        main.scalingMode = ParticleSystemScalingMode.Local;
-
-
-        main.startColor = new Color(1.0f, 0.84f, 0.0f); // Golden color
-        main.startSize = 0.3f; // Smaller particles
-        main.startSpeed = 0.5f; // Slower movement
-        main.maxParticles = 70;
-        main.startLifetime = 1.9f; // Shorter lifetime so they disappear after lingering
-
-        // Adjust emission settings
-        var emission = particles.emission;
-        emission.rateOverTime = 5; // Lower emission rate
-
-        // Adjust shape settings for all direction emission
-        var shape = particles.shape;
-        shape.shapeType = ParticleSystemShapeType.Sphere;
-        shape.radius = 0.1f; // Smaller radius for tighter emission source
-
-        // Make particles shrink over time
-        var sizeOverLifetime = particles.sizeOverLifetime;
-        sizeOverLifetime.enabled = true;
-        AnimationCurve curve = new AnimationCurve(new Keyframe(0, 1), new Keyframe(1, 0));
-        sizeOverLifetime.size = new ParticleSystem.MinMaxCurve(1, curve);
-
-        particles.enableEmission = isActive; // Control emission with isActive
-
-        // Play or stop particles based on isActive
-        if (isActive)
+        // Save the original materials of all children
+        for (int i = 0; i < childRenderers.Length; i++)
         {
-            particles.Play();
-        }
-        else
-        {
-            particles.Stop();
+            childRenderersMaterials[i].Renderer = childRenderers[i];
+            childRenderersMaterials[i].OriginalMaterials = childRenderers[i].materials; // Notice 'materials' not 'material'
         }
     }
 
-    // Public method to set the isActive variable and update accordingly
-    public void SetActive(bool active)
+    void Update()
     {
-        isActive = active;
-        glowLight.enabled = isActive;
-
-        if (isActive)
+        // Check if the player is looking at the object and swap materials accordingly
+        if (isLookingAt)
         {
-            particles.Play();
+            foreach (var rendererMaterials in childRenderersMaterials)
+            {
+                Material[] outlineMaterials = new Material[rendererMaterials.OriginalMaterials.Length];
+                for (int i = 0; i < outlineMaterials.Length; i++)
+                {
+                    outlineMaterials[i] = outlineMaterial; // Use the outline material for all sub-materials
+                }
+
+                rendererMaterials.Renderer.materials = outlineMaterials;
+            }
         }
         else
         {
-            particles.Stop();
+            // Revert to the original materials
+            foreach (var rendererMaterials in childRenderersMaterials)
+            {
+                rendererMaterials.Renderer.materials = rendererMaterials.OriginalMaterials;
+            }
         }
+    }
+
+    public void SetIsLookingAt(bool lookingAt)
+    {
+        isLookingAt = lookingAt;
     }
 }
+
