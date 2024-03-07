@@ -1731,6 +1731,10 @@ PrefabInstance:
       propertyPath: treeGrowthController
       value: 
       objectReference: {fileID: 1725256079}
+    - target: {fileID: 9021592505707426766, guid: d5e36573644724655afa5167d1d54ae4, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
