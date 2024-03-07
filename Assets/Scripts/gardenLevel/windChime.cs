@@ -15,10 +15,13 @@ public class windChime : MonoBehaviour
         {
             // check if the mouse is over gameobject
             RaycastHit hitInfo = new RaycastHit();
-            bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
-            if (hit && hitInfo.transform.gameObject == gameObject)
+            if (Camera.main != null)
             {
-                OnMouseOver();
+                bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
+                if (hit && hitInfo.transform.gameObject == gameObject)
+                {
+                    OnMouseOver();
+                }
             }
         }
     }

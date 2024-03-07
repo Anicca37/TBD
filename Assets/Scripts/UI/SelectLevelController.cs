@@ -112,7 +112,7 @@ public class SelectLevelController : MonoBehaviour
                 Debug.Log("Ballpit level not implemented yet");
                 break;
             case MenuOption.Garden:
-                SceneManager.LoadScene("Garden_2");
+                SceneManager.LoadScene("Garden_3 - Terrain");
                 break;
             case MenuOption.Menu:
                 menuSelectedSprite.SetActive(false);
