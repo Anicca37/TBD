@@ -12,6 +12,7 @@ public class GardenManager : MonoBehaviour
 
     private bool isFloralMatched = false;
     private bool isWindChimesPlayed = false;
+    private bool isScaleBalanced = false;
     private bool isClockSet = false;
 
     public GameObject floorObject; // Assign your garden floor in the inspector
@@ -30,7 +31,6 @@ public class GardenManager : MonoBehaviour
 
     public GameObject scaleBeam;
 
-    private bool isScaleBalanced = false;
 
     void Awake()
     {
@@ -109,6 +109,7 @@ public class GardenManager : MonoBehaviour
     {
         scaleBeam.transform.eulerAngles = new Vector3(0, 0, 0);
         isScaleBalanced = true;
+        Debug.Log("Scales balanced.");
     }
 
     void DirectWindToWindChimes()

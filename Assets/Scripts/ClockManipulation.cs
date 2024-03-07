@@ -171,7 +171,7 @@ public class ClockManipulation : MonoBehaviour
 
         // check current scene
         string currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
-        if (currentScene == "Garden_2")
+        if (currentScene.Contains("Garden"))
         {
             GardenManager.Instance.CompletePuzzle("Clock");
         }
