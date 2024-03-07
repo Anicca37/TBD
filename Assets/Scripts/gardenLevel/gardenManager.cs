@@ -15,10 +15,7 @@ public class GardenManager : MonoBehaviour
     private bool isScaleBalanced = false;
     private bool isClockSet = false;
 
-    public GameObject floorObject; // Assign your garden floor in the inspector
-    private GameObject waterObject;
-
-    public Material waterMaterial; // Assign a blue water-like material in the inspector
+    public GameObject waterObject;
 
     private bool isGardenFlooded = false;
     [SerializeField] private float riseSpeed = 0.5f;
@@ -191,6 +188,10 @@ public class GardenManager : MonoBehaviour
         {
             Debug.Log("Fountain floods the garden, reset required.");
             isGardenFlooded = true;
+
+            //play sound
+            AkSoundEngine.PostEvent("Play_WaterFlooding", ClockController.gameObject);
+
             AdjustFountainParticles();
             CreateAndRiseWater();
         }
@@ -198,9 +199,7 @@ public class GardenManager : MonoBehaviour
 
     void CreateAndRiseWater()
     {
-        waterObject = Instantiate(floorObject, floorObject.transform.position, Quaternion.identity);
         waterObject.transform.localScale *= 1.05f;
-        waterObject.GetComponent<Renderer>().material = waterMaterial;
         if (waterObject.GetComponent<Collider>())
             Destroy(waterObject.GetComponent<Collider>());
 
@@ -259,8 +258,8 @@ public class GardenManager : MonoBehaviour
 
         //Stop BGM
         AkSoundEngine.PostEvent("Stop_Level2_GardenMusic", this.gameObject);
-        AkSoundEngine.PostEvent("Stop_Clock_Tick", this.gameObject);
-        AkSoundEngine.PostEvent("Stop_Clock_Tick_Reverse", this.gameObject);
+        AkSoundEngine.PostEvent("Stop_Clock_Tick", ClockController.gameObject);
+        AkSoundEngine.PostEvent("Stop_Clock_Tick_Reverse", ClockController.gameObject);
         AkSoundEngine.PostEvent("Stop_Waterflow", this.gameObject);
         AkSoundEngine.ExecuteActionOnEvent("Stop_Level2_GardenMusic", AkActionOnEventType.AkActionOnEventType_Stop);
 
