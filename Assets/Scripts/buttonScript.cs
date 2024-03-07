@@ -23,16 +23,16 @@ public class buttonScript : MonoBehaviour
             {
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            if (Physics.Raycast(ray, out hit))
-            {
-                // Check if the raycast hit this game object
-                if (hit.collider.gameObject == this.gameObject)
+                if (Physics.Raycast(ray, out hit))
                 {
-                    // Left mouse button was clicked on this object, complete the puzzle
-                    GardenManager.CompletePuzzle("Scales");
+                    // Check if the raycast hit this game object
+                    if (hit.collider.gameObject == this.gameObject)
+                    {
+                        // Left mouse button was clicked on this object, complete the puzzle
+                        GardenManager.CompletePuzzle("Scales");
+                    }
                 }
             }
         }
     }
-
 }
