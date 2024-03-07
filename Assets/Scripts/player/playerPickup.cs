@@ -47,6 +47,9 @@ public class playerPickup : MonoBehaviour
                 currentPickup.transform.parent = attachPoint;
                 // currentPickup.transform.localPosition = Vector3.zero;
                 // currentPickup.transform.localRotation = Quaternion.identity;
+
+                AkSoundEngine.PostEvent("Play_TablePickUp", this.gameObject);
+                AkSoundEngine.PostEvent("Play_FlowerPickUp", this.gameObject);
             }
         }
     }

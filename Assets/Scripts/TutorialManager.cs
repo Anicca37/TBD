@@ -15,6 +15,9 @@ public class TutorialManager : MonoBehaviour
         {
             Instance = this;
             // DontDestroyOnLoad(gameObject);
+
+            AkSoundEngine.PostEvent("Stop_Clock_Tick_Reverse", this.gameObject);
+            AkSoundEngine.PostEvent("Play_Level0Music", this.gameObject);
         }
         else if (Instance != this)
         {

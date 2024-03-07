@@ -12,6 +12,9 @@ public class TreeGrowthController : MonoBehaviour
     // Call this at the desired moment to start growing trees at all specified points
     public void GrowTreesAtMainPoints()
     {
+        //play sound
+        AkSoundEngine.PostEvent("Play_WoodGrowingCrazy", this.gameObject);
+
         foreach (Vector3 mainPoint in growthPoints)
         {
             GrowClusterAroundPoint(mainPoint);

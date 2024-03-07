@@ -32,6 +32,11 @@ public class GardenManager : MonoBehaviour
     public GameObject scaleBeam;
 
 
+    private bool StatueLoudPlayed = false;
+    private bool isTrapActive = false;
+    public bool isReset = false;
+
+
     void Awake()
     {
         if (Instance == null)
@@ -41,10 +46,23 @@ public class GardenManager : MonoBehaviour
 
             // set VenusFlytrap to inactive
             VenusFlytrap.SetActive(false);
+
+            //Play BGM
+            //AkSoundEngine.LoadBank("Level2Garden");
+            AkSoundEngine.PostEvent("Play_Level2_GardenMusic", this.gameObject);
+            //AkSoundEngine.PostEvent("Play_Clock_Tick", this.gameObject);
+            AkSoundEngine.PostEvent("Stop_Waterflow", this.gameObject);
+            AkSoundEngine.PostEvent("Stop_Clock_Tick_Reverse", this.gameObject);
+            AkSoundEngine.PostEvent("Play_Waterflow", this.gameObject);
         }
         else if (Instance != this)
         {
             Destroy(gameObject);
+
+            //Stop BGM
+            AkSoundEngine.PostEvent("Stop_Level2_GardenMusic", this.gameObject);
+            AkSoundEngine.PostEvent("Stop_Clock_Tick", this.gameObject);
+            AkSoundEngine.PostEvent("Stop_Clock_Tick_Reverse", this.gameObject);
         }
     }
 
@@ -127,6 +145,14 @@ public class GardenManager : MonoBehaviour
     {
         Debug.Log("Venus flytrap blooms, revealing escape path.");
 
+        if (isTrapActive == false)
+        {
+            // play sound
+            AkSoundEngine.PostEvent("Play_FlyTrapPopedUp", this.gameObject);
+        }
+
+        isTrapActive = true;
+
         // set VenusFlytrap to active
         VenusFlytrap.SetActive(true);
     }
@@ -134,13 +160,25 @@ public class GardenManager : MonoBehaviour
     void AttractBirds()
     {
         Debug.Log("Birds scatter seeds, causing overgrowth.");
-        ResetPuzzles();
+        
+        if (isReset == false)
+        {
+            ResetPuzzles();
+        }
+        isReset = true;
     }
 
     void StatuesSingLoudly()
     {
         Debug.Log("Statues sing loudly.");
-        ResetPuzzles();
+        
+        
+        if (StatueLoudPlayed == false)
+        {
+            //play sound   
+            AkSoundEngine.PostEvent("Play_Statue_Loud", this.gameObject);
+        }
+        StatueLoudPlayed = true;
     }
 
     void FloodGarden()
@@ -214,6 +252,13 @@ public class GardenManager : MonoBehaviour
 
         VenusFlytrap.SetActive(false);
         ColorMatch.ResetMatchedFlowersCount();
+
+        //Stop BGM
+        AkSoundEngine.PostEvent("Stop_Level2_GardenMusic", this.gameObject);
+        AkSoundEngine.PostEvent("Stop_Clock_Tick", this.gameObject);
+        AkSoundEngine.PostEvent("Stop_Clock_Tick_Reverse", this.gameObject);
+        AkSoundEngine.PostEvent("Stop_Waterflow", this.gameObject);
+        AkSoundEngine.ExecuteActionOnEvent("Stop_Level2_GardenMusic", AkActionOnEventType.AkActionOnEventType_Stop);
 
         // Optionally, reload the scene to visually reset everything
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
