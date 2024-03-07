@@ -43,5 +43,7 @@ public class TutorialManager : MonoBehaviour
     {
         Debug.Log("Escaping the office.");
         EscapeController.GetComponent<EscapeMenuController>().OnEscapeActivated();
+
+        AkSoundEngine.PostEvent("Play_Win", this.gameObject);
     }
 }

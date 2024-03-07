@@ -30,6 +30,8 @@ public class VenusFlytrapController : MonoBehaviour
             {
                 // play sound
                 AkSoundEngine.PostEvent("Play_PlayerEaten", this.gameObject);
+
+                AkSoundEngine.PostEvent("Play_Win", this.gameObject);
             }
 
             PlayerEaten = true;

@@ -67,5 +67,7 @@ public class playerPickup : MonoBehaviour
 
         // Reset the current pickup variable
         currentPickup = null;
+
+        AkSoundEngine.PostEvent("Play_TableDrop", this.gameObject);
     }
 }

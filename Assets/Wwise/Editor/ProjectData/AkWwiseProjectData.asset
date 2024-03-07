@@ -331,7 +331,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 724273f56b5e06438af07ac6a6b97f15
     GuidInternal: 
-    m_lastTime: -8584917932582268475
+    m_lastTime: -8584917764465063941
     List:
     - name: Level0
       guid: 7eb2b7a76947ba4bacd1da9459a246e7
@@ -373,7 +373,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c829b83be71c8a4d9fc3b43dae098d9f
     GuidInternal: 
-    m_lastTime: -8584925563995298036
+    m_lastTime: -8584917764714447848
     List:
     - name: Play_BirdsCrazy
       guid: 3fdadab55a4b8a4481ad38102b6cc050
@@ -491,7 +491,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 7925cbe7db4a9942bec48b16fe07c5e2
       Path: Events\Default Work Unit\Play_FlowerPickUp
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: 0.6550417
       minDuration: 0.45795834
     - name: Play_FlowerPlant
@@ -508,7 +508,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: f49e8926f854104ca9f8b5eb218953c9
       Path: Events\Default Work Unit\Play_FlowerPlant
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: 1.1345
       minDuration: 0.6348125
     - name: Play_FlowerWindBlow
@@ -664,6 +664,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_Win
+      guid: 7a2ed0c54ab05342b051ca1bb4f433fc
+      id: 2955987680
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Play_Win
+        ObjectType: 3
+        guid: 7a2ed0c54ab05342b051ca1bb4f433fc
+      Path: Events\Default Work Unit\Play_Win
+      maxAttenuation: 0
+      maxDuration: 1
+      minDuration: 1
     - name: Play_Wind_Blowing
       guid: c558e49cfdfe9146b8da1aa7094ad9b2
       id: 2075190801
