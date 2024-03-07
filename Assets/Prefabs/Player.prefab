@@ -148,6 +148,7 @@ GameObject:
   - component: {fileID: 2495203883213229090}
   - component: {fileID: 2462082184652215391}
   - component: {fileID: 5173891596251279554}
+  - component: {fileID: 4111715680166910250}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -217,7 +218,7 @@ MonoBehaviour:
   runSpeed: 24
   movementSpeed: 0
   jumpHeight: 3
-  gravity: -12.8
+  gravity: -15
   groundCheck: {fileID: 1284986978386880318}
   groundDistance: 0.4
   groundMask:
@@ -238,6 +239,19 @@ MonoBehaviour:
   pickupableTag: Pickupable
   attachPoint: {fileID: 6686517100237193317}
   pickupRange: 10
+--- !u!114 &4111715680166910250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2204808416171688000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ff712599ddc78645a9aab79300bdff0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  raycastDistance: 10
 --- !u!1 &6370624094172780220
 GameObject:
   m_ObjectHideFlags: 0
