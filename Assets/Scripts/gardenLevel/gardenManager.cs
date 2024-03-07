@@ -52,7 +52,7 @@ public class GardenManager : MonoBehaviour
             AkSoundEngine.PostEvent("Play_Level2_GardenMusic", this.gameObject);
             //AkSoundEngine.PostEvent("Play_Clock_Tick", this.gameObject);
             AkSoundEngine.PostEvent("Stop_Waterflow", this.gameObject);
-            AkSoundEngine.PostEvent("Stop_Clock_Tick_Reverse", this.gameObject);
+            AkSoundEngine.PostEvent("Stop_Clock_Tick_Reverse", ClockController.gameObject);
             AkSoundEngine.PostEvent("Play_Waterflow", this.gameObject);
         }
         else if (Instance != this)
@@ -61,8 +61,8 @@ public class GardenManager : MonoBehaviour
 
             //Stop BGM
             AkSoundEngine.PostEvent("Stop_Level2_GardenMusic", this.gameObject);
-            AkSoundEngine.PostEvent("Stop_Clock_Tick", this.gameObject);
-            AkSoundEngine.PostEvent("Stop_Clock_Tick_Reverse", this.gameObject);
+            AkSoundEngine.PostEvent("Stop_Clock_Tick", ClockController.gameObject);
+            AkSoundEngine.PostEvent("Stop_Clock_Tick_Reverse", ClockController.gameObject);
         }
     }
 
@@ -177,6 +177,10 @@ public class GardenManager : MonoBehaviour
         {
             //play sound   
             AkSoundEngine.PostEvent("Play_Statue_Loud", this.gameObject);
+            AkSoundEngine.PostEvent("Stop_Clock_Tick_Reverse", ClockController.gameObject);
+            AkSoundEngine.PostEvent("Stop_Clock_Tick", ClockController.gameObject);
+
+            Invoke("ResetPuzzles", 1f);
         }
         StatueLoudPlayed = true;
     }
