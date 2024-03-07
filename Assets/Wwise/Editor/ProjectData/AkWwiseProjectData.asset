@@ -661,7 +661,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 1b5d5e865c0cd846b63288f283e04a29
       Path: Events\Default Work Unit\Play_Waterflow
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: -1
       minDuration: -1
     - name: Play_Win
