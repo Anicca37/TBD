@@ -24112,20 +24112,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8279854834289805441, guid: 99a5768928e218e489203c7fac3deabf, type: 3}
   m_PrefabInstance: {fileID: 1805985172}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1399906517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1399906516}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9266b9ad781847b4d887e74255eeed00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isDefaultListener: 0
-  listenerId: 0
 --- !u!114 &1399906518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24148,6 +24134,20 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &1399906522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399906516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9266b9ad781847b4d887e74255eeed00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDefaultListener: 1
+  listenerId: 0
 --- !u!1001 &1403196433
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32376,7 +32376,7 @@ PrefabInstance:
       addedObject: {fileID: 1399906518}
     - targetCorrespondingSourceObject: {fileID: 8279854834289805441, guid: 99a5768928e218e489203c7fac3deabf, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1399906517}
+      addedObject: {fileID: 1399906522}
   m_SourcePrefab: {fileID: 100100000, guid: 99a5768928e218e489203c7fac3deabf, type: 3}
 --- !u!1001 &1807111543
 PrefabInstance:
@@ -39458,6 +39458,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a4664a7996db1d64fb2538f2b6e44e50, type: 3}
   m_PrefabInstance: {fileID: 2079318471}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2093009502
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2093009503}
+  m_Layer: 0
+  m_Name: GardenAmbience
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2093009503
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093009502}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -31.98, y: 20.65, z: 10.49}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2095376089
 GameObject:
   m_ObjectHideFlags: 0
@@ -40159,3 +40190,4 @@ SceneRoots:
   - {fileID: 1286925523}
   - {fileID: 931259977}
   - {fileID: 1239332397}
+  - {fileID: 2093009503}

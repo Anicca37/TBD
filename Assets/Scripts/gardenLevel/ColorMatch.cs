@@ -56,7 +56,6 @@ public class ColorMatch : MonoBehaviour
     void TriggerWindEffect()
     {
         Instantiate(windEffectPrefab, transform.position, Quaternion.identity);
-
         AkSoundEngine.PostEvent("Play_FlowerWindBlow", this.gameObject);
     }
 
@@ -68,8 +67,10 @@ public class ColorMatch : MonoBehaviour
             windParticleSystem.Play();
 
             //play sound
-            AkSoundEngine.PostEvent("Play_Wind_Blowing", this.gameObject);
-            AkSoundEngine.PostEvent("Play_WindChime", this.gameObject);
+            GameObject TheWind = GameObject.Find("wind");
+            AkSoundEngine.PostEvent("Play_Wind_Blowing", TheWind.gameObject);
+            GameObject TheChimes = GameObject.Find("Wind Chime");
+            AkSoundEngine.PostEvent("Play_WindChime", TheChimes.gameObject);
         }
     }
 

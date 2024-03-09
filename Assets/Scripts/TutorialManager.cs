@@ -7,7 +7,7 @@ public class TutorialManager : MonoBehaviour
 {
     public static TutorialManager Instance;
 
-    public GameObject EscapeController;
+    public GameObject EscapeController;   
 
     void Awake()
     {
@@ -16,8 +16,7 @@ public class TutorialManager : MonoBehaviour
             Instance = this;
             // DontDestroyOnLoad(gameObject);
 
-            AkSoundEngine.PostEvent("Stop_Clock_Tick_Reverse", this.gameObject);
-            AkSoundEngine.PostEvent("Play_Level0Music", this.gameObject);
+            AkSoundEngine.PostEvent("Play_Level0Music", this.gameObject);                       
         }
         else if (Instance != this)
         {
@@ -27,6 +26,12 @@ public class TutorialManager : MonoBehaviour
 
     public void ResetPuzzles()
     {
+        //stop music
+        AkSoundEngine.PostEvent("Stop_Level0Music", this.gameObject);
+
+        GameObject TheClock = GameObject.Find("Clock");
+        AkSoundEngine.PostEvent("Stop_Clock_Tick", TheClock.gameObject);
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

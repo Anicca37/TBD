@@ -331,7 +331,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 724273f56b5e06438af07ac6a6b97f15
     GuidInternal: 
-    m_lastTime: -8584917764465063941
+    m_lastTime: -8584915872278779492
     List:
     - name: Level0
       guid: 7eb2b7a76947ba4bacd1da9459a246e7
@@ -373,7 +373,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c829b83be71c8a4d9fc3b43dae098d9f
     GuidInternal: 
-    m_lastTime: -8584917764714447848
+    m_lastTime: -8584915893277724267
     List:
     - name: Play_BirdsCrazy
       guid: 3fdadab55a4b8a4481ad38102b6cc050
@@ -492,8 +492,8 @@ MonoBehaviour:
         guid: 7925cbe7db4a9942bec48b16fe07c5e2
       Path: Events\Default Work Unit\Play_FlowerPickUp
       maxAttenuation: 100
-      maxDuration: 0.6550417
-      minDuration: 0.45795834
+      maxDuration: 0.67462546
+      minDuration: 0.42581192
     - name: Play_FlowerPlant
       guid: f49e8926f854104ca9f8b5eb218953c9
       id: 1321543350
@@ -542,7 +542,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: e52bfc67e66d0942ba698c9f3658ed0c
       Path: Events\Default Work Unit\Play_FlyTrapPopedUp
-      maxAttenuation: 0
+      maxAttenuation: 200
       maxDuration: 0.18133333
       minDuration: 0.18133333
     - name: Play_GrassFootStep
@@ -576,7 +576,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: c14db0263e6603419900c2b80afc9182
       Path: Events\Default Work Unit\Play_Level2_GardenAmbience
-      maxAttenuation: 0
+      maxAttenuation: 200
       maxDuration: -1
       minDuration: -1
     - name: Play_Level2_GardenMusic
@@ -695,7 +695,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: c558e49cfdfe9146b8da1aa7094ad9b2
       Path: Events\Default Work Unit\Play_Wind_Blowing
-      maxAttenuation: 0
+      maxAttenuation: 115
       maxDuration: -1
       minDuration: -1
     - name: Play_WindChime
@@ -712,7 +712,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 640291eb5f80f64faddf126693467c2a
       Path: Events\Default Work Unit\Play_WindChime
-      maxAttenuation: 0
+      maxAttenuation: 80
       maxDuration: 12.175049
       minDuration: 12.175049
     - name: Play_WoodGrowingCrazy
@@ -732,23 +732,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 5.6197076
       minDuration: 5.6197076
-    - name: Stop_Level0Music
-      guid: 32a41875ab710445a93fef5e6791cb26
-      id: 4144809523
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Stop_Level0Music
-        ObjectType: 3
-        guid: 32a41875ab710445a93fef5e6791cb26
-      Path: Events\Default Work Unit\Stop_Level0Music
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
     - name: Stop_Level2_GardenAmbience
       guid: dcecabfa5697a944986c4938ed67c745
       id: 1659483392
@@ -828,7 +811,7 @@ MonoBehaviour:
     ParentPath: Events\Level0
     guid: 241c5182ec754a49a8160c059dc386bb
     GuidInternal: 
-    m_lastTime: -8584917804226244364
+    m_lastTime: -8584915893277844369
     List:
     - name: Clock
       guid: c5896f696e0fc64da2826d1676e71274
@@ -1059,6 +1042,26 @@ MonoBehaviour:
         ObjectType: 3
         guid: e28405f871f427418ff5c790637e16db
       Path: Events\Level0\Tut_office\Clock\Stop_Clock_Tick_Reverse
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Level0Music
+      guid: 32a41875ab710445a93fef5e6791cb26
+      id: 4144809523
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level0
+        ObjectType: 12
+        guid: 241c5182ec754a49a8160c059dc386bb
+      - ElementName: Tut_office
+        ObjectType: 4
+        guid: 91c4e4c2984e2a4f8e7aa4a6fdb17d26
+      - ElementName: Stop_Level0Music
+        ObjectType: 3
+        guid: 32a41875ab710445a93fef5e6791cb26
+      Path: Events\Level0\Tut_office\Stop_Level0Music
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
