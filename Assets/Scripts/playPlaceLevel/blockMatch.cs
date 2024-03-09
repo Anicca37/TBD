@@ -29,8 +29,8 @@ public class blockMatch : MonoBehaviour
             SnapBlockToBucket(other.gameObject); 
             TriggerConfetti();
             matchedBlocks++;
-            CheckAllBlocksMatched();
             AutomaticallyDropblock(other.gameObject);
+            CheckAllBlocksMatched();
         }
     }
 

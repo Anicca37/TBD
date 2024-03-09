@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class PlayPlaceManager : MonoBehaviour
 {
@@ -67,10 +68,21 @@ public class PlayPlaceManager : MonoBehaviour
 
     void CauseLightShow()
     {
-        Debug.Log("Balls sorted too early, initiating light show.");
-        // Insert logic for causing a light show here
+        Debug.Log("Blocks sorted too early, initiating light show.");
+        StartCoroutine(LightShowWithDelay());
+    }
+
+    IEnumerator LightShowWithDelay()
+    {
+        ColorCycleLightShow.Instance.StartLightShow();
+
+        // Wait for 5 seconds
+        yield return new WaitForSeconds(5f);
+
+        // Then reset puzzles
         ResetPuzzles();
     }
+
 
     void RevealXylophoneSequence()
     {
