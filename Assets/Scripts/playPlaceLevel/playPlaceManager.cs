@@ -5,7 +5,7 @@ public class PlayPlaceManager : MonoBehaviour
     public static PlayPlaceManager Instance;
 
     private bool isClockInteracted = false;
-    private bool areBallsSorted = false;
+    private bool areBlocksSorted = false;
     private bool isXylophoneSequenceCorrect = false;
 
     void Awake()
@@ -26,21 +26,21 @@ public class PlayPlaceManager : MonoBehaviour
         {
             case "ClockInteraction":
                 isClockInteracted = true;
-                HighlightBalls();
+                HighlightBlocks();
                 break;
-            case "BallSorting":
+            case "BlockSorting":
                 if (!isClockInteracted) // Ball sorting done too early
                 {
                     CauseLightShow();
                 }
                 else
                 {
-                    areBallsSorted = true;
+                    areBlocksSorted = true;
                     RevealXylophoneSequence(); 
                 }
                 break;
             case "Xylophone":
-                if (!areBallsSorted) // Xylophone played too early
+                if (!areBlocksSorted) // Xylophone played too early
                 {
                     TriggerBallAvalanche();
                 }
@@ -51,7 +51,7 @@ public class PlayPlaceManager : MonoBehaviour
                 }
                 break;
             case "Escape":
-                if (isClockInteracted && areBallsSorted && isXylophoneSequenceCorrect)
+                if (isClockInteracted && areBlocksSorted && isXylophoneSequenceCorrect)
                 {
                     EscapePlayPlace();
                 }
@@ -59,7 +59,7 @@ public class PlayPlaceManager : MonoBehaviour
         }
     }
 
-    void HighlightBalls()
+    void HighlightBlocks()
     {
         Debug.Log("Clock interacted, highlighting balls.");
         // Insert logic to highlight balls here
@@ -101,7 +101,7 @@ public class PlayPlaceManager : MonoBehaviour
     public void ResetPuzzles()
     {
         isClockInteracted = false;
-        areBallsSorted = false;
+        areBlocksSorted = false;
         isXylophoneSequenceCorrect = false;
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
