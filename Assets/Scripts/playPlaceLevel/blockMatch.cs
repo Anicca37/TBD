@@ -7,6 +7,7 @@ public class blockMatch : MonoBehaviour
     public string colorName; 
     public static int matchedBlocks = 0;
     private const int totalBlocks = 5;
+    public GameObject Confetti;
 
     public static void ResetmatchedBlocks()
     {
@@ -26,6 +27,7 @@ public class blockMatch : MonoBehaviour
             // Correct match
             flowerScript.isMatched = true; // Mark as matched
             SnapBlockToBucket(other.gameObject); 
+            TriggerConfetti();
             matchedBlocks++;
             CheckAllBlocksMatched();
             AutomaticallyDropblock(other.gameObject);
@@ -48,12 +50,17 @@ public class blockMatch : MonoBehaviour
         block.transform.position = newPosition;
     }
 
+    void TriggerConfetti()
+    {
+        Instantiate(Confetti, transform.position, Quaternion.identity);
+    }
+
 
     void CheckAllBlocksMatched()
     {
         if (matchedBlocks >= totalBlocks)
         {
-            GardenManager.Instance.CompletePuzzle("BlockSorting");
+            PlayPlaceManager.Instance.CompletePuzzle("BlockSorting");
         }
     }
 
