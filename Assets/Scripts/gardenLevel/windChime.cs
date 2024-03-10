@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class windChime : MonoBehaviour
 {
-    public ParticleSystem windParticleSystem;
     public WindController windController;
     public ParticleSystem birdsParticleSystem;
     public TreeGrowthController treeGrowthController;
+    public Transform windDirectionIndicator;
 
     void Update()
     {
@@ -63,9 +63,12 @@ public class windChime : MonoBehaviour
 
     void ChangeWindDirection(Vector3 direction)
     {
-        var shape = windParticleSystem.shape;
-        Quaternion rotation = Quaternion.LookRotation(direction);
-        shape.rotation = rotation.eulerAngles;
+        if (windDirectionIndicator != null)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(direction, Vector3.up);
+
+            windDirectionIndicator.rotation = targetRotation;
+        }
 
         if (direction == Vector3.right) // East
         {
@@ -74,6 +77,7 @@ public class windChime : MonoBehaviour
 
         Debug.Log($"Changing wind direction to {direction}");
     }
+
     void TriggerBirdsAndGrowPlants()
     {
         birdsParticleSystem.Play(); // bird flock
