@@ -115,23 +115,16 @@ public class EscapeMenuController : MonoBehaviour
         {
             case MenuOption.Restart:
                 isEscaped = false;
-                if (SceneManager.GetActiveScene().name == "Garden_2")
-                {
-                    SceneManager.LoadScene("Garden_2");
-                }
-                else if (SceneManager.GetActiveScene().name == "DemoLevel")
-                {
-                    SceneManager.LoadScene("DemoLevel");
-                }
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                 break;
             case MenuOption.Next:
-                if (SceneManager.GetActiveScene().name == "Garden_2")
+                if (SceneManager.GetActiveScene().name == "Garden_3 - Terrain")
                 {
                     SceneManager.LoadScene("DemoLevel");
                 }
                 else if (SceneManager.GetActiveScene().name == "DemoLevel")
                 {
-                   SceneManager.LoadScene("Garden_2");
+                   SceneManager.LoadScene("Garden_3 - Terrain");
                 }
                 break;
             case MenuOption.Menu:

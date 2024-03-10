@@ -148,6 +148,8 @@ GameObject:
   - component: {fileID: 2495203883213229090}
   - component: {fileID: 2462082184652215391}
   - component: {fileID: 5173891596251279554}
+  - component: {fileID: 4111715680166910250}
+  - component: {fileID: 718597314784811364}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -217,7 +219,7 @@ MonoBehaviour:
   runSpeed: 24
   movementSpeed: 0
   jumpHeight: 3
-  gravity: -12.8
+  gravity: -15
   groundCheck: {fileID: 1284986978386880318}
   groundDistance: 0.4
   groundMask:
@@ -238,6 +240,33 @@ MonoBehaviour:
   pickupableTag: Pickupable
   attachPoint: {fileID: 6686517100237193317}
   pickupRange: 10
+--- !u!114 &4111715680166910250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2204808416171688000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ff712599ddc78645a9aab79300bdff0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  raycastDistance: 10
+--- !u!114 &718597314784811364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2204808416171688000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad9c7de7a081246f0bda94ffcacac7fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraTransform: {fileID: 366030591761867526}
+  detectionRange: 10
 --- !u!1 &6370624094172780220
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,7 +526,7 @@ Camera:
   m_GameObject: {fileID: 8279854834289805441}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.23787706, g: 0.22174263, b: 0.31132078, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -559,7 +588,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba8afc7389db6e74d8ed1180fc841e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 500
   player: {fileID: 5118629688310482985}
 --- !u!1 &8858376182416302382
 GameObject:

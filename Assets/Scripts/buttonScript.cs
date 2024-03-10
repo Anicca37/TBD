@@ -14,20 +14,23 @@ public class buttonScript : MonoBehaviour
 
     void Update()
     {
-        // Check if the right mouse button was clicked (button index 1)
-        if (Input.GetMouseButtonDown(1))
+        // Check if the left mouse button was clicked (button index 0)
+        if (Input.GetMouseButtonDown(0))
         {
             // Perform a raycast from the camera to the mouse position
             RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            if (Physics.Raycast(ray, out hit))
+            if (Camera.main != null)
             {
-                // Check if the raycast hit this game object
-                if (hit.collider.gameObject == this.gameObject)
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+                if (Physics.Raycast(ray, out hit))
                 {
-                    // Right mouse button was clicked on this object, complete the puzzle
-                    GardenManager.CompletePuzzle("Scales");
+                    // Check if the raycast hit this game object
+                    if (hit.collider.gameObject == this.gameObject)
+                    {
+                        // Left mouse button was clicked on this object, complete the puzzle
+                        GardenManager.CompletePuzzle("Scales");
+                    }
                 }
             }
         }

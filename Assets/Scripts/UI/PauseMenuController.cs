@@ -120,7 +120,7 @@ public class PauseMenuController : MonoBehaviour
                 playerBody.GetComponent<playerMovement>().enabled = true;
                 break;
             case MenuOption.Restart:
-                if (SceneManager.GetActiveScene().name == "Garden_2")
+                if (SceneManager.GetActiveScene().name.Contains("Garden"))
                 {
                     GardenManager.Instance.ResetPuzzles();
                 }
