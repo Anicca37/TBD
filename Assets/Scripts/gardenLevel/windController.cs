@@ -43,8 +43,13 @@ public class WindController : MonoBehaviour
         seedRb.isKinematic = true; // prevent further interactions
         if (!hasCompletedWindChimesPuzzle)
         {
-            GardenManager.Instance.CompletePuzzle("WindChimes");
+            Invoke("CompleteWindChimesPuzzle", 5f); // wait for 5 sec
             hasCompletedWindChimesPuzzle = true;
         }
+    }
+
+    void CompleteWindChimesPuzzle()
+    {
+        GardenManager.Instance.CompletePuzzle("WindChimes");
     }
 }
