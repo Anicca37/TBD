@@ -8,8 +8,8 @@ public class windChime : MonoBehaviour
     public ParticleSystem birdsParticleSystem;
     public TreeGrowthController treeGrowthController;
     public Transform windDirectionIndicator;
-    private int[] targetSequence = { 4, 3, 2, 1 };
-    private int currentSequenceIndex = 0;
+    // private int[] targetSequence = { 4, 3, 2, 1 };
+    // private int currentSequenceIndex = 0;
     public int chimeID;
 
     void OnMouseDown()

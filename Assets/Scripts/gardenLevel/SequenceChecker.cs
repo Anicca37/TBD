@@ -6,7 +6,6 @@ public class SequenceChecker : MonoBehaviour
 {
     private int[] targetSequence = { 1, 4, 3, 2 };
     private int currentSequenceIndex = 0;
-    public GameObject ketchupToDrop;
     public WindController windController;
 
 
