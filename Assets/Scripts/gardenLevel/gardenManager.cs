@@ -170,6 +170,11 @@ public class GardenManager : MonoBehaviour
             //play sound   
             GameObject Statue = GameObject.Find("Statue");
             AkSoundEngine.PostEvent("Play_Statue_Loud", Statue.gameObject);
+            AkSoundEngine.PostEvent("Stop_Level2_GardenMusic", this.gameObject);
+            AkSoundEngine.PostEvent("Stop_Clock_Tick", ClockController.gameObject);
+            AkSoundEngine.PostEvent("Stop_Clock_Tick_Reverse", ClockController.gameObject);
+            GameObject Fountain = GameObject.Find("Fountain");
+            AkSoundEngine.PostEvent("Stop_Waterflow", Fountain.gameObject);
             Invoke("ResetPuzzles", 1f);
         }
         StatueLoudPlayed = true;

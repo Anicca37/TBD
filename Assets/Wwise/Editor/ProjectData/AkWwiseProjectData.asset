@@ -627,7 +627,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 0c9d465672762245acbcaf8ec67d39dd
       Path: Events\Default Work Unit\Play_Statue_Loud
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: 1.75
       minDuration: 1.75
     - name: Play_WaterFlooding
