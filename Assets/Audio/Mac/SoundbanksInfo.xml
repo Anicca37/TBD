@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
+	<RootPaths>
+		<ProjectRoot>../../../../../../TruamaWwise</ProjectRoot>
+		<SourceFilesRoot>../../../../../../TruamaWwise/.cache/Mac</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>../../../../../../TruamaWwise/GeneratedSoundBanks/Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{388F9A86-BE91-BC54-82B0-509ABC0CE5FE}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+			<GameParameters>
+				<GameParameter Id="822163944" Name="SS_Air_RPM"/>
+				<GameParameter Id="1029930033" Name="SS_Air_Fury"/>
+				<GameParameter Id="1351367891" Name="SS_Air_Fear"/>
+				<GameParameter Id="2648548617" Name="SS_Air_Month"/>
+				<GameParameter Id="3002758120" Name="SS_Air_Freefall"/>
+				<GameParameter Id="3074696722" Name="SS_Air_Size"/>
+				<GameParameter Id="3203397129" Name="SS_Air_TimeOfDay"/>
+				<GameParameter Id="3715662592" Name="SS_Air_Storm"/>
+				<GameParameter Id="3847924954" Name="SS_Air_Presence"/>
+				<GameParameter Id="4160247818" Name="SS_Air_Turbulence"/>
+			</GameParameters>
+			<AcousticTextures>
+				<AcousticTexture Id="504532776" Name="Brick">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="12"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="18"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="23"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="35"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="513139656" Name="Mountain">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="0"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="0"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="0"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="0"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="841620460" Name="Concrete">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="6"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="6"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="6"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="14"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="1755085759" Name="Wood_Deep">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="1"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="8"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="20"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="35"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="1873957695" Name="Anechoic">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="1970351858" Name="Fabric">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="3"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="13"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="48"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="72"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="2058049674" Name="Wood">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="32"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="25"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="20"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="35"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="2412606308" Name="Carpet">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="46"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="45"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="76"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="2637588553" Name="Tile">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="67"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="41"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="12"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="0"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="2928161104" Name="Curtains">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="7"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="60"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="0"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="84"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="3195498748" Name="Cork_Tiles">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="14"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="30"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="73"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="3670307564" Name="Drywall">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="2"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="2"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="2"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="2"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="4168643977" Name="Acoustic_Banner">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="37"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="4262522749" Name="Wood_Bright">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="32"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="25"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="10"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="9"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+			</AcousticTextures>
+		</SoundBank>
+		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{A6D53940-5AAF-2122-15FA-25F705AAF6A5}">
+			<ShortName>Level2Garden</ShortName>
+			<Path>Level2Garden.bnk</Path>
+			<Media>
+				<File Id="39073760" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Fountain_Waterflow.wav</ShortName>
+					<CachePath>SFX/Fountain_Waterflow_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="59226223" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Flower_Wind_Blowing02.wav</ShortName>
+					<CachePath>SFX/Flower_Wind_Blowing02_818F3B66.wem</CachePath>
+				</File>
+				<File Id="83339973" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>94 - Wind Chimes Brass.M.wav</ShortName>
+					<CachePath>SFX/94 - Wind Chimes Brass.M_C4D4C373.wem</CachePath>
+				</File>
+				<File Id="88567209" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ChimeE.wav</ShortName>
+					<CachePath>SFX/ChimeE_818F3B66.wem</CachePath>
+				</File>
+				<File Id="99571869" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Flower_PickUp_02.wav</ShortName>
+					<CachePath>SFX/Flower_PickUp_02_818F3B66.wem</CachePath>
+				</File>
+				<File Id="141213406" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bird01-001.wav</ShortName>
+					<CachePath>SFX/Bird01-001_818F3B66.wem</CachePath>
+				</File>
+				<File Id="217621770" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bird02-003.wav</ShortName>
+					<CachePath>SFX/Bird02-003_818F3B66.wem</CachePath>
+				</File>
+				<File Id="217884051" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WoodGrowingCrazy.wav</ShortName>
+					<CachePath>SFX/WoodGrowingCrazy_837E818A.wem</CachePath>
+				</File>
+				<File Id="252279644" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Button.wav</ShortName>
+					<CachePath>SFX/Button_9CD1B619.wem</CachePath>
+				</File>
+				<File Id="265032393" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Statue_Loud.wav</ShortName>
+					<CachePath>SFX/Statue_Loud_818F3B66.wem</CachePath>
+				</File>
+				<File Id="285637370" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Flower_PickUp_04.wav</ShortName>
+					<CachePath>SFX/Flower_PickUp_04_818F3B66.wem</CachePath>
+				</File>
+				<File Id="304640499" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FlyTrapPopedUp.wav</ShortName>
+					<CachePath>SFX/FlyTrapPopedUp_818F3B66.wem</CachePath>
+				</File>
+				<File Id="333540284" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bird01-003.wav</ShortName>
+					<CachePath>SFX/Bird01-003_818F3B66.wem</CachePath>
+				</File>
+				<File Id="336039053" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Clock_Tick.wav</ShortName>
+					<CachePath>SFX/Clock_Tick_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="336129854" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bird02-002.wav</ShortName>
+					<CachePath>SFX/Bird02-002_818F3B66.wem</CachePath>
+				</File>
+				<File Id="361590980" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Flower_PickUp_05.wav</ShortName>
+					<CachePath>SFX/Flower_PickUp_05_818F3B66.wem</CachePath>
+				</File>
+				<File Id="433162066" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PlayerEaten.wav</ShortName>
+					<CachePath>SFX/PlayerEaten_818F3B66.wem</CachePath>
+				</File>
+				<File Id="441823339" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Flower_PickUp_08.wav</ShortName>
+					<CachePath>SFX/Flower_PickUp_08_818F3B66.wem</CachePath>
+				</File>
+				<File Id="462888902" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Flower_Wind_Blowing01.wav</ShortName>
+					<CachePath>SFX/Flower_Wind_Blowing01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="523653084" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WaterFlooding.wav</ShortName>
+					<CachePath>SFX/WaterFlooding_796701CD.wem</CachePath>
+				</File>
+				<File Id="577840437" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Flower_PickUp_01.wav</ShortName>
+					<CachePath>SFX/Flower_PickUp_01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="583454713" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bird01-002.wav</ShortName>
+					<CachePath>SFX/Bird01-002_818F3B66.wem</CachePath>
+				</File>
+				<File Id="586583771" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Flower_PickUp_06.wav</ShortName>
+					<CachePath>SFX/Flower_PickUp_06_818F3B66.wem</CachePath>
+				</File>
+				<File Id="649235970" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ChimeD.wav</ShortName>
+					<CachePath>SFX/ChimeD_818F3B66.wem</CachePath>
+				</File>
+				<File Id="659840955" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Flower_PickUp_03.wav</ShortName>
+					<CachePath>SFX/Flower_PickUp_03_818F3B66.wem</CachePath>
+				</File>
+				<File Id="670277016" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bird02-001.wav</ShortName>
+					<CachePath>SFX/Bird02-001_818F3B66.wem</CachePath>
+				</File>
+				<File Id="696909810" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ChimeG.wav</ShortName>
+					<CachePath>SFX/ChimeG_818F3B66.wem</CachePath>
+				</File>
+				<File Id="697056058" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Wind_Blowing.wav</ShortName>
+					<CachePath>SFX/Wind_Blowing_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="787519300" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ChimeC.wav</ShortName>
+					<CachePath>SFX/ChimeC_818F3B66.wem</CachePath>
+				</File>
+				<File Id="809920981" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Flower_PickUp_09.wav</ShortName>
+					<CachePath>SFX/Flower_PickUp_09_818F3B66.wem</CachePath>
+				</File>
+				<File Id="821236829" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bird03-002.wav</ShortName>
+					<CachePath>SFX/Bird03-002_818F3B66.wem</CachePath>
+				</File>
+				<File Id="909003059" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Win.wav</ShortName>
+					<CachePath>SFX/Win_818F3B66.wem</CachePath>
+				</File>
+				<File Id="928421190" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bird03-001.wav</ShortName>
+					<CachePath>SFX/Bird03-001_818F3B66.wem</CachePath>
+				</File>
+				<File Id="985095586" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Clock_Tick_Reverse.wav</ShortName>
+					<CachePath>SFX/Clock_Tick_Reverse_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="1015123158" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Garden_Ambience.wav</ShortName>
+					<CachePath>SFX/Garden_Ambience_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="1023893752" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Flower_PickUp_07.wav</ShortName>
+					<CachePath>SFX/Flower_PickUp_07_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1057618579" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FreakRelaxing_Demo_lp_Zongfan.wav</ShortName>
+					<CachePath>SFX/FreakRelaxing_Demo_lp_Zongfan_FBC78EF0.wem</CachePath>
+				</File>
+			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="3604890626" Name="High_Pass_60Hz" LibName="Wwise Parametric EQ" LibId="6881283"/>
+				</ShareSets>
+			</Plugins>
+			<Events>
+				<Event Id="1125237609" Name="Play_BirdsCrazy" DurationType="OneShot" DurationMin="0.813375" DurationMax="1.3508126">
+					<MediaRefs>
+						<MediaRef Id="141213406"/>
+						<MediaRef Id="217621770"/>
+						<MediaRef Id="333540284"/>
+						<MediaRef Id="336129854"/>
+						<MediaRef Id="583454713"/>
+						<MediaRef Id="670277016"/>
+						<MediaRef Id="821236829"/>
+						<MediaRef Id="928421190"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2099555730" Name="Play_Button" DurationType="OneShot" DurationMin="0.2940787" DurationMax="0.2940787">
+					<MediaRefs>
+						<MediaRef Id="252279644"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2759522921" Name="Play_ChimeC" DurationType="OneShot" DurationMin="1.461875" DurationMax="1.461875">
+					<MediaRefs>
+						<MediaRef Id="696909810"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2759522926" Name="Play_ChimeD" DurationType="OneShot" DurationMin="0.975875" DurationMax="0.975875">
+					<MediaRefs>
+						<MediaRef Id="649235970"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2759522927" Name="Play_ChimeE" DurationType="OneShot" DurationMin="1.1756458" DurationMax="1.1756458">
+					<MediaRefs>
+						<MediaRef Id="88567209"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2759522925" Name="Play_ChimeG" DurationType="OneShot" DurationMin="0.9033333" DurationMax="0.9033333">
+					<MediaRefs>
+						<MediaRef Id="787519300"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2797822332" Name="Play_Clock_Tick" MaxAttenuation="100" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="336039053"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3830889987" Name="Play_Clock_Tick_Reverse" MaxAttenuation="100" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="985095586"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1678695831" Name="Play_FlowerPickUp" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.42581192" DurationMax="0.67462546">
+					<MediaRefs>
+						<MediaRef Id="99571869"/>
+						<MediaRef Id="441823339"/>
+						<MediaRef Id="577840437"/>
+						<MediaRef Id="659840955"/>
+						<MediaRef Id="809920981"/>
+						<MediaRef Id="1023893752"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1321543350" Name="Play_FlowerPlant" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.6348125" DurationMax="1.1345">
+					<MediaRefs>
+						<MediaRef Id="285637370"/>
+						<MediaRef Id="361590980"/>
+						<MediaRef Id="586583771"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1831549045" Name="Play_FlowerWindBlow" DurationType="OneShot" DurationMin="1.6945626" DurationMax="1.7603333">
+					<MediaRefs>
+						<MediaRef Id="59226223"/>
+						<MediaRef Id="462888902"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="3604890626"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="531081561" Name="Play_FlyTrapPopedUp" MaxAttenuation="200" DurationType="OneShot" DurationMin="0.18133333" DurationMax="0.18133333">
+					<MediaRefs>
+						<MediaRef Id="304640499"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1878963262" Name="Play_GrassFootStep" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3374855610" Name="Play_Level2_GardenAmbience" MaxAttenuation="200" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="1015123158"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3216779235" Name="Play_Level2_GardenMusic" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="1057618579"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3659914468" Name="Play_PlayerEaten" DurationType="OneShot" DurationMin="0.45866665" DurationMax="0.45866665">
+					<MediaRefs>
+						<MediaRef Id="433162066"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="976664737" Name="Play_Statue_Loud" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.75" DurationMax="1.75">
+					<MediaRefs>
+						<MediaRef Id="265032393"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2908863451" Name="Play_WaterFlooding" DurationType="OneShot" DurationMin="9.323238" DurationMax="9.323238">
+					<MediaRefs>
+						<MediaRef Id="523653084"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="518242827" Name="Play_Waterflow" MaxAttenuation="100" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="39073760"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2955987680" Name="Play_Win" DurationType="OneShot" DurationMin="1" DurationMax="1">
+					<MediaRefs>
+						<MediaRef Id="909003059"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2075190801" Name="Play_Wind_Blowing" MaxAttenuation="115" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="697056058"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4235265352" Name="Play_WindChime" MaxAttenuation="80" DurationType="OneShot" DurationMin="12.175049" DurationMax="12.175049">
+					<MediaRefs>
+						<MediaRef Id="83339973"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="228010707" Name="Play_WoodGrowingCrazy" DurationType="OneShot" DurationMin="5.6197076" DurationMax="5.6197076">
+					<MediaRefs>
+						<MediaRef Id="217884051"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2897827502" Name="Stop_Clock_Tick" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3434769657" Name="Stop_Clock_Tick_Reverse" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1659483392" Name="Stop_Level2_GardenAmbience" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2396550769" Name="Stop_Level2_GardenMusic" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2135762577" Name="Stop_Waterflow" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1663839887" Name="Stop_Wind_Blowing" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{A21E54EF-4D62-BE7D-4140-9E965FCD64AB}">
+			<ShortName>Level0</ShortName>
+			<Path>Level0.bnk</Path>
+			<Media>
+				<File Id="12980260" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Quest_Game_Crafting_Wood_Bo.wav</ShortName>
+					<CachePath>SFX/Quest_Game_Crafting_Wood_Bo_818F3B66.wem</CachePath>
+				</File>
+				<File Id="36496989" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>20 - Door,Wood Open.wav</ShortName>
+					<CachePath>SFX/20 - Door,Wood Open_29ABB423.wem</CachePath>
+				</File>
+				<File Id="52226118" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>20 - Door,Wood Open.wav</ShortName>
+					<CachePath>SFX/20 - Door,Wood Open_C16C2461.wem</CachePath>
+				</File>
+				<File Id="107548376" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Carpet_Boots_FullStep_04.wav</ShortName>
+					<CachePath>SFX/Carpet_Boots_FullStep_04_54501CE0.wem</CachePath>
+				</File>
+				<File Id="181112472" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Quest_Game_Action_Wood_Box_.wav</ShortName>
+					<CachePath>SFX/Quest_Game_Action_Wood_Box__818F3B66.wem</CachePath>
+				</File>
+				<File Id="182188453" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Carpet_Boots_FullStep_05.wav</ShortName>
+					<CachePath>SFX/Carpet_Boots_FullStep_05_256967D3.wem</CachePath>
+				</File>
+				<File Id="312865666" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Carpet_Boots_FullStep_02.wav</ShortName>
+					<CachePath>SFX/Carpet_Boots_FullStep_02_B239EC77.wem</CachePath>
+				</File>
+				<File Id="336039053" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Clock_Tick.wav</ShortName>
+					<CachePath>SFX/Clock_Tick_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="350664709" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MusicBass.wav</ShortName>
+					<CachePath>SFX/MusicBass_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="414646934" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Quest_Game_Crafting_Wood_-2.wav</ShortName>
+					<CachePath>SFX/Quest_Game_Crafting_Wood_-2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="515135351" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Quest_Game_Crafting_Wood_-1.wav</ShortName>
+					<CachePath>SFX/Quest_Game_Crafting_Wood_-1_04E24E4B.wem</CachePath>
+				</File>
+				<File Id="618289996" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Carpet_Boots_FullStep_01.wav</ShortName>
+					<CachePath>SFX/Carpet_Boots_FullStep_01_FDA5DC3B.wem</CachePath>
+				</File>
+				<File Id="619782007" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Carpet_Boots_FullStep_03.wav</ShortName>
+					<CachePath>SFX/Carpet_Boots_FullStep_03_F316940C.wem</CachePath>
+				</File>
+				<File Id="790702576" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Quest_Game_Action_Wood_Bo-1.wav</ShortName>
+					<CachePath>SFX/Quest_Game_Action_Wood_Bo-1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="909003059" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Win.wav</ShortName>
+					<CachePath>SFX/Win_818F3B66.wem</CachePath>
+				</File>
+				<File Id="985095586" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Clock_Tick_Reverse.wav</ShortName>
+					<CachePath>SFX/Clock_Tick_Reverse_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="1019490629" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MusicDemo1.wav</ShortName>
+					<CachePath>SFX/MusicDemo1_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="1023030499" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Carpet_Boots_FullStep_06.wav</ShortName>
+					<CachePath>SFX/Carpet_Boots_FullStep_06_2C9FF20F.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2225307149" Name="Play_CarpetFootStep" DurationType="OneShot" DurationMin="0.16074052" DurationMax="0.25263542">
+					<MediaRefs>
+						<MediaRef Id="107548376"/>
+						<MediaRef Id="182188453"/>
+						<MediaRef Id="312865666"/>
+						<MediaRef Id="618289996"/>
+						<MediaRef Id="619782007"/>
+						<MediaRef Id="1023030499"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2797822332" Name="Play_Clock_Tick" MaxAttenuation="100" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="336039053"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3830889987" Name="Play_Clock_Tick_Reverse" MaxAttenuation="100" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="985095586"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2292458263" Name="Play_Door_Close" DurationType="OneShot" DurationMin="0.77166045" DurationMax="0.77166045">
+					<MediaRefs>
+						<MediaRef Id="36496989"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1660008929" Name="Play_Door_Open" DurationType="OneShot" DurationMin="0.92799664" DurationMax="0.92799664">
+					<MediaRefs>
+						<MediaRef Id="52226118"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="903163645" Name="Play_Level0Music" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="350664709"/>
+						<MediaRef Id="1019490629"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1525201045" Name="Play_TableDrop" DurationType="OneShot" DurationMin="0.42548987" DurationMax="0.47466666">
+					<MediaRefs>
+						<MediaRef Id="181112472"/>
+						<MediaRef Id="790702576"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3370429210" Name="Play_TablePickUp" DurationType="OneShot" DurationMin="0.3321867" DurationMax="0.46933332">
+					<MediaRefs>
+						<MediaRef Id="12980260"/>
+						<MediaRef Id="414646934"/>
+						<MediaRef Id="515135351"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2955987680" Name="Play_Win" DurationType="OneShot" DurationMin="1" DurationMax="1">
+					<MediaRefs>
+						<MediaRef Id="909003059"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2897827502" Name="Stop_Clock_Tick" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3434769657" Name="Stop_Clock_Tick_Reverse" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4144809523" Name="Stop_Level0Music" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{7770D815-7D85-F067-A9D2-1466A83FF0F4}</FileHash>
+</SoundBanksInfo>

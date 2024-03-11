@@ -28,6 +28,11 @@ public class GardenManager : MonoBehaviour
     public GameObject scaleBeam;
 
 
+    private bool StatueLoudPlayed = false;
+    private bool isTrapActive = false;
+    public bool isReset = false;
+
+
     void Awake()
     {
         if (Instance == null)
@@ -37,6 +42,14 @@ public class GardenManager : MonoBehaviour
 
             // set VenusFlytrap to inactive
             VenusFlytrap.SetActive(false);
+
+            //Play BGM
+            AkSoundEngine.PostEvent("Play_Level2_GardenMusic", this.gameObject);
+            AkSoundEngine.PostEvent("Stop_Clock_Tick_Reverse", ClockController.gameObject);
+            GameObject Fountain = GameObject.Find("Fountain");
+            AkSoundEngine.PostEvent("Play_Waterflow", Fountain.gameObject);
+            GameObject GardenAmbience = GameObject.Find("GardenAmbience");
+            AkSoundEngine.PostEvent("Play_Level2_GardenAmbience", GardenAmbience.gameObject);
         }
         else if (Instance != this)
         {
@@ -125,18 +138,45 @@ public class GardenManager : MonoBehaviour
 
         // set VenusFlytrap to active
         VenusFlytrap.SetActive(true);
+
+        if (isTrapActive == false)
+        {
+            // play sound
+            AkSoundEngine.PostEvent("Play_FlyTrapPopedUp", VenusFlytrap.gameObject);
+        }
+
+        isTrapActive = true;
     }
 
     void AttractBirds()
     {
         Debug.Log("Birds scatter seeds, causing overgrowth.");
-        ResetPuzzles();
+        
+        if (isReset == false)
+        {
+            ResetPuzzles();
+        }
+        isReset = true;
     }
 
     void StatuesSingLoudly()
     {
         Debug.Log("Statues sing loudly.");
-        ResetPuzzles();
+        
+        
+        if (StatueLoudPlayed == false)
+        {
+            //play sound   
+            GameObject Statue = GameObject.Find("Statue");
+            AkSoundEngine.PostEvent("Play_Statue_Loud", Statue.gameObject);
+            AkSoundEngine.PostEvent("Stop_Level2_GardenMusic", this.gameObject);
+            AkSoundEngine.PostEvent("Stop_Clock_Tick", ClockController.gameObject);
+            AkSoundEngine.PostEvent("Stop_Clock_Tick_Reverse", ClockController.gameObject);
+            GameObject Fountain = GameObject.Find("Fountain");
+            AkSoundEngine.PostEvent("Stop_Waterflow", Fountain.gameObject);
+            Invoke("ResetPuzzles", 1f);
+        }
+        StatueLoudPlayed = true;
     }
 
     void FloodGarden()
@@ -145,6 +185,11 @@ public class GardenManager : MonoBehaviour
         {
             Debug.Log("Fountain floods the garden, reset required.");
             isGardenFlooded = true;
+
+            //play sound
+            GameObject risingWater = GameObject.Find("risingWater");
+            AkSoundEngine.PostEvent("Play_WaterFlooding", risingWater.gameObject);
+
             AdjustFountainParticles();
             CreateAndRiseWater();
         }
@@ -208,6 +253,19 @@ public class GardenManager : MonoBehaviour
 
         VenusFlytrap.SetActive(false);
         ColorMatch.ResetMatchedFlowersCount();
+
+        //Stop BGM
+        AkSoundEngine.PostEvent("Stop_Level2_GardenMusic", this.gameObject);
+        AkSoundEngine.PostEvent("Stop_Clock_Tick", ClockController.gameObject);
+        AkSoundEngine.PostEvent("Stop_Clock_Tick_Reverse", ClockController.gameObject);
+
+        GameObject Fountain = GameObject.Find("Fountain");
+        AkSoundEngine.PostEvent("Stop_Waterflow", Fountain.gameObject);
+        GameObject TheWind = GameObject.Find("wind");
+        AkSoundEngine.PostEvent("Stop_Wind_Blowing", TheWind.gameObject);
+        // AkSoundEngine.ExecuteActionOnEvent("Stop_Level2_GardenMusic", AkActionOnEventType.AkActionOnEventType_Stop);
+        GameObject GardenAmbience = GameObject.Find("GardenAmbience");
+        AkSoundEngine.PostEvent("Stop_Level2_GardenAmbience", GardenAmbience.gameObject);
 
         // Optionally, reload the scene to visually reset everything
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);

@@ -31,6 +31,10 @@ public class ClockManipulation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        AkSoundEngine.PostEvent("Stop_Clock_Tick_Reverse", this.gameObject);
+        AkSoundEngine.PostEvent("Stop_Clock_Tick", this.gameObject);
+        AkSoundEngine.PostEvent("Play_Clock_Tick", this.gameObject);
+
         currentCamera = mainCamera.GetComponent<Camera>();
     }
 
@@ -153,6 +157,17 @@ public class ClockManipulation : MonoBehaviour
 
     void HighlightClockHands(bool highlight)
     {
+        //play sound
+        if (highlight == true)
+        {
+            AkSoundEngine.PostEvent("Stop_Clock_Tick", this.gameObject);
+            AkSoundEngine.PostEvent("Play_Clock_Tick_Reverse", this.gameObject);
+        }
+        else
+        {
+            AkSoundEngine.PostEvent("Stop_Clock_Tick_Reverse", this.gameObject);
+        }
+
         foreach (Transform clockHand in clockHands)
         {
             Renderer renderer = clockHand.GetComponent<Renderer>();
