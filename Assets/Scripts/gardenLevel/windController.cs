@@ -11,12 +11,16 @@ public class WindController : MonoBehaviour
     private bool hasCompletedWindChimesPuzzle = false;
     public Camera playerCamera;
     public Camera actionCamera;
+    public Animator birdAnimator;
 
     public void LaunchSeedsEastward()
     {
         // switch camera
         playerCamera.gameObject.SetActive(false);
         actionCamera.gameObject.SetActive(true);
+
+        birdAnimator.SetTrigger("Deliver"); // Assuming "Deliver" is the trigger name in your Animator
+
 
         // AudioListener playerAudioListener = playerCamera.GetComponent<AudioListener>();
         // AudioListener actionAudioListener = actionCamera.GetComponent<AudioListener>();

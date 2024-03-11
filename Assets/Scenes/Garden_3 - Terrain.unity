@@ -15638,6 +15638,7 @@ MonoBehaviour:
   gravitateForce: 10
   playerCamera: {fileID: 1399906519}
   actionCamera: {fileID: 529637820}
+  birdAnimator: {fileID: 1296807786}
 --- !u!4 &1094483342
 Transform:
   m_ObjectHideFlags: 0
