@@ -5,6 +5,10 @@ public class GardenManager : MonoBehaviour
 {
     public static GardenManager Instance;
 
+    public Transform playerTransform; // Assign in inspector
+    public Transform shockwaveItem; // Assign the clock object's transform in inspector
+
+
     public GameObject VenusFlytrap;
     public ClockManipulation ClockController;
     public GameObject EscapeController;
@@ -17,18 +21,21 @@ public class GardenManager : MonoBehaviour
     public GameObject waterObject;
 
     private bool isGardenFlooded = false;
-    [SerializeField] private float riseSpeed = 0.5f;
-    private float floodDelay = 1.0f; // Time to wait before checking the rise
-    [SerializeField] private float riseAmount = 10f; // Amount to rise
-    private float initialYPosition; // Starting Y position of the water
+    [SerializeField] private float riseSpeed = 0.15f;
+    private float floodDelay = 1.0f; 
+    [SerializeField] private float riseAmount = 10f; 
+    private float initialYPosition; 
     private bool startFlood = false;
+    private bool startSink = false; // New flag for controlling the sinking process
 
     public FountainScript fountainScript;
 
     public GameObject scaleBeam;
 
 
-    private bool StatueLoudPlayed = false;
+    public float shockwaveCooldown = 1f; // Cooldown in seconds
+    private float lastShockwaveTime = -Mathf.Infinity; // Initialize with a value that allows immediate use
+    // private bool StatueLoudPlayed = false;
     private bool isTrapActive = false;
     public bool isReset = false;
 
@@ -161,23 +168,60 @@ public class GardenManager : MonoBehaviour
 
     void StatuesSingLoudly()
     {
-        Debug.Log("Statues sing loudly.");
-        
-        
-        if (StatueLoudPlayed == false)
+        if (Time.time >= lastShockwaveTime + shockwaveCooldown)
         {
-            //play sound   
-            GameObject Statue = GameObject.Find("Statue");
-            AkSoundEngine.PostEvent("Play_Statue_Loud", Statue.gameObject);
-            AkSoundEngine.PostEvent("Stop_Level2_GardenMusic", this.gameObject);
-            AkSoundEngine.PostEvent("Stop_Clock_Tick", ClockController.gameObject);
-            AkSoundEngine.PostEvent("Stop_Clock_Tick_Reverse", ClockController.gameObject);
-            GameObject Fountain = GameObject.Find("Fountain");
-            AkSoundEngine.PostEvent("Stop_Waterflow", Fountain.gameObject);
-            Invoke("ResetPuzzles", 1f);
+            ClockController.LockGameControl(false);
+            Debug.Log("Statues sing loudly.");
+            StartCoroutine(Shockwave()); // Initiate the shockwave coroutine
+            lastShockwaveTime = Time.time; // Update the last shockwave time
         }
-        StatueLoudPlayed = true;
+        else
+        {
+            Debug.Log("Shockwave is on cooldown.");
+        }
+
+
+        // Debug.Log("Statues sing loudly.");
+        
+        
+        // if (StatueLoudPlayed == false)
+        // {
+        //     //play sound   
+        //     GameObject Statue = GameObject.Find("Statue");
+        //     AkSoundEngine.PostEvent("Play_Statue_Loud", Statue.gameObject);
+        //     AkSoundEngine.PostEvent("Stop_Level2_GardenMusic", this.gameObject);
+        //     AkSoundEngine.PostEvent("Stop_Clock_Tick", ClockController.gameObject);
+        //     AkSoundEngine.PostEvent("Stop_Clock_Tick_Reverse", ClockController.gameObject);
+        //     GameObject Fountain = GameObject.Find("Fountain");
+        //     AkSoundEngine.PostEvent("Stop_Waterflow", Fountain.gameObject);
+        //     Invoke("ResetPuzzles", 1f);
+        // }
+        // StatueLoudPlayed = true;
     }
+
+
+    IEnumerator Shockwave()
+    {
+        float shockwaveDuration = 1f; // Duration of the shockwave effect
+        float startTime = Time.time; // Record the start time
+        Vector3 originalPosition = playerTransform.position; // Record the player's original position
+        Vector3 direction = (playerTransform.position - shockwaveItem.position).normalized; // Calculate the direction away from the clock
+        float shockwaveSpeed = 70.0f; // Speed at which the player is pushed away
+
+        while (Time.time < startTime + shockwaveDuration)
+        {
+            // Calculate new position based on direction and speed
+            Vector3 newPosition = playerTransform.position + direction * shockwaveSpeed * Time.deltaTime;
+            // Optionally, you can include a check to ensure the player won't move through walls or other obstacles
+
+            playerTransform.position = newPosition; // Move the player to the new position
+            yield return null; // Wait until the next frame
+        }
+
+        // After the shockwave, the player stops moving
+        // Optionally, you can smoothly stop the player's movement by reducing the speed over time
+    }
+
 
     void FloodGarden()
     {
@@ -205,26 +249,41 @@ public class GardenManager : MonoBehaviour
     }
 
     void Update()
+{
+    if (isGardenFlooded && waterObject != null)
     {
-        if (isGardenFlooded && waterObject != null && !startFlood)
+        if (!startFlood)
         {
-            // Calculate the target position based on the desired rise amount
+            // Rising logic...
             float targetYPosition = initialYPosition + riseAmount;
-
-            // Calculate the new Y position for this frame, ensuring we don't exceed the target position
             float newYPosition = Mathf.Min(waterObject.transform.position.y + (riseSpeed * Time.deltaTime), targetYPosition);
-
-            // Apply the new Y position
             waterObject.transform.position = new Vector3(waterObject.transform.position.x, newYPosition, waterObject.transform.position.z);
 
-            // Check if we've reached or exceeded the target rise amount
             if (newYPosition >= targetYPosition)
             {
                 startFlood = true; // Mark the flooding as complete
-                Invoke("ResetPuzzles", floodDelay); // Schedule the reset after a brief delay
+                startSink = true; // Immediately enable sinking after reaching max height
+            }
+        }
+        else if (startSink)
+        {
+            // Sinking logic
+            float targetYPosition = initialYPosition;
+            float newYPosition = Mathf.Max(waterObject.transform.position.y - (riseSpeed * Time.deltaTime), targetYPosition);
+            waterObject.transform.position = new Vector3(waterObject.transform.position.x, newYPosition, waterObject.transform.position.z);
+
+            if (newYPosition <= targetYPosition)
+            {
+                startSink = false; // Mark the sinking as complete
+                isGardenFlooded = false; // Reset the flooded state to allow re-flooding
+                startFlood = false; // Reset to allow flooding to start over
+                initialYPosition = waterObject.transform.position.y; // Reset initial position for accurate re-flood
+                AdjustFountainParticles(); // Reset or adjust visual effects as needed
             }
         }
     }
+}
+
 
     void AdjustFountainParticles()
     {
