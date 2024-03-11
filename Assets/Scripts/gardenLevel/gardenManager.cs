@@ -14,10 +14,7 @@ public class GardenManager : MonoBehaviour
     private bool isScaleBalanced = false;
     private bool isClockSet = false;
 
-    public GameObject floorObject; // Assign your garden floor in the inspector
-    private GameObject waterObject;
-
-    public Material waterMaterial; // Assign a blue water-like material in the inspector
+    public GameObject waterObject;
 
     private bool isGardenFlooded = false;
     [SerializeField] private float riseSpeed = 0.5f;
@@ -155,9 +152,7 @@ public class GardenManager : MonoBehaviour
 
     void CreateAndRiseWater()
     {
-        waterObject = Instantiate(floorObject, floorObject.transform.position, Quaternion.identity);
         waterObject.transform.localScale *= 1.05f;
-        waterObject.GetComponent<Renderer>().material = waterMaterial;
         if (waterObject.GetComponent<Collider>())
             Destroy(waterObject.GetComponent<Collider>());
 
