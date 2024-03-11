@@ -40,4 +40,9 @@ public class DoorMovement : MonoBehaviour
     {
         return clockController.CheckClockSet(minAngle, maxAngle, "Either");
     }
+
+    public bool IsDoorOpen()
+    {
+        return isDoorOpen;
+    }
 }
