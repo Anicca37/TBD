@@ -34,7 +34,7 @@ public class WindController : MonoBehaviour
                 StartCoroutine(GravitateToTarget(rb)); // move towards the target
             }
         }
-        Invoke("SwitchBackToPlayerCamera", 5f);
+        Invoke("SwitchBackToPlayerCamera", 3f);
     }
 
     IEnumerator GravitateToTarget(Rigidbody seedRb)
@@ -55,7 +55,7 @@ public class WindController : MonoBehaviour
         seedRb.isKinematic = true; // prevent further interactions
         if (!hasCompletedWindChimesPuzzle)
         {
-            Invoke("CompleteWindChimesPuzzle", 5f); // wait for 5 sec
+            Invoke("CompleteWindChimesPuzzle", 3f); // wait for 5 sec
             hasCompletedWindChimesPuzzle = true;
         }
     }
