@@ -30,9 +30,6 @@ public class buttonScript : MonoBehaviour
                     {
                         // Left mouse button was clicked on this object, complete the puzzle
                         GardenManager.CompletePuzzle("Scales");
-
-                        //play sound
-                        AkSoundEngine.PostEvent("Play_Button", this.gameObject);
                     }
                 }
             }

@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class VenusFlytrapController : MonoBehaviour
 {
-    private bool PlayerEaten = false; //For OneTimeSound
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -25,16 +22,6 @@ public class VenusFlytrapController : MonoBehaviour
         {
             Debug.Log("Player entered the Venus Flytrap");
             GardenManager.Instance.CompletePuzzle("Escape");
-
-            if (PlayerEaten == false)
-            {
-                // play sound
-                AkSoundEngine.PostEvent("Play_PlayerEaten", this.gameObject);
-
-                AkSoundEngine.PostEvent("Play_Win", this.gameObject);
-            }
-
-            PlayerEaten = true;
         }
     }
 }
