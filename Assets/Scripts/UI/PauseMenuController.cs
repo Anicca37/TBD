@@ -49,6 +49,9 @@ public class PauseMenuController : MonoBehaviour
         if (isPaused)
         {
             playerBody.GetComponent<playerMovement>().enabled = false;
+            playerBody.GetComponent<playerPickup>().DropObject();
+            Crosshair.SetActive(false);
+            HandGrab.SetActive(false);
             // handle input
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {

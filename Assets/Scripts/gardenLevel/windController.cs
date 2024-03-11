@@ -9,10 +9,21 @@ public class WindController : MonoBehaviour
     public float launchForce = 10f;
     public float gravitateForce = 5f;
     private bool hasCompletedWindChimesPuzzle = false;
-
+    public Camera playerCamera;
+    public Camera actionCamera;
 
     public void LaunchSeedsEastward()
     {
+        // switch camera
+        playerCamera.gameObject.SetActive(false);
+        actionCamera.gameObject.SetActive(true);
+
+        // AudioListener playerAudioListener = playerCamera.GetComponent<AudioListener>();
+        // AudioListener actionAudioListener = actionCamera.GetComponent<AudioListener>();
+
+        // if (playerAudioListener != null) playerAudioListener.enabled = false;
+        // if (actionAudioListener != null) actionAudioListener.enabled = true;
+
         foreach (GameObject seed in seeds)
         {
             Rigidbody rb = seed.GetComponent<Rigidbody>();
@@ -23,6 +34,7 @@ public class WindController : MonoBehaviour
                 StartCoroutine(GravitateToTarget(rb)); // move towards the target
             }
         }
+        Invoke("SwitchBackToPlayerCamera", 5f);
     }
 
     IEnumerator GravitateToTarget(Rigidbody seedRb)
@@ -43,8 +55,25 @@ public class WindController : MonoBehaviour
         seedRb.isKinematic = true; // prevent further interactions
         if (!hasCompletedWindChimesPuzzle)
         {
-            GardenManager.Instance.CompletePuzzle("WindChimes");
+            Invoke("CompleteWindChimesPuzzle", 5f); // wait for 5 sec
             hasCompletedWindChimesPuzzle = true;
         }
+    }
+
+    void CompleteWindChimesPuzzle()
+    {
+        GardenManager.Instance.CompletePuzzle("WindChimes");
+    }
+
+    void SwitchBackToPlayerCamera()
+    {
+        actionCamera.gameObject.SetActive(false);
+        playerCamera.gameObject.SetActive(true);
+
+        // AudioListener playerAudioListener = playerCamera.GetComponent<AudioListener>();
+        // AudioListener actionAudioListener = actionCamera.GetComponent<AudioListener>();
+
+        // if (playerAudioListener != null) playerAudioListener.enabled = true;
+        // if (actionAudioListener != null) actionAudioListener.enabled = false;
     }
 }
