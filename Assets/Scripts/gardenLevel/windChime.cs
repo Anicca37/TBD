@@ -4,76 +4,82 @@ using UnityEngine;
 
 public class windChime : MonoBehaviour
 {
-    public ParticleSystem windParticleSystem;
     public WindController windController;
     public ParticleSystem birdsParticleSystem;
     public TreeGrowthController treeGrowthController;
+    public Transform windDirectionIndicator;
+    // private int[] targetSequence = { 4, 3, 2, 1 };
+    // private int currentSequenceIndex = 0;
+    public int chimeID;
 
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0)) // mouse click
-        {
-            // check if the mouse is over gameobject
-            RaycastHit hitInfo = new RaycastHit();
-            if (Camera.main != null)
-            {
-                bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
-                if (hit && hitInfo.transform.gameObject == gameObject)
-                {
-                    OnMouseOver();
-                }
-            }
-        }
-    }
-    void OnMouseOver()
+    void OnMouseDown()
     {
         // check if the floral puzzle is matched
         // if (!true)
-        if (Input.GetMouseButtonDown(0))
+        if (GardenManager.Instance.IsFloralMatched())
         {
+            // Debug.Log($"curr index: {currentSequenceIndex}");
+            // Debug.Log($"{chimeID} = {targetSequence[currentSequenceIndex]} is {chimeID == targetSequence[currentSequenceIndex]}");
+            ChangeWindDirection(chimeID);
+            FindObjectOfType<SequenceChecker>().ChimeClicked(chimeID);
 
-            if (GardenManager.Instance.IsFloralMatched())
-            {
-                switch (gameObject.name)
-                {
-                    case "Chime1":
-                        ChangeWindDirection(Vector3.forward); // North
-                        break;
-                    case "Chime2":
-                        ChangeWindDirection(Vector3.back); // South
-                        break;
-                    case "Chime3":
-                        ChangeWindDirection(Vector3.right); // East
-                        break;
-                    case "Chime4":
-                        ChangeWindDirection(Vector3.left); // West
-                        break;
-                    default:
-                        break;
-                }
-            }
-            else
-            {
-                Debug.Log("Ah! So many birds!");
-                TriggerBirdsAndGrowPlants();
-                // GardenManager.Instance.CompletePuzzle("WindChimes");
-            }
+            // if (chimeID == targetSequence[currentSequenceIndex])
+            // {
+            //     // Move to the next chime in the sequence
+            //     currentSequenceIndex++;
+            //     Debug.Log($"next target: {currentSequenceIndex}, {targetSequence[currentSequenceIndex]}");
+            //     // Check if the entire sequence has been correctly entered
+            //     if (currentSequenceIndex >= targetSequence.Length)
+            //     {
+            //         // Sequence complete, launch seeds and reset sequence index
+            //         Debug.Log("slay");
+            //         windController.LaunchSeedsEastward();
+            //         currentSequenceIndex = 0; // Reset for next sequence attempt
+            //     }
+            // }
+            // else
+            // {
+            //     // Incorrect chime, reset sequence index
+            //     Debug.Log("reset");
+            //     currentSequenceIndex = 0;
+            // }
+        }
+        else
+        {
+            Debug.Log("Ah! So many birds!");
+            TriggerBirdsAndGrowPlants();
+            // GardenManager.Instance.CompletePuzzle("WindChimes");
         }
     }
 
-    void ChangeWindDirection(Vector3 direction)
+    void ChangeWindDirection(int chimeID)
     {
-        var shape = windParticleSystem.shape;
-        Quaternion rotation = Quaternion.LookRotation(direction);
-        shape.rotation = rotation.eulerAngles;
-
-        if (direction == Vector3.right) // East
+        Vector3 direction = Vector3.zero;
+        switch (chimeID)
         {
-            windController.LaunchSeedsEastward();
+            case 1:
+                direction = Vector3.forward; // North
+                break;
+            case 2:
+                direction = Vector3.back; // South
+                break;
+            case 3:
+                direction = Vector3.right; // East
+                break;
+            case 4:
+                direction = Vector3.left; // West
+                break;
         }
 
-        Debug.Log($"Changing wind direction to {direction}");
+        if (windDirectionIndicator != null && direction != Vector3.zero)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(direction, Vector3.up);
+            windDirectionIndicator.rotation = targetRotation;
+        }
+        Debug.Log($"curr chime: {chimeID}");
+        Debug.Log($"wind direction: {direction}");
     }
+
     void TriggerBirdsAndGrowPlants()
     {
         birdsParticleSystem.Play(); // bird flock
