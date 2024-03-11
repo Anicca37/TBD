@@ -172,6 +172,8 @@ public class GardenManager : MonoBehaviour
         {
             ClockController.LockGameControl(false);
             Debug.Log("Statues sing loudly.");
+            GameObject Statue = GameObject.Find("Statue");
+            AkSoundEngine.PostEvent("Play_Statue_Loud", Statue.gameObject);
             StartCoroutine(Shockwave()); // Initiate the shockwave coroutine
             lastShockwaveTime = Time.time; // Update the last shockwave time
         }
