@@ -10,16 +10,11 @@ public class TutorialManager : MonoBehaviour
     public GameObject EscapeController;   
     public DoorMovement doorMovement;
 
+    private float drawForce = 2f;
     private float distanceToPlayer = 15f;
-    private float drawForce = 5f;
     private GameObject player;
     private CharacterController playerController;
-
-    void Start()
-    {
-        player = GameObject.Find("Player");
-        playerController = player.GetComponent<CharacterController>();
-    }
+    private GameObject[] children;
 
     void Awake()
     {
@@ -27,6 +22,16 @@ public class TutorialManager : MonoBehaviour
         {
             Instance = this;
             // DontDestroyOnLoad(gameObject);
+            player = GameObject.Find("Player");
+            playerController = player.GetComponent<CharacterController>();
+            
+            // get current object's children
+            children = new GameObject[transform.childCount];
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                children[i] = transform.GetChild(i).gameObject;
+            }
+            SetSpiral(false);
 
             AkSoundEngine.PostEvent("Play_Level0Music", this.gameObject);                       
         }
@@ -38,6 +43,11 @@ public class TutorialManager : MonoBehaviour
     
     void Update()
     {
+        if (doorMovement.IsDoorOpen())
+        {
+            SetSpiral(true);
+        }
+
         if (IsPlayerNearby() && doorMovement.IsDoorOpen())
         {
             DrawInward();
@@ -82,5 +92,13 @@ public class TutorialManager : MonoBehaviour
     {
         Vector3 direction = transform.position - player.transform.position;
         playerController.Move(direction * drawForce * Time.deltaTime);
+    }
+
+    void SetSpiral(bool active)
+    {
+        foreach (GameObject child in children)
+        {
+            child.SetActive(active);
+        }
     }
 }
