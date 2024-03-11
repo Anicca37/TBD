@@ -40,7 +40,7 @@ public class ClockManipulation : MonoBehaviour
 
     }
 
-    void LockGameControl(bool highlight)
+    public void LockGameControl(bool highlight)
     {
         HighlightClockHands(highlight);
         if (!PauseMenuController.GetComponent<PauseMenuController>().isGamePaused())
