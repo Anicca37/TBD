@@ -17054,6 +17054,7 @@ MonoBehaviour:
   riseAmount: 15
   fountainScript: {fileID: 971958512}
   scaleBeam: {fileID: 412049688}
+  shockwaveCooldown: 1
   isReset: 0
 --- !u!4 &1070179845
 Transform:
@@ -18538,8 +18539,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1.5, z: 1}
-  m_Center: {x: -1.63, y: 2.26, z: -0.01}
+  m_Size: {x: 2.0097873, y: 1.5000001, z: 1}
+  m_Center: {x: -1.7258424, y: 2.26, z: -0.009999856}
 --- !u!114 &1181773700
 MonoBehaviour:
   m_ObjectHideFlags: 0
