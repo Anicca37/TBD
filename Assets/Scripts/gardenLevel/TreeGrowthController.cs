@@ -19,6 +19,9 @@ public class TreeGrowthController : MonoBehaviour
 
     public void GrowTreesAtMainPoints()
     {
+        //play sound
+        AkSoundEngine.PostEvent("Play_WoodGrowingCrazy", this.gameObject);
+
         foreach (Vector3 mainPoint in growthPoints)
         {
             GrowClusterAroundPoint(mainPoint);
