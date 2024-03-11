@@ -95,13 +95,17 @@ public class windChime : MonoBehaviour
 
     IEnumerator PlayBirdSoundMultipleTimes()
     {
+        float duration = 5.0f; // Duration in seconds after which the sound should stop
+        float startTime = Time.time; // Record the start time
+
         // play sound
-        while (true)
+        while (Time.time - startTime < duration)
         {
             AkSoundEngine.PostEvent("Play_BirdsCrazy", this.gameObject);
             yield return new WaitForSeconds(0.1f);
         }
     }
+
 
     void GrowTreesAfterBirds()
     {
