@@ -162,7 +162,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{35B34CA0-A588-1C3E-89F4-49C863ABC5F2}">
+		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{A6D53940-5AAF-2122-15FA-25F705AAF6A5}">
 			<ShortName>Level2Garden</ShortName>
 			<Path>Level2Garden.bnk</Path>
 			<Media>
@@ -598,5 +598,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{684DB580-CC7A-5DEB-9100-DDD86F2689AB}</FileHash>
+	<FileHash>{A403E2D6-46AE-44BA-6E62-E8F442FD0BF0}</FileHash>
 </SoundBanksInfo>
