@@ -19,6 +19,8 @@ public class GardenManager : MonoBehaviour
     public bool isClockSet = false;
 
     public GameObject waterObject;
+    public VineGrowthController vineGrowthController;
+    private bool vineSoundPlayed = false;
 
     private bool isGardenFlooded = false;
     [SerializeField] private float riseSpeed = 0.15f;
@@ -37,7 +39,7 @@ public class GardenManager : MonoBehaviour
 
     public float shockwaveCooldown = 1f; // Cooldown in seconds
     private float lastShockwaveTime = -Mathf.Infinity; // Initialize with a value that allows immediate use
-    // private bool StatueLoudPlayed = false;
+    private bool StatueLoudPlayed = false;
     private bool isTrapActive = false;
     public bool isReset = false;
 
@@ -93,7 +95,18 @@ public class GardenManager : MonoBehaviour
             case "Clock":
                 if (isScaleBalanced) // Clock set too early
                 {
-                    Debug.Log("clock being moved");
+                    // Update the vine growth
+                    if(vineGrowthController != null)
+                    {
+                        vineGrowthController.UpdateVineGrowth(ClockController.GetRotationAmount());
+
+                        if (vineSoundPlayed == false)
+                        {
+                            GameObject theVines = GameObject.Find("vines");
+                            AkSoundEngine.PostEvent("Play_Vine_Growing", theVines.gameObject);
+                            vineSoundPlayed = true;
+                        }
+                    }
                     if (ClockController.CheckClockSet(1f, 180f, "Clockwise"))
                     {
                         Debug.Log("clock being set");
@@ -185,6 +198,7 @@ public class GardenManager : MonoBehaviour
         else
         {
             Debug.Log("Shockwave is on cooldown.");
+            //StatueLoudPlayed = false;
         }
 
 
@@ -215,6 +229,14 @@ public class GardenManager : MonoBehaviour
         Vector3 direction = (playerTransform.position - shockwaveItem.position).normalized; // Calculate the direction away from the clock
         float shockwaveSpeed = 70.0f; // Speed at which the player is pushed away
 
+        //play sound
+        if (StatueLoudPlayed == false)
+        {
+            GameObject Statue = GameObject.Find("Statue");
+            AkSoundEngine.PostEvent("Play_Statue_Loud", Statue.gameObject);
+            StatueLoudPlayed = true;
+        }
+
         while (Time.time < startTime + shockwaveDuration)
         {
             // Calculate new position based on direction and speed
@@ -224,6 +246,8 @@ public class GardenManager : MonoBehaviour
             playerTransform.position = newPosition; // Move the player to the new position
             yield return null; // Wait until the next frame
         }
+
+        StatueLoudPlayed = false;
 
         // After the shockwave, the player stops moving
         // Optionally, you can smoothly stop the player's movement by reducing the speed over time

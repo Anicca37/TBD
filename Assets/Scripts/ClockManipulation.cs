@@ -27,10 +27,6 @@ public class ClockManipulation : MonoBehaviour
     private bool isDay = true;
 
     public float interactRange = 10f;
-    public VineGrowthController vineGrowthController;
-
-    public bool vineSoundPlayed = false;
-
 
     // Start is called before the first frame update
     void Start()
@@ -232,19 +228,11 @@ public class ClockManipulation : MonoBehaviour
         {
             GardenManager.Instance.CompletePuzzle("Clock");
         }
+    }
 
-        // Update the vine growth
-        if(vineGrowthController != null)
-        {
-            vineGrowthController.UpdateVineGrowth(rotationAmount);
-
-            if (vineSoundPlayed == false)
-            {
-                GameObject theVines = GameObject.Find("vines");
-                AkSoundEngine.PostEvent("Play_Vine_Growing", theVines.gameObject);
-            }
-        }
-
+    public float GetRotationAmount()
+    {
+        return rotationAmount;
     }
 
     public bool CheckClockSet(float minAngle, float maxAngle, string clockwise)
