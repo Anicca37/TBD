@@ -15,11 +15,13 @@ public class WindController : MonoBehaviour
 
     public void LaunchSeedsEastward()
     {
+        // bird animation
+        birdAnimator.SetTrigger("Deliver"); // Assuming "Deliver" is the trigger name in your Animator
+
         // switch camera
         playerCamera.gameObject.SetActive(false);
         actionCamera.gameObject.SetActive(true);
 
-        birdAnimator.SetTrigger("Deliver"); // Assuming "Deliver" is the trigger name in your Animator
 
 
         // AudioListener playerAudioListener = playerCamera.GetComponent<AudioListener>();
@@ -38,7 +40,7 @@ public class WindController : MonoBehaviour
                 StartCoroutine(GravitateToTarget(rb)); // move towards the target
             }
         }
-        Invoke("SwitchBackToPlayerCamera", 3f);
+        Invoke("SwitchBackToPlayerCamera", 5f);
     }
 
     IEnumerator GravitateToTarget(Rigidbody seedRb)
