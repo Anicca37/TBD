@@ -27,19 +27,13 @@ public class ClockManipulation : MonoBehaviour
     private bool isDay = true;
 
     public float interactRange = 10f;
-    public List<GameObject> vines;
-    public Vector3 maxScale = new Vector3(10f, 10f, 10f);
-    private Dictionary<GameObject, Vector3> originalVineScales = new Dictionary<GameObject, Vector3>();
+    public VineGrowthController vineGrowthController;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        foreach (var vine in vines)
-        {
-            vine.transform.localScale = Vector3.zero;
-            originalVineScales[vine] = maxScale;
-        }
-
+    
         AkSoundEngine.PostEvent("Stop_Clock_Tick_Reverse", this.gameObject);
         AkSoundEngine.PostEvent("Stop_Clock_Tick", this.gameObject);
         AkSoundEngine.PostEvent("Play_Clock_Tick", this.gameObject);
@@ -237,13 +231,10 @@ public class ClockManipulation : MonoBehaviour
             GardenManager.Instance.CompletePuzzle("Clock");
         }
 
-        // Calculate growth based on clock rotation
-        float growthFactor = Mathf.Clamp((Mathf.Abs(rotationAmount) % 360) / 360f, 0f, 1f);
-
-        // Scale vines based on the growthFactor and maxScale
-        foreach (var vine in vines)
+        // Update the vine growth
+        if(vineGrowthController != null)
         {
-            vine.transform.localScale = Vector3.Lerp(Vector3.zero, originalVineScales[vine], growthFactor);
+            vineGrowthController.UpdateVineGrowth(rotationAmount);
         }
 
     }
