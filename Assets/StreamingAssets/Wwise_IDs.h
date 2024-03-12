@@ -13,8 +13,11 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_BIRDS = 3025897706U;
         static const AkUniqueID PLAY_BIRDSCRAZY = 1125237609U;
+        static const AkUniqueID PLAY_BIRDWING = 3584090578U;
         static const AkUniqueID PLAY_BUTTON = 2099555730U;
+        static const AkUniqueID PLAY_CHIME_MELODY = 847650453U;
         static const AkUniqueID PLAY_CHIMEC = 2759522921U;
         static const AkUniqueID PLAY_CHIMED = 2759522926U;
         static const AkUniqueID PLAY_CHIMEE = 2759522927U;
@@ -41,6 +44,7 @@ namespace AK
         static const AkUniqueID PLAY_WIND_BLOWING = 2075190801U;
         static const AkUniqueID PLAY_WINDCHIME = 4235265352U;
         static const AkUniqueID PLAY_WOODGROWINGCRAZY = 228010707U;
+        static const AkUniqueID STOP_CHIME_MELODY = 184097815U;
         static const AkUniqueID STOP_CLOCK_TICK = 2897827502U;
         static const AkUniqueID STOP_CLOCK_TICK_REVERSE = 3434769657U;
         static const AkUniqueID STOP_LEVEL0MUSIC = 4144809523U;

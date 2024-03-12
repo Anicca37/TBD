@@ -29,6 +29,8 @@ public class ClockManipulation : MonoBehaviour
     public float interactRange = 10f;
     public VineGrowthController vineGrowthController;
 
+    public bool vineSoundPlayed = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -235,6 +237,12 @@ public class ClockManipulation : MonoBehaviour
         if(vineGrowthController != null)
         {
             vineGrowthController.UpdateVineGrowth(rotationAmount);
+
+            if (vineSoundPlayed == false)
+            {
+                GameObject theVines = GameObject.Find("vines");
+                AkSoundEngine.PostEvent("Play_Vine_Growing", theVines.gameObject);
+            }
         }
 
     }

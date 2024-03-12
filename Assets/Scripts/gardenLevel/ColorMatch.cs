@@ -9,6 +9,7 @@ public class ColorMatch : MonoBehaviour
     public static int matchedFlowersCount = 0;
     private const int totalFlowers = 5;
     public ParticleSystem windParticleSystem;
+    private SequenceChecker chimeController;
 
     public static void ResetMatchedFlowersCount()
     {
@@ -71,7 +72,14 @@ public class ColorMatch : MonoBehaviour
             AkSoundEngine.PostEvent("Play_Wind_Blowing", TheWind.gameObject);
             GameObject TheChimes = GameObject.Find("Wind Chime");
             AkSoundEngine.PostEvent("Play_WindChime", TheChimes.gameObject);
+            Invoke("playCorrectSound", 3f); // play correct after 3s;
         }
+    }
+
+    public void playCorrectSound()
+    {
+        GameObject TheChimes = GameObject.Find("Wind Chime");
+        AkSoundEngine.PostEvent("Play_Chime_Melody", TheChimes.gameObject);
     }
 
     void AutomaticallyDropFlower(GameObject flower)
