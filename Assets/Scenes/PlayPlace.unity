@@ -349,7 +349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorName: purple
-  Confetti: {fileID: 6339554103414586975, guid: 558d8882b66ba874fa78e4b3b3000fc8, type: 3}
+  Confetti: {fileID: 6339554103414586975, guid: dbcf51f0f483e3e41bbc9f1d1dbe21a6, type: 3}
 --- !u!1 &92187170
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,7 +471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorName: blue
-  Confetti: {fileID: 6339554103414586975, guid: 558d8882b66ba874fa78e4b3b3000fc8, type: 3}
+  Confetti: {fileID: 6339554103414586975, guid: dbcf51f0f483e3e41bbc9f1d1dbe21a6, type: 3}
 --- !u!1 &139034826
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,6 +731,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e77891da6235c544874e211040bf806, type: 3}
+--- !u!1 &202208321 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2724572151962683050, guid: 4e77891da6235c544874e211040bf806, type: 3}
+  m_PrefabInstance: {fileID: 202208320}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &202208322 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2239580874078345831, guid: 4e77891da6235c544874e211040bf806, type: 3}
+  m_PrefabInstance: {fileID: 202208320}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &259737001
 GameObject:
   m_ObjectHideFlags: 0
@@ -2064,7 +2074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorName: pink
-  Confetti: {fileID: 6339554103414586975, guid: 558d8882b66ba874fa78e4b3b3000fc8, type: 3}
+  Confetti: {fileID: 6339554103414586975, guid: dbcf51f0f483e3e41bbc9f1d1dbe21a6, type: 3}
 --- !u!136 &735022153
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2801,7 +2811,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorName: red
-  Confetti: {fileID: 6339554103414586975, guid: 558d8882b66ba874fa78e4b3b3000fc8, type: 3}
+  Confetti: {fileID: 6339554103414586975, guid: dbcf51f0f483e3e41bbc9f1d1dbe21a6, type: 3}
 --- !u!1 &1129729555
 GameObject:
   m_ObjectHideFlags: 0
@@ -4162,6 +4172,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5173891596251279554, guid: 99a5768928e218e489203c7fac3deabf, type: 3}
+      propertyPath: grabIcon
+      value: 
+      objectReference: {fileID: 202208321}
+    - target: {fileID: 5173891596251279554, guid: 99a5768928e218e489203c7fac3deabf, type: 3}
+      propertyPath: defaultIcon
+      value: 
+      objectReference: {fileID: 202208322}
     m_RemovedComponents:
     - {fileID: 7552453310940579337, guid: 99a5768928e218e489203c7fac3deabf, type: 3}
     m_RemovedGameObjects: []
@@ -5244,7 +5262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorName: orange
-  Confetti: {fileID: 6339554103414586975, guid: 558d8882b66ba874fa78e4b3b3000fc8, type: 3}
+  Confetti: {fileID: 6339554103414586975, guid: dbcf51f0f483e3e41bbc9f1d1dbe21a6, type: 3}
 --- !u!1 &1838271911
 GameObject:
   m_ObjectHideFlags: 0

@@ -79,10 +79,8 @@ public class PlayPlaceManager : MonoBehaviour
         // Wait for 5 seconds
         yield return new WaitForSeconds(5f);
 
-        // Then reset puzzles
-        ResetPuzzles();
+        ColorCycleLightShow.Instance.StopLightShow();
     }
-
 
     void RevealXylophoneSequence()
     {
@@ -94,7 +92,6 @@ public class PlayPlaceManager : MonoBehaviour
     {
         Debug.Log("Xylophone played too early, triggering ball avalanche.");
         // Insert logic to trigger a ball avalanche here
-        ResetPuzzles();
     }
 
     void DropKetchupOntoScale()
@@ -109,12 +106,4 @@ public class PlayPlaceManager : MonoBehaviour
         // Insert escape logic here
     }
 
-
-    public void ResetPuzzles()
-    {
-        isClockInteracted = false;
-        areBlocksSorted = false;
-        isXylophoneSequenceCorrect = false;
-        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
-    }
 }
