@@ -8,12 +8,12 @@ public class windChime : MonoBehaviour
     public ParticleSystem birdsParticleSystem;
     public TreeGrowthController treeGrowthController;
     public Transform windDirectionIndicator;
-    // private int[] targetSequence = { 4, 3, 2, 1 };
-    // private int currentSequenceIndex = 0;
+
     public int chimeID;
 
     void OnMouseDown()
     {
+
         // check if the floral puzzle is matched
         // if (!true)
         if (GardenManager.Instance.IsFloralMatched())
@@ -22,27 +22,6 @@ public class windChime : MonoBehaviour
             // Debug.Log($"{chimeID} = {targetSequence[currentSequenceIndex]} is {chimeID == targetSequence[currentSequenceIndex]}");
             ChangeWindDirection(chimeID);
             FindObjectOfType<SequenceChecker>().ChimeClicked(chimeID);
-
-            // if (chimeID == targetSequence[currentSequenceIndex])
-            // {
-            //     // Move to the next chime in the sequence
-            //     currentSequenceIndex++;
-            //     Debug.Log($"next target: {currentSequenceIndex}, {targetSequence[currentSequenceIndex]}");
-            //     // Check if the entire sequence has been correctly entered
-            //     if (currentSequenceIndex >= targetSequence.Length)
-            //     {
-            //         // Sequence complete, launch seeds and reset sequence index
-            //         Debug.Log("slay");
-            //         windController.LaunchSeedsEastward();
-            //         currentSequenceIndex = 0; // Reset for next sequence attempt
-            //     }
-            // }
-            // else
-            // {
-            //     // Incorrect chime, reset sequence index
-            //     Debug.Log("reset");
-            //     currentSequenceIndex = 0;
-            // }
         }
         else
         {
@@ -58,15 +37,19 @@ public class windChime : MonoBehaviour
         switch (chimeID)
         {
             case 1:
+                // TODO: add sound
                 direction = Vector3.forward; // North
                 break;
             case 2:
+                // TODO: add sound
                 direction = Vector3.back; // South
                 break;
             case 3:
+                // TODO: add sound
                 direction = Vector3.right; // East
                 break;
             case 4:
+                // TODO: add sound
                 direction = Vector3.left; // West
                 break;
         }
