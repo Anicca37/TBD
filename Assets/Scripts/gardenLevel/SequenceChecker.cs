@@ -8,12 +8,14 @@ public class SequenceChecker : MonoBehaviour
     private int currentSequenceIndex = 0;
     public WindController windController;
 
+    private bool solved = false;
+
 
     public void ChimeClicked(int chimeID)
     {
         Debug.Log(chimeID);
 
-        if (targetSequence[currentSequenceIndex] == chimeID)
+        if (targetSequence[currentSequenceIndex] == chimeID && !solved)
         {
             currentSequenceIndex++;
             if (currentSequenceIndex >= targetSequence.Length)
@@ -31,5 +33,6 @@ public class SequenceChecker : MonoBehaviour
     private void LaunchSeeds()
     {
         windController.LaunchSeedsEastward();
+        solved = true;
     }
 }

@@ -4,76 +4,72 @@ using UnityEngine;
 
 public class WindController : MonoBehaviour
 {
-    public GameObject[] seeds;
-    public GameObject targetObject; // scale surface
-    public float launchForce = 10f;
-    public float gravitateForce = 5f;
+    // public GameObject[] seeds;
+    // public GameObject targetObject; // scale surface
+    // public float launchForce = 10f;
+    // public float gravitateForce = 5f;
     private bool hasCompletedWindChimesPuzzle = false;
     public Camera playerCamera;
     public Camera actionCamera;
+    public Animator birdAnimator;
 
     public void LaunchSeedsEastward()
     {
+        // bird animation
+        birdAnimator.SetTrigger("Deliver");
+
         // switch camera
-        playerCamera.gameObject.SetActive(false);
-        actionCamera.gameObject.SetActive(true);
+        StartCoroutine(SwitchCamera(playerCamera, actionCamera, 0.5f));
 
-        // AudioListener playerAudioListener = playerCamera.GetComponent<AudioListener>();
-        // AudioListener actionAudioListener = actionCamera.GetComponent<AudioListener>();
+        // foreach (GameObject seed in seeds)
+        // {
+        //     Rigidbody rb = seed.GetComponent<Rigidbody>();
+        //     if (rb != null)
+        //     {
+        //         rb.isKinematic = false; // make sure Rigidbody is not kinematic
+        //         rb.AddForce(Vector3.right * launchForce, ForceMode.Impulse); // launc seeds!
+        //         StartCoroutine(GravitateToTarget(rb)); // move towards the target
+        //     }
+        // }
+        StartCoroutine(SwitchCamera(actionCamera, playerCamera, 7f));
 
-        // if (playerAudioListener != null) playerAudioListener.enabled = false;
-        // if (actionAudioListener != null) actionAudioListener.enabled = true;
-
-        foreach (GameObject seed in seeds)
-        {
-            Rigidbody rb = seed.GetComponent<Rigidbody>();
-            if (rb != null)
-            {
-                rb.isKinematic = false; // make sure Rigidbody is not kinematic
-                rb.AddForce(Vector3.right * launchForce, ForceMode.Impulse); // launc seeds!
-                StartCoroutine(GravitateToTarget(rb)); // move towards the target
-            }
-        }
-        Invoke("SwitchBackToPlayerCamera", 3f);
+        // Invoke("SwitchCamera(actionCamera, playerCamera)", 5f);
     }
 
-    IEnumerator GravitateToTarget(Rigidbody seedRb)
-    {
-        while (Vector3.Distance(seedRb.position, targetObject.transform.position) > 0.5f)
-        {
-            Vector3 directionToTarget = (targetObject.transform.position - seedRb.position).normalized;
-            seedRb.AddForce(directionToTarget * gravitateForce);
-            yield return new WaitForFixedUpdate(); // wait until next physics update
-        }
+    // IEnumerator GravitateToTarget(Rigidbody seedRb)
+    // {
+    //     while (Vector3.Distance(seedRb.position, targetObject.transform.position) > 0.5f)
+    //     {
+    //         Vector3 directionToTarget = (targetObject.transform.position - seedRb.position).normalized;
+    //         seedRb.AddForce(directionToTarget * gravitateForce);
+    //         yield return new WaitForFixedUpdate(); // wait until next physics update
+    //     }
 
-        LockSeedMovement(seedRb); // lock the seed's movement once it's close enough to the target
-    }
+    //     LockSeedMovement(seedRb); // lock the seed's movement once it's close enough to the target
+    // }
 
-    void LockSeedMovement(Rigidbody seedRb)
-    {
-        seedRb.velocity = Vector3.zero; // stop curr movement
-        seedRb.isKinematic = true; // prevent further interactions
-        if (!hasCompletedWindChimesPuzzle)
-        {
-            Invoke("CompleteWindChimesPuzzle", 3f); // wait for 5 sec
-            hasCompletedWindChimesPuzzle = true;
-        }
-    }
+    // void LockSeedMovement(Rigidbody seedRb)
+    // {
+    //     seedRb.velocity = Vector3.zero; // stop curr movement
+    //     seedRb.isKinematic = true; // prevent further interactions
+    //     if (!hasCompletedWindChimesPuzzle)
+    //     {
+    //         Invoke("CompleteWindChimesPuzzle", 3f); // wait for 5 sec
+    //         hasCompletedWindChimesPuzzle = true;
+    //     }
+    // }
 
     void CompleteWindChimesPuzzle()
     {
         GardenManager.Instance.CompletePuzzle("WindChimes");
     }
 
-    void SwitchBackToPlayerCamera()
+    IEnumerator SwitchCamera(Camera cameraToDisable, Camera cameraToEnable, float delay)
     {
-        actionCamera.gameObject.SetActive(false);
-        playerCamera.gameObject.SetActive(true);
+        yield return new WaitForSeconds(delay);
+        cameraToDisable.gameObject.SetActive(false);
+        cameraToEnable.gameObject.SetActive(true);
 
-        // AudioListener playerAudioListener = playerCamera.GetComponent<AudioListener>();
-        // AudioListener actionAudioListener = actionCamera.GetComponent<AudioListener>();
-
-        // if (playerAudioListener != null) playerAudioListener.enabled = true;
-        // if (actionAudioListener != null) actionAudioListener.enabled = false;
     }
+
 }
