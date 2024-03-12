@@ -41,7 +41,7 @@ public class PauseMenuController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !escapeMenuController.isPlayerEscaped())
+        if (Input.GetKeyDown(KeyCode.Escape) && !escapeMenuController.isPlayerEscaped() && !isPaused)
         {
             isPaused = true;
             InitializePauseMenu();
