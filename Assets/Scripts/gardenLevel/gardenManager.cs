@@ -13,10 +13,10 @@ public class GardenManager : MonoBehaviour
     public ClockManipulation ClockController;
     public GameObject EscapeController;
 
-    private bool isFloralMatched = false;
-    private bool isWindChimesPlayed = false;
-    private bool isScaleBalanced = false;
-    private bool isClockSet = false;
+    public bool isFloralMatched = false;
+    public bool isWindChimesPlayed = false;
+    public bool isScaleBalanced = false;
+    public bool isClockSet = false;
 
     public GameObject waterObject;
 
@@ -29,6 +29,8 @@ public class GardenManager : MonoBehaviour
     private bool startSink = false; // New flag for controlling the sinking process
 
     public FountainScript fountainScript;
+
+    public AttachPineconeToScale attachPinecone;
 
     public GameObject scaleBeam;
 
@@ -89,21 +91,23 @@ public class GardenManager : MonoBehaviour
                 }
                 break;
             case "Clock":
-                if (!isFloralMatched || !isWindChimesPlayed || !isScaleBalanced) // Clock set too early
+                if (isScaleBalanced) // Clock set too early
                 {
-                    StatuesSingLoudly();
-                }
-                else
-                {
+                    Debug.Log("clock being moved");
                     if (ClockController.CheckClockSet(1f, 180f, "Clockwise"))
                     {
+                        Debug.Log("clock being set");
                         isClockSet = true;
                         MakeVenusFlytrapBloom(); // Sequence correct
                     }
                 }
+                else
+                {
+                    StatuesSingLoudly();
+                }
                 break;
             case "Scales":
-                if (isWindChimesPlayed)
+                if (attachPinecone.isPineconeAttached)
                 {
                     BalanceScales();
                     break;
@@ -113,7 +117,7 @@ public class GardenManager : MonoBehaviour
                 break;
 
             case "Escape":
-                if (isFloralMatched && isWindChimesPlayed && isClockSet && isScaleBalanced)
+                if (isClockSet)
                 {
                     EscapeGarden();
                 }
@@ -123,7 +127,8 @@ public class GardenManager : MonoBehaviour
 
     void BalanceScales()
     {
-        scaleBeam.transform.eulerAngles = new Vector3(0, 0, 0);
+        // scaleBeam.transform.eulerAngles = new Vector3(0, 0, 0);
+        //balance scale animation????
         isScaleBalanced = true;
         Debug.Log("Scales balanced.");
     }
@@ -173,7 +178,7 @@ public class GardenManager : MonoBehaviour
             ClockController.LockGameControl(false);
             Debug.Log("Statues sing loudly.");
             GameObject Statue = GameObject.Find("Statue");
-            AkSoundEngine.PostEvent("Play_Statue_Loud", Statue.gameObject);
+            // AkSoundEngine.PostEvent("Play_Statue_Loud", Statue.gameObject);
             StartCoroutine(Shockwave()); // Initiate the shockwave coroutine
             lastShockwaveTime = Time.time; // Update the last shockwave time
         }
