@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4397549, g: 0.4881792, b: 0.5683983, a: 1}
+  m_IndirectSpecularColor: {r: 0.43975514, g: 0.48817998, b: 0.5683994, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -19432,6 +19432,7 @@ MonoBehaviour:
   ClockController: {fileID: 1108567185}
   EscapeController: {fileID: 1395428262}
   waterObject: {fileID: 2095376089}
+  vineGrowthController: {fileID: 2048882562}
   riseSpeed: 2.5
   riseAmount: 15
   fountainScript: {fileID: 971958512}
@@ -34863,7 +34864,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 13.441126, y: 17.271856, z: 30.162292}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 946482017}

@@ -19,6 +19,8 @@ public class GardenManager : MonoBehaviour
     private bool isClockSet = false;
 
     public GameObject waterObject;
+    public VineGrowthController vineGrowthController;
+    private bool vineSoundPlayed = false;
 
     private bool isGardenFlooded = false;
     [SerializeField] private float riseSpeed = 0.15f;
@@ -95,6 +97,18 @@ public class GardenManager : MonoBehaviour
                 }
                 else
                 {
+                    // Update the vine growth
+                    if(vineGrowthController != null)
+                    {
+                        vineGrowthController.UpdateVineGrowth(ClockController.GetRotationAmount());
+
+                        if (vineSoundPlayed == false)
+                        {
+                            GameObject theVines = GameObject.Find("vines");
+                            AkSoundEngine.PostEvent("Play_Vine_Growing", theVines.gameObject);
+                            vineSoundPlayed = true;
+                        }
+                    }
                     if (ClockController.CheckClockSet(1f, 180f, "Clockwise"))
                     {
                         isClockSet = true;
