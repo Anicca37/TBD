@@ -30,8 +30,8 @@ public class ColorMatch : MonoBehaviour
             SnapFlowerToStone(other.gameObject); // Snap flower to stone
             TriggerWindEffect();
             matchedFlowersCount++;
-            CheckAllFlowersMatched();
             AutomaticallyDropFlower(other.gameObject);
+            CheckAllFlowersMatched();
         }
     }
 
