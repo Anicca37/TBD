@@ -215,17 +215,16 @@ public class GardenManager : MonoBehaviour
             Vector3 newPosition = playerTransform.position + direction * shockwaveSpeed * Time.deltaTime;
             // Optionally, you can include a check to ensure the player won't move through walls or other obstacles
 
-            //play sound
-            if (StatueLoudPlayed == false)
-            {
-                GameObject Statue = GameObject.Find("Statue");
-                AkSoundEngine.PostEvent("Play_Statue_Loud", Statue.gameObject);
-                StatueLoudPlayed = true;
-            }
-
-
             playerTransform.position = newPosition; // Move the player to the new position
             yield return null; // Wait until the next frame
+        }
+
+        //play sound
+        if (StatueLoudPlayed == false)
+        {
+            GameObject Statue = GameObject.Find("Statue");
+            AkSoundEngine.PostEvent("Play_Statue_Loud", Statue.gameObject);
+            StatueLoudPlayed = true;
         }
 
         // After the shockwave, the player stops moving
