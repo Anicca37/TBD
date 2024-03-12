@@ -162,7 +162,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{A6D53940-5AAF-2122-15FA-25F705AAF6A5}">
+		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{31899F87-9493-0F1B-A3B4-E3B3330275A9}">
 			<ShortName>Level2Garden</ShortName>
 			<Path>Level2Garden.bnk</Path>
 			<Media>
@@ -173,6 +173,10 @@
 				<File Id="59226223" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Flower_Wind_Blowing02.wav</ShortName>
 					<CachePath>SFX/Flower_Wind_Blowing02_818F3B66.wem</CachePath>
+				</File>
+				<File Id="71224864" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Intro\mus_90bpm_Level2_Intro_Percussion.wav</ShortName>
+					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Intro/mus_90bpm_Level2_Intro_Percussion_239921B3.wem</CachePath>
 				</File>
 				<File Id="83339973" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>94 - Wind Chimes Brass.M.wav</ShortName>
@@ -186,9 +190,21 @@
 					<ShortName>Flower_PickUp_02.wav</ShortName>
 					<CachePath>SFX/Flower_PickUp_02_818F3B66.wem</CachePath>
 				</File>
+				<File Id="109822425" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section2\mus_90bpm_Level2_Section2_CMelody.wav</ShortName>
+					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Section2/mus_90bpm_Level2_Section2_CMelody_239921B3.wem</CachePath>
+				</File>
+				<File Id="134090151" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Tran\mus_90bpm_Level2_Tran Chords.wav</ShortName>
+					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Tran/mus_90bpm_Level2_Tran Chords_239921B3.wem</CachePath>
+				</File>
 				<File Id="141213406" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bird01-001.wav</ShortName>
 					<CachePath>SFX/Bird01-001_818F3B66.wem</CachePath>
+				</File>
+				<File Id="178935509" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section1\mus_90bpm_Level2_Section1_Bass.wav</ShortName>
+					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Section1/mus_90bpm_Level2_Section1_Bass_239921B3.wem</CachePath>
 				</File>
 				<File Id="217621770" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bird02-003.wav</ShortName>
@@ -201,6 +217,14 @@
 				<File Id="252279644" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Button.wav</ShortName>
 					<CachePath>SFX/Button_9CD1B619.wem</CachePath>
+				</File>
+				<File Id="257798915" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Vine_Growing.wav</ShortName>
+					<CachePath>SFX/Vine_Growing_818F3B66.wem</CachePath>
+				</File>
+				<File Id="264857201" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section2\mus_90bpm_Level2_Section2_Chords.wav</ShortName>
+					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Section2/mus_90bpm_Level2_Section2_Chords_239921B3.wem</CachePath>
 				</File>
 				<File Id="265032393" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Statue_Loud.wav</ShortName>
@@ -226,9 +250,25 @@
 					<ShortName>Bird02-002.wav</ShortName>
 					<CachePath>SFX/Bird02-002_818F3B66.wem</CachePath>
 				</File>
+				<File Id="338319697" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section1\mus_90bpm_Level2_Section1_Percussion.wav</ShortName>
+					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Section1/mus_90bpm_Level2_Section1_Percussion_239921B3.wem</CachePath>
+				</File>
+				<File Id="354701458" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section1\mus_90bpm_Level2_Section1_Kick.wav</ShortName>
+					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Section1/mus_90bpm_Level2_Section1_Kick_239921B3.wem</CachePath>
+				</File>
 				<File Id="361590980" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Flower_PickUp_05.wav</ShortName>
 					<CachePath>SFX/Flower_PickUp_05_818F3B66.wem</CachePath>
+				</File>
+				<File Id="387727601" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section1\mus_90bpm_Level2_Section1_NoiseDown.wav</ShortName>
+					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Section1/mus_90bpm_Level2_Section1_NoiseDown_239921B3.wem</CachePath>
+				</File>
+				<File Id="397556874" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section1\mus_90bpm_Level2_Section1_Melody.wav</ShortName>
+					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Section1/mus_90bpm_Level2_Section1_Melody_239921B3.wem</CachePath>
 				</File>
 				<File Id="433162066" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PlayerEaten.wav</ShortName>
@@ -242,9 +282,17 @@
 					<ShortName>Flower_Wind_Blowing01.wav</ShortName>
 					<CachePath>SFX/Flower_Wind_Blowing01_818F3B66.wem</CachePath>
 				</File>
+				<File Id="492836723" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PickUp_Pinecone_1.wav</ShortName>
+					<CachePath>SFX/PickUp_Pinecone_1_818F3B66.wem</CachePath>
+				</File>
 				<File Id="523653084" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WaterFlooding.wav</ShortName>
 					<CachePath>SFX/WaterFlooding_796701CD.wem</CachePath>
+				</File>
+				<File Id="558199229" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section2\mus_90bpm_Level2_Section2_Kick.wav</ShortName>
+					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Section2/mus_90bpm_Level2_Section2_Kick_239921B3.wem</CachePath>
 				</File>
 				<File Id="577840437" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Flower_PickUp_01.wav</ShortName>
@@ -258,6 +306,18 @@
 					<ShortName>Flower_PickUp_06.wav</ShortName>
 					<CachePath>SFX/Flower_PickUp_06_818F3B66.wem</CachePath>
 				</File>
+				<File Id="591653612" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section2\mus_90bpm_Level2_Section2_Percussion.wav</ShortName>
+					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Section2/mus_90bpm_Level2_Section2_Percussion_239921B3.wem</CachePath>
+				</File>
+				<File Id="633773357" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Tran\mus_90bpm_Level2_Tran_Melody.wav</ShortName>
+					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Tran/mus_90bpm_Level2_Tran_Melody_239921B3.wem</CachePath>
+				</File>
+				<File Id="648544338" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Tran\mus_90bpm_Level2_Tran_NoiseDown.wav</ShortName>
+					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Tran/mus_90bpm_Level2_Tran_NoiseDown_239921B3.wem</CachePath>
+				</File>
 				<File Id="649235970" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ChimeD.wav</ShortName>
 					<CachePath>SFX/ChimeD_818F3B66.wem</CachePath>
@@ -270,6 +330,14 @@
 					<ShortName>Bird02-001.wav</ShortName>
 					<CachePath>SFX/Bird02-001_818F3B66.wem</CachePath>
 				</File>
+				<File Id="673602312" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section1\mus_90bpm_Level2_Section1_Chords.wav</ShortName>
+					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Section1/mus_90bpm_Level2_Section1_Chords_239921B3.wem</CachePath>
+				</File>
+				<File Id="690728280" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Tran\mus_90bpm_Level2_Tran Kick.wav</ShortName>
+					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Tran/mus_90bpm_Level2_Tran Kick_239921B3.wem</CachePath>
+				</File>
 				<File Id="696909810" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ChimeG.wav</ShortName>
 					<CachePath>SFX/ChimeG_818F3B66.wem</CachePath>
@@ -278,9 +346,21 @@
 					<ShortName>Wind_Blowing.wav</ShortName>
 					<CachePath>SFX/Wind_Blowing_FBC78EF0.wem</CachePath>
 				</File>
+				<File Id="747524387" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PickUp_Pinecone_2.wav</ShortName>
+					<CachePath>SFX/PickUp_Pinecone_2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="785447792" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section2\mus_90bpm_Level2_Section2_Bass.wav</ShortName>
+					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Section2/mus_90bpm_Level2_Section2_Bass_239921B3.wem</CachePath>
+				</File>
 				<File Id="787519300" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ChimeC.wav</ShortName>
 					<CachePath>SFX/ChimeC_818F3B66.wem</CachePath>
+				</File>
+				<File Id="789492912" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Intro\mus_90bpm_Level2_Intro_Kick.wav</ShortName>
+					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Intro/mus_90bpm_Level2_Intro_Kick_239921B3.wem</CachePath>
 				</File>
 				<File Id="809920981" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Flower_PickUp_09.wav</ShortName>
@@ -290,6 +370,22 @@
 					<ShortName>Bird03-002.wav</ShortName>
 					<CachePath>SFX/Bird03-002_818F3B66.wem</CachePath>
 				</File>
+				<File Id="862302749" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Intro\mus_90bpm_Level2_Intro_NoiseDown.wav</ShortName>
+					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Intro/mus_90bpm_Level2_Intro_NoiseDown_239921B3.wem</CachePath>
+				</File>
+				<File Id="873760794" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PickUp_Pinecone_3.wav</ShortName>
+					<CachePath>SFX/PickUp_Pinecone_3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="878842485" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Tran\mus_90bpm_Level2_Tran_Percussion.wav</ShortName>
+					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Tran/mus_90bpm_Level2_Tran_Percussion_239921B3.wem</CachePath>
+				</File>
+				<File Id="898317160" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section2\mus_90bpm_Level2_Section2_MelodyCello.wav</ShortName>
+					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Section2/mus_90bpm_Level2_Section2_MelodyCello_239921B3.wem</CachePath>
+				</File>
 				<File Id="909003059" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Win.wav</ShortName>
 					<CachePath>SFX/Win_818F3B66.wem</CachePath>
@@ -298,9 +394,17 @@
 					<ShortName>Bird03-001.wav</ShortName>
 					<CachePath>SFX/Bird03-001_818F3B66.wem</CachePath>
 				</File>
+				<File Id="939936785" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section1\mus_90bpm_Level2_Section1_CMelody.wav</ShortName>
+					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Section1/mus_90bpm_Level2_Section1_CMelody_239921B3.wem</CachePath>
+				</File>
+				<File Id="965482483" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Tran\mus_90bpm_Level2_Tran_Bass.wav</ShortName>
+					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Tran/mus_90bpm_Level2_Tran_Bass_239921B3.wem</CachePath>
+				</File>
 				<File Id="985095586" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Clock_Tick_Reverse.wav</ShortName>
-					<CachePath>SFX/Clock_Tick_Reverse_FBC78EF0.wem</CachePath>
+					<CachePath>SFX/Clock_Tick_Reverse_30F9837E.wem</CachePath>
 				</File>
 				<File Id="1015123158" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Garden_Ambience.wav</ShortName>
@@ -309,10 +413,6 @@
 				<File Id="1023893752" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Flower_PickUp_07.wav</ShortName>
 					<CachePath>SFX/Flower_PickUp_07_818F3B66.wem</CachePath>
-				</File>
-				<File Id="1057618579" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>FreakRelaxing_Demo_lp_Zongfan.wav</ShortName>
-					<CachePath>SFX/FreakRelaxing_Demo_lp_Zongfan_FBC78EF0.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -401,15 +501,42 @@
 						<MediaRef Id="304640499"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1878963262" Name="Play_GrassFootStep" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3374855610" Name="Play_Level2_GardenAmbience" MaxAttenuation="200" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="1015123158"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3216779235" Name="Play_Level2_GardenMusic" DurationType="Infinite">
+				<Event Id="552396483" Name="Play_Level2_NewGardenMusic" DurationType="Infinite">
 					<MediaRefs>
-						<MediaRef Id="1057618579"/>
+						<MediaRef Id="71224864"/>
+						<MediaRef Id="109822425"/>
+						<MediaRef Id="134090151"/>
+						<MediaRef Id="178935509"/>
+						<MediaRef Id="264857201"/>
+						<MediaRef Id="338319697"/>
+						<MediaRef Id="354701458"/>
+						<MediaRef Id="387727601"/>
+						<MediaRef Id="397556874"/>
+						<MediaRef Id="558199229"/>
+						<MediaRef Id="591653612"/>
+						<MediaRef Id="633773357"/>
+						<MediaRef Id="648544338"/>
+						<MediaRef Id="673602312"/>
+						<MediaRef Id="690728280"/>
+						<MediaRef Id="785447792"/>
+						<MediaRef Id="789492912"/>
+						<MediaRef Id="862302749"/>
+						<MediaRef Id="878842485"/>
+						<MediaRef Id="898317160"/>
+						<MediaRef Id="939936785"/>
+						<MediaRef Id="965482483"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3549239601" Name="Play_PineconePickup" DurationType="OneShot" DurationMin="1.4421458" DurationMax="1.7328959">
+					<MediaRefs>
+						<MediaRef Id="492836723"/>
+						<MediaRef Id="747524387"/>
+						<MediaRef Id="873760794"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3659914468" Name="Play_PlayerEaten" DurationType="OneShot" DurationMin="0.45866665" DurationMax="0.45866665">
@@ -420,6 +547,11 @@
 				<Event Id="976664737" Name="Play_Statue_Loud" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.75" DurationMax="1.75">
 					<MediaRefs>
 						<MediaRef Id="265032393"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4090890880" Name="Play_Vine_Growing" DurationType="OneShot" DurationMin="3.1929376" DurationMax="3.1929376">
+					<MediaRefs>
+						<MediaRef Id="257798915"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2908863451" Name="Play_WaterFlooding" DurationType="OneShot" DurationMin="9.323238" DurationMax="9.323238">
@@ -455,12 +587,12 @@
 				<Event Id="2897827502" Name="Stop_Clock_Tick" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3434769657" Name="Stop_Clock_Tick_Reverse" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1659483392" Name="Stop_Level2_GardenAmbience" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="2396550769" Name="Stop_Level2_GardenMusic" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="929452813" Name="Stop_Level2_NewGardenMusic" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2135762577" Name="Stop_Waterflow" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1663839887" Name="Stop_Wind_Blowing" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{A21E54EF-4D62-BE7D-4140-9E965FCD64AB}">
+		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{A238224D-2257-71E1-AE1E-B550A1476823}">
 			<ShortName>Level0</ShortName>
 			<Path>Level0.bnk</Path>
 			<Media>
@@ -476,29 +608,13 @@
 					<ShortName>20 - Door,Wood Open.wav</ShortName>
 					<CachePath>SFX/20 - Door,Wood Open_C16C2461.wem</CachePath>
 				</File>
-				<File Id="107548376" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Carpet_Boots_FullStep_04.wav</ShortName>
-					<CachePath>SFX/Carpet_Boots_FullStep_04_54501CE0.wem</CachePath>
-				</File>
 				<File Id="181112472" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Quest_Game_Action_Wood_Box_.wav</ShortName>
 					<CachePath>SFX/Quest_Game_Action_Wood_Box__818F3B66.wem</CachePath>
 				</File>
-				<File Id="182188453" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Carpet_Boots_FullStep_05.wav</ShortName>
-					<CachePath>SFX/Carpet_Boots_FullStep_05_256967D3.wem</CachePath>
-				</File>
-				<File Id="312865666" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Carpet_Boots_FullStep_02.wav</ShortName>
-					<CachePath>SFX/Carpet_Boots_FullStep_02_B239EC77.wem</CachePath>
-				</File>
 				<File Id="336039053" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Clock_Tick.wav</ShortName>
 					<CachePath>SFX/Clock_Tick_FBC78EF0.wem</CachePath>
-				</File>
-				<File Id="350664709" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>MusicBass.wav</ShortName>
-					<CachePath>SFX/MusicBass_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="414646934" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Quest_Game_Crafting_Wood_-2.wav</ShortName>
@@ -507,14 +623,6 @@
 				<File Id="515135351" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Quest_Game_Crafting_Wood_-1.wav</ShortName>
 					<CachePath>SFX/Quest_Game_Crafting_Wood_-1_04E24E4B.wem</CachePath>
-				</File>
-				<File Id="618289996" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Carpet_Boots_FullStep_01.wav</ShortName>
-					<CachePath>SFX/Carpet_Boots_FullStep_01_FDA5DC3B.wem</CachePath>
-				</File>
-				<File Id="619782007" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Carpet_Boots_FullStep_03.wav</ShortName>
-					<CachePath>SFX/Carpet_Boots_FullStep_03_F316940C.wem</CachePath>
 				</File>
 				<File Id="790702576" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Quest_Game_Action_Wood_Bo-1.wav</ShortName>
@@ -526,28 +634,10 @@
 				</File>
 				<File Id="985095586" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Clock_Tick_Reverse.wav</ShortName>
-					<CachePath>SFX/Clock_Tick_Reverse_FBC78EF0.wem</CachePath>
-				</File>
-				<File Id="1019490629" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>MusicDemo1.wav</ShortName>
-					<CachePath>SFX/MusicDemo1_FBC78EF0.wem</CachePath>
-				</File>
-				<File Id="1023030499" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Carpet_Boots_FullStep_06.wav</ShortName>
-					<CachePath>SFX/Carpet_Boots_FullStep_06_2C9FF20F.wem</CachePath>
+					<CachePath>SFX/Clock_Tick_Reverse_30F9837E.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
-				<Event Id="2225307149" Name="Play_CarpetFootStep" DurationType="OneShot" DurationMin="0.16074052" DurationMax="0.25263542">
-					<MediaRefs>
-						<MediaRef Id="107548376"/>
-						<MediaRef Id="182188453"/>
-						<MediaRef Id="312865666"/>
-						<MediaRef Id="618289996"/>
-						<MediaRef Id="619782007"/>
-						<MediaRef Id="1023030499"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="2797822332" Name="Play_Clock_Tick" MaxAttenuation="100" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="336039053"/>
@@ -566,12 +656,6 @@
 				<Event Id="1660008929" Name="Play_Door_Open" DurationType="OneShot" DurationMin="0.92799664" DurationMax="0.92799664">
 					<MediaRefs>
 						<MediaRef Id="52226118"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="903163645" Name="Play_Level0Music" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="350664709"/>
-						<MediaRef Id="1019490629"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1525201045" Name="Play_TableDrop" DurationType="OneShot" DurationMin="0.42548987" DurationMax="0.47466666">
@@ -598,5 +682,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{89C37E08-217D-C758-5DC8-E21052388501}</FileHash>
+	<FileHash>{B7C843C3-2656-4247-D4E2-4E214FBB58FF}</FileHash>
 </SoundBanksInfo>

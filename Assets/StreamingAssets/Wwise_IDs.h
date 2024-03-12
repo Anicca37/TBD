@@ -15,7 +15,6 @@ namespace AK
     {
         static const AkUniqueID PLAY_BIRDSCRAZY = 1125237609U;
         static const AkUniqueID PLAY_BUTTON = 2099555730U;
-        static const AkUniqueID PLAY_CARPETFOOTSTEP = 2225307149U;
         static const AkUniqueID PLAY_CHIMEC = 2759522921U;
         static const AkUniqueID PLAY_CHIMED = 2759522926U;
         static const AkUniqueID PLAY_CHIMEE = 2759522927U;
@@ -28,14 +27,14 @@ namespace AK
         static const AkUniqueID PLAY_FLOWERPLANT = 1321543350U;
         static const AkUniqueID PLAY_FLOWERWINDBLOW = 1831549045U;
         static const AkUniqueID PLAY_FLYTRAPPOPEDUP = 531081561U;
-        static const AkUniqueID PLAY_GRASSFOOTSTEP = 1878963262U;
-        static const AkUniqueID PLAY_LEVEL0MUSIC = 903163645U;
         static const AkUniqueID PLAY_LEVEL2_GARDENAMBIENCE = 3374855610U;
-        static const AkUniqueID PLAY_LEVEL2_GARDENMUSIC = 3216779235U;
+        static const AkUniqueID PLAY_LEVEL2_NEWGARDENMUSIC = 552396483U;
+        static const AkUniqueID PLAY_PINECONEPICKUP = 3549239601U;
         static const AkUniqueID PLAY_PLAYEREATEN = 3659914468U;
         static const AkUniqueID PLAY_STATUE_LOUD = 976664737U;
         static const AkUniqueID PLAY_TABLEDROP = 1525201045U;
         static const AkUniqueID PLAY_TABLEPICKUP = 3370429210U;
+        static const AkUniqueID PLAY_VINE_GROWING = 4090890880U;
         static const AkUniqueID PLAY_WATERFLOODING = 2908863451U;
         static const AkUniqueID PLAY_WATERFLOW = 518242827U;
         static const AkUniqueID PLAY_WIN = 2955987680U;
@@ -46,7 +45,7 @@ namespace AK
         static const AkUniqueID STOP_CLOCK_TICK_REVERSE = 3434769657U;
         static const AkUniqueID STOP_LEVEL0MUSIC = 4144809523U;
         static const AkUniqueID STOP_LEVEL2_GARDENAMBIENCE = 1659483392U;
-        static const AkUniqueID STOP_LEVEL2_GARDENMUSIC = 2396550769U;
+        static const AkUniqueID STOP_LEVEL2_NEWGARDENMUSIC = 929452813U;
         static const AkUniqueID STOP_WATERFLOW = 2135762577U;
         static const AkUniqueID STOP_WIND_BLOWING = 1663839887U;
     } // namespace EVENTS
