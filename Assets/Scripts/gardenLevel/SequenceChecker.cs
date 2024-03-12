@@ -9,6 +9,7 @@ public class SequenceChecker : MonoBehaviour
     public WindController windController;
 
     private bool solved = false;
+    private bool ifCorrectSoundPlayed = false;
 
 
     public void ChimeClicked(int chimeID)
@@ -30,8 +31,24 @@ public class SequenceChecker : MonoBehaviour
         else
         {
             currentSequenceIndex = 0; // reset if wrong is clicked
-            Invoke("playCorrectSound", 0.5f); // play correct after 0.5s;
+           
+            //play sound
+            if (ifCorrectSoundPlayed == false)
+            {
+                Invoke("playCorrectSound", 1f); // play correct after 0.5s;
+            }
+            ifCorrectSoundPlayed = true;
+            Invoke("makePlayedFalse", 6f);
         }
+    }
+
+    private void makePlayedTrue()
+    {
+        ifCorrectSoundPlayed = true;
+    }
+    private void makePlayedFalse()
+    {
+        ifCorrectSoundPlayed = false;
     }
 
     private void playCorrectSound()
