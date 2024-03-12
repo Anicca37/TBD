@@ -24,8 +24,10 @@ Event	ID	Name			Wwise Object Path	Notes
 	2955987680	Play_Win			\Default Work Unit\Play_Win	
 	3374855610	Play_Level2_GardenAmbience			\Default Work Unit\Play_Level2_GardenAmbience	
 	3434769657	Stop_Clock_Tick_Reverse			\Level0\Tut_office\Clock\Stop_Clock_Tick_Reverse	
+	3549239601	Play_PineconePickup			\Default Work Unit\Play_PineconePickup	
 	3659914468	Play_PlayerEaten			\Default Work Unit\Play_PlayerEaten	
 	3830889987	Play_Clock_Tick_Reverse			\Level0\Tut_office\Clock\Play_Clock_Tick_Reverse	
+	4090890880	Play_Vine_Growing			\Default Work Unit\Play_Vine_Growing	
 	4235265352	Play_WindChime			\Default Work Unit\Play_WindChime	
 
 Modulator Envelope	ID	Name			Wwise Object Path	Notes
@@ -49,6 +51,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	217621770	Bird02-003	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\Bird02-003_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Level2_Garden\Birds\Birds\Bird02-003		220460
 	217884051	WoodGrowingCrazy	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\WoodGrowingCrazy_837E818A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Level2_Garden\WoodGrowingCrazy		1079080
 	252279644	Button	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\Button_9CD1B619.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Level2_Garden\Button\Button		56556
+	257798915	Vine_Growing	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\Vine_Growing_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Level2_Garden\Vine\Vine_Growing		613140
 	264857201	mus_90bpm_Level2_Section2_Chords	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\mus_90bpm_Level2\mus_90bpm_Level2_Section2\mus_90bpm_Level2_Section2_Chords_239921B3.wem		\Interactive Music Hierarchy\Default Work Unit\Lv2_Garden\Level2_NewGardenMusic\mus_90bpm_Level2_Section2\mus_90bpm_Level2_Section2_Chords		1540918
 	265032393	Statue_Loud	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\Statue_Loud_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Level2_Garden\Statue\Statue_Loud		336096
 	285637370	Flower_PickUp_04	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\Flower_PickUp_04_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Level2_Garden\Flower\FlowerPlant\Flower_PickUp_04		217920
@@ -64,6 +67,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	433162066	PlayerEaten	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\PlayerEaten_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Level2_Garden\VenusFlytrap\PlayerEaten		88160
 	441823339	Flower_PickUp_08	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\Flower_PickUp_08_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Level2_Garden\Flower\FlowerPickUp\Flower_PickUp_08		109736
 	462888902	Flower_Wind_Blowing01	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\Flower_Wind_Blowing01_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Level2_Garden\Flower\Wind\FlowerWindBlow\Flower_Wind_Blowing01		338080
+	492836723	PickUp_Pinecone_1	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\PickUp_Pinecone_1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Level2_Garden\PineconePickup\PickUp_Pinecone_1		321180
 	523653084	WaterFlooding	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\WaterFlooding_796701CD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Level2_Garden\Water\WaterFlooding		1790156
 	558199229	mus_90bpm_Level2_Section2_Kick	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\mus_90bpm_Level2\mus_90bpm_Level2_Section2\mus_90bpm_Level2_Section2_Kick_239921B3.wem		\Interactive Music Hierarchy\Default Work Unit\Lv2_Garden\Level2_NewGardenMusic\mus_90bpm_Level2_Section2\mus_90bpm_Level2_Section2_Kick		1526789
 	577840437	Flower_PickUp_01	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\Flower_PickUp_01_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Level2_Garden\Flower\FlowerPickUp\Flower_PickUp_01		109448
@@ -79,12 +83,14 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	690728280	mus_90bpm_Level2_Tran Kick	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\mus_90bpm_Level2\mus_90bpm_Level2_Tran\mus_90bpm_Level2_Tran Kick_239921B3.wem		\Interactive Music Hierarchy\Default Work Unit\Lv2_Garden\Level2_NewGardenMusic\mus_90bpm_Level2_Tran\mus_90bpm_Level2_Tran Kick		1302890
 	696909810	ChimeC	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\ChimeG_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Level2_Garden\Chime\ChimeC		280776
 	697056058	Wind_Blowing	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\Wind_Blowing_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Level2_Garden\Flower\Wind\Wind_Blowing		19848908
+	747524387	PickUp_Pinecone_2	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\PickUp_Pinecone_2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Level2_Garden\PineconePickup\PickUp_Pinecone_2		332812
 	785447792	mus_90bpm_Level2_Section2_Bass	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\mus_90bpm_Level2\mus_90bpm_Level2_Section2\mus_90bpm_Level2_Section2_Bass_239921B3.wem		\Interactive Music Hierarchy\Default Work Unit\Lv2_Garden\Level2_NewGardenMusic\mus_90bpm_Level2_Section2\mus_90bpm_Level2_Section2_Bass		1595838
 	787519300	ChimeG	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\ChimeC_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Level2_Garden\Chime\ChimeG		173536
 	789492912	mus_90bpm_Level2_Intro_Kick	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\mus_90bpm_Level2\mus_90bpm_Level2_Intro\mus_90bpm_Level2_Intro_Kick_239921B3.wem		\Interactive Music Hierarchy\Default Work Unit\Lv2_Garden\Level2_NewGardenMusic\mus_90bpm_Level2_Intro\mus_90bpm_Level2_Intro_Kick		482882
 	809920981	Flower_PickUp_09	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\Flower_PickUp_09_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Level2_Garden\Flower\FlowerPickUp\Flower_PickUp_09		125864
 	821236829	Bird03-002	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\Bird03-002_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Level2_Garden\Birds\Birds\Bird03-002		156264
 	862302749	mus_90bpm_Level2_Intro_NoiseDown	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\mus_90bpm_Level2\mus_90bpm_Level2_Intro\mus_90bpm_Level2_Intro_NoiseDown_239921B3.wem		\Interactive Music Hierarchy\Default Work Unit\Lv2_Garden\Level2_NewGardenMusic\mus_90bpm_Level2_Intro\mus_90bpm_Level2_Intro_NoiseDown		498778
+	873760794	PickUp_Pinecone_3	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\PickUp_Pinecone_3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Level2_Garden\PineconePickup\PickUp_Pinecone_3		276988
 	878842485	mus_90bpm_Level2_Tran_Percussion	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\mus_90bpm_Level2\mus_90bpm_Level2_Tran\mus_90bpm_Level2_Tran_Percussion_239921B3.wem		\Interactive Music Hierarchy\Default Work Unit\Lv2_Garden\Level2_NewGardenMusic\mus_90bpm_Level2_Tran\mus_90bpm_Level2_Tran_Percussion		1482683
 	898317160	mus_90bpm_Level2_Section2_MelodyCello	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\mus_90bpm_Level2\mus_90bpm_Level2_Section2\mus_90bpm_Level2_Section2_MelodyCello_239921B3.wem		\Interactive Music Hierarchy\Default Work Unit\Lv2_Garden\Level2_NewGardenMusic\mus_90bpm_Level2_Section2\mus_90bpm_Level2_Section2_MelodyCello		1661734
 	909003059	Win	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\Win_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Win		192096

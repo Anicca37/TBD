@@ -162,7 +162,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{6188AE1A-888A-834A-D9D9-DADCD5FAEF7B}">
+		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{31899F87-9493-0F1B-A3B4-E3B3330275A9}">
 			<ShortName>Level2Garden</ShortName>
 			<Path>Level2Garden.bnk</Path>
 			<Media>
@@ -217,6 +217,10 @@
 				<File Id="252279644" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Button.wav</ShortName>
 					<CachePath>SFX/Button_9CD1B619.wem</CachePath>
+				</File>
+				<File Id="257798915" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Vine_Growing.wav</ShortName>
+					<CachePath>SFX/Vine_Growing_818F3B66.wem</CachePath>
 				</File>
 				<File Id="264857201" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section2\mus_90bpm_Level2_Section2_Chords.wav</ShortName>
@@ -278,6 +282,10 @@
 					<ShortName>Flower_Wind_Blowing01.wav</ShortName>
 					<CachePath>SFX/Flower_Wind_Blowing01_818F3B66.wem</CachePath>
 				</File>
+				<File Id="492836723" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PickUp_Pinecone_1.wav</ShortName>
+					<CachePath>SFX/PickUp_Pinecone_1_818F3B66.wem</CachePath>
+				</File>
 				<File Id="523653084" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WaterFlooding.wav</ShortName>
 					<CachePath>SFX/WaterFlooding_796701CD.wem</CachePath>
@@ -338,6 +346,10 @@
 					<ShortName>Wind_Blowing.wav</ShortName>
 					<CachePath>SFX/Wind_Blowing_FBC78EF0.wem</CachePath>
 				</File>
+				<File Id="747524387" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PickUp_Pinecone_2.wav</ShortName>
+					<CachePath>SFX/PickUp_Pinecone_2_818F3B66.wem</CachePath>
+				</File>
 				<File Id="785447792" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section2\mus_90bpm_Level2_Section2_Bass.wav</ShortName>
 					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Section2/mus_90bpm_Level2_Section2_Bass_239921B3.wem</CachePath>
@@ -361,6 +373,10 @@
 				<File Id="862302749" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Intro\mus_90bpm_Level2_Intro_NoiseDown.wav</ShortName>
 					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Intro/mus_90bpm_Level2_Intro_NoiseDown_239921B3.wem</CachePath>
+				</File>
+				<File Id="873760794" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PickUp_Pinecone_3.wav</ShortName>
+					<CachePath>SFX/PickUp_Pinecone_3_818F3B66.wem</CachePath>
 				</File>
 				<File Id="878842485" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Tran\mus_90bpm_Level2_Tran_Percussion.wav</ShortName>
@@ -516,6 +532,13 @@
 						<MediaRef Id="965482483"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3549239601" Name="Play_PineconePickup" DurationType="OneShot" DurationMin="1.4421458" DurationMax="1.7328959">
+					<MediaRefs>
+						<MediaRef Id="492836723"/>
+						<MediaRef Id="747524387"/>
+						<MediaRef Id="873760794"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3659914468" Name="Play_PlayerEaten" DurationType="OneShot" DurationMin="0.45866665" DurationMax="0.45866665">
 					<MediaRefs>
 						<MediaRef Id="433162066"/>
@@ -524,6 +547,11 @@
 				<Event Id="976664737" Name="Play_Statue_Loud" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.75" DurationMax="1.75">
 					<MediaRefs>
 						<MediaRef Id="265032393"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4090890880" Name="Play_Vine_Growing" DurationType="OneShot" DurationMin="3.1929376" DurationMax="3.1929376">
+					<MediaRefs>
+						<MediaRef Id="257798915"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2908863451" Name="Play_WaterFlooding" DurationType="OneShot" DurationMin="9.323238" DurationMax="9.323238">
@@ -654,5 +682,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{1D7C9609-F4EC-2A85-D0DC-51C3A4DD50FB}</FileHash>
+	<FileHash>{DF9E0D78-7819-BB7A-9224-18843C528848}</FileHash>
 </SoundBanksInfo>

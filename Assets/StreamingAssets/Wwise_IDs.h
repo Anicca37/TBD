@@ -29,10 +29,12 @@ namespace AK
         static const AkUniqueID PLAY_FLYTRAPPOPEDUP = 531081561U;
         static const AkUniqueID PLAY_LEVEL2_GARDENAMBIENCE = 3374855610U;
         static const AkUniqueID PLAY_LEVEL2_NEWGARDENMUSIC = 552396483U;
+        static const AkUniqueID PLAY_PINECONEPICKUP = 3549239601U;
         static const AkUniqueID PLAY_PLAYEREATEN = 3659914468U;
         static const AkUniqueID PLAY_STATUE_LOUD = 976664737U;
         static const AkUniqueID PLAY_TABLEDROP = 1525201045U;
         static const AkUniqueID PLAY_TABLEPICKUP = 3370429210U;
+        static const AkUniqueID PLAY_VINE_GROWING = 4090890880U;
         static const AkUniqueID PLAY_WATERFLOODING = 2908863451U;
         static const AkUniqueID PLAY_WATERFLOW = 518242827U;
         static const AkUniqueID PLAY_WIN = 2955987680U;
