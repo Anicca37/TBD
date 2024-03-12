@@ -24,7 +24,7 @@ public class SequenceChecker : MonoBehaviour
                 LaunchSeeds();
                 currentSequenceIndex = 0; // reset sequence after success
                 AkSoundEngine.PostEvent("Play_Birds", this.gameObject);
-                Invoke("playBirdWing", 1);
+                Invoke("playBirdWing", 1.3f);
             }
         }
         else
