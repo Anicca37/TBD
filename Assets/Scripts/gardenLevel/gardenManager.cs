@@ -35,7 +35,7 @@ public class GardenManager : MonoBehaviour
 
     public float shockwaveCooldown = 1f; // Cooldown in seconds
     private float lastShockwaveTime = -Mathf.Infinity; // Initialize with a value that allows immediate use
-    // private bool StatueLoudPlayed = false;
+    private bool StatueLoudPlayed = false;
     private bool isTrapActive = false;
     public bool isReset = false;
 
@@ -172,14 +172,19 @@ public class GardenManager : MonoBehaviour
         {
             ClockController.LockGameControl(false);
             Debug.Log("Statues sing loudly.");
-            GameObject Statue = GameObject.Find("Statue");
-            AkSoundEngine.PostEvent("Play_Statue_Loud", Statue.gameObject);
+            if (StatueLoudPlayed == false)
+            {
+                GameObject Statue = GameObject.Find("Statue");
+                AkSoundEngine.PostEvent("Play_Statue_Loud", Statue.gameObject);
+                StatueLoudPlayed = true;
+            }
             StartCoroutine(Shockwave()); // Initiate the shockwave coroutine
             lastShockwaveTime = Time.time; // Update the last shockwave time
         }
         else
         {
             Debug.Log("Shockwave is on cooldown.");
+            StatueLoudPlayed = false;
         }
 
 
