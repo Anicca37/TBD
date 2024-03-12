@@ -33,7 +33,7 @@ public class buttonScript : MonoBehaviour
 
                         //play sound
                         // TODO: switch to bird chirp
-                        AkSoundEngine.PostEvent("Play_Button", this.gameObject);
+                        AkSoundEngine.PostEvent("Play_Birds", this.gameObject);
                     }
                 }
             }
