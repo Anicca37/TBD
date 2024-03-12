@@ -162,7 +162,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{31899F87-9493-0F1B-A3B4-E3B3330275A9}">
+		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{7F3E7673-50F7-F093-5628-8DC2046F1993}">
 			<ShortName>Level2Garden</ShortName>
 			<Path>Level2Garden.bnk</Path>
 			<Media>
@@ -180,7 +180,7 @@
 				</File>
 				<File Id="83339973" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>94 - Wind Chimes Brass.M.wav</ShortName>
-					<CachePath>SFX/94 - Wind Chimes Brass.M_C4D4C373.wem</CachePath>
+					<CachePath>SFX/94 - Wind Chimes Brass.M_BB758DDE.wem</CachePath>
 				</File>
 				<File Id="88567209" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ChimeE.wav</ShortName>
@@ -306,6 +306,10 @@
 					<ShortName>Flower_PickUp_06.wav</ShortName>
 					<CachePath>SFX/Flower_PickUp_06_818F3B66.wem</CachePath>
 				</File>
+				<File Id="590005921" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Chime_Melody.wav</ShortName>
+					<CachePath>SFX/Chime_Melody_5FAD635F.wem</CachePath>
+				</File>
 				<File Id="591653612" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section2\mus_90bpm_Level2_Section2_Percussion.wav</ShortName>
 					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Section2/mus_90bpm_Level2_Section2_Percussion_239921B3.wem</CachePath>
@@ -398,6 +402,10 @@
 					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section1\mus_90bpm_Level2_Section1_CMelody.wav</ShortName>
 					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Section1/mus_90bpm_Level2_Section1_CMelody_239921B3.wem</CachePath>
 				</File>
+				<File Id="960283345" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BirdWing.wav</ShortName>
+					<CachePath>SFX/BirdWing_818F3B66.wem</CachePath>
+				</File>
 				<File Id="965482483" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Tran\mus_90bpm_Level2_Tran_Bass.wav</ShortName>
 					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Tran/mus_90bpm_Level2_Tran_Bass_239921B3.wem</CachePath>
@@ -421,6 +429,18 @@
 				</ShareSets>
 			</Plugins>
 			<Events>
+				<Event Id="3025897706" Name="Play_Birds" DurationType="OneShot" DurationMin="0.813375" DurationMax="1.3508126">
+					<MediaRefs>
+						<MediaRef Id="141213406"/>
+						<MediaRef Id="217621770"/>
+						<MediaRef Id="333540284"/>
+						<MediaRef Id="336129854"/>
+						<MediaRef Id="583454713"/>
+						<MediaRef Id="670277016"/>
+						<MediaRef Id="821236829"/>
+						<MediaRef Id="928421190"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1125237609" Name="Play_BirdsCrazy" DurationType="OneShot" DurationMin="0.813375" DurationMax="1.3508126">
 					<MediaRefs>
 						<MediaRef Id="141213406"/>
@@ -433,9 +453,19 @@
 						<MediaRef Id="928421190"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3584090578" Name="Play_BirdWing" DurationType="OneShot" DurationMin="3.1929376" DurationMax="3.1929376">
+					<MediaRefs>
+						<MediaRef Id="960283345"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2099555730" Name="Play_Button" DurationType="OneShot" DurationMin="0.2940787" DurationMax="0.2940787">
 					<MediaRefs>
 						<MediaRef Id="252279644"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="847650453" Name="Play_Chime_Melody" DurationType="OneShot" DurationMin="3.4618473" DurationMax="3.4618473">
+					<MediaRefs>
+						<MediaRef Id="590005921"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2759522921" Name="Play_ChimeC" DurationType="OneShot" DurationMin="1.461875" DurationMax="1.461875">
@@ -574,7 +604,7 @@
 						<MediaRef Id="697056058"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="4235265352" Name="Play_WindChime" MaxAttenuation="80" DurationType="OneShot" DurationMin="12.175049" DurationMax="12.175049">
+				<Event Id="4235265352" Name="Play_WindChime" MaxAttenuation="80" DurationType="OneShot" DurationMin="7.2650976" DurationMax="7.2650976">
 					<MediaRefs>
 						<MediaRef Id="83339973"/>
 					</MediaRefs>
@@ -584,6 +614,7 @@
 						<MediaRef Id="217884051"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="184097815" Name="Stop_Chime_Melody" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2897827502" Name="Stop_Clock_Tick" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3434769657" Name="Stop_Clock_Tick_Reverse" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1659483392" Name="Stop_Level2_GardenAmbience" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
@@ -682,5 +713,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{B7C843C3-2656-4247-D4E2-4E214FBB58FF}</FileHash>
+	<FileHash>{0A7E52A8-C406-3592-9103-40835442DA27}</FileHash>
 </SoundBanksInfo>

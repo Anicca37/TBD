@@ -64,8 +64,11 @@ public class playerPickup : MonoBehaviour
                 else if (currentPickup.name.Contains("Chair"))
                 {
                     AkSoundEngine.PostEvent("Play_TablePickUp", this.gameObject);
-                }              
-        
+                }
+                else if (currentPickup.name.Contains("pinecone"))
+                {
+                    AkSoundEngine.PostEvent("Play_PineconePickup", this.gameObject);
+                }
             }
         }
     }

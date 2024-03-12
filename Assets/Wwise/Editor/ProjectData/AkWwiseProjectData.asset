@@ -373,8 +373,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c829b83be71c8a4d9fc3b43dae098d9f
     GuidInternal: 
-    m_lastTime: -8584913965703415973
+    m_lastTime: -8584913734247536616
     List:
+    - name: Play_Birds
+      guid: 83da1a64ae50fa4f8edb957f079b8173
+      id: 3025897706
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Play_Birds
+        ObjectType: 3
+        guid: 83da1a64ae50fa4f8edb957f079b8173
+      Path: Events\Default Work Unit\Play_Birds
+      maxAttenuation: 0
+      maxDuration: 1.3508126
+      minDuration: 0.813375
     - name: Play_BirdsCrazy
       guid: 3fdadab55a4b8a4481ad38102b6cc050
       id: 1125237609
@@ -392,6 +409,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.3508126
       minDuration: 0.813375
+    - name: Play_BirdWing
+      guid: c187ce0e70e6a3409e82cf57152114bd
+      id: 3584090578
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Play_BirdWing
+        ObjectType: 3
+        guid: c187ce0e70e6a3409e82cf57152114bd
+      Path: Events\Default Work Unit\Play_BirdWing
+      maxAttenuation: 0
+      maxDuration: 3.1929376
+      minDuration: 3.1929376
     - name: Play_Button
       guid: 937343f924bec6489cb40f81033ce814
       id: 2099555730
@@ -409,6 +443,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.2940787
       minDuration: 0.2940787
+    - name: Play_Chime_Melody
+      guid: 1167d12386b66942a2cecaf0460d6711
+      id: 847650453
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Play_Chime_Melody
+        ObjectType: 3
+        guid: 1167d12386b66942a2cecaf0460d6711
+      Path: Events\Default Work Unit\Play_Chime_Melody
+      maxAttenuation: 0
+      maxDuration: 3.4618473
+      minDuration: 3.4618473
     - name: Play_ChimeC
       guid: ccda2c706ac6f04fa5fdfd6564009b72
       id: 2759522921
@@ -560,8 +611,8 @@ MonoBehaviour:
         guid: 4f7504579319964882939e83bb50afce
       Path: Events\Default Work Unit\Play_GrassFootStep
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Level2_GardenAmbience
       guid: c14db0263e6603419900c2b80afc9182
       id: 3374855610
@@ -613,6 +664,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_PineconePickup
+      guid: eccfe1640b77ee4c9238bd15ac781d34
+      id: 3549239601
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Play_PineconePickup
+        ObjectType: 3
+        guid: eccfe1640b77ee4c9238bd15ac781d34
+      Path: Events\Default Work Unit\Play_PineconePickup
+      maxAttenuation: 0
+      maxDuration: 1.7328959
+      minDuration: 1.4421458
     - name: Play_PlayerEaten
       guid: ac70f061b2d8254486944eec70f3f8b4
       id: 3659914468
@@ -647,6 +715,23 @@ MonoBehaviour:
       maxAttenuation: 100
       maxDuration: 1.75
       minDuration: 1.75
+    - name: Play_Vine_Growing
+      guid: 6d46b08961eaeb43899a43aa834dd859
+      id: 4090890880
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Play_Vine_Growing
+        ObjectType: 3
+        guid: 6d46b08961eaeb43899a43aa834dd859
+      Path: Events\Default Work Unit\Play_Vine_Growing
+      maxAttenuation: 0
+      maxDuration: 3.1929376
+      minDuration: 3.1929376
     - name: Play_WaterFlooding
       guid: baa74c04cdc81448b6c4bfde77b434d3
       id: 2908863451
@@ -730,8 +815,8 @@ MonoBehaviour:
         guid: 640291eb5f80f64faddf126693467c2a
       Path: Events\Default Work Unit\Play_WindChime
       maxAttenuation: 80
-      maxDuration: 12.175049
-      minDuration: 12.175049
+      maxDuration: 7.2650976
+      minDuration: 7.2650976
     - name: Play_WoodGrowingCrazy
       guid: eb10a3d7ad58434499cb022b4088ebbd
       id: 228010707
@@ -749,6 +834,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 5.6197076
       minDuration: 5.6197076
+    - name: Stop_Chime_Melody
+      guid: f70a8e7fbe0af4488d8ea42567168437
+      id: 184097815
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Stop_Chime_Melody
+        ObjectType: 3
+        guid: f70a8e7fbe0af4488d8ea42567168437
+      Path: Events\Default Work Unit\Stop_Chime_Melody
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Level2_GardenAmbience
       guid: dcecabfa5697a944986c4938ed67c745
       id: 1659483392
@@ -781,8 +883,8 @@ MonoBehaviour:
         guid: 49e78388a66280479917226bebec13c8
       Path: Events\Default Work Unit\Stop_Level2_GardenMusic
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Stop_Level2_NewGardenMusic
       guid: 5e2d22c7cef0b04c871931e6a9f0e7db
       id: 929452813
@@ -845,7 +947,7 @@ MonoBehaviour:
     ParentPath: Events\Level0
     guid: 241c5182ec754a49a8160c059dc386bb
     GuidInternal: 
-    m_lastTime: -8584915893277844369
+    m_lastTime: -8584913858364887233
     List:
     - name: Clock
       guid: c5896f696e0fc64da2826d1676e71274
@@ -885,8 +987,8 @@ MonoBehaviour:
         guid: 9084dd75288be6469e6cac232472baaf
       Path: Events\Level0\Tut_office\Play_CarpetFootStep
       maxAttenuation: 0
-      maxDuration: 0.25263542
-      minDuration: 0.16074052
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Clock_Tick
       guid: 2fc6118edda480479b2ff4a6a2064414
       id: 2797822332
