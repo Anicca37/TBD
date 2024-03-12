@@ -18149,9 +18149,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1851135175}
     - target: {fileID: 284465023931408010, guid: 9dcacb3360ef1384d89cb95ebcb077e0, type: 3}
+      propertyPath: vines.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 284465023931408010, guid: 9dcacb3360ef1384d89cb95ebcb077e0, type: 3}
       propertyPath: PauseMenuController
       value: 
       objectReference: {fileID: 946342972}
+    - target: {fileID: 284465023931408010, guid: 9dcacb3360ef1384d89cb95ebcb077e0, type: 3}
+      propertyPath: vines.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 284465023931408010, guid: 9dcacb3360ef1384d89cb95ebcb077e0, type: 3}
+      propertyPath: vineGrowthController
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3315971166203093636, guid: 9dcacb3360ef1384d89cb95ebcb077e0, type: 3}
       propertyPath: m_Name
       value: Clock

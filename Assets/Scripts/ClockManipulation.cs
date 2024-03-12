@@ -27,10 +27,13 @@ public class ClockManipulation : MonoBehaviour
     private bool isDay = true;
 
     public float interactRange = 10f;
+    public VineGrowthController vineGrowthController;
+
 
     // Start is called before the first frame update
     void Start()
     {
+    
         AkSoundEngine.PostEvent("Stop_Clock_Tick_Reverse", this.gameObject);
         AkSoundEngine.PostEvent("Stop_Clock_Tick", this.gameObject);
         AkSoundEngine.PostEvent("Play_Clock_Tick", this.gameObject);
@@ -220,12 +223,20 @@ public class ClockManipulation : MonoBehaviour
             }
         }
 
+        
         // check current scene
         string currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
         if (currentScene.Contains("Garden"))
         {
             GardenManager.Instance.CompletePuzzle("Clock");
         }
+
+        // Update the vine growth
+        if(vineGrowthController != null)
+        {
+            vineGrowthController.UpdateVineGrowth(rotationAmount);
+        }
+
     }
 
     public bool CheckClockSet(float minAngle, float maxAngle, string clockwise)
