@@ -9,9 +9,8 @@ public class EscapeMenuController : MonoBehaviour
     public GameObject menuOptionSelectedSprite;
 
     private bool isEscaped = false;
-    public GameObject Crosshair;
-    public GameObject HandGrab;
     private GameObject playerBody;
+    private ScreenController screenController;
 
     private enum MenuOption { Restart, Next, Menu };
     private MenuOption selectedOption;
@@ -19,15 +18,15 @@ public class EscapeMenuController : MonoBehaviour
     private void Start()
     {
         playerBody = GameObject.Find("Player");
+        screenController = GameObject.Find("ScreenManager").GetComponent<ScreenController>();
     }
 
     private void InitializeEscapeMenu()
     {
-        Crosshair.SetActive(false);
-        HandGrab.SetActive(false);
         // default selection
         selectedOption = MenuOption.Next;
         nextOptionSelectedSprite.SetActive(true);
+        screenController.DisableCursorIcon();
     }
 
     public bool isPlayerEscaped()
@@ -48,7 +47,7 @@ public class EscapeMenuController : MonoBehaviour
     {
         if (isEscaped)
         {
-            playerBody.GetComponent<playerMovement>().enabled = false;
+            screenController.LockGameControl(true);
             // handle input
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {

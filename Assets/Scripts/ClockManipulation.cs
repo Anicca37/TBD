@@ -15,13 +15,9 @@ public class ClockManipulation : MonoBehaviour
     private float rotationAmount = 0f;
     private Vector3 lastMousePosition;
 
-    [SerializeField] Texture2D cursor;
-
     public Material defaultMaterial;
     public Material highlightMaterial;
-    public GameObject defaultIcon;
-    public GameObject grabIcon;
-    public GameObject PauseMenuController;
+    private ScreenController screenController;
 
     public Light directionalLight;
     private bool isDay = true;
@@ -36,6 +32,7 @@ public class ClockManipulation : MonoBehaviour
         AkSoundEngine.PostEvent("Play_Clock_Tick", this.gameObject);
 
         currentCamera = mainCamera.GetComponent<Camera>();
+        screenController = GameObject.Find("ScreenManager").GetComponent<ScreenController>();
     }
 
     // Update is called once per frame
@@ -47,13 +44,16 @@ public class ClockManipulation : MonoBehaviour
     public void LockGameControl(bool highlight)
     {
         HighlightClockHands(highlight);
-        if (!PauseMenuController.GetComponent<PauseMenuController>().isGamePaused())
+        screenController.LockGameControl(highlight);
+        if (highlight)
         {
-            defaultIcon.SetActive(!highlight);
-            // grabIcon.SetActive(highlight);
+            screenController.DisableCursorIcon();
         }
-        LockPlayerMovement(highlight);
-        LockCameraRotation(highlight);
+        else
+        {
+            screenController.ResumeCursorIcon();
+        }
+        SwitchCamera(highlight);
     }
 
     void OnMouseDown()
@@ -127,24 +127,13 @@ public class ClockManipulation : MonoBehaviour
         return false;
     }
 
-    void EnableCursor(bool enable)
+    void SwitchCamera(bool lockRotation)
     {
-        Cursor.lockState = enable ? CursorLockMode.None : CursorLockMode.Locked;
-        Cursor.visible = enable;
-        // set Cursor style to Grab Cursor Texture from Texture folder
-        Cursor.SetCursor(!enable ? null : cursor, Vector2.zero, CursorMode.Auto);
-    }
+        // Enable cursor to drag the clock hand
+        screenController.EnableCursor(lockRotation);
 
-    void LockPlayerMovement(bool lockMovement)
-    {
-        playerBody.GetComponent<playerMovement>().enabled = !lockMovement;
-    }
-
-    void LockCameraRotation(bool lockRotation)
-    {
         mainCamera.SetActive(!lockRotation);
         clockCamera.SetActive(lockRotation);
-        EnableCursor(lockRotation);
         if (lockRotation)
         {
             currentCamera = clockCamera.GetComponent<Camera>();
@@ -256,5 +245,10 @@ public class ClockManipulation : MonoBehaviour
             }
         }
         return false;
+    }
+
+    public float GetRotationAmount()
+    {
+        return rotationAmount;
     }
 }

@@ -11,10 +11,9 @@ public class PauseMenuController : MonoBehaviour
     public GameObject menuOptionSelectedSprite;
 
     private bool isPaused = false;
-    public GameObject Crosshair;
-    public GameObject HandGrab;
     private GameObject playerBody;
     private EscapeMenuController escapeMenuController;
+    private ScreenController screenController;
 
     private enum MenuOption { Resume, Restart, Menu };
     private MenuOption selectedOption;
@@ -23,15 +22,15 @@ public class PauseMenuController : MonoBehaviour
     {
         playerBody = GameObject.Find("Player");
         escapeMenuController = GameObject.Find("EscapeMenuController").GetComponent<EscapeMenuController>();
+        screenController = GameObject.Find("ScreenManager").GetComponent<ScreenController>();
     }
 
     private void InitializePauseMenu()
     {
-        Crosshair.SetActive(false);
-        HandGrab.SetActive(false);
         // default selection
         selectedOption = MenuOption.Resume;
         resumeOptionSelectedSprite.SetActive(true);
+        screenController.DisableCursorIcon();
     }
 
     public bool isGamePaused()
@@ -48,10 +47,7 @@ public class PauseMenuController : MonoBehaviour
         }
         if (isPaused)
         {
-            playerBody.GetComponent<playerMovement>().enabled = false;
-            playerBody.GetComponent<playerPickup>().DropObject();
-            Crosshair.SetActive(false);
-            HandGrab.SetActive(false);
+            screenController.LockGameControl(true);
             // handle input
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
@@ -119,8 +115,8 @@ public class PauseMenuController : MonoBehaviour
             case MenuOption.Resume:
                 isPaused = false;
                 resumeOptionSelectedSprite.SetActive(false);
-                Crosshair.SetActive(true);
-                playerBody.GetComponent<playerMovement>().enabled = true;
+                screenController.LockGameControl(false);
+                screenController.ResumeCursorIcon();
                 break;
             case MenuOption.Restart:
                 if (SceneManager.GetActiveScene().name.Contains("Garden"))
