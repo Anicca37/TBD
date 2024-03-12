@@ -2,11 +2,11 @@
 <PlatformInfo>
 	<Platform Name="Windows" BasePlatform="Windows" Generator="2023.1.1.8417"/>
 	<RootPaths>
-		<ProjectRoot>../../../../../../../../TruamaWwise</ProjectRoot>
-		<SourceFilesRoot>../../../../../../../../TruamaWwise/.cache/Windows</SourceFilesRoot>
+		<ProjectRoot>H:/NVSWork/Gmae Audio/TruamaWwise</ProjectRoot>
+		<SourceFilesRoot>H:/NVSWork/Gmae Audio/TruamaWwise/.cache/Windows</SourceFilesRoot>
 		<SoundBanksRoot>.</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>../../../../../../../../TruamaWwise/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>H:/NVSWork/Gmae Audio/TruamaWwise/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DefaultAlign>16</DefaultAlign>
 	<Settings>
@@ -28,5 +28,5 @@
 		<PrintObjectGuid>false</PrintObjectGuid>
 		<PrintObjectPath>false</PrintObjectPath>
 	</Settings>
-	<FileHash>{719D52F4-73F2-F345-945F-9A6C188CBC1F}</FileHash>
+	<FileHash>{95F9DC31-8246-7B7D-C7D8-C87F81644254}</FileHash>
 </PlatformInfo>

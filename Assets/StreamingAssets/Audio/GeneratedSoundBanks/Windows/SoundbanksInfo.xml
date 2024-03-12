@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<RootPaths>
-		<ProjectRoot>../../../../../../../../TruamaWwise</ProjectRoot>
-		<SourceFilesRoot>../../../../../../../../TruamaWwise/.cache/Windows</SourceFilesRoot>
+		<ProjectRoot>H:/NVSWork/Gmae Audio/TruamaWwise</ProjectRoot>
+		<SourceFilesRoot>H:/NVSWork/Gmae Audio/TruamaWwise/.cache/Windows</SourceFilesRoot>
 		<SoundBanksRoot>.</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>../../../../../../../../TruamaWwise/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>H:/NVSWork/Gmae Audio/TruamaWwise/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
@@ -162,7 +162,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{F612C044-7569-CE62-3FE0-80B468BF91B4}">
+		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{8D8C34D8-1695-85AA-A9CA-4642FECDA385}">
 			<ShortName>Level2Garden</ShortName>
 			<Path>Level2Garden.bnk</Path>
 			<Media>
@@ -180,7 +180,7 @@
 				</File>
 				<File Id="83339973" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>94 - Wind Chimes Brass.M.wav</ShortName>
-					<CachePath>SFX/94 - Wind Chimes Brass.M_EB15088E.wem</CachePath>
+					<CachePath>SFX/94 - Wind Chimes Brass.M_D502F72F.wem</CachePath>
 				</File>
 				<File Id="88567209" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ChimeE.wav</ShortName>
@@ -308,7 +308,7 @@
 				</File>
 				<File Id="590005921" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Chime_Melody.wav</ShortName>
-					<CachePath>SFX/Chime_Melody_5613F60F.wem</CachePath>
+					<CachePath>SFX/Chime_Melody_C9CF10F6.wem</CachePath>
 				</File>
 				<File Id="591653612" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section2\mus_90bpm_Level2_Section2_Percussion.wav</ShortName>
@@ -412,7 +412,7 @@
 				</File>
 				<File Id="985095586" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Clock_Tick_Reverse.wav</ShortName>
-					<CachePath>SFX/Clock_Tick_Reverse_4D8DBF4E.wem</CachePath>
+					<CachePath>SFX/Clock_Tick_Reverse_61B65DE5.wem</CachePath>
 				</File>
 				<File Id="1015123158" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Garden_Ambience.wav</ShortName>
@@ -623,7 +623,7 @@
 				<Event Id="1663839887" Name="Stop_Wind_Blowing" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{E4A98045-2039-1E6D-E1E4-9FC29BCA4870}">
+		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{A6B13D2B-6FBE-090A-1485-FF386AC51D3E}">
 			<ShortName>Level0</ShortName>
 			<Path>Level0.bnk</Path>
 			<Media>
@@ -665,7 +665,7 @@
 				</File>
 				<File Id="985095586" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Clock_Tick_Reverse.wav</ShortName>
-					<CachePath>SFX/Clock_Tick_Reverse_4D8DBF4E.wem</CachePath>
+					<CachePath>SFX/Clock_Tick_Reverse_61B65DE5.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -713,5 +713,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{AC18AA2A-B56D-0ED0-685A-264DCE5EDE33}</FileHash>
+	<FileHash>{3DEC7D40-8613-57F8-3AD8-255C242A0E4E}</FileHash>
 </SoundBanksInfo>
