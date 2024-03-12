@@ -27,10 +27,16 @@ public class ClockManipulation : MonoBehaviour
     private bool isDay = true;
 
     public float interactRange = 10f;
+    public List<GameObject> vines;
+    private Dictionary<GameObject, Vector3> originalVineScales = new Dictionary<GameObject, Vector3>();
 
     // Start is called before the first frame update
     void Start()
     {
+        foreach (var vine in vines)
+        {
+            originalVineScales[vine] = vine.transform.localScale;
+        }
         AkSoundEngine.PostEvent("Stop_Clock_Tick_Reverse", this.gameObject);
         AkSoundEngine.PostEvent("Stop_Clock_Tick", this.gameObject);
         AkSoundEngine.PostEvent("Play_Clock_Tick", this.gameObject);
@@ -220,12 +226,25 @@ public class ClockManipulation : MonoBehaviour
             }
         }
 
+        
         // check current scene
         string currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
         if (currentScene.Contains("Garden"))
         {
             GardenManager.Instance.CompletePuzzle("Clock");
         }
+
+        // Calculate growth based on clock rotation
+        float rotationDegrees = rotationAmount % 360;
+        float growthFactor = Mathf.Clamp(rotationDegrees / 360f, 0f, 1f); // Ensure the growth factor is between 0 and 1
+
+        foreach (var vine in vines)
+        {
+            Vector3 originalScale = originalVineScales[vine];
+            // Apply uniform growth in all dimensions based on the growthFactor
+            vine.transform.localScale = originalScale * (growthFactor+1);
+        }
+
     }
 
     public bool CheckClockSet(float minAngle, float maxAngle, string clockwise)
