@@ -13,18 +13,29 @@ public class VineGrowthController : MonoBehaviour
         // Initialize the vines with a scale of 0 (invisible)
         foreach (var vine in vines)
         {
-            vine.transform.localScale = Vector3.zero;
-            originalVineScales[vine] = maxScale;
+            // vine.transform.localScale = Vector3.zero;
+            // originalVineScales[vine] = maxScale;
+            originalVineScales[vine] = new Vector3(vine.transform.position.x, 13f, vine.transform.position.z);
+            vine.transform.position = new Vector3(vine.transform.position.x, 13f, vine.transform.position.z);
         }
     }
 
     // Call this method to update the vines' growth based on the clock's rotation
     public void UpdateVineGrowth(float rotationAmount)
     {
-        float growthFactor = Mathf.Clamp((Mathf.Abs(rotationAmount) % 360) / 360f, 0f, 1f);
+        if (rotationAmount > 0.5f)
+        {
+            return;
+        }
+        float growthFactor = 1f + Mathf.Clamp((Mathf.Abs(rotationAmount) % 360) / 360f, 0f, 1f);
+        if (growthFactor > 1.6f)
+        {
+            return;
+        }
         foreach (var vine in vines)
         {
-            vine.transform.localScale = Vector3.Lerp(Vector3.zero, originalVineScales[vine], growthFactor);
+            // change vine position.y based on growth factor
+            vine.transform.position = new Vector3(vine.transform.position.x, growthFactor * originalVineScales[vine].y, vine.transform.position.z);
         }
     }
 }
