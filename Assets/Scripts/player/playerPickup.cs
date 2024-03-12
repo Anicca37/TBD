@@ -56,6 +56,16 @@ public class playerPickup : MonoBehaviour
                 currentPickup.transform.parent = attachPoint;
                 // currentPickup.transform.localPosition = Vector3.zero;
                 // currentPickup.transform.localRotation = Quaternion.identity;
+
+                if (currentPickup.name.Contains("flower"))
+                {
+                    AkSoundEngine.PostEvent("Play_FlowerPickUp", this.gameObject);
+                }
+                else if (currentPickup.name.Contains("Chair"))
+                {
+                    AkSoundEngine.PostEvent("Play_TablePickUp", this.gameObject);
+                }              
+        
             }
         }
     }
@@ -76,7 +86,12 @@ public class playerPickup : MonoBehaviour
             currentPickupRb.isKinematic = false;
         }
 
+        if (currentPickup.name.Contains("Chair"))
+        {
+            AkSoundEngine.PostEvent("Play_TableDrop", this.gameObject);
+        }
         // Reset the current pickup variable
         currentPickup = null;
+        
     }
 }

@@ -48,11 +48,15 @@ public class ColorMatch : MonoBehaviour
 
         Vector3 newPosition = new Vector3(transform.position.x, transform.position.y + yOffset, transform.position.z);
         flower.transform.position = newPosition;
+
+        //play sound
+        AkSoundEngine.PostEvent("Play_FlowerPlant", this.gameObject);
     }
 
     void TriggerWindEffect()
     {
         Instantiate(windEffectPrefab, transform.position, Quaternion.identity);
+        AkSoundEngine.PostEvent("Play_FlowerWindBlow", this.gameObject);
     }
 
     void CheckAllFlowersMatched()
@@ -61,6 +65,12 @@ public class ColorMatch : MonoBehaviour
         {
             GardenManager.Instance.CompletePuzzle("Floral");
             windParticleSystem.Play();
+
+            //play sound
+            GameObject TheWind = GameObject.Find("wind");
+            AkSoundEngine.PostEvent("Play_Wind_Blowing", TheWind.gameObject);
+            GameObject TheChimes = GameObject.Find("Wind Chime");
+            AkSoundEngine.PostEvent("Play_WindChime", TheChimes.gameObject);
         }
     }
 

@@ -78,18 +78,43 @@ public class windChime : MonoBehaviour
         }
         Debug.Log($"curr chime: {chimeID}");
         Debug.Log($"wind direction: {direction}");
+
+        // play sound
+        AkSoundEngine.PostEvent("Play_ChimeD", this.gameObject);
     }
 
     void TriggerBirdsAndGrowPlants()
     {
         birdsParticleSystem.Play(); // bird flock
+        StartCoroutine(PlayBirdSoundMultipleTimes());
         Invoke("GrowTreesAfterBirds", birdsParticleSystem.main.duration); // delay tree growth after birds
-        Invoke("ResetGarden", 15f); // reset after 15sec
+        Invoke("RemoveTreesAfterGrowth", 15f); // reset after 15sec
+        // Invoke("ResetGarden", 8f); // reset after 8sec
+
     }
+
+    IEnumerator PlayBirdSoundMultipleTimes()
+    {
+        float duration = 5.0f; // Duration in seconds after which the sound should stop
+        float startTime = Time.time; // Record the start time
+
+        // play sound
+        while (Time.time - startTime < duration)
+        {
+            AkSoundEngine.PostEvent("Play_BirdsCrazy", this.gameObject);
+            yield return new WaitForSeconds(0.1f);
+        }
+    }
+
 
     void GrowTreesAfterBirds()
     {
         treeGrowthController.GrowTreesAtMainPoints();
+    }
+
+    void RemoveTreesAfterGrowth()
+    {
+        treeGrowthController.RemoveTreesAfterGrowth();
     }
 
     void ResetGarden()
