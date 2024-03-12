@@ -27,8 +27,6 @@ public class ClockManipulation : MonoBehaviour
     private bool isDay = true;
 
     public float interactRange = 10f;
-    public VineGrowthController vineGrowthController;
-
 
     // Start is called before the first frame update
     void Start()
@@ -230,13 +228,11 @@ public class ClockManipulation : MonoBehaviour
         {
             GardenManager.Instance.CompletePuzzle("Clock");
         }
+    }
 
-        // Update the vine growth
-        if(vineGrowthController != null)
-        {
-            vineGrowthController.UpdateVineGrowth(rotationAmount);
-        }
-
+    public float GetRotationAmount()
+    {
+        return rotationAmount;
     }
 
     public bool CheckClockSet(float minAngle, float maxAngle, string clockwise)

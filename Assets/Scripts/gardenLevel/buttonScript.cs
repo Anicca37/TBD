@@ -7,7 +7,7 @@ public class buttonScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     public GardenManager GardenManager;
@@ -32,7 +32,8 @@ public class buttonScript : MonoBehaviour
                         GardenManager.CompletePuzzle("Scales");
 
                         //play sound
-                        AkSoundEngine.PostEvent("Play_Button", this.gameObject);
+                        // TODO: switch to bird chirp
+                        AkSoundEngine.PostEvent("Play_Birds", this.gameObject);
                     }
                 }
             }
