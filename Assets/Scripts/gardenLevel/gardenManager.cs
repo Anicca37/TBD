@@ -51,7 +51,7 @@ public class GardenManager : MonoBehaviour
             VenusFlytrap.SetActive(false);
 
             //Play BGM
-            AkSoundEngine.PostEvent("Play_Level2_GardenMusic", this.gameObject);
+            AkSoundEngine.PostEvent("Play_Level2_NewGardenMusic", this.gameObject);
             AkSoundEngine.PostEvent("Stop_Clock_Tick_Reverse", ClockController.gameObject);
             GameObject Fountain = GameObject.Find("Fountain");
             AkSoundEngine.PostEvent("Play_Waterflow", Fountain.gameObject);
@@ -191,7 +191,7 @@ public class GardenManager : MonoBehaviour
         //     //play sound   
         //     GameObject Statue = GameObject.Find("Statue");
         //     AkSoundEngine.PostEvent("Play_Statue_Loud", Statue.gameObject);
-        //     AkSoundEngine.PostEvent("Stop_Level2_GardenMusic", this.gameObject);
+        //     AkSoundEngine.PostEvent("Stop_Level2_NewGardenMusic", this.gameObject);
         //     AkSoundEngine.PostEvent("Stop_Clock_Tick", ClockController.gameObject);
         //     AkSoundEngine.PostEvent("Stop_Clock_Tick_Reverse", ClockController.gameObject);
         //     GameObject Fountain = GameObject.Find("Fountain");
@@ -316,7 +316,7 @@ public class GardenManager : MonoBehaviour
         ColorMatch.ResetMatchedFlowersCount();
 
         //Stop BGM
-        AkSoundEngine.PostEvent("Stop_Level2_GardenMusic", this.gameObject);
+        AkSoundEngine.PostEvent("Stop_Level2_NewGardenMusic", this.gameObject);
         AkSoundEngine.PostEvent("Stop_Clock_Tick", ClockController.gameObject);
         AkSoundEngine.PostEvent("Stop_Clock_Tick_Reverse", ClockController.gameObject);
 
@@ -324,7 +324,7 @@ public class GardenManager : MonoBehaviour
         AkSoundEngine.PostEvent("Stop_Waterflow", Fountain.gameObject);
         GameObject TheWind = GameObject.Find("wind");
         AkSoundEngine.PostEvent("Stop_Wind_Blowing", TheWind.gameObject);
-        // AkSoundEngine.ExecuteActionOnEvent("Stop_Level2_GardenMusic", AkActionOnEventType.AkActionOnEventType_Stop);
+        // AkSoundEngine.ExecuteActionOnEvent("Stop_Level2_NewGardenMusic", AkActionOnEventType.AkActionOnEventType_Stop);
         GameObject GardenAmbience = GameObject.Find("GardenAmbience");
         AkSoundEngine.PostEvent("Stop_Level2_GardenAmbience", GardenAmbience.gameObject);
 

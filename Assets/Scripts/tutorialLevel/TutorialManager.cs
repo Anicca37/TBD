@@ -33,7 +33,7 @@ public class TutorialManager : MonoBehaviour
             }
             SetSpiral(false);
 
-            AkSoundEngine.PostEvent("Play_Level0Music", this.gameObject);                       
+            //AkSoundEngine.PostEvent("Play_Level0Music", this.gameObject);                       
         }
         else if (Instance != this)
         {
