@@ -14,6 +14,7 @@ public class windChime : MonoBehaviour
 
     void OnMouseDown()
     {
+
         // check if the floral puzzle is matched
         // if (!true)
         if (GardenManager.Instance.IsFloralMatched())
@@ -58,15 +59,19 @@ public class windChime : MonoBehaviour
         switch (chimeID)
         {
             case 1:
+                // TODO: add sound
                 direction = Vector3.forward; // North
                 break;
             case 2:
+                // TODO: add sound
                 direction = Vector3.back; // South
                 break;
             case 3:
+                // TODO: add sound
                 direction = Vector3.right; // East
                 break;
             case 4:
+                // TODO: add sound
                 direction = Vector3.left; // West
                 break;
         }
