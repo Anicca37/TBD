@@ -8,6 +8,7 @@ public class windChime : MonoBehaviour
     public ParticleSystem birdsParticleSystem;
     public TreeGrowthController treeGrowthController;
     public Transform windDirectionIndicator;
+    public SequenceChecker sequenceChecker;
 
     public int chimeID;
 
@@ -20,8 +21,11 @@ public class windChime : MonoBehaviour
         {
             // Debug.Log($"curr index: {currentSequenceIndex}");
             // Debug.Log($"{chimeID} = {targetSequence[currentSequenceIndex]} is {chimeID == targetSequence[currentSequenceIndex]}");
-            ChangeWindDirection(chimeID);
-            FindObjectOfType<SequenceChecker>().ChimeClicked(chimeID);
+            if (!sequenceChecker.IsCorrectSequencePlayed())
+            {
+                ChangeWindDirection(chimeID);
+                FindObjectOfType<SequenceChecker>().ChimeClicked(chimeID);
+            }
         }
         else
         {
@@ -39,7 +43,7 @@ public class windChime : MonoBehaviour
             case 1:
                 // TODO: add sound
                 AkSoundEngine.PostEvent("Play_ChimeG", this.gameObject);
-                direction = Vector3.forward; // North
+                direction = Vector3.forward; // North             
                 break;
             case 2:
                 // TODO: add sound

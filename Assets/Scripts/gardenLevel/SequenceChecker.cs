@@ -41,7 +41,7 @@ public class SequenceChecker : MonoBehaviour
                 Invoke("playCorrectSound", 1f); // play correct after 0.5s;
             }
             
-            Invoke("makePlayedFalse", 10f);
+            Invoke("makePlayedFalse", 5f);
         }
     }
     public bool IsCorrectSequencePlayed()

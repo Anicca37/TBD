@@ -5264,6 +5264,7 @@ MonoBehaviour:
   birdsParticleSystem: {fileID: 1984765165}
   treeGrowthController: {fileID: 1725256079}
   windDirectionIndicator: {fileID: 1831152972}
+  sequenceChecker: {fileID: 1681733950}
   chimeID: 3
 --- !u!136 &334206621
 CapsuleCollider:
@@ -11642,6 +11643,7 @@ MonoBehaviour:
   birdsParticleSystem: {fileID: 1984765165}
   treeGrowthController: {fileID: 1725256079}
   windDirectionIndicator: {fileID: 1831152972}
+  sequenceChecker: {fileID: 1681733950}
   chimeID: 2
 --- !u!136 &420280421
 CapsuleCollider:
@@ -18103,6 +18105,7 @@ MonoBehaviour:
   birdsParticleSystem: {fileID: 1984765165}
   treeGrowthController: {fileID: 1725256079}
   windDirectionIndicator: {fileID: 1831152972}
+  sequenceChecker: {fileID: 0}
   chimeID: 2
 --- !u!1001 &926753974
 PrefabInstance:
@@ -24499,6 +24502,7 @@ MonoBehaviour:
   birdsParticleSystem: {fileID: 1984765165}
   treeGrowthController: {fileID: 1725256079}
   windDirectionIndicator: {fileID: 1831152972}
+  sequenceChecker: {fileID: 1681733950}
   chimeID: 1
 --- !u!136 &1367890774
 CapsuleCollider:
@@ -33818,6 +33822,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windController: {fileID: 1094483341}
+  ifCorrectSoundPlayed: 0
 --- !u!4 &1681733951
 Transform:
   m_ObjectHideFlags: 0
@@ -36417,6 +36422,7 @@ MonoBehaviour:
   birdsParticleSystem: {fileID: 1984765165}
   treeGrowthController: {fileID: 1725256079}
   windDirectionIndicator: {fileID: 1831152972}
+  sequenceChecker: {fileID: 0}
   chimeID: 3
 --- !u!1 &1901873306
 GameObject:
@@ -37292,6 +37298,7 @@ MonoBehaviour:
   birdsParticleSystem: {fileID: 1984765165}
   treeGrowthController: {fileID: 1725256079}
   windDirectionIndicator: {fileID: 1831152972}
+  sequenceChecker: {fileID: 0}
   chimeID: 4
 --- !u!1001 &1938481925
 PrefabInstance:
@@ -42408,6 +42415,7 @@ MonoBehaviour:
   birdsParticleSystem: {fileID: 1984765165}
   treeGrowthController: {fileID: 1725256079}
   windDirectionIndicator: {fileID: 1831152972}
+  sequenceChecker: {fileID: 0}
   chimeID: 1
 --- !u!1 &1989375920 stripped
 GameObject:
@@ -43200,6 +43208,7 @@ MonoBehaviour:
   birdsParticleSystem: {fileID: 1984765165}
   treeGrowthController: {fileID: 1725256079}
   windDirectionIndicator: {fileID: 1831152972}
+  sequenceChecker: {fileID: 1681733950}
   chimeID: 4
 --- !u!136 &2043570714
 CapsuleCollider:
