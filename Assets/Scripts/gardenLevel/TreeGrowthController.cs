@@ -28,7 +28,7 @@ public class TreeGrowthController : MonoBehaviour
             //play sound
             AkSoundEngine.PostEvent("Play_WoodGrowingCrazy", this.gameObject);
         }
-        Invoke("ResetWoodSound", 12f);
+        Invoke("ResetWoodSound", 8f);
 
         foreach (Vector3 mainPoint in growthPoints)
         {
