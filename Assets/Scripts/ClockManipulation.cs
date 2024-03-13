@@ -93,6 +93,11 @@ public class ClockManipulation : MonoBehaviour
         return SceneManager.GetActiveScene().name.Contains("Demo");
     }
 
+    bool isGardenScene()
+    {
+        return SceneManager.GetActiveScene().name.Contains("Garden");
+    }
+
     bool isOnChair()
     {
         RaycastHit hit;
@@ -114,6 +119,15 @@ public class ClockManipulation : MonoBehaviour
         if (isDemoScene() && !isOnChair())
         {
             return false;
+        }
+
+        if (isGardenScene())
+        {
+            GardenManager.Instance.CompletePuzzle("Clock");
+            if (!GardenManager.Instance.IsScaleBalanced())
+            {
+                return false;
+            }
         }
 
         RaycastHit hit;
@@ -219,14 +233,6 @@ public class ClockManipulation : MonoBehaviour
             {
                 directionalLight.color = Color.Lerp(Color.white, Color.black, timeOfDay * 2);
             }
-        }
-
-        
-        // check current scene
-        string currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
-        if (currentScene.Contains("Garden"))
-        {
-            GardenManager.Instance.CompletePuzzle("Clock");
         }
     }
 

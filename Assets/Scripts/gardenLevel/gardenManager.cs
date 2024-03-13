@@ -345,4 +345,8 @@ public class GardenManager : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 
+    public bool IsScaleBalanced()
+    {
+        return isScaleBalanced;
+    }
 }
