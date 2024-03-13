@@ -200,24 +200,6 @@ public class GardenManager : MonoBehaviour
             Debug.Log("Shockwave is on cooldown.");
             //StatueLoudPlayed = false;
         }
-
-
-        // Debug.Log("Statues sing loudly.");
-        
-        
-        // if (StatueLoudPlayed == false)
-        // {
-        //     //play sound   
-        //     GameObject Statue = GameObject.Find("Statue");
-        //     AkSoundEngine.PostEvent("Play_Statue_Loud", Statue.gameObject);
-        //     AkSoundEngine.PostEvent("Stop_Level2_NewGardenMusic", this.gameObject);
-        //     AkSoundEngine.PostEvent("Stop_Clock_Tick", ClockController.gameObject);
-        //     AkSoundEngine.PostEvent("Stop_Clock_Tick_Reverse", ClockController.gameObject);
-        //     GameObject Fountain = GameObject.Find("Fountain");
-        //     AkSoundEngine.PostEvent("Stop_Waterflow", Fountain.gameObject);
-        //     Invoke("ResetPuzzles", 1f);
-        // }
-        // StatueLoudPlayed = true;
     }
 
 
