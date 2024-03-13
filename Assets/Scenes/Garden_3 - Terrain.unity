@@ -19992,6 +19992,7 @@ MonoBehaviour:
   fountainScript: {fileID: 971958512}
   attachPinecone: {fileID: 1167717230}
   scaleBeam: {fileID: 412049688}
+  scaleAnimator: {fileID: 1792006888}
   shockwaveCooldown: 1
   isReset: 0
 --- !u!4 &1070179845
