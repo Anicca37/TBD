@@ -6,7 +6,7 @@ public class TreeGrowthController : MonoBehaviour
 {
     public GameObject treePrefab;
     public List<Vector3> growthPoints;
-    public float growthDuration = 3f; // Seconds over which each tree will grow and shrink
+    public float growthDuration = 2f; // Seconds over which each tree will grow and shrink
     public float clusterRadius = 2f; // Radius around each growth point to spawn trees
     public LayerMask groundLayer; // Assign in the inspector to match your terrain's layer
     private List<GameObject> grownTrees = new List<GameObject>(); // Track all grown trees

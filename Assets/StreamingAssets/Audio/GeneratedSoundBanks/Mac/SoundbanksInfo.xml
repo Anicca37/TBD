@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<RootPaths>
-		<ProjectRoot>H:/NVSWork/Gmae Audio/TruamaWwise</ProjectRoot>
-		<SourceFilesRoot>H:/NVSWork/Gmae Audio/TruamaWwise/.cache/Mac</SourceFilesRoot>
+		<ProjectRoot>../../../../../../../../TruamaWwise</ProjectRoot>
+		<SourceFilesRoot>../../../../../../../../TruamaWwise/.cache/Mac</SourceFilesRoot>
 		<SoundBanksRoot>.</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>H:/NVSWork/Gmae Audio/TruamaWwise/GeneratedSoundBanks/Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>../../../../../../../../TruamaWwise/GeneratedSoundBanks/Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
@@ -162,7 +162,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{8D8C34D8-1695-85AA-A9CA-4642FECDA385}">
+		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{BDF53150-348D-DDA8-7C6C-81FF8FC78F18}">
 			<ShortName>Level2Garden</ShortName>
 			<Path>Level2Garden.bnk</Path>
 			<Media>
@@ -713,5 +713,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D60D0EE3-7674-3174-EDA0-113E033C3308}</FileHash>
+	<FileHash>{4ADCA82E-D4C3-7BC8-1CB7-3AA999610D7D}</FileHash>
 </SoundBanksInfo>

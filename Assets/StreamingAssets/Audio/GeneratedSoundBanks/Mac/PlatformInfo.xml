@@ -2,11 +2,11 @@
 <PlatformInfo>
 	<Platform Name="Mac" BasePlatform="Mac" Generator="2023.1.1.8417"/>
 	<RootPaths>
-		<ProjectRoot>H:/NVSWork/Gmae Audio/TruamaWwise</ProjectRoot>
-		<SourceFilesRoot>H:/NVSWork/Gmae Audio/TruamaWwise/.cache/Mac</SourceFilesRoot>
+		<ProjectRoot>../../../../../../../../TruamaWwise</ProjectRoot>
+		<SourceFilesRoot>../../../../../../../../TruamaWwise/.cache/Mac</SourceFilesRoot>
 		<SoundBanksRoot>.</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>H:/NVSWork/Gmae Audio/TruamaWwise/GeneratedSoundBanks/Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>../../../../../../../../TruamaWwise/GeneratedSoundBanks/Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DefaultAlign>16</DefaultAlign>
 	<Settings>
@@ -28,5 +28,5 @@
 		<PrintObjectGuid>false</PrintObjectGuid>
 		<PrintObjectPath>false</PrintObjectPath>
 	</Settings>
-	<FileHash>{8A978CAA-31F2-38DE-D788-7F04EBCC4F43}</FileHash>
+	<FileHash>{BAD3CD06-7ADE-AE1A-14CB-EC8313A695AE}</FileHash>
 </PlatformInfo>
