@@ -36,6 +36,7 @@ public class GardenManager : MonoBehaviour
 
     public GameObject scaleBeam;
 
+    [SerializeField] private Animator scaleAnimator;
 
     public float shockwaveCooldown = 1f; // Cooldown in seconds
     private float lastShockwaveTime = -Mathf.Infinity; // Initialize with a value that allows immediate use
@@ -142,8 +143,10 @@ public class GardenManager : MonoBehaviour
     {
         // scaleBeam.transform.eulerAngles = new Vector3(0, 0, 0);
         //balance scale animation????
+        scaleAnimator.SetTrigger("Balance");
         isScaleBalanced = true;
         Debug.Log("Scales balanced.");
+        scaleAnimator.SetTrigger("Balanced Idle");
     }
 
     void DirectWindToWindChimes()

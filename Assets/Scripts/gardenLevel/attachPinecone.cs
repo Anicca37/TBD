@@ -41,7 +41,12 @@ public class AttachPineconeToScale : MonoBehaviour
         {
             playerPickupScript.DropObject(); // Custom method to drop the object
         }
+        Invoke("CompleteScalePuzzle", 0f);
     }
 
+    void CompleteScalePuzzle()
+    {
+        GardenManager.Instance.CompletePuzzle("Scales");
+    }
     
 }
