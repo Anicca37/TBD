@@ -11,6 +11,8 @@ public class TreeGrowthController : MonoBehaviour
     public LayerMask groundLayer; // Assign in the inspector to match your terrain's layer
     private List<GameObject> grownTrees = new List<GameObject>(); // Track all grown trees
 
+    private bool isWoodSoundPlayed = false;
+
     void Start()
     {
         // Example call to grow trees at start, can be triggered by any event
@@ -19,13 +21,24 @@ public class TreeGrowthController : MonoBehaviour
 
     public void GrowTreesAtMainPoints()
     {
-        //play sound
-        AkSoundEngine.PostEvent("Play_WoodGrowingCrazy", this.gameObject);
+        
+        if (isWoodSoundPlayed == false)
+        {
+            isWoodSoundPlayed = true;
+            //play sound
+            AkSoundEngine.PostEvent("Play_WoodGrowingCrazy", this.gameObject);
+        }
+        Invoke("ResetWoodSound", 12f);
 
         foreach (Vector3 mainPoint in growthPoints)
         {
             GrowClusterAroundPoint(mainPoint);
         }
+    }
+
+    private void ResetWoodSound()
+    {
+        isWoodSoundPlayed = false;
     }
 
     void GrowClusterAroundPoint(Vector3 mainPoint)
