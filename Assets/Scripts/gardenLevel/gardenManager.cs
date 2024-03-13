@@ -210,14 +210,8 @@ public class GardenManager : MonoBehaviour
     {
         float shockwaveDuration = 1f; // Duration of the shockwave effect
         float startTime = Time.time; // Record the start time
-        Vector3 originalPosition = playerTransform.position; // Record the player's original position
-        // Calculate the direction to push the player upwards and a little bit backwards
-        Vector3 upwardDirection = Vector3.up;
-        Vector3 backwardDirection = -(playerTransform.position - shockwaveItem.position).normalized;
-        Vector3 combinedDirection = upwardDirection + backwardDirection * 0.2f; // Adjust the 0.2f to control the backward force
-        combinedDirection.Normalize(); // Ensure the combined direction is a unit vector
-        float shockwaveUpwardSpeed = 20.0f; // Speed at which the player is pushed upward
-        float shockwaveBackwardSpeed = -40.0f; // Speed at which the player is pushed backward
+        float shockwaveUpwardSpeed = 10.0f; // Speed at which the player is pushed upward
+        float shockwaveBackwardSpeed = -20.0f; // Speed at which the player is pushed backward
 
         //play sound
         if (StatueLoudPlayed == false)
@@ -229,11 +223,11 @@ public class GardenManager : MonoBehaviour
 
         while (Time.time < startTime + shockwaveDuration)
         {
-            // Calculate new position based on direction and speed
-            Vector3 newPosition = playerTransform.position + upwardDirection * shockwaveUpwardSpeed * Time.deltaTime + backwardDirection * shockwaveBackwardSpeed * Time.deltaTime;
-            // Optionally, you can include a check to ensure the player won't move through walls or other obstacles
-
-            playerTransform.position = newPosition; // Move the player to the new position
+            // move the player with character controller
+            CharacterController controller = playerTransform.GetComponent<CharacterController>();
+            Vector3 moveDirection = playerTransform.forward * shockwaveBackwardSpeed + Vector3.up * shockwaveUpwardSpeed;
+            controller.Move(moveDirection * Time.deltaTime);
+            
             yield return null; // Wait until the next frame
         }
 
