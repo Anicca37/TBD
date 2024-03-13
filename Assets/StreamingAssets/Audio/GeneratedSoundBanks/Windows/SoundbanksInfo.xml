@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<RootPaths>
-		<ProjectRoot>../../../../../../../../TruamaWwise</ProjectRoot>
-		<SourceFilesRoot>../../../../../../../../TruamaWwise/.cache/Windows</SourceFilesRoot>
+		<ProjectRoot>H:/NVSWork/Gmae Audio/TruamaWwise</ProjectRoot>
+		<SourceFilesRoot>H:/NVSWork/Gmae Audio/TruamaWwise/.cache/Windows</SourceFilesRoot>
 		<SoundBanksRoot>.</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>../../../../../../../../TruamaWwise/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>H:/NVSWork/Gmae Audio/TruamaWwise/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
@@ -162,7 +162,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{BDF53150-348D-DDA8-7C6C-81FF8FC78F18}">
+		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{0DE817D7-3798-5439-F2B5-832F115080B0}">
 			<ShortName>Level2Garden</ShortName>
 			<Path>Level2Garden.bnk</Path>
 			<Media>
@@ -623,7 +623,7 @@
 				<Event Id="1663839887" Name="Stop_Wind_Blowing" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{A6B13D2B-6FBE-090A-1485-FF386AC51D3E}">
+		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{08A09AFD-8346-F8E6-F864-DBE99C4F8F34}">
 			<ShortName>Level0</ShortName>
 			<Path>Level0.bnk</Path>
 			<Media>
@@ -679,12 +679,12 @@
 						<MediaRef Id="985095586"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2292458263" Name="Play_Door_Close" DurationType="OneShot" DurationMin="0.77166045" DurationMax="0.77166045">
+				<Event Id="2292458263" Name="Play_Door_Close" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.77166045" DurationMax="0.77166045">
 					<MediaRefs>
 						<MediaRef Id="36496989"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1660008929" Name="Play_Door_Open" DurationType="OneShot" DurationMin="0.92799664" DurationMax="0.92799664">
+				<Event Id="1660008929" Name="Play_Door_Open" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.92799664" DurationMax="0.92799664">
 					<MediaRefs>
 						<MediaRef Id="52226118"/>
 					</MediaRefs>
@@ -713,5 +713,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{80C52821-FF6F-7780-1C6C-16D8037C1E40}</FileHash>
+	<FileHash>{C51B5556-7FC1-0CBF-718D-E15380024F3F}</FileHash>
 </SoundBanksInfo>
