@@ -34,6 +34,7 @@ namespace AK
         static const AkUniqueID PLAY_LEVEL2_NEWGARDENMUSIC = 552396483U;
         static const AkUniqueID PLAY_PINECONEPICKUP = 3549239601U;
         static const AkUniqueID PLAY_PLAYEREATEN = 3659914468U;
+        static const AkUniqueID PLAY_SCALE_BALANCING = 2809285424U;
         static const AkUniqueID PLAY_STATUE_LOUD = 976664737U;
         static const AkUniqueID PLAY_TABLEDROP = 1525201045U;
         static const AkUniqueID PLAY_TABLEPICKUP = 3370429210U;

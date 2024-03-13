@@ -162,7 +162,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{F268F968-1B79-7C19-5648-DE6946A43BD9}">
+		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{49214646-806B-F3E2-BDBA-4FAD1B023F28}">
 			<ShortName>Level2Garden</ShortName>
 			<Path>Level2Garden.bnk</Path>
 			<Media>
@@ -378,6 +378,10 @@
 					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Intro\mus_90bpm_Level2_Intro_NoiseDown.wav</ShortName>
 					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Intro/mus_90bpm_Level2_Intro_NoiseDown_239921B3.wem</CachePath>
 				</File>
+				<File Id="863478286" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>10 - Squeak,Metal Move Si.M.wav</ShortName>
+					<CachePath>SFX/10 - Squeak,Metal Move Si.M_A4A07AAE.wem</CachePath>
+				</File>
 				<File Id="873760794" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PickUp_Pinecone_3.wav</ShortName>
 					<CachePath>SFX/PickUp_Pinecone_3_8E324C96.wem</CachePath>
@@ -429,7 +433,7 @@
 				</ShareSets>
 			</Plugins>
 			<Events>
-				<Event Id="3025897706" Name="Play_Birds" DurationType="OneShot" DurationMin="0.813375" DurationMax="1.3508126">
+				<Event Id="3025897706" Name="Play_Birds" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.813375" DurationMax="1.3508126">
 					<MediaRefs>
 						<MediaRef Id="141213406"/>
 						<MediaRef Id="217621770"/>
@@ -441,7 +445,7 @@
 						<MediaRef Id="928421190"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1125237609" Name="Play_BirdsCrazy" DurationType="OneShot" DurationMin="0.813375" DurationMax="1.3508126">
+				<Event Id="1125237609" Name="Play_BirdsCrazy" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.813375" DurationMax="1.3508126">
 					<MediaRefs>
 						<MediaRef Id="141213406"/>
 						<MediaRef Id="217621770"/>
@@ -453,7 +457,7 @@
 						<MediaRef Id="928421190"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3584090578" Name="Play_BirdWing" DurationType="OneShot" DurationMin="3.1929376" DurationMax="3.1929376">
+				<Event Id="3584090578" Name="Play_BirdWing" MaxAttenuation="100" DurationType="OneShot" DurationMin="3.1929376" DurationMax="3.1929376">
 					<MediaRefs>
 						<MediaRef Id="960283345"/>
 					</MediaRefs>
@@ -572,6 +576,11 @@
 				<Event Id="3659914468" Name="Play_PlayerEaten" DurationType="OneShot" DurationMin="0.45866665" DurationMax="0.45866665">
 					<MediaRefs>
 						<MediaRef Id="433162066"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2809285424" Name="Play_Scale_Balancing" MaxAttenuation="100" DurationType="OneShot" DurationMin="2.8929884" DurationMax="2.8929884">
+					<MediaRefs>
+						<MediaRef Id="863478286"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="976664737" Name="Play_Statue_Loud" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.75" DurationMax="1.75">
@@ -713,5 +722,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{73683559-E1D5-C82B-EA07-2D5EA5D0C15D}</FileHash>
+	<FileHash>{8F6180B3-24E8-3177-139A-3ACB11F04F7C}</FileHash>
 </SoundBanksInfo>

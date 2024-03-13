@@ -21,6 +21,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2759522926	Play_ChimeD			\Default Work Unit\Play_ChimeD	
 	2759522927	Play_ChimeE			\Default Work Unit\Play_ChimeE	
 	2797822332	Play_Clock_Tick			\Level0\Tut_office\Clock\Play_Clock_Tick	
+	2809285424	Play_Scale_Balancing			\Default Work Unit\Play_Scale_Balancing	
 	2897827502	Stop_Clock_Tick			\Level0\Tut_office\Clock\Stop_Clock_Tick	
 	2908863451	Play_WaterFlooding			\Default Work Unit\Play_WaterFlooding	
 	2955987680	Play_Win			\Default Work Unit\Play_Win	
@@ -95,6 +96,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	809920981	Flower_PickUp_09	H:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\Flower_PickUp_09_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Level2_Garden\Flower\FlowerPickUp\Flower_PickUp_09		13124
 	821236829	Bird03-002	H:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\Bird03-002_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Level2_Garden\Birds\Birds\Bird03-002		10519
 	862302749	mus_90bpm_Level2_Intro_NoiseDown	H:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\mus_90bpm_Level2\mus_90bpm_Level2_Intro\mus_90bpm_Level2_Intro_NoiseDown_239921B3.wem		\Interactive Music Hierarchy\Default Work Unit\Lv2_Garden\Level2_NewGardenMusic\mus_90bpm_Level2_Intro\mus_90bpm_Level2_Intro_NoiseDown		498778
+	863478286	Scale_Balancing	H:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\10 - Squeak,Metal Move Si.M_A4A07AAE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Level2_Garden\Scale\Scale_Balancing		25729
 	873760794	PickUp_Pinecone_3	H:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\PickUp_Pinecone_3_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Level2_Garden\PineconePickup\PickUp_Pinecone_3		10805
 	878842485	mus_90bpm_Level2_Tran_Percussion	H:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\mus_90bpm_Level2\mus_90bpm_Level2_Tran\mus_90bpm_Level2_Tran_Percussion_239921B3.wem		\Interactive Music Hierarchy\Default Work Unit\Lv2_Garden\Level2_NewGardenMusic\mus_90bpm_Level2_Tran\mus_90bpm_Level2_Tran_Percussion		1482683
 	898317160	mus_90bpm_Level2_Section2_MelodyCello	H:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\mus_90bpm_Level2\mus_90bpm_Level2_Section2\mus_90bpm_Level2_Section2_MelodyCello_239921B3.wem		\Interactive Music Hierarchy\Default Work Unit\Lv2_Garden\Level2_NewGardenMusic\mus_90bpm_Level2_Section2\mus_90bpm_Level2_Section2_MelodyCello		1661734

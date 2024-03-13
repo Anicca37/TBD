@@ -43,6 +43,8 @@ public class GardenManager : MonoBehaviour
     private bool StatueLoudPlayed = false;
     private bool isTrapActive = false;
     public bool isReset = false;
+    
+    private bool isScaleBalanceSoundPlayed = false;
 
 
     void Awake()
@@ -144,6 +146,14 @@ public class GardenManager : MonoBehaviour
         // scaleBeam.transform.eulerAngles = new Vector3(0, 0, 0);
         //balance scale animation????
         scaleAnimator.SetTrigger("Balance");
+        
+        if (isScaleBalanceSoundPlayed == false)
+        {
+            GameObject theScale = GameObject.Find("scale");
+            AkSoundEngine.PostEvent("Play_Scale_Balancing", theScale.gameObject);
+            isScaleBalanceSoundPlayed = true;
+        }
+
         isScaleBalanced = true;
         Debug.Log("Scales balanced.");
         scaleAnimator.SetTrigger("Balanced Idle");
