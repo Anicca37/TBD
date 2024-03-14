@@ -7,6 +7,8 @@ public class playerPickup : MonoBehaviour
 
     private GameObject currentPickup;
     private Rigidbody currentPickupRb;
+    public GameObject defaultIcon;
+    public GameObject grabIcon;
     public float pickupRange = 10f;
 
     void Update()
@@ -25,6 +27,12 @@ public class playerPickup : MonoBehaviour
         }
     }
 
+    void SwitchIcon(bool highlight)
+    {
+        defaultIcon.SetActive(!highlight);
+        grabIcon.SetActive(highlight);
+    }
+
     void PickUpObject()
     {
         // Raycast to detect pickupable objects
@@ -40,6 +48,7 @@ public class playerPickup : MonoBehaviour
                 currentPickupRb = currentPickup.GetComponent<Rigidbody>();
                 if (currentPickupRb != null)
                 {
+                    SwitchIcon(true);
                     currentPickupRb.isKinematic = true;
                 }
 
@@ -47,22 +56,45 @@ public class playerPickup : MonoBehaviour
                 currentPickup.transform.parent = attachPoint;
                 // currentPickup.transform.localPosition = Vector3.zero;
                 // currentPickup.transform.localRotation = Quaternion.identity;
+
+                if (currentPickup.name.Contains("flower"))
+                {
+                    AkSoundEngine.PostEvent("Play_FlowerPickUp", this.gameObject);
+                }
+                else if (currentPickup.name.Contains("Chair"))
+                {
+                    AkSoundEngine.PostEvent("Play_TablePickUp", this.gameObject);
+                }
+                else if (currentPickup.name.Contains("pinecone"))
+                {
+                    AkSoundEngine.PostEvent("Play_PineconePickup", this.gameObject);
+                }
             }
         }
     }
 
     public void DropObject()
     {
+        if (currentPickup == null)
+        {
+            return;
+        }
         // Detach the current pickup from the attachPoint
         currentPickup.transform.parent = null;
 
         // Re-enable physics for the dropped object
         if (currentPickupRb != null)
         {
+            SwitchIcon(false);
             currentPickupRb.isKinematic = false;
         }
 
+        if (currentPickup.name.Contains("Chair"))
+        {
+            AkSoundEngine.PostEvent("Play_TableDrop", this.gameObject);
+        }
         // Reset the current pickup variable
         currentPickup = null;
+        
     }
 }

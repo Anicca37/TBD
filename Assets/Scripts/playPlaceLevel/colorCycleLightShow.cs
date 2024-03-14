@@ -9,6 +9,7 @@ public class ColorCycleLightShow : MonoBehaviour
     public Light directionalLight; 
     public float duration = 5f; // How long the light show lasts
     public Color[] colors; // Colors to cycle through
+    private Coroutine lightShowCoroutine;
 
     void Awake()
     {
@@ -25,7 +26,7 @@ public class ColorCycleLightShow : MonoBehaviour
     
     public void StartLightShow()
     {
-        StartCoroutine(LightShowRoutine());
+        lightShowCoroutine = StartCoroutine(LightShowRoutine());
     }
 
     IEnumerator LightShowRoutine()
@@ -44,6 +45,16 @@ public class ColorCycleLightShow : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
 
             timer += Time.deltaTime;
+        }
+    }
+
+    public void StopLightShow()
+    {
+        if (lightShowCoroutine != null)
+        {
+            StopCoroutine(lightShowCoroutine);
+            lightShowCoroutine = null;
+            directionalLight.color = Color.white;
         }
     }
 }

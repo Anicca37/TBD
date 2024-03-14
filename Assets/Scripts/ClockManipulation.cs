@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ClockManipulation : MonoBehaviour
 {
@@ -11,9 +12,10 @@ public class ClockManipulation : MonoBehaviour
 
     public Transform[] clockHands;
     public Transform[] clockControllers;
-    public float defaultHeight = 4.45f;
     private float rotationAmount = 0f;
     private Vector3 lastMousePosition;
+
+    [SerializeField] Texture2D cursor;
 
     public Material defaultMaterial;
     public Material highlightMaterial;
@@ -29,6 +31,11 @@ public class ClockManipulation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+    
+        AkSoundEngine.PostEvent("Stop_Clock_Tick_Reverse", this.gameObject);
+        AkSoundEngine.PostEvent("Stop_Clock_Tick", this.gameObject);
+        AkSoundEngine.PostEvent("Play_Clock_Tick", this.gameObject);
+
         currentCamera = mainCamera.GetComponent<Camera>();
     }
 
@@ -38,13 +45,13 @@ public class ClockManipulation : MonoBehaviour
 
     }
 
-    void LockGameControl(bool highlight)
+    public void LockGameControl(bool highlight)
     {
         HighlightClockHands(highlight);
         if (!PauseMenuController.GetComponent<PauseMenuController>().isGamePaused())
         {
             defaultIcon.SetActive(!highlight);
-            grabIcon.SetActive(highlight);
+            // grabIcon.SetActive(highlight);
         }
         LockPlayerMovement(highlight);
         LockCameraRotation(highlight);
@@ -52,7 +59,7 @@ public class ClockManipulation : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (CheckInteractable(playerBody.transform.position.y))
+        if (CheckInteractable())
         {
             lastMousePosition = Input.mousePosition;
             LockGameControl(true);
@@ -63,18 +70,17 @@ public class ClockManipulation : MonoBehaviour
     {
         LockGameControl(false);
     }
-
+    
     void OnMouseDrag()
     {
-        if (CheckInteractable(playerBody.transform.position.y))
+        if (CheckInteractable())
         {
             Vector3 center = currentCamera.WorldToScreenPoint(clockControllers[0].position);
             float anglePrevious = Mathf.Atan2(center.x - lastMousePosition.x, lastMousePosition.y - center.y);
-            float mouseX = Input.GetAxis("Mouse X");
-            float mouseY = Input.GetAxis("Mouse Y");
-            float angleNow = Mathf.Atan2(center.x - (lastMousePosition.x + mouseX), (lastMousePosition.y + mouseY) - center.y);
-            float dragAmount = angleNow - anglePrevious;
-            lastMousePosition += new Vector3(mouseX, mouseY, 0f);
+            Vector3 currentMousePosition = Input.mousePosition;
+            float angleCurrent = Mathf.Atan2(center.x - currentMousePosition.x, currentMousePosition.y - center.y);
+            float dragAmount = angleCurrent - anglePrevious;
+            lastMousePosition = currentMousePosition;
             if (dragAmount <= 6f && dragAmount >= -6f){
                 // handle precision issue
                 HandleClockAdjustment(dragAmount);
@@ -82,18 +88,66 @@ public class ClockManipulation : MonoBehaviour
         }
     }
 
-    bool CheckInteractable(float playerHeight)
+    bool isDemoScene()
+    {
+        return SceneManager.GetActiveScene().name.Contains("Demo");
+    }
+
+    bool isGardenScene()
+    {
+        return SceneManager.GetActiveScene().name.Contains("Garden");
+    }
+
+    bool isOnChair()
     {
         RaycastHit hit;
-        Ray ray = currentCamera.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit, interactRange))
+        Transform playerTransform = playerBody.transform;
+        if (Physics.Raycast(playerTransform.position, Vector3.down, out hit, 2f))
         {
-            if (hit.collider.CompareTag("Interactable") && playerHeight >= defaultHeight)
+            // check if hit object name is "Chair"
+            if (hit.collider.gameObject.name == "Chair")
             {
                 return true;
             }
         }
         return false;
+    }
+
+    bool CheckInteractable()
+    {
+        // if demo scene, check if player is on chair
+        if (isDemoScene() && !isOnChair())
+        {
+            return false;
+        }
+
+        if (isGardenScene())
+        {
+            GardenManager.Instance.CompletePuzzle("Clock");
+            if (!GardenManager.Instance.IsScaleBalanced())
+            {
+                return false;
+            }
+        }
+
+        RaycastHit hit;
+        Ray ray = currentCamera.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out hit, interactRange))
+        {
+            if (hit.collider.CompareTag("Interactable"))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    void EnableCursor(bool enable)
+    {
+        Cursor.lockState = enable ? CursorLockMode.None : CursorLockMode.Locked;
+        Cursor.visible = enable;
+        // set Cursor style to Grab Cursor Texture from Texture folder
+        Cursor.SetCursor(!enable ? null : cursor, Vector2.zero, CursorMode.Auto);
     }
 
     void LockPlayerMovement(bool lockMovement)
@@ -105,6 +159,7 @@ public class ClockManipulation : MonoBehaviour
     {
         mainCamera.SetActive(!lockRotation);
         clockCamera.SetActive(lockRotation);
+        EnableCursor(lockRotation);
         if (lockRotation)
         {
             currentCamera = clockCamera.GetComponent<Camera>();
@@ -117,6 +172,17 @@ public class ClockManipulation : MonoBehaviour
 
     void HighlightClockHands(bool highlight)
     {
+        //play sound
+        if (highlight == true)
+        {
+            AkSoundEngine.PostEvent("Stop_Clock_Tick", this.gameObject);
+            AkSoundEngine.PostEvent("Play_Clock_Tick_Reverse", this.gameObject);
+        }
+        else
+        {
+            AkSoundEngine.PostEvent("Stop_Clock_Tick_Reverse", this.gameObject);
+        }
+
         foreach (Transform clockHand in clockHands)
         {
             Renderer renderer = clockHand.GetComponent<Renderer>();
@@ -168,13 +234,11 @@ public class ClockManipulation : MonoBehaviour
                 directionalLight.color = Color.Lerp(Color.white, Color.black, timeOfDay * 2);
             }
         }
+    }
 
-        // check current scene
-        string currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
-        if (currentScene.Contains("Garden"))
-        {
-            GardenManager.Instance.CompletePuzzle("Clock");
-        }
+    public float GetRotationAmount()
+    {
+        return rotationAmount;
     }
 
     public bool CheckClockSet(float minAngle, float maxAngle, string clockwise)

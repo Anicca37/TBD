@@ -4,86 +4,108 @@ using UnityEngine;
 
 public class windChime : MonoBehaviour
 {
-    public ParticleSystem windParticleSystem;
     public WindController windController;
     public ParticleSystem birdsParticleSystem;
     public TreeGrowthController treeGrowthController;
+    public Transform windDirectionIndicator;
+    public SequenceChecker sequenceChecker;
 
-    void Update()
+    public int chimeID;
+
+    void OnMouseDown()
     {
-        if (Input.GetMouseButtonDown(0)) // mouse click
-        {
-            // check if the mouse is over gameobject
-            RaycastHit hitInfo = new RaycastHit();
-            if (Camera.main != null)
-            {
-                bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
-                if (hit && hitInfo.transform.gameObject == gameObject)
-                {
-                    OnMouseOver();
-                }
-            }
-        }
-    }
-    void OnMouseOver()
-    {
+
         // check if the floral puzzle is matched
         // if (!true)
-        if (Input.GetMouseButtonDown(0))
+        if (GardenManager.Instance.IsFloralMatched())
         {
-
-            if (GardenManager.Instance.IsFloralMatched())
+            // Debug.Log($"curr index: {currentSequenceIndex}");
+            // Debug.Log($"{chimeID} = {targetSequence[currentSequenceIndex]} is {chimeID == targetSequence[currentSequenceIndex]}");
+            if (!sequenceChecker.IsCorrectSequencePlayed())
             {
-                switch (gameObject.name)
-                {
-                    case "Chime1":
-                        ChangeWindDirection(Vector3.forward); // North
-                        break;
-                    case "Chime2":
-                        ChangeWindDirection(Vector3.back); // South
-                        break;
-                    case "Chime3":
-                        ChangeWindDirection(Vector3.right); // East
-                        break;
-                    case "Chime4":
-                        ChangeWindDirection(Vector3.left); // West
-                        break;
-                    default:
-                        break;
-                }
+                ChangeWindDirection(chimeID);
+                FindObjectOfType<SequenceChecker>().ChimeClicked(chimeID);
             }
-            else
-            {
-                Debug.Log("Ah! So many birds!");
-                TriggerBirdsAndGrowPlants();
-                // GardenManager.Instance.CompletePuzzle("WindChimes");
-            }
+        }
+        else
+        {
+            Debug.Log("Ah! So many birds!");
+            TriggerBirdsAndGrowPlants();
+            // GardenManager.Instance.CompletePuzzle("WindChimes");
         }
     }
 
-    void ChangeWindDirection(Vector3 direction)
+    void ChangeWindDirection(int chimeID)
     {
-        var shape = windParticleSystem.shape;
-        Quaternion rotation = Quaternion.LookRotation(direction);
-        shape.rotation = rotation.eulerAngles;
-
-        if (direction == Vector3.right) // East
+        Vector3 direction = Vector3.zero;
+        switch (chimeID)
         {
-            windController.LaunchSeedsEastward();
+            case 1:
+                // TODO: add sound
+                AkSoundEngine.PostEvent("Play_ChimeG", this.gameObject);
+                direction = Vector3.forward; // North             
+                break;
+            case 2:
+                // TODO: add sound
+                AkSoundEngine.PostEvent("Play_ChimeE", this.gameObject);
+                direction = Vector3.back; // South
+                break;
+            case 3:
+                // TODO: add sound
+                AkSoundEngine.PostEvent("Play_ChimeD", this.gameObject);
+                direction = Vector3.right; // East
+                break;
+            case 4:
+                // TODO: add sound
+                AkSoundEngine.PostEvent("Play_ChimeC", this.gameObject);
+                direction = Vector3.left; // West
+                break;
         }
 
-        Debug.Log($"Changing wind direction to {direction}");
+        if (windDirectionIndicator != null && direction != Vector3.zero)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(direction, Vector3.up);
+            windDirectionIndicator.rotation = targetRotation;
+        }
+        Debug.Log($"curr chime: {chimeID}");
+        Debug.Log($"wind direction: {direction}");
+
+        // play sound
+        // AkSoundEngine.PostEvent("Play_ChimeD", this.gameObject);
     }
+
     void TriggerBirdsAndGrowPlants()
     {
         birdsParticleSystem.Play(); // bird flock
+        StartCoroutine(PlayBirdSoundMultipleTimes());
         Invoke("GrowTreesAfterBirds", birdsParticleSystem.main.duration); // delay tree growth after birds
-        Invoke("ResetGarden", 15f); // reset after 15sec
+        Invoke("RemoveTreesAfterGrowth", 12f); // reset after 8sec
+        // Invoke("ResetGarden", 8f); // reset after 8sec
+
     }
+
+    IEnumerator PlayBirdSoundMultipleTimes()
+    {
+        float duration = 5.0f; // Duration in seconds after which the sound should stop
+        float startTime = Time.time; // Record the start time
+
+        // play sound
+        while (Time.time - startTime < duration)
+        {
+            AkSoundEngine.PostEvent("Play_BirdsCrazy", this.gameObject);
+            yield return new WaitForSeconds(0.1f);
+        }
+    }
+
 
     void GrowTreesAfterBirds()
     {
         treeGrowthController.GrowTreesAtMainPoints();
+    }
+
+    void RemoveTreesAfterGrowth()
+    {
+        treeGrowthController.RemoveTreesAfterGrowth();
     }
 
     void ResetGarden()

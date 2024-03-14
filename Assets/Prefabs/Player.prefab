@@ -239,6 +239,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupableTag: Pickupable
   attachPoint: {fileID: 6686517100237193317}
+  defaultIcon: {fileID: 0}
+  grabIcon: {fileID: 0}
   pickupRange: 10
 --- !u!114 &4111715680166910250
 MonoBehaviour:
