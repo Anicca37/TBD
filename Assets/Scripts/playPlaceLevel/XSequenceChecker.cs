@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SequenceChecker : MonoBehaviour
+public class XSequenceChecker : MonoBehaviour
 {
     private int[] targetSequence = { 1, 4, 2, 3 };
     private int currentSequenceIndex = 0;

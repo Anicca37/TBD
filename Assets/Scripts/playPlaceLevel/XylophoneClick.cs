@@ -8,6 +8,6 @@ public class XylophoneClick : MonoBehaviour
 
     private void OnMouseDown()
     {
-        FindObjectOfType<SequenceChecker>().XyloClicked(xyloID);
+        FindObjectOfType<XSequenceChecker>().XyloClicked(xyloID);
     }
 }
