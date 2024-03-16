@@ -13,7 +13,8 @@ public class GardenManager : MonoBehaviour
     public ClockManipulation ClockController;
     public GameObject EscapeController;
     public Camera playerCamera;
-    public Camera actionCamera;
+    public Camera scalesCamera;
+    public Camera birdCamera;
 
     public bool isFloralMatched = false;
     public bool isWindChimesPlayed = false;
@@ -148,6 +149,7 @@ public class GardenManager : MonoBehaviour
         // scaleBeam.transform.eulerAngles = new Vector3(0, 0, 0);
         //balance scale animation????
         scaleAnimator.SetTrigger("Balance");
+        StartCoroutine(SwitchCamera(playerCamera, scalesCamera, 0f));
 
         if (isScaleBalanceSoundPlayed == false)
         {
@@ -160,14 +162,14 @@ public class GardenManager : MonoBehaviour
         Debug.Log("Scales balanced.");
         scaleAnimator.SetTrigger("Balanced Idle");
         Invoke("BirdHint", 4.5f);
-        StartCoroutine(SwitchCamera(actionCamera, playerCamera, 11.5f));
+        StartCoroutine(SwitchCamera(birdCamera, playerCamera, 11.5f));
         Invoke("BirdIdle", 11.5f);
     }
 
     void BirdHint()
     {
         birdAnimator.SetTrigger("Moove");
-        StartCoroutine(SwitchCamera(playerCamera, actionCamera, 0f));
+        StartCoroutine(SwitchCamera(scalesCamera, birdCamera, 0f));
     }
 
     void BirdIdle()
