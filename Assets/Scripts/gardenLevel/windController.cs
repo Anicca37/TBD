@@ -32,6 +32,8 @@ public class WindController : MonoBehaviour
         //     }
         // }
         StartCoroutine(SwitchCamera(actionCamera, playerCamera, 7f));
+        Invoke("ReturnBird", 5f);
+        CompleteWindChimesPuzzle();
 
         // Invoke("SwitchCamera(actionCamera, playerCamera)", 5f);
     }
@@ -62,6 +64,11 @@ public class WindController : MonoBehaviour
     void CompleteWindChimesPuzzle()
     {
         GardenManager.Instance.CompletePuzzle("WindChimes");
+    }
+
+    void ReturnBird()
+    {
+        birdAnimator.SetTrigger("Return");
     }
 
     IEnumerator SwitchCamera(Camera cameraToDisable, Camera cameraToEnable, float delay)
