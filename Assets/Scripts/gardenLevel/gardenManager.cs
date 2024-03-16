@@ -12,6 +12,8 @@ public class GardenManager : MonoBehaviour
     public GameObject VenusFlytrap;
     public ClockManipulation ClockController;
     public GameObject EscapeController;
+    public Camera playerCamera;
+    public Camera actionCamera;
 
     public bool isFloralMatched = false;
     public bool isWindChimesPlayed = false;
@@ -157,12 +159,20 @@ public class GardenManager : MonoBehaviour
         isScaleBalanced = true;
         Debug.Log("Scales balanced.");
         scaleAnimator.SetTrigger("Balanced Idle");
-        Invoke("BirdHint", 2.5f);
+        Invoke("BirdHint", 4.5f);
+        StartCoroutine(SwitchCamera(actionCamera, playerCamera, 11.5f));
+        Invoke("BirdIdle", 11.5f);
     }
 
     void BirdHint()
     {
         birdAnimator.SetTrigger("Moove");
+        StartCoroutine(SwitchCamera(playerCamera, actionCamera, 0f));
+    }
+
+    void BirdIdle()
+    {
+        birdAnimator.SetTrigger("Rest");
     }
     void DirectWindToWindChimes()
     {
@@ -331,6 +341,14 @@ public class GardenManager : MonoBehaviour
     {
         Debug.Log("Escaping the garden.");
         EscapeController.GetComponent<EscapeMenuController>().OnEscapeActivated();
+    }
+
+    IEnumerator SwitchCamera(Camera cameraToDisable, Camera cameraToEnable, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        cameraToDisable.gameObject.SetActive(false);
+        cameraToEnable.gameObject.SetActive(true);
+
     }
 
     public void ResetPuzzles()
