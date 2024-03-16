@@ -9,7 +9,9 @@ public class SequenceChecker : MonoBehaviour
     public WindController windController;
 
     private bool solved = false;
-    private bool ifCorrectSoundPlayed = false;
+
+    public static SequenceChecker Instance;
+    public bool ifCorrectSoundPlayed = false;
 
 
     public void ChimeClicked(int chimeID)
@@ -24,8 +26,10 @@ public class SequenceChecker : MonoBehaviour
                 Debug.Log("Whoosh!");
                 LaunchSeeds();
                 currentSequenceIndex = 0; // reset sequence after success
-                AkSoundEngine.PostEvent("Play_Birds", this.gameObject);
-                Invoke("playBirdWing", 1.3f);
+
+                GameObject theBird = GameObject.Find("smallBird");
+                AkSoundEngine.PostEvent("Play_Birds", theBird.gameObject);
+                Invoke("playBirdWing", 1.4f);
             }
         }
         else
@@ -35,11 +39,16 @@ public class SequenceChecker : MonoBehaviour
             //play sound
             if (ifCorrectSoundPlayed == false)
             {
+                ifCorrectSoundPlayed = true;
                 Invoke("playCorrectSound", 1f); // play correct after 0.5s;
             }
-            ifCorrectSoundPlayed = true;
-            Invoke("makePlayedFalse", 15f);
+            
+            Invoke("makePlayedFalse", 5f);
         }
+    }
+    public bool IsCorrectSequencePlayed()
+    {
+        return ifCorrectSoundPlayed;
     }
 
     private void makePlayedTrue()

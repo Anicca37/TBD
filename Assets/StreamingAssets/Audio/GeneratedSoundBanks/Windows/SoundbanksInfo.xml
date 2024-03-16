@@ -162,7 +162,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{8D8C34D8-1695-85AA-A9CA-4642FECDA385}">
+		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{49214646-806B-F3E2-BDBA-4FAD1B023F28}">
 			<ShortName>Level2Garden</ShortName>
 			<Path>Level2Garden.bnk</Path>
 			<Media>
@@ -378,6 +378,10 @@
 					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Intro\mus_90bpm_Level2_Intro_NoiseDown.wav</ShortName>
 					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Intro/mus_90bpm_Level2_Intro_NoiseDown_239921B3.wem</CachePath>
 				</File>
+				<File Id="863478286" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>10 - Squeak,Metal Move Si.M.wav</ShortName>
+					<CachePath>SFX/10 - Squeak,Metal Move Si.M_A4A07AAE.wem</CachePath>
+				</File>
 				<File Id="873760794" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PickUp_Pinecone_3.wav</ShortName>
 					<CachePath>SFX/PickUp_Pinecone_3_8E324C96.wem</CachePath>
@@ -429,7 +433,7 @@
 				</ShareSets>
 			</Plugins>
 			<Events>
-				<Event Id="3025897706" Name="Play_Birds" DurationType="OneShot" DurationMin="0.813375" DurationMax="1.3508126">
+				<Event Id="3025897706" Name="Play_Birds" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.813375" DurationMax="1.3508126">
 					<MediaRefs>
 						<MediaRef Id="141213406"/>
 						<MediaRef Id="217621770"/>
@@ -441,7 +445,7 @@
 						<MediaRef Id="928421190"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1125237609" Name="Play_BirdsCrazy" DurationType="OneShot" DurationMin="0.813375" DurationMax="1.3508126">
+				<Event Id="1125237609" Name="Play_BirdsCrazy" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.813375" DurationMax="1.3508126">
 					<MediaRefs>
 						<MediaRef Id="141213406"/>
 						<MediaRef Id="217621770"/>
@@ -453,7 +457,7 @@
 						<MediaRef Id="928421190"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3584090578" Name="Play_BirdWing" DurationType="OneShot" DurationMin="3.1929376" DurationMax="3.1929376">
+				<Event Id="3584090578" Name="Play_BirdWing" MaxAttenuation="100" DurationType="OneShot" DurationMin="3.1929376" DurationMax="3.1929376">
 					<MediaRefs>
 						<MediaRef Id="960283345"/>
 					</MediaRefs>
@@ -574,6 +578,11 @@
 						<MediaRef Id="433162066"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2809285424" Name="Play_Scale_Balancing" MaxAttenuation="100" DurationType="OneShot" DurationMin="2.8929884" DurationMax="2.8929884">
+					<MediaRefs>
+						<MediaRef Id="863478286"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="976664737" Name="Play_Statue_Loud" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.75" DurationMax="1.75">
 					<MediaRefs>
 						<MediaRef Id="265032393"/>
@@ -623,7 +632,7 @@
 				<Event Id="1663839887" Name="Stop_Wind_Blowing" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{A6B13D2B-6FBE-090A-1485-FF386AC51D3E}">
+		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{08A09AFD-8346-F8E6-F864-DBE99C4F8F34}">
 			<ShortName>Level0</ShortName>
 			<Path>Level0.bnk</Path>
 			<Media>
@@ -679,12 +688,12 @@
 						<MediaRef Id="985095586"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2292458263" Name="Play_Door_Close" DurationType="OneShot" DurationMin="0.77166045" DurationMax="0.77166045">
+				<Event Id="2292458263" Name="Play_Door_Close" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.77166045" DurationMax="0.77166045">
 					<MediaRefs>
 						<MediaRef Id="36496989"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1660008929" Name="Play_Door_Open" DurationType="OneShot" DurationMin="0.92799664" DurationMax="0.92799664">
+				<Event Id="1660008929" Name="Play_Door_Open" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.92799664" DurationMax="0.92799664">
 					<MediaRefs>
 						<MediaRef Id="52226118"/>
 					</MediaRefs>
@@ -713,5 +722,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3DEC7D40-8613-57F8-3AD8-255C242A0E4E}</FileHash>
+	<FileHash>{8F6180B3-24E8-3177-139A-3ACB11F04F7C}</FileHash>
 </SoundBanksInfo>

@@ -25,7 +25,8 @@ public class DoorMovement : MonoBehaviour
                 transform.Rotate(Vector3.up, -90f);
                 isDoorOpen = true;
                 
-                AkSoundEngine.PostEvent("Play_Door_Open", this.gameObject);
+                GameObject theDoor = GameObject.Find("Door");
+                AkSoundEngine.PostEvent("Play_Door_Open", theDoor.gameObject);
             }
         }
         else
@@ -34,8 +35,9 @@ public class DoorMovement : MonoBehaviour
             {
                 transform.Rotate(Vector3.up, 90f);
                 isDoorOpen = false;
-
-                AkSoundEngine.PostEvent("Play_Door_Close", this.gameObject);
+                
+                GameObject theDoor = GameObject.Find("Door");
+                AkSoundEngine.PostEvent("Play_Door_Close", theDoor.gameObject);
             }
         }
     }

@@ -45,6 +45,8 @@ public class GardenManager : MonoBehaviour
     private bool isTrapActive = false;
     public bool isReset = false;
 
+    private bool isScaleBalanceSoundPlayed = false;
+
 
     void Awake()
     {
@@ -144,6 +146,14 @@ public class GardenManager : MonoBehaviour
         // scaleBeam.transform.eulerAngles = new Vector3(0, 0, 0);
         //balance scale animation????
         scaleAnimator.SetTrigger("Balance");
+
+        if (isScaleBalanceSoundPlayed == false)
+        {
+            GameObject theScale = GameObject.Find("scale");
+            AkSoundEngine.PostEvent("Play_Scale_Balancing", theScale.gameObject);
+            isScaleBalanceSoundPlayed = true;
+        }
+
         isScaleBalanced = true;
         Debug.Log("Scales balanced.");
         scaleAnimator.SetTrigger("Balanced Idle");
@@ -208,24 +218,6 @@ public class GardenManager : MonoBehaviour
             Debug.Log("Shockwave is on cooldown.");
             //StatueLoudPlayed = false;
         }
-
-
-        // Debug.Log("Statues sing loudly.");
-
-
-        // if (StatueLoudPlayed == false)
-        // {
-        //     //play sound   
-        //     GameObject Statue = GameObject.Find("Statue");
-        //     AkSoundEngine.PostEvent("Play_Statue_Loud", Statue.gameObject);
-        //     AkSoundEngine.PostEvent("Stop_Level2_NewGardenMusic", this.gameObject);
-        //     AkSoundEngine.PostEvent("Stop_Clock_Tick", ClockController.gameObject);
-        //     AkSoundEngine.PostEvent("Stop_Clock_Tick_Reverse", ClockController.gameObject);
-        //     GameObject Fountain = GameObject.Find("Fountain");
-        //     AkSoundEngine.PostEvent("Stop_Waterflow", Fountain.gameObject);
-        //     Invoke("ResetPuzzles", 1f);
-        // }
-        // StatueLoudPlayed = true;
     }
 
 
@@ -233,9 +225,8 @@ public class GardenManager : MonoBehaviour
     {
         float shockwaveDuration = 1f; // Duration of the shockwave effect
         float startTime = Time.time; // Record the start time
-        Vector3 originalPosition = playerTransform.position; // Record the player's original position
-        Vector3 direction = (playerTransform.position - shockwaveItem.position).normalized; // Calculate the direction away from the clock
-        float shockwaveSpeed = 70.0f; // Speed at which the player is pushed away
+        float shockwaveUpwardSpeed = 10.0f; // Speed at which the player is pushed upward
+        float shockwaveBackwardSpeed = -20.0f; // Speed at which the player is pushed backward
 
         //play sound
         if (StatueLoudPlayed == false)
@@ -247,11 +238,11 @@ public class GardenManager : MonoBehaviour
 
         while (Time.time < startTime + shockwaveDuration)
         {
-            // Calculate new position based on direction and speed
-            Vector3 newPosition = playerTransform.position + direction * shockwaveSpeed * Time.deltaTime;
-            // Optionally, you can include a check to ensure the player won't move through walls or other obstacles
+            // move the player with character controller
+            CharacterController controller = playerTransform.GetComponent<CharacterController>();
+            Vector3 moveDirection = playerTransform.forward * shockwaveBackwardSpeed + Vector3.up * shockwaveUpwardSpeed;
+            controller.Move(moveDirection * Time.deltaTime);
 
-            playerTransform.position = newPosition; // Move the player to the new position
             yield return null; // Wait until the next frame
         }
 
@@ -369,4 +360,8 @@ public class GardenManager : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 
+    public bool IsScaleBalanced()
+    {
+        return isScaleBalanced;
+    }
 }
