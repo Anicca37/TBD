@@ -12,6 +12,9 @@ public class GardenManager : MonoBehaviour
     public GameObject VenusFlytrap;
     public ClockManipulation ClockController;
     public GameObject EscapeController;
+    public Camera playerCamera;
+    public Camera scalesCamera;
+    public Camera birdCamera;
 
     public bool isFloralMatched = false;
     public bool isWindChimesPlayed = false;
@@ -24,9 +27,11 @@ public class GardenManager : MonoBehaviour
 
     private bool isGardenFlooded = false;
     [SerializeField] private float riseSpeed = 0.15f;
+
     // private float floodDelay = 1.0f; 
     [SerializeField] private float riseAmount = 10f; 
     private float initialYPosition; 
+
     private bool startFlood = false;
     private bool startSink = false; // New flag for controlling the sinking process
 
@@ -37,13 +42,14 @@ public class GardenManager : MonoBehaviour
     public GameObject scaleBeam;
 
     [SerializeField] private Animator scaleAnimator;
+    [SerializeField] private Animator birdAnimator;
 
     public float shockwaveCooldown = 1f; // Cooldown in seconds
     private float lastShockwaveTime = -Mathf.Infinity; // Initialize with a value that allows immediate use
     private bool StatueLoudPlayed = false;
     private bool isTrapActive = false;
     public bool isReset = false;
-    
+
     private bool isScaleBalanceSoundPlayed = false;
 
 
@@ -91,15 +97,14 @@ public class GardenManager : MonoBehaviour
                 }
                 else
                 {
-                    isWindChimesPlayed = true;
-                    BlowSeedsOntoScales();
+                    DeliverPinecone();
                 }
                 break;
             case "Clock":
                 if (isScaleBalanced) // Clock set too early
                 {
                     // Update the vine growth
-                    if(vineGrowthController != null)
+                    if (vineGrowthController != null)
                     {
                         vineGrowthController.UpdateVineGrowth(ClockController.GetRotationAmount());
 
@@ -129,7 +134,7 @@ public class GardenManager : MonoBehaviour
                     break;
                 }
 
-                FloodGarden(); 
+                FloodGarden();
                 break;
 
             case "Escape":
@@ -146,7 +151,8 @@ public class GardenManager : MonoBehaviour
         // scaleBeam.transform.eulerAngles = new Vector3(0, 0, 0);
         //balance scale animation????
         scaleAnimator.SetTrigger("Balance");
-        
+        StartCoroutine(SwitchCamera(playerCamera, scalesCamera, 0f));
+
         if (isScaleBalanceSoundPlayed == false)
         {
             GameObject theScale = GameObject.Find("scale");
@@ -157,17 +163,30 @@ public class GardenManager : MonoBehaviour
         isScaleBalanced = true;
         Debug.Log("Scales balanced.");
         scaleAnimator.SetTrigger("Balanced Idle");
+        Invoke("BirdHint", 4.5f);
+        StartCoroutine(SwitchCamera(birdCamera, playerCamera, 11.5f));
+        Invoke("BirdIdle", 11.5f);
     }
 
+    void BirdHint()
+    {
+        birdAnimator.SetTrigger("Moove");
+        StartCoroutine(SwitchCamera(scalesCamera, birdCamera, 0f));
+    }
+
+    void BirdIdle()
+    {
+        birdAnimator.SetTrigger("Rest");
+    }
     void DirectWindToWindChimes()
     {
-        Debug.Log("Wind directed to Wind Chimes.");
+        Debug.Log("Wind directed to wind chimes.");
     }
 
-    public void BlowSeedsOntoScales()
+    public void DeliverPinecone()
     {
         isWindChimesPlayed = true;
-        Debug.Log("Seeds blown onto scales, balancing them.");
+        Debug.Log("Bird delivers the pinecone.");
     }
 
     void MakeVenusFlytrapBloom()
@@ -189,7 +208,7 @@ public class GardenManager : MonoBehaviour
     void AttractBirds()
     {
         Debug.Log("Birds scatter seeds, causing overgrowth.");
-        
+
         if (isReset == false)
         {
             ResetPuzzles();
@@ -237,7 +256,7 @@ public class GardenManager : MonoBehaviour
             CharacterController controller = playerTransform.GetComponent<CharacterController>();
             Vector3 moveDirection = playerTransform.forward * shockwaveBackwardSpeed + Vector3.up * shockwaveUpwardSpeed;
             controller.Move(moveDirection * Time.deltaTime);
-            
+
             yield return null; // Wait until the next frame
         }
 
@@ -274,40 +293,40 @@ public class GardenManager : MonoBehaviour
     }
 
     void Update()
-{
-    if (isGardenFlooded && waterObject != null)
     {
-        if (!startFlood)
+        if (isGardenFlooded && waterObject != null)
         {
-            // Rising logic...
-            float targetYPosition = initialYPosition + riseAmount;
-            float newYPosition = Mathf.Min(waterObject.transform.position.y + (riseSpeed * Time.deltaTime), targetYPosition);
-            waterObject.transform.position = new Vector3(waterObject.transform.position.x, newYPosition, waterObject.transform.position.z);
-
-            if (newYPosition >= targetYPosition)
+            if (!startFlood)
             {
-                startFlood = true; // Mark the flooding as complete
-                startSink = true; // Immediately enable sinking after reaching max height
+                // Rising logic...
+                float targetYPosition = initialYPosition + riseAmount;
+                float newYPosition = Mathf.Min(waterObject.transform.position.y + (riseSpeed * Time.deltaTime), targetYPosition);
+                waterObject.transform.position = new Vector3(waterObject.transform.position.x, newYPosition, waterObject.transform.position.z);
+
+                if (newYPosition >= targetYPosition)
+                {
+                    startFlood = true; // Mark the flooding as complete
+                    startSink = true; // Immediately enable sinking after reaching max height
+                }
             }
-        }
-        else if (startSink)
-        {
-            // Sinking logic
-            float targetYPosition = initialYPosition;
-            float newYPosition = Mathf.Max(waterObject.transform.position.y - (riseSpeed * Time.deltaTime), targetYPosition);
-            waterObject.transform.position = new Vector3(waterObject.transform.position.x, newYPosition, waterObject.transform.position.z);
-
-            if (newYPosition <= targetYPosition)
+            else if (startSink)
             {
-                startSink = false; // Mark the sinking as complete
-                isGardenFlooded = false; // Reset the flooded state to allow re-flooding
-                startFlood = false; // Reset to allow flooding to start over
-                initialYPosition = waterObject.transform.position.y; // Reset initial position for accurate re-flood
-                AdjustFountainParticles(); // Reset or adjust visual effects as needed
+                // Sinking logic
+                float targetYPosition = initialYPosition;
+                float newYPosition = Mathf.Max(waterObject.transform.position.y - (riseSpeed * Time.deltaTime), targetYPosition);
+                waterObject.transform.position = new Vector3(waterObject.transform.position.x, newYPosition, waterObject.transform.position.z);
+
+                if (newYPosition <= targetYPosition)
+                {
+                    startSink = false; // Mark the sinking as complete
+                    isGardenFlooded = false; // Reset the flooded state to allow re-flooding
+                    startFlood = false; // Reset to allow flooding to start over
+                    initialYPosition = waterObject.transform.position.y; // Reset initial position for accurate re-flood
+                    AdjustFountainParticles(); // Reset or adjust visual effects as needed
+                }
             }
         }
     }
-}
 
 
     void AdjustFountainParticles()
@@ -326,6 +345,14 @@ public class GardenManager : MonoBehaviour
     {
         Debug.Log("Escaping the garden.");
         EscapeController.GetComponent<EscapeMenuController>().OnEscapeActivated();
+    }
+
+    IEnumerator SwitchCamera(Camera cameraToDisable, Camera cameraToEnable, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        cameraToDisable.gameObject.SetActive(false);
+        cameraToEnable.gameObject.SetActive(true);
+
     }
 
     public void ResetPuzzles()
