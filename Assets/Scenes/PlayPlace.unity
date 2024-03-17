@@ -1155,6 +1155,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 401464758}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &419380315 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2204808416171688000, guid: 99a5768928e218e489203c7fac3deabf, type: 3}
+  m_PrefabInstance: {fileID: 1517343319}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &427652503
 GameObject:
   m_ObjectHideFlags: 0
@@ -1634,7 +1639,7 @@ PrefabInstance:
     - target: {fileID: 284465023931408010, guid: 9dcacb3360ef1384d89cb95ebcb077e0, type: 3}
       propertyPath: playerBody
       value: 
-      objectReference: {fileID: 656367676}
+      objectReference: {fileID: 419380315}
     - target: {fileID: 284465023931408010, guid: 9dcacb3360ef1384d89cb95ebcb077e0, type: 3}
       propertyPath: defaultIcon
       value: 
@@ -2024,7 +2029,6 @@ MonoBehaviour:
   - {fileID: 2129428188}
   pickupableTag: Pickupable
   tempTag: TempUntagged
-
 --- !u!1 &683138747
 GameObject:
   m_ObjectHideFlags: 0
@@ -2702,7 +2706,6 @@ Transform:
   - {fileID: 2030874554}
   m_Father: {fileID: 1717664106}
   m_LocalEulerAnglesHint: {x: 0, y: -11.675, z: 0}
-
 --- !u!114 &844303370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2716,12 +2719,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockManager: {fileID: 641923418}
---- !u!224 &883111242 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4717434637486546091, guid: 4e77891da6235c544874e211040bf806, type: 3}
-  m_PrefabInstance: {fileID: 202208320}
-  m_PrefabAsset: {fileID: 0}
-
 --- !u!1 &912820632
 GameObject:
   m_ObjectHideFlags: 0
