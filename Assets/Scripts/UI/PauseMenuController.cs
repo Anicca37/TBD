@@ -131,6 +131,10 @@ public class PauseMenuController : MonoBehaviour
                 {
                     TutorialManager.Instance.ResetPuzzles();
                 }
+                else if (SceneManager.GetActiveScene().name == "PlayPlace")
+                {
+                    PlayPlaceManager.Instance.ResetPuzzles();
+                }
                 break;
             case MenuOption.Menu:
                 SceneManager.LoadScene("UI");

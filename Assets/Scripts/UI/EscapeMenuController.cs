@@ -123,16 +123,24 @@ public class EscapeMenuController : MonoBehaviour
                 {
                     TutorialManager.Instance.ResetPuzzles();
                 }
+                else if (SceneManager.GetActiveScene().name == "PlayPlace")
+                {
+                    PlayPlaceManager.Instance.ResetPuzzles();
+                }
                 break;
             case MenuOption.Next:
                 if (SceneManager.GetActiveScene().name == "Garden_3 - Terrain")
                 {
-                    SceneManager.LoadScene("DemoLevel");
+                    SceneManager.LoadScene("UI");
                 }
                 else if (SceneManager.GetActiveScene().name == "DemoLevel")
                 {
-                   SceneManager.LoadScene("Garden_3 - Terrain");
+                   SceneManager.LoadScene("PlayPlace");
                 }
+                else if (SceneManager.GetActiveScene().name == "PlayPlace")
+                {
+                    SceneManager.LoadScene("Garden_3 - Terrain");
+                }                
                 break;
             case MenuOption.Menu:
                 SceneManager.LoadScene("UI");

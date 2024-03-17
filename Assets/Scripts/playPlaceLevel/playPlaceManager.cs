@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PlayPlaceManager : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class PlayPlaceManager : MonoBehaviour
     private bool isClockInteracted = false;
     private bool areBlocksSorted = false;
     private bool isXylophoneSequenceCorrect = false;
+
+    public PlayPlaceLightController playPlaceLightController;
+    public GameObject EscapeController;
 
     void Awake()
     {
@@ -26,8 +30,7 @@ public class PlayPlaceManager : MonoBehaviour
         switch (puzzleName)
         {
             case "ClockInteraction":
-                isClockInteracted = true;
-                HighlightBlocks();
+                isClockInteracted = playPlaceLightController.IsPlayPlaceOpen();
                 break;
             case "BlockSorting":
                 areBlocksSorted = true;
@@ -86,6 +89,18 @@ public class PlayPlaceManager : MonoBehaviour
     {
         Debug.Log("Escaping the play place.");
         // Insert escape logic here
+        EscapeController.GetComponent<EscapeMenuController>().OnEscapeActivated();
+    }
+
+    public void ResetPuzzles()
+    {   
+        // Stop music here
+
+        isClockInteracted = false;
+        areBlocksSorted = false;
+        isXylophoneSequenceCorrect = false;
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 }
