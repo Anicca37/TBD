@@ -98,6 +98,11 @@ public class ClockManipulation : MonoBehaviour
         return SceneManager.GetActiveScene().name.Contains("Garden");
     }
 
+    bool isPlayPlaceScene()
+    {
+        return SceneManager.GetActiveScene().name.Contains("PlayPlace");
+    }
+
     bool isOnChair()
     {
         RaycastHit hit;
@@ -264,7 +269,6 @@ public class ClockManipulation : MonoBehaviour
 
             if (isClockSet)
             {
-                Debug.Log("Clock is set!");
                 return true;
             }
         }
