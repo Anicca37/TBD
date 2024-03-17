@@ -11075,7 +11075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3094d4cabc554fc7a7192aa244b95ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleSystem: {fileID: 341905106}
+  currentParticleSystem: {fileID: 341905106}
   seedPrefab: {fileID: 211625153449225937, guid: fb6ec0f7ca5cb40338256eebee304eba, type: 3}
 --- !u!4 &379002400
 Transform:
