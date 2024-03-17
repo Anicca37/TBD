@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
-    public GameObject menuSprite;
     public GameObject selectLevelController;
 
     public GameObject startOptionSelectedSprite;

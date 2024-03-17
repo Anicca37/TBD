@@ -4,8 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenuController : MonoBehaviour
 {
-    public GameObject pauseSprite;
-
     public GameObject resumeOptionSelectedSprite;
     public GameObject restartOptionSelectedSprite;
     public GameObject menuOptionSelectedSprite;
