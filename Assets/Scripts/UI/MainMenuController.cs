@@ -8,9 +8,10 @@ public class MainMenuController : MonoBehaviour
 
     public GameObject startOptionSelectedSprite;
     public GameObject levelsOptionSelectedSprite;
+    public GameObject optionsOptionSelectedSprite;
     public GameObject exitOptionSelectedSprite;
 
-    private enum MenuOption { Start, Levels, Exit };
+    private enum MenuOption { Start, Levels, Options, Exit };
     private MenuOption selectedOption;
 
     private void Start()
@@ -59,10 +60,15 @@ public class MainMenuController : MonoBehaviour
                 levelsOptionSelectedSprite.SetActive(false);
                 startOptionSelectedSprite.SetActive(true);
                 break;
-            case MenuOption.Exit:
+            case MenuOption.Options:
                 selectedOption = MenuOption.Levels;
-                exitOptionSelectedSprite.SetActive(false);
+                optionsOptionSelectedSprite.SetActive(false);
                 levelsOptionSelectedSprite.SetActive(true);
+                break;
+            case MenuOption.Exit:
+                selectedOption = MenuOption.Options;
+                exitOptionSelectedSprite.SetActive(false);
+                optionsOptionSelectedSprite.SetActive(true);
                 break;
         }
     }
@@ -77,8 +83,13 @@ public class MainMenuController : MonoBehaviour
                 levelsOptionSelectedSprite.SetActive(true);
                 break;
             case MenuOption.Levels:
-                selectedOption = MenuOption.Exit;
+                selectedOption = MenuOption.Options;
                 levelsOptionSelectedSprite.SetActive(false);
+                optionsOptionSelectedSprite.SetActive(true);
+                break;
+            case MenuOption.Options:
+                selectedOption = MenuOption.Exit;
+                optionsOptionSelectedSprite.SetActive(false);
                 exitOptionSelectedSprite.SetActive(true);
                 break;
             case MenuOption.Exit:
@@ -102,6 +113,8 @@ public class MainMenuController : MonoBehaviour
                 selectLevelController.GetComponent<SelectLevelController>().enabled = true;
                 selectLevelController.GetComponent<SelectLevelController>().InitializeLevelSelect();
                 gameObject.GetComponent<MainMenuController>().enabled = false;
+                break;
+            case MenuOption.Options:
                 break;
             case MenuOption.Exit:
                 Application.Quit();

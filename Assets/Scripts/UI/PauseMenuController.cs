@@ -6,6 +6,7 @@ public class PauseMenuController : MonoBehaviour
 {
     public GameObject resumeOptionSelectedSprite;
     public GameObject restartOptionSelectedSprite;
+    public GameObject optionsOptionSelectedSprite;
     public GameObject menuOptionSelectedSprite;
 
     private bool isPaused = false;
@@ -14,7 +15,7 @@ public class PauseMenuController : MonoBehaviour
     private GameObject playerBody;
     private EscapeMenuController escapeMenuController;
 
-    private enum MenuOption { Resume, Restart, Menu };
+    private enum MenuOption { Resume, Restart, Options, Menu };
     private MenuOption selectedOption;
 
     private void Start()
@@ -80,10 +81,15 @@ public class PauseMenuController : MonoBehaviour
                 restartOptionSelectedSprite.SetActive(false);
                 resumeOptionSelectedSprite.SetActive(true);
                 break;
-            case MenuOption.Menu:
+            case MenuOption.Options:
                 selectedOption = MenuOption.Restart;
-                menuOptionSelectedSprite.SetActive(false);
+                optionsOptionSelectedSprite.SetActive(false);
                 restartOptionSelectedSprite.SetActive(true);
+                break;
+            case MenuOption.Menu:
+                selectedOption = MenuOption.Options;
+                menuOptionSelectedSprite.SetActive(false);
+                optionsOptionSelectedSprite.SetActive(true);
                 break;
         }
     }
@@ -98,8 +104,13 @@ public class PauseMenuController : MonoBehaviour
                 restartOptionSelectedSprite.SetActive(true);
                 break;
             case MenuOption.Restart:
-                selectedOption = MenuOption.Menu;
+                selectedOption = MenuOption.Options;
                 restartOptionSelectedSprite.SetActive(false);
+                optionsOptionSelectedSprite.SetActive(true);
+                break;
+            case MenuOption.Options:
+                selectedOption = MenuOption.Menu;
+                optionsOptionSelectedSprite.SetActive(false);
                 menuOptionSelectedSprite.SetActive(true);
                 break;
             case MenuOption.Menu:
@@ -133,6 +144,8 @@ public class PauseMenuController : MonoBehaviour
                 {
                     PlayPlaceManager.Instance.ResetPuzzles();
                 }
+                break;
+            case MenuOption.Options:
                 break;
             case MenuOption.Menu:
                 SceneManager.LoadScene("UI");
