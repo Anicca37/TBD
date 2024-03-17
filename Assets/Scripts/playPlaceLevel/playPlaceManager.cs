@@ -33,15 +33,8 @@ public class PlayPlaceManager : MonoBehaviour
                 isClockInteracted = playPlaceLightController.IsPlayPlaceOpen();
                 break;
             case "BlockSorting":
-                if (!isClockInteracted) // Ball sorting done too early
-                {
-                    CauseLightShow();
-                }
-                else
-                {
-                    areBlocksSorted = true;
-                    RevealXylophoneSequence(); 
-                }
+                areBlocksSorted = true;
+                RevealXylophoneSequence(); 
                 break;
             case "Xylophone":
                 if (!areBlocksSorted) // Xylophone played too early
@@ -63,20 +56,15 @@ public class PlayPlaceManager : MonoBehaviour
         }
     }
 
-    void CauseLightShow()
+    public bool IsClockInteracted()
     {
-        Debug.Log("Blocks sorted too early, initiating light show.");
-        StartCoroutine(LightShowWithDelay());
+        return isClockInteracted;
     }
 
-    IEnumerator LightShowWithDelay()
+    void HighlightBlocks()
     {
-        ColorCycleLightShow.Instance.StartLightShow();
-
-        // Wait for 5 seconds
-        yield return new WaitForSeconds(5f);
-
-        ColorCycleLightShow.Instance.StopLightShow();
+        Debug.Log("Clock interacted, highlighting balls.");
+        // Insert logic to highlight balls here
     }
 
     void RevealXylophoneSequence()
