@@ -9,5 +9,6 @@ public class XylophoneClick : MonoBehaviour
     private void OnMouseDown()
     {
         FindObjectOfType<XSequenceChecker>().XyloClicked(xyloID);
+        PlayPlaceManager.Instance.CompletePuzzle("Xylophone");
     }
 }

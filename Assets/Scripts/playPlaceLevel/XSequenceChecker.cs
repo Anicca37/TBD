@@ -29,6 +29,7 @@ public class XSequenceChecker : MonoBehaviour
     }
     private void DropKetchup()
     {
+        ketchupToDrop.SetActive(true);
         Rigidbody rb = ketchupToDrop.GetComponent<Rigidbody>();
         if (rb != null)
         {
