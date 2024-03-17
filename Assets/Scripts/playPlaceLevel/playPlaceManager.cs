@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PlayPlaceManager : MonoBehaviour
 {
@@ -8,6 +9,11 @@ public class PlayPlaceManager : MonoBehaviour
     private bool isClockInteracted = false;
     private bool areBlocksSorted = false;
     private bool isXylophoneSequenceCorrect = false;
+
+    public PlayPlaceLightController playPlaceLightController;
+    public GameObject EscapeController;
+    private Vector3 ballsinitialPosition;
+    public GameObject balls;
 
     void Awake()
     {
@@ -19,6 +25,7 @@ public class PlayPlaceManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        ballsinitialPosition = balls.transform.position;
     }
 
     public void CompletePuzzle(string puzzleName)
@@ -26,8 +33,7 @@ public class PlayPlaceManager : MonoBehaviour
         switch (puzzleName)
         {
             case "ClockInteraction":
-                isClockInteracted = true;
-                HighlightBlocks();
+                isClockInteracted = playPlaceLightController.IsPlayPlaceOpen();
                 break;
             case "BlockSorting":
                 if (!isClockInteracted) // Ball sorting done too early
@@ -37,7 +43,7 @@ public class PlayPlaceManager : MonoBehaviour
                 else
                 {
                     areBlocksSorted = true;
-                    RevealXylophoneSequence(); 
+                    RevealXylophoneSequence();
                 }
                 break;
             case "Xylophone":
@@ -58,12 +64,6 @@ public class PlayPlaceManager : MonoBehaviour
                 }
                 break;
         }
-    }
-
-    void HighlightBlocks()
-    {
-        Debug.Log("Clock interacted, highlighting balls.");
-        // Insert logic to highlight balls here
     }
 
     void CauseLightShow()
@@ -91,9 +91,21 @@ public class PlayPlaceManager : MonoBehaviour
     void TriggerBallAvalanche()
     {
         Debug.Log("Xylophone played too early, triggering ball avalanche.");
-        // Insert logic to trigger a ball avalanche here
-    }
+        balls.SetActive(true);
 
+        StartCoroutine(DisableAndResetAfterDelay(balls, 10f));
+    }
+    IEnumerator DisableAndResetAfterDelay(GameObject obj, float delay)
+    {
+        // Wait for the specified delay
+        yield return new WaitForSeconds(delay);
+
+        // Disable the GameObject
+        obj.SetActive(false);
+
+        // Reset the GameObject's position to its initial position
+        obj.transform.position = ballsinitialPosition;
+    }
     void DropKetchupOntoScale()
     {
         Debug.Log("Xylophone sequence correct, dropping ketchup onto scale.");
@@ -104,6 +116,18 @@ public class PlayPlaceManager : MonoBehaviour
     {
         Debug.Log("Escaping the play place.");
         // Insert escape logic here
+        EscapeController.GetComponent<EscapeMenuController>().OnEscapeActivated();
+    }
+
+    public void ResetPuzzles()
+    {
+        // Stop music here
+
+        isClockInteracted = false;
+        areBlocksSorted = false;
+        isXylophoneSequenceCorrect = false;
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 }
