@@ -3164,6 +3164,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4608038883099503098, guid: bee07552a55199440933d174850ef181, type: 3}
   m_PrefabInstance: {fileID: 1164949380}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1164949382 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1815254758444993924, guid: bee07552a55199440933d174850ef181, type: 3}
+  m_PrefabInstance: {fileID: 1164949380}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1184626162
 GameObject:
   m_ObjectHideFlags: 0
@@ -5010,6 +5015,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playPlaceLightController: {fileID: 805487308}
+  EscapeController: {fileID: 1164949382}
 --- !u!4 &1711599611
 Transform:
   m_ObjectHideFlags: 0
