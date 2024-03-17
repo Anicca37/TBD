@@ -54,7 +54,7 @@ public class ColorCycleLightShow : MonoBehaviour
         {
             StopCoroutine(lightShowCoroutine);
             lightShowCoroutine = null;
-            directionalLight.color = Color.white;
+            directionalLight.color = Color.black;
         }
     }
 }
