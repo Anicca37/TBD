@@ -9,6 +9,7 @@ public class PlayPlaceManager : MonoBehaviour
     private bool areBlocksSorted = false;
     private bool isXylophoneSequenceCorrect = false;
 
+    public PlayPlaceLightController playPlaceLightController;
     void Awake()
     {
         if (Instance == null)
@@ -26,8 +27,7 @@ public class PlayPlaceManager : MonoBehaviour
         switch (puzzleName)
         {
             case "ClockInteraction":
-                isClockInteracted = true;
-                HighlightBlocks();
+                isClockInteracted = playPlaceLightController.IsPlayPlaceOpen();
                 break;
             case "BlockSorting":
                 if (!isClockInteracted) // Ball sorting done too early
@@ -58,12 +58,6 @@ public class PlayPlaceManager : MonoBehaviour
                 }
                 break;
         }
-    }
-
-    void HighlightBlocks()
-    {
-        Debug.Log("Clock interacted, highlighting balls.");
-        // Insert logic to highlight balls here
     }
 
     void CauseLightShow()

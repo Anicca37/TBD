@@ -269,7 +269,6 @@ public class ClockManipulation : MonoBehaviour
 
             if (isClockSet)
             {
-                Debug.Log("Clock is set!");
                 return true;
             }
         }
