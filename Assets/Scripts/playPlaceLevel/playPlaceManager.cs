@@ -12,6 +12,9 @@ public class PlayPlaceManager : MonoBehaviour
 
     public PlayPlaceLightController playPlaceLightController;
     public GameObject EscapeController;
+    private Vector3 ballsinitialPosition;
+    public GameObject balls;
+    public GameObject ketchupToDrop;
 
     void Awake()
     {
@@ -23,6 +26,7 @@ public class PlayPlaceManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        ballsinitialPosition = balls.transform.position;
     }
 
     public void CompletePuzzle(string puzzleName)
@@ -34,7 +38,7 @@ public class PlayPlaceManager : MonoBehaviour
                 break;
             case "BlockSorting":
                 areBlocksSorted = true;
-                RevealXylophoneSequence(); 
+                RevealXylophoneSequence();
                 break;
             case "Xylophone":
                 if (!areBlocksSorted) // Xylophone played too early
@@ -72,17 +76,33 @@ public class PlayPlaceManager : MonoBehaviour
         Debug.Log("Balls sorted, revealing xylophone sequence.");
         // Insert logic to reveal the xylophone sequence here
     }
+    public bool AreBlocksSorted
+    {
+        get { return areBlocksSorted; }
+    }
 
     void TriggerBallAvalanche()
     {
         Debug.Log("Xylophone played too early, triggering ball avalanche.");
-        // Insert logic to trigger a ball avalanche here
-    }
+        balls.SetActive(true);
 
+        StartCoroutine(DisableAndResetAfterDelay(balls, 10f));
+    }
+    IEnumerator DisableAndResetAfterDelay(GameObject obj, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        obj.SetActive(false); // disable ball
+        obj.transform.position = ballsinitialPosition; // reset to original position
+    }
     void DropKetchupOntoScale()
     {
         Debug.Log("Xylophone sequence correct, dropping ketchup onto scale.");
-        // Insert logic to drop ketchup onto the scale here
+        ketchupToDrop.SetActive(true);
+        Rigidbody rb = ketchupToDrop.GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.isKinematic = false;
+        }
     }
 
     void EscapePlayPlace()
@@ -93,7 +113,7 @@ public class PlayPlaceManager : MonoBehaviour
     }
 
     public void ResetPuzzles()
-    {   
+    {
         // Stop music here
 
         isClockInteracted = false;
