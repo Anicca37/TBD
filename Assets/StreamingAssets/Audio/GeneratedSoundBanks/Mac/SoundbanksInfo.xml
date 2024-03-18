@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{388F9A86-BE91-BC54-82B0-509ABC0CE5FE}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{6F069EFA-FF66-C2A4-E181-ED61A6E60C19}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -19,7 +19,10 @@
 				</AudioDevices>
 			</Plugins>
 			<Busses>
+				<Bus Id="85412153" Name="Ambience"/>
+				<Bus Id="393239870" Name="SFX"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="3991942870" Name="Music"/>
 			</Busses>
 			<GameParameters>
 				<GameParameter Id="822163944" Name="SS_Air_RPM"/>
@@ -750,5 +753,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{75717DA0-FE35-4D0C-F18E-8181C1D76CD5}</FileHash>
+	<FileHash>{CECECEDB-7B3C-D839-BF47-68C6170DA88C}</FileHash>
 </SoundBanksInfo>
