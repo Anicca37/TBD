@@ -14,6 +14,7 @@ public class PauseMenuController : MonoBehaviour
     public GameObject HandGrab;
     private GameObject playerBody;
     private EscapeMenuController escapeMenuController;
+    public GameObject optionMenuController;
 
     private enum MenuOption { Resume, Restart, Options, Menu };
     private MenuOption selectedOption;
@@ -22,9 +23,13 @@ public class PauseMenuController : MonoBehaviour
     {
         playerBody = GameObject.Find("Player");
         escapeMenuController = GameObject.Find("EscapeMenuController").GetComponent<EscapeMenuController>();
+        if (optionMenuController != null)
+        {
+            optionMenuController.GetComponent<OptionsMenuController>().enabled = false;
+        }
     }
 
-    private void InitializePauseMenu()
+    public void InitializePauseMenu()
     {
         Crosshair.SetActive(false);
         HandGrab.SetActive(false);
@@ -146,6 +151,11 @@ public class PauseMenuController : MonoBehaviour
                 }
                 break;
             case MenuOption.Options:
+                optionsOptionSelectedSprite.SetActive(false);
+                // disable pausemenucontroller and enable optionsmenucontroller
+                optionMenuController.GetComponent<OptionsMenuController>().enabled = true;
+                optionMenuController.GetComponent<OptionsMenuController>().InitializeOptionsMenu();
+                gameObject.GetComponent<PauseMenuController>().enabled = false;
                 break;
             case MenuOption.Menu:
                 SceneManager.LoadScene("UI");

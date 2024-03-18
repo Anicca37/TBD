@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class OptionsMenuController : MonoBehaviour
 {
     public GameObject mainMenuController;
+    public GameObject pauseMenuController;
 
     public GameObject MounseSenstivityOptionSelectedSprite;
     public GameObject MusicOptionSelectedSprite;
@@ -22,6 +23,10 @@ public class OptionsMenuController : MonoBehaviour
         if (mainMenuController != null)
         {
             mainMenuController.GetComponent<MainMenuController>().enabled = false;
+        }
+        if (pauseMenuController != null)
+        {
+            pauseMenuController.GetComponent<PauseMenuController>().enabled = false;
         }
         // default selection
         selectedOption = MenuOption.MounseSenstivity;
@@ -192,6 +197,10 @@ public class OptionsMenuController : MonoBehaviour
                 // back to main menu or pause menu
                 if (SceneManager.GetActiveScene().name == "UI")
                 {
+                    if (mainMenuController == null)
+                    {
+                        return;
+                    }
                     BackOptionSelectedSprite.SetActive(false);
                     // disable optionsmenucontroller amd enable mainmenucontroller
                     mainMenuController.GetComponent<MainMenuController>().enabled = true;
@@ -200,7 +209,15 @@ public class OptionsMenuController : MonoBehaviour
                 }
                 else
                 {
+                    if (pauseMenuController == null)
+                    {
+                        return;
+                    }
+                    BackOptionSelectedSprite.SetActive(false);
                     // disable optionsmenucontroller and enable pausemenucontroller
+                    pauseMenuController.GetComponent<PauseMenuController>().enabled = true;
+                    pauseMenuController.GetComponent<PauseMenuController>().InitializePauseMenu();
+                    gameObject.GetComponent<OptionsMenuController>().enabled = false;
                 }
                 break;
         }

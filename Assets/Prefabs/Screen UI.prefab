@@ -114,13 +114,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1848298761665054588}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 29c1ae650ee41354f89b17d0088014c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mainMenuController: {fileID: 0}
-  selectLevelController: {fileID: 0}
+  pauseMenuController: {fileID: 8856032812779514927}
   MounseSenstivityOptionSelectedSprite: {fileID: 8872320893814109825}
   MusicOptionSelectedSprite: {fileID: 7601043337222683184}
   SFXOptionSelectedSprite: {fileID: 3927515885531913549}
@@ -1238,7 +1238,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8196475089236644942
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1313,6 +1313,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2239580874078345831}
     - target: {fileID: 5775876951603631291, guid: 4cfbf801eb93ffc439484fd16dba238c, type: 3}
+      propertyPath: optionMenuController
+      value: 
+      objectReference: {fileID: 1848298761665054588}
+    - target: {fileID: 5775876951603631291, guid: 4cfbf801eb93ffc439484fd16dba238c, type: 3}
       propertyPath: menuOptionSelectedSprite
       value: 
       objectReference: {fileID: 2538427188689252481}
@@ -1380,6 +1384,11 @@ PrefabInstance:
 --- !u!4 &7806527149667053742 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8754966559738334865, guid: 4cfbf801eb93ffc439484fd16dba238c, type: 3}
+  m_PrefabInstance: {fileID: 1524952979209748031}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8856032812779514927 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8056739947393405456, guid: 4cfbf801eb93ffc439484fd16dba238c, type: 3}
   m_PrefabInstance: {fileID: 1524952979209748031}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5099898148021169435
