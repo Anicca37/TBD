@@ -14,6 +14,7 @@ public class PlayPlaceManager : MonoBehaviour
     public GameObject EscapeController;
     private Vector3 ballsinitialPosition;
     public GameObject balls;
+    public GameObject ketchupToDrop;
 
     void Awake()
     {
@@ -87,6 +88,10 @@ public class PlayPlaceManager : MonoBehaviour
         Debug.Log("Balls sorted, revealing xylophone sequence.");
         // Insert logic to reveal the xylophone sequence here
     }
+    public bool AreBlocksSorted
+    {
+        get { return areBlocksSorted; }
+    }
 
     void TriggerBallAvalanche()
     {
@@ -97,19 +102,19 @@ public class PlayPlaceManager : MonoBehaviour
     }
     IEnumerator DisableAndResetAfterDelay(GameObject obj, float delay)
     {
-        // Wait for the specified delay
         yield return new WaitForSeconds(delay);
-
-        // Disable the GameObject
-        obj.SetActive(false);
-
-        // Reset the GameObject's position to its initial position
-        obj.transform.position = ballsinitialPosition;
+        obj.SetActive(false); // disable ball
+        obj.transform.position = ballsinitialPosition; // reset to original position
     }
     void DropKetchupOntoScale()
     {
         Debug.Log("Xylophone sequence correct, dropping ketchup onto scale.");
-        // Insert logic to drop ketchup onto the scale here
+        ketchupToDrop.SetActive(true);
+        Rigidbody rb = ketchupToDrop.GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.isKinematic = false;
+        }
     }
 
     void EscapePlayPlace()
