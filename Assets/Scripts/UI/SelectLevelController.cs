@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class SelectLevelController : MonoBehaviour
 {
-    public GameObject selectLevelSprite;
     public GameObject mainMenuController;
 
     public GameObject tutorialLevelSelectedSprite;
@@ -18,9 +17,7 @@ public class SelectLevelController : MonoBehaviour
     private void Start()
     {
         mainMenuController.GetComponent<MainMenuController>().enabled = false;
-        // default selection
-        selectedOption = MenuOption.Tutorial;
-        tutorialLevelSelectedSprite.SetActive(true);
+        InitializeLevelSelect();
     }
 
     public void InitializeLevelSelect()
