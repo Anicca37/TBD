@@ -17,11 +17,11 @@ public class MainMenuController : MonoBehaviour
 
     private void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         selectLevelController.GetComponent<SelectLevelController>().enabled = false;
         optionsMenuController.GetComponent<OptionsMenuController>().enabled = false;
-        // default selection
-        selectedOption = MenuOption.Start;
-        startOptionSelectedSprite.SetActive(true);
+        InitializeMenu();
     }
 
     public void InitializeMenu()

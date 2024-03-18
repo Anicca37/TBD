@@ -17,9 +17,7 @@ public class SelectLevelController : MonoBehaviour
     private void Start()
     {
         mainMenuController.GetComponent<MainMenuController>().enabled = false;
-        // default selection
-        selectedOption = MenuOption.Tutorial;
-        tutorialLevelSelectedSprite.SetActive(true);
+        InitializeLevelSelect();
     }
 
     public void InitializeLevelSelect()
