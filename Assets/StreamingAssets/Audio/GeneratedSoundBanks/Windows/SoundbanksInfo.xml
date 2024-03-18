@@ -632,6 +632,34 @@
 				<Event Id="1663839887" Name="Stop_Wind_Blowing" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
+		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{36903CD7-895B-CC4E-EA6E-DF5B882197C8}">
+			<ShortName>Level1PlayPlace</ShortName>
+			<Path>Level1PlayPlace.bnk</Path>
+			<Media>
+				<File Id="336039053" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Clock_Tick.wav</ShortName>
+					<CachePath>SFX/Clock_Tick_56CEF360.wem</CachePath>
+				</File>
+				<File Id="985095586" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Clock_Tick_Reverse.wav</ShortName>
+					<CachePath>SFX/Clock_Tick_Reverse_61B65DE5.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2797822332" Name="Play_Clock_Tick" MaxAttenuation="100" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="336039053"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3830889987" Name="Play_Clock_Tick_Reverse" MaxAttenuation="100" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="985095586"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2897827502" Name="Stop_Clock_Tick" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3434769657" Name="Stop_Clock_Tick_Reverse" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
 		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{08A09AFD-8346-F8E6-F864-DBE99C4F8F34}">
 			<ShortName>Level0</ShortName>
 			<Path>Level0.bnk</Path>
@@ -722,5 +750,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{51B898A1-DEAA-2D52-E8A1-674211B2B28C}</FileHash>
+	<FileHash>{28671575-6066-1FBF-D0B3-0D2E064E124C}</FileHash>
 </SoundBanksInfo>

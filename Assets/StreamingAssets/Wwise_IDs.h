@@ -73,6 +73,7 @@ namespace AK
     {
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID LEVEL0 = 2678230383U;
+        static const AkUniqueID LEVEL1PLAYPLACE = 2631894517U;
         static const AkUniqueID LEVEL2GARDEN = 2029599918U;
     } // namespace BANKS
 
