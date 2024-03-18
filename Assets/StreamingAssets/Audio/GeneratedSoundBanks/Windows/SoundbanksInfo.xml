@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<RootPaths>
-		<ProjectRoot>H:/NVSWork/Gmae Audio/TruamaWwise</ProjectRoot>
-		<SourceFilesRoot>H:/NVSWork/Gmae Audio/TruamaWwise/.cache/Windows</SourceFilesRoot>
+		<ProjectRoot>../../../../../../../../TruamaWwise</ProjectRoot>
+		<SourceFilesRoot>../../../../../../../../TruamaWwise/.cache/Windows</SourceFilesRoot>
 		<SoundBanksRoot>.</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>H:/NVSWork/Gmae Audio/TruamaWwise/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>../../../../../../../../TruamaWwise/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F4EBC0F7-30F7-0E7B-F0C4-79FAA174A288}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{C37BD37C-6D9E-EB83-34A8-B6B594211684}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -19,7 +19,10 @@
 				</AudioDevices>
 			</Plugins>
 			<Busses>
+				<Bus Id="85412153" Name="Ambience"/>
+				<Bus Id="393239870" Name="SFX"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="3991942870" Name="Music"/>
 			</Busses>
 			<GameParameters>
 				<GameParameter Id="822163944" Name="SS_Air_RPM"/>
@@ -162,7 +165,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{49214646-806B-F3E2-BDBA-4FAD1B023F28}">
+		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{0480474F-663F-DB73-CD73-1A8A66467F80}">
 			<ShortName>Level2Garden</ShortName>
 			<Path>Level2Garden.bnk</Path>
 			<Media>
@@ -380,7 +383,7 @@
 				</File>
 				<File Id="863478286" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>10 - Squeak,Metal Move Si.M.wav</ShortName>
-					<CachePath>SFX/10 - Squeak,Metal Move Si.M_A4A07AAE.wem</CachePath>
+					<CachePath>SFX/10 - Squeak,Metal Move Si.M_CAB22DAA.wem</CachePath>
 				</File>
 				<File Id="873760794" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PickUp_Pinecone_3.wav</ShortName>
@@ -433,7 +436,7 @@
 				</ShareSets>
 			</Plugins>
 			<Events>
-				<Event Id="3025897706" Name="Play_Birds" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.813375" DurationMax="1.3508126">
+				<Event Id="3025897706" Name="Play_Birds" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.75628006" DurationMax="1.431963">
 					<MediaRefs>
 						<MediaRef Id="141213406"/>
 						<MediaRef Id="217621770"/>
@@ -445,7 +448,7 @@
 						<MediaRef Id="928421190"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1125237609" Name="Play_BirdsCrazy" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.813375" DurationMax="1.3508126">
+				<Event Id="1125237609" Name="Play_BirdsCrazy" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.75628006" DurationMax="1.431963">
 					<MediaRefs>
 						<MediaRef Id="141213406"/>
 						<MediaRef Id="217621770"/>
@@ -512,14 +515,14 @@
 						<MediaRef Id="1023893752"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1321543350" Name="Play_FlowerPlant" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.6348125" DurationMax="1.1345">
+				<Event Id="1321543350" Name="Play_FlowerPlant" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.59025174" DurationMax="1.2026554">
 					<MediaRefs>
 						<MediaRef Id="285637370"/>
 						<MediaRef Id="361590980"/>
 						<MediaRef Id="586583771"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1831549045" Name="Play_FlowerWindBlow" DurationType="OneShot" DurationMin="1.6945626" DurationMax="1.7603333">
+				<Event Id="1831549045" Name="Play_FlowerWindBlow" DurationType="OneShot" DurationMin="1.5756125" DurationMax="1.8393321">
 					<MediaRefs>
 						<MediaRef Id="59226223"/>
 						<MediaRef Id="462888902"/>
@@ -632,6 +635,34 @@
 				<Event Id="1663839887" Name="Stop_Wind_Blowing" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
+		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{36903CD7-895B-CC4E-EA6E-DF5B882197C8}">
+			<ShortName>Level1PlayPlace</ShortName>
+			<Path>Level1PlayPlace.bnk</Path>
+			<Media>
+				<File Id="336039053" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Clock_Tick.wav</ShortName>
+					<CachePath>SFX/Clock_Tick_56CEF360.wem</CachePath>
+				</File>
+				<File Id="985095586" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Clock_Tick_Reverse.wav</ShortName>
+					<CachePath>SFX/Clock_Tick_Reverse_61B65DE5.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2797822332" Name="Play_Clock_Tick" MaxAttenuation="100" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="336039053"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3830889987" Name="Play_Clock_Tick_Reverse" MaxAttenuation="100" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="985095586"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2897827502" Name="Stop_Clock_Tick" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3434769657" Name="Stop_Clock_Tick_Reverse" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
 		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{08A09AFD-8346-F8E6-F864-DBE99C4F8F34}">
 			<ShortName>Level0</ShortName>
 			<Path>Level0.bnk</Path>
@@ -722,5 +753,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{8F6180B3-24E8-3177-139A-3ACB11F04F7C}</FileHash>
+	<FileHash>{DDDA8CB4-064D-7A20-350F-D2A08FEA1B88}</FileHash>
 </SoundBanksInfo>

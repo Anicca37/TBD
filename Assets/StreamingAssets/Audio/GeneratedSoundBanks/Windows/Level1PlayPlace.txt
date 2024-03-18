@@ -1,0 +1,14 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2797822332	Play_Clock_Tick			\Level0\Tut_office\Clock\Play_Clock_Tick	
+	2897827502	Stop_Clock_Tick			\Level0\Tut_office\Clock\Stop_Clock_Tick	
+	3434769657	Stop_Clock_Tick_Reverse			\Level0\Tut_office\Clock\Stop_Clock_Tick_Reverse	
+	3830889987	Play_Clock_Tick_Reverse			\Level0\Tut_office\Clock\Play_Clock_Tick_Reverse	
+
+Modulator Envelope	ID	Name			Wwise Object Path	Notes
+	19438176	ReverseTick			\Default Work Unit\ReverseTick	
+	1033209168	ReverseTick (Custom)				
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	336039053	Clock_Tick	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\Clock_Tick_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Level0_Office\Clock\Clock_Tick\Clock_Tick		52975
+	985095586	Clock_Tick_Reverse	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\Clock_Tick_Reverse_61B65DE5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Level0_Office\Clock\Clock_Reverse\Clock_Tick_Reverse		35953
+
