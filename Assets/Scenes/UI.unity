@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641228, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1002,12 +1002,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4972451022016031364, guid: 4e77891da6235c544874e211040bf806, type: 3}
+      propertyPath: HandGrab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4972451022016031364, guid: 4e77891da6235c544874e211040bf806, type: 3}
+      propertyPath: Crosshair
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4972451022016031364, guid: 4e77891da6235c544874e211040bf806, type: 3}
+      propertyPath: menuOptionSelectedSprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4972451022016031364, guid: 4e77891da6235c544874e211040bf806, type: 3}
+      propertyPath: resumeOptionSelectedSprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4972451022016031364, guid: 4e77891da6235c544874e211040bf806, type: 3}
+      propertyPath: optionsOptionSelectedSprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4972451022016031364, guid: 4e77891da6235c544874e211040bf806, type: 3}
+      propertyPath: restartOptionSelectedSprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5991261705171331178, guid: 4e77891da6235c544874e211040bf806, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5991261705171331178, guid: 4e77891da6235c544874e211040bf806, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6915117582056611999, guid: 4e77891da6235c544874e211040bf806, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7180610304598164983, guid: 4e77891da6235c544874e211040bf806, type: 3}
@@ -1034,9 +1062,33 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8473310225756458433, guid: 4e77891da6235c544874e211040bf806, type: 3}
+      propertyPath: HandGrab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8473310225756458433, guid: 4e77891da6235c544874e211040bf806, type: 3}
+      propertyPath: Crosshair
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8473310225756458433, guid: 4e77891da6235c544874e211040bf806, type: 3}
+      propertyPath: menuOptionSelectedSprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8473310225756458433, guid: 4e77891da6235c544874e211040bf806, type: 3}
+      propertyPath: nextOptionSelectedSprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8473310225756458433, guid: 4e77891da6235c544874e211040bf806, type: 3}
+      propertyPath: restartOptionSelectedSprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8603658667835861691, guid: 4e77891da6235c544874e211040bf806, type: 3}
       propertyPath: m_Name
       value: Screen UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 8856032812779514927, guid: 4e77891da6235c544874e211040bf806, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9069538690130807007, guid: 4e77891da6235c544874e211040bf806, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1047,7 +1099,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2239580874078345831, guid: 4e77891da6235c544874e211040bf806, type: 3}
+    - {fileID: 2724572151962683050, guid: 4e77891da6235c544874e211040bf806, type: 3}
+    - {fileID: 6087164411458886829, guid: 4e77891da6235c544874e211040bf806, type: 3}
+    - {fileID: 6122478014826628787, guid: 4e77891da6235c544874e211040bf806, type: 3}
+    - {fileID: 5015966448700350744, guid: 4e77891da6235c544874e211040bf806, type: 3}
+    - {fileID: 2538427188689252481, guid: 4e77891da6235c544874e211040bf806, type: 3}
+    - {fileID: 7032179025579556369, guid: 4e77891da6235c544874e211040bf806, type: 3}
+    - {fileID: 8051573863330611934, guid: 4e77891da6235c544874e211040bf806, type: 3}
+    - {fileID: 5644000486559965449, guid: 4e77891da6235c544874e211040bf806, type: 3}
+    - {fileID: 8856032812779514927, guid: 4e77891da6235c544874e211040bf806, type: 3}
+    - {fileID: 6915117582056611999, guid: 4e77891da6235c544874e211040bf806, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e77891da6235c544874e211040bf806, type: 3}
