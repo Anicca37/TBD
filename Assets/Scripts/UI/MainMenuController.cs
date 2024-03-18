@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class MainMenuController : MonoBehaviour
 {
     public GameObject selectLevelController;
+    public GameObject optionsMenuController;
 
     public GameObject startOptionSelectedSprite;
     public GameObject levelsOptionSelectedSprite;
@@ -17,6 +18,7 @@ public class MainMenuController : MonoBehaviour
     private void Start()
     {
         selectLevelController.GetComponent<SelectLevelController>().enabled = false;
+        optionsMenuController.GetComponent<OptionsMenuController>().enabled = false;
         // default selection
         selectedOption = MenuOption.Start;
         startOptionSelectedSprite.SetActive(true);
@@ -115,6 +117,11 @@ public class MainMenuController : MonoBehaviour
                 gameObject.GetComponent<MainMenuController>().enabled = false;
                 break;
             case MenuOption.Options:
+                optionsOptionSelectedSprite.SetActive(false);
+                // disable mainmenucontroller and enable optionsmenucontroller
+                optionsMenuController.GetComponent<OptionsMenuController>().enabled = true;
+                optionsMenuController.GetComponent<OptionsMenuController>().InitializeOptionsMenu();
+                gameObject.GetComponent<MainMenuController>().enabled = false;
                 break;
             case MenuOption.Exit:
                 Application.Quit();
