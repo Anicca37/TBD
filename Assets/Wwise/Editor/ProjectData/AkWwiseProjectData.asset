@@ -373,7 +373,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c829b83be71c8a4d9fc3b43dae098d9f
     GuidInternal: 
-    m_lastTime: -8584913734247536616
+    m_lastTime: -8584912515247820523
     List:
     - name: Play_Birds
       guid: 83da1a64ae50fa4f8edb957f079b8173
@@ -389,7 +389,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 83da1a64ae50fa4f8edb957f079b8173
       Path: Events\Default Work Unit\Play_Birds
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: 1.3508126
       minDuration: 0.813375
     - name: Play_BirdsCrazy
@@ -406,7 +406,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 3fdadab55a4b8a4481ad38102b6cc050
       Path: Events\Default Work Unit\Play_BirdsCrazy
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: 1.3508126
       minDuration: 0.813375
     - name: Play_BirdWing
@@ -423,7 +423,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: c187ce0e70e6a3409e82cf57152114bd
       Path: Events\Default Work Unit\Play_BirdWing
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: 3.1929376
       minDuration: 3.1929376
     - name: Play_Button
@@ -698,6 +698,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.45866665
       minDuration: 0.45866665
+    - name: Play_Scale_Balancing
+      guid: 27e380f76f698d48a8ce597acc95c73d
+      id: 2809285424
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Play_Scale_Balancing
+        ObjectType: 3
+        guid: 27e380f76f698d48a8ce597acc95c73d
+      Path: Events\Default Work Unit\Play_Scale_Balancing
+      maxAttenuation: 100
+      maxDuration: 2.8929884
+      minDuration: 2.8929884
     - name: Play_Statue_Loud
       guid: 0c9d465672762245acbcaf8ec67d39dd
       id: 976664737
@@ -947,7 +964,7 @@ MonoBehaviour:
     ParentPath: Events\Level0
     guid: 241c5182ec754a49a8160c059dc386bb
     GuidInternal: 
-    m_lastTime: -8584913858364887233
+    m_lastTime: -8584912554117901521
     List:
     - name: Clock
       guid: c5896f696e0fc64da2826d1676e71274
@@ -1052,7 +1069,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: f1b5cee6c9b88c4894599ff5d31aea68
       Path: Events\Level0\Tut_office\Play_Door_Close
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: 0.77166045
       minDuration: 0.77166045
     - name: Play_Door_Open
@@ -1072,7 +1089,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 9a226c70b41f004f942ab78c6fc6228e
       Path: Events\Level0\Tut_office\Play_Door_Open
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: 0.92799664
       minDuration: 0.92799664
     - name: Play_Level0Music
