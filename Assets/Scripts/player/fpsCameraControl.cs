@@ -19,7 +19,7 @@ public class fpsCameraControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        mouseSensitivity = PlayerPrefs.GetFloat("MouseSensitivity") * 100f;
+        mouseSensitivity = PlayerPrefs.GetFloat("MouseSensitivity", 3f) * 100f;
 
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
