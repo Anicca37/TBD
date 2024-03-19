@@ -21050,8 +21050,8 @@ MonoBehaviour:
   isClockSet: 0
   waterObject: {fileID: 2095376089}
   vineGrowthController: {fileID: 2048882562}
-  riseSpeed: 2.5
-  riseAmount: 15
+  riseSpeed: 3.5
+  riseAmount: 23
   fountainScript: {fileID: 971958512}
   attachPinecone: {fileID: 1167717230}
   scaleBeam: {fileID: 412049688}

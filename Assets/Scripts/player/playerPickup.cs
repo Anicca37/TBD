@@ -36,7 +36,12 @@ public class playerPickup : MonoBehaviour
     void PickUpObject()
     {
         // Raycast to detect pickupable objects
-         Camera playerCamera = Camera.main; // Get the main camera, assuming the player is using the main camera
+        Camera playerCamera = Camera.main; // Get the main camera, assuming the player is using the main camera
+
+        if(playerCamera == null)
+        {
+            return;
+        }
 
         // Raycast from the camera, not from the player's position
         RaycastHit hit;
