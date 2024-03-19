@@ -438,8 +438,42 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c829b83be71c8a4d9fc3b43dae098d9f
     GuidInternal: 
-    m_lastTime: -8584908307493841357
-    List: []
+    m_lastTime: -8584908009169145943
+    List:
+    - name: Play_Lv1_PlayPlaceMusic
+      guid: 49a494cca0aa634ebcf44924c113ef3d
+      id: 1852343440
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Play_Lv1_PlayPlaceMusic
+        ObjectType: 3
+        guid: 49a494cca0aa634ebcf44924c113ef3d
+      Path: Events\Default Work Unit\Play_Lv1_PlayPlaceMusic
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Lv1_PlayPlaceMusic
+      guid: db640eacbf037d4fa41455d3c475e7d7
+      id: 1754848386
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Stop_Lv1_PlayPlaceMusic
+        ObjectType: 3
+        guid: db640eacbf037d4fa41455d3c475e7d7
+      Path: Events\Default Work Unit\Stop_Lv1_PlayPlaceMusic
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   - PhysicalPath: Events\Level0.wwu
     PathAndIcons:
     - ElementName: Events
@@ -451,7 +485,7 @@ MonoBehaviour:
     ParentPath: Events\Level0
     guid: 241c5182ec754a49a8160c059dc386bb
     GuidInternal: 
-    m_lastTime: -8584912554117901521
+    m_lastTime: -8584908003804849183
     List:
     - name: Clock
       guid: c5896f696e0fc64da2826d1676e71274
@@ -733,7 +767,7 @@ MonoBehaviour:
     ParentPath: Events\Lv2Garden
     guid: 79f102072e2e844c90913baf4de5b1ea
     GuidInternal: 
-    m_lastTime: -8584908307493526080
+    m_lastTime: -8584908003804639003
     List:
     - name: Play_Birds
       guid: 83da1a64ae50fa4f8edb957f079b8173
