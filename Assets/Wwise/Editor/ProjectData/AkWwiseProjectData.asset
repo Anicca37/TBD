@@ -438,8 +438,42 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c829b83be71c8a4d9fc3b43dae098d9f
     GuidInternal: 
-    m_lastTime: -8584908009169145943
+    m_lastTime: -8584907948216291729
     List:
+    - name: Play_BlockDrop
+      guid: 98e20f838392bb45850e091c6e57c884
+      id: 94152718
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Play_BlockDrop
+        ObjectType: 3
+        guid: 98e20f838392bb45850e091c6e57c884
+      Path: Events\Default Work Unit\Play_BlockDrop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_BlockPickUp
+      guid: e44bec5d23e9ef40be6f133235af1575
+      id: 1903858809
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Play_BlockPickUp
+        ObjectType: 3
+        guid: e44bec5d23e9ef40be6f133235af1575
+      Path: Events\Default Work Unit\Play_BlockPickUp
+      maxAttenuation: 0
+      maxDuration: 2.0323272
+      minDuration: 1.5446662
     - name: Play_Lv1_PlayPlaceMusic
       guid: 49a494cca0aa634ebcf44924c113ef3d
       id: 1852343440

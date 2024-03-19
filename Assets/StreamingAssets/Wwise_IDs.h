@@ -16,6 +16,8 @@ namespace AK
         static const AkUniqueID PLAY_BIRDS = 3025897706U;
         static const AkUniqueID PLAY_BIRDSCRAZY = 1125237609U;
         static const AkUniqueID PLAY_BIRDWING = 3584090578U;
+        static const AkUniqueID PLAY_BLOCKDROP = 94152718U;
+        static const AkUniqueID PLAY_BLOCKPICKUP = 1903858809U;
         static const AkUniqueID PLAY_BUTTON = 2099555730U;
         static const AkUniqueID PLAY_CHIME_MELODY = 847650453U;
         static const AkUniqueID PLAY_CHIMEC = 2759522921U;

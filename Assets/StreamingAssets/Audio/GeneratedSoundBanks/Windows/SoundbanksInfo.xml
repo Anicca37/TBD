@@ -165,7 +165,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{FF183D03-702E-4074-1B5F-6965E6AEB8C9}">
+		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{69750F15-3CB6-ADFB-580A-D5240A170D38}">
 			<ShortName>Level2Garden</ShortName>
 			<Path>Level2Garden.bnk</Path>
 			<Media>
@@ -635,7 +635,7 @@
 				<Event Id="1663839887" Name="Stop_Wind_Blowing" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{7C7083B1-31DF-4242-7418-04A72226316C}">
+		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{6C488D9A-DAAF-01D6-1155-E3C0496E367E}">
 			<ShortName>Level1PlayPlace</ShortName>
 			<Path>Level1PlayPlace.bnk</Path>
 			<Media>
@@ -666,6 +666,10 @@
 				<File Id="149777786" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S1\mus_3-4_125bpm_Level1_S1_CMelody_VP.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S1/mus_3-4_125bpm_Level1_S1_CMelody_VP_239921B3.wem</CachePath>
+				</File>
+				<File Id="171567581" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BlockPickup_2.wav</ShortName>
+					<CachePath>SFX/BlockPickup_2_8E324C96.wem</CachePath>
 				</File>
 				<File Id="179272902" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran1\mus_3-4_125bpm_Level1_Tran1_Snare.wav</ShortName>
@@ -739,6 +743,10 @@
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S2\mus_3-4_125bpm_Level1_S2_CMelody_Cello.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S2/mus_3-4_125bpm_Level1_S2_CMelody_Cello_239921B3.wem</CachePath>
 				</File>
+				<File Id="700689704" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BlockPickup_1.wav</ShortName>
+					<CachePath>SFX/BlockPickup_1_8E324C96.wem</CachePath>
+				</File>
 				<File Id="703767957" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S2\mus_3-4_125bpm_Level1_S2_CMelody_CelloL.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S2/mus_3-4_125bpm_Level1_S2_CMelody_CelloL_239921B3.wem</CachePath>
@@ -797,6 +805,13 @@
 				</File>
 			</Media>
 			<Events>
+				<Event Id="94152718" Name="Play_BlockDrop" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1903858809" Name="Play_BlockPickUp" DurationType="OneShot" DurationMin="1.5446662" DurationMax="2.0323272">
+					<MediaRefs>
+						<MediaRef Id="171567581"/>
+						<MediaRef Id="700689704"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2797822332" Name="Play_Clock_Tick" MaxAttenuation="100" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="336039053"/>
@@ -853,7 +868,7 @@
 				<Event Id="1754848386" Name="Stop_Lv1_PlayPlaceMusic" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{ABE3118B-4FE0-2FD8-2710-75A9C3786954}">
+		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{AE43F665-8244-D1C1-53D8-4F6A90DBCA1E}">
 			<ShortName>Level0</ShortName>
 			<Path>Level0.bnk</Path>
 			<Media>
@@ -943,5 +958,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{69CDB28A-A0D7-621D-4623-25F7F2F40D49}</FileHash>
+	<FileHash>{A6127C81-C82B-FB5A-6FA8-16236D210D14}</FileHash>
 </SoundBanksInfo>
