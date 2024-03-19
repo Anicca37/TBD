@@ -382,7 +382,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 724273f56b5e06438af07ac6a6b97f15
     GuidInternal: 
-    m_lastTime: -8584907907669500895
+    m_lastTime: -8584907414149031025
     List:
     - name: Level0
       guid: 7eb2b7a76947ba4bacd1da9459a246e7
@@ -438,7 +438,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c829b83be71c8a4d9fc3b43dae098d9f
     GuidInternal: 
-    m_lastTime: -8584907719551723490
+    m_lastTime: -8584907409297795271
     List:
     - name: Play_BlockDrop
       guid: 98e20f838392bb45850e091c6e57c884
@@ -455,8 +455,8 @@ MonoBehaviour:
         guid: 98e20f838392bb45850e091c6e57c884
       Path: Events\Default Work Unit\Play_BlockDrop
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.783573
+      minDuration: 1.4872764
     - name: Play_BlockPickUp
       guid: e44bec5d23e9ef40be6f133235af1575
       id: 1903858809
@@ -472,8 +472,8 @@ MonoBehaviour:
         guid: e44bec5d23e9ef40be6f133235af1575
       Path: Events\Default Work Unit\Play_BlockPickUp
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.72498214
+      minDuration: 0.56908756
     - name: Play_Confetti
       guid: 994260ccc6f91d4ea64ed9c28eecccd7
       id: 831234954
@@ -488,9 +488,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 994260ccc6f91d4ea64ed9c28eecccd7
       Path: Events\Default Work Unit\Play_Confetti
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxAttenuation: 100
+      maxDuration: 1.5697507
+      minDuration: 1.2362527
     - name: Play_LightOff_1
       guid: ee41c06dcfee5149883ed0c24833a07a
       id: 3140573545
@@ -506,8 +506,8 @@ MonoBehaviour:
         guid: ee41c06dcfee5149883ed0c24833a07a
       Path: Events\Default Work Unit\Play_LightOff_1
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 2.2927027
+      minDuration: 2.2927027
     - name: Play_LightOnSound
       guid: 817fd0d4f28fe44188ba3a9e68a69653
       id: 3765524326
@@ -522,9 +522,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 817fd0d4f28fe44188ba3a9e68a69653
       Path: Events\Default Work Unit\Play_LightOnSound
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxAttenuation: 100
+      maxDuration: 8.928
+      minDuration: 8.928
     - name: Play_Lv1_LightShowMusic
       guid: d300bd5970f10240aa9d895b3f0a6c99
       id: 1153064896
@@ -540,8 +540,8 @@ MonoBehaviour:
         guid: d300bd5970f10240aa9d895b3f0a6c99
       Path: Events\Default Work Unit\Play_Lv1_LightShowMusic
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 5.375
+      minDuration: 5.375
     - name: Play_Lv1_PlayPlaceMusic
       guid: 49a494cca0aa634ebcf44924c113ef3d
       id: 1852343440
@@ -559,6 +559,40 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_SlideDoorOpen_1
+      guid: e9097afc0b2d1243aed35f740f3cc28c
+      id: 1324211945
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Play_SlideDoorOpen_1
+        ObjectType: 3
+        guid: e9097afc0b2d1243aed35f740f3cc28c
+      Path: Events\Default Work Unit\Play_SlideDoorOpen_1
+      maxAttenuation: 0
+      maxDuration: 1.7018958
+      minDuration: 1.7018958
+    - name: Play_WrongSequence
+      guid: 08d49a798db76e48bea41cb677e6469b
+      id: 3661318894
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Play_WrongSequence
+        ObjectType: 3
+        guid: 08d49a798db76e48bea41cb677e6469b
+      Path: Events\Default Work Unit\Play_WrongSequence
+      maxAttenuation: 0
+      maxDuration: 0.5
+      minDuration: 0.5
     - name: Play_XyloC
       guid: a28700ab35fd5d49983bc49708db6c74
       id: 4153846227
@@ -574,8 +608,8 @@ MonoBehaviour:
         guid: a28700ab35fd5d49983bc49708db6c74
       Path: Events\Default Work Unit\Play_XyloC
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.48026314
+      minDuration: 0.48026314
     - name: Play_XyloD
       guid: 181e067091c52a49949a709d1ea5a58f
       id: 4153846228
@@ -591,8 +625,8 @@ MonoBehaviour:
         guid: 181e067091c52a49949a709d1ea5a58f
       Path: Events\Default Work Unit\Play_XyloD
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.425
+      minDuration: 0.425
     - name: Play_XyloE
       guid: 8831dff8ef3928479bbab3f8f32579e4
       id: 4153846229
@@ -608,8 +642,8 @@ MonoBehaviour:
         guid: 8831dff8ef3928479bbab3f8f32579e4
       Path: Events\Default Work Unit\Play_XyloE
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.4381579
+      minDuration: 0.4381579
     - name: Play_XyloG
       guid: dc68cda129d2e248b502e0cb733a327b
       id: 4153846231
@@ -625,8 +659,8 @@ MonoBehaviour:
         guid: dc68cda129d2e248b502e0cb733a327b
       Path: Events\Default Work Unit\Play_XyloG
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.4526316
+      minDuration: 0.4526316
     - name: Play_XyloSequence
       guid: da5304f3021eb64584d1262cbdab2fac
       id: 4293423455
@@ -659,8 +693,8 @@ MonoBehaviour:
         guid: dd4bbd6761f0ea4381e05285ba8eb280
       Path: Events\Default Work Unit\Stop_LightOff_1
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_LightOnSound
       guid: 7031fd439dc08749ae6ee7d172b85332
       id: 221383132
@@ -676,8 +710,8 @@ MonoBehaviour:
         guid: 7031fd439dc08749ae6ee7d172b85332
       Path: Events\Default Work Unit\Stop_LightOnSound
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Lv1_LightShowMusic
       guid: 7818a42d0c3e7f4c8ff26cc5adba8bec
       id: 4020215174
@@ -693,8 +727,8 @@ MonoBehaviour:
         guid: 7818a42d0c3e7f4c8ff26cc5adba8bec
       Path: Events\Default Work Unit\Stop_Lv1_LightShowMusic
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Lv1_PlayPlaceMusic
       guid: db640eacbf037d4fa41455d3c475e7d7
       id: 1754848386
@@ -710,8 +744,8 @@ MonoBehaviour:
         guid: db640eacbf037d4fa41455d3c475e7d7
       Path: Events\Default Work Unit\Stop_Lv1_PlayPlaceMusic
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
   - PhysicalPath: Events\Level0.wwu
     PathAndIcons:
     - ElementName: Events
@@ -1021,9 +1055,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 83da1a64ae50fa4f8edb957f079b8173
       Path: Events\Lv2Garden\Play_Birds
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxAttenuation: 100
+      maxDuration: 1.431963
+      minDuration: 0.75628006
     - name: Play_BirdsCrazy
       guid: 3fdadab55a4b8a4481ad38102b6cc050
       id: 1125237609
@@ -1038,9 +1072,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 3fdadab55a4b8a4481ad38102b6cc050
       Path: Events\Lv2Garden\Play_BirdsCrazy
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxAttenuation: 100
+      maxDuration: 1.431963
+      minDuration: 0.75628006
     - name: Play_BirdWing
       guid: c187ce0e70e6a3409e82cf57152114bd
       id: 3584090578
@@ -1055,9 +1089,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: c187ce0e70e6a3409e82cf57152114bd
       Path: Events\Lv2Garden\Play_BirdWing
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxAttenuation: 100
+      maxDuration: 3.1929376
+      minDuration: 3.1929376
     - name: Play_Button
       guid: 937343f924bec6489cb40f81033ce814
       id: 2099555730
@@ -1073,8 +1107,8 @@ MonoBehaviour:
         guid: 937343f924bec6489cb40f81033ce814
       Path: Events\Lv2Garden\Play_Button
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.2940787
+      minDuration: 0.2940787
     - name: Play_Chime_Melody
       guid: 1167d12386b66942a2cecaf0460d6711
       id: 847650453
@@ -1090,8 +1124,8 @@ MonoBehaviour:
         guid: 1167d12386b66942a2cecaf0460d6711
       Path: Events\Lv2Garden\Play_Chime_Melody
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 3.4618473
+      minDuration: 3.4618473
     - name: Play_ChimeC
       guid: ccda2c706ac6f04fa5fdfd6564009b72
       id: 2759522921
@@ -1107,8 +1141,8 @@ MonoBehaviour:
         guid: ccda2c706ac6f04fa5fdfd6564009b72
       Path: Events\Lv2Garden\Play_ChimeC
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.461875
+      minDuration: 1.461875
     - name: Play_ChimeD
       guid: 7496c32e9822b140acae41dd8f4da8e7
       id: 2759522926
@@ -1124,8 +1158,8 @@ MonoBehaviour:
         guid: 7496c32e9822b140acae41dd8f4da8e7
       Path: Events\Lv2Garden\Play_ChimeD
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.975875
+      minDuration: 0.975875
     - name: Play_ChimeE
       guid: d9f0f3a9ca03bc44a4810427024b8550
       id: 2759522927
@@ -1141,8 +1175,8 @@ MonoBehaviour:
         guid: d9f0f3a9ca03bc44a4810427024b8550
       Path: Events\Lv2Garden\Play_ChimeE
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.1756458
+      minDuration: 1.1756458
     - name: Play_ChimeG
       guid: 7b32b689c857ad4cac1c0ce90ef6af9e
       id: 2759522925
@@ -1158,8 +1192,8 @@ MonoBehaviour:
         guid: 7b32b689c857ad4cac1c0ce90ef6af9e
       Path: Events\Lv2Garden\Play_ChimeG
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.9033333
+      minDuration: 0.9033333
     - name: Play_FlowerPickUp
       guid: 7925cbe7db4a9942bec48b16fe07c5e2
       id: 1678695831
@@ -1174,9 +1208,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 7925cbe7db4a9942bec48b16fe07c5e2
       Path: Events\Lv2Garden\Play_FlowerPickUp
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxAttenuation: 100
+      maxDuration: 0.67462546
+      minDuration: 0.42581192
     - name: Play_FlowerPlant
       guid: f49e8926f854104ca9f8b5eb218953c9
       id: 1321543350
@@ -1191,9 +1225,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: f49e8926f854104ca9f8b5eb218953c9
       Path: Events\Lv2Garden\Play_FlowerPlant
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxAttenuation: 100
+      maxDuration: 1.2026554
+      minDuration: 0.59025174
     - name: Play_FlowerWindBlow
       guid: 338f3624964c384fbbcb479c601793c5
       id: 1831549045
@@ -1209,8 +1243,8 @@ MonoBehaviour:
         guid: 338f3624964c384fbbcb479c601793c5
       Path: Events\Lv2Garden\Play_FlowerWindBlow
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.8393321
+      minDuration: 1.5756125
     - name: Play_FlyTrapPopedUp
       guid: e52bfc67e66d0942ba698c9f3658ed0c
       id: 531081561
@@ -1225,9 +1259,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: e52bfc67e66d0942ba698c9f3658ed0c
       Path: Events\Lv2Garden\Play_FlyTrapPopedUp
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxAttenuation: 200
+      maxDuration: 0.18133333
+      minDuration: 0.18133333
     - name: Play_GrassFootStep
       guid: 4f7504579319964882939e83bb50afce
       id: 1878963262
@@ -1259,7 +1293,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: c14db0263e6603419900c2b80afc9182
       Path: Events\Lv2Garden\Play_Level2_GardenAmbience
-      maxAttenuation: 0
+      maxAttenuation: 200
       maxDuration: -1
       minDuration: -1
     - name: Play_Level2_GardenMusic
@@ -1311,8 +1345,8 @@ MonoBehaviour:
         guid: eccfe1640b77ee4c9238bd15ac781d34
       Path: Events\Lv2Garden\Play_PineconePickup
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.7328959
+      minDuration: 1.4421458
     - name: Play_PlayerEaten
       guid: ac70f061b2d8254486944eec70f3f8b4
       id: 3659914468
@@ -1328,8 +1362,8 @@ MonoBehaviour:
         guid: ac70f061b2d8254486944eec70f3f8b4
       Path: Events\Lv2Garden\Play_PlayerEaten
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.45866665
+      minDuration: 0.45866665
     - name: Play_Scale_Balancing
       guid: 27e380f76f698d48a8ce597acc95c73d
       id: 2809285424
@@ -1344,9 +1378,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 27e380f76f698d48a8ce597acc95c73d
       Path: Events\Lv2Garden\Play_Scale_Balancing
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxAttenuation: 100
+      maxDuration: 2.8929884
+      minDuration: 2.8929884
     - name: Play_Statue_Loud
       guid: 0c9d465672762245acbcaf8ec67d39dd
       id: 976664737
@@ -1361,9 +1395,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 0c9d465672762245acbcaf8ec67d39dd
       Path: Events\Lv2Garden\Play_Statue_Loud
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxAttenuation: 100
+      maxDuration: 1.75
+      minDuration: 1.75
     - name: Play_Vine_Growing
       guid: 6d46b08961eaeb43899a43aa834dd859
       id: 4090890880
@@ -1379,8 +1413,8 @@ MonoBehaviour:
         guid: 6d46b08961eaeb43899a43aa834dd859
       Path: Events\Lv2Garden\Play_Vine_Growing
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 3.1929376
+      minDuration: 3.1929376
     - name: Play_WaterFlooding
       guid: baa74c04cdc81448b6c4bfde77b434d3
       id: 2908863451
@@ -1396,8 +1430,8 @@ MonoBehaviour:
         guid: baa74c04cdc81448b6c4bfde77b434d3
       Path: Events\Lv2Garden\Play_WaterFlooding
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 9.323238
+      minDuration: 9.323238
     - name: Play_Waterflow
       guid: 1b5d5e865c0cd846b63288f283e04a29
       id: 518242827
@@ -1412,7 +1446,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 1b5d5e865c0cd846b63288f283e04a29
       Path: Events\Lv2Garden\Play_Waterflow
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: -1
       minDuration: -1
     - name: Play_Win
@@ -1430,8 +1464,8 @@ MonoBehaviour:
         guid: 7a2ed0c54ab05342b051ca1bb4f433fc
       Path: Events\Lv2Garden\Play_Win
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1
+      minDuration: 1
     - name: Play_Wind_Blowing
       guid: c558e49cfdfe9146b8da1aa7094ad9b2
       id: 2075190801
@@ -1446,7 +1480,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: c558e49cfdfe9146b8da1aa7094ad9b2
       Path: Events\Lv2Garden\Play_Wind_Blowing
-      maxAttenuation: 0
+      maxAttenuation: 115
       maxDuration: -1
       minDuration: -1
     - name: Play_WindChime
@@ -1463,9 +1497,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 640291eb5f80f64faddf126693467c2a
       Path: Events\Lv2Garden\Play_WindChime
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxAttenuation: 80
+      maxDuration: 7.2650976
+      minDuration: 7.2650976
     - name: Play_WoodGrowingCrazy
       guid: eb10a3d7ad58434499cb022b4088ebbd
       id: 228010707
@@ -1481,8 +1515,8 @@ MonoBehaviour:
         guid: eb10a3d7ad58434499cb022b4088ebbd
       Path: Events\Lv2Garden\Play_WoodGrowingCrazy
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 5.6197076
+      minDuration: 5.6197076
     - name: Stop_Chime_Melody
       guid: f70a8e7fbe0af4488d8ea42567168437
       id: 184097815
@@ -1498,8 +1532,8 @@ MonoBehaviour:
         guid: f70a8e7fbe0af4488d8ea42567168437
       Path: Events\Lv2Garden\Stop_Chime_Melody
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Level2_GardenAmbience
       guid: dcecabfa5697a944986c4938ed67c745
       id: 1659483392
@@ -1515,8 +1549,8 @@ MonoBehaviour:
         guid: dcecabfa5697a944986c4938ed67c745
       Path: Events\Lv2Garden\Stop_Level2_GardenAmbience
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Level2_GardenMusic
       guid: 49e78388a66280479917226bebec13c8
       id: 2396550769
@@ -1549,8 +1583,8 @@ MonoBehaviour:
         guid: 5e2d22c7cef0b04c871931e6a9f0e7db
       Path: Events\Lv2Garden\Stop_Level2_NewGardenMusic
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Waterflow
       guid: e62a71919c131242bf5e6d821427fe1e
       id: 2135762577
@@ -1566,8 +1600,8 @@ MonoBehaviour:
         guid: e62a71919c131242bf5e6d821427fe1e
       Path: Events\Lv2Garden\Stop_Waterflow
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Wind_Blowing
       guid: 1bc724f7f113aa428c6e6607e7619d46
       id: 1663839887
@@ -1583,8 +1617,8 @@ MonoBehaviour:
         guid: 1bc724f7f113aa428c6e6607e7619d46
       Path: Events\Lv2Garden\Stop_Wind_Blowing
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:

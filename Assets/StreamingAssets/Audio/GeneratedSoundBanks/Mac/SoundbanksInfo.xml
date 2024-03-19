@@ -645,7 +645,7 @@
 				<Event Id="1663839887" Name="Stop_Wind_Blowing" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{E3708741-DBC5-1869-07B0-809024835CD3}">
+		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{25725E1B-E684-A57F-68F4-7AC2C310D0BF}">
 			<ShortName>Level1PlayPlace</ShortName>
 			<Path>Level1PlayPlace.bnk</Path>
 			<Media>
@@ -1009,7 +1009,7 @@
 						<MediaRef Id="645157359"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3187775344" Name="Play_XyloSequence_fixed" DurationType="OneShot" DurationMin="4" DurationMax="4">
+				<Event Id="4293423455" Name="Play_XyloSequence" DurationType="OneShot" DurationMin="4" DurationMax="4">
 					<MediaRefs>
 						<MediaRef Id="36616816"/>
 					</MediaRefs>
@@ -1114,5 +1114,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{6751D751-3EFC-A7FD-357F-F4B67172179C}</FileHash>
+	<FileHash>{AC337139-D4FD-F618-A6C5-AEC7C7BFF9C8}</FileHash>
 </SoundBanksInfo>

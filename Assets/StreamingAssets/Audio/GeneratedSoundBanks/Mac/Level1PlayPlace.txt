@@ -12,7 +12,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	2897827502	Stop_Clock_Tick			\Level0\Tut_office\Clock\Stop_Clock_Tick	
 	2955987680	Play_Win			\Lv2Garden\Play_Win	
 	3140573545	Play_LightOff_1			\Default Work Unit\Play_LightOff_1	
-	3187775344	Play_XyloSequence_fixed			\Default Work Unit\Play_XyloSequence_fixed	
 	3434769657	Stop_Clock_Tick_Reverse			\Level0\Tut_office\Clock\Stop_Clock_Tick_Reverse	
 	3661318894	Play_WrongSequence			\Default Work Unit\Play_WrongSequence	
 	3765524326	Play_LightOnSound			\Default Work Unit\Play_LightOnSound	
@@ -22,6 +21,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	4153846228	Play_XyloD			\Default Work Unit\Play_XyloD	
 	4153846229	Play_XyloE			\Default Work Unit\Play_XyloE	
 	4153846231	Play_XyloG			\Default Work Unit\Play_XyloG	
+	4293423455	Play_XyloSequence			\Default Work Unit\Play_XyloSequence	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	185769106	Lv1_LightOn			\Default Work Unit\Lv1_LightOn	
