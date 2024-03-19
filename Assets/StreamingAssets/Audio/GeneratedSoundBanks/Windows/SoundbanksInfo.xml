@@ -635,7 +635,7 @@
 				<Event Id="1663839887" Name="Stop_Wind_Blowing" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{9430ED6B-7587-2319-B2A0-B66F3DCBAF3B}">
+		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{3285F66C-B626-CF04-5FB4-D5DC9F058A8C}">
 			<ShortName>Level1PlayPlace</ShortName>
 			<Path>Level1PlayPlace.bnk</Path>
 			<Media>
@@ -671,6 +671,10 @@
 					<ShortName>BlockPickup_2.wav</ShortName>
 					<CachePath>SFX/BlockPickup_2_AFA832B1.wem</CachePath>
 				</File>
+				<File Id="176319590" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>XyloC.wav</ShortName>
+					<CachePath>SFX/XyloC_22F2479D.wem</CachePath>
+				</File>
 				<File Id="179272902" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran1\mus_3-4_125bpm_Level1_Tran1_Snare.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran1/mus_3-4_125bpm_Level1_Tran1_Snare_239921B3.wem</CachePath>
@@ -690,6 +694,10 @@
 				<File Id="247913356" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S2\mus_3-4_125bpm_Level1_S2_Melody_VP.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S2/mus_3-4_125bpm_Level1_S2_Melody_VP_239921B3.wem</CachePath>
+				</File>
+				<File Id="259781958" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>XyloD.wav</ShortName>
+					<CachePath>SFX/XyloD_091A51E1.wem</CachePath>
 				</File>
 				<File Id="283047273" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S2\mus_3-4_125bpm_Level1_S2_Bass.wav</ShortName>
@@ -715,6 +723,10 @@
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_CMelody_VL.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran2/mus_3-4_125bpm_Level1_Tran2_CMelody_VL_239921B3.wem</CachePath>
 				</File>
+				<File Id="459346347" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BlockDrop_2.wav</ShortName>
+					<CachePath>SFX/BlockDrop_2_8E324C96.wem</CachePath>
+				</File>
 				<File Id="484366609" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S1\mus_3-4_125bpm_Level1_S1_Bass.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S1/mus_3-4_125bpm_Level1_S1_Bass_239921B3.wem</CachePath>
@@ -722,6 +734,10 @@
 				<File Id="541156274" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Bass.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran2/mus_3-4_125bpm_Level1_Tran2_Bass_239921B3.wem</CachePath>
+				</File>
+				<File Id="545916312" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>XyloE.wav</ShortName>
+					<CachePath>SFX/XyloE_99E6503E.wem</CachePath>
 				</File>
 				<File Id="545992109" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran1\mus_3-4_125bpm_Level1_Tran1_Melody_Cello.wav</ShortName>
@@ -742,6 +758,10 @@
 				<File Id="634654853" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S2\mus_3-4_125bpm_Level1_S2_CMelody_Cello.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S2/mus_3-4_125bpm_Level1_S2_CMelody_Cello_239921B3.wem</CachePath>
+				</File>
+				<File Id="645157359" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>XyloG.wav</ShortName>
+					<CachePath>SFX/XyloG_D0443FC6.wem</CachePath>
 				</File>
 				<File Id="700689704" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BlockPickup_1.wav</ShortName>
@@ -775,6 +795,10 @@
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Chords.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran2/mus_3-4_125bpm_Level1_Tran2_Chords_239921B3.wem</CachePath>
 				</File>
+				<File Id="854584472" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>XyloSequence.wav</ShortName>
+					<CachePath>SFX/XyloSequence_0119ADB5.wem</CachePath>
+				</File>
 				<File Id="883217290" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Snare.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran2/mus_3-4_125bpm_Level1_Tran2_Snare_239921B3.wem</CachePath>
@@ -807,9 +831,18 @@
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Kick.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran2/mus_3-4_125bpm_Level1_Tran2_Kick_239921B3.wem</CachePath>
 				</File>
+				<File Id="1062718881" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BlockDrop_1.wav</ShortName>
+					<CachePath>SFX/BlockDrop_1_8E324C96.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
-				<Event Id="94152718" Name="Play_BlockDrop" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="94152718" Name="Play_BlockDrop" DurationType="OneShot" DurationMin="1.576625" DurationMax="1.658375">
+					<MediaRefs>
+						<MediaRef Id="459346347"/>
+						<MediaRef Id="1062718881"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1903858809" Name="Play_BlockPickUp" DurationType="OneShot" DurationMin="0.56908756" DurationMax="0.72498214">
 					<MediaRefs>
 						<MediaRef Id="171567581"/>
@@ -870,6 +903,31 @@
 				<Event Id="2955987680" Name="Play_Win" DurationType="OneShot" DurationMin="1" DurationMax="1">
 					<MediaRefs>
 						<MediaRef Id="909003059"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4153846227" Name="Play_XyloC" DurationType="OneShot" DurationMin="0.48026314" DurationMax="0.48026314">
+					<MediaRefs>
+						<MediaRef Id="176319590"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4153846228" Name="Play_XyloD" DurationType="OneShot" DurationMin="0.425" DurationMax="0.425">
+					<MediaRefs>
+						<MediaRef Id="259781958"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4153846229" Name="Play_XyloE" DurationType="OneShot" DurationMin="0.4381579" DurationMax="0.4381579">
+					<MediaRefs>
+						<MediaRef Id="545916312"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4153846231" Name="Play_XyloG" DurationType="OneShot" DurationMin="0.4526316" DurationMax="0.4526316">
+					<MediaRefs>
+						<MediaRef Id="645157359"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4293423455" Name="Play_XyloSequence" DurationType="OneShot" DurationMin="2.045614" DurationMax="2.045614">
+					<MediaRefs>
+						<MediaRef Id="854584472"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2897827502" Name="Stop_Clock_Tick" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
@@ -967,5 +1025,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{6AA3D968-9FE6-F00A-0C11-1014FC1D88B0}</FileHash>
+	<FileHash>{7470DEA2-13E4-4EE0-9D64-03BDEF9189EB}</FileHash>
 </SoundBanksInfo>

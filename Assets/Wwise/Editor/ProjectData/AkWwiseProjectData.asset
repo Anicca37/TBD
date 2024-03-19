@@ -438,7 +438,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c829b83be71c8a4d9fc3b43dae098d9f
     GuidInternal: 
-    m_lastTime: -8584907948216291729
+    m_lastTime: -8584907835616421950
     List:
     - name: Play_BlockDrop
       guid: 98e20f838392bb45850e091c6e57c884
@@ -455,8 +455,8 @@ MonoBehaviour:
         guid: 98e20f838392bb45850e091c6e57c884
       Path: Events\Default Work Unit\Play_BlockDrop
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 1.658375
+      minDuration: 1.576625
     - name: Play_BlockPickUp
       guid: e44bec5d23e9ef40be6f133235af1575
       id: 1903858809
@@ -474,6 +474,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.72498214
       minDuration: 0.56908756
+    - name: Play_LightOn_1
+      guid: 1153f3edb37aac469696b6ceb3987a38
+      id: 1126669045
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Play_LightOn_1
+        ObjectType: 3
+        guid: 1153f3edb37aac469696b6ceb3987a38
+      Path: Events\Default Work Unit\Play_LightOn_1
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Lv1_PlayPlaceMusic
       guid: 49a494cca0aa634ebcf44924c113ef3d
       id: 1852343440
@@ -491,6 +508,91 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_XyloC
+      guid: a28700ab35fd5d49983bc49708db6c74
+      id: 4153846227
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Play_XyloC
+        ObjectType: 3
+        guid: a28700ab35fd5d49983bc49708db6c74
+      Path: Events\Default Work Unit\Play_XyloC
+      maxAttenuation: 0
+      maxDuration: 0.48026314
+      minDuration: 0.48026314
+    - name: Play_XyloD
+      guid: 181e067091c52a49949a709d1ea5a58f
+      id: 4153846228
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Play_XyloD
+        ObjectType: 3
+        guid: 181e067091c52a49949a709d1ea5a58f
+      Path: Events\Default Work Unit\Play_XyloD
+      maxAttenuation: 0
+      maxDuration: 0.425
+      minDuration: 0.425
+    - name: Play_XyloE
+      guid: 8831dff8ef3928479bbab3f8f32579e4
+      id: 4153846229
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Play_XyloE
+        ObjectType: 3
+        guid: 8831dff8ef3928479bbab3f8f32579e4
+      Path: Events\Default Work Unit\Play_XyloE
+      maxAttenuation: 0
+      maxDuration: 0.4381579
+      minDuration: 0.4381579
+    - name: Play_XyloG
+      guid: dc68cda129d2e248b502e0cb733a327b
+      id: 4153846231
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Play_XyloG
+        ObjectType: 3
+        guid: dc68cda129d2e248b502e0cb733a327b
+      Path: Events\Default Work Unit\Play_XyloG
+      maxAttenuation: 0
+      maxDuration: 0.4526316
+      minDuration: 0.4526316
+    - name: Play_XyloSequence
+      guid: da5304f3021eb64584d1262cbdab2fac
+      id: 4293423455
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Play_XyloSequence
+        ObjectType: 3
+        guid: da5304f3021eb64584d1262cbdab2fac
+      Path: Events\Default Work Unit\Play_XyloSequence
+      maxAttenuation: 0
+      maxDuration: 2.045614
+      minDuration: 2.045614
     - name: Stop_Lv1_PlayPlaceMusic
       guid: db640eacbf037d4fa41455d3c475e7d7
       id: 1754848386
