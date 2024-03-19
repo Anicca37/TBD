@@ -135,6 +135,11 @@ public class ClockManipulation : MonoBehaviour
             }
         }
 
+        if (isPlayPlaceScene() && blockManager.GetLightShowStatus())
+        {
+            return false;
+        }
+
         RaycastHit hit;
         Ray ray = currentCamera.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit, interactRange))

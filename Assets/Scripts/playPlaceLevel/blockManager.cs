@@ -7,7 +7,7 @@ public class blockManager : MonoBehaviour
     public List<GameObject> blocks;
     public string pickupableTag = "Pickupable";
     public string tempTag = "TempUntagged";
-    private bool lightShowActive = false;
+    private static bool lightShowActive = false;
 
     
     public void BlockClicked(GameObject block)
@@ -39,5 +39,10 @@ public class blockManager : MonoBehaviour
         {
             block.tag = newTag;
         }
+    }
+
+    public static bool GetLightShowStatus()
+    {
+        return lightShowActive;
     }
 }
