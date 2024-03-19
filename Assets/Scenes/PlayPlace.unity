@@ -2391,6 +2391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xyloID: 1
+  XsequenceChecker: {fileID: 0}
 --- !u!114 &78852607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5182,7 +5183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee6e8abfdc3b81141b373de5affd5241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerList: ae8d9d44f7e1664c
+  triggerList: ae8d9d44
   useOtherObject: 0
   data:
     idInternal: 0
@@ -12899,6 +12900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xyloID: 4
+  XsequenceChecker: {fileID: 0}
 --- !u!65 &442613822
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14825,7 +14827,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7819051928693236198, guid: 9dcacb3360ef1384d89cb95ebcb077e0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.537
+      value: 12.3
       objectReference: {fileID: 0}
     - target: {fileID: 7819051928693236198, guid: 9dcacb3360ef1384d89cb95ebcb077e0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15083,6 +15085,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xyloID: 2
+  XsequenceChecker: {fileID: 0}
 --- !u!65 &533333686
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42061,6 +42064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a744dee5fed24cee82243c8e67b5340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ifXyloCorrectSoundPlayed: 0
 --- !u!4 &1546052359
 Transform:
   m_ObjectHideFlags: 0
@@ -44574,6 +44578,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xyloID: 3
+  XsequenceChecker: {fileID: 0}
 --- !u!65 &1660420547
 BoxCollider:
   m_ObjectHideFlags: 0
