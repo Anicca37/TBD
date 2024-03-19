@@ -636,7 +636,7 @@
 				<Event Id="1663839887" Name="Stop_Wind_Blowing" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{174F0390-328F-9D62-6155-2630EE8A3809}">
+		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{941BA72C-5FA5-B6FD-8691-28DFC4A60E8C}">
 			<ShortName>Level1PlayPlace</ShortName>
 			<Path>Level1PlayPlace.bnk</Path>
 			<Media>
@@ -727,6 +727,10 @@
 				<File Id="368243262" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran1\mus_3-4_125bpm_Level1_Tran1_Chords.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran1/mus_3-4_125bpm_Level1_Tran1_Chords_239921B3.wem</CachePath>
+				</File>
+				<File Id="377200440" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>LightShow_1.wav</ShortName>
+					<CachePath>SFX/LightShow_1_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="433731441" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_CMelody_VL.wav</ShortName>
@@ -907,6 +911,11 @@
 						<MediaRef Id="756684556"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1153064896" Name="Play_Lv1_LightShowMusic" DurationType="OneShot" DurationMin="5.375" DurationMax="5.375">
+					<MediaRefs>
+						<MediaRef Id="377200440"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1852343440" Name="Play_Lv1_PlayPlaceMusic" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="102272868"/>
@@ -982,6 +991,7 @@
 				<Event Id="3434769657" Name="Stop_Clock_Tick_Reverse" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1219381739" Name="Stop_LightOff_1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="221383132" Name="Stop_LightOnSound" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4020215174" Name="Stop_Lv1_LightShowMusic" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1754848386" Name="Stop_Lv1_PlayPlaceMusic" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 			<GameParameters>
@@ -1077,5 +1087,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{46B061F8-B1F5-3F78-53D4-72322D1751F5}</FileHash>
+	<FileHash>{9C2FB3D0-AA16-8848-4B55-703622A928DF}</FileHash>
 </SoundBanksInfo>

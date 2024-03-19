@@ -37,6 +37,7 @@ namespace AK
         static const AkUniqueID PLAY_LEVEL2_NEWGARDENMUSIC = 552396483U;
         static const AkUniqueID PLAY_LIGHTOFF_1 = 3140573545U;
         static const AkUniqueID PLAY_LIGHTONSOUND = 3765524326U;
+        static const AkUniqueID PLAY_LV1_LIGHTSHOWMUSIC = 1153064896U;
         static const AkUniqueID PLAY_LV1_PLAYPLACEMUSIC = 1852343440U;
         static const AkUniqueID PLAY_PINECONEPICKUP = 3549239601U;
         static const AkUniqueID PLAY_PLAYEREATEN = 3659914468U;
@@ -63,6 +64,7 @@ namespace AK
         static const AkUniqueID STOP_LEVEL2_NEWGARDENMUSIC = 929452813U;
         static const AkUniqueID STOP_LIGHTOFF_1 = 1219381739U;
         static const AkUniqueID STOP_LIGHTONSOUND = 221383132U;
+        static const AkUniqueID STOP_LV1_LIGHTSHOWMUSIC = 4020215174U;
         static const AkUniqueID STOP_LV1_PLAYPLACEMUSIC = 1754848386U;
         static const AkUniqueID STOP_WATERFLOW = 2135762577U;
         static const AkUniqueID STOP_WIND_BLOWING = 1663839887U;

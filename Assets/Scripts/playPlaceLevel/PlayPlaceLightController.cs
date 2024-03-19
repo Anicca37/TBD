@@ -46,7 +46,7 @@ public class PlayPlaceLightController : MonoBehaviour
                 {
                     isLightSoundPlayed = true;
                     AkSoundEngine.PostEvent("Play_LightOnSound", theCelling.gameObject);
-                    Invoke("LightSoundReset", 15f);
+                    Invoke("LightSoundReset", 10f);
                 }
                 
             }
@@ -67,7 +67,7 @@ public class PlayPlaceLightController : MonoBehaviour
                 {
                     isLightOffSoundPlayed = true;
                     AkSoundEngine.PostEvent("Play_LightOff_1", theCelling.gameObject);
-                    Invoke("LightOffSoundReset", 15f);
+                    Invoke("LightOffSoundReset", 10f);
                 }
                 AkSoundEngine.SetRTPCValue("Lv1_LightOn", 0);
             }

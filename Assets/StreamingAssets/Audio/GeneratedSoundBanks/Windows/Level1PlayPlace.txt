@@ -2,6 +2,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	94152718	Play_BlockDrop			\Default Work Unit\Play_BlockDrop	
 	221383132	Stop_LightOnSound			\Default Work Unit\Stop_LightOnSound	
 	831234954	Play_Confetti			\Default Work Unit\Play_Confetti	
+	1153064896	Play_Lv1_LightShowMusic			\Default Work Unit\Play_Lv1_LightShowMusic	
 	1219381739	Stop_LightOff_1			\Default Work Unit\Stop_LightOff_1	
 	1754848386	Stop_Lv1_PlayPlaceMusic			\Default Work Unit\Stop_Lv1_PlayPlaceMusic	
 	1852343440	Play_Lv1_PlayPlaceMusic			\Default Work Unit\Play_Lv1_PlayPlaceMusic	
@@ -13,6 +14,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3434769657	Stop_Clock_Tick_Reverse			\Level0\Tut_office\Clock\Stop_Clock_Tick_Reverse	
 	3765524326	Play_LightOnSound			\Default Work Unit\Play_LightOnSound	
 	3830889987	Play_Clock_Tick_Reverse			\Level0\Tut_office\Clock\Play_Clock_Tick_Reverse	
+	4020215174	Stop_Lv1_LightShowMusic			\Default Work Unit\Stop_Lv1_LightShowMusic	
 	4153846227	Play_XyloC			\Default Work Unit\Play_XyloC	
 	4153846228	Play_XyloD			\Default Work Unit\Play_XyloD	
 	4153846229	Play_XyloE			\Default Work Unit\Play_XyloE	
@@ -50,6 +52,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	343139440	mus_3-4_125bpm_Level1_Intro_CBass	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Intro\mus_3-4_125bpm_Level1_Intro_CBass_239921B3.wem		\Interactive Music Hierarchy\Default Work Unit\Lv1_PlayPlace\Lv1_PlayPlaceMusic\mus_3-4_125bpm_Level1_Intro\mus_3-4_125bpm_Level1_Intro_CBass		402504
 	362320997	mus_3-4_125bpm_Level1_Intro_Snare	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Intro\mus_3-4_125bpm_Level1_Intro_Snare_239921B3.wem		\Interactive Music Hierarchy\Default Work Unit\Lv1_PlayPlace\Lv1_PlayPlaceMusic\mus_3-4_125bpm_Level1_Intro\mus_3-4_125bpm_Level1_Intro_Snare		413601
 	368243262	mus_3-4_125bpm_Level1_Tran1_Chords	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran1\mus_3-4_125bpm_Level1_Tran1_Chords_239921B3.wem		\Interactive Music Hierarchy\Default Work Unit\Lv1_PlayPlace\Lv1_PlayPlaceMusic\mus_3-4_125bpm_Level1_Tran1\mus_3-4_125bpm_Level1_Tran1_Chords		681009
+	377200440	LightShow_1	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\LightShow_1_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\Lv1_PlayPlace\Lv1_LightShowMusic\LightShow_1\LightShow_1		1725552
 	433731441	mus_3-4_125bpm_Level1_Tran2_CMelody_VL	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_CMelody_VL_239921B3.wem		\Interactive Music Hierarchy\Default Work Unit\Lv1_PlayPlace\Lv1_PlayPlaceMusic\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_CMelody_VL		693155
 	459346347	BlockDrop_2	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\BlockDrop_2_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Level1_PlayPlace\Blocks\BlockDrop\BlockDrop_2		11352
 	484366609	mus_3-4_125bpm_Level1_S1_Bass	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S1\mus_3-4_125bpm_Level1_S1_Bass_239921B3.wem		\Interactive Music Hierarchy\Default Work Unit\Lv1_PlayPlace\Lv1_PlayPlaceMusic\mus_3-4_125bpm_Level1_S1\mus_3-4_125bpm_Level1_S1_Bass		734775

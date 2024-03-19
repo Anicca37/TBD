@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class XSequenceChecker : MonoBehaviour
 {
-    private int[] targetSequence = { 1, 3, 2, 4};
+    private int[] targetSequence = {1, 3, 2, 4};
     private int currentSequenceIndex = 0;
 
     public void XyloClicked(int xyloID)
