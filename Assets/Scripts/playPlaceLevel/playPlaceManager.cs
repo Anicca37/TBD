@@ -14,7 +14,10 @@ public class PlayPlaceManager : MonoBehaviour
     public GameObject EscapeController;
     private Vector3 ballsinitialPosition;
     public GameObject balls;
-    public GameObject ketchupToDrop;
+    public Camera playerCamera;
+    public Camera tunnelCamera;
+    [SerializeField] private Animator doorAnimator;
+
 
     void Awake()
     {
@@ -48,7 +51,7 @@ public class PlayPlaceManager : MonoBehaviour
                 else
                 {
                     isXylophoneSequenceCorrect = true;
-                    DropKetchupOntoScale(); // Unlock the escape mechanism
+                    OpenTunnel(); // Unlock the escape mechanism
                 }
                 break;
             case "Escape":
@@ -94,15 +97,20 @@ public class PlayPlaceManager : MonoBehaviour
         obj.SetActive(false); // disable ball
         obj.transform.position = ballsinitialPosition; // reset to original position
     }
-    void DropKetchupOntoScale()
+    void OpenTunnel()
     {
-        Debug.Log("Xylophone sequence correct, dropping ketchup onto scale.");
-        ketchupToDrop.SetActive(true);
-        Rigidbody rb = ketchupToDrop.GetComponent<Rigidbody>();
-        if (rb != null)
-        {
-            rb.isKinematic = false;
-        }
+        Debug.Log("Xylophone sequence correct, opening tunnel.");
+        StartCoroutine(SwitchCamera(playerCamera, tunnelCamera, 0f));
+        doorAnimator.SetTrigger("Open");
+
+        // ketchupToDrop.SetActive(true);
+        // Rigidbody rb = ketchupToDrop.GetComponent<Rigidbody>();
+        // if (rb != null)
+        // {
+        //     rb.isKinematic = false;
+        // }
+        StartCoroutine(SwitchCamera(tunnelCamera, playerCamera, 5f));
+
     }
 
     void EscapePlayPlace()
@@ -110,6 +118,14 @@ public class PlayPlaceManager : MonoBehaviour
         Debug.Log("Escaping the play place.");
         // Insert escape logic here
         EscapeController.GetComponent<EscapeMenuController>().OnEscapeActivated();
+    }
+
+    IEnumerator SwitchCamera(Camera cameraToDisable, Camera cameraToEnable, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        cameraToDisable.gameObject.SetActive(false);
+        cameraToEnable.gameObject.SetActive(true);
+
     }
 
     public void ResetPuzzles()
