@@ -635,10 +635,14 @@
 				<Event Id="1663839887" Name="Stop_Wind_Blowing" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{3285F66C-B626-CF04-5FB4-D5DC9F058A8C}">
+		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{D8957C9D-FE99-9164-2E35-58179CF8FFF8}">
 			<ShortName>Level1PlayPlace</ShortName>
 			<Path>Level1PlayPlace.bnk</Path>
 			<Media>
+				<File Id="70057683" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>LightOn_1.wav</ShortName>
+					<CachePath>SFX/LightOn_1_F8A0192B.wem</CachePath>
+				</File>
 				<File Id="102272868" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S2\mus_3-4_125bpm_Level1_S2_Kick.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S2/mus_3-4_125bpm_Level1_S2_Kick_239921B3.wem</CachePath>
@@ -859,6 +863,11 @@
 						<MediaRef Id="985095586"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1126669045" Name="Play_LightOn_1" DurationType="OneShot" DurationMin="0.6058393" DurationMax="0.6058393">
+					<MediaRefs>
+						<MediaRef Id="70057683"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1852343440" Name="Play_Lv1_PlayPlaceMusic" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="102272868"/>
@@ -1025,5 +1034,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{7470DEA2-13E4-4EE0-9D64-03BDEF9189EB}</FileHash>
+	<FileHash>{3FD67409-3005-8EC9-169E-78C820FAC479}</FileHash>
 </SoundBanksInfo>

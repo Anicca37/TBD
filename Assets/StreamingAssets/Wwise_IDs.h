@@ -34,6 +34,7 @@ namespace AK
         static const AkUniqueID PLAY_FLYTRAPPOPEDUP = 531081561U;
         static const AkUniqueID PLAY_LEVEL2_GARDENAMBIENCE = 3374855610U;
         static const AkUniqueID PLAY_LEVEL2_NEWGARDENMUSIC = 552396483U;
+        static const AkUniqueID PLAY_LIGHTON_1 = 1126669045U;
         static const AkUniqueID PLAY_LV1_PLAYPLACEMUSIC = 1852343440U;
         static const AkUniqueID PLAY_PINECONEPICKUP = 3549239601U;
         static const AkUniqueID PLAY_PLAYEREATEN = 3659914468U;

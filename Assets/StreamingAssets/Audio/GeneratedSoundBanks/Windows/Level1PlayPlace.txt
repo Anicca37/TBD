@@ -1,5 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	94152718	Play_BlockDrop			\Default Work Unit\Play_BlockDrop	
+	1126669045	Play_LightOn_1			\Default Work Unit\Play_LightOn_1	
 	1754848386	Stop_Lv1_PlayPlaceMusic			\Default Work Unit\Stop_Lv1_PlayPlaceMusic	
 	1852343440	Play_Lv1_PlayPlaceMusic			\Default Work Unit\Play_Lv1_PlayPlaceMusic	
 	1903858809	Play_BlockPickUp			\Default Work Unit\Play_BlockPickUp	
@@ -19,6 +20,7 @@ Modulator Envelope	ID	Name			Wwise Object Path	Notes
 	1033209168	ReverseTick (Custom)				
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	70057683	LightOn_1	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\LightOn_1_F8A0192B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Level1_PlayPlace\Light\LightOn_1		10239
 	102272868	mus_3-4_125bpm_Level1_S2_Kick	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S2\mus_3-4_125bpm_Level1_S2_Kick_239921B3.wem		\Interactive Music Hierarchy\Default Work Unit\Lv1_PlayPlace\Lv1_PlayPlaceMusic\mus_3-4_125bpm_Level1_S2\mus_3-4_125bpm_Level1_S2_Kick		669747
 	132293126	mus_3-4_125bpm_Level1_Intro_Kick	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Intro\mus_3-4_125bpm_Level1_Intro_Kick_239921B3.wem		\Interactive Music Hierarchy\Default Work Unit\Lv1_PlayPlace\Lv1_PlayPlaceMusic\mus_3-4_125bpm_Level1_Intro\mus_3-4_125bpm_Level1_Intro_Kick		379115
 	139417961	mus_3-4_125bpm_Level1_Tran1_Kick	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran1\mus_3-4_125bpm_Level1_Tran1_Kick_239921B3.wem		\Interactive Music Hierarchy\Default Work Unit\Lv1_PlayPlace\Lv1_PlayPlaceMusic\mus_3-4_125bpm_Level1_Tran1\mus_3-4_125bpm_Level1_Tran1_Kick		647712
