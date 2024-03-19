@@ -42,6 +42,7 @@ namespace AK
         static const AkUniqueID PLAY_PINECONEPICKUP = 3549239601U;
         static const AkUniqueID PLAY_PLAYEREATEN = 3659914468U;
         static const AkUniqueID PLAY_SCALE_BALANCING = 2809285424U;
+        static const AkUniqueID PLAY_SLIDEDOOROPEN_1 = 1324211945U;
         static const AkUniqueID PLAY_STATUE_LOUD = 976664737U;
         static const AkUniqueID PLAY_TABLEDROP = 1525201045U;
         static const AkUniqueID PLAY_TABLEPICKUP = 3370429210U;
@@ -52,11 +53,12 @@ namespace AK
         static const AkUniqueID PLAY_WIND_BLOWING = 2075190801U;
         static const AkUniqueID PLAY_WINDCHIME = 4235265352U;
         static const AkUniqueID PLAY_WOODGROWINGCRAZY = 228010707U;
+        static const AkUniqueID PLAY_WRONGSEQUENCE = 3661318894U;
         static const AkUniqueID PLAY_XYLOC = 4153846227U;
         static const AkUniqueID PLAY_XYLOD = 4153846228U;
         static const AkUniqueID PLAY_XYLOE = 4153846229U;
         static const AkUniqueID PLAY_XYLOG = 4153846231U;
-        static const AkUniqueID PLAY_XYLOSEQUENCE = 4293423455U;
+        static const AkUniqueID PLAY_XYLOSEQUENCE_FIXED = 3187775344U;
         static const AkUniqueID STOP_CHIME_MELODY = 184097815U;
         static const AkUniqueID STOP_CLOCK_TICK = 2897827502U;
         static const AkUniqueID STOP_CLOCK_TICK_REVERSE = 3434769657U;

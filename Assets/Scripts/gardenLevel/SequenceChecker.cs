@@ -40,15 +40,21 @@ public class SequenceChecker : MonoBehaviour
             if (ifCorrectSoundPlayed == false)
             {
                 ifCorrectSoundPlayed = true;
-                Invoke("playCorrectSound", 1f); // play correct after 0.5s;
+
+                Invoke("playWrongSound", 1f);
+                Invoke("playCorrectSound", 2f); // play correct after 0.5s;
             }
             
-            Invoke("makePlayedFalse", 5f);
+            Invoke("makePlayedFalse", 6f);
         }
     }
     public bool IsCorrectSequencePlayed()
     {
         return ifCorrectSoundPlayed;
+    }
+    private void playWrongSound()
+    {
+        AkSoundEngine.PostEvent("Play_WrongSequence", this.gameObject);
     }
 
     private void makePlayedTrue()

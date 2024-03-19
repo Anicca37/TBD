@@ -24,6 +24,10 @@ public class PlayPlaceManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            GameObject theClock = GameObject.Find("Clock");
+            AkSoundEngine.PostEvent("Stop_Clock_Tick", theClock.gameObject);
+            AkSoundEngine.PostEvent("Stop_Lv1_PlayPlaceMusic", this.gameObject);
+            AkSoundEngine.PostEvent("Stop_Lv1_LightShowMusic", this.gameObject);
         }
         else if (Instance != this)
         {
@@ -78,6 +82,10 @@ public class PlayPlaceManager : MonoBehaviour
     {
         Debug.Log("Balls sorted, revealing xylophone sequence.");
         // Insert logic to reveal the xylophone sequence here
+        
+        // play sound of xylo
+        GameObject theXylo = GameObject.Find("Xylo");
+        AkSoundEngine.PostEvent("Play_XyloSequence", theXylo.gameObject);
     }
     public bool AreBlocksSorted
     {
@@ -118,6 +126,9 @@ public class PlayPlaceManager : MonoBehaviour
         Debug.Log("Escaping the play place.");
         // Insert escape logic here
         EscapeController.GetComponent<EscapeMenuController>().OnEscapeActivated();
+
+        // play sound
+        AkSoundEngine.PostEvent("Play_Win", this.gameObject);
     }
 
     IEnumerator SwitchCamera(Camera cameraToDisable, Camera cameraToEnable, float delay)

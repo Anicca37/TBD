@@ -31,6 +31,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3549239601	Play_PineconePickup			\Lv2Garden\Play_PineconePickup	
 	3584090578	Play_BirdWing			\Lv2Garden\Play_BirdWing	
 	3659914468	Play_PlayerEaten			\Lv2Garden\Play_PlayerEaten	
+	3661318894	Play_WrongSequence			\Default Work Unit\Play_WrongSequence	
 	3830889987	Play_Clock_Tick_Reverse			\Level0\Tut_office\Clock\Play_Clock_Tick_Reverse	
 	4090890880	Play_Vine_Growing			\Lv2Garden\Play_Vine_Growing	
 	4235265352	Play_WindChime			\Lv2Garden\Play_WindChime	
@@ -108,4 +109,5 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	985095586	Clock_Tick_Reverse	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\Clock_Tick_Reverse_61B65DE5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Lv0_Office\Level0_Office\Clock\Clock_Reverse\Clock_Tick_Reverse		35953
 	1015123158	Garden_Ambience	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\Garden_Ambience_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\Lv2_Garden\Level2_GardenAmbience\Garden_Ambience\Garden_Ambience		30922100
 	1023893752	Flower_PickUp_07	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\Flower_PickUp_07_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Lv2_Garden\Level2_Garden\Flower\FlowerPickUp\Flower_PickUp_07		7571
+	1027777248	WrongSequence	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\WrongSequence_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\WrongSequence		5150
 

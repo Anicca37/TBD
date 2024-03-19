@@ -7,6 +7,8 @@ public class XSequenceChecker : MonoBehaviour
     private int[] targetSequence = {1, 3, 2, 4};
     private int currentSequenceIndex = 0;
 
+    public bool ifXyloCorrectSoundPlayed = false;
+
     public void XyloClicked(int xyloID)
     {
         Debug.Log(xyloID);
@@ -25,6 +27,17 @@ public class XSequenceChecker : MonoBehaviour
             else
             {
                 currentSequenceIndex = 0; // reset if wrong is clicked
+
+                //play sound
+                if (ifXyloCorrectSoundPlayed == false)
+                {
+                    ifXyloCorrectSoundPlayed = true;
+
+                    Invoke("playWrongSound", 1f);
+                    Invoke("playCorrectSound", 2f); // play correct after 0.5s;
+                }
+
+                Invoke("makePlayedFalse", 5f);
             }
         }
         else
@@ -33,6 +46,22 @@ public class XSequenceChecker : MonoBehaviour
 
         }
     }
+    private void playWrongSound()
+    {
+        AkSoundEngine.PostEvent("Play_WrongSequence", this.gameObject);
+    }
+
+    public bool IsXyloCorrectSequencePlayed()
+    {
+        return ifXyloCorrectSoundPlayed;
+    }
+
+    private void playCorrectSound()
+    {
+        GameObject theXylo = GameObject.Find("Xylo");
+        AkSoundEngine.PostEvent("Play_XyloSequence", theXylo.gameObject);
+    }
+
     // private void DropKetchup()
     // {
     //     ketchupToDrop.SetActive(true);
