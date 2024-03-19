@@ -107,7 +107,7 @@ public class MainMenuController : MonoBehaviour
         switch (selectedOption)
         {
             case MenuOption.Start:
-                SceneManager.LoadScene("DemoLevel");
+                SceneManager.LoadScene("IntroCutScene");
                 break;
             case MenuOption.Levels:
                 levelsOptionSelectedSprite.SetActive(false);

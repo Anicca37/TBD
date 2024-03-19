@@ -103,7 +103,7 @@ public class SelectLevelController : MonoBehaviour
         switch (selectedOption)
         {
             case MenuOption.Tutorial:
-                SceneManager.LoadScene("DemoLevel");
+                SceneManager.LoadScene("IntroCutScene");
                 break;
             case MenuOption.Ballpit:
                 SceneManager.LoadScene("PlayPlace");
