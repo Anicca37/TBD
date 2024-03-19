@@ -15,6 +15,8 @@ public class blockManager : MonoBehaviour
         if (!PlayPlaceManager.Instance.IsClockInteracted() && !lightShowActive)
         {
             StartCoroutine(LightShowWithDelay());
+            // play lightshow music
+            AkSoundEngine.PostEvent("Play_Lv1_LightShowMusic", this.gameObject);
         }
     }
 
@@ -26,7 +28,7 @@ public class blockManager : MonoBehaviour
         TagAllBlocks(tempTag); // Temporarily untag all blocks to prevent interaction
 
         // Wait for 5 seconds
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(5f);        
 
         TagAllBlocks(pickupableTag); // Restore the pickupable tag to all blocks
         ColorCycleLightShow.Instance.StopLightShow();

@@ -26,7 +26,11 @@ public class blockMatch : MonoBehaviour
         {
             // Correct match
             flowerScript.isMatched = true; // Mark as matched
-            SnapBlockToBucket(other.gameObject); 
+            SnapBlockToBucket(other.gameObject);
+            
+            // play sound
+            AkSoundEngine.PostEvent("Play_Confetti", other.gameObject);
+
             TriggerConfetti();
             matchedBlocks++;
             AutomaticallyDropblock(other.gameObject);

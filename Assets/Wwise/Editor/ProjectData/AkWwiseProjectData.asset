@@ -438,7 +438,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c829b83be71c8a4d9fc3b43dae098d9f
     GuidInternal: 
-    m_lastTime: -8584907948216291729
+    m_lastTime: -8584907762300802491
     List:
     - name: Play_BlockDrop
       guid: 98e20f838392bb45850e091c6e57c884
@@ -455,8 +455,8 @@ MonoBehaviour:
         guid: 98e20f838392bb45850e091c6e57c884
       Path: Events\Default Work Unit\Play_BlockDrop
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 1.783573
+      minDuration: 1.4872764
     - name: Play_BlockPickUp
       guid: e44bec5d23e9ef40be6f133235af1575
       id: 1903858809
@@ -474,6 +474,57 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.72498214
       minDuration: 0.56908756
+    - name: Play_Confetti
+      guid: 994260ccc6f91d4ea64ed9c28eecccd7
+      id: 831234954
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Play_Confetti
+        ObjectType: 3
+        guid: 994260ccc6f91d4ea64ed9c28eecccd7
+      Path: Events\Default Work Unit\Play_Confetti
+      maxAttenuation: 100
+      maxDuration: 1.5697507
+      minDuration: 1.2362527
+    - name: Play_LightOff_1
+      guid: ee41c06dcfee5149883ed0c24833a07a
+      id: 3140573545
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Play_LightOff_1
+        ObjectType: 3
+        guid: ee41c06dcfee5149883ed0c24833a07a
+      Path: Events\Default Work Unit\Play_LightOff_1
+      maxAttenuation: 0
+      maxDuration: 2.2927027
+      minDuration: 2.2927027
+    - name: Play_LightOnSound
+      guid: 817fd0d4f28fe44188ba3a9e68a69653
+      id: 3765524326
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Play_LightOnSound
+        ObjectType: 3
+        guid: 817fd0d4f28fe44188ba3a9e68a69653
+      Path: Events\Default Work Unit\Play_LightOnSound
+      maxAttenuation: 100
+      maxDuration: 8.928
+      minDuration: 8.928
     - name: Play_Lv1_PlayPlaceMusic
       guid: 49a494cca0aa634ebcf44924c113ef3d
       id: 1852343440
@@ -491,6 +542,125 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_XyloC
+      guid: a28700ab35fd5d49983bc49708db6c74
+      id: 4153846227
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Play_XyloC
+        ObjectType: 3
+        guid: a28700ab35fd5d49983bc49708db6c74
+      Path: Events\Default Work Unit\Play_XyloC
+      maxAttenuation: 0
+      maxDuration: 0.48026314
+      minDuration: 0.48026314
+    - name: Play_XyloD
+      guid: 181e067091c52a49949a709d1ea5a58f
+      id: 4153846228
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Play_XyloD
+        ObjectType: 3
+        guid: 181e067091c52a49949a709d1ea5a58f
+      Path: Events\Default Work Unit\Play_XyloD
+      maxAttenuation: 0
+      maxDuration: 0.425
+      minDuration: 0.425
+    - name: Play_XyloE
+      guid: 8831dff8ef3928479bbab3f8f32579e4
+      id: 4153846229
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Play_XyloE
+        ObjectType: 3
+        guid: 8831dff8ef3928479bbab3f8f32579e4
+      Path: Events\Default Work Unit\Play_XyloE
+      maxAttenuation: 0
+      maxDuration: 0.4381579
+      minDuration: 0.4381579
+    - name: Play_XyloG
+      guid: dc68cda129d2e248b502e0cb733a327b
+      id: 4153846231
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Play_XyloG
+        ObjectType: 3
+        guid: dc68cda129d2e248b502e0cb733a327b
+      Path: Events\Default Work Unit\Play_XyloG
+      maxAttenuation: 0
+      maxDuration: 0.4526316
+      minDuration: 0.4526316
+    - name: Play_XyloSequence
+      guid: da5304f3021eb64584d1262cbdab2fac
+      id: 4293423455
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Play_XyloSequence
+        ObjectType: 3
+        guid: da5304f3021eb64584d1262cbdab2fac
+      Path: Events\Default Work Unit\Play_XyloSequence
+      maxAttenuation: 0
+      maxDuration: 2.045614
+      minDuration: 2.045614
+    - name: Stop_LightOff_1
+      guid: dd4bbd6761f0ea4381e05285ba8eb280
+      id: 1219381739
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Stop_LightOff_1
+        ObjectType: 3
+        guid: dd4bbd6761f0ea4381e05285ba8eb280
+      Path: Events\Default Work Unit\Stop_LightOff_1
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_LightOnSound
+      guid: 7031fd439dc08749ae6ee7d172b85332
+      id: 221383132
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Stop_LightOnSound
+        ObjectType: 3
+        guid: 7031fd439dc08749ae6ee7d172b85332
+      Path: Events\Default Work Unit\Stop_LightOnSound
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Lv1_PlayPlaceMusic
       guid: db640eacbf037d4fa41455d3c475e7d7
       id: 1754848386
@@ -519,7 +689,7 @@ MonoBehaviour:
     ParentPath: Events\Level0
     guid: 241c5182ec754a49a8160c059dc386bb
     GuidInternal: 
-    m_lastTime: -8584908003804849183
+    m_lastTime: -8584907794184851277
     List:
     - name: Clock
       guid: c5896f696e0fc64da2826d1676e71274
@@ -1393,8 +1563,22 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 64668823ab09304691eb36ba27dad8b7
     GuidInternal: 
-    m_lastTime: -8584949682094888198
-    List: []
+    m_lastTime: -8584907770822630882
+    List:
+    - name: Lv1_LightOn
+      guid: 2bceeb45c5eb784a85e052e4a7f0f32f
+      id: 185769106
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 64668823ab09304691eb36ba27dad8b7
+      - ElementName: Lv1_LightOn
+        ObjectType: 13
+        guid: 2bceeb45c5eb784a85e052e4a7f0f32f
+      Path: Game Parameters\Default Work Unit\Lv1_LightOn
   - PhysicalPath: Game Parameters\Factory Soundseed Air Game Syncs.wwu
     PathAndIcons:
     - ElementName: Game Parameters
@@ -1560,7 +1744,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 36b75a50e9d9804589f2328192c42f54
     GuidInternal: 
-    m_lastTime: -8584949682095004301
+    m_lastTime: -8584907780817083934
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
