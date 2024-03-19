@@ -382,7 +382,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 724273f56b5e06438af07ac6a6b97f15
     GuidInternal: 
-    m_lastTime: -8584908307388315729
+    m_lastTime: -8584907907669500895
     List:
     - name: Level0
       guid: 7eb2b7a76947ba4bacd1da9459a246e7
@@ -472,8 +472,8 @@ MonoBehaviour:
         guid: e44bec5d23e9ef40be6f133235af1575
       Path: Events\Default Work Unit\Play_BlockPickUp
       maxAttenuation: 0
-      maxDuration: 2.0323272
-      minDuration: 1.5446662
+      maxDuration: 0.72498214
+      minDuration: 0.56908756
     - name: Play_Lv1_PlayPlaceMusic
       guid: 49a494cca0aa634ebcf44924c113ef3d
       id: 1852343440
@@ -685,8 +685,8 @@ MonoBehaviour:
         guid: 6dd292460300404cbd3d3a587f25e73a
       Path: Events\Level0\Tut_office\Play_TableDrop
       maxAttenuation: 0
-      maxDuration: 0.47466666
-      minDuration: 0.42548987
+      maxDuration: 0.5105013
+      minDuration: 0.4191475
     - name: Play_TablePickUp
       guid: 03c14905e3171f4d9d6f17a5fbae887f
       id: 3370429210
@@ -705,7 +705,7 @@ MonoBehaviour:
         guid: 03c14905e3171f4d9d6f17a5fbae887f
       Path: Events\Level0\Tut_office\Play_TablePickUp
       maxAttenuation: 0
-      maxDuration: 0.46933332
+      maxDuration: 0.51240325
       minDuration: 0.3321867
     - name: Stop_Clock_Tick
       guid: e002896f28f91e449c1e92bb37f6be9c

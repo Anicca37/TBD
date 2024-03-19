@@ -635,7 +635,7 @@
 				<Event Id="1663839887" Name="Stop_Wind_Blowing" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{6C488D9A-DAAF-01D6-1155-E3C0496E367E}">
+		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{9430ED6B-7587-2319-B2A0-B66F3DCBAF3B}">
 			<ShortName>Level1PlayPlace</ShortName>
 			<Path>Level1PlayPlace.bnk</Path>
 			<Media>
@@ -669,7 +669,7 @@
 				</File>
 				<File Id="171567581" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BlockPickup_2.wav</ShortName>
-					<CachePath>SFX/BlockPickup_2_8E324C96.wem</CachePath>
+					<CachePath>SFX/BlockPickup_2_AFA832B1.wem</CachePath>
 				</File>
 				<File Id="179272902" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran1\mus_3-4_125bpm_Level1_Tran1_Snare.wav</ShortName>
@@ -745,7 +745,7 @@
 				</File>
 				<File Id="700689704" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BlockPickup_1.wav</ShortName>
-					<CachePath>SFX/BlockPickup_1_8E324C96.wem</CachePath>
+					<CachePath>SFX/BlockPickup_1_91E56951.wem</CachePath>
 				</File>
 				<File Id="703767957" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S2\mus_3-4_125bpm_Level1_S2_CMelody_CelloL.wav</ShortName>
@@ -783,6 +783,10 @@
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S1\mus_3-4_125bpm_Level1_S1_Snare.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S1/mus_3-4_125bpm_Level1_S1_Snare_239921B3.wem</CachePath>
 				</File>
+				<File Id="909003059" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Win.wav</ShortName>
+					<CachePath>SFX/Win_818F3B66.wem</CachePath>
+				</File>
 				<File Id="948773458" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Melody_Cello.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran2/mus_3-4_125bpm_Level1_Tran2_Melody_Cello_239921B3.wem</CachePath>
@@ -806,7 +810,7 @@
 			</Media>
 			<Events>
 				<Event Id="94152718" Name="Play_BlockDrop" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1903858809" Name="Play_BlockPickUp" DurationType="OneShot" DurationMin="1.5446662" DurationMax="2.0323272">
+				<Event Id="1903858809" Name="Play_BlockPickUp" DurationType="OneShot" DurationMin="0.56908756" DurationMax="0.72498214">
 					<MediaRefs>
 						<MediaRef Id="171567581"/>
 						<MediaRef Id="700689704"/>
@@ -863,12 +867,17 @@
 						<MediaRef Id="1048775046"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2955987680" Name="Play_Win" DurationType="OneShot" DurationMin="1" DurationMax="1">
+					<MediaRefs>
+						<MediaRef Id="909003059"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2897827502" Name="Stop_Clock_Tick" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3434769657" Name="Stop_Clock_Tick_Reverse" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1754848386" Name="Stop_Lv1_PlayPlaceMusic" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{AE43F665-8244-D1C1-53D8-4F6A90DBCA1E}">
+		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{A5503E97-DEDF-A80E-2DA7-FEF6F4DDE207}">
 			<ShortName>Level0</ShortName>
 			<Path>Level0.bnk</Path>
 			<Media>
@@ -934,13 +943,13 @@
 						<MediaRef Id="52226118"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1525201045" Name="Play_TableDrop" DurationType="OneShot" DurationMin="0.42548987" DurationMax="0.47466666">
+				<Event Id="1525201045" Name="Play_TableDrop" DurationType="OneShot" DurationMin="0.4191475" DurationMax="0.5105013">
 					<MediaRefs>
 						<MediaRef Id="181112472"/>
 						<MediaRef Id="790702576"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3370429210" Name="Play_TablePickUp" DurationType="OneShot" DurationMin="0.3321867" DurationMax="0.46933332">
+				<Event Id="3370429210" Name="Play_TablePickUp" DurationType="OneShot" DurationMin="0.3321867" DurationMax="0.51240325">
 					<MediaRefs>
 						<MediaRef Id="12980260"/>
 						<MediaRef Id="414646934"/>
@@ -958,5 +967,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{A6127C81-C82B-FB5A-6FA8-16236D210D14}</FileHash>
+	<FileHash>{6AA3D968-9FE6-F00A-0C11-1014FC1D88B0}</FileHash>
 </SoundBanksInfo>
