@@ -91,6 +91,10 @@ public class playerPickup : MonoBehaviour
                     {
                         AkSoundEngine.PostEvent("Play_PineconePickup", this.gameObject);
                     }
+                    else if (currentPickup.name.Contains("block"))
+                    {
+                        AkSoundEngine.PostEvent("Play_BlockPickUp", this.gameObject);
+                    }
                 }
             }
         }
@@ -115,6 +119,10 @@ public class playerPickup : MonoBehaviour
         if (currentPickup.name.Contains("Chair"))
         {
             AkSoundEngine.PostEvent("Play_TableDrop", this.gameObject);
+        }
+        else if (currentPickup.name.Contains("block"))
+        {
+            AkSoundEngine.PostEvent("Play_BlockDrop", this.gameObject);
         }
         // Reset the current pickup variable
         currentPickup = null;

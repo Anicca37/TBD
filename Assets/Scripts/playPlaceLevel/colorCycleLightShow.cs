@@ -23,7 +23,6 @@ public class ColorCycleLightShow : MonoBehaviour
         }
     }
 
-    
     public void StartLightShow()
     {
         lightShowCoroutine = StartCoroutine(LightShowRoutine());

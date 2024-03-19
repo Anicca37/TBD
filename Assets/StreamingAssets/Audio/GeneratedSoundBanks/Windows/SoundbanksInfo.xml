@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{C37BD37C-6D9E-EB83-34A8-B6B594211684}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{7D5036BF-370F-A633-2851-C5A6BBA59438}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -25,6 +25,7 @@
 				<Bus Id="3991942870" Name="Music"/>
 			</Busses>
 			<GameParameters>
+				<GameParameter Id="185769106" Name="Lv1_LightOn"/>
 				<GameParameter Id="822163944" Name="SS_Air_RPM"/>
 				<GameParameter Id="1029930033" Name="SS_Air_Fury"/>
 				<GameParameter Id="1351367891" Name="SS_Air_Fear"/>
@@ -635,10 +636,18 @@
 				<Event Id="1663839887" Name="Stop_Wind_Blowing" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{6C488D9A-DAAF-01D6-1155-E3C0496E367E}">
+		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{941BA72C-5FA5-B6FD-8691-28DFC4A60E8C}">
 			<ShortName>Level1PlayPlace</ShortName>
 			<Path>Level1PlayPlace.bnk</Path>
 			<Media>
+				<File Id="36334361" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Confetti_3.wav</ShortName>
+					<CachePath>SFX/Confetti_3_8E324C96.wem</CachePath>
+				</File>
+				<File Id="70057683" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>LightOn_1.wav</ShortName>
+					<CachePath>SFX/LightOn_1_F8A0192B.wem</CachePath>
+				</File>
 				<File Id="102272868" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S2\mus_3-4_125bpm_Level1_S2_Kick.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S2/mus_3-4_125bpm_Level1_S2_Kick_239921B3.wem</CachePath>
@@ -669,7 +678,11 @@
 				</File>
 				<File Id="171567581" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BlockPickup_2.wav</ShortName>
-					<CachePath>SFX/BlockPickup_2_8E324C96.wem</CachePath>
+					<CachePath>SFX/BlockPickup_2_AFA832B1.wem</CachePath>
+				</File>
+				<File Id="176319590" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>XyloC.wav</ShortName>
+					<CachePath>SFX/XyloC_22F2479D.wem</CachePath>
 				</File>
 				<File Id="179272902" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran1\mus_3-4_125bpm_Level1_Tran1_Snare.wav</ShortName>
@@ -691,6 +704,10 @@
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S2\mus_3-4_125bpm_Level1_S2_Melody_VP.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S2/mus_3-4_125bpm_Level1_S2_Melody_VP_239921B3.wem</CachePath>
 				</File>
+				<File Id="259781958" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>XyloD.wav</ShortName>
+					<CachePath>SFX/XyloD_091A51E1.wem</CachePath>
+				</File>
 				<File Id="283047273" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S2\mus_3-4_125bpm_Level1_S2_Bass.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S2/mus_3-4_125bpm_Level1_S2_Bass_239921B3.wem</CachePath>
@@ -711,9 +728,17 @@
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran1\mus_3-4_125bpm_Level1_Tran1_Chords.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran1/mus_3-4_125bpm_Level1_Tran1_Chords_239921B3.wem</CachePath>
 				</File>
+				<File Id="377200440" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>LightShow_1.wav</ShortName>
+					<CachePath>SFX/LightShow_1_FBC78EF0.wem</CachePath>
+				</File>
 				<File Id="433731441" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_CMelody_VL.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran2/mus_3-4_125bpm_Level1_Tran2_CMelody_VL_239921B3.wem</CachePath>
+				</File>
+				<File Id="459346347" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BlockDrop_2.wav</ShortName>
+					<CachePath>SFX/BlockDrop_2_8E324C96.wem</CachePath>
 				</File>
 				<File Id="484366609" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S1\mus_3-4_125bpm_Level1_S1_Bass.wav</ShortName>
@@ -722,6 +747,14 @@
 				<File Id="541156274" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Bass.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran2/mus_3-4_125bpm_Level1_Tran2_Bass_239921B3.wem</CachePath>
+				</File>
+				<File Id="545226739" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Confetti_2.wav</ShortName>
+					<CachePath>SFX/Confetti_2_8E324C96.wem</CachePath>
+				</File>
+				<File Id="545916312" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>XyloE.wav</ShortName>
+					<CachePath>SFX/XyloE_99E6503E.wem</CachePath>
 				</File>
 				<File Id="545992109" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran1\mus_3-4_125bpm_Level1_Tran1_Melody_Cello.wav</ShortName>
@@ -735,17 +768,29 @@
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S1\mus_3-4_125bpm_Level1_S1_Melody_Flute.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S1/mus_3-4_125bpm_Level1_S1_Melody_Flute_239921B3.wem</CachePath>
 				</File>
+				<File Id="600429234" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Confetti_4.wav</ShortName>
+					<CachePath>SFX/Confetti_4_8E324C96.wem</CachePath>
+				</File>
 				<File Id="609340708" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S1\mus_3-4_125bpm_Level1_S1_Tail.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S1/mus_3-4_125bpm_Level1_S1_Tail_239921B3.wem</CachePath>
+				</File>
+				<File Id="624857118" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>LightOffi_1.wav</ShortName>
+					<CachePath>SFX/LightOffi_1_20CA4B39.wem</CachePath>
 				</File>
 				<File Id="634654853" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S2\mus_3-4_125bpm_Level1_S2_CMelody_Cello.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S2/mus_3-4_125bpm_Level1_S2_CMelody_Cello_239921B3.wem</CachePath>
 				</File>
+				<File Id="645157359" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>XyloG.wav</ShortName>
+					<CachePath>SFX/XyloG_D0443FC6.wem</CachePath>
+				</File>
 				<File Id="700689704" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BlockPickup_1.wav</ShortName>
-					<CachePath>SFX/BlockPickup_1_8E324C96.wem</CachePath>
+					<CachePath>SFX/BlockPickup_1_91E56951.wem</CachePath>
 				</File>
 				<File Id="703767957" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S2\mus_3-4_125bpm_Level1_S2_CMelody_CelloL.wav</ShortName>
@@ -763,6 +808,10 @@
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S2\mus_3-4_125bpm_Level1_S2_Chords.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S2/mus_3-4_125bpm_Level1_S2_Chords_239921B3.wem</CachePath>
 				</File>
+				<File Id="756684556" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>LightFlurocentSound_1.wav</ShortName>
+					<CachePath>SFX/LightFlurocentSound_1_8E324C96.wem</CachePath>
+				</File>
 				<File Id="761293489" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran1\mus_3-4_125bpm_Level1_Tran1_Bass.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran1/mus_3-4_125bpm_Level1_Tran1_Bass_239921B3.wem</CachePath>
@@ -775,6 +824,10 @@
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Chords.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran2/mus_3-4_125bpm_Level1_Tran2_Chords_239921B3.wem</CachePath>
 				</File>
+				<File Id="854584472" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>XyloSequence.wav</ShortName>
+					<CachePath>SFX/XyloSequence_0119ADB5.wem</CachePath>
+				</File>
 				<File Id="883217290" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Snare.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran2/mus_3-4_125bpm_Level1_Tran2_Snare_239921B3.wem</CachePath>
@@ -782,6 +835,14 @@
 				<File Id="886951341" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S1\mus_3-4_125bpm_Level1_S1_Snare.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S1/mus_3-4_125bpm_Level1_S1_Snare_239921B3.wem</CachePath>
+				</File>
+				<File Id="909003059" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Win.wav</ShortName>
+					<CachePath>SFX/Win_818F3B66.wem</CachePath>
+				</File>
+				<File Id="944101764" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Confetti_1.wav</ShortName>
+					<CachePath>SFX/Confetti_1_8E324C96.wem</CachePath>
 				</File>
 				<File Id="948773458" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Melody_Cello.wav</ShortName>
@@ -803,10 +864,19 @@
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Kick.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran2/mus_3-4_125bpm_Level1_Tran2_Kick_239921B3.wem</CachePath>
 				</File>
+				<File Id="1062718881" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BlockDrop_1.wav</ShortName>
+					<CachePath>SFX/BlockDrop_1_8E324C96.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
-				<Event Id="94152718" Name="Play_BlockDrop" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1903858809" Name="Play_BlockPickUp" DurationType="OneShot" DurationMin="1.5446662" DurationMax="2.0323272">
+				<Event Id="94152718" Name="Play_BlockDrop" DurationType="OneShot" DurationMin="1.4872764" DurationMax="1.783573">
+					<MediaRefs>
+						<MediaRef Id="459346347"/>
+						<MediaRef Id="1062718881"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1903858809" Name="Play_BlockPickUp" DurationType="OneShot" DurationMin="0.56908756" DurationMax="0.72498214">
 					<MediaRefs>
 						<MediaRef Id="171567581"/>
 						<MediaRef Id="700689704"/>
@@ -820,6 +890,30 @@
 				<Event Id="3830889987" Name="Play_Clock_Tick_Reverse" MaxAttenuation="100" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="985095586"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="831234954" Name="Play_Confetti" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.2362527" DurationMax="1.5697507">
+					<MediaRefs>
+						<MediaRef Id="36334361"/>
+						<MediaRef Id="545226739"/>
+						<MediaRef Id="600429234"/>
+						<MediaRef Id="944101764"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3140573545" Name="Play_LightOff_1" DurationType="OneShot" DurationMin="2.2927027" DurationMax="2.2927027">
+					<MediaRefs>
+						<MediaRef Id="624857118"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3765524326" Name="Play_LightOnSound" MaxAttenuation="100" DurationType="OneShot" DurationMin="8.928" DurationMax="8.928">
+					<MediaRefs>
+						<MediaRef Id="70057683"/>
+						<MediaRef Id="756684556"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1153064896" Name="Play_Lv1_LightShowMusic" DurationType="OneShot" DurationMin="5.375" DurationMax="5.375">
+					<MediaRefs>
+						<MediaRef Id="377200440"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1852343440" Name="Play_Lv1_PlayPlaceMusic" DurationType="Infinite">
@@ -863,12 +957,48 @@
 						<MediaRef Id="1048775046"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2955987680" Name="Play_Win" DurationType="OneShot" DurationMin="1" DurationMax="1">
+					<MediaRefs>
+						<MediaRef Id="909003059"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4153846227" Name="Play_XyloC" DurationType="OneShot" DurationMin="0.48026314" DurationMax="0.48026314">
+					<MediaRefs>
+						<MediaRef Id="176319590"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4153846228" Name="Play_XyloD" DurationType="OneShot" DurationMin="0.425" DurationMax="0.425">
+					<MediaRefs>
+						<MediaRef Id="259781958"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4153846229" Name="Play_XyloE" DurationType="OneShot" DurationMin="0.4381579" DurationMax="0.4381579">
+					<MediaRefs>
+						<MediaRef Id="545916312"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4153846231" Name="Play_XyloG" DurationType="OneShot" DurationMin="0.4526316" DurationMax="0.4526316">
+					<MediaRefs>
+						<MediaRef Id="645157359"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4293423455" Name="Play_XyloSequence" DurationType="OneShot" DurationMin="2.045614" DurationMax="2.045614">
+					<MediaRefs>
+						<MediaRef Id="854584472"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2897827502" Name="Stop_Clock_Tick" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3434769657" Name="Stop_Clock_Tick_Reverse" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1219381739" Name="Stop_LightOff_1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="221383132" Name="Stop_LightOnSound" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4020215174" Name="Stop_Lv1_LightShowMusic" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1754848386" Name="Stop_Lv1_PlayPlaceMusic" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="185769106" Name="Lv1_LightOn"/>
+			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{AE43F665-8244-D1C1-53D8-4F6A90DBCA1E}">
+		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{A0B6F103-D919-291C-7FAA-AFA95D88F441}">
 			<ShortName>Level0</ShortName>
 			<Path>Level0.bnk</Path>
 			<Media>
@@ -934,13 +1064,13 @@
 						<MediaRef Id="52226118"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1525201045" Name="Play_TableDrop" DurationType="OneShot" DurationMin="0.42548987" DurationMax="0.47466666">
+				<Event Id="1525201045" Name="Play_TableDrop" DurationType="OneShot" DurationMin="0.4191475" DurationMax="0.5105013">
 					<MediaRefs>
 						<MediaRef Id="181112472"/>
 						<MediaRef Id="790702576"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3370429210" Name="Play_TablePickUp" DurationType="OneShot" DurationMin="0.3321867" DurationMax="0.46933332">
+				<Event Id="3370429210" Name="Play_TablePickUp" DurationType="OneShot" DurationMin="0.3321867" DurationMax="0.51240325">
 					<MediaRefs>
 						<MediaRef Id="12980260"/>
 						<MediaRef Id="414646934"/>
@@ -954,9 +1084,8 @@
 				</Event>
 				<Event Id="2897827502" Name="Stop_Clock_Tick" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3434769657" Name="Stop_Clock_Tick_Reverse" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="4144809523" Name="Stop_Level0Music" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{A6127C81-C82B-FB5A-6FA8-16236D210D14}</FileHash>
+	<FileHash>{9C2FB3D0-AA16-8848-4B55-703622A928DF}</FileHash>
 </SoundBanksInfo>

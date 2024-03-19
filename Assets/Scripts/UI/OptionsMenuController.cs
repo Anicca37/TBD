@@ -13,6 +13,7 @@ public class OptionsMenuController : MonoBehaviour
     public GameObject AmbienceOptionSelectedSprite;
     public GameObject ApplyOptionSelectedSprite;
     public GameObject BackOptionSelectedSprite;
+    public GameObject VineBorder;
 
     public GameObject MounseSenstivitySlider;
     public GameObject MusicSlider;
@@ -54,6 +55,7 @@ public class OptionsMenuController : MonoBehaviour
         MusicSlider.SetActive(true);
         SFXSlider.SetActive(true);
         AmbienceSlider.SetActive(true);
+        VineBorder.SetActive(true);
         // load saved settings
         currentMouseSensitivity = PlayerPrefs.GetFloat("MouseSensitivity", currentMouseSensitivity);
         currentMusicVolume = PlayerPrefs.GetFloat("MusicVolume", currentMusicVolume);
@@ -302,6 +304,7 @@ public class OptionsMenuController : MonoBehaviour
                     MusicSlider.SetActive(false);
                     SFXSlider.SetActive(false);
                     AmbienceSlider.SetActive(false);
+                    VineBorder.SetActive(false);
                     // disable optionsmenucontroller amd enable mainmenucontroller
                     mainMenuController.GetComponent<MainMenuController>().enabled = true;
                     mainMenuController.GetComponent<MainMenuController>().InitializeMenu();
@@ -318,6 +321,7 @@ public class OptionsMenuController : MonoBehaviour
                     MusicSlider.SetActive(false);
                     SFXSlider.SetActive(false);
                     AmbienceSlider.SetActive(false);
+                    VineBorder.SetActive(false);
                     // disable optionsmenucontroller and enable pausemenucontroller
                     pauseMenuController.GetComponent<PauseMenuController>().enabled = true;
                     pauseMenuController.GetComponent<PauseMenuController>().InitializePauseMenu();
