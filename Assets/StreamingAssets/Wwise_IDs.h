@@ -32,6 +32,7 @@ namespace AK
         static const AkUniqueID PLAY_FLYTRAPPOPEDUP = 531081561U;
         static const AkUniqueID PLAY_LEVEL2_GARDENAMBIENCE = 3374855610U;
         static const AkUniqueID PLAY_LEVEL2_NEWGARDENMUSIC = 552396483U;
+        static const AkUniqueID PLAY_LV1_PLAYPLACEMUSIC = 1852343440U;
         static const AkUniqueID PLAY_PINECONEPICKUP = 3549239601U;
         static const AkUniqueID PLAY_PLAYEREATEN = 3659914468U;
         static const AkUniqueID PLAY_SCALE_BALANCING = 2809285424U;
@@ -51,6 +52,7 @@ namespace AK
         static const AkUniqueID STOP_LEVEL0MUSIC = 4144809523U;
         static const AkUniqueID STOP_LEVEL2_GARDENAMBIENCE = 1659483392U;
         static const AkUniqueID STOP_LEVEL2_NEWGARDENMUSIC = 929452813U;
+        static const AkUniqueID STOP_LV1_PLAYPLACEMUSIC = 1754848386U;
         static const AkUniqueID STOP_WATERFLOW = 2135762577U;
         static const AkUniqueID STOP_WIND_BLOWING = 1663839887U;
     } // namespace EVENTS
@@ -73,12 +75,16 @@ namespace AK
     {
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID LEVEL0 = 2678230383U;
+        static const AkUniqueID LEVEL1PLAYPLACE = 2631894517U;
         static const AkUniqueID LEVEL2GARDEN = 2029599918U;
     } // namespace BANKS
 
     namespace BUSSES
     {
+        static const AkUniqueID AMBIENCE = 85412153U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID SFX = 393239870U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES

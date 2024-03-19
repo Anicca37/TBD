@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class fpsCameraControl : MonoBehaviour
 {
-    private float mouseSensitivity = 500f;
+    private float mouseSensitivity = 300f;
 
     public Transform player;
 
@@ -19,6 +19,8 @@ public class fpsCameraControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        mouseSensitivity = PlayerPrefs.GetFloat("MouseSensitivity", 3f) * 100f;
+
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 

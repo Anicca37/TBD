@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PlayPlaceManager : MonoBehaviour
 {
@@ -8,6 +9,12 @@ public class PlayPlaceManager : MonoBehaviour
     private bool isClockInteracted = false;
     private bool areBlocksSorted = false;
     private bool isXylophoneSequenceCorrect = false;
+
+    public PlayPlaceLightController playPlaceLightController;
+    public GameObject EscapeController;
+    private Vector3 ballsinitialPosition;
+    public GameObject balls;
+    public GameObject ketchupToDrop;
 
     void Awake()
     {
@@ -19,6 +26,7 @@ public class PlayPlaceManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        ballsinitialPosition = balls.transform.position;
     }
 
     public void CompletePuzzle(string puzzleName)
@@ -26,19 +34,11 @@ public class PlayPlaceManager : MonoBehaviour
         switch (puzzleName)
         {
             case "ClockInteraction":
-                isClockInteracted = true;
-                HighlightBlocks();
+                isClockInteracted = playPlaceLightController.IsPlayPlaceOpen();
                 break;
             case "BlockSorting":
-                if (!isClockInteracted) // Ball sorting done too early
-                {
-                    CauseLightShow();
-                }
-                else
-                {
-                    areBlocksSorted = true;
-                    RevealXylophoneSequence(); 
-                }
+                areBlocksSorted = true;
+                RevealXylophoneSequence();
                 break;
             case "Xylophone":
                 if (!areBlocksSorted) // Xylophone played too early
@@ -60,26 +60,15 @@ public class PlayPlaceManager : MonoBehaviour
         }
     }
 
+    public bool IsClockInteracted()
+    {
+        return isClockInteracted;
+    }
+
     void HighlightBlocks()
     {
         Debug.Log("Clock interacted, highlighting balls.");
         // Insert logic to highlight balls here
-    }
-
-    void CauseLightShow()
-    {
-        Debug.Log("Blocks sorted too early, initiating light show.");
-        StartCoroutine(LightShowWithDelay());
-    }
-
-    IEnumerator LightShowWithDelay()
-    {
-        ColorCycleLightShow.Instance.StartLightShow();
-
-        // Wait for 5 seconds
-        yield return new WaitForSeconds(5f);
-
-        ColorCycleLightShow.Instance.StopLightShow();
     }
 
     void RevealXylophoneSequence()
@@ -87,23 +76,51 @@ public class PlayPlaceManager : MonoBehaviour
         Debug.Log("Balls sorted, revealing xylophone sequence.");
         // Insert logic to reveal the xylophone sequence here
     }
+    public bool AreBlocksSorted
+    {
+        get { return areBlocksSorted; }
+    }
 
     void TriggerBallAvalanche()
     {
         Debug.Log("Xylophone played too early, triggering ball avalanche.");
-        // Insert logic to trigger a ball avalanche here
-    }
+        balls.SetActive(true);
 
+        StartCoroutine(DisableAndResetAfterDelay(balls, 10f));
+    }
+    IEnumerator DisableAndResetAfterDelay(GameObject obj, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        obj.SetActive(false); // disable ball
+        obj.transform.position = ballsinitialPosition; // reset to original position
+    }
     void DropKetchupOntoScale()
     {
         Debug.Log("Xylophone sequence correct, dropping ketchup onto scale.");
-        // Insert logic to drop ketchup onto the scale here
+        ketchupToDrop.SetActive(true);
+        Rigidbody rb = ketchupToDrop.GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.isKinematic = false;
+        }
     }
 
     void EscapePlayPlace()
     {
         Debug.Log("Escaping the play place.");
         // Insert escape logic here
+        EscapeController.GetComponent<EscapeMenuController>().OnEscapeActivated();
+    }
+
+    public void ResetPuzzles()
+    {
+        // Stop music here
+
+        isClockInteracted = false;
+        areBlocksSorted = false;
+        isXylophoneSequenceCorrect = false;
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 }
