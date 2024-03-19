@@ -27,9 +27,10 @@ public class GardenManager : MonoBehaviour
 
     private bool isGardenFlooded = false;
     [SerializeField] private float riseSpeed = 0.15f;
+    
+    private float floodDelay = 1.0f; 
+    [SerializeField] private float riseAmount = 20f; 
 
-    // private float floodDelay = 1.0f; 
-    [SerializeField] private float riseAmount = 10f; 
     private float initialYPosition; 
 
     private bool startFlood = false;
