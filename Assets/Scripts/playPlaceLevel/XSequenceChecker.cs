@@ -33,11 +33,11 @@ public class XSequenceChecker : MonoBehaviour
                 {
                     ifXyloCorrectSoundPlayed = true;
 
-                    Invoke("playWrongSound", 1f);
-                    Invoke("playCorrectSound", 2f); // play correct after 0.5s;
+                    Invoke("playWrongSound", 0.3f);
+                    Invoke("playCorrectSound", 1.3f); // play correct after 0.5s;
                 }
 
-                Invoke("makePlayedFalse", 5f);
+                Invoke("makeXPlayedFalse", 5f);
             }
         }
         else
@@ -46,6 +46,11 @@ public class XSequenceChecker : MonoBehaviour
 
         }
     }
+    private void makeXPlayedFalse()
+    {
+        ifXyloCorrectSoundPlayed = false;
+    }
+
     private void playWrongSound()
     {
         AkSoundEngine.PostEvent("Play_WrongSequence", this.gameObject);

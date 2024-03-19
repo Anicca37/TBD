@@ -111,6 +111,9 @@ public class PlayPlaceManager : MonoBehaviour
         StartCoroutine(SwitchCamera(playerCamera, tunnelCamera, 0f));
         doorAnimator.SetTrigger("Open");
 
+        //play sound        
+        Invoke("playDoorSound", 1f);
+
         // ketchupToDrop.SetActive(true);
         // Rigidbody rb = ketchupToDrop.GetComponent<Rigidbody>();
         // if (rb != null)
@@ -120,7 +123,10 @@ public class PlayPlaceManager : MonoBehaviour
         StartCoroutine(SwitchCamera(tunnelCamera, playerCamera, 5f));
 
     }
-
+    private void playDoorSound()
+    {
+        AkSoundEngine.PostEvent("Play_SlideDoorOpen_1", this.gameObject);
+    }
     void EscapePlayPlace()
     {
         Debug.Log("Escaping the play place.");

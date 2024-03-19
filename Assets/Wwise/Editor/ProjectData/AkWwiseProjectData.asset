@@ -676,8 +676,8 @@ MonoBehaviour:
         guid: da5304f3021eb64584d1262cbdab2fac
       Path: Events\Default Work Unit\Play_XyloSequence
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 4
+      minDuration: 4
     - name: Stop_LightOff_1
       guid: dd4bbd6761f0ea4381e05285ba8eb280
       id: 1219381739
