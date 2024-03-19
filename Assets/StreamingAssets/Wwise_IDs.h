@@ -26,6 +26,7 @@ namespace AK
         static const AkUniqueID PLAY_CHIMEG = 2759522925U;
         static const AkUniqueID PLAY_CLOCK_TICK = 2797822332U;
         static const AkUniqueID PLAY_CLOCK_TICK_REVERSE = 3830889987U;
+        static const AkUniqueID PLAY_CONFETTI = 831234954U;
         static const AkUniqueID PLAY_DOOR_CLOSE = 2292458263U;
         static const AkUniqueID PLAY_DOOR_OPEN = 1660008929U;
         static const AkUniqueID PLAY_FLOWERPICKUP = 1678695831U;
@@ -34,7 +35,8 @@ namespace AK
         static const AkUniqueID PLAY_FLYTRAPPOPEDUP = 531081561U;
         static const AkUniqueID PLAY_LEVEL2_GARDENAMBIENCE = 3374855610U;
         static const AkUniqueID PLAY_LEVEL2_NEWGARDENMUSIC = 552396483U;
-        static const AkUniqueID PLAY_LIGHTON_1 = 1126669045U;
+        static const AkUniqueID PLAY_LIGHTOFF_1 = 3140573545U;
+        static const AkUniqueID PLAY_LIGHTONSOUND = 3765524326U;
         static const AkUniqueID PLAY_LV1_PLAYPLACEMUSIC = 1852343440U;
         static const AkUniqueID PLAY_PINECONEPICKUP = 3549239601U;
         static const AkUniqueID PLAY_PLAYEREATEN = 3659914468U;
@@ -57,9 +59,10 @@ namespace AK
         static const AkUniqueID STOP_CHIME_MELODY = 184097815U;
         static const AkUniqueID STOP_CLOCK_TICK = 2897827502U;
         static const AkUniqueID STOP_CLOCK_TICK_REVERSE = 3434769657U;
-        static const AkUniqueID STOP_LEVEL0MUSIC = 4144809523U;
         static const AkUniqueID STOP_LEVEL2_GARDENAMBIENCE = 1659483392U;
         static const AkUniqueID STOP_LEVEL2_NEWGARDENMUSIC = 929452813U;
+        static const AkUniqueID STOP_LIGHTOFF_1 = 1219381739U;
+        static const AkUniqueID STOP_LIGHTONSOUND = 221383132U;
         static const AkUniqueID STOP_LV1_PLAYPLACEMUSIC = 1754848386U;
         static const AkUniqueID STOP_WATERFLOW = 2135762577U;
         static const AkUniqueID STOP_WIND_BLOWING = 1663839887U;
@@ -67,6 +70,7 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID LV1_LIGHTON = 185769106U;
         static const AkUniqueID SS_AIR_FEAR = 1351367891U;
         static const AkUniqueID SS_AIR_FREEFALL = 3002758120U;
         static const AkUniqueID SS_AIR_FURY = 1029930033U;

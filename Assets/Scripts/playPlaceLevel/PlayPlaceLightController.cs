@@ -9,6 +9,10 @@ public class PlayPlaceLightController : MonoBehaviour
 
     private bool isPlayPlaceOpen = false;
 
+    private bool isLightSoundPlayed = false;
+    private bool isLightOffSoundPlayed = false;
+    private bool isLvlMusicPlayed = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +22,7 @@ public class PlayPlaceLightController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GameObject theCelling = GameObject.Find("LightSoundEmitter");
         if (CanPlayPlaceOpen())
         {
             if (!isPlayPlaceOpen)
@@ -26,6 +31,24 @@ public class PlayPlaceLightController : MonoBehaviour
                 isPlayPlaceOpen = true;
 
                 // Play playplace open sound
+                if (isLvlMusicPlayed == false)
+                {
+                    AkSoundEngine.PostEvent("Play_Lv1_PlayPlaceMusic", this.gameObject);
+                }
+                isLvlMusicPlayed = true;
+                AkSoundEngine.SetRTPCValue("Lv1_LightOn", 100);
+
+                if (isLightOffSoundPlayed == true)
+                {
+                    AkSoundEngine.PostEvent("Stop_LightOff_1", theCelling.gameObject);
+                }
+                if (isLightSoundPlayed == false)
+                {
+                    isLightSoundPlayed = true;
+                    AkSoundEngine.PostEvent("Play_LightOnSound", theCelling.gameObject);
+                    Invoke("LightSoundReset", 15f);
+                }
+                
             }
         }
         else
@@ -36,9 +59,29 @@ public class PlayPlaceLightController : MonoBehaviour
                 isPlayPlaceOpen = false;
 
                 // Play playplace close sound
+                if (isLightSoundPlayed == true)
+                {
+                    AkSoundEngine.PostEvent("Stop_LightOnSound", theCelling.gameObject);
+                }
+                if (isLightOffSoundPlayed == false)
+                {
+                    isLightOffSoundPlayed = true;
+                    AkSoundEngine.PostEvent("Play_LightOff_1", theCelling.gameObject);
+                    Invoke("LightOffSoundReset", 15f);
+                }
+                AkSoundEngine.SetRTPCValue("Lv1_LightOn", 0);
             }
         }
         PlayPlaceManager.Instance.CompletePuzzle("ClockInteraction");
+    }
+
+    private void LightSoundReset()
+    {
+        isLightSoundPlayed = false;
+    }
+    private void LightOffSoundReset()
+    {
+        isLightOffSoundPlayed = false;
     }
 
     public bool IsPlayPlaceOpen()
