@@ -165,7 +165,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{0480474F-663F-DB73-CD73-1A8A66467F80}">
+		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{FF183D03-702E-4074-1B5F-6965E6AEB8C9}">
 			<ShortName>Level2Garden</ShortName>
 			<Path>Level2Garden.bnk</Path>
 			<Media>
@@ -635,17 +635,165 @@
 				<Event Id="1663839887" Name="Stop_Wind_Blowing" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{36903CD7-895B-CC4E-EA6E-DF5B882197C8}">
+		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{7C7083B1-31DF-4242-7418-04A72226316C}">
 			<ShortName>Level1PlayPlace</ShortName>
 			<Path>Level1PlayPlace.bnk</Path>
 			<Media>
+				<File Id="102272868" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S2\mus_3-4_125bpm_Level1_S2_Kick.wav</ShortName>
+					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S2/mus_3-4_125bpm_Level1_S2_Kick_239921B3.wem</CachePath>
+				</File>
+				<File Id="132293126" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Intro\mus_3-4_125bpm_Level1_Intro_Kick.wav</ShortName>
+					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Intro/mus_3-4_125bpm_Level1_Intro_Kick_239921B3.wem</CachePath>
+				</File>
+				<File Id="139417961" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran1\mus_3-4_125bpm_Level1_Tran1_Kick.wav</ShortName>
+					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran1/mus_3-4_125bpm_Level1_Tran1_Kick_239921B3.wem</CachePath>
+				</File>
+				<File Id="140344036" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran1\mus_3-4_125bpm_Level1_Tran1_CMelody_CelloL.wav</ShortName>
+					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran1/mus_3-4_125bpm_Level1_Tran1_CMelody_CelloL_239921B3.wem</CachePath>
+				</File>
+				<File Id="146954573" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_CMelody_VP.wav</ShortName>
+					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran2/mus_3-4_125bpm_Level1_Tran2_CMelody_VP_239921B3.wem</CachePath>
+				</File>
+				<File Id="147392274" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran1\mus_3-4_125bpm_Level1_Tran1_CBass.wav</ShortName>
+					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran1/mus_3-4_125bpm_Level1_Tran1_CBass_239921B3.wem</CachePath>
+				</File>
+				<File Id="149777786" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S1\mus_3-4_125bpm_Level1_S1_CMelody_VP.wav</ShortName>
+					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S1/mus_3-4_125bpm_Level1_S1_CMelody_VP_239921B3.wem</CachePath>
+				</File>
+				<File Id="179272902" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran1\mus_3-4_125bpm_Level1_Tran1_Snare.wav</ShortName>
+					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran1/mus_3-4_125bpm_Level1_Tran1_Snare_239921B3.wem</CachePath>
+				</File>
+				<File Id="182512831" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S1\mus_3-4_125bpm_Level1_S1_Chords.wav</ShortName>
+					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S1/mus_3-4_125bpm_Level1_S1_Chords_239921B3.wem</CachePath>
+				</File>
+				<File Id="236709149" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Melody_Flute.wav</ShortName>
+					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran2/mus_3-4_125bpm_Level1_Tran2_Melody_Flute_239921B3.wem</CachePath>
+				</File>
+				<File Id="243902618" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S1\mus_3-4_125bpm_Level1_S1_Melody_Piccolo.wav</ShortName>
+					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S1/mus_3-4_125bpm_Level1_S1_Melody_Piccolo_239921B3.wem</CachePath>
+				</File>
+				<File Id="247913356" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S2\mus_3-4_125bpm_Level1_S2_Melody_VP.wav</ShortName>
+					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S2/mus_3-4_125bpm_Level1_S2_Melody_VP_239921B3.wem</CachePath>
+				</File>
+				<File Id="283047273" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S2\mus_3-4_125bpm_Level1_S2_Bass.wav</ShortName>
+					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S2/mus_3-4_125bpm_Level1_S2_Bass_239921B3.wem</CachePath>
+				</File>
 				<File Id="336039053" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Clock_Tick.wav</ShortName>
 					<CachePath>SFX/Clock_Tick_56CEF360.wem</CachePath>
 				</File>
+				<File Id="343139440" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Intro\mus_3-4_125bpm_Level1_Intro_CBass.wav</ShortName>
+					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Intro/mus_3-4_125bpm_Level1_Intro_CBass_239921B3.wem</CachePath>
+				</File>
+				<File Id="362320997" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Intro\mus_3-4_125bpm_Level1_Intro_Snare.wav</ShortName>
+					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Intro/mus_3-4_125bpm_Level1_Intro_Snare_239921B3.wem</CachePath>
+				</File>
+				<File Id="368243262" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran1\mus_3-4_125bpm_Level1_Tran1_Chords.wav</ShortName>
+					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran1/mus_3-4_125bpm_Level1_Tran1_Chords_239921B3.wem</CachePath>
+				</File>
+				<File Id="433731441" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_CMelody_VL.wav</ShortName>
+					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran2/mus_3-4_125bpm_Level1_Tran2_CMelody_VL_239921B3.wem</CachePath>
+				</File>
+				<File Id="484366609" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S1\mus_3-4_125bpm_Level1_S1_Bass.wav</ShortName>
+					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S1/mus_3-4_125bpm_Level1_S1_Bass_239921B3.wem</CachePath>
+				</File>
+				<File Id="541156274" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Bass.wav</ShortName>
+					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran2/mus_3-4_125bpm_Level1_Tran2_Bass_239921B3.wem</CachePath>
+				</File>
+				<File Id="545992109" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran1\mus_3-4_125bpm_Level1_Tran1_Melody_Cello.wav</ShortName>
+					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran1/mus_3-4_125bpm_Level1_Tran1_Melody_Cello_239921B3.wem</CachePath>
+				</File>
+				<File Id="555353706" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S2\mus_3-4_125bpm_Level1_S2_Snare.wav</ShortName>
+					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S2/mus_3-4_125bpm_Level1_S2_Snare_239921B3.wem</CachePath>
+				</File>
+				<File Id="560022849" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S1\mus_3-4_125bpm_Level1_S1_Melody_Flute.wav</ShortName>
+					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S1/mus_3-4_125bpm_Level1_S1_Melody_Flute_239921B3.wem</CachePath>
+				</File>
+				<File Id="609340708" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S1\mus_3-4_125bpm_Level1_S1_Tail.wav</ShortName>
+					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S1/mus_3-4_125bpm_Level1_S1_Tail_239921B3.wem</CachePath>
+				</File>
+				<File Id="634654853" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S2\mus_3-4_125bpm_Level1_S2_CMelody_Cello.wav</ShortName>
+					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S2/mus_3-4_125bpm_Level1_S2_CMelody_Cello_239921B3.wem</CachePath>
+				</File>
+				<File Id="703767957" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S2\mus_3-4_125bpm_Level1_S2_CMelody_CelloL.wav</ShortName>
+					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S2/mus_3-4_125bpm_Level1_S2_CMelody_CelloL_239921B3.wem</CachePath>
+				</File>
+				<File Id="708645545" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran1\mus_3-4_125bpm_Level1_Tran1_Melody_Flute.wav</ShortName>
+					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran1/mus_3-4_125bpm_Level1_Tran1_Melody_Flute_239921B3.wem</CachePath>
+				</File>
+				<File Id="725930152" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S1\mus_3-4_125bpm_Level1_S1_CMelody_Horn.wav</ShortName>
+					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S1/mus_3-4_125bpm_Level1_S1_CMelody_Horn_239921B3.wem</CachePath>
+				</File>
+				<File Id="756244783" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S2\mus_3-4_125bpm_Level1_S2_Chords.wav</ShortName>
+					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S2/mus_3-4_125bpm_Level1_S2_Chords_239921B3.wem</CachePath>
+				</File>
+				<File Id="761293489" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran1\mus_3-4_125bpm_Level1_Tran1_Bass.wav</ShortName>
+					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran1/mus_3-4_125bpm_Level1_Tran1_Bass_239921B3.wem</CachePath>
+				</File>
+				<File Id="762738001" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S2\mus_3-4_125bpm_Level1_S2_Melody_VL.wav</ShortName>
+					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S2/mus_3-4_125bpm_Level1_S2_Melody_VL_239921B3.wem</CachePath>
+				</File>
+				<File Id="834838996" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Chords.wav</ShortName>
+					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran2/mus_3-4_125bpm_Level1_Tran2_Chords_239921B3.wem</CachePath>
+				</File>
+				<File Id="883217290" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Snare.wav</ShortName>
+					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran2/mus_3-4_125bpm_Level1_Tran2_Snare_239921B3.wem</CachePath>
+				</File>
+				<File Id="886951341" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S1\mus_3-4_125bpm_Level1_S1_Snare.wav</ShortName>
+					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S1/mus_3-4_125bpm_Level1_S1_Snare_239921B3.wem</CachePath>
+				</File>
+				<File Id="948773458" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Melody_Cello.wav</ShortName>
+					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran2/mus_3-4_125bpm_Level1_Tran2_Melody_Cello_239921B3.wem</CachePath>
+				</File>
+				<File Id="978309557" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S1\mus_3-4_125bpm_Level1_S1_Kick.wav</ShortName>
+					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S1/mus_3-4_125bpm_Level1_S1_Kick_239921B3.wem</CachePath>
+				</File>
 				<File Id="985095586" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Clock_Tick_Reverse.wav</ShortName>
 					<CachePath>SFX/Clock_Tick_Reverse_61B65DE5.wem</CachePath>
+				</File>
+				<File Id="1043953703" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_CBass.wav</ShortName>
+					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran2/mus_3-4_125bpm_Level1_Tran2_CBass_239921B3.wem</CachePath>
+				</File>
+				<File Id="1048775046" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Kick.wav</ShortName>
+					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran2/mus_3-4_125bpm_Level1_Tran2_Kick_239921B3.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -659,11 +807,53 @@
 						<MediaRef Id="985095586"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1852343440" Name="Play_Lv1_PlayPlaceMusic" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="102272868"/>
+						<MediaRef Id="132293126"/>
+						<MediaRef Id="139417961"/>
+						<MediaRef Id="140344036"/>
+						<MediaRef Id="146954573"/>
+						<MediaRef Id="147392274"/>
+						<MediaRef Id="149777786"/>
+						<MediaRef Id="179272902"/>
+						<MediaRef Id="182512831"/>
+						<MediaRef Id="236709149"/>
+						<MediaRef Id="243902618"/>
+						<MediaRef Id="247913356"/>
+						<MediaRef Id="283047273"/>
+						<MediaRef Id="343139440"/>
+						<MediaRef Id="362320997"/>
+						<MediaRef Id="368243262"/>
+						<MediaRef Id="433731441"/>
+						<MediaRef Id="484366609"/>
+						<MediaRef Id="541156274"/>
+						<MediaRef Id="545992109"/>
+						<MediaRef Id="555353706"/>
+						<MediaRef Id="560022849"/>
+						<MediaRef Id="609340708"/>
+						<MediaRef Id="634654853"/>
+						<MediaRef Id="703767957"/>
+						<MediaRef Id="708645545"/>
+						<MediaRef Id="725930152"/>
+						<MediaRef Id="756244783"/>
+						<MediaRef Id="761293489"/>
+						<MediaRef Id="762738001"/>
+						<MediaRef Id="834838996"/>
+						<MediaRef Id="883217290"/>
+						<MediaRef Id="886951341"/>
+						<MediaRef Id="948773458"/>
+						<MediaRef Id="978309557"/>
+						<MediaRef Id="1043953703"/>
+						<MediaRef Id="1048775046"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2897827502" Name="Stop_Clock_Tick" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3434769657" Name="Stop_Clock_Tick_Reverse" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1754848386" Name="Stop_Lv1_PlayPlaceMusic" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{08A09AFD-8346-F8E6-F864-DBE99C4F8F34}">
+		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{ABE3118B-4FE0-2FD8-2710-75A9C3786954}">
 			<ShortName>Level0</ShortName>
 			<Path>Level0.bnk</Path>
 			<Media>
@@ -753,5 +943,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{CECECEDB-7B3C-D839-BF47-68C6170DA88C}</FileHash>
+	<FileHash>{0363AA58-E1A6-D247-D4B3-E29864883757}</FileHash>
 </SoundBanksInfo>

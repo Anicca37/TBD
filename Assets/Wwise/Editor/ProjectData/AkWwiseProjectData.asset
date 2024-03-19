@@ -303,8 +303,25 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: f98fd86b9f949e4bb74dae3f2017c65c
     GuidInternal: 
-    m_lastTime: -8584949682095366490
+    m_lastTime: -8584908290339029116
     List:
+    - name: Ambience
+      guid: 289bbcffefa4594aae1bd5bea45ac420
+      id: 85412153
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f98fd86b9f949e4bb74dae3f2017c65c
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Ambience
+        ObjectType: 2
+        guid: 289bbcffefa4594aae1bd5bea45ac420
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Ambience
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
       id: 3803692087
@@ -319,6 +336,40 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+    - name: Music
+      guid: 2339c8a5b2b51240a85a6d87ed0bfd2a
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f98fd86b9f949e4bb74dae3f2017c65c
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Music
+        ObjectType: 2
+        guid: 2339c8a5b2b51240a85a6d87ed0bfd2a
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music
+    - name: SFX
+      guid: 133b2da7dd481a4aaaf48be9bcacebe9
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f98fd86b9f949e4bb74dae3f2017c65c
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 133b2da7dd481a4aaaf48be9bcacebe9
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -331,7 +382,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 724273f56b5e06438af07ac6a6b97f15
     GuidInternal: 
-    m_lastTime: -8584915872278779492
+    m_lastTime: -8584908307388315729
     List:
     - name: Level0
       guid: 7eb2b7a76947ba4bacd1da9459a246e7
@@ -347,6 +398,20 @@ MonoBehaviour:
         ObjectType: 7
         guid: 7eb2b7a76947ba4bacd1da9459a246e7
       Path: SoundBanks\Default Work Unit\Level0
+    - name: Level1PlayPlace
+      guid: 3f92520004bb7b4588685cd5795909c4
+      id: 2631894517
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 724273f56b5e06438af07ac6a6b97f15
+      - ElementName: Level1PlayPlace
+        ObjectType: 7
+        guid: 3f92520004bb7b4588685cd5795909c4
+      Path: SoundBanks\Default Work Unit\Level1PlayPlace
     - name: Level2Garden
       guid: 4e2ca4e8d7a0944b9a0940e42b33309a
       id: 2029599918
@@ -373,586 +438,8 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c829b83be71c8a4d9fc3b43dae098d9f
     GuidInternal: 
-    m_lastTime: -8584912515247820523
-    List:
-    - name: Play_Birds
-      guid: 83da1a64ae50fa4f8edb957f079b8173
-      id: 3025897706
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_Birds
-        ObjectType: 3
-        guid: 83da1a64ae50fa4f8edb957f079b8173
-      Path: Events\Default Work Unit\Play_Birds
-      maxAttenuation: 100
-      maxDuration: 1.3508126
-      minDuration: 0.813375
-    - name: Play_BirdsCrazy
-      guid: 3fdadab55a4b8a4481ad38102b6cc050
-      id: 1125237609
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_BirdsCrazy
-        ObjectType: 3
-        guid: 3fdadab55a4b8a4481ad38102b6cc050
-      Path: Events\Default Work Unit\Play_BirdsCrazy
-      maxAttenuation: 100
-      maxDuration: 1.3508126
-      minDuration: 0.813375
-    - name: Play_BirdWing
-      guid: c187ce0e70e6a3409e82cf57152114bd
-      id: 3584090578
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_BirdWing
-        ObjectType: 3
-        guid: c187ce0e70e6a3409e82cf57152114bd
-      Path: Events\Default Work Unit\Play_BirdWing
-      maxAttenuation: 100
-      maxDuration: 3.1929376
-      minDuration: 3.1929376
-    - name: Play_Button
-      guid: 937343f924bec6489cb40f81033ce814
-      id: 2099555730
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_Button
-        ObjectType: 3
-        guid: 937343f924bec6489cb40f81033ce814
-      Path: Events\Default Work Unit\Play_Button
-      maxAttenuation: 0
-      maxDuration: 0.2940787
-      minDuration: 0.2940787
-    - name: Play_Chime_Melody
-      guid: 1167d12386b66942a2cecaf0460d6711
-      id: 847650453
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_Chime_Melody
-        ObjectType: 3
-        guid: 1167d12386b66942a2cecaf0460d6711
-      Path: Events\Default Work Unit\Play_Chime_Melody
-      maxAttenuation: 0
-      maxDuration: 3.4618473
-      minDuration: 3.4618473
-    - name: Play_ChimeC
-      guid: ccda2c706ac6f04fa5fdfd6564009b72
-      id: 2759522921
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_ChimeC
-        ObjectType: 3
-        guid: ccda2c706ac6f04fa5fdfd6564009b72
-      Path: Events\Default Work Unit\Play_ChimeC
-      maxAttenuation: 0
-      maxDuration: 1.461875
-      minDuration: 1.461875
-    - name: Play_ChimeD
-      guid: 7496c32e9822b140acae41dd8f4da8e7
-      id: 2759522926
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_ChimeD
-        ObjectType: 3
-        guid: 7496c32e9822b140acae41dd8f4da8e7
-      Path: Events\Default Work Unit\Play_ChimeD
-      maxAttenuation: 0
-      maxDuration: 0.975875
-      minDuration: 0.975875
-    - name: Play_ChimeE
-      guid: d9f0f3a9ca03bc44a4810427024b8550
-      id: 2759522927
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_ChimeE
-        ObjectType: 3
-        guid: d9f0f3a9ca03bc44a4810427024b8550
-      Path: Events\Default Work Unit\Play_ChimeE
-      maxAttenuation: 0
-      maxDuration: 1.1756458
-      minDuration: 1.1756458
-    - name: Play_ChimeG
-      guid: 7b32b689c857ad4cac1c0ce90ef6af9e
-      id: 2759522925
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_ChimeG
-        ObjectType: 3
-        guid: 7b32b689c857ad4cac1c0ce90ef6af9e
-      Path: Events\Default Work Unit\Play_ChimeG
-      maxAttenuation: 0
-      maxDuration: 0.9033333
-      minDuration: 0.9033333
-    - name: Play_FlowerPickUp
-      guid: 7925cbe7db4a9942bec48b16fe07c5e2
-      id: 1678695831
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_FlowerPickUp
-        ObjectType: 3
-        guid: 7925cbe7db4a9942bec48b16fe07c5e2
-      Path: Events\Default Work Unit\Play_FlowerPickUp
-      maxAttenuation: 100
-      maxDuration: 0.67462546
-      minDuration: 0.42581192
-    - name: Play_FlowerPlant
-      guid: f49e8926f854104ca9f8b5eb218953c9
-      id: 1321543350
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_FlowerPlant
-        ObjectType: 3
-        guid: f49e8926f854104ca9f8b5eb218953c9
-      Path: Events\Default Work Unit\Play_FlowerPlant
-      maxAttenuation: 100
-      maxDuration: 1.1345
-      minDuration: 0.6348125
-    - name: Play_FlowerWindBlow
-      guid: 338f3624964c384fbbcb479c601793c5
-      id: 1831549045
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_FlowerWindBlow
-        ObjectType: 3
-        guid: 338f3624964c384fbbcb479c601793c5
-      Path: Events\Default Work Unit\Play_FlowerWindBlow
-      maxAttenuation: 0
-      maxDuration: 1.7603333
-      minDuration: 1.6945626
-    - name: Play_FlyTrapPopedUp
-      guid: e52bfc67e66d0942ba698c9f3658ed0c
-      id: 531081561
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_FlyTrapPopedUp
-        ObjectType: 3
-        guid: e52bfc67e66d0942ba698c9f3658ed0c
-      Path: Events\Default Work Unit\Play_FlyTrapPopedUp
-      maxAttenuation: 200
-      maxDuration: 0.18133333
-      minDuration: 0.18133333
-    - name: Play_GrassFootStep
-      guid: 4f7504579319964882939e83bb50afce
-      id: 1878963262
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_GrassFootStep
-        ObjectType: 3
-        guid: 4f7504579319964882939e83bb50afce
-      Path: Events\Default Work Unit\Play_GrassFootStep
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Play_Level2_GardenAmbience
-      guid: c14db0263e6603419900c2b80afc9182
-      id: 3374855610
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_Level2_GardenAmbience
-        ObjectType: 3
-        guid: c14db0263e6603419900c2b80afc9182
-      Path: Events\Default Work Unit\Play_Level2_GardenAmbience
-      maxAttenuation: 200
-      maxDuration: -1
-      minDuration: -1
-    - name: Play_Level2_GardenMusic
-      guid: fcd78dd8c270da488447088666828992
-      id: 3216779235
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_Level2_GardenMusic
-        ObjectType: 3
-        guid: fcd78dd8c270da488447088666828992
-      Path: Events\Default Work Unit\Play_Level2_GardenMusic
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Play_Level2_NewGardenMusic
-      guid: 4b44033beac4384ebe5811a9d3a4d172
-      id: 552396483
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_Level2_NewGardenMusic
-        ObjectType: 3
-        guid: 4b44033beac4384ebe5811a9d3a4d172
-      Path: Events\Default Work Unit\Play_Level2_NewGardenMusic
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Play_PineconePickup
-      guid: eccfe1640b77ee4c9238bd15ac781d34
-      id: 3549239601
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_PineconePickup
-        ObjectType: 3
-        guid: eccfe1640b77ee4c9238bd15ac781d34
-      Path: Events\Default Work Unit\Play_PineconePickup
-      maxAttenuation: 0
-      maxDuration: 1.7328959
-      minDuration: 1.4421458
-    - name: Play_PlayerEaten
-      guid: ac70f061b2d8254486944eec70f3f8b4
-      id: 3659914468
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_PlayerEaten
-        ObjectType: 3
-        guid: ac70f061b2d8254486944eec70f3f8b4
-      Path: Events\Default Work Unit\Play_PlayerEaten
-      maxAttenuation: 0
-      maxDuration: 0.45866665
-      minDuration: 0.45866665
-    - name: Play_Scale_Balancing
-      guid: 27e380f76f698d48a8ce597acc95c73d
-      id: 2809285424
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_Scale_Balancing
-        ObjectType: 3
-        guid: 27e380f76f698d48a8ce597acc95c73d
-      Path: Events\Default Work Unit\Play_Scale_Balancing
-      maxAttenuation: 100
-      maxDuration: 2.8929884
-      minDuration: 2.8929884
-    - name: Play_Statue_Loud
-      guid: 0c9d465672762245acbcaf8ec67d39dd
-      id: 976664737
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_Statue_Loud
-        ObjectType: 3
-        guid: 0c9d465672762245acbcaf8ec67d39dd
-      Path: Events\Default Work Unit\Play_Statue_Loud
-      maxAttenuation: 100
-      maxDuration: 1.75
-      minDuration: 1.75
-    - name: Play_Vine_Growing
-      guid: 6d46b08961eaeb43899a43aa834dd859
-      id: 4090890880
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_Vine_Growing
-        ObjectType: 3
-        guid: 6d46b08961eaeb43899a43aa834dd859
-      Path: Events\Default Work Unit\Play_Vine_Growing
-      maxAttenuation: 0
-      maxDuration: 3.1929376
-      minDuration: 3.1929376
-    - name: Play_WaterFlooding
-      guid: baa74c04cdc81448b6c4bfde77b434d3
-      id: 2908863451
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_WaterFlooding
-        ObjectType: 3
-        guid: baa74c04cdc81448b6c4bfde77b434d3
-      Path: Events\Default Work Unit\Play_WaterFlooding
-      maxAttenuation: 0
-      maxDuration: 9.323238
-      minDuration: 9.323238
-    - name: Play_Waterflow
-      guid: 1b5d5e865c0cd846b63288f283e04a29
-      id: 518242827
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_Waterflow
-        ObjectType: 3
-        guid: 1b5d5e865c0cd846b63288f283e04a29
-      Path: Events\Default Work Unit\Play_Waterflow
-      maxAttenuation: 100
-      maxDuration: -1
-      minDuration: -1
-    - name: Play_Win
-      guid: 7a2ed0c54ab05342b051ca1bb4f433fc
-      id: 2955987680
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_Win
-        ObjectType: 3
-        guid: 7a2ed0c54ab05342b051ca1bb4f433fc
-      Path: Events\Default Work Unit\Play_Win
-      maxAttenuation: 0
-      maxDuration: 1
-      minDuration: 1
-    - name: Play_Wind_Blowing
-      guid: c558e49cfdfe9146b8da1aa7094ad9b2
-      id: 2075190801
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_Wind_Blowing
-        ObjectType: 3
-        guid: c558e49cfdfe9146b8da1aa7094ad9b2
-      Path: Events\Default Work Unit\Play_Wind_Blowing
-      maxAttenuation: 115
-      maxDuration: -1
-      minDuration: -1
-    - name: Play_WindChime
-      guid: 640291eb5f80f64faddf126693467c2a
-      id: 4235265352
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_WindChime
-        ObjectType: 3
-        guid: 640291eb5f80f64faddf126693467c2a
-      Path: Events\Default Work Unit\Play_WindChime
-      maxAttenuation: 80
-      maxDuration: 7.2650976
-      minDuration: 7.2650976
-    - name: Play_WoodGrowingCrazy
-      guid: eb10a3d7ad58434499cb022b4088ebbd
-      id: 228010707
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_WoodGrowingCrazy
-        ObjectType: 3
-        guid: eb10a3d7ad58434499cb022b4088ebbd
-      Path: Events\Default Work Unit\Play_WoodGrowingCrazy
-      maxAttenuation: 0
-      maxDuration: 5.6197076
-      minDuration: 5.6197076
-    - name: Stop_Chime_Melody
-      guid: f70a8e7fbe0af4488d8ea42567168437
-      id: 184097815
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Stop_Chime_Melody
-        ObjectType: 3
-        guid: f70a8e7fbe0af4488d8ea42567168437
-      Path: Events\Default Work Unit\Stop_Chime_Melody
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Stop_Level2_GardenAmbience
-      guid: dcecabfa5697a944986c4938ed67c745
-      id: 1659483392
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Stop_Level2_GardenAmbience
-        ObjectType: 3
-        guid: dcecabfa5697a944986c4938ed67c745
-      Path: Events\Default Work Unit\Stop_Level2_GardenAmbience
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Stop_Level2_GardenMusic
-      guid: 49e78388a66280479917226bebec13c8
-      id: 2396550769
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Stop_Level2_GardenMusic
-        ObjectType: 3
-        guid: 49e78388a66280479917226bebec13c8
-      Path: Events\Default Work Unit\Stop_Level2_GardenMusic
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Stop_Level2_NewGardenMusic
-      guid: 5e2d22c7cef0b04c871931e6a9f0e7db
-      id: 929452813
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Stop_Level2_NewGardenMusic
-        ObjectType: 3
-        guid: 5e2d22c7cef0b04c871931e6a9f0e7db
-      Path: Events\Default Work Unit\Stop_Level2_NewGardenMusic
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Stop_Waterflow
-      guid: e62a71919c131242bf5e6d821427fe1e
-      id: 2135762577
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Stop_Waterflow
-        ObjectType: 3
-        guid: e62a71919c131242bf5e6d821427fe1e
-      Path: Events\Default Work Unit\Stop_Waterflow
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Stop_Wind_Blowing
-      guid: 1bc724f7f113aa428c6e6607e7619d46
-      id: 1663839887
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Stop_Wind_Blowing
-        ObjectType: 3
-        guid: 1bc724f7f113aa428c6e6607e7619d46
-      Path: Events\Default Work Unit\Stop_Wind_Blowing
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+    m_lastTime: -8584908307493841357
+    List: []
   - PhysicalPath: Events\Level0.wwu
     PathAndIcons:
     - ElementName: Events
@@ -1235,6 +722,597 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+  - PhysicalPath: Events\Lv2Garden.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Lv2Garden
+      ObjectType: 12
+      guid: 79f102072e2e844c90913baf4de5b1ea
+    ParentPath: Events\Lv2Garden
+    guid: 79f102072e2e844c90913baf4de5b1ea
+    GuidInternal: 
+    m_lastTime: -8584908307493526080
+    List:
+    - name: Play_Birds
+      guid: 83da1a64ae50fa4f8edb957f079b8173
+      id: 3025897706
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Play_Birds
+        ObjectType: 3
+        guid: 83da1a64ae50fa4f8edb957f079b8173
+      Path: Events\Lv2Garden\Play_Birds
+      maxAttenuation: 100
+      maxDuration: 1.431963
+      minDuration: 0.75628006
+    - name: Play_BirdsCrazy
+      guid: 3fdadab55a4b8a4481ad38102b6cc050
+      id: 1125237609
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Play_BirdsCrazy
+        ObjectType: 3
+        guid: 3fdadab55a4b8a4481ad38102b6cc050
+      Path: Events\Lv2Garden\Play_BirdsCrazy
+      maxAttenuation: 100
+      maxDuration: 1.431963
+      minDuration: 0.75628006
+    - name: Play_BirdWing
+      guid: c187ce0e70e6a3409e82cf57152114bd
+      id: 3584090578
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Play_BirdWing
+        ObjectType: 3
+        guid: c187ce0e70e6a3409e82cf57152114bd
+      Path: Events\Lv2Garden\Play_BirdWing
+      maxAttenuation: 100
+      maxDuration: 3.1929376
+      minDuration: 3.1929376
+    - name: Play_Button
+      guid: 937343f924bec6489cb40f81033ce814
+      id: 2099555730
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Play_Button
+        ObjectType: 3
+        guid: 937343f924bec6489cb40f81033ce814
+      Path: Events\Lv2Garden\Play_Button
+      maxAttenuation: 0
+      maxDuration: 0.2940787
+      minDuration: 0.2940787
+    - name: Play_Chime_Melody
+      guid: 1167d12386b66942a2cecaf0460d6711
+      id: 847650453
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Play_Chime_Melody
+        ObjectType: 3
+        guid: 1167d12386b66942a2cecaf0460d6711
+      Path: Events\Lv2Garden\Play_Chime_Melody
+      maxAttenuation: 0
+      maxDuration: 3.4618473
+      minDuration: 3.4618473
+    - name: Play_ChimeC
+      guid: ccda2c706ac6f04fa5fdfd6564009b72
+      id: 2759522921
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Play_ChimeC
+        ObjectType: 3
+        guid: ccda2c706ac6f04fa5fdfd6564009b72
+      Path: Events\Lv2Garden\Play_ChimeC
+      maxAttenuation: 0
+      maxDuration: 1.461875
+      minDuration: 1.461875
+    - name: Play_ChimeD
+      guid: 7496c32e9822b140acae41dd8f4da8e7
+      id: 2759522926
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Play_ChimeD
+        ObjectType: 3
+        guid: 7496c32e9822b140acae41dd8f4da8e7
+      Path: Events\Lv2Garden\Play_ChimeD
+      maxAttenuation: 0
+      maxDuration: 0.975875
+      minDuration: 0.975875
+    - name: Play_ChimeE
+      guid: d9f0f3a9ca03bc44a4810427024b8550
+      id: 2759522927
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Play_ChimeE
+        ObjectType: 3
+        guid: d9f0f3a9ca03bc44a4810427024b8550
+      Path: Events\Lv2Garden\Play_ChimeE
+      maxAttenuation: 0
+      maxDuration: 1.1756458
+      minDuration: 1.1756458
+    - name: Play_ChimeG
+      guid: 7b32b689c857ad4cac1c0ce90ef6af9e
+      id: 2759522925
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Play_ChimeG
+        ObjectType: 3
+        guid: 7b32b689c857ad4cac1c0ce90ef6af9e
+      Path: Events\Lv2Garden\Play_ChimeG
+      maxAttenuation: 0
+      maxDuration: 0.9033333
+      minDuration: 0.9033333
+    - name: Play_FlowerPickUp
+      guid: 7925cbe7db4a9942bec48b16fe07c5e2
+      id: 1678695831
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Play_FlowerPickUp
+        ObjectType: 3
+        guid: 7925cbe7db4a9942bec48b16fe07c5e2
+      Path: Events\Lv2Garden\Play_FlowerPickUp
+      maxAttenuation: 100
+      maxDuration: 0.67462546
+      minDuration: 0.42581192
+    - name: Play_FlowerPlant
+      guid: f49e8926f854104ca9f8b5eb218953c9
+      id: 1321543350
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Play_FlowerPlant
+        ObjectType: 3
+        guid: f49e8926f854104ca9f8b5eb218953c9
+      Path: Events\Lv2Garden\Play_FlowerPlant
+      maxAttenuation: 100
+      maxDuration: 1.2026554
+      minDuration: 0.59025174
+    - name: Play_FlowerWindBlow
+      guid: 338f3624964c384fbbcb479c601793c5
+      id: 1831549045
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Play_FlowerWindBlow
+        ObjectType: 3
+        guid: 338f3624964c384fbbcb479c601793c5
+      Path: Events\Lv2Garden\Play_FlowerWindBlow
+      maxAttenuation: 0
+      maxDuration: 1.8393321
+      minDuration: 1.5756125
+    - name: Play_FlyTrapPopedUp
+      guid: e52bfc67e66d0942ba698c9f3658ed0c
+      id: 531081561
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Play_FlyTrapPopedUp
+        ObjectType: 3
+        guid: e52bfc67e66d0942ba698c9f3658ed0c
+      Path: Events\Lv2Garden\Play_FlyTrapPopedUp
+      maxAttenuation: 200
+      maxDuration: 0.18133333
+      minDuration: 0.18133333
+    - name: Play_GrassFootStep
+      guid: 4f7504579319964882939e83bb50afce
+      id: 1878963262
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Play_GrassFootStep
+        ObjectType: 3
+        guid: 4f7504579319964882939e83bb50afce
+      Path: Events\Lv2Garden\Play_GrassFootStep
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Level2_GardenAmbience
+      guid: c14db0263e6603419900c2b80afc9182
+      id: 3374855610
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Play_Level2_GardenAmbience
+        ObjectType: 3
+        guid: c14db0263e6603419900c2b80afc9182
+      Path: Events\Lv2Garden\Play_Level2_GardenAmbience
+      maxAttenuation: 200
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Level2_GardenMusic
+      guid: fcd78dd8c270da488447088666828992
+      id: 3216779235
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Play_Level2_GardenMusic
+        ObjectType: 3
+        guid: fcd78dd8c270da488447088666828992
+      Path: Events\Lv2Garden\Play_Level2_GardenMusic
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Level2_NewGardenMusic
+      guid: 4b44033beac4384ebe5811a9d3a4d172
+      id: 552396483
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Play_Level2_NewGardenMusic
+        ObjectType: 3
+        guid: 4b44033beac4384ebe5811a9d3a4d172
+      Path: Events\Lv2Garden\Play_Level2_NewGardenMusic
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_PineconePickup
+      guid: eccfe1640b77ee4c9238bd15ac781d34
+      id: 3549239601
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Play_PineconePickup
+        ObjectType: 3
+        guid: eccfe1640b77ee4c9238bd15ac781d34
+      Path: Events\Lv2Garden\Play_PineconePickup
+      maxAttenuation: 0
+      maxDuration: 1.7328959
+      minDuration: 1.4421458
+    - name: Play_PlayerEaten
+      guid: ac70f061b2d8254486944eec70f3f8b4
+      id: 3659914468
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Play_PlayerEaten
+        ObjectType: 3
+        guid: ac70f061b2d8254486944eec70f3f8b4
+      Path: Events\Lv2Garden\Play_PlayerEaten
+      maxAttenuation: 0
+      maxDuration: 0.45866665
+      minDuration: 0.45866665
+    - name: Play_Scale_Balancing
+      guid: 27e380f76f698d48a8ce597acc95c73d
+      id: 2809285424
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Play_Scale_Balancing
+        ObjectType: 3
+        guid: 27e380f76f698d48a8ce597acc95c73d
+      Path: Events\Lv2Garden\Play_Scale_Balancing
+      maxAttenuation: 100
+      maxDuration: 2.8929884
+      minDuration: 2.8929884
+    - name: Play_Statue_Loud
+      guid: 0c9d465672762245acbcaf8ec67d39dd
+      id: 976664737
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Play_Statue_Loud
+        ObjectType: 3
+        guid: 0c9d465672762245acbcaf8ec67d39dd
+      Path: Events\Lv2Garden\Play_Statue_Loud
+      maxAttenuation: 100
+      maxDuration: 1.75
+      minDuration: 1.75
+    - name: Play_Vine_Growing
+      guid: 6d46b08961eaeb43899a43aa834dd859
+      id: 4090890880
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Play_Vine_Growing
+        ObjectType: 3
+        guid: 6d46b08961eaeb43899a43aa834dd859
+      Path: Events\Lv2Garden\Play_Vine_Growing
+      maxAttenuation: 0
+      maxDuration: 3.1929376
+      minDuration: 3.1929376
+    - name: Play_WaterFlooding
+      guid: baa74c04cdc81448b6c4bfde77b434d3
+      id: 2908863451
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Play_WaterFlooding
+        ObjectType: 3
+        guid: baa74c04cdc81448b6c4bfde77b434d3
+      Path: Events\Lv2Garden\Play_WaterFlooding
+      maxAttenuation: 0
+      maxDuration: 9.323238
+      minDuration: 9.323238
+    - name: Play_Waterflow
+      guid: 1b5d5e865c0cd846b63288f283e04a29
+      id: 518242827
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Play_Waterflow
+        ObjectType: 3
+        guid: 1b5d5e865c0cd846b63288f283e04a29
+      Path: Events\Lv2Garden\Play_Waterflow
+      maxAttenuation: 100
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Win
+      guid: 7a2ed0c54ab05342b051ca1bb4f433fc
+      id: 2955987680
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Play_Win
+        ObjectType: 3
+        guid: 7a2ed0c54ab05342b051ca1bb4f433fc
+      Path: Events\Lv2Garden\Play_Win
+      maxAttenuation: 0
+      maxDuration: 1
+      minDuration: 1
+    - name: Play_Wind_Blowing
+      guid: c558e49cfdfe9146b8da1aa7094ad9b2
+      id: 2075190801
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Play_Wind_Blowing
+        ObjectType: 3
+        guid: c558e49cfdfe9146b8da1aa7094ad9b2
+      Path: Events\Lv2Garden\Play_Wind_Blowing
+      maxAttenuation: 115
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_WindChime
+      guid: 640291eb5f80f64faddf126693467c2a
+      id: 4235265352
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Play_WindChime
+        ObjectType: 3
+        guid: 640291eb5f80f64faddf126693467c2a
+      Path: Events\Lv2Garden\Play_WindChime
+      maxAttenuation: 80
+      maxDuration: 7.2650976
+      minDuration: 7.2650976
+    - name: Play_WoodGrowingCrazy
+      guid: eb10a3d7ad58434499cb022b4088ebbd
+      id: 228010707
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Play_WoodGrowingCrazy
+        ObjectType: 3
+        guid: eb10a3d7ad58434499cb022b4088ebbd
+      Path: Events\Lv2Garden\Play_WoodGrowingCrazy
+      maxAttenuation: 0
+      maxDuration: 5.6197076
+      minDuration: 5.6197076
+    - name: Stop_Chime_Melody
+      guid: f70a8e7fbe0af4488d8ea42567168437
+      id: 184097815
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Stop_Chime_Melody
+        ObjectType: 3
+        guid: f70a8e7fbe0af4488d8ea42567168437
+      Path: Events\Lv2Garden\Stop_Chime_Melody
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Level2_GardenAmbience
+      guid: dcecabfa5697a944986c4938ed67c745
+      id: 1659483392
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Stop_Level2_GardenAmbience
+        ObjectType: 3
+        guid: dcecabfa5697a944986c4938ed67c745
+      Path: Events\Lv2Garden\Stop_Level2_GardenAmbience
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Level2_GardenMusic
+      guid: 49e78388a66280479917226bebec13c8
+      id: 2396550769
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Stop_Level2_GardenMusic
+        ObjectType: 3
+        guid: 49e78388a66280479917226bebec13c8
+      Path: Events\Lv2Garden\Stop_Level2_GardenMusic
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Level2_NewGardenMusic
+      guid: 5e2d22c7cef0b04c871931e6a9f0e7db
+      id: 929452813
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Stop_Level2_NewGardenMusic
+        ObjectType: 3
+        guid: 5e2d22c7cef0b04c871931e6a9f0e7db
+      Path: Events\Lv2Garden\Stop_Level2_NewGardenMusic
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Waterflow
+      guid: e62a71919c131242bf5e6d821427fe1e
+      id: 2135762577
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Stop_Waterflow
+        ObjectType: 3
+        guid: e62a71919c131242bf5e6d821427fe1e
+      Path: Events\Lv2Garden\Stop_Waterflow
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Wind_Blowing
+      guid: 1bc724f7f113aa428c6e6607e7619d46
+      id: 1663839887
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Stop_Wind_Blowing
+        ObjectType: 3
+        guid: 1bc724f7f113aa428c6e6607e7619d46
+      Path: Events\Lv2Garden\Stop_Wind_Blowing
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
