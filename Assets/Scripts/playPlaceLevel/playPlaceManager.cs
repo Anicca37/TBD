@@ -139,4 +139,8 @@ public class PlayPlaceManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    public bool GetIsXylophoneSequenceCorrect()
+    {
+        return isXylophoneSequenceCorrect;
+    }
 }
