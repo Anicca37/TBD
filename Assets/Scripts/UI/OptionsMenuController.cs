@@ -286,6 +286,10 @@ public class OptionsMenuController : MonoBehaviour
                 PlayerPrefs.SetFloat("MusicVolume", currentMusicVolume);
                 PlayerPrefs.SetFloat("SFXVolume", currentSfxVolume);
                 PlayerPrefs.SetFloat("AmbienceVolume", currentAmbienceVolume);
+
+                AkSoundEngine.SetRTPCValue("AmbienceVolume", currentAmbienceVolume);
+                AkSoundEngine.SetRTPCValue("MusicVolume", currentMusicVolume);
+                AkSoundEngine.SetRTPCValue("SFXVolume", currentSfxVolume);
                 break;
             case MenuOption.Back:
                 SetSliderValue(MounseSenstivitySlider, currentMouseSensitivity);

@@ -303,7 +303,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: f98fd86b9f949e4bb74dae3f2017c65c
     GuidInternal: 
-    m_lastTime: -8584908290339029116
+    m_lastTime: -8584907059296665977
     List:
     - name: Ambience
       guid: 289bbcffefa4594aae1bd5bea45ac420
@@ -1631,8 +1631,22 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 64668823ab09304691eb36ba27dad8b7
     GuidInternal: 
-    m_lastTime: -8584907770822630882
+    m_lastTime: -8584907059720792553
     List:
+    - name: AmbienceVolume
+      guid: 204c878df43c2f44a7c673656fecc470
+      id: 1204480359
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 64668823ab09304691eb36ba27dad8b7
+      - ElementName: AmbienceVolume
+        ObjectType: 13
+        guid: 204c878df43c2f44a7c673656fecc470
+      Path: Game Parameters\Default Work Unit\AmbienceVolume
     - name: Lv1_LightOn
       guid: 2bceeb45c5eb784a85e052e4a7f0f32f
       id: 185769106
@@ -1647,6 +1661,34 @@ MonoBehaviour:
         ObjectType: 13
         guid: 2bceeb45c5eb784a85e052e4a7f0f32f
       Path: Game Parameters\Default Work Unit\Lv1_LightOn
+    - name: MusicVolume
+      guid: e0b6a33167569044992d338282947bfa
+      id: 2346531308
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 64668823ab09304691eb36ba27dad8b7
+      - ElementName: MusicVolume
+        ObjectType: 13
+        guid: e0b6a33167569044992d338282947bfa
+      Path: Game Parameters\Default Work Unit\MusicVolume
+    - name: SFXVolume
+      guid: d9144d745cc7eb44aeee33a7c3a0d020
+      id: 988953028
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 64668823ab09304691eb36ba27dad8b7
+      - ElementName: SFXVolume
+        ObjectType: 13
+        guid: d9144d745cc7eb44aeee33a7c3a0d020
+      Path: Game Parameters\Default Work Unit\SFXVolume
   - PhysicalPath: Game Parameters\Factory Soundseed Air Game Syncs.wwu
     PathAndIcons:
     - ElementName: Game Parameters
