@@ -17,7 +17,7 @@ public class PlayPlaceManager : MonoBehaviour
     public Camera playerCamera;
     public Camera tunnelCamera;
     [SerializeField] private Animator doorAnimator;
-
+    public GameObject player;
 
     void Awake()
     {
@@ -82,7 +82,7 @@ public class PlayPlaceManager : MonoBehaviour
     {
         Debug.Log("Balls sorted, revealing xylophone sequence.");
         // Insert logic to reveal the xylophone sequence here
-        
+
         // play sound of xylo
         GameObject theXylo = GameObject.Find("Xylo");
         AkSoundEngine.PostEvent("Play_XyloSequence", theXylo.gameObject);
@@ -107,21 +107,20 @@ public class PlayPlaceManager : MonoBehaviour
     }
     void OpenTunnel()
     {
-        Debug.Log("Xylophone sequence correct, opening tunnel.");
-        StartCoroutine(SwitchCamera(playerCamera, tunnelCamera, 0f));
-        doorAnimator.SetTrigger("Open");
+        if (isXylophoneSequenceCorrect)
+        {
+            Debug.Log("Xylophone sequence correct, opening tunnel.");
+            StartCoroutine(SwitchCamera(playerCamera, tunnelCamera, 0f));
+            StartCoroutine(PlayerEnable(false, 0f));
 
-        //play sound        
-        Invoke("playDoorSound", 1f);
+            doorAnimator.SetTrigger("Open");
 
-        // ketchupToDrop.SetActive(true);
-        // Rigidbody rb = ketchupToDrop.GetComponent<Rigidbody>();
-        // if (rb != null)
-        // {
-        //     rb.isKinematic = false;
-        // }
-        StartCoroutine(SwitchCamera(tunnelCamera, playerCamera, 5f));
+            //play sound        
+            Invoke("playDoorSound", 1f);
 
+            StartCoroutine(SwitchCamera(tunnelCamera, playerCamera, 5f));
+            StartCoroutine(PlayerEnable(true, 5f));
+        }
     }
     private void playDoorSound()
     {
@@ -143,6 +142,12 @@ public class PlayPlaceManager : MonoBehaviour
         cameraToDisable.gameObject.SetActive(false);
         cameraToEnable.gameObject.SetActive(true);
 
+    }
+
+    IEnumerator PlayerEnable(bool enable, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        player.SetActive(enable);
     }
 
     public void ResetPuzzles()
