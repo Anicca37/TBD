@@ -25120,6 +25120,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 26b604a7cdd654c4fb01a123149df256, type: 3}
   m_PrefabInstance: {fileID: 1609410093}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1296807791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296807783}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &1301034831
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33495,6 +33513,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: smallBird
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 26b604a7cdd654c4fb01a123149df256, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -33514,6 +33536,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 26b604a7cdd654c4fb01a123149df256, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1296807789}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 26b604a7cdd654c4fb01a123149df256, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1296807791}
   m_SourcePrefab: {fileID: 100100000, guid: 26b604a7cdd654c4fb01a123149df256, type: 3}
 --- !u!1 &1612683850
 GameObject:
