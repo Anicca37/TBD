@@ -648,7 +648,7 @@
 				<Event Id="1663839887" Name="Stop_Wind_Blowing" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{25725E1B-E684-A57F-68F4-7AC2C310D0BF}">
+		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{71B829C7-2EF4-906F-9D98-45107E20A604}">
 			<ShortName>Level1PlayPlace</ShortName>
 			<Path>Level1PlayPlace.bnk</Path>
 			<Media>
@@ -663,6 +663,10 @@
 				<File Id="70057683" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>LightOn_1.wav</ShortName>
 					<CachePath>SFX/LightOn_1_97A1C23A.wem</CachePath>
+				</File>
+				<File Id="78914333" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BallImpact\Ball_Impact_02.wav</ShortName>
+					<CachePath>SFX/BallImpact/Ball_Impact_02_957BD4DA.wem</CachePath>
 				</File>
 				<File Id="102272868" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S2\mus_3-4_125bpm_Level1_S2_Kick.wav</ShortName>
@@ -692,6 +696,14 @@
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S1\mus_3-4_125bpm_Level1_S1_CMelody_VP.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S1/mus_3-4_125bpm_Level1_S1_CMelody_VP_239921B3.wem</CachePath>
 				</File>
+				<File Id="158871867" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BallImpact\Ball_Impact_08.wav</ShortName>
+					<CachePath>SFX/BallImpact/Ball_Impact_08_72FBF879.wem</CachePath>
+				</File>
+				<File Id="171507207" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BallImpact\Ball_Impact_03.wav</ShortName>
+					<CachePath>SFX/BallImpact/Ball_Impact_03_C8616EEA.wem</CachePath>
+				</File>
 				<File Id="171567581" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BlockPickup_2.wav</ShortName>
 					<CachePath>SFX/BlockPickup_2_E0A3698D.wem</CachePath>
@@ -707,6 +719,10 @@
 				<File Id="182512831" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S1\mus_3-4_125bpm_Level1_S1_Chords.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S1/mus_3-4_125bpm_Level1_S1_Chords_239921B3.wem</CachePath>
+				</File>
+				<File Id="211807823" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BallImpact\Ball_Impact_09.wav</ShortName>
+					<CachePath>SFX/BallImpact/Ball_Impact_09_B6CCF59B.wem</CachePath>
 				</File>
 				<File Id="236709149" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Melody_Flute.wav</ShortName>
@@ -748,6 +764,10 @@
 					<ShortName>SlideDoorOpen_1.wav</ShortName>
 					<CachePath>SFX/SlideDoorOpen_1_8E324C96.wem</CachePath>
 				</File>
+				<File Id="374719277" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BallImpact\Ball_Impact_05.wav</ShortName>
+					<CachePath>SFX/BallImpact/Ball_Impact_05_004F6C20.wem</CachePath>
+				</File>
 				<File Id="377200440" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>LightShow_1.wav</ShortName>
 					<CachePath>SFX/LightShow_1_FBC78EF0.wem</CachePath>
@@ -763,6 +783,14 @@
 				<File Id="484366609" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S1\mus_3-4_125bpm_Level1_S1_Bass.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S1/mus_3-4_125bpm_Level1_S1_Bass_239921B3.wem</CachePath>
+				</File>
+				<File Id="490951819" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BallImpact\Ball_Impact_04.wav</ShortName>
+					<CachePath>SFX/BallImpact/Ball_Impact_04_686468D4.wem</CachePath>
+				</File>
+				<File Id="535759648" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BallImpact\Ball_Impact_07.wav</ShortName>
+					<CachePath>SFX/BallImpact/Ball_Impact_07_940FE87D.wem</CachePath>
 				</File>
 				<File Id="541156274" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Bass.wav</ShortName>
@@ -796,9 +824,17 @@
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S1\mus_3-4_125bpm_Level1_S1_Tail.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S1/mus_3-4_125bpm_Level1_S1_Tail_239921B3.wem</CachePath>
 				</File>
+				<File Id="615097371" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BallImpact\Ball_Impact_06.wav</ShortName>
+					<CachePath>SFX/BallImpact/Ball_Impact_06_E7BF3932.wem</CachePath>
+				</File>
 				<File Id="624857118" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>LightOffi_1.wav</ShortName>
 					<CachePath>SFX/LightOffi_1_535B6236.wem</CachePath>
+				</File>
+				<File Id="626437776" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BallImpact\Ball_Impact_10.wav</ShortName>
+					<CachePath>SFX/BallImpact/Ball_Impact_10_AF535501.wem</CachePath>
 				</File>
 				<File Id="634654853" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S2\mus_3-4_125bpm_Level1_S2_CMelody_Cello.wav</ShortName>
@@ -840,6 +876,10 @@
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S2\mus_3-4_125bpm_Level1_S2_Melody_VL.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S2/mus_3-4_125bpm_Level1_S2_Melody_VL_239921B3.wem</CachePath>
 				</File>
+				<File Id="763579394" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BallImpact\Ball_Impact_11.wav</ShortName>
+					<CachePath>SFX/BallImpact/Ball_Impact_11_80DA457C.wem</CachePath>
+				</File>
 				<File Id="834838996" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Chords.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran2/mus_3-4_125bpm_Level1_Tran2_Chords_239921B3.wem</CachePath>
@@ -855,6 +895,10 @@
 				<File Id="909003059" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Win.wav</ShortName>
 					<CachePath>SFX/Win_818F3B66.wem</CachePath>
+				</File>
+				<File Id="928212570" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BallImpact\Ball_Impact_01.wav</ShortName>
+					<CachePath>SFX/BallImpact/Ball_Impact_01_9119FC1C.wem</CachePath>
 				</File>
 				<File Id="944101764" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Confetti_1.wav</ShortName>
@@ -890,6 +934,21 @@
 				</File>
 			</Media>
 			<Events>
+				<Event Id="2280438399" Name="Play_BallImpact" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.4867489" DurationMax="0.8424616">
+					<MediaRefs>
+						<MediaRef Id="78914333"/>
+						<MediaRef Id="158871867"/>
+						<MediaRef Id="171507207"/>
+						<MediaRef Id="211807823"/>
+						<MediaRef Id="374719277"/>
+						<MediaRef Id="490951819"/>
+						<MediaRef Id="535759648"/>
+						<MediaRef Id="615097371"/>
+						<MediaRef Id="626437776"/>
+						<MediaRef Id="763579394"/>
+						<MediaRef Id="928212570"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="94152718" Name="Play_BlockDrop" DurationType="OneShot" DurationMin="1.4872764" DurationMax="1.783573">
 					<MediaRefs>
 						<MediaRef Id="459346347"/>
@@ -1117,5 +1176,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{2BAAB814-1304-4C17-066D-BF4960C20F23}</FileHash>
+	<FileHash>{DBDD6A07-508D-EBBE-9B91-F6CC6BA4F56B}</FileHash>
 </SoundBanksInfo>

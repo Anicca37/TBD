@@ -438,8 +438,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c829b83be71c8a4d9fc3b43dae098d9f
     GuidInternal: 
-    m_lastTime: -8584907409297795271
+    m_lastTime: -8584905259905842869
     List:
+    - name: Play_BallImpact
+      guid: d84aeadbee68d0469912f9e57a2302e1
+      id: 2280438399
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Play_BallImpact
+        ObjectType: 3
+        guid: d84aeadbee68d0469912f9e57a2302e1
+      Path: Events\Default Work Unit\Play_BallImpact
+      maxAttenuation: 100
+      maxDuration: 0.8424616
+      minDuration: 0.4867489
     - name: Play_BlockDrop
       guid: 98e20f838392bb45850e091c6e57c884
       id: 94152718

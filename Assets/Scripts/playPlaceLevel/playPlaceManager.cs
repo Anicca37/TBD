@@ -105,6 +105,7 @@ public class PlayPlaceManager : MonoBehaviour
         obj.SetActive(false); // disable ball
         obj.transform.position = ballsinitialPosition; // reset to original position
     }
+
     void OpenTunnel()
     {
         if (isXylophoneSequenceCorrect)
@@ -122,10 +123,12 @@ public class PlayPlaceManager : MonoBehaviour
             StartCoroutine(PlayerEnable(true, 5f));
         }
     }
+
     private void playDoorSound()
     {
         AkSoundEngine.PostEvent("Play_SlideDoorOpen_1", this.gameObject);
     }
+
     void EscapePlayPlace()
     {
         Debug.Log("Escaping the play place.");
