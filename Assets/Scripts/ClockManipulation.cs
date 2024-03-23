@@ -225,7 +225,6 @@ public class ClockManipulation : MonoBehaviour
 
         if (clockSign != null)
         {
-            Debug.Log(rotationAmount);
             DisplayAMPMText(rotationAmount);
         }
 
