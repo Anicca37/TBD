@@ -190,7 +190,7 @@ public class GardenManager : MonoBehaviour
 
     public void DeliverPinecone()
     {
-        StartCoroutine(PlayerEnable(false, 0f));
+        StartCoroutine(PlayerEnable(false, 1f));
         isWindChimesPlayed = true;
         Debug.Log("Bird delivers the pinecone.");
         StartCoroutine(PlayerEnable(true, 5f));
