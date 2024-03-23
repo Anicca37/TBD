@@ -150,7 +150,8 @@ GameObject:
   - component: {fileID: 5173891596251279554}
   - component: {fileID: 4111715680166910250}
   - component: {fileID: 718597314784811364}
-  - component: {fileID: 7159106809214197753}
+  - component: {fileID: 5973068376504374678}
+  - component: {fileID: 7555818582112404369}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -217,7 +218,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 2495203883213229090}
   walkSpeed: 12
-  movementSpeed: 0
   jumpHeight: 2
   gravity: -60
   groundCheck: {fileID: 1284986978386880318}
@@ -225,6 +225,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 8
+  cameraControl: {fileID: 8539975463409789455}
 --- !u!114 &5173891596251279554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,7 +270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraTransform: {fileID: 366030591761867526}
   detectionRange: 10
---- !u!114 &7159106809214197753
+--- !u!114 &5973068376504374678
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -298,7 +299,24 @@ MonoBehaviour:
   m_DefaultControlScheme: xbox control
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
-  m_Camera: {fileID: 823605560670353416}
+  m_Camera: {fileID: 0}
+--- !u!114 &7555818582112404369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2204808416171688000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 898538debbc8446e9bd65663ed2d43e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraTransform: {fileID: 366030591761867526}
+  interactionDistance: 100
+  interactableLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &3929772495980211307
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,7 +670,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba8afc7389db6e74d8ed1180fc841e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 5118629688310482985}
+  playerBody: {fileID: 5118629688310482985}
+  mouseSensitivity: 300
 --- !u!1 &8858376182416302382
 GameObject:
   m_ObjectHideFlags: 0
