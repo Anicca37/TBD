@@ -1,6 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using System.Collections;
 
 public class windChime : MonoBehaviour
 {
@@ -9,18 +9,46 @@ public class windChime : MonoBehaviour
     public TreeGrowthController treeGrowthController;
     public Transform windDirectionIndicator;
     public SequenceChecker sequenceChecker;
-
     public int chimeID;
 
-    void OnMouseDown()
-    {
+    private PlayerInput playerInput;
+    private InputAction interactAction;
+    public float interactionDistance = 100f; // Adjust as needed
+    public Transform cameraTransform; // Assign in the inspector
 
-        // check if the floral puzzle is matched
-        // if (!true)
+    private void Awake()
+    {
+        playerInput = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInput>();
+        interactAction = playerInput.actions["Interact"];
+    }
+
+    private void Update()
+    {
+        if (interactAction.triggered)
+        {
+            AttemptInteraction();
+        }
+    }
+
+    private void AttemptInteraction()
+    {
+        RaycastHit hit;
+        Ray ray = new Ray(cameraTransform.position, cameraTransform.forward);
+        if (Physics.Raycast(ray, out hit, interactionDistance))
+        {
+            // Check if the raycast hit this wind chime
+            if (hit.collider.gameObject == this.gameObject)
+            {
+                OnChimeInteract();
+            }
+        }
+    }
+
+    private void OnChimeInteract()
+    {
+        // Your existing logic for what happens when a chime is interacted with
         if (GardenManager.Instance.IsFloralMatched())
         {
-            // Debug.Log($"curr index: {currentSequenceIndex}");
-            // Debug.Log($"{chimeID} = {targetSequence[currentSequenceIndex]} is {chimeID == targetSequence[currentSequenceIndex]}");
             if (!sequenceChecker.IsCorrectSequencePlayed())
             {
                 ChangeWindDirection(chimeID);
@@ -31,7 +59,6 @@ public class windChime : MonoBehaviour
         {
             Debug.Log("Ah! So many birds!");
             TriggerBirdsAndGrowPlants();
-            // GardenManager.Instance.CompletePuzzle("WindChimes");
         }
     }
 
