@@ -52,21 +52,24 @@ public class playerPickup : MonoBehaviour
                     SwitchIcon(true);
                 }
 
-                // Set the parent
-                currentPickup.transform.SetParent(attachPoint, false);
-                currentPickup.transform.localPosition = Vector3.zero;
+                // Store the original scale
+                Vector3 originalScale = currentPickup.transform.localScale;
 
-                // Now, if you want the object to have a specific orientation relative to the player/camera,
-                // you can set it here. For example, resetting to its original rotation, or aligning it
-                // with the attachPoint's rotation.
-                // currentPickup.transform.rotation = originalRotation; // To maintain original world rotation
-                // Or, to align with attachPoint's rotation:
-                // currentPickup.transform.rotation = attachPoint.rotation;
+                // Set the parent
+                currentPickup.transform.SetParent(attachPoint);
+
+                // Reset local position and rotation
+                currentPickup.transform.localPosition = Vector3.zero;
+                currentPickup.transform.localRotation = Quaternion.identity;
+
+                // Reapply the original scale
+                currentPickup.transform.localScale = originalScale;
 
                 PlaySoundBasedOnObjectName(currentPickup.name, true);
             }
         }
     }
+
 
 
     public void DropObject()
