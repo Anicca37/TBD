@@ -35,6 +35,10 @@ public class PlayplaceEscapeDetector : MonoBehaviour
 
     bool IsPlayerNearby()
     {
+        if (player.transform.position.y < 18f)
+        {
+            return false;
+        }
         // check if player is nearby
         float distance = Vector3.Distance(transform.position, player.transform.position);
         return distance < distanceToPlayer;
