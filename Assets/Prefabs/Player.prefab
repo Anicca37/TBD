@@ -238,7 +238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupableTag: Pickupable
-  attachPoint: {fileID: 6686517100237193317}
+  attachPoint: {fileID: 6175074901090609027}
   defaultIcon: {fileID: 0}
   grabIcon: {fileID: 0}
   pickupRange: 10
@@ -269,6 +269,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraTransform: {fileID: 366030591761867526}
   detectionRange: 10
+--- !u!1 &3929772495980211307
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6175074901090609027}
+  m_Layer: 0
+  m_Name: pickedUpObjectPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6175074901090609027
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3929772495980211307}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.31, y: -0.15447044, z: 8.07}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 366030591761867526}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6370624094172780220
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,6 +547,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 6175074901090609027}
   - {fileID: 4880766573751427040}
   m_Father: {fileID: 5118629688310482985}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
