@@ -216,10 +216,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 2495203883213229090}
   walkSpeed: 12
-  runSpeed: 24
   movementSpeed: 0
-  jumpHeight: 3
-  gravity: -15
+  jumpHeight: 2
+  gravity: -60
   groundCheck: {fileID: 1284986978386880318}
   groundDistance: 0.4
   groundMask:
@@ -294,7 +293,7 @@ Transform:
   m_GameObject: {fileID: 3929772495980211307}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.31, y: -0.15447044, z: 8.07}
+  m_LocalPosition: {x: 0, y: 0, z: 8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
