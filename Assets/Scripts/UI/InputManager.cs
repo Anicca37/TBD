@@ -15,6 +15,7 @@ public class InputManager : MonoBehaviour
     private InputAction _selectionLeftAction;
     private InputAction _selectionRightAction;
     private InputAction _confirmAction;
+    private InputAction _bookOpenCloseAction;
 
 
     // Several bools to check if the UI input is pressed
@@ -24,6 +25,7 @@ public class InputManager : MonoBehaviour
     public bool SelectionLeftInput { get; private set; }
     public bool SelectionRightInput { get; private set; }
     public bool ConfirmInput { get; private set; }
+    public bool BookOpenCloseInput { get; private set; }
 
     private void Awake()
     {
@@ -38,6 +40,7 @@ public class InputManager : MonoBehaviour
         _selectionLeftAction = _playerInput.actions["SelectionLeft"];
         _selectionRightAction = _playerInput.actions["SelectionRight"];
         _confirmAction = _playerInput.actions["Confirm"];
+        _bookOpenCloseAction = _playerInput.actions["BookOpenClose"];
     }
 
     private void Update()
@@ -48,5 +51,6 @@ public class InputManager : MonoBehaviour
         SelectionLeftInput = _selectionLeftAction.WasPressedThisFrame();
         SelectionRightInput = _selectionRightAction.WasPressedThisFrame();
         ConfirmInput = _confirmAction.WasPressedThisFrame();
+        BookOpenCloseInput = _bookOpenCloseAction.WasPressedThisFrame();
     }
 }

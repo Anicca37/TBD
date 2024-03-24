@@ -1,5 +1,5 @@
 {
-    "name": "PlayerControl",
+    "name": "UIControl",
     "maps": [
         {
             "name": "UI",
@@ -54,6 +54,15 @@
                     "name": "Confirm",
                     "type": "Button",
                     "id": "4e674561-43c4-47d2-88e8-20b5f298cb13",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "BookOpenClose",
+                    "type": "Button",
+                    "id": "0476bc98-3644-4752-af21-843fe637c401",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -234,6 +243,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Confirm",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c8c6a9c2-ec85-453e-bcc1-83b080bd7eed",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "BookOpenClose",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4d83d741-aa99-45b9-b53c-bb45430222da",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "BookOpenClose",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
