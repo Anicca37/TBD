@@ -59250,8 +59250,7 @@ PrefabInstance:
       propertyPath: defaultIcon
       value: 
       objectReference: {fileID: 202208322}
-    m_RemovedComponents:
-    - {fileID: 7552453310940579337, guid: 99a5768928e218e489203c7fac3deabf, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5118629688310482985, guid: 99a5768928e218e489203c7fac3deabf, type: 3}
@@ -59263,7 +59262,7 @@ PrefabInstance:
       addedObject: {fileID: 2128657723}
     - targetCorrespondingSourceObject: {fileID: 8279854834289805441, guid: 99a5768928e218e489203c7fac3deabf, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2128657724}
+      addedObject: {fileID: 2128657729}
   m_SourcePrefab: {fileID: 100100000, guid: 99a5768928e218e489203c7fac3deabf, type: 3}
 --- !u!4 &1517343320 stripped
 Transform:
@@ -81645,7 +81644,12 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
---- !u!114 &2128657724
+--- !u!20 &2128657726 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 823605560670353416, guid: 99a5768928e218e489203c7fac3deabf, type: 3}
+  m_PrefabInstance: {fileID: 1517343319}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2128657729
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -81657,13 +81661,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9266b9ad781847b4d887e74255eeed00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDefaultListener: 1
+  isDefaultListener: 0
   listenerId: 0
---- !u!20 &2128657726 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 823605560670353416, guid: 99a5768928e218e489203c7fac3deabf, type: 3}
-  m_PrefabInstance: {fileID: 1517343319}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2128661543
 GameObject:
   m_ObjectHideFlags: 0
