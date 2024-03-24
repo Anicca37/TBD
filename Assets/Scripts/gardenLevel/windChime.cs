@@ -9,12 +9,12 @@ public class windChime : MonoBehaviour
     public TreeGrowthController treeGrowthController;
     public Transform windDirectionIndicator;
     public SequenceChecker sequenceChecker;
-
     public int chimeID;
+    [SerializeField] private Animator chimeAnimator;
 
     void OnMouseDown()
     {
-
+        chimeAnimator.SetTrigger($"Hit {chimeID}"); // animate hit
         // check if the floral puzzle is matched
         // if (!true)
         if (GardenManager.Instance.IsFloralMatched())
@@ -33,6 +33,12 @@ public class windChime : MonoBehaviour
             TriggerBirdsAndGrowPlants();
             // GardenManager.Instance.CompletePuzzle("WindChimes");
         }
+        StartCoroutine(ResetAnimation(chimeID, 4f));
+    }
+    IEnumerator ResetAnimation(int id, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        chimeAnimator.SetTrigger($"Return {id}");
     }
 
     void ChangeWindDirection(int chimeID)
