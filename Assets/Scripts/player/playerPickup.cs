@@ -32,43 +32,55 @@ public class playerPickup : MonoBehaviour
         grabIcon.SetActive(highlight);
     }
 
-    void PickUpObject()
+void PickUpObject()
+{
+    Camera playerCamera = Camera.main;
+    if (playerCamera == null) return;
+
+    RaycastHit hit;
+    Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition);
+
+    if (Physics.Raycast(ray, out hit, pickupRange))
     {
-        Camera playerCamera = Camera.main;
-        if (playerCamera == null) return;
-
-        RaycastHit hit;
-        Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition);
-
-        if (Physics.Raycast(ray, out hit, pickupRange))
+        if (hit.collider.CompareTag(pickupableTag))
         {
-            if (hit.collider.CompareTag(pickupableTag))
+            currentPickup = hit.collider.gameObject;
+            currentPickupRb = currentPickup.GetComponent<Rigidbody>();
+            if (currentPickupRb != null)
             {
-                currentPickup = hit.collider.gameObject;
-                currentPickupRb = currentPickup.GetComponent<Rigidbody>();
-                if (currentPickupRb != null)
-                {
-                    currentPickupRb.isKinematic = true;
-                    SwitchIcon(true);
-                }
-
-                // Store the original scale
-                Vector3 originalScale = currentPickup.transform.localScale;
-
-                // Set the parent
-                currentPickup.transform.SetParent(attachPoint);
-
-                // Reset local position and rotation
-                currentPickup.transform.localPosition = Vector3.zero;
-                currentPickup.transform.localRotation = Quaternion.identity;
-
-                // Reapply the original scale
-                currentPickup.transform.localScale = originalScale;
-
-                PlaySoundBasedOnObjectName(currentPickup.name, true);
+                currentPickupRb.isKinematic = true;
+                SwitchIcon(true);
             }
+
+            // Store the original scale
+            Vector3 originalScale = currentPickup.transform.localScale;
+            
+            // Calculate and apply the offset
+            BoxCollider collider = currentPickup.GetComponent<BoxCollider>();
+            Vector3 offset = collider ? -collider.center/2f : Vector3.zero;
+
+            // Set the parent
+            currentPickup.transform.SetParent(attachPoint, false);
+
+            // Adjust local position by the collider's offset
+            currentPickup.transform.localPosition = offset;
+
+            // Reapply the original scale
+            currentPickup.transform.localScale = originalScale;
+
+            // Reset local rotation to identity (you may adjust this if needed)
+            currentPickup.transform.localRotation = Quaternion.identity;
+
+            PlaySoundBasedOnObjectName(currentPickup.name, true);
         }
     }
+}
+
+
+
+
+
+
 
 
 
