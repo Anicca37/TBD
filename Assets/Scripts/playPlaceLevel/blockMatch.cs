@@ -41,7 +41,7 @@ public class blockMatch : MonoBehaviour
 
     void SnapBlockToBucket(GameObject block)
     {
-        float yOffset = 1.2f; 
+        float yOffset = 1.5f; 
 
         var blockRb = block.GetComponent<Rigidbody>();
         if (blockRb != null)
@@ -50,7 +50,7 @@ public class blockMatch : MonoBehaviour
             Destroy(blockRb); 
         }
 
-        Vector3 newPosition = new Vector3(transform.position.x - 0.4f, transform.position.y - yOffset, transform.position.z + 0.4f);
+        Vector3 newPosition = new Vector3(transform.position.x, transform.position.y + yOffset, transform.position.z + 0.4f);
         block.transform.position = newPosition;
     }
 
