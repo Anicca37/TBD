@@ -23,7 +23,7 @@ public class IntroVideoController : MonoBehaviour
     void Update()
     {
         // Check for the Enter key to skip the video
-        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
+        if (InputManager.instance.ConfirmInput)
         {
             SkipVideo();
         }
