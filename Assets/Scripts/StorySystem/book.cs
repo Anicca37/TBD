@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Book : MonoBehaviour
 {
+    public static Book Instance;
     [SerializeField] private float pageSpeed = 0.5f;
     [SerializeField] private List<Transform> pages;
     private int currentPageIndex = 0;
@@ -12,6 +14,32 @@ public class Book : MonoBehaviour
     private GameObject playerBody;
     private fpsCameraControl cameraControlScript; 
 
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        AssignPlayerReferences();
+    }
+
+    private void AssignPlayerReferences()
+    {
+        playerBody = GameObject.Find("Player");
+        if (Camera.main != null)
+        {
+            cameraControlScript = Camera.main.GetComponent<fpsCameraControl>();
+        }
+    }
     void Start()
     {
         isJournalOpen = false;
