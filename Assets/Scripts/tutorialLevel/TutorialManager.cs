@@ -7,7 +7,7 @@ public class TutorialManager : MonoBehaviour
 {
     public static TutorialManager Instance;
 
-    public GameObject EscapeController;   
+    public GameObject EscapeController;
     public DoorMovement doorMovement;
 
     private float drawForce = 2f;
@@ -24,7 +24,7 @@ public class TutorialManager : MonoBehaviour
             // DontDestroyOnLoad(gameObject);
             player = GameObject.Find("Player");
             playerController = player.GetComponent<CharacterController>();
-            
+
             // get current object's children
             children = new GameObject[transform.childCount];
             for (int i = 0; i < transform.childCount; i++)
@@ -40,7 +40,7 @@ public class TutorialManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    
+
     void Update()
     {
         if (doorMovement.IsDoorOpen())

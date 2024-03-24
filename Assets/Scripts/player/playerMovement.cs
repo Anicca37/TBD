@@ -5,11 +5,10 @@ using UnityEngine;
 public class playerMovement : MonoBehaviour
 {
     public CharacterController controller;
-    public float walkSpeed = 12f;
-    public float runSpeed = 24f; // Double the walk speed for running
+    public float walkSpeed = 18f;
     public float movementSpeed; // Current movement speed
-    public float jumpHeight = 3f;
-    public float gravity = -12.8f;
+    public float jumpHeight = 2f;
+    public float gravity = -60f;
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
@@ -34,8 +33,7 @@ public class playerMovement : MonoBehaviour
 
         Vector3 move = transform.right * x + transform.forward * z;
 
-        // Check if the player is holding the "Shift" key to run
-        movementSpeed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : walkSpeed;
+        movementSpeed =  walkSpeed;
 
         controller.Move(move * movementSpeed * Time.deltaTime);
 
