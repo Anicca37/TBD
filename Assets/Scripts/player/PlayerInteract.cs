@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerInteract : MonoBehaviour
 {
     public string InteractableTag = "Interactable";
+    public string PickUpableTag = "Pickupable";
     public float InteractRange = 30f;
     private GameObject InteractedObject;
 
@@ -23,7 +24,7 @@ public class PlayerInteract : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit, InteractRange))
         {
-            if (hit.collider.CompareTag(InteractableTag))
+            if (hit.collider.CompareTag(InteractableTag) || hit.collider.CompareTag(PickUpableTag))
             {
                 InteractedObject = hit.collider.gameObject;
                 return true;
@@ -35,9 +36,8 @@ public class PlayerInteract : MonoBehaviour
     // Interact Object
     void InteractObject()
     {
-        if (CanInteract() && Input.GetButtonDown("Fire1"))
+        if (CanInteract() && Input.GetButtonDown("Fire3"))
         {
-            Debug.Log("Interacted with " + InteractedObject.name);
             IInteract[] monoBehaviours = InteractedObject.GetComponentsInChildren<IInteract>();
             foreach (IInteract monoBehaviour in monoBehaviours)
             {
