@@ -15,7 +15,7 @@ public class buttonScript : MonoBehaviour
     void Update()
     {
         // Check if the left mouse button was clicked (button index 0)
-        if (Input.GetButtonDown("Fire1"))
+        if (FPSInputManager.GetInteract())
         {
             // Perform a raycast from the camera to the mouse position
             RaycastHit hit;
