@@ -9,6 +9,7 @@ public class GardenManager : MonoBehaviour
     public Transform shockwaveItem; // Assign the clock object's transform in inspector
 
 
+    public GameObject player;
     public GameObject VenusFlytrap;
     public ClockManipulation ClockController;
     public GameObject EscapeController;
@@ -27,11 +28,11 @@ public class GardenManager : MonoBehaviour
 
     private bool isGardenFlooded = false;
     [SerializeField] private float riseSpeed = 0.15f;
-    
-    private float floodDelay = 1.0f; 
-    [SerializeField] private float riseAmount = 20f; 
 
-    private float initialYPosition; 
+    private float floodDelay = 1.0f;
+    [SerializeField] private float riseAmount = 20f;
+
+    private float initialYPosition;
 
     private bool startFlood = false;
     private bool startSink = false; // New flag for controlling the sinking process
@@ -149,24 +150,27 @@ public class GardenManager : MonoBehaviour
 
     void BalanceScales()
     {
-        // scaleBeam.transform.eulerAngles = new Vector3(0, 0, 0);
-        //balance scale animation????
-        scaleAnimator.SetTrigger("Balance");
-        StartCoroutine(SwitchCamera(playerCamera, scalesCamera, 0f));
-
-        if (isScaleBalanceSoundPlayed == false)
+        if (!isScaleBalanced)
         {
-            GameObject theScale = GameObject.Find("scale");
-            AkSoundEngine.PostEvent("Play_Scale_Balancing", theScale.gameObject);
-            isScaleBalanceSoundPlayed = true;
-        }
+            scaleAnimator.SetTrigger("Balance");
+            StartCoroutine(SwitchCamera(playerCamera, scalesCamera, 0f));
+            StartCoroutine(PlayerEnable(false, 0f));
 
-        isScaleBalanced = true;
-        Debug.Log("Scales balanced.");
-        scaleAnimator.SetTrigger("Balanced Idle");
-        Invoke("BirdHint", 4.5f);
-        StartCoroutine(SwitchCamera(birdCamera, playerCamera, 11.5f));
-        Invoke("BirdIdle", 11.5f);
+            if (isScaleBalanceSoundPlayed == false)
+            {
+                GameObject theScale = GameObject.Find("scale");
+                AkSoundEngine.PostEvent("Play_Scale_Balancing", theScale.gameObject);
+                isScaleBalanceSoundPlayed = true;
+            }
+
+            isScaleBalanced = true;
+            Debug.Log("Scales balanced.");
+            scaleAnimator.SetTrigger("Balanced Idle");
+            Invoke("BirdHint", 4.5f);
+            StartCoroutine(SwitchCamera(birdCamera, playerCamera, 11.5f));
+            Invoke("BirdIdle", 11.5f);
+            StartCoroutine(PlayerEnable(true, 11.5f));
+        }
     }
 
     void BirdHint()
@@ -186,8 +190,10 @@ public class GardenManager : MonoBehaviour
 
     public void DeliverPinecone()
     {
+        StartCoroutine(PlayerEnable(false, 1f));
         isWindChimesPlayed = true;
         Debug.Log("Bird delivers the pinecone.");
+        StartCoroutine(PlayerEnable(true, 5f));
     }
 
     void MakeVenusFlytrapBloom()
@@ -329,7 +335,6 @@ public class GardenManager : MonoBehaviour
         }
     }
 
-
     void AdjustFountainParticles()
     {
         if (fountainScript != null)
@@ -355,6 +360,13 @@ public class GardenManager : MonoBehaviour
         cameraToEnable.gameObject.SetActive(true);
 
     }
+
+    IEnumerator PlayerEnable(bool enable, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        player.SetActive(enable);
+    }
+
 
     public void ResetPuzzles()
     {
