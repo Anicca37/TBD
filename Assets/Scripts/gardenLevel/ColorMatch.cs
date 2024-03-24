@@ -38,21 +38,18 @@ public class ColorMatch : MonoBehaviour
 
     void SnapFlowerToStone(GameObject flower)
     {
-        float yOffset = 1.2f; 
-
-        var flowerRb = flower.GetComponent<Rigidbody>();
-        if (flowerRb != null)
+        var flowerScript = flower.GetComponent<FlowerSwap>();
+        if (flowerScript != null)
         {
-            flowerRb.detectCollisions = false; 
-            Destroy(flowerRb); 
+            flowerScript.SwapFlower();
+            AkSoundEngine.PostEvent("Play_FlowerPlant", this.gameObject);
         }
-
-        Vector3 newPosition = new Vector3(transform.position.x, transform.position.y + yOffset, transform.position.z);
-        flower.transform.position = newPosition;
-
-        //play sound
-        AkSoundEngine.PostEvent("Play_FlowerPlant", this.gameObject);
+        else
+        {
+            Debug.LogError("FlowerSwap component missing on " + flower.name);
+        }
     }
+
 
     void TriggerWindEffect()
     {
