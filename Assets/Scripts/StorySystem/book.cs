@@ -10,7 +10,7 @@ public class Book : MonoBehaviour
     private bool isRotating = false;
     private bool isJournalOpen = false;
     private GameObject playerBody;
-    private fpsCameraControl cameraControlScript; // Assuming this is the name of the script controlling the camera
+    private fpsCameraControl cameraControlScript; 
 
     void Start()
     {
