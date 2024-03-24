@@ -53,7 +53,7 @@ public class Book : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && playerBody != null)
         {
             ToggleJournal(isJournalOpen);
         }
