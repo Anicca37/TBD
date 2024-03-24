@@ -7,6 +7,7 @@ public class VineGrowthController : MonoBehaviour
     public List<GameObject> vines;
     public Vector3 maxScale = new Vector3(10f, 10f, 10f);
     private Dictionary<GameObject, Vector3> originalVineScales = new Dictionary<GameObject, Vector3>();
+    private bool IsGrowed = false;
 
     void Start()
     {
@@ -23,13 +24,14 @@ public class VineGrowthController : MonoBehaviour
     // Call this method to update the vines' growth based on the clock's rotation
     public void UpdateVineGrowth(float rotationAmount)
     {
-        if (rotationAmount > 0.5f)
+        if (rotationAmount > 0.5f || IsGrowed)
         {
             return;
         }
         float growthFactor = 1f + Mathf.Clamp((Mathf.Abs(rotationAmount) % 360) / 360f, 0f, 1f);
         if (growthFactor > 1.6f)
         {
+            IsGrowed = true;
             return;
         }
         foreach (var vine in vines)
