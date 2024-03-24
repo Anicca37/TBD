@@ -49,7 +49,7 @@ public class ClockManipulation : MonoBehaviour, IInteract
         {
             // handle clock adjustment
             ControllerDrag();
-            if (Input.GetButtonDown("Fire2"))
+            if (FPSInputManager.GetCancel())
             {
                 OnMouseUp();
             }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
+    // a script for help controller to trigger interactable/pickupable objects OnMouseDown
     public string InteractableTag = "Interactable";
     public string PickUpableTag = "Pickupable";
     public float InteractRange = 30f;
@@ -36,7 +37,7 @@ public class PlayerInteract : MonoBehaviour
     // Interact Object
     void InteractObject()
     {
-        if (CanInteract() && Input.GetButtonDown("Fire3"))
+        if (CanInteract() && FPSInputManager.GetMouseDownHelper())
         {
             IInteract[] monoBehaviours = InteractedObject.GetComponentsInChildren<IInteract>();
             foreach (IInteract monoBehaviour in monoBehaviours)
