@@ -17,6 +17,6 @@ public class BirdWindow : MonoBehaviour
     }
     private void ResetBird()
     {
-        bird.SetTrigger("Warn Return");
+        bird.SetTrigger("Warn Rest");
     }
 }
