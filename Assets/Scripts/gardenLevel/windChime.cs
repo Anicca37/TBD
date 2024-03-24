@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class windChime : MonoBehaviour
+public class windChime : MonoBehaviour, IInteract
 {
     public WindController windController;
     public ParticleSystem birdsParticleSystem;
@@ -12,7 +12,7 @@ public class windChime : MonoBehaviour
 
     public int chimeID;
 
-    void OnMouseDown()
+    public void OnMouseDown()
     {
 
         // check if the floral puzzle is matched

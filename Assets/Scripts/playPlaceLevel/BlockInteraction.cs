@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class BlockInteraction : MonoBehaviour
+public class BlockInteraction : MonoBehaviour, IInteract
 {
     public blockManager blockManager;
 
-    private void OnMouseDown()
+    public void OnMouseDown()
     {
         blockManager.BlockClicked(gameObject);
     }

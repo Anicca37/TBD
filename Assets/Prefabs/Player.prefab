@@ -150,6 +150,7 @@ GameObject:
   - component: {fileID: 5173891596251279554}
   - component: {fileID: 4111715680166910250}
   - component: {fileID: 718597314784811364}
+  - component: {fileID: 6980265165287691887}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -269,6 +270,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraTransform: {fileID: 366030591761867526}
   detectionRange: 10
+--- !u!114 &6980265165287691887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2204808416171688000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cab2a95da1938384597fe6db2ae83b7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractableTag: Interactable
+  InteractRange: 30
 --- !u!1 &6370624094172780220
 GameObject:
   m_ObjectHideFlags: 0
