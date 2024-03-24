@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class playerPickup : MonoBehaviour
 {
@@ -8,21 +7,13 @@ public class playerPickup : MonoBehaviour
     public GameObject defaultIcon;
     public GameObject grabIcon;
     public float pickupRange = 10f;
-
+    
     private GameObject currentPickup;
     private Rigidbody currentPickupRb;
-    private PlayerInput playerInput;
-    private InputAction interactAction;
 
-    private void Awake()
-    {
-        playerInput = GetComponent<PlayerInput>(); // The PlayerInput should be on the player, not the object being picked up
-        interactAction = playerInput.actions["Interact"];
-    }
     void Update()
     {
-        // Check for the interact action instead of the old input
-        if (interactAction.triggered)
+        if (Input.GetButtonDown("Fire1"))
         {
             if (currentPickup == null)
             {
@@ -43,9 +34,11 @@ public class playerPickup : MonoBehaviour
 
     void PickUpObject()
     {
-        // Cast a ray from the camera forward to check for pickups
+        Camera playerCamera = Camera.main;
+        if (playerCamera == null) return;
+
         RaycastHit hit;
-        Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+        Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition);
 
         if (Physics.Raycast(ray, out hit, pickupRange))
         {
