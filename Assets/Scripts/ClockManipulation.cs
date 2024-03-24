@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class ClockManipulation : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class ClockManipulation : MonoBehaviour
     public GameObject PauseMenuController;
 
     public Light directionalLight;
+    public TMP_Text clockSign;
     private bool isDay = true;
 
     public float interactRange = 10f;
@@ -221,6 +223,11 @@ public class ClockManipulation : MonoBehaviour
             }
         }
 
+        if (clockSign != null)
+        {
+            DisplayAMPMText(rotationAmount);
+        }
+
         // change the directional light rotation and color
         if (directionalLight != null)
         {
@@ -243,6 +250,20 @@ public class ClockManipulation : MonoBehaviour
             {
                 directionalLight.color = Color.Lerp(Color.white, Color.black, timeOfDay * 2);
             }
+        }
+    }
+
+    void DisplayAMPMText(float rotationAmount)
+    {
+        if ((rotationAmount < 0f && rotationAmount > -360f) ||
+            (rotationAmount > 360f && rotationAmount < 720f))
+        {
+            clockSign.text = "AM";
+        }
+        else if ((rotationAmount < -360f && rotationAmount > -720f) ||
+                 (rotationAmount > 0f && rotationAmount < 360f))
+        {
+            clockSign.text = "PM";
         }
     }
 
