@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BirdAnimation : MonoBehaviour
+public class BirdAnimation : MonoBehaviour, IInteract
 {
     public CharacterJoint jointToModify;
     public GameObject pinecone;
 
-    void OnMouseDown()
+    public void OnMouseDown()
     {
         Debug.Log("Chirp!");
         // ketro add chirp here!!!!

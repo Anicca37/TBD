@@ -53,7 +53,7 @@ public class Book : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && playerBody != null)
+        if (InputManager.instance.BookOpenCloseInput && playerBody != null)
         {
             ToggleJournal(isJournalOpen);
         }
@@ -62,19 +62,14 @@ public class Book : MonoBehaviour
         {
             if (!isRotating)
             {
-                if (Input.GetKeyDown(KeyCode.RightArrow) && currentPageIndex < pages.Count - 1)
+                if (InputManager.instance.SelectionRightInput && currentPageIndex < pages.Count - 1)
                 {
                     StartCoroutine(RotatePage(currentPageIndex, 180));
                 }
-                else if (Input.GetKeyDown(KeyCode.LeftArrow) && currentPageIndex > 0)
+                else if (InputManager.instance.SelectionLeftInput && currentPageIndex > 0)
                 {
                     StartCoroutine(RotatePage(currentPageIndex - 1, 0));
                 }
-            }
-
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                ToggleJournal(isJournalOpen);
             }
         }
     }

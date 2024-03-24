@@ -26,8 +26,10 @@ public class playerMovement : MonoBehaviour
             velocity.y = -2f;
         }
 
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        Vector2 movement = FPSInputManager.GetPlayerMovement();
+
+        float x = movement.x;
+        float z = movement.y;
 
         Vector3 move = transform.right * x + transform.forward * z;
 
@@ -35,7 +37,7 @@ public class playerMovement : MonoBehaviour
 
         controller.Move(move * movementSpeed * Time.deltaTime);
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (FPSInputManager.GetJump() && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }

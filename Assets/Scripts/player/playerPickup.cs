@@ -13,7 +13,7 @@ public class playerPickup : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (FPSInputManager.GetInteract())
         {
             if (currentPickup == null)
             {

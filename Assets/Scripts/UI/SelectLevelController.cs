@@ -30,15 +30,15 @@ public class SelectLevelController : MonoBehaviour
     private void Update()
     {
         // handle input
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (InputManager.instance.SelectionUpInput)
         {
             MoveSelectionUp();
         }
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        else if (InputManager.instance.SelectionDownInput)
         {
             MoveSelectionDown();
         }
-        else if (Input.GetKeyDown(KeyCode.Return))
+        else if (InputManager.instance.ConfirmInput)
         {
             SelectOption();
         }
