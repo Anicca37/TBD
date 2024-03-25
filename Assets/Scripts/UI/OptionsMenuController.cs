@@ -77,23 +77,23 @@ public class OptionsMenuController : MonoBehaviour
     private void Update()
     {
         // handle input
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (InputManager.instance.SelectionUpInput)
         {
             MoveSelectionUp();
         }
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        else if (InputManager.instance.SelectionDownInput)
         {
             MoveSelectionDown();
         }
-        else if (Input.GetKeyDown(KeyCode.Return))
+        else if (InputManager.instance.ConfirmInput)
         {
             SelectOption();
         }
-        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        else if (InputManager.instance.SelectionLeftInput)
         {
             MoveSelectionLeft();
         }
-        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        else if (InputManager.instance.SelectionRightInput)
         {
             MoveSelectionRight();
         }
@@ -179,9 +179,9 @@ public class OptionsMenuController : MonoBehaviour
         {
             newValue += 10f; // Increase value by 10
         }
-        
-        newValue =  Mathf.Clamp(newValue, 
-                                currentSlider.GetComponent<Slider>().minValue, 
+
+        newValue = Mathf.Clamp(newValue,
+                                currentSlider.GetComponent<Slider>().minValue,
                                 currentSlider.GetComponent<Slider>().maxValue);
         currentSlider.GetComponent<Slider>().value = newValue;
         return newValue;
@@ -199,8 +199,8 @@ public class OptionsMenuController : MonoBehaviour
         {
             newValue -= 10f; // Decrease value by 10
         }
-        newValue =  Mathf.Clamp(newValue, 
-                                currentSlider.GetComponent<Slider>().minValue, 
+        newValue = Mathf.Clamp(newValue,
+                                currentSlider.GetComponent<Slider>().minValue,
                                 currentSlider.GetComponent<Slider>().maxValue);
         currentSlider.GetComponent<Slider>().value = newValue;
         return newValue;
@@ -263,6 +263,45 @@ public class OptionsMenuController : MonoBehaviour
         }
     }
 
+    private void ExitOptionMenu(GameObject currentSelectedSprite)
+    {
+        // back to main menu or pause menu
+        if (SceneManager.GetActiveScene().name == "UI")
+        {
+            if (mainMenuController == null)
+            {
+                return;
+            }
+            currentSelectedSprite.SetActive(false);
+            MounseSenstivitySlider.SetActive(false);
+            MusicSlider.SetActive(false);
+            SFXSlider.SetActive(false);
+            AmbienceSlider.SetActive(false);
+            VineBorder.SetActive(false);
+            // disable optionsmenucontroller amd enable mainmenucontroller
+            mainMenuController.GetComponent<MainMenuController>().enabled = true;
+            mainMenuController.GetComponent<MainMenuController>().InitializeMenu();
+            gameObject.GetComponent<OptionsMenuController>().enabled = false;
+        }
+        else
+        {
+            if (pauseMenuController == null)
+            {
+                return;
+            }
+            currentSelectedSprite.SetActive(false);
+            MounseSenstivitySlider.SetActive(false);
+            MusicSlider.SetActive(false);
+            SFXSlider.SetActive(false);
+            AmbienceSlider.SetActive(false);
+            VineBorder.SetActive(false);
+            // disable optionsmenucontroller and enable pausemenucontroller
+            pauseMenuController.GetComponent<PauseMenuController>().enabled = true;
+            pauseMenuController.GetComponent<PauseMenuController>().InitializePauseMenu();
+            gameObject.GetComponent<OptionsMenuController>().enabled = false;
+        }
+    }
+
     private void SelectOption()
     {
         switch (selectedOption)
@@ -290,47 +329,16 @@ public class OptionsMenuController : MonoBehaviour
                 AkSoundEngine.SetRTPCValue("AmbienceVolume", currentAmbienceVolume);
                 AkSoundEngine.SetRTPCValue("MusicVolume", currentMusicVolume);
                 AkSoundEngine.SetRTPCValue("SFXVolume", currentSfxVolume);
+                // exit options menu
+                ExitOptionMenu(ApplyOptionSelectedSprite);
                 break;
             case MenuOption.Back:
                 SetSliderValue(MounseSenstivitySlider, currentMouseSensitivity);
                 SetSliderValue(MusicSlider, currentMusicVolume);
                 SetSliderValue(SFXSlider, currentSfxVolume);
                 SetSliderValue(AmbienceSlider, currentAmbienceVolume);
-                // back to main menu or pause menu
-                if (SceneManager.GetActiveScene().name == "UI")
-                {
-                    if (mainMenuController == null)
-                    {
-                        return;
-                    }
-                    BackOptionSelectedSprite.SetActive(false);
-                    MounseSenstivitySlider.SetActive(false);
-                    MusicSlider.SetActive(false);
-                    SFXSlider.SetActive(false);
-                    AmbienceSlider.SetActive(false);
-                    VineBorder.SetActive(false);
-                    // disable optionsmenucontroller amd enable mainmenucontroller
-                    mainMenuController.GetComponent<MainMenuController>().enabled = true;
-                    mainMenuController.GetComponent<MainMenuController>().InitializeMenu();
-                    gameObject.GetComponent<OptionsMenuController>().enabled = false;
-                }
-                else
-                {
-                    if (pauseMenuController == null)
-                    {
-                        return;
-                    }
-                    BackOptionSelectedSprite.SetActive(false);
-                    MounseSenstivitySlider.SetActive(false);
-                    MusicSlider.SetActive(false);
-                    SFXSlider.SetActive(false);
-                    AmbienceSlider.SetActive(false);
-                    VineBorder.SetActive(false);
-                    // disable optionsmenucontroller and enable pausemenucontroller
-                    pauseMenuController.GetComponent<PauseMenuController>().enabled = true;
-                    pauseMenuController.GetComponent<PauseMenuController>().InitializePauseMenu();
-                    gameObject.GetComponent<OptionsMenuController>().enabled = false;
-                }
+                // exit options menu
+                ExitOptionMenu(BackOptionSelectedSprite);
                 break;
         }
     }

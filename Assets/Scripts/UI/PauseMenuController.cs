@@ -43,9 +43,18 @@ public class PauseMenuController : MonoBehaviour
         return isPaused;
     }
 
+    private void LockCameraRotation(bool lockRotation)
+    {
+        if (Camera.main == null)
+        {
+            return;
+        }
+        Camera.main.GetComponent<fpsCameraControl>().enabled = !lockRotation;
+    }
+
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !escapeMenuController.isPlayerEscaped() && !isPaused)
+        if (InputManager.instance.PauseMenuOpenCloseInput && !escapeMenuController.isPlayerEscaped() && !isPaused)
         {
             isPaused = true;
             InitializePauseMenu();
@@ -56,16 +65,17 @@ public class PauseMenuController : MonoBehaviour
             playerBody.GetComponent<playerPickup>().DropObject();
             Crosshair.SetActive(false);
             HandGrab.SetActive(false);
+            LockCameraRotation(true);
             // handle input
-            if (Input.GetKeyDown(KeyCode.UpArrow))
+            if (InputManager.instance.SelectionUpInput)
             {
                 MoveSelectionUp();
             }
-            else if (Input.GetKeyDown(KeyCode.DownArrow))
+            else if (InputManager.instance.SelectionDownInput)
             {
                 MoveSelectionDown();
             }
-            else if (Input.GetKeyDown(KeyCode.Return))
+            else if (InputManager.instance.ConfirmInput)
             {
                 SelectOption();
             }
@@ -135,6 +145,7 @@ public class PauseMenuController : MonoBehaviour
                 resumeOptionSelectedSprite.SetActive(false);
                 Crosshair.SetActive(true);
                 playerBody.GetComponent<playerMovement>().enabled = true;
+                LockCameraRotation(false);
                 break;
             case MenuOption.Restart:
                 if (SceneManager.GetActiveScene().name.Contains("Garden"))

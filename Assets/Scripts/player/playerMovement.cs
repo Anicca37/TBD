@@ -5,11 +5,10 @@ using UnityEngine;
 public class playerMovement : MonoBehaviour
 {
     public CharacterController controller;
-    public float walkSpeed = 12f;
-    public float runSpeed = 24f; // Double the walk speed for running
+    public float walkSpeed = 18f;
     public float movementSpeed; // Current movement speed
-    public float jumpHeight = 3f;
-    public float gravity = -12.8f;
+    public float jumpHeight = 2f;
+    public float gravity = -60f;
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
@@ -27,17 +26,18 @@ public class playerMovement : MonoBehaviour
             velocity.y = -2f;
         }
 
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        Vector2 movement = FPSInputManager.GetPlayerMovement();
+
+        float x = movement.x;
+        float z = movement.y;
 
         Vector3 move = transform.right * x + transform.forward * z;
 
-        // Check if the player is holding the "Shift" key to run
-        movementSpeed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : walkSpeed;
+        movementSpeed =  walkSpeed;
 
         controller.Move(move * movementSpeed * Time.deltaTime);
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (FPSInputManager.GetJump() && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }

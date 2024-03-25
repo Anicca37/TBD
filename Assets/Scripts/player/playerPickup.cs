@@ -3,19 +3,18 @@ using UnityEngine;
 public class playerPickup : MonoBehaviour
 {
     public string pickupableTag = "Pickupable";
-    public Transform attachPoint;
-
-    private GameObject currentPickup;
-    private Rigidbody currentPickupRb;
+    public Transform attachPoint; // The placeholder where picked objects should go
     public GameObject defaultIcon;
     public GameObject grabIcon;
     public float pickupRange = 10f;
+    
+    private GameObject currentPickup;
+    private Rigidbody currentPickupRb;
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (FPSInputManager.GetInteract())
         {
-            // Check if the player is not already carrying an object
             if (currentPickup == null)
             {
                 PickUpObject();
@@ -33,99 +32,92 @@ public class playerPickup : MonoBehaviour
         grabIcon.SetActive(highlight);
     }
 
-    void PickUpObject()
+void PickUpObject()
+{
+    Camera playerCamera = Camera.main;
+    if (playerCamera == null) return;
+
+    RaycastHit hit;
+    Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition);
+
+    if (Physics.Raycast(ray, out hit, pickupRange))
     {
-        // Raycast to detect pickupable objects
-        Camera playerCamera = Camera.main; // Get the main camera, assuming the player is using the main camera
-
-        if(playerCamera == null)
+        if (hit.collider.CompareTag(pickupableTag))
         {
-            return;
-        }
-
-        // Raycast from the camera, not from the player's position
-        RaycastHit hit;
-        Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition); // Cast the ray from where the mouse pointer is on the screen
-
-        if (Physics.Raycast(ray, out hit, pickupRange * 3))
-        {
-            if (hit.collider.CompareTag(pickupableTag))
+            currentPickup = hit.collider.gameObject;
+            currentPickupRb = currentPickup.GetComponent<Rigidbody>();
+            if (currentPickupRb != null)
             {
-                // Calculate the horizontal distance to the hit object, ignoring the Y component
-                Vector3 horizontalPlayerPosition = new Vector3(transform.position.x, 0f, transform.position.z);
-                Vector3 hitPointHorizontal = new Vector3(hit.point.x, 0f, hit.point.z);
-                float horizontalDistance = Vector3.Distance(horizontalPlayerPosition, hitPointHorizontal);
-
-                // Check if the hit object is within the allowable Y distance
-                float yDistance = Mathf.Abs(hit.point.y - transform.position.y);
-                float playerHeight = 2f; // Arbitrary player height, adjust as necessary
-
-                // Check if the object is within pickup range horizontally and vertically
-                if (horizontalDistance <= pickupRange && yDistance <= playerHeight)
-                {
-                    // Set the current pickup to the hit object
-                    currentPickup = hit.collider.gameObject;
-
-                    //disable physics
-                    currentPickupRb = currentPickup.GetComponent<Rigidbody>();
-                    if (currentPickupRb != null)
-                    {
-                        SwitchIcon(true);
-                        currentPickupRb.isKinematic = true;
-                    }
-
-                    // Attach the pickup to the attachPoint
-                    currentPickup.transform.parent = attachPoint;
-                    // currentPickup.transform.localPosition = Vector3.zero;
-                    // currentPickup.transform.localRotation = Quaternion.identity;
-
-                    if (currentPickup.name.Contains("flower"))
-                    {
-                        AkSoundEngine.PostEvent("Play_FlowerPickUp", this.gameObject);
-                    }
-                    else if (currentPickup.name.Contains("Chair"))
-                    {
-                        AkSoundEngine.PostEvent("Play_TablePickUp", this.gameObject);
-                    }
-                    else if (currentPickup.name.Contains("pinecone"))
-                    {
-                        AkSoundEngine.PostEvent("Play_PineconePickup", this.gameObject);
-                    }
-                    else if (currentPickup.name.Contains("block"))
-                    {
-                        AkSoundEngine.PostEvent("Play_BlockPickUp", this.gameObject);
-                    }
-                }
+                currentPickupRb.isKinematic = true;
+                SwitchIcon(true);
             }
+
+            // Store the original scale
+            Vector3 originalScale = currentPickup.transform.localScale;
+            
+            // Calculate and apply the offset
+            BoxCollider collider = currentPickup.GetComponent<BoxCollider>();
+            Vector3 offset = collider ? -collider.center/2f : Vector3.zero;
+
+            // Set the parent
+            currentPickup.transform.SetParent(attachPoint, false);
+
+            // Adjust local position by the collider's offset
+            currentPickup.transform.localPosition = offset;
+
+            // Reapply the original scale
+            currentPickup.transform.localScale = originalScale;
+
+            // Reset local rotation to identity (you may adjust this if needed)
+            currentPickup.transform.localRotation = Quaternion.identity;
+
+            PlaySoundBasedOnObjectName(currentPickup.name, true);
         }
     }
+}
 
     public void DropObject()
     {
-        if (currentPickup == null)
-        {
-            return;
-        }
-        // Detach the current pickup from the attachPoint
-        currentPickup.transform.parent = null;
+        if (currentPickup == null) return;
 
-        // Re-enable physics for the dropped object
+        // Before detaching, reset to default parent's scale if needed, but usually, it's unnecessary for dropping
+        currentPickup.transform.SetParent(null);
+
         if (currentPickupRb != null)
         {
-            SwitchIcon(false);
             currentPickupRb.isKinematic = false;
+            SwitchIcon(false);
         }
 
-        if (currentPickup.name.Contains("Chair"))
-        {
-            AkSoundEngine.PostEvent("Play_TableDrop", this.gameObject);
-        }
-        else if (currentPickup.name.Contains("block"))
-        {
-            AkSoundEngine.PostEvent("Play_BlockDrop", this.gameObject);
-        }
-        // Reset the current pickup variable
+        PlaySoundBasedOnObjectName(currentPickup.name, false);
+
         currentPickup = null;
-        
+    }
+
+
+    private void PlaySoundBasedOnObjectName(string objectName, bool isPickingUp)
+    {
+        string soundEventName = "";
+        if (objectName.Contains("flower"))
+        {
+            soundEventName = isPickingUp ? "Play_FlowerPickUp" : "";
+        }
+        else if (objectName.Contains("Chair"))
+        {
+            soundEventName = isPickingUp ? "Play_TablePickUp" : "Play_TableDrop";
+        }
+        else if (objectName.Contains("pinecone"))
+        {
+            soundEventName = isPickingUp ? "Play_PineconePickup" : "";
+        }
+        else if (objectName.Contains("block"))
+        {
+            soundEventName = isPickingUp ? "Play_BlockPickUp" : "Play_BlockDrop";
+        }
+
+        if (!string.IsNullOrEmpty(soundEventName))
+        {
+            AkSoundEngine.PostEvent(soundEventName, gameObject);
+        }
     }
 }

@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class XylophoneClick : MonoBehaviour
+public class XylophoneClick : MonoBehaviour, IInteract
 {
     public int xyloID;
 
     public XSequenceChecker XsequenceChecker;
 
-    private void OnMouseDown()
+    public void OnMouseDown()
     {
         FindObjectOfType<XSequenceChecker>().XyloClicked(xyloID);
         PlayXyloSound(xyloID);

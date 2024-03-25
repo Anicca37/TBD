@@ -79,6 +79,7 @@ public class PlayPlaceLightController : MonoBehaviour
     {
         isLightSoundPlayed = false;
     }
+    
     private void LightOffSoundReset()
     {
         isLightOffSoundPlayed = false;
@@ -92,8 +93,8 @@ public class PlayPlaceLightController : MonoBehaviour
     private bool CanPlayPlaceOpen()
     {
         float rotationAmount = clockController.GetRotationAmount();
-        if ((rotationAmount > 90f && rotationAmount < 450f) || 
-            (rotationAmount > -630f && rotationAmount < -270f))
+        if ((rotationAmount > 90f && rotationAmount < 270f) || 
+            (rotationAmount > -630f && rotationAmount < -450f))
         {
             return true;
         }
