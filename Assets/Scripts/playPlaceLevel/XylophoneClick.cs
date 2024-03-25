@@ -6,14 +6,17 @@ public class XylophoneClick : MonoBehaviour, IInteract
 {
     public int xyloID;
     [SerializeField] private Animator xyloAnimator;
-
-    // public XSequenceChecker XsequenceChecker;
+    public GameObject floatingText;
 
     public void OnMouseDown()
     {
         FindObjectOfType<XSequenceChecker>().XyloClicked(xyloID);
         xyloAnimator.SetTrigger($"Hit {xyloID}"); // animate hit
         PlayXyloSound(xyloID);
+        if (floatingText)
+        {
+            ShowDing();
+        }
         StartCoroutine(ResetAnimation(xyloID, 1f));
     }
 
@@ -36,6 +39,12 @@ public class XylophoneClick : MonoBehaviour, IInteract
                 break;
         }
     }
+
+    void ShowDing()
+    {
+        Instantiate(floatingText, transform.position, Quaternion.identity, transform);
+    }
+
     IEnumerator ResetAnimation(int id, float delay)
     {
         yield return new WaitForSeconds(delay);
