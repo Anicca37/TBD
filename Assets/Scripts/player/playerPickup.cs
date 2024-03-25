@@ -76,14 +76,6 @@ void PickUpObject()
     }
 }
 
-
-
-
-
-
-
-
-
     public void DropObject()
     {
         if (currentPickup == null) return;

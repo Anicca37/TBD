@@ -6,7 +6,6 @@ public class PlayerInteract : MonoBehaviour
 {
     // a script for help controller to trigger interactable/pickupable objects OnMouseDown
     public string InteractableTag = "Interactable";
-    public string PickUpableTag = "Pickupable";
     public float InteractRange = 30f;
     private GameObject InteractedObject;
 
@@ -25,7 +24,7 @@ public class PlayerInteract : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit, InteractRange))
         {
-            if (hit.collider.CompareTag(InteractableTag) || hit.collider.CompareTag(PickUpableTag))
+            if (hit.collider.CompareTag(InteractableTag))
             {
                 InteractedObject = hit.collider.gameObject;
                 return true;

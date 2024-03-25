@@ -4,6 +4,10 @@ using UnityEngine;
 public class BlockInteraction : MonoBehaviour, IInteract
 {
     public blockManager blockManager;
+    void Start()
+    {
+        gameObject.tag = "Interactable";
+    }
 
     public void OnMouseDown()
     {
