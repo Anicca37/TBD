@@ -83,6 +83,8 @@ public class GardenManager : MonoBehaviour
     {
         return isFloralMatched;
     }
+    public bool IsWindChimesPlayed
+    { get { return isWindChimesPlayed; } }
 
     public void CompletePuzzle(string puzzleName)
     {

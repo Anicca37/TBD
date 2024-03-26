@@ -7,24 +7,22 @@ public class SequenceChecker : MonoBehaviour
     private int[] targetSequence = { 2, 4, 1, 3 };
     private int currentSequenceIndex = 0;
     public WindController windController;
-
     private bool solved = false;
-
     public static SequenceChecker Instance;
+    private int wrongAttempts = 0;
     public bool ifCorrectSoundPlayed = false;
-
+    [SerializeField] private Animator textAnimator;
 
     public void ChimeClicked(int chimeID)
     {
         Debug.Log(chimeID);
-
         if (targetSequence[currentSequenceIndex] == chimeID && !solved)
         {
             currentSequenceIndex++;
             if (currentSequenceIndex >= targetSequence.Length)
             {
-                Debug.Log("Whoosh!");
-                LaunchSeeds();
+                // Debug.Log("Whoosh!");
+                // LaunchSeeds();
                 currentSequenceIndex = 0; // reset sequence after success
 
                 GameObject theBird = GameObject.Find("smallBird");
@@ -35,7 +33,8 @@ public class SequenceChecker : MonoBehaviour
         else
         {
             currentSequenceIndex = 0; // reset if wrong is clicked
-           
+            wrongAttempts++;
+            Debug.Log($"Wrong attempt #{wrongAttempts}");
             //play sound
             if (ifCorrectSoundPlayed == false)
             {
@@ -43,9 +42,8 @@ public class SequenceChecker : MonoBehaviour
 
                 Invoke("playWrongSound", 0.3f);
                 Invoke("playCorrectSound", 1.3f); // play correct after 0.5s;
+                Invoke("makePlayedFalse", 5f);
             }
-            
-            Invoke("makePlayedFalse", 5f);
         }
     }
     public bool IsCorrectSequencePlayed()
@@ -69,6 +67,15 @@ public class SequenceChecker : MonoBehaviour
     private void playCorrectSound()
     {
         AkSoundEngine.PostEvent("Play_Chime_Melody", this.gameObject);
+        if (wrongAttempts >= 5)
+        {
+            textAnimator.SetTrigger("Hint C");
+            Invoke("resetHintAnimation", 2.75f);
+        }
+    }
+    void resetHintAnimation()
+    {
+        textAnimator.SetTrigger("Hint Return C");
     }
 
     private void playBirdWing()
@@ -76,9 +83,9 @@ public class SequenceChecker : MonoBehaviour
         AkSoundEngine.PostEvent("Play_BirdWing", this.gameObject);
     }
 
-    private void LaunchSeeds()
-    {
-        windController.LaunchSeedsEastward();
-        solved = true;
-    }
+    // private void LaunchSeeds()
+    // {
+    //     windController.LaunchSeedsEastward();
+    //     solved = true;
+    // }
 }
