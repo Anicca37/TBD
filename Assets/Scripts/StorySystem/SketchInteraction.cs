@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SketchInteraction : MonoBehaviour
+public class SketchInteraction : MonoBehaviour, IInteract
 {
     public GameObject inactivePageSprite;
     public GameObject activePageSprite;  
 
-    private void OnMouseDown()
+    public void OnMouseDown()
     {
         if (Book.Instance != null)
         {

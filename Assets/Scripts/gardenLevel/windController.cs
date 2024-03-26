@@ -8,7 +8,7 @@ public class WindController : MonoBehaviour
     // public GameObject targetObject; // scale surface
     // public float launchForce = 10f;
     // public float gravitateForce = 5f;
-    private bool hasCompletedWindChimesPuzzle = false;
+    // private bool hasCompletedWindChimesPuzzle = false;
     public Camera playerCamera;
     public Camera actionCamera;
     public Animator birdAnimator;

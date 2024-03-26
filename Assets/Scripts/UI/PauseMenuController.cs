@@ -9,11 +9,10 @@ public class PauseMenuController : MonoBehaviour
     public GameObject optionsOptionSelectedSprite;
     public GameObject menuOptionSelectedSprite;
 
-    private bool isPaused = false;
+    private static bool isPaused = false;
     public GameObject Crosshair;
     public GameObject HandGrab;
     private GameObject playerBody;
-    private EscapeMenuController escapeMenuController;
     public GameObject optionMenuController;
 
     private enum MenuOption { Resume, Restart, Options, Menu };
@@ -22,7 +21,6 @@ public class PauseMenuController : MonoBehaviour
     private void Start()
     {
         playerBody = GameObject.Find("Player");
-        escapeMenuController = GameObject.Find("EscapeMenuController").GetComponent<EscapeMenuController>();
         if (optionMenuController != null)
         {
             optionMenuController.GetComponent<OptionsMenuController>().enabled = false;
@@ -38,7 +36,7 @@ public class PauseMenuController : MonoBehaviour
         resumeOptionSelectedSprite.SetActive(true);
     }
 
-    public bool isGamePaused()
+    public static bool isGamePaused()
     {
         return isPaused;
     }
@@ -54,7 +52,7 @@ public class PauseMenuController : MonoBehaviour
 
     private void Update()
     {
-        if (InputManager.instance.PauseMenuOpenCloseInput && !escapeMenuController.isPlayerEscaped() && !isPaused)
+        if (InputManager.instance.PauseMenuOpenCloseInput && !EscapeMenuController.isPlayerEscaped() && !isPaused)
         {
             isPaused = true;
             InitializePauseMenu();

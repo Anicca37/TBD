@@ -209,7 +209,7 @@ public partial class @FPSControl: IInputActionCollection2, IDisposable
                     ""id"": ""de7cdca1-c0b2-4408-83fe-c06771dd6234"",
                     ""path"": ""<Mouse>/delta"",
                     ""interactions"": """",
-                    ""processors"": ""ScaleVector2(x=2,y=2)"",
+                    ""processors"": ""ScaleVector2"",
                     ""groups"": ""FPSControllerInputs"",
                     ""action"": ""Look"",
                     ""isComposite"": false,

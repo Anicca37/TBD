@@ -8,7 +8,7 @@ public class EscapeMenuController : MonoBehaviour
     public GameObject nextOptionSelectedSprite;
     public GameObject menuOptionSelectedSprite;
 
-    private bool isEscaped = false;
+    private static bool isEscaped = false;
     public GameObject Crosshair;
     public GameObject HandGrab;
     private GameObject playerBody;
@@ -30,7 +30,7 @@ public class EscapeMenuController : MonoBehaviour
         nextOptionSelectedSprite.SetActive(true);
     }
 
-    public bool isPlayerEscaped()
+    public static bool isPlayerEscaped()
     {
         return isEscaped;
     }
