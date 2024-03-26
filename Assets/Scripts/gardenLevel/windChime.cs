@@ -9,21 +9,21 @@ public class windChime : MonoBehaviour, IInteract
     public TreeGrowthController treeGrowthController;
     public Transform windDirectionIndicator;
     public SequenceChecker sequenceChecker;
-
     public int chimeID;
+    [SerializeField] private Animator chimeAnimator;
 
     public void OnMouseDown()
     {
-
+        chimeAnimator.SetTrigger($"Hit {chimeID}"); // animate hit
         // check if the floral puzzle is matched
         // if (!true)
         if (GardenManager.Instance.IsFloralMatched())
         {
+            ChangeWindDirection(chimeID);
             // Debug.Log($"curr index: {currentSequenceIndex}");
             // Debug.Log($"{chimeID} = {targetSequence[currentSequenceIndex]} is {chimeID == targetSequence[currentSequenceIndex]}");
-            if (!sequenceChecker.IsCorrectSequencePlayed())
+            if (!GardenManager.Instance.IsWindChimesPlayed)
             {
-                ChangeWindDirection(chimeID);
                 FindObjectOfType<SequenceChecker>().ChimeClicked(chimeID);
             }
         }
@@ -33,6 +33,12 @@ public class windChime : MonoBehaviour, IInteract
             TriggerBirdsAndGrowPlants();
             // GardenManager.Instance.CompletePuzzle("WindChimes");
         }
+        StartCoroutine(ResetAnimation(chimeID, 4f));
+    }
+    IEnumerator ResetAnimation(int id, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        chimeAnimator.SetTrigger($"Return {id}");
     }
 
     void ChangeWindDirection(int chimeID)
@@ -41,23 +47,19 @@ public class windChime : MonoBehaviour, IInteract
         switch (chimeID)
         {
             case 1:
-                // TODO: add sound
-                AkSoundEngine.PostEvent("Play_ChimeG", this.gameObject);
+                AkSoundEngine.PostEvent("Play_ChimeG", this.gameObject); // sound
                 direction = Vector3.forward; // North             
                 break;
             case 2:
-                // TODO: add sound
-                AkSoundEngine.PostEvent("Play_ChimeE", this.gameObject);
+                AkSoundEngine.PostEvent("Play_ChimeE", this.gameObject); // sound
                 direction = Vector3.back; // South
                 break;
             case 3:
-                // TODO: add sound
-                AkSoundEngine.PostEvent("Play_ChimeD", this.gameObject);
+                AkSoundEngine.PostEvent("Play_ChimeD", this.gameObject); // sound
                 direction = Vector3.right; // East
                 break;
             case 4:
-                // TODO: add sound
-                AkSoundEngine.PostEvent("Play_ChimeC", this.gameObject);
+                AkSoundEngine.PostEvent("Play_ChimeC", this.gameObject); // sound
                 direction = Vector3.left; // West
                 break;
         }
