@@ -6,8 +6,8 @@ public class PlayPlaceManager : MonoBehaviour
 {
     public static PlayPlaceManager Instance;
 
-    private bool isClockInteracted = false;
-    private bool areBlocksSorted = false;
+    private bool isClockInteracted = true;
+    private bool areBlocksSorted = true;
     private bool isXylophoneSequenceCorrect = false;
 
     public PlayPlaceLightController playPlaceLightController;
@@ -54,8 +54,11 @@ public class PlayPlaceManager : MonoBehaviour
                 }
                 else
                 {
-                    isXylophoneSequenceCorrect = true;
-                    OpenTunnel(); // Unlock the escape mechanism
+                    if (!isXylophoneSequenceCorrect)
+                    {
+                        isXylophoneSequenceCorrect = true;
+                        OpenTunnel(); // Unlock the escape mechanism
+                    }
                 }
                 break;
             case "Escape":
@@ -72,6 +75,17 @@ public class PlayPlaceManager : MonoBehaviour
         return isClockInteracted;
     }
 
+    public bool AreBlocksSorted
+    {
+        get { return areBlocksSorted; }
+    }
+
+    public bool IsXylophoneSequenceCorrect
+    {
+        get { return isXylophoneSequenceCorrect; }
+    }
+
+
     void HighlightBlocks()
     {
         Debug.Log("Clock interacted, highlighting balls.");
@@ -86,10 +100,6 @@ public class PlayPlaceManager : MonoBehaviour
         // play sound of xylo
         GameObject theXylo = GameObject.Find("Xylo");
         AkSoundEngine.PostEvent("Play_XyloSequence", theXylo.gameObject);
-    }
-    public bool AreBlocksSorted
-    {
-        get { return areBlocksSorted; }
     }
 
     void TriggerBallAvalanche()
