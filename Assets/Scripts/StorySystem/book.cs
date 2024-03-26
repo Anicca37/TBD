@@ -11,6 +11,7 @@ public class Book : MonoBehaviour
     private bool isRotating = false;
     private bool isJournalOpen = false;
     private GameObject playerBody;
+    private GameObject crosshair;
     private fpsCameraControl cameraControlScript;
 
     void Awake()
@@ -45,6 +46,7 @@ public class Book : MonoBehaviour
     private void AssignPlayerReferences()
     {
         playerBody = GameObject.FindWithTag("Player");
+        crosshair = GameObject.Find("Crosshair");
         if (Camera.main != null)
         {
             cameraControlScript = Camera.main.GetComponent<fpsCameraControl>();
@@ -74,6 +76,7 @@ public class Book : MonoBehaviour
     public void ToggleJournal(bool open)
     {
         isJournalOpen = open;
+        crosshair.SetActive(!isJournalOpen);
         ToggleJournalDisplay(isJournalOpen);
         if (playerBody != null)
         {

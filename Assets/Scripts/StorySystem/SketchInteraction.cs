@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SketchInteraction : MonoBehaviour
+public class SketchInteraction : MonoBehaviour, IInteract
 {
     public GameObject inactivePageSprite;
     public GameObject activePageSprite;
@@ -14,7 +14,7 @@ public class SketchInteraction : MonoBehaviour
         bookReference = FindObjectOfType<Book>();
     }
 
-    private void OnMouseDown()
+    public void OnMouseDown()
     {
         if (bookReference != null)
         {
