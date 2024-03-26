@@ -2,20 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SketchInteraction : MonoBehaviour, IInteract
+public class SketchInteraction : MonoBehaviour
 {
     public GameObject inactivePageSprite;
-    public GameObject activePageSprite;  
+    public GameObject activePageSprite;
 
-    public void OnMouseDown()
+    private Book bookReference; 
+
+    private void Start()
     {
-        if (Book.Instance != null)
+        bookReference = FindObjectOfType<Book>();
+    }
+
+    private void OnMouseDown()
+    {
+        if (bookReference != null)
         {
-            Book.Instance.UpdatePageSprites(inactivePageSprite, activePageSprite);
+            bookReference.UpdatePageSprites(inactivePageSprite, activePageSprite);
+            bookReference.ToggleJournal(true);
         }
-
         gameObject.SetActive(false);
-
-        Book.Instance.ToggleJournal(false);
     }
 }
