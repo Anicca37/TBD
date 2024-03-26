@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class JournalOpener : MonoBehaviour, IInteract
 {
+    private Book bookReference; 
+
+    private void Start()
+    {
+        bookReference = FindObjectOfType<Book>();
+    }
     public void OnMouseDown()
     {
-        if (Book.Instance != null)
+        if (bookReference != null)
         {
-            Book.Instance.ToggleJournal(false);
+            bookReference.ToggleJournal(true);
         }
     }
 }

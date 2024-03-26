@@ -5,115 +5,80 @@ using UnityEngine.SceneManagement;
 
 public class Book : MonoBehaviour
 {
-    public static Book Instance;
-    [SerializeField] private List<GameObject> inactiveSpritesOnReset; 
-    [SerializeField] private List<GameObject> activeSpritesOnReset;
     [SerializeField] private float pageSpeed = 0.5f;
     [SerializeField] private List<Transform> pages;
     private int currentPageIndex = 0;
     private bool isRotating = false;
     private bool isJournalOpen = false;
     private GameObject playerBody;
-    private fpsCameraControl cameraControlScript; 
+    private fpsCameraControl cameraControlScript;
+
+    void Awake()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
 
     void Start()
     {
         InitialState();
     }
-    
+
+    void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        InitialState();
+    }
+
     public void InitialState()
     {
         isJournalOpen = false;
-        playerBody = GameObject.Find("Player");
-        if (Camera.main != null)
-        {
-            cameraControlScript = Camera.main.GetComponent<fpsCameraControl>();
-        }
-        ToggleJournalDisplay(isJournalOpen);
-    }
-
-    void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else if (Instance != this)
-        {
-            Destroy(gameObject);
-        }
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        isJournalOpen = false; // Ensure the journal is closed on scene load.
+        currentPageIndex = 0;
         AssignPlayerReferences();
         ToggleJournalDisplay(isJournalOpen);
-        if (scene.name == "DemoLevel")
-        {
-            ResetJournal();
-        }
-    }
-
-    private void ResetJournal()
-    {
-        for (int i=0; i<pages.Count; i++)
-        {
-            pages[i].transform.rotation=Quaternion.identity;
-        }
-        pages[0].SetAsLastSibling();
-        
-        foreach (var inactiveSprite in inactiveSpritesOnReset)
-        {
-            inactiveSprite.SetActive(false);
-            
-        }
-
-        foreach (var activeSprite in activeSpritesOnReset)
-        {
-           activeSprite.SetActive(true);
-        }
+        CloseJournal();
     }
 
     private void AssignPlayerReferences()
     {
-        playerBody = GameObject.Find("Player");
+        playerBody = GameObject.FindWithTag("Player");
         if (Camera.main != null)
         {
             cameraControlScript = Camera.main.GetComponent<fpsCameraControl>();
         }
     }
-
 
     void Update()
     {
         if (InputManager.instance.BookOpenCloseInput && playerBody != null)
         {
-            ToggleJournal(isJournalOpen);
+            ToggleJournal(!isJournalOpen);
         }
 
-        if (isJournalOpen)
+        if (isJournalOpen && !isRotating)
         {
-            if (!isRotating)
+            if (InputManager.instance.SelectionRightInput && currentPageIndex < pages.Count)
             {
-                if (InputManager.instance.SelectionRightInput && currentPageIndex < pages.Count)
-                {
-                    StartCoroutine(RotatePage(currentPageIndex, 180));
-                }
-                else if (InputManager.instance.SelectionLeftInput && currentPageIndex > 0)
-                {
-                    StartCoroutine(RotatePage(currentPageIndex - 1, 0));
-                }
+                StartCoroutine(RotatePage(currentPageIndex, 180));
+            }
+            else if (InputManager.instance.SelectionLeftInput && currentPageIndex > 0)
+            {
+                StartCoroutine(RotatePage(currentPageIndex - 1, 0));
             }
         }
     }
 
     public void ToggleJournal(bool open)
     {
-        isJournalOpen = !open;
+        isJournalOpen = open;
         ToggleJournalDisplay(isJournalOpen);
-        playerBody.GetComponent<playerMovement>().enabled = !isJournalOpen;
+        if (playerBody != null)
+        {
+            playerBody.GetComponent<playerMovement>().enabled = !isJournalOpen;
+        }
         LockCameraRotation(isJournalOpen);
     }
 
@@ -140,7 +105,7 @@ public class Book : MonoBehaviour
             yield return null;
         }
 
-        currentPageIndex += (targetAngle == 180) ? 1 : -1;
+        currentPageIndex = (targetAngle == 180) ? index + 1 : index;
         isRotating = false;
     }
 
@@ -150,16 +115,39 @@ public class Book : MonoBehaviour
         journalUI.gameObject.SetActive(show);
     }
 
+    public void CloseJournal()
+    {
+        foreach (var page in pages)
+        {
+            page.rotation = Quaternion.identity;
+        }
+        if (pages.Count > 0)
+        {
+            pages[0].SetAsLastSibling();
+        }
+    }
+
     public void UpdatePageSprites(GameObject inactive, GameObject active)
-{
-    if (inactive != null)
     {
-        inactive.SetActive(false); // Hide the inactive sprite
+        if (inactive != null)
+        {
+            inactive.SetActive(false); // Hide the inactive sprite
+        }
+        
+        if (active != null)
+        {
+            active.SetActive(true); // Show the active sprite
+        }
     }
-    
-    if (active != null)
+
+    public void FliptoBallPit()
     {
-        active.SetActive(true); // Show the active sprite
+        var i = 0;
+        while(i <= 2)
+        {
+            pages[i].SetAsLastSibling();
+            pages[i].rotation = Quaternion.Euler(0, 180, 0);
+            i+=1;
+        }
     }
-}
 }
