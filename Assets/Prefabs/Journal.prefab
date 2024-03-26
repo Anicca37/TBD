@@ -715,6 +715,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d80c0e1ee395b24fba04d5b49f2eefa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inactiveSpritesOnReset:
+  - {fileID: 7313925658189419037}
+  - {fileID: 6541127011247134943}
+  activeSpritesOnReset:
+  - {fileID: 8834059388413534189}
+  - {fileID: 3517642188468302963}
   pageSpeed: 1.2
   pages:
   - {fileID: 814751309884667486}

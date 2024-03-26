@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class Book : MonoBehaviour
 {
     public static Book Instance;
+    [SerializeField] private List<GameObject> inactiveSpritesOnReset; 
+    [SerializeField] private List<GameObject> activeSpritesOnReset;
     [SerializeField] private float pageSpeed = 0.5f;
     [SerializeField] private List<Transform> pages;
     private int currentPageIndex = 0;
@@ -13,6 +15,22 @@ public class Book : MonoBehaviour
     private bool isJournalOpen = false;
     private GameObject playerBody;
     private fpsCameraControl cameraControlScript; 
+
+    void Start()
+    {
+        InitialState();
+    }
+    
+    public void InitialState()
+    {
+        isJournalOpen = false;
+        playerBody = GameObject.Find("Player");
+        if (Camera.main != null)
+        {
+            cameraControlScript = Camera.main.GetComponent<fpsCameraControl>();
+        }
+        ToggleJournalDisplay(isJournalOpen);
+    }
 
     void Awake()
     {
@@ -32,6 +50,30 @@ public class Book : MonoBehaviour
         isJournalOpen = false; // Ensure the journal is closed on scene load.
         AssignPlayerReferences();
         ToggleJournalDisplay(isJournalOpen);
+        if (scene.name == "DemoLevel")
+        {
+            ResetJournal();
+        }
+    }
+
+    private void ResetJournal()
+    {
+        for (int i=0; i<pages.Count; i++)
+        {
+            pages[i].transform.rotation=Quaternion.identity;
+        }
+        pages[0].SetAsLastSibling();
+        
+        foreach (var inactiveSprite in inactiveSpritesOnReset)
+        {
+            inactiveSprite.SetActive(false);
+            
+        }
+
+        foreach (var activeSprite in activeSpritesOnReset)
+        {
+           activeSprite.SetActive(true);
+        }
     }
 
     private void AssignPlayerReferences()
@@ -42,16 +84,7 @@ public class Book : MonoBehaviour
             cameraControlScript = Camera.main.GetComponent<fpsCameraControl>();
         }
     }
-    void Start()
-    {
-        isJournalOpen = false;
-        playerBody = GameObject.Find("Player");
-        if (Camera.main != null)
-        {
-            cameraControlScript = Camera.main.GetComponent<fpsCameraControl>();
-        }
-        ToggleJournalDisplay(isJournalOpen);
-    }
+
 
     void Update()
     {
