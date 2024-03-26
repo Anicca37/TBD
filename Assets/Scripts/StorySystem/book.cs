@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class Book : MonoBehaviour
 {
     public static Book Instance;
+    [SerializeField] private List<GameObject> inactiveSpritesOnReset; 
+    [SerializeField] private List<GameObject> activeSpritesOnReset;
     [SerializeField] private float pageSpeed = 0.5f;
     [SerializeField] private List<Transform> pages;
     private int currentPageIndex = 0;
@@ -13,6 +15,22 @@ public class Book : MonoBehaviour
     private bool isJournalOpen = false;
     private GameObject playerBody;
     private fpsCameraControl cameraControlScript; 
+
+    void Start()
+    {
+        InitialState();
+    }
+    
+    public void InitialState()
+    {
+        isJournalOpen = false;
+        playerBody = GameObject.Find("Player");
+        if (Camera.main != null)
+        {
+            cameraControlScript = Camera.main.GetComponent<fpsCameraControl>();
+        }
+        ToggleJournalDisplay(isJournalOpen);
+    }
 
     void Awake()
     {
@@ -29,7 +47,33 @@ public class Book : MonoBehaviour
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        isJournalOpen = false; // Ensure the journal is closed on scene load.
         AssignPlayerReferences();
+        ToggleJournalDisplay(isJournalOpen);
+        if (scene.name == "DemoLevel")
+        {
+            ResetJournal();
+        }
+    }
+
+    private void ResetJournal()
+    {
+        for (int i=0; i<pages.Count; i++)
+        {
+            pages[i].transform.rotation=Quaternion.identity;
+        }
+        pages[0].SetAsLastSibling();
+        
+        foreach (var inactiveSprite in inactiveSpritesOnReset)
+        {
+            inactiveSprite.SetActive(false);
+            
+        }
+
+        foreach (var activeSprite in activeSpritesOnReset)
+        {
+           activeSprite.SetActive(true);
+        }
     }
 
     private void AssignPlayerReferences()
@@ -40,16 +84,7 @@ public class Book : MonoBehaviour
             cameraControlScript = Camera.main.GetComponent<fpsCameraControl>();
         }
     }
-    void Start()
-    {
-        isJournalOpen = false;
-        playerBody = GameObject.Find("Player");
-        if (Camera.main != null)
-        {
-            cameraControlScript = Camera.main.GetComponent<fpsCameraControl>();
-        }
-        ToggleJournalDisplay(isJournalOpen);
-    }
+
 
     void Update()
     {
@@ -62,7 +97,7 @@ public class Book : MonoBehaviour
         {
             if (!isRotating)
             {
-                if (InputManager.instance.SelectionRightInput && currentPageIndex < pages.Count - 1)
+                if (InputManager.instance.SelectionRightInput && currentPageIndex < pages.Count)
                 {
                     StartCoroutine(RotatePage(currentPageIndex, 180));
                 }
@@ -74,7 +109,7 @@ public class Book : MonoBehaviour
         }
     }
 
-    private void ToggleJournal(bool open)
+    public void ToggleJournal(bool open)
     {
         isJournalOpen = !open;
         ToggleJournalDisplay(isJournalOpen);
@@ -97,6 +132,7 @@ public class Book : MonoBehaviour
         Quaternion endRotation = Quaternion.Euler(0, targetAngle, 0);
         float rotationProgress = 0f;
 
+        pages[index].SetAsLastSibling();
         while (rotationProgress < 1f)
         {
             rotationProgress += Time.unscaledDeltaTime * pageSpeed;
@@ -113,4 +149,17 @@ public class Book : MonoBehaviour
         Transform journalUI = transform.GetChild(0);
         journalUI.gameObject.SetActive(show);
     }
+
+    public void UpdatePageSprites(GameObject inactive, GameObject active)
+{
+    if (inactive != null)
+    {
+        inactive.SetActive(false); // Hide the inactive sprite
+    }
+    
+    if (active != null)
+    {
+        active.SetActive(true); // Show the active sprite
+    }
+}
 }
