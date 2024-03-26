@@ -14,7 +14,6 @@ public class Book : MonoBehaviour
     private bool isRotating = false;
     private bool isJournalOpen = false;
     private GameObject playerBody;
-    private GameObject Crosshair;
     private fpsCameraControl cameraControlScript; 
 
     void Start()
@@ -26,7 +25,6 @@ public class Book : MonoBehaviour
     {
         isJournalOpen = false;
         playerBody = GameObject.Find("Player");
-        Crosshair = GameObject.Find("Crosshair");
         if (Camera.main != null)
         {
             cameraControlScript = Camera.main.GetComponent<fpsCameraControl>();
@@ -95,14 +93,8 @@ public class Book : MonoBehaviour
             ToggleJournal(isJournalOpen);
         }
 
-        if (!isJournalOpen)
-        {
-            Crosshair.SetActive(true);
-        }
-        
         if (isJournalOpen)
         {
-            Crosshair.SetActive(false);
             if (!isRotating)
             {
                 if (InputManager.instance.SelectionRightInput && currentPageIndex < pages.Count)

@@ -12,7 +12,6 @@ public class EscapeMenuController : MonoBehaviour
     public GameObject Crosshair;
     public GameObject HandGrab;
     private GameObject playerBody;
-    private Book book;
 
     private enum MenuOption { Restart, Next, Menu };
     private MenuOption selectedOption;
@@ -20,7 +19,6 @@ public class EscapeMenuController : MonoBehaviour
     private void Start()
     {
         playerBody = GameObject.Find("Player");
-        book = GameObject.Find("Journal").GetComponent<Book>();
         isEscaped = false;
     }
 
@@ -52,7 +50,6 @@ public class EscapeMenuController : MonoBehaviour
         if (isEscaped)
         {
             playerBody.GetComponent<playerMovement>().enabled = false;
-            book.enabled = false;
             // handle input
             if (InputManager.instance.SelectionUpInput)
             {
@@ -119,7 +116,6 @@ public class EscapeMenuController : MonoBehaviour
         {
             case MenuOption.Restart:
                 isEscaped = false;
-                book.enabled = true;
                 if (SceneManager.GetActiveScene().name.Contains("Garden"))
                 {
                     GardenManager.Instance.ResetPuzzles();

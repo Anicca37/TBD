@@ -14,7 +14,6 @@ public class PauseMenuController : MonoBehaviour
     public GameObject HandGrab;
     private GameObject playerBody;
     public GameObject optionMenuController;
-    private Book book;
 
     private enum MenuOption { Resume, Restart, Options, Menu };
     private MenuOption selectedOption;
@@ -22,7 +21,6 @@ public class PauseMenuController : MonoBehaviour
     private void Start()
     {
         playerBody = GameObject.Find("Player");
-        book = GameObject.Find("Journal").GetComponent<Book>();
         isPaused = false;
         if (optionMenuController != null)
         {
@@ -67,7 +65,6 @@ public class PauseMenuController : MonoBehaviour
             Crosshair.SetActive(false);
             HandGrab.SetActive(false);
             LockCameraRotation(true);
-            book.enabled = false;
             // handle input
             if (InputManager.instance.SelectionUpInput)
             {
@@ -145,10 +142,9 @@ public class PauseMenuController : MonoBehaviour
             case MenuOption.Resume:
                 isPaused = false;
                 resumeOptionSelectedSprite.SetActive(false);
-                playerBody.GetComponent<playerMovement>().enabled = true;
                 Crosshair.SetActive(true);
+                playerBody.GetComponent<playerMovement>().enabled = true;
                 LockCameraRotation(false);
-                book.enabled = true;
                 break;
             case MenuOption.Restart:
                 if (SceneManager.GetActiveScene().name.Contains("Garden"))
