@@ -21,6 +21,7 @@ public class PauseMenuController : MonoBehaviour
     private void Start()
     {
         playerBody = GameObject.Find("Player");
+        isPaused = false;
         if (optionMenuController != null)
         {
             optionMenuController.GetComponent<OptionsMenuController>().enabled = false;

@@ -19,6 +19,7 @@ public class EscapeMenuController : MonoBehaviour
     private void Start()
     {
         playerBody = GameObject.Find("Player");
+        isEscaped = false;
     }
 
     private void InitializeEscapeMenu()
