@@ -115,7 +115,7 @@ public class Book : MonoBehaviour
         journalUI.gameObject.SetActive(show);
     }
 
-    private void CloseJournal()
+    public void CloseJournal()
     {
         foreach (var page in pages)
         {
@@ -137,6 +137,17 @@ public class Book : MonoBehaviour
         if (active != null)
         {
             active.SetActive(true); // Show the active sprite
+        }
+    }
+
+    public void FliptoBallPit()
+    {
+        var i = 0;
+        while(i <= 2)
+        {
+            pages[i].SetAsLastSibling();
+            pages[i].rotation = Quaternion.Euler(0, 180, 0);
+            i+=1;
         }
     }
 }
