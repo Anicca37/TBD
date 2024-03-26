@@ -5,13 +5,19 @@ using UnityEngine;
 public class XylophoneClick : MonoBehaviour, IInteract
 {
     public int xyloID;
-
-    public XSequenceChecker XsequenceChecker;
+    [SerializeField] private Animator xyloAnimator;
+    public GameObject floatingText;
 
     public void OnMouseDown()
     {
-        FindObjectOfType<XSequenceChecker>().XyloClicked(xyloID);
+        xyloAnimator.SetTrigger($"Hit {xyloID}"); // animate hit
         PlayXyloSound(xyloID);
+        StartCoroutine(ResetAnimation(xyloID, 1f));
+        if (floatingText)
+        {
+            ShowDing();
+        }
+        Invoke("CheckSequence", 0.5f);
     }
 
     void PlayXyloSound(int xyloID)
@@ -20,7 +26,7 @@ public class XylophoneClick : MonoBehaviour, IInteract
         switch (xyloID)
         {
             case 1:
-                AkSoundEngine.PostEvent("Play_XyloC", this.gameObject);        
+                AkSoundEngine.PostEvent("Play_XyloC", this.gameObject);
                 break;
             case 2:
                 AkSoundEngine.PostEvent("Play_XyloD", this.gameObject);
@@ -32,5 +38,22 @@ public class XylophoneClick : MonoBehaviour, IInteract
                 AkSoundEngine.PostEvent("Play_XyloG", this.gameObject);
                 break;
         }
+    }
+
+    void ShowDing()
+    {
+        Instantiate(floatingText, transform.position, Quaternion.identity, transform);
+    }
+
+    void CheckSequence()
+    {
+        if (!PlayPlaceManager.Instance.IsXylophoneSequenceCorrect)
+        { FindObjectOfType<XSequenceChecker>().XyloClicked(xyloID); }
+    }
+
+    IEnumerator ResetAnimation(int id, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        xyloAnimator.SetTrigger($"Return {id}");
     }
 }
