@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JournalOpener : MonoBehaviour
+public class JournalOpener : MonoBehaviour, IInteract
 {
-    private void OnMouseDown()
+    public void OnMouseDown()
     {
         if (Book.Instance != null)
         {
