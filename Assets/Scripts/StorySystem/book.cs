@@ -74,7 +74,7 @@ public class Book : MonoBehaviour
         }
     }
 
-    private void ToggleJournal(bool open)
+    public void ToggleJournal(bool open)
     {
         isJournalOpen = !open;
         ToggleJournalDisplay(isJournalOpen);
