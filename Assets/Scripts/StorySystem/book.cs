@@ -62,7 +62,7 @@ public class Book : MonoBehaviour
         {
             if (!isRotating)
             {
-                if (InputManager.instance.SelectionRightInput && currentPageIndex < pages.Count - 1)
+                if (InputManager.instance.SelectionRightInput && currentPageIndex < pages.Count)
                 {
                     StartCoroutine(RotatePage(currentPageIndex, 180));
                 }
