@@ -12,7 +12,7 @@ public class FloatingText : MonoBehaviour
     void Start()
     {
         Destroy(gameObject, destroyTime);
-        // transform.localRotation = Quaternion.Euler(0, 0, 0);
+        // transform.localRotation = Quaternion.Euler(0, 10, 0);
         transform.localPosition += offset;
         transform.localPosition += new Vector3(Random.Range(-randomize.x, randomize.x), Random.Range(-randomize.y, randomize.y), Random.Range(-randomize.z, randomize.z));
     }
