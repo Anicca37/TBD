@@ -47,6 +47,14 @@ public class Book : MonoBehaviour
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        if (scene.name == "DemoLevel" || scene.name == "PlayPlace" || scene.name == "Garden_3 - Terrain"){
+            if (Instance == this || Instance == null)
+            {
+                Instance = this;
+            }
+            CloseJournal();
+        }
+    
         isJournalOpen = false; // Ensure the journal is closed on scene load.
         AssignPlayerReferences();
         ToggleJournalDisplay(isJournalOpen);
@@ -56,18 +64,23 @@ public class Book : MonoBehaviour
         }
     }
 
-    private void ResetJournal()
-    {
+    private void CloseJournal(){
         for (int i=0; i<pages.Count; i++)
         {
             pages[i].transform.rotation=Quaternion.identity;
         }
-        pages[0].SetAsLastSibling();
+        for (int i = pages.Count - 1; i >= 0; i--) {
+            pages[i].SetAsLastSibling();
+        }
+        currentPageIndex = 0;
+    }
+
+    private void ResetJournal()
+    {
         
         foreach (var inactiveSprite in inactiveSpritesOnReset)
         {
-            inactiveSprite.SetActive(false);
-            
+            inactiveSprite.SetActive(false);       
         }
 
         foreach (var activeSprite in activeSpritesOnReset)
@@ -90,7 +103,10 @@ public class Book : MonoBehaviour
     {
         if (InputManager.instance.BookOpenCloseInput && playerBody != null)
         {
-            ToggleJournal(isJournalOpen);
+            if (Instance != null)
+            {
+                ToggleJournal(isJournalOpen);
+            }
         }
 
         if (isJournalOpen)
