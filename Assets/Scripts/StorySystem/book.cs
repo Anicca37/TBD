@@ -30,6 +30,7 @@ public class Book : MonoBehaviour
             cameraControlScript = Camera.main.GetComponent<fpsCameraControl>();
         }
         ToggleJournalDisplay(isJournalOpen);
+        CloseJournal();
     }
 
     void Awake()
@@ -128,6 +129,9 @@ public class Book : MonoBehaviour
     public void ToggleJournal(bool open)
     {
         isJournalOpen = !open;
+        if (isJournalOpen){
+            CloseJournal();
+        }
         ToggleJournalDisplay(isJournalOpen);
         playerBody.GetComponent<playerMovement>().enabled = !isJournalOpen;
         LockCameraRotation(isJournalOpen);
