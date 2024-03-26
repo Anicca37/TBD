@@ -3786,7 +3786,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xyloID: 1
-  XsequenceChecker: {fileID: 0}
+  xyloAnimator: {fileID: 1813198054}
+  floatingText: {fileID: 3654202989109560295, guid: 11f7302af5d4d4b5dbc0e78e270ba961, type: 3}
 --- !u!114 &78852607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9488,6 +9489,125 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 209227739}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &211261255
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 211261259}
+  - component: {fileID: 211261258}
+  - component: {fileID: 211261257}
+  - component: {fileID: 211261256}
+  m_Layer: 0
+  m_Name: SequenceHint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &211261256
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211261255}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0dbce7c7b13974e0081cf41be5366fe5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!102 &211261257
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211261255}
+  m_Text: "\u266A"
+  m_OffsetZ: 0
+  m_CharacterSize: 0.1
+  m_LineSpacing: 1
+  m_Anchor: 4
+  m_Alignment: 1
+  m_TabSize: 4
+  m_FontSize: 100
+  m_FontStyle: 1
+  m_RichText: 1
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+--- !u!23 &211261258
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211261255}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!4 &211261259
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211261255}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 243.076, y: 14.592637, z: 141.228}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &211794343
 GameObject:
   m_ObjectHideFlags: 0
@@ -9606,7 +9726,7 @@ GameObject:
   - component: {fileID: 212922936}
   - component: {fileID: 212922935}
   m_Layer: 0
-  m_Name: Cylinder (1)
+  m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18190,7 +18310,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xyloID: 4
-  XsequenceChecker: {fileID: 0}
+  xyloAnimator: {fileID: 1813198054}
+  floatingText: {fileID: 3654202989109560295, guid: 11f7302af5d4d4b5dbc0e78e270ba961, type: 3}
 --- !u!65 &442613822
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21504,7 +21625,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xyloID: 2
-  XsequenceChecker: {fileID: 0}
+  xyloAnimator: {fileID: 1813198054}
+  floatingText: {fileID: 3654202989109560295, guid: 11f7302af5d4d4b5dbc0e78e270ba961, type: 3}
 --- !u!65 &533333686
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21604,7 +21726,7 @@ GameObject:
   m_Component:
   - component: {fileID: 534179460}
   m_Layer: 0
-  m_Name: Xylophone Key (1)
+  m_Name: Xylophone Key (4)
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25552,7 +25674,7 @@ GameObject:
   - component: {fileID: 662743861}
   - component: {fileID: 662743860}
   m_Layer: 0
-  m_Name: Cylinder (1)
+  m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29293,7 +29415,7 @@ GameObject:
   m_Component:
   - component: {fileID: 768107861}
   m_Layer: 0
-  m_Name: Xylophone Key (3)
+  m_Name: Xylophone Key (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60139,7 +60261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a744dee5fed24cee82243c8e67b5340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ifXyloCorrectSoundPlayed: 0
+  textAnimator: {fileID: 211261256}
 --- !u!4 &1546052359
 Transform:
   m_ObjectHideFlags: 0
@@ -60299,7 +60421,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1557983318}
   m_Layer: 0
-  m_Name: Xylophone Key (4)
+  m_Name: Xylophone Key (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63744,7 +63866,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xyloID: 3
-  XsequenceChecker: {fileID: 0}
+  xyloAnimator: {fileID: 1813198054}
+  floatingText: {fileID: 3654202989109560295, guid: 11f7302af5d4d4b5dbc0e78e270ba961, type: 3}
 --- !u!65 &1660420547
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -64911,7 +65034,7 @@ GameObject:
   - component: {fileID: 1707296443}
   - component: {fileID: 1707296442}
   m_Layer: 0
-  m_Name: Cylinder (1)
+  m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65635,7 +65758,7 @@ GameObject:
   - component: {fileID: 1736537087}
   - component: {fileID: 1736537086}
   m_Layer: 0
-  m_Name: Cylinder (1)
+  m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68857,6 +68980,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1813198053}
+  - component: {fileID: 1813198054}
   m_Layer: 0
   m_Name: Xylo
   m_TagString: Untagged
@@ -68877,12 +69001,33 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 534179460}
-  - {fileID: 1934947097}
-  - {fileID: 768107861}
   - {fileID: 1557983318}
+  - {fileID: 768107861}
+  - {fileID: 1934947097}
+  - {fileID: 534179460}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1813198054
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813198052}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 30faffd1b439a40f0a7f6d5b5f1cb6b8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1815325683
 GameObject:
   m_ObjectHideFlags: 0
@@ -74599,7 +74744,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1934947097}
   m_Layer: 0
-  m_Name: Xylophone Key (2)
+  m_Name: Xylophone Key (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82029,3 +82174,4 @@ SceneRoots:
   - {fileID: 498639488}
   - {fileID: 347916819}
   - {fileID: 1584974974}
+  - {fileID: 211261259}
