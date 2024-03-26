@@ -169,7 +169,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{A4B4FAEF-1786-0D7C-A992-563C4A60F88E}">
+		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{23ED37C2-21FB-C3E2-F804-1AB4EFE63F47}">
 			<ShortName>Level2Garden</ShortName>
 			<Path>Level2Garden.bnk</Path>
 			<Media>
@@ -648,7 +648,7 @@
 				<Event Id="1663839887" Name="Stop_Wind_Blowing" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{4570149F-5721-3955-428D-7ED5A6E0FDEE}">
+		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{1ED646F4-52C1-BB38-0A6F-521CDEC1A9C5}">
 			<ShortName>Level1PlayPlace</ShortName>
 			<Path>Level1PlayPlace.bnk</Path>
 			<Media>
@@ -1127,7 +1127,7 @@
 				<GameParameter Id="185769106" Name="Lv1_LightOn"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{2536B245-D7EE-F1B4-31B5-792AEABAA591}">
+		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{2A1FE8D5-D774-3652-1100-E090F00286F2}">
 			<ShortName>Level0</ShortName>
 			<Path>Level0.bnk</Path>
 			<Media>
@@ -1216,5 +1216,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{35C452E2-4F88-9FC2-7A67-02A665B0FB49}</FileHash>
+	<FileHash>{16F11512-A40E-EA2C-A532-4E30CCD461DD}</FileHash>
 </SoundBanksInfo>
