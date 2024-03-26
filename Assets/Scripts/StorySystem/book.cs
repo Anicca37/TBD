@@ -29,7 +29,9 @@ public class Book : MonoBehaviour
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        isJournalOpen = false; // Ensure the journal is closed on scene load.
         AssignPlayerReferences();
+        ToggleJournalDisplay(isJournalOpen);
     }
 
     private void AssignPlayerReferences()
@@ -114,4 +116,17 @@ public class Book : MonoBehaviour
         Transform journalUI = transform.GetChild(0);
         journalUI.gameObject.SetActive(show);
     }
+
+    public void UpdatePageSprites(GameObject inactive, GameObject active)
+{
+    if (inactive != null)
+    {
+        inactive.SetActive(false); // Hide the inactive sprite
+    }
+    
+    if (active != null)
+    {
+        active.SetActive(true); // Show the active sprite
+    }
+}
 }
