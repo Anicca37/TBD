@@ -97,6 +97,7 @@ public class Book : MonoBehaviour
         Quaternion endRotation = Quaternion.Euler(0, targetAngle, 0);
         float rotationProgress = 0f;
 
+        pages[index].SetAsLastSibling();
         while (rotationProgress < 1f)
         {
             rotationProgress += Time.unscaledDeltaTime * pageSpeed;
