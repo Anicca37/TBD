@@ -65,7 +65,7 @@ public class XSequenceChecker : MonoBehaviour
     {
         GameObject theXylo = GameObject.Find("Xylo");
         AkSoundEngine.PostEvent("Play_XyloSequence", theXylo.gameObject);
-        if (wrongAttempts >= 3)
+        if (wrongAttempts >= 5)
         {
             textAnimator.SetTrigger("Hint");
             Invoke("resetHintAnimation", 2.75f);
