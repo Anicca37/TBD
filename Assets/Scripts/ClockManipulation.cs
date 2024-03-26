@@ -22,7 +22,6 @@ public class ClockManipulation : MonoBehaviour, IInteract
     public Material highlightMaterial;
     public GameObject defaultIcon;
     public GameObject grabIcon;
-    public GameObject PauseMenuController;
 
     public Light directionalLight;
     public TMP_Text clockSign;
@@ -59,7 +58,7 @@ public class ClockManipulation : MonoBehaviour, IInteract
     public void LockGameControl(bool highlight)
     {
         HighlightClockHands(highlight);
-        if (!PauseMenuController.GetComponent<PauseMenuController>().isGamePaused())
+        if (!PauseMenuController.isGamePaused())
         {
             defaultIcon.SetActive(!highlight);
             // grabIcon.SetActive(highlight);
