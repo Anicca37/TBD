@@ -8,5 +8,8 @@ public class BirdChirp : MonoBehaviour
     {
         Debug.Log("Chirp!");
         // add chirp sound
+
+        GameObject theBird = GameObject.Find("smallBird");
+        AkSoundEngine.PostEvent("Play_Birds", theBird.gameObject);
     }
 }
