@@ -6,6 +6,8 @@ public class PlayPlaceLightController : MonoBehaviour
 {
     private Light currentLight;
     public ClockManipulation clockController;
+    public GameObject openSign;
+    public GameObject openSignOn;
 
     private bool isPlayPlaceOpen = false;
 
@@ -28,6 +30,8 @@ public class PlayPlaceLightController : MonoBehaviour
             if (!isPlayPlaceOpen)
             {
                 currentLight.color = Color.white;
+                openSign.SetActive(false);
+                openSignOn.SetActive(true);
                 isPlayPlaceOpen = true;
 
                 // Play playplace open sound
@@ -56,6 +60,8 @@ public class PlayPlaceLightController : MonoBehaviour
             if (isPlayPlaceOpen)
             {
                 currentLight.color = Color.black;
+                openSign.SetActive(true);
+                openSignOn.SetActive(false);
                 isPlayPlaceOpen = false;
 
                 // Play playplace close sound
