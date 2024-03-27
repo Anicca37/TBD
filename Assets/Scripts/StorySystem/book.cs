@@ -59,6 +59,10 @@ public class Book : MonoBehaviour
         {
             ToggleJournal(!isJournalOpen);
         }
+        else if (FPSInputManager.GetCancel() && isJournalOpen)
+        {
+            ToggleJournal(false);
+        }
 
         if (isJournalOpen && !isRotating)
         {

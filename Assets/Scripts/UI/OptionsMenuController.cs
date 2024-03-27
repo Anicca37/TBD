@@ -29,12 +29,14 @@ public class OptionsMenuController : MonoBehaviour
     private float newSfxVolume = 50f;
     private float newAmbienceVolume = 50f;
 
+    public static bool IsOptionsMenuActive = false;
     private enum MenuOption { MounseSenstivity, Music, SFX, Ambience, Apply, Back };
     private MenuOption selectedOption;
 
     // Start is called before the first frame update
     private void Start()
     {
+        IsOptionsMenuActive = false;
         if (mainMenuController != null)
         {
             mainMenuController.GetComponent<MainMenuController>().enabled = false;
@@ -48,6 +50,7 @@ public class OptionsMenuController : MonoBehaviour
 
     public void InitializeOptionsMenu()
     {
+        IsOptionsMenuActive = true;
         // default selection
         selectedOption = MenuOption.MounseSenstivity;
         MounseSenstivityOptionSelectedSprite.SetActive(true);
@@ -96,6 +99,15 @@ public class OptionsMenuController : MonoBehaviour
         else if (InputManager.instance.SelectionRightInput)
         {
             MoveSelectionRight();
+        }
+        else if (FPSInputManager.GetCancel())
+        {
+            while (selectedOption != MenuOption.Apply)
+            {
+                MoveSelectionUp();
+            }
+            MoveSelectionRight();
+            SelectOption();
         }
     }
 
@@ -265,6 +277,7 @@ public class OptionsMenuController : MonoBehaviour
 
     private void ExitOptionMenu(GameObject currentSelectedSprite)
     {
+        IsOptionsMenuActive = false;
         // back to main menu or pause menu
         if (SceneManager.GetActiveScene().name == "UI")
         {

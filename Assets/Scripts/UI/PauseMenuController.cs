@@ -82,6 +82,14 @@ public class PauseMenuController : MonoBehaviour
             {
                 SelectOption();
             }
+            else if (FPSInputManager.GetCancel() && !OptionsMenuController.IsOptionsMenuActive)
+            {
+                while (selectedOption != MenuOption.Resume) 
+                {
+                    MoveSelectionUp();
+                }
+                SelectOption();
+            }
         }
     }
 

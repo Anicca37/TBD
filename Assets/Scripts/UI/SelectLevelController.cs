@@ -42,6 +42,14 @@ public class SelectLevelController : MonoBehaviour
         {
             SelectOption();
         }
+        else if (FPSInputManager.GetCancel())
+        {
+            while (selectedOption != MenuOption.Menu) 
+            {
+                MoveSelectionUp();
+            }
+            SelectOption();
+        }
     }
 
     private void MoveSelectionUp()
