@@ -427,6 +427,19 @@ MonoBehaviour:
         guid: 4e2ca4e8d7a0944b9a0940e42b33309a
       Path: SoundBanks\Default Work Unit\Level2Garden
   EventWwu:
+  - PhysicalPath: Events\CutScenes.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: CutScenes
+      ObjectType: 12
+      guid: dd96f06193a2eb4ca11452c627dfe650
+    ParentPath: Events\CutScenes
+    guid: dd96f06193a2eb4ca11452c627dfe650
+    GuidInternal: 
+    m_lastTime: -8584900507001887278
+    List: []
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Events
@@ -472,8 +485,8 @@ MonoBehaviour:
         guid: 336893367d391e419e7112f03cf976b4
       Path: Events\Default Work Unit\Play_BookClose
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.4449792
+      minDuration: 1.2046041
     - name: Play_BookOpen
       guid: 40191390f68a9d47aa5003e5bb7eaa69
       id: 2244407197
@@ -489,8 +502,8 @@ MonoBehaviour:
         guid: 40191390f68a9d47aa5003e5bb7eaa69
       Path: Events\Default Work Unit\Play_BookOpen
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.8070264
+      minDuration: 0.67442
     - name: Play_Clock_Tick
       guid: 2fc6118edda480479b2ff4a6a2064414
       id: 2797822332
@@ -546,8 +559,8 @@ MonoBehaviour:
         guid: f85a0fef37214547a30969d4d6bbf826
       Path: Events\Default Work Unit\Play_PageTurn
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.78540945
+      minDuration: 0.53894883
     - name: Play_Win
       guid: 7a2ed0c54ab05342b051ca1bb4f433fc
       id: 2955987680
@@ -1951,7 +1964,7 @@ MonoBehaviour:
     m_lastTime: -8584949682095063988
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 4800000049000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

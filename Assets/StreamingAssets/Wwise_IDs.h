@@ -36,6 +36,7 @@ namespace AK
         static const AkUniqueID PLAY_FLOWERPLANT = 1321543350U;
         static const AkUniqueID PLAY_FLOWERWINDBLOW = 1831549045U;
         static const AkUniqueID PLAY_FLYTRAPPOPEDUP = 531081561U;
+        static const AkUniqueID PLAY_INTROCUTSCENE = 3476743960U;
         static const AkUniqueID PLAY_LEVEL2_GARDENAMBIENCE = 3374855610U;
         static const AkUniqueID PLAY_LEVEL2_NEWGARDENMUSIC = 552396483U;
         static const AkUniqueID PLAY_LIGHTOFF_1 = 3140573545U;
@@ -66,6 +67,7 @@ namespace AK
         static const AkUniqueID STOP_CHIME_MELODY = 184097815U;
         static const AkUniqueID STOP_CLOCK_TICK = 2897827502U;
         static const AkUniqueID STOP_CLOCK_TICK_REVERSE = 3434769657U;
+        static const AkUniqueID STOP_INTROCUTSCENE = 692624126U;
         static const AkUniqueID STOP_LEVEL2_GARDENAMBIENCE = 1659483392U;
         static const AkUniqueID STOP_LEVEL2_NEWGARDENMUSIC = 929452813U;
         static const AkUniqueID STOP_LIGHTOFF_1 = 1219381739U;
@@ -97,6 +99,7 @@ namespace AK
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
+        static const AkUniqueID CUTSCENE = 1182958561U;
         static const AkUniqueID LEVEL0 = 2678230383U;
         static const AkUniqueID LEVEL1PLAYPLACE = 2631894517U;
         static const AkUniqueID LEVEL2GARDEN = 2029599918U;
