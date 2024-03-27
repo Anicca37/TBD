@@ -11,6 +11,8 @@ public class BirdAnimation : MonoBehaviour, IInteract
     {
         Debug.Log("Chirp!");
         // ketro add chirp here!!!!
+        GameObject theBird = GameObject.Find("smallBird");
+        AkSoundEngine.PostEvent("Play_BirdWing", theBird.gameObject);
     }
 
 
