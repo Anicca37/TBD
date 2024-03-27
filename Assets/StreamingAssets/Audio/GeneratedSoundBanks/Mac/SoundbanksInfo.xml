@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1182958561" Type="User" Language="SFX" Hash="{990E9BF1-E6E8-A122-BFD2-5EBDBBF7D4BB}">
+		<SoundBank Id="1182958561" Type="User" Language="SFX" Hash="{FC1B0716-942B-D6F1-1E8F-BCCB7A625942}">
 			<ShortName>CutScene</ShortName>
 			<Path>CutScene.bnk</Path>
 			<Media>
@@ -17,13 +17,23 @@
 					<ShortName>IntroCutscene.wav</ShortName>
 					<CachePath>SFX/IntroCutscene_8E324C96.wem</CachePath>
 				</File>
+				<File Id="580018237" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BallPitCutScene.wav</ShortName>
+					<CachePath>SFX/BallPitCutScene_8E324C96.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
+				<Event Id="2454336936" Name="Play_BallPitCutScene" DurationType="OneShot" DurationMin="15.72" DurationMax="15.72">
+					<MediaRefs>
+						<MediaRef Id="580018237"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3476743960" Name="Play_IntroCutscene" DurationType="OneShot" DurationMin="18.386667" DurationMax="18.386667">
 					<MediaRefs>
 						<MediaRef Id="395583999"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3739524462" Name="Stop_BallPitCutScene" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="692624126" Name="Stop_IntroCutscene" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
@@ -1550,5 +1560,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{DF1C4C47-8942-2215-6059-CCF99ABF9748}</FileHash>
+	<FileHash>{D2B0D327-51AF-5A73-455B-2FC80B260941}</FileHash>
 </SoundBanksInfo>

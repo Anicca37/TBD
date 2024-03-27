@@ -1,7 +1,10 @@
 Event	ID	Name			Wwise Object Path	Notes
 	692624126	Stop_IntroCutscene			\CutScenes\Stop_IntroCutscene	
+	2454336936	Play_BallPitCutScene			\CutScenes\Play_BallPitCutScene	
 	3476743960	Play_IntroCutscene			\CutScenes\Play_IntroCutscene	
+	3739524462	Stop_BallPitCutScene			\CutScenes\Stop_BallPitCutScene	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	395583999	IntroCutscene	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\IntroCutscene_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\CutScenes\IntroCutscene		128281
+	580018237	BallPitCutScene	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\BallPitCutScene_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\CutScenes\BallPitCutScene		113026
 

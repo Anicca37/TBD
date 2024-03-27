@@ -14,6 +14,7 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID PLAY_BALLIMPACT = 2280438399U;
+        static const AkUniqueID PLAY_BALLPITCUTSCENE = 2454336936U;
         static const AkUniqueID PLAY_BIRDS = 3025897706U;
         static const AkUniqueID PLAY_BIRDSCRAZY = 1125237609U;
         static const AkUniqueID PLAY_BIRDWING = 3584090578U;
@@ -64,6 +65,7 @@ namespace AK
         static const AkUniqueID PLAY_XYLOE = 4153846229U;
         static const AkUniqueID PLAY_XYLOG = 4153846231U;
         static const AkUniqueID PLAY_XYLOSEQUENCE = 4293423455U;
+        static const AkUniqueID STOP_BALLPITCUTSCENE = 3739524462U;
         static const AkUniqueID STOP_CHIME_MELODY = 184097815U;
         static const AkUniqueID STOP_CLOCK_TICK = 2897827502U;
         static const AkUniqueID STOP_CLOCK_TICK_REVERSE = 3434769657U;
