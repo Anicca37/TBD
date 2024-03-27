@@ -6,11 +6,13 @@ public class SequenceChecker : MonoBehaviour
 {
     private int[] targetSequence = { 2, 4, 1, 3 };
     private int currentSequenceIndex = 0;
-    public WindController windController;
     private bool solved = false;
     public static SequenceChecker Instance;
     private int wrongAttempts = 0;
     public bool ifCorrectSoundPlayed = false;
+    public Camera playerCamera;
+    public Camera actionCamera;
+    public Animator birdAnimator;
     [SerializeField] private Animator textAnimator;
 
     public void ChimeClicked(int chimeID)
@@ -22,7 +24,8 @@ public class SequenceChecker : MonoBehaviour
             if (currentSequenceIndex >= targetSequence.Length)
             {
                 // Debug.Log("Whoosh!");
-                // LaunchSeeds();
+                DeliverPinecone();
+                solved = true;
                 currentSequenceIndex = 0; // reset sequence after success
 
                 GameObject theBird = GameObject.Find("smallBird");
@@ -83,9 +86,29 @@ public class SequenceChecker : MonoBehaviour
         AkSoundEngine.PostEvent("Play_BirdWing", this.gameObject);
     }
 
-    // private void LaunchSeeds()
-    // {
-    //     windController.LaunchSeedsEastward();
-    //     solved = true;
-    // }
+    public void DeliverPinecone()
+    {
+        // bird animation
+        birdAnimator.SetTrigger("Deliver");
+
+        // switch camera
+        StartCoroutine(SwitchCamera(playerCamera, actionCamera, 0.5f));
+
+        StartCoroutine(SwitchCamera(actionCamera, playerCamera, 7f));
+        Invoke("ReturnBird", 5f);
+        GardenManager.Instance.CompletePuzzle("WindChimes");
+    }
+
+    void ReturnBird()
+    {
+        birdAnimator.SetTrigger("Return");
+    }
+
+    IEnumerator SwitchCamera(Camera cameraToDisable, Camera cameraToEnable, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        cameraToDisable.gameObject.SetActive(false);
+        cameraToEnable.gameObject.SetActive(true);
+
+    }
 }
