@@ -169,6 +169,8 @@ public class GardenManager : MonoBehaviour
             Debug.Log("Scales balanced.");
             scaleAnimator.SetTrigger("Balanced Idle");
             Invoke("BirdHint", 4.5f);
+            Invoke("playBirdSound", 4.5f);
+            Invoke("playBirdWingSound", 7.5f);
             StartCoroutine(SwitchCamera(birdCamera, playerCamera, 11.5f));
             Invoke("BirdIdle", 11.5f);
             StartCoroutine(PlayerEnable(true, 11.5f));
@@ -204,6 +206,7 @@ public class GardenManager : MonoBehaviour
 
         // set VenusFlytrap to active
         VenusFlytrap.SetActive(true);
+
         if (isTrapActive == false)
         {
             // play sound
@@ -399,5 +402,15 @@ public class GardenManager : MonoBehaviour
     public bool IsScaleBalanced()
     {
         return isScaleBalanced;
+    }
+
+    private void playBirdSound()
+    {
+        AkSoundEngine.PostEvent("Play_Birds", this.gameObject);
+    }
+
+    private void playBirdWingSound()
+    {
+        AkSoundEngine.PostEvent("Play_BirdWing", this.gameObject);
     }
 }
