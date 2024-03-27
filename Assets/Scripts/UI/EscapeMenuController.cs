@@ -136,6 +136,7 @@ public class EscapeMenuController : MonoBehaviour
                 if (SceneManager.GetActiveScene().name == "Garden_3 - Terrain")
                 {
                     SceneManager.LoadScene("GardenEnd");
+                    AkSoundEngine.PostEvent("Play_GardenEndCutScene", this.gameObject);
                 }
                 else if (SceneManager.GetActiveScene().name == "DemoLevel")
                 {
@@ -150,5 +151,9 @@ public class EscapeMenuController : MonoBehaviour
                 SceneManager.LoadScene("UI");
                 break;
         }
+    }
+    void playGardenEndCutSceneSound()
+    {
+        AkSoundEngine.PostEvent("Play_GardenEndCutScene", this.gameObject);
     }
 }
