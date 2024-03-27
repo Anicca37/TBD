@@ -6,6 +6,8 @@ public class playerPickup : MonoBehaviour
     public Transform attachPoint; // The placeholder where picked objects should go
     public GameObject defaultIcon;
     public GameObject grabIcon;
+    public GameObject handIdle;
+    public GameObject handGrab;
     public float pickupRange = 10f;
     
     private GameObject currentPickup;
@@ -31,6 +33,11 @@ public class playerPickup : MonoBehaviour
         defaultIcon.SetActive(!highlight);
         grabIcon.SetActive(highlight);
     }
+    void SwitchHandModel(bool highlight)
+    {
+        handIdle.SetActive(!highlight);
+        handGrab.SetActive(highlight);
+    }
 
 void PickUpObject()
 {
@@ -50,6 +57,7 @@ void PickUpObject()
             {
                 currentPickupRb.isKinematic = true;
                 SwitchIcon(true);
+                SwitchHandModel(true);
             }
 
             // Store the original scale
@@ -87,6 +95,7 @@ void PickUpObject()
         {
             currentPickupRb.isKinematic = false;
             SwitchIcon(false);
+            SwitchHandModel(false);
         }
 
         PlaySoundBasedOnObjectName(currentPickup.name, false);
