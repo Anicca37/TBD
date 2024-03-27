@@ -115,10 +115,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6093592463355912122, guid: def2d4cfed1fafc41995460420e35b90, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3904740863574691194, guid: 78e1236310fa765468b659bf52b921d2, type: 3}
+    - target: {fileID: -4683669308469848369, guid: def2d4cfed1fafc41995460420e35b90, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3904740863574691194, guid: 78e1236310fa765468b659bf52b921d2, type: 3}
+    - target: {fileID: -4317166609713594299, guid: def2d4cfed1fafc41995460420e35b90, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3904740863574691194, guid: 78e1236310fa765468b659bf52b921d2, type: 3}
+    - target: {fileID: -1806680513116206669, guid: def2d4cfed1fafc41995460420e35b90, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3904740863574691194, guid: 78e1236310fa765468b659bf52b921d2, type: 3}
+    - target: {fileID: -1461304994638716399, guid: def2d4cfed1fafc41995460420e35b90, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3904740863574691194, guid: 78e1236310fa765468b659bf52b921d2, type: 3}
+    - target: {fileID: -804731622281664130, guid: def2d4cfed1fafc41995460420e35b90, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3904740863574691194, guid: 78e1236310fa765468b659bf52b921d2, type: 3}
+    - target: {fileID: -678588488315902003, guid: def2d4cfed1fafc41995460420e35b90, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3904740863574691194, guid: 78e1236310fa765468b659bf52b921d2, type: 3}
     - target: {fileID: 919132149155446097, guid: def2d4cfed1fafc41995460420e35b90, type: 3}
       propertyPath: m_Name
       value: Fence_test
       objectReference: {fileID: 0}
+    - target: {fileID: 4514320111814588189, guid: def2d4cfed1fafc41995460420e35b90, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3904740863574691194, guid: 78e1236310fa765468b659bf52b921d2, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
