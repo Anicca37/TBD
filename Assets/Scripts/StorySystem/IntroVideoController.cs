@@ -38,7 +38,15 @@ public class IntroVideoController : MonoBehaviour
         videoPlayer.Play();
 
         // play sound
-        AkSoundEngine.PostEvent("Play_IntroCutscene", this.gameObject);
+        if (nextSceneName == "DemoLevel")
+        {
+            AkSoundEngine.PostEvent("Play_IntroCutscene", this.gameObject);
+        } 
+        else if (nextSceneName == "PlayPlace Remap")
+        {
+            AkSoundEngine.PostEvent("Play_BallPitCutScene", this.gameObject);
+        }
+        
     }
 
     void Update()
@@ -48,7 +56,14 @@ public class IntroVideoController : MonoBehaviour
         {
             SkipVideo();
 
-            AkSoundEngine.PostEvent("Stop_IntroCutscene", this.gameObject);
+            if (nextSceneName == "DemoLevel")
+            {
+                AkSoundEngine.PostEvent("Stop_IntroCutscene", this.gameObject);
+            }
+            else if (nextSceneName == "PlayPlace Remap")
+            {
+                AkSoundEngine.PostEvent("Stop_BallPitCutScene", this.gameObject);
+            }
         }
     }
 

@@ -382,8 +382,22 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 724273f56b5e06438af07ac6a6b97f15
     GuidInternal: 
-    m_lastTime: -8584901110771627813
+    m_lastTime: -8584900472807058586
     List:
+    - name: CutScene
+      guid: 55a4c57222aa9144a0a5ef0e81781081
+      id: 1182958561
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 724273f56b5e06438af07ac6a6b97f15
+      - ElementName: CutScene
+        ObjectType: 7
+        guid: 55a4c57222aa9144a0a5ef0e81781081
+      Path: SoundBanks\Default Work Unit\CutScene
     - name: Level0
       guid: 7eb2b7a76947ba4bacd1da9459a246e7
       id: 2678230383
@@ -438,8 +452,76 @@ MonoBehaviour:
     ParentPath: Events\CutScenes
     guid: dd96f06193a2eb4ca11452c627dfe650
     GuidInternal: 
-    m_lastTime: -8584900507001887278
-    List: []
+    m_lastTime: -8584900472807423890
+    List:
+    - name: Play_BallPitCutScene
+      guid: 8d741ea89d1268419fadfa5de7398a0d
+      id: 2454336936
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: CutScenes
+        ObjectType: 12
+        guid: dd96f06193a2eb4ca11452c627dfe650
+      - ElementName: Play_BallPitCutScene
+        ObjectType: 3
+        guid: 8d741ea89d1268419fadfa5de7398a0d
+      Path: Events\CutScenes\Play_BallPitCutScene
+      maxAttenuation: 0
+      maxDuration: 15.72
+      minDuration: 15.72
+    - name: Play_IntroCutscene
+      guid: 0a1da24fc5a73a4cbbc42b99f35c03bf
+      id: 3476743960
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: CutScenes
+        ObjectType: 12
+        guid: dd96f06193a2eb4ca11452c627dfe650
+      - ElementName: Play_IntroCutscene
+        ObjectType: 3
+        guid: 0a1da24fc5a73a4cbbc42b99f35c03bf
+      Path: Events\CutScenes\Play_IntroCutscene
+      maxAttenuation: 0
+      maxDuration: 18.386667
+      minDuration: 18.386667
+    - name: Stop_BallPitCutScene
+      guid: b47c6a14e169f44685639487af8a5fe5
+      id: 3739524462
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: CutScenes
+        ObjectType: 12
+        guid: dd96f06193a2eb4ca11452c627dfe650
+      - ElementName: Stop_BallPitCutScene
+        ObjectType: 3
+        guid: b47c6a14e169f44685639487af8a5fe5
+      Path: Events\CutScenes\Stop_BallPitCutScene
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_IntroCutscene
+      guid: 4118f90ae1e57d458659ae592e819e5d
+      id: 692624126
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: CutScenes
+        ObjectType: 12
+        guid: dd96f06193a2eb4ca11452c627dfe650
+      - ElementName: Stop_IntroCutscene
+        ObjectType: 3
+        guid: 4118f90ae1e57d458659ae592e819e5d
+      Path: Events\CutScenes\Stop_IntroCutscene
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Events
@@ -451,8 +533,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c829b83be71c8a4d9fc3b43dae098d9f
     GuidInternal: 
-    m_lastTime: -8584901103229704906
+    m_lastTime: -8584900472806818374
     List:
+    - name: Bird
+      guid: 5f720a9b671b8842a9e19381cb155dca
+      id: 1544377644
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Bird
+        ObjectType: 4
+        guid: 5f720a9b671b8842a9e19381cb155dca
+      Path: Events\Default Work Unit\Bird
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Clock
       guid: c5896f696e0fc64da2826d1676e71274
       id: 1182830809
@@ -470,6 +569,46 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_Birds
+      guid: 83da1a64ae50fa4f8edb957f079b8173
+      id: 3025897706
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Bird
+        ObjectType: 4
+        guid: 5f720a9b671b8842a9e19381cb155dca
+      - ElementName: Play_Birds
+        ObjectType: 3
+        guid: 83da1a64ae50fa4f8edb957f079b8173
+      Path: Events\Default Work Unit\Bird\Play_Birds
+      maxAttenuation: 100
+      maxDuration: 1.431963
+      minDuration: 0.75628006
+    - name: Play_BirdWing
+      guid: c187ce0e70e6a3409e82cf57152114bd
+      id: 3584090578
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Bird
+        ObjectType: 4
+        guid: 5f720a9b671b8842a9e19381cb155dca
+      - ElementName: Play_BirdWing
+        ObjectType: 3
+        guid: c187ce0e70e6a3409e82cf57152114bd
+      Path: Events\Default Work Unit\Bird\Play_BirdWing
+      maxAttenuation: 100
+      maxDuration: 3.1929376
+      minDuration: 3.1929376
     - name: Play_BookClose
       guid: 336893367d391e419e7112f03cf976b4
       id: 1720188539
@@ -1135,25 +1274,8 @@ MonoBehaviour:
     ParentPath: Events\Lv2Garden
     guid: 79f102072e2e844c90913baf4de5b1ea
     GuidInternal: 
-    m_lastTime: -8584901110771547738
+    m_lastTime: -8584900472806933476
     List:
-    - name: Play_Birds
-      guid: 83da1a64ae50fa4f8edb957f079b8173
-      id: 3025897706
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Lv2Garden
-        ObjectType: 12
-        guid: 79f102072e2e844c90913baf4de5b1ea
-      - ElementName: Play_Birds
-        ObjectType: 3
-        guid: 83da1a64ae50fa4f8edb957f079b8173
-      Path: Events\Lv2Garden\Play_Birds
-      maxAttenuation: 100
-      maxDuration: 1.431963
-      minDuration: 0.75628006
     - name: Play_BirdsCrazy
       guid: 3fdadab55a4b8a4481ad38102b6cc050
       id: 1125237609
@@ -1171,23 +1293,6 @@ MonoBehaviour:
       maxAttenuation: 100
       maxDuration: 1.431963
       minDuration: 0.75628006
-    - name: Play_BirdWing
-      guid: c187ce0e70e6a3409e82cf57152114bd
-      id: 3584090578
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Lv2Garden
-        ObjectType: 12
-        guid: 79f102072e2e844c90913baf4de5b1ea
-      - ElementName: Play_BirdWing
-        ObjectType: 3
-        guid: c187ce0e70e6a3409e82cf57152114bd
-      Path: Events\Lv2Garden\Play_BirdWing
-      maxAttenuation: 100
-      maxDuration: 3.1929376
-      minDuration: 3.1929376
     - name: Play_Button
       guid: 937343f924bec6489cb40f81033ce814
       id: 2099555730
@@ -1964,7 +2069,7 @@ MonoBehaviour:
     m_lastTime: -8584949682095063988
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 4800000049000000
+  ExpandedWaapiItemIds: 48000000490000004a0000004b000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
