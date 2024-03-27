@@ -160,7 +160,7 @@ public class PlayPlaceManager : MonoBehaviour
     IEnumerator PlayerEnable(bool enable, float delay)
     {
         yield return new WaitForSeconds(delay);
-        player.SetActive(enable);
+        player.GetComponent<playerMovement>().enabled = enable;
     }
 
     public void ResetPuzzles()
