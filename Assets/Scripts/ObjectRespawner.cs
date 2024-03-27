@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class ObjectRespawner : MonoBehaviour
 {
@@ -12,7 +13,10 @@ public class ObjectRespawner : MonoBehaviour
     void Start()
     {
         // Find all pickupable objects in the level
-        GameObject[] pickupables = GameObject.FindGameObjectsWithTag("Pickupable");
+        GameObject[] p = GameObject.FindGameObjectsWithTag("Pickupable");
+        GameObject[] interactables = GameObject.FindGameObjectsWithTag("Interactable");
+
+        GameObject[] pickupables = p.Concat(interactables).ToArray();
         foreach (GameObject obj in pickupables)
         {
             // Record their initial positions and rotations
