@@ -135,15 +135,15 @@ public class EscapeMenuController : MonoBehaviour
             case MenuOption.Next:
                 if (SceneManager.GetActiveScene().name == "Garden_3 - Terrain")
                 {
-                    SceneManager.LoadScene("UI");
+                    SceneManager.LoadScene("GardenEnd");
                 }
                 else if (SceneManager.GetActiveScene().name == "DemoLevel")
                 {
-                   SceneManager.LoadScene("PlayPlace");
+                   SceneManager.LoadScene("PlayPlaceIntro");
                 }
                 else if (SceneManager.GetActiveScene().name == "PlayPlace")
                 {
-                    SceneManager.LoadScene("Garden_3 - Terrain");
+                    SceneManager.LoadScene("GardenIntro");
                 }                
                 break;
             case MenuOption.Menu:

@@ -106,10 +106,10 @@ public class SelectLevelController : MonoBehaviour
                 SceneManager.LoadScene("IntroCutScene");
                 break;
             case MenuOption.Ballpit:
-                SceneManager.LoadScene("PlayPlace");
+                SceneManager.LoadScene("PlayPlaceIntro");
                 break;
             case MenuOption.Garden:
-                SceneManager.LoadScene("Garden_3 - Terrain");
+                SceneManager.LoadScene("GardenIntro");
                 break;
             case MenuOption.Menu:
                 menuSelectedSprite.SetActive(false);
