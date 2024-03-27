@@ -8,7 +8,8 @@ public class IntroVideoController : MonoBehaviour
 {
     public VideoPlayer videoPlayer;
     public string nextSceneName = "DemoLevel";
-    public GameObject loadingScreen; 
+    public GameObject loadingScreen;
+
 
     void Start()
     {
@@ -35,6 +36,9 @@ public class IntroVideoController : MonoBehaviour
             loadingScreen.SetActive(false);
         }
         videoPlayer.Play();
+
+        // play sound
+        AkSoundEngine.PostEvent("Play_IntroCutscene", this.gameObject);
     }
 
     void Update()
@@ -43,6 +47,8 @@ public class IntroVideoController : MonoBehaviour
         if (InputManager.instance.ConfirmInput)
         {
             SkipVideo();
+
+            AkSoundEngine.PostEvent("Stop_IntroCutscene", this.gameObject);
         }
     }
 

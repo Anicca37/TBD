@@ -9,6 +9,24 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
+		<SoundBank Id="1182958561" Type="User" Language="SFX" Hash="{990E9BF1-E6E8-A122-BFD2-5EBDBBF7D4BB}">
+			<ShortName>CutScene</ShortName>
+			<Path>CutScene.bnk</Path>
+			<Media>
+				<File Id="395583999" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>IntroCutscene.wav</ShortName>
+					<CachePath>SFX/IntroCutscene_8E324C96.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3476743960" Name="Play_IntroCutscene" DurationType="OneShot" DurationMin="18.386667" DurationMax="18.386667">
+					<MediaRefs>
+						<MediaRef Id="395583999"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="692624126" Name="Stop_IntroCutscene" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
 		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F43C6F8A-241B-6EE8-AC7F-1352612EF932}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -1532,5 +1550,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F27FF9CC-1646-29BC-BAB1-CA3891C21260}</FileHash>
+	<FileHash>{DF1C4C47-8942-2215-6059-CCF99ABF9748}</FileHash>
 </SoundBanksInfo>
