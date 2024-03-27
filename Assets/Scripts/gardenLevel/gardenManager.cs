@@ -365,7 +365,7 @@ public class GardenManager : MonoBehaviour
     IEnumerator PlayerEnable(bool enable, float delay)
     {
         yield return new WaitForSeconds(delay);
-        player.SetActive(enable);
+        player.GetComponent<playerMovement>().enabled = enable;
     }
 
 

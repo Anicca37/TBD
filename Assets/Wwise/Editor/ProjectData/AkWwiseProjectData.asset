@@ -452,7 +452,7 @@ MonoBehaviour:
     ParentPath: Events\CutScenes
     guid: dd96f06193a2eb4ca11452c627dfe650
     GuidInternal: 
-    m_lastTime: -8584900460391513398
+    m_lastTime: -8584900437361886259
     List:
     - name: Play_BallPitCutScene
       guid: 8d741ea89d1268419fadfa5de7398a0d
@@ -486,8 +486,25 @@ MonoBehaviour:
         guid: 80c59e01bceda74ea91072a16aea1d89
       Path: Events\CutScenes\Play_GardenCutScene
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 15.72
+      minDuration: 15.72
+    - name: Play_GardenEndCutScene
+      guid: 666f5c48e60fda4d8b9e59b00d992890
+      id: 2696761744
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: CutScenes
+        ObjectType: 12
+        guid: dd96f06193a2eb4ca11452c627dfe650
+      - ElementName: Play_GardenEndCutScene
+        ObjectType: 3
+        guid: 666f5c48e60fda4d8b9e59b00d992890
+      Path: Events\CutScenes\Play_GardenEndCutScene
+      maxAttenuation: 0
+      maxDuration: 16.205938
+      minDuration: 16.205938
     - name: Play_IntroCutscene
       guid: 0a1da24fc5a73a4cbbc42b99f35c03bf
       id: 3476743960
@@ -537,8 +554,25 @@ MonoBehaviour:
         guid: af86ca417c70df4eba3a33c94f5218b8
       Path: Events\CutScenes\Stop_GardenCutScene
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_GardenEndCutScene
+      guid: 49dc88dc68a06b4bbb670b376e1ac1c1
+      id: 648099770
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: CutScenes
+        ObjectType: 12
+        guid: dd96f06193a2eb4ca11452c627dfe650
+      - ElementName: Stop_GardenEndCutScene
+        ObjectType: 3
+        guid: 49dc88dc68a06b4bbb670b376e1ac1c1
+      Path: Events\CutScenes\Stop_GardenEndCutScene
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_IntroCutscene
       guid: 4118f90ae1e57d458659ae592e819e5d
       id: 692624126
@@ -567,7 +601,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c829b83be71c8a4d9fc3b43dae098d9f
     GuidInternal: 
-    m_lastTime: -8584900460391158096
+    m_lastTime: -8584900437361555981
     List:
     - name: Bird
       guid: 5f720a9b671b8842a9e19381cb155dca
@@ -2103,7 +2137,7 @@ MonoBehaviour:
     m_lastTime: -8584949682095063988
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 48000000490000004a0000004b0000004c0000004d000000
+  ExpandedWaapiItemIds: 48000000490000004a0000004b0000004c0000004d0000004e0000004f000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

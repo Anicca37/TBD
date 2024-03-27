@@ -38,6 +38,7 @@ namespace AK
         static const AkUniqueID PLAY_FLOWERWINDBLOW = 1831549045U;
         static const AkUniqueID PLAY_FLYTRAPPOPEDUP = 531081561U;
         static const AkUniqueID PLAY_GARDENCUTSCENE = 2365141837U;
+        static const AkUniqueID PLAY_GARDENENDCUTSCENE = 2696761744U;
         static const AkUniqueID PLAY_INTROCUTSCENE = 3476743960U;
         static const AkUniqueID PLAY_LEVEL2_GARDENAMBIENCE = 3374855610U;
         static const AkUniqueID PLAY_LEVEL2_NEWGARDENMUSIC = 552396483U;
@@ -71,6 +72,7 @@ namespace AK
         static const AkUniqueID STOP_CLOCK_TICK = 2897827502U;
         static const AkUniqueID STOP_CLOCK_TICK_REVERSE = 3434769657U;
         static const AkUniqueID STOP_GARDENCUTSCENE = 571755607U;
+        static const AkUniqueID STOP_GARDENENDCUTSCENE = 648099770U;
         static const AkUniqueID STOP_INTROCUTSCENE = 692624126U;
         static const AkUniqueID STOP_LEVEL2_GARDENAMBIENCE = 1659483392U;
         static const AkUniqueID STOP_LEVEL2_NEWGARDENMUSIC = 929452813U;
