@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayplaceEscapeDetector : MonoBehaviour
 {
-    private float drawForce = 2f;
-    private float distanceToPlayer = 15f;
+    private float drawForce = 10f;
+    private float distanceToPlayer = 10f;
     private GameObject player;
     private CharacterController playerController;
     // Start is called before the first frame update
