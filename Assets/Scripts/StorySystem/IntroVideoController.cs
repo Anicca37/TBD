@@ -28,9 +28,12 @@ public class IntroVideoController : MonoBehaviour
 
     IEnumerator StartCutsceneAfterDelay()
     {
-        loadingScreen.SetActive(true);
-        yield return new WaitForSeconds(3f);
-        loadingScreen.SetActive(false);
+        
+        if(loadingScreen != null) {
+            loadingScreen.SetActive(true);
+            yield return new WaitForSeconds(3f);
+            loadingScreen.SetActive(false);
+        }
         videoPlayer.Play();
     }
 

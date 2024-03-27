@@ -12,6 +12,7 @@ public class BirdWindow : MonoBehaviour
         {
             Debug.Log("Chirp");
             bird.SetTrigger("Warn");
+            Invoke("playBirdWing", 1.4f);
             Invoke("ResetBird", 4.5f);
         }
     }
@@ -19,4 +20,12 @@ public class BirdWindow : MonoBehaviour
     {
         bird.SetTrigger("Warn Rest");
     }
+
+    private void playBirdWing()
+    {
+        GameObject theBird = GameObject.Find("smallBird");
+        AkSoundEngine.PostEvent("Play_BirdWing", theBird.gameObject);
+    }
 }
+
+

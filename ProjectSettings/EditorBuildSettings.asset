@@ -18,9 +18,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Garden_2.unity
     guid: 3f81ddd9b810bec46b64c1d16c959fb5
   - enabled: 1
+    path: Assets/Scenes/PlayPlaceIntro.unity
+    guid: 5ab1237368fb859458cb70e09d3cc8ce
+  - enabled: 1
     path: Assets/Scenes/PlayPlace.unity
     guid: 60681856dca57da47b81779fef8f4f1d
   - enabled: 1
+    path: Assets/Scenes/GardenIntro.unity
+    guid: 214d1c7216e96a44581595a1fc4ddeed
+  - enabled: 1
     path: Assets/Scenes/Garden_3 - Terrain.unity
     guid: 170047adb34e2e342a10e5497ad79c97
+  - enabled: 1
+    path: Assets/Scenes/GardenEnd.unity
+    guid: 0367570d183df864cb7777edb1e3424f
   m_configObjects: {}

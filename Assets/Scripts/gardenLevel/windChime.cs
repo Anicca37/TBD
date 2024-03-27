@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class windChime : MonoBehaviour, IInteract
 {
-    public WindController windController;
     public ParticleSystem birdsParticleSystem;
     public TreeGrowthController treeGrowthController;
     public Transform windDirectionIndicator;

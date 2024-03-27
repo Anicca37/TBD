@@ -83,6 +83,17 @@ public class Book : MonoBehaviour
             playerBody.GetComponent<playerMovement>().enabled = !isJournalOpen;
         }
         LockCameraRotation(isJournalOpen);
+
+        if (isJournalOpen)
+        {
+            // play sound
+            AkSoundEngine.PostEvent("Play_BookOpen", this.gameObject);
+        }
+        else
+        {
+            // play sound
+            AkSoundEngine.PostEvent("Play_BookClose", this.gameObject);
+        }
     }
 
     private void LockCameraRotation(bool lockRotation)
@@ -93,12 +104,16 @@ public class Book : MonoBehaviour
         }
     }
 
-    private IEnumerator RotatePage(int index, float targetAngle)
+    private IEnumerator RotatePage(int index, float targetAngle, bool updateIndex = true)
     {
         isRotating = true;
         Quaternion startRotation = pages[index].rotation;
         Quaternion endRotation = Quaternion.Euler(0, targetAngle, 0);
         float rotationProgress = 0f;
+
+
+        //play sound
+        AkSoundEngine.PostEvent("Play_PageTurn", this.gameObject);
 
         pages[index].SetAsLastSibling();
         while (rotationProgress < 1f)
@@ -108,7 +123,10 @@ public class Book : MonoBehaviour
             yield return null;
         }
 
-        currentPageIndex = (targetAngle == 180) ? index + 1 : index;
+        if (updateIndex)
+        {
+            currentPageIndex = (targetAngle == 180) ? index + 1 : index;
+        }
         isRotating = false;
     }
 
@@ -116,6 +134,8 @@ public class Book : MonoBehaviour
     {
         Transform journalUI = transform.GetChild(0);
         journalUI.gameObject.SetActive(show);
+
+
     }
 
     public void CloseJournal()
@@ -143,14 +163,28 @@ public class Book : MonoBehaviour
         }
     }
 
-    public void FliptoBallPit()
+    public void OpenPage(int pageIndex)
     {
-        var i = 0;
-        while(i <= 2)
+        if (pageIndex >= 0 && pageIndex < pages.Count)
         {
-            pages[i].SetAsLastSibling();
-            pages[i].rotation = Quaternion.Euler(0, 180, 0);
-            i+=1;
+            ToggleJournal(true);
+            StartCoroutine(FlipToPage(pageIndex));
         }
     }
+
+    private IEnumerator FlipToPage(int targetIndex)
+    {
+        int direction = targetIndex > currentPageIndex ? 1 : -1;
+        int flipCount = Mathf.Abs(currentPageIndex - targetIndex);
+
+        for (int i = 0; i < flipCount; i++)
+        {
+            int pageToFlip = currentPageIndex + (direction > 0 ? 0 : -1);
+            float targetAngle = direction > 0 ? 180 : 0;
+            yield return RotatePage(pageToFlip, targetAngle, false);
+
+            currentPageIndex += direction;
+        }
+    }
+
 }
