@@ -715,7 +715,7 @@
 				<Event Id="1663839887" Name="Stop_Wind_Blowing" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{757F819F-79B4-F411-DC16-8FFCAC613697}">
+		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{2C13BF0F-C498-3B24-8BFA-FBC5751A41C8}">
 			<ShortName>Level1PlayPlace</ShortName>
 			<Path>Level1PlayPlace.bnk</Path>
 			<Media>
@@ -763,6 +763,10 @@
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran1\mus_3-4_125bpm_Level1_Tran1_CMelody_CelloL.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran1/mus_3-4_125bpm_Level1_Tran1_CMelody_CelloL_239921B3.wem</CachePath>
 				</File>
+				<File Id="141213406" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bird01-001.wav</ShortName>
+					<CachePath>SFX/Bird01-001_8E324C96.wem</CachePath>
+				</File>
 				<File Id="146954573" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_CMelody_VP.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran2/mus_3-4_125bpm_Level1_Tran2_CMelody_VP_239921B3.wem</CachePath>
@@ -807,6 +811,10 @@
 					<ShortName>BallImpact\Ball_Impact_09.wav</ShortName>
 					<CachePath>SFX/BallImpact/Ball_Impact_09_DF3B0901.wem</CachePath>
 				</File>
+				<File Id="217621770" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bird02-003.wav</ShortName>
+					<CachePath>SFX/Bird02-003_8E324C96.wem</CachePath>
+				</File>
 				<File Id="236709149" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Melody_Flute.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran2/mus_3-4_125bpm_Level1_Tran2_Melody_Flute_239921B3.wem</CachePath>
@@ -831,9 +839,17 @@
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S2\mus_3-4_125bpm_Level1_S2_Bass.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S2/mus_3-4_125bpm_Level1_S2_Bass_239921B3.wem</CachePath>
 				</File>
+				<File Id="333540284" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bird01-003.wav</ShortName>
+					<CachePath>SFX/Bird01-003_8E324C96.wem</CachePath>
+				</File>
 				<File Id="336039053" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Clock_Tick.wav</ShortName>
 					<CachePath>SFX/Clock_Tick_56CEF360.wem</CachePath>
+				</File>
+				<File Id="336129854" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bird02-002.wav</ShortName>
+					<CachePath>SFX/Bird02-002_8E324C96.wem</CachePath>
 				</File>
 				<File Id="338398156" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PageTurn\PageTurn_6.wav</ShortName>
@@ -919,6 +935,10 @@
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S1\mus_3-4_125bpm_Level1_S1_Melody_Flute.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S1/mus_3-4_125bpm_Level1_S1_Melody_Flute_239921B3.wem</CachePath>
 				</File>
+				<File Id="583454713" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bird01-002.wav</ShortName>
+					<CachePath>SFX/Bird01-002_8E324C96.wem</CachePath>
+				</File>
 				<File Id="597621904" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BallBounceNew_1.wav</ShortName>
 					<CachePath>SFX/BallBounceNew_1_8E324C96.wem</CachePath>
@@ -954,6 +974,10 @@
 				<File Id="661109498" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BallBounceNew_4.wav</ShortName>
 					<CachePath>SFX/BallBounceNew_4_8E324C96.wem</CachePath>
+				</File>
+				<File Id="670277016" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bird02-001.wav</ShortName>
+					<CachePath>SFX/Bird02-001_8E324C96.wem</CachePath>
 				</File>
 				<File Id="700689704" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BlockPickup_1.wav</ShortName>
@@ -999,6 +1023,10 @@
 					<ShortName>PageTurn\PageTurn_3.wav</ShortName>
 					<CachePath>SFX/PageTurn/PageTurn_3_FA9BAB52.wem</CachePath>
 				</File>
+				<File Id="821236829" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bird03-002.wav</ShortName>
+					<CachePath>SFX/Bird03-002_8E324C96.wem</CachePath>
+				</File>
 				<File Id="834838996" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Chords.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran2/mus_3-4_125bpm_Level1_Tran2_Chords_239921B3.wem</CachePath>
@@ -1023,6 +1051,10 @@
 					<ShortName>BallImpact\Ball_Impact_01.wav</ShortName>
 					<CachePath>SFX/BallImpact/Ball_Impact_01_276E93A7.wem</CachePath>
 				</File>
+				<File Id="928421190" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bird03-001.wav</ShortName>
+					<CachePath>SFX/Bird03-001_8E324C96.wem</CachePath>
+				</File>
 				<File Id="944101764" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Confetti_1.wav</ShortName>
 					<CachePath>SFX/Confetti_1_8E324C96.wem</CachePath>
@@ -1034,6 +1066,10 @@
 				<File Id="948773458" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Melody_Cello.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran2/mus_3-4_125bpm_Level1_Tran2_Melody_Cello_239921B3.wem</CachePath>
+				</File>
+				<File Id="960283345" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BirdWing.wav</ShortName>
+					<CachePath>SFX/BirdWing_8E324C96.wem</CachePath>
 				</File>
 				<File Id="972672379" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BookClose_2.wav</ShortName>
@@ -1099,6 +1135,23 @@
 							<PluginRef Id="2650249192"/>
 						</ShareSets>
 					</PluginRefs>
+				</Event>
+				<Event Id="3025897706" Name="Play_Birds" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.75628006" DurationMax="1.431963">
+					<MediaRefs>
+						<MediaRef Id="141213406"/>
+						<MediaRef Id="217621770"/>
+						<MediaRef Id="333540284"/>
+						<MediaRef Id="336129854"/>
+						<MediaRef Id="583454713"/>
+						<MediaRef Id="670277016"/>
+						<MediaRef Id="821236829"/>
+						<MediaRef Id="928421190"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3584090578" Name="Play_BirdWing" MaxAttenuation="100" DurationType="OneShot" DurationMin="3.1929376" DurationMax="3.1929376">
+					<MediaRefs>
+						<MediaRef Id="960283345"/>
+					</MediaRefs>
 				</Event>
 				<Event Id="94152718" Name="Play_BlockDrop" DurationType="OneShot" DurationMin="1.4872764" DurationMax="1.783573">
 					<MediaRefs>
@@ -1261,7 +1314,7 @@
 				<GameParameter Id="185769106" Name="Lv1_LightOn"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{11DB8BB3-F3B4-E8C0-5D18-D60FCE7AE3C3}">
+		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{E860A58B-E503-593C-AE74-EBAB26782394}">
 			<ShortName>Level0</ShortName>
 			<Path>Level0.bnk</Path>
 			<Media>
@@ -1285,6 +1338,10 @@
 					<ShortName>PageTurn\PageTurn_5.wav</ShortName>
 					<CachePath>SFX/PageTurn/PageTurn_5_B3D1F082.wem</CachePath>
 				</File>
+				<File Id="141213406" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bird01-001.wav</ShortName>
+					<CachePath>SFX/Bird01-001_8E324C96.wem</CachePath>
+				</File>
 				<File Id="181112472" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Quest_Game_Action_Wood_Box_.wav</ShortName>
 					<CachePath>SFX/Quest_Game_Action_Wood_Box__8E324C96.wem</CachePath>
@@ -1293,13 +1350,25 @@
 					<ShortName>PageTurn\PageTurn_4.wav</ShortName>
 					<CachePath>SFX/PageTurn/PageTurn_4_4455226E.wem</CachePath>
 				</File>
+				<File Id="217621770" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bird02-003.wav</ShortName>
+					<CachePath>SFX/Bird02-003_8E324C96.wem</CachePath>
+				</File>
 				<File Id="276712555" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BookOpen\BookOpen_1.wav</ShortName>
 					<CachePath>SFX/BookOpen/BookOpen_1_5644DAE3.wem</CachePath>
 				</File>
+				<File Id="333540284" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bird01-003.wav</ShortName>
+					<CachePath>SFX/Bird01-003_8E324C96.wem</CachePath>
+				</File>
 				<File Id="336039053" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Clock_Tick.wav</ShortName>
 					<CachePath>SFX/Clock_Tick_56CEF360.wem</CachePath>
+				</File>
+				<File Id="336129854" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bird02-002.wav</ShortName>
+					<CachePath>SFX/Bird02-002_8E324C96.wem</CachePath>
 				</File>
 				<File Id="338398156" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PageTurn\PageTurn_6.wav</ShortName>
@@ -1321,6 +1390,14 @@
 					<ShortName>Quest_Game_Crafting_Wood_-1.wav</ShortName>
 					<CachePath>SFX/Quest_Game_Crafting_Wood_-1_2D61A4DB.wem</CachePath>
 				</File>
+				<File Id="583454713" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bird01-002.wav</ShortName>
+					<CachePath>SFX/Bird01-002_8E324C96.wem</CachePath>
+				</File>
+				<File Id="670277016" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bird02-001.wav</ShortName>
+					<CachePath>SFX/Bird02-001_8E324C96.wem</CachePath>
+				</File>
 				<File Id="776713045" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PageTurn\PageTurn_3.wav</ShortName>
 					<CachePath>SFX/PageTurn/PageTurn_3_FA9BAB52.wem</CachePath>
@@ -1329,6 +1406,10 @@
 					<ShortName>Quest_Game_Action_Wood_Bo-1.wav</ShortName>
 					<CachePath>SFX/Quest_Game_Action_Wood_Bo-1_8E324C96.wem</CachePath>
 				</File>
+				<File Id="821236829" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bird03-002.wav</ShortName>
+					<CachePath>SFX/Bird03-002_8E324C96.wem</CachePath>
+				</File>
 				<File Id="879919748" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PageTurn\PageTurn_1.wav</ShortName>
 					<CachePath>SFX/PageTurn/PageTurn_1_0908AF58.wem</CachePath>
@@ -1336,6 +1417,14 @@
 				<File Id="909003059" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Win.wav</ShortName>
 					<CachePath>SFX/Win_818F3B66.wem</CachePath>
+				</File>
+				<File Id="928421190" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bird03-001.wav</ShortName>
+					<CachePath>SFX/Bird03-001_8E324C96.wem</CachePath>
+				</File>
+				<File Id="960283345" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BirdWing.wav</ShortName>
+					<CachePath>SFX/BirdWing_8E324C96.wem</CachePath>
 				</File>
 				<File Id="972672379" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BookClose_2.wav</ShortName>
@@ -1355,6 +1444,23 @@
 				</File>
 			</Media>
 			<Events>
+				<Event Id="3025897706" Name="Play_Birds" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.75628006" DurationMax="1.431963">
+					<MediaRefs>
+						<MediaRef Id="141213406"/>
+						<MediaRef Id="217621770"/>
+						<MediaRef Id="333540284"/>
+						<MediaRef Id="336129854"/>
+						<MediaRef Id="583454713"/>
+						<MediaRef Id="670277016"/>
+						<MediaRef Id="821236829"/>
+						<MediaRef Id="928421190"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3584090578" Name="Play_BirdWing" MaxAttenuation="100" DurationType="OneShot" DurationMin="3.1929376" DurationMax="3.1929376">
+					<MediaRefs>
+						<MediaRef Id="960283345"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1720188539" Name="Play_BookClose" DurationType="OneShot" DurationMin="1.2046041" DurationMax="1.4449792">
 					<MediaRefs>
 						<MediaRef Id="972672379"/>
@@ -1426,5 +1532,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{46D7FD92-3D35-063D-20DA-1C40DA5E91C0}</FileHash>
+	<FileHash>{63367D3C-53EB-F545-2E9E-845DB2929CD0}</FileHash>
 </SoundBanksInfo>
