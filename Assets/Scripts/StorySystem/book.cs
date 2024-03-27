@@ -83,6 +83,17 @@ public class Book : MonoBehaviour
             playerBody.GetComponent<playerMovement>().enabled = !isJournalOpen;
         }
         LockCameraRotation(isJournalOpen);
+
+        if (isJournalOpen)
+        {
+            // play sound
+            AkSoundEngine.PostEvent("Play_BookOpen", this.gameObject);
+        }
+        else
+        {
+            // play sound
+            AkSoundEngine.PostEvent("Play_BookClose", this.gameObject);
+        }
     }
 
     private void LockCameraRotation(bool lockRotation)
@@ -121,15 +132,11 @@ public class Book : MonoBehaviour
         Transform journalUI = transform.GetChild(0);
         journalUI.gameObject.SetActive(show);
 
-        // play sound
-        AkSoundEngine.PostEvent("Play_BookOpen", this.gameObject);
+
     }
 
     public void CloseJournal()
-    {
-        // play sound
-        AkSoundEngine.PostEvent("Play_BookClose", this.gameObject);
-        
+    {        
         foreach (var page in pages)
         {
             page.rotation = Quaternion.identity;
