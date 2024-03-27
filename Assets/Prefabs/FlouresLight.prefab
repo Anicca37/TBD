@@ -129,8 +129,12 @@ PrefabInstance:
       value: flourescentlight
       objectReference: {fileID: 0}
     - target: {fileID: 5392398322951045289, guid: bf53c76e9281a1b4bbb6cf515e13106b, type: 3}
+      propertyPath: m_Name
+      value: Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 5392398322951045289, guid: bf53c76e9281a1b4bbb6cf515e13106b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
