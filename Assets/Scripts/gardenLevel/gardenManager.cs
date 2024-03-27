@@ -204,7 +204,6 @@ public class GardenManager : MonoBehaviour
 
         // set VenusFlytrap to active
         VenusFlytrap.SetActive(true);
-
         if (isTrapActive == false)
         {
             // play sound

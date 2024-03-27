@@ -5,12 +5,13 @@ using UnityEngine;
 public class VenusFlytrapController : MonoBehaviour
 {
     private bool PlayerEaten = false; //For OneTimeSound
+    private Animator venusFlytrapAnimator;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        venusFlytrapAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -23,6 +24,7 @@ public class VenusFlytrapController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            venusFlytrapAnimator.SetTrigger("eat");
             Debug.Log("Player entered the Venus Flytrap");
             GardenManager.Instance.CompletePuzzle("Escape");
 
