@@ -427,6 +427,19 @@ MonoBehaviour:
         guid: 4e2ca4e8d7a0944b9a0940e42b33309a
       Path: SoundBanks\Default Work Unit\Level2Garden
   EventWwu:
+  - PhysicalPath: Events\CutScenes.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: CutScenes
+      ObjectType: 12
+      guid: dd96f06193a2eb4ca11452c627dfe650
+    ParentPath: Events\CutScenes
+    guid: dd96f06193a2eb4ca11452c627dfe650
+    GuidInternal: 
+    m_lastTime: -8584900507001887278
+    List: []
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Events
@@ -1951,7 +1964,7 @@ MonoBehaviour:
     m_lastTime: -8584949682095063988
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 4800000049000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
