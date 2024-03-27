@@ -44,7 +44,7 @@ public class IntroVideoController : MonoBehaviour
         } 
         else if (nextSceneName == "PlayPlace Remap")
         {
-            AkSoundEngine.PostEvent("Play_BallPitCutScene", this.gameObject);
+            Invoke("playPlayPlaceCutSceneSound", 0.4f);
         }
         
     }
@@ -81,5 +81,10 @@ public class IntroVideoController : MonoBehaviour
     void LoadNextScene()
     {
         SceneManager.LoadScene(nextSceneName);
+    }
+    
+    void playPlayPlaceCutSceneSound()
+    {
+        AkSoundEngine.PostEvent("Play_BallPitCutScene", this.gameObject);
     }
 }

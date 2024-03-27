@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1182958561" Type="User" Language="SFX" Hash="{FC1B0716-942B-D6F1-1E8F-BCCB7A625942}">
+		<SoundBank Id="1182958561" Type="User" Language="SFX" Hash="{BDDAFFA7-42C7-C3B5-B523-F90309B1A182}">
 			<ShortName>CutScene</ShortName>
 			<Path>CutScene.bnk</Path>
 			<Media>
@@ -1560,5 +1560,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D2B0D327-51AF-5A73-455B-2FC80B260941}</FileHash>
+	<FileHash>{BA124B28-37E1-B556-C933-55312DB03940}</FileHash>
 </SoundBanksInfo>
