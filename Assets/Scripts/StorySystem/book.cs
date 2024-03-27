@@ -14,18 +14,14 @@ public class Book : MonoBehaviour
     private GameObject crosshair;
     private fpsCameraControl cameraControlScript;
 
-    private GameObject theBook;
-
     void Awake()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;       
-
     }
 
     void Start()
     {
         InitialState();
-        theBook = GameObject.Find("book");
     }
 
     void OnDestroy()
@@ -124,6 +120,9 @@ public class Book : MonoBehaviour
     {
         Transform journalUI = transform.GetChild(0);
         journalUI.gameObject.SetActive(show);
+
+        // play sound
+        AkSoundEngine.PostEvent("Play_BookOpen", this.gameObject);
     }
 
     public void CloseJournal()
