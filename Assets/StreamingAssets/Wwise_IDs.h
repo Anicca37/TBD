@@ -19,6 +19,8 @@ namespace AK
         static const AkUniqueID PLAY_BIRDWING = 3584090578U;
         static const AkUniqueID PLAY_BLOCKDROP = 94152718U;
         static const AkUniqueID PLAY_BLOCKPICKUP = 1903858809U;
+        static const AkUniqueID PLAY_BOOKCLOSE = 1720188539U;
+        static const AkUniqueID PLAY_BOOKOPEN = 2244407197U;
         static const AkUniqueID PLAY_BUTTON = 2099555730U;
         static const AkUniqueID PLAY_CHIME_MELODY = 847650453U;
         static const AkUniqueID PLAY_CHIMEC = 2759522921U;
@@ -40,6 +42,7 @@ namespace AK
         static const AkUniqueID PLAY_LIGHTONSOUND = 3765524326U;
         static const AkUniqueID PLAY_LV1_LIGHTSHOWMUSIC = 1153064896U;
         static const AkUniqueID PLAY_LV1_PLAYPLACEMUSIC = 1852343440U;
+        static const AkUniqueID PLAY_PAGETURN = 2771828150U;
         static const AkUniqueID PLAY_PINECONEPICKUP = 3549239601U;
         static const AkUniqueID PLAY_PLAYEREATEN = 3659914468U;
         static const AkUniqueID PLAY_SCALE_BALANCING = 2809285424U;

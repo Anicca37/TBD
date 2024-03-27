@@ -382,7 +382,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 724273f56b5e06438af07ac6a6b97f15
     GuidInternal: 
-    m_lastTime: -8584907414149031025
+    m_lastTime: -8584901110771627813
     List:
     - name: Level0
       guid: 7eb2b7a76947ba4bacd1da9459a246e7
@@ -438,11 +438,11 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c829b83be71c8a4d9fc3b43dae098d9f
     GuidInternal: 
-    m_lastTime: -8584903583503013749
+    m_lastTime: -8584901103229704906
     List:
-    - name: Play_BallImpact
-      guid: d84aeadbee68d0469912f9e57a2302e1
-      id: 2280438399
+    - name: Clock
+      guid: c5896f696e0fc64da2826d1676e71274
+      id: 1182830809
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -450,135 +450,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_BallImpact
-        ObjectType: 3
-        guid: d84aeadbee68d0469912f9e57a2302e1
-      Path: Events\Default Work Unit\Play_BallImpact
-      maxAttenuation: 100
-      maxDuration: 2.4145143
-      minDuration: 1.5382904
-    - name: Play_BlockDrop
-      guid: 98e20f838392bb45850e091c6e57c884
-      id: 94152718
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_BlockDrop
-        ObjectType: 3
-        guid: 98e20f838392bb45850e091c6e57c884
-      Path: Events\Default Work Unit\Play_BlockDrop
-      maxAttenuation: 0
-      maxDuration: 1.783573
-      minDuration: 1.4872764
-    - name: Play_BlockPickUp
-      guid: e44bec5d23e9ef40be6f133235af1575
-      id: 1903858809
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_BlockPickUp
-        ObjectType: 3
-        guid: e44bec5d23e9ef40be6f133235af1575
-      Path: Events\Default Work Unit\Play_BlockPickUp
-      maxAttenuation: 0
-      maxDuration: 0.72498214
-      minDuration: 0.56908756
-    - name: Play_Confetti
-      guid: 994260ccc6f91d4ea64ed9c28eecccd7
-      id: 831234954
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_Confetti
-        ObjectType: 3
-        guid: 994260ccc6f91d4ea64ed9c28eecccd7
-      Path: Events\Default Work Unit\Play_Confetti
-      maxAttenuation: 100
-      maxDuration: 1.5697507
-      minDuration: 1.2362527
-    - name: Play_LightOff_1
-      guid: ee41c06dcfee5149883ed0c24833a07a
-      id: 3140573545
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_LightOff_1
-        ObjectType: 3
-        guid: ee41c06dcfee5149883ed0c24833a07a
-      Path: Events\Default Work Unit\Play_LightOff_1
-      maxAttenuation: 0
-      maxDuration: 2.2927027
-      minDuration: 2.2927027
-    - name: Play_LightOnSound
-      guid: 817fd0d4f28fe44188ba3a9e68a69653
-      id: 3765524326
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_LightOnSound
-        ObjectType: 3
-        guid: 817fd0d4f28fe44188ba3a9e68a69653
-      Path: Events\Default Work Unit\Play_LightOnSound
-      maxAttenuation: 100
-      maxDuration: 8.928
-      minDuration: 8.928
-    - name: Play_Lv1_LightShowMusic
-      guid: d300bd5970f10240aa9d895b3f0a6c99
-      id: 1153064896
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_Lv1_LightShowMusic
-        ObjectType: 3
-        guid: d300bd5970f10240aa9d895b3f0a6c99
-      Path: Events\Default Work Unit\Play_Lv1_LightShowMusic
-      maxAttenuation: 0
-      maxDuration: 5.375
-      minDuration: 5.375
-    - name: Play_Lv1_PlayPlaceMusic
-      guid: 49a494cca0aa634ebcf44924c113ef3d
-      id: 1852343440
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_Lv1_PlayPlaceMusic
-        ObjectType: 3
-        guid: 49a494cca0aa634ebcf44924c113ef3d
-      Path: Events\Default Work Unit\Play_Lv1_PlayPlaceMusic
+      - ElementName: Clock
+        ObjectType: 4
+        guid: c5896f696e0fc64da2826d1676e71274
+      Path: Events\Default Work Unit\Clock
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Play_SlideDoorOpen_1
-      guid: e9097afc0b2d1243aed35f740f3cc28c
-      id: 1324211945
+    - name: Play_BookClose
+      guid: 336893367d391e419e7112f03cf976b4
+      id: 1720188539
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -586,13 +467,104 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_SlideDoorOpen_1
+      - ElementName: Play_BookClose
         ObjectType: 3
-        guid: e9097afc0b2d1243aed35f740f3cc28c
-      Path: Events\Default Work Unit\Play_SlideDoorOpen_1
+        guid: 336893367d391e419e7112f03cf976b4
+      Path: Events\Default Work Unit\Play_BookClose
       maxAttenuation: 0
-      maxDuration: 1.7018958
-      minDuration: 1.7018958
+      maxDuration: 1.4449792
+      minDuration: 1.2046041
+    - name: Play_BookOpen
+      guid: 40191390f68a9d47aa5003e5bb7eaa69
+      id: 2244407197
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Play_BookOpen
+        ObjectType: 3
+        guid: 40191390f68a9d47aa5003e5bb7eaa69
+      Path: Events\Default Work Unit\Play_BookOpen
+      maxAttenuation: 0
+      maxDuration: 0.8070264
+      minDuration: 0.67442
+    - name: Play_Clock_Tick
+      guid: 2fc6118edda480479b2ff4a6a2064414
+      id: 2797822332
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Clock
+        ObjectType: 4
+        guid: c5896f696e0fc64da2826d1676e71274
+      - ElementName: Play_Clock_Tick
+        ObjectType: 3
+        guid: 2fc6118edda480479b2ff4a6a2064414
+      Path: Events\Default Work Unit\Clock\Play_Clock_Tick
+      maxAttenuation: 100
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Clock_Tick_Reverse
+      guid: 98e5f29ec6942444b8713d94e5a1742d
+      id: 3830889987
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Clock
+        ObjectType: 4
+        guid: c5896f696e0fc64da2826d1676e71274
+      - ElementName: Play_Clock_Tick_Reverse
+        ObjectType: 3
+        guid: 98e5f29ec6942444b8713d94e5a1742d
+      Path: Events\Default Work Unit\Clock\Play_Clock_Tick_Reverse
+      maxAttenuation: 100
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_PageTurn
+      guid: f85a0fef37214547a30969d4d6bbf826
+      id: 2771828150
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Play_PageTurn
+        ObjectType: 3
+        guid: f85a0fef37214547a30969d4d6bbf826
+      Path: Events\Default Work Unit\Play_PageTurn
+      maxAttenuation: 0
+      maxDuration: 0.78540945
+      minDuration: 0.53894883
+    - name: Play_Win
+      guid: 7a2ed0c54ab05342b051ca1bb4f433fc
+      id: 2955987680
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Play_Win
+        ObjectType: 3
+        guid: 7a2ed0c54ab05342b051ca1bb4f433fc
+      Path: Events\Default Work Unit\Play_Win
+      maxAttenuation: 0
+      maxDuration: 1
+      minDuration: 1
     - name: Play_WrongSequence
       guid: 08d49a798db76e48bea41cb677e6469b
       id: 3661318894
@@ -610,9 +582,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.5
       minDuration: 0.5
-    - name: Play_XyloC
-      guid: a28700ab35fd5d49983bc49708db6c74
-      id: 4153846227
+    - name: Stop_Clock_Tick
+      guid: e002896f28f91e449c1e92bb37f6be9c
+      id: 2897827502
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -620,101 +592,19 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_XyloC
+      - ElementName: Clock
+        ObjectType: 4
+        guid: c5896f696e0fc64da2826d1676e71274
+      - ElementName: Stop_Clock_Tick
         ObjectType: 3
-        guid: a28700ab35fd5d49983bc49708db6c74
-      Path: Events\Default Work Unit\Play_XyloC
-      maxAttenuation: 0
-      maxDuration: 0.48026314
-      minDuration: 0.48026314
-    - name: Play_XyloD
-      guid: 181e067091c52a49949a709d1ea5a58f
-      id: 4153846228
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_XyloD
-        ObjectType: 3
-        guid: 181e067091c52a49949a709d1ea5a58f
-      Path: Events\Default Work Unit\Play_XyloD
-      maxAttenuation: 0
-      maxDuration: 0.425
-      minDuration: 0.425
-    - name: Play_XyloE
-      guid: 8831dff8ef3928479bbab3f8f32579e4
-      id: 4153846229
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_XyloE
-        ObjectType: 3
-        guid: 8831dff8ef3928479bbab3f8f32579e4
-      Path: Events\Default Work Unit\Play_XyloE
-      maxAttenuation: 0
-      maxDuration: 0.4381579
-      minDuration: 0.4381579
-    - name: Play_XyloG
-      guid: dc68cda129d2e248b502e0cb733a327b
-      id: 4153846231
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_XyloG
-        ObjectType: 3
-        guid: dc68cda129d2e248b502e0cb733a327b
-      Path: Events\Default Work Unit\Play_XyloG
-      maxAttenuation: 0
-      maxDuration: 0.4526316
-      minDuration: 0.4526316
-    - name: Play_XyloSequence
-      guid: da5304f3021eb64584d1262cbdab2fac
-      id: 4293423455
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_XyloSequence
-        ObjectType: 3
-        guid: da5304f3021eb64584d1262cbdab2fac
-      Path: Events\Default Work Unit\Play_XyloSequence
-      maxAttenuation: 0
-      maxDuration: 4
-      minDuration: 4
-    - name: Stop_LightOff_1
-      guid: dd4bbd6761f0ea4381e05285ba8eb280
-      id: 1219381739
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Stop_LightOff_1
-        ObjectType: 3
-        guid: dd4bbd6761f0ea4381e05285ba8eb280
-      Path: Events\Default Work Unit\Stop_LightOff_1
+        guid: e002896f28f91e449c1e92bb37f6be9c
+      Path: Events\Default Work Unit\Clock\Stop_Clock_Tick
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: Stop_LightOnSound
-      guid: 7031fd439dc08749ae6ee7d172b85332
-      id: 221383132
+    - name: Stop_Clock_Tick_Reverse
+      guid: e28405f871f427418ff5c790637e16db
+      id: 3434769657
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -722,44 +612,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Stop_LightOnSound
+      - ElementName: Clock
+        ObjectType: 4
+        guid: c5896f696e0fc64da2826d1676e71274
+      - ElementName: Stop_Clock_Tick_Reverse
         ObjectType: 3
-        guid: 7031fd439dc08749ae6ee7d172b85332
-      Path: Events\Default Work Unit\Stop_LightOnSound
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Stop_Lv1_LightShowMusic
-      guid: 7818a42d0c3e7f4c8ff26cc5adba8bec
-      id: 4020215174
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Stop_Lv1_LightShowMusic
-        ObjectType: 3
-        guid: 7818a42d0c3e7f4c8ff26cc5adba8bec
-      Path: Events\Default Work Unit\Stop_Lv1_LightShowMusic
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Stop_Lv1_PlayPlaceMusic
-      guid: db640eacbf037d4fa41455d3c475e7d7
-      id: 1754848386
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Stop_Lv1_PlayPlaceMusic
-        ObjectType: 3
-        guid: db640eacbf037d4fa41455d3c475e7d7
-      Path: Events\Default Work Unit\Stop_Lv1_PlayPlaceMusic
+        guid: e28405f871f427418ff5c790637e16db
+      Path: Events\Default Work Unit\Clock\Stop_Clock_Tick_Reverse
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -774,28 +633,8 @@ MonoBehaviour:
     ParentPath: Events\Level0
     guid: 241c5182ec754a49a8160c059dc386bb
     GuidInternal: 
-    m_lastTime: -8584907794184851277
+    m_lastTime: -8584901110771472670
     List:
-    - name: Clock
-      guid: c5896f696e0fc64da2826d1676e71274
-      id: 1182830809
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Level0
-        ObjectType: 12
-        guid: 241c5182ec754a49a8160c059dc386bb
-      - ElementName: Tut_office
-        ObjectType: 4
-        guid: 91c4e4c2984e2a4f8e7aa4a6fdb17d26
-      - ElementName: Clock
-        ObjectType: 4
-        guid: c5896f696e0fc64da2826d1676e71274
-      Path: Events\Level0\Tut_office\Clock
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
     - name: Play_CarpetFootStep
       guid: 9084dd75288be6469e6cac232472baaf
       id: 2225307149
@@ -814,52 +653,6 @@ MonoBehaviour:
         guid: 9084dd75288be6469e6cac232472baaf
       Path: Events\Level0\Tut_office\Play_CarpetFootStep
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Play_Clock_Tick
-      guid: 2fc6118edda480479b2ff4a6a2064414
-      id: 2797822332
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Level0
-        ObjectType: 12
-        guid: 241c5182ec754a49a8160c059dc386bb
-      - ElementName: Tut_office
-        ObjectType: 4
-        guid: 91c4e4c2984e2a4f8e7aa4a6fdb17d26
-      - ElementName: Clock
-        ObjectType: 4
-        guid: c5896f696e0fc64da2826d1676e71274
-      - ElementName: Play_Clock_Tick
-        ObjectType: 3
-        guid: 2fc6118edda480479b2ff4a6a2064414
-      Path: Events\Level0\Tut_office\Clock\Play_Clock_Tick
-      maxAttenuation: 100
-      maxDuration: -1
-      minDuration: -1
-    - name: Play_Clock_Tick_Reverse
-      guid: 98e5f29ec6942444b8713d94e5a1742d
-      id: 3830889987
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Level0
-        ObjectType: 12
-        guid: 241c5182ec754a49a8160c059dc386bb
-      - ElementName: Tut_office
-        ObjectType: 4
-        guid: 91c4e4c2984e2a4f8e7aa4a6fdb17d26
-      - ElementName: Clock
-        ObjectType: 4
-        guid: c5896f696e0fc64da2826d1676e71274
-      - ElementName: Play_Clock_Tick_Reverse
-        ObjectType: 3
-        guid: 98e5f29ec6942444b8713d94e5a1742d
-      Path: Events\Level0\Tut_office\Clock\Play_Clock_Tick_Reverse
-      maxAttenuation: 100
       maxDuration: -1
       minDuration: -1
     - name: Play_Door_Close
@@ -962,52 +755,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.51240325
       minDuration: 0.3321867
-    - name: Stop_Clock_Tick
-      guid: e002896f28f91e449c1e92bb37f6be9c
-      id: 2897827502
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Level0
-        ObjectType: 12
-        guid: 241c5182ec754a49a8160c059dc386bb
-      - ElementName: Tut_office
-        ObjectType: 4
-        guid: 91c4e4c2984e2a4f8e7aa4a6fdb17d26
-      - ElementName: Clock
-        ObjectType: 4
-        guid: c5896f696e0fc64da2826d1676e71274
-      - ElementName: Stop_Clock_Tick
-        ObjectType: 3
-        guid: e002896f28f91e449c1e92bb37f6be9c
-      Path: Events\Level0\Tut_office\Clock\Stop_Clock_Tick
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Stop_Clock_Tick_Reverse
-      guid: e28405f871f427418ff5c790637e16db
-      id: 3434769657
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Level0
-        ObjectType: 12
-        guid: 241c5182ec754a49a8160c059dc386bb
-      - ElementName: Tut_office
-        ObjectType: 4
-        guid: 91c4e4c2984e2a4f8e7aa4a6fdb17d26
-      - ElementName: Clock
-        ObjectType: 4
-        guid: c5896f696e0fc64da2826d1676e71274
-      - ElementName: Stop_Clock_Tick_Reverse
-        ObjectType: 3
-        guid: e28405f871f427418ff5c790637e16db
-      Path: Events\Level0\Tut_office\Clock\Stop_Clock_Tick_Reverse
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
     - name: Stop_Level0Music
       guid: 32a41875ab710445a93fef5e6791cb26
       id: 4144809523
@@ -1026,8 +773,8 @@ MonoBehaviour:
         guid: 32a41875ab710445a93fef5e6791cb26
       Path: Events\Level0\Tut_office\Stop_Level0Music
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Tut_office
       guid: 91c4e4c2984e2a4f8e7aa4a6fdb17d26
       id: 2268651291
@@ -1045,6 +792,325 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+  - PhysicalPath: Events\Lv1PlayPlace.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Lv1PlayPlace
+      ObjectType: 12
+      guid: 12b42068bed917478fc83b39aa786769
+    ParentPath: Events\Lv1PlayPlace
+    guid: 12b42068bed917478fc83b39aa786769
+    GuidInternal: 
+    m_lastTime: -8584901110771752915
+    List:
+    - name: Play_BallImpact
+      guid: d84aeadbee68d0469912f9e57a2302e1
+      id: 2280438399
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv1PlayPlace
+        ObjectType: 12
+        guid: 12b42068bed917478fc83b39aa786769
+      - ElementName: Play_BallImpact
+        ObjectType: 3
+        guid: d84aeadbee68d0469912f9e57a2302e1
+      Path: Events\Lv1PlayPlace\Play_BallImpact
+      maxAttenuation: 100
+      maxDuration: 2.4145143
+      minDuration: 1.5382904
+    - name: Play_BlockDrop
+      guid: 98e20f838392bb45850e091c6e57c884
+      id: 94152718
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv1PlayPlace
+        ObjectType: 12
+        guid: 12b42068bed917478fc83b39aa786769
+      - ElementName: Play_BlockDrop
+        ObjectType: 3
+        guid: 98e20f838392bb45850e091c6e57c884
+      Path: Events\Lv1PlayPlace\Play_BlockDrop
+      maxAttenuation: 0
+      maxDuration: 1.783573
+      minDuration: 1.4872764
+    - name: Play_BlockPickUp
+      guid: e44bec5d23e9ef40be6f133235af1575
+      id: 1903858809
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv1PlayPlace
+        ObjectType: 12
+        guid: 12b42068bed917478fc83b39aa786769
+      - ElementName: Play_BlockPickUp
+        ObjectType: 3
+        guid: e44bec5d23e9ef40be6f133235af1575
+      Path: Events\Lv1PlayPlace\Play_BlockPickUp
+      maxAttenuation: 0
+      maxDuration: 0.72498214
+      minDuration: 0.56908756
+    - name: Play_Confetti
+      guid: 994260ccc6f91d4ea64ed9c28eecccd7
+      id: 831234954
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv1PlayPlace
+        ObjectType: 12
+        guid: 12b42068bed917478fc83b39aa786769
+      - ElementName: Play_Confetti
+        ObjectType: 3
+        guid: 994260ccc6f91d4ea64ed9c28eecccd7
+      Path: Events\Lv1PlayPlace\Play_Confetti
+      maxAttenuation: 100
+      maxDuration: 1.5697507
+      minDuration: 1.2362527
+    - name: Play_LightOff_1
+      guid: ee41c06dcfee5149883ed0c24833a07a
+      id: 3140573545
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv1PlayPlace
+        ObjectType: 12
+        guid: 12b42068bed917478fc83b39aa786769
+      - ElementName: Play_LightOff_1
+        ObjectType: 3
+        guid: ee41c06dcfee5149883ed0c24833a07a
+      Path: Events\Lv1PlayPlace\Play_LightOff_1
+      maxAttenuation: 0
+      maxDuration: 2.2927027
+      minDuration: 2.2927027
+    - name: Play_LightOnSound
+      guid: 817fd0d4f28fe44188ba3a9e68a69653
+      id: 3765524326
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv1PlayPlace
+        ObjectType: 12
+        guid: 12b42068bed917478fc83b39aa786769
+      - ElementName: Play_LightOnSound
+        ObjectType: 3
+        guid: 817fd0d4f28fe44188ba3a9e68a69653
+      Path: Events\Lv1PlayPlace\Play_LightOnSound
+      maxAttenuation: 100
+      maxDuration: 8.928
+      minDuration: 8.928
+    - name: Play_Lv1_LightShowMusic
+      guid: d300bd5970f10240aa9d895b3f0a6c99
+      id: 1153064896
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv1PlayPlace
+        ObjectType: 12
+        guid: 12b42068bed917478fc83b39aa786769
+      - ElementName: Play_Lv1_LightShowMusic
+        ObjectType: 3
+        guid: d300bd5970f10240aa9d895b3f0a6c99
+      Path: Events\Lv1PlayPlace\Play_Lv1_LightShowMusic
+      maxAttenuation: 0
+      maxDuration: 5.375
+      minDuration: 5.375
+    - name: Play_Lv1_PlayPlaceMusic
+      guid: 49a494cca0aa634ebcf44924c113ef3d
+      id: 1852343440
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv1PlayPlace
+        ObjectType: 12
+        guid: 12b42068bed917478fc83b39aa786769
+      - ElementName: Play_Lv1_PlayPlaceMusic
+        ObjectType: 3
+        guid: 49a494cca0aa634ebcf44924c113ef3d
+      Path: Events\Lv1PlayPlace\Play_Lv1_PlayPlaceMusic
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_SlideDoorOpen_1
+      guid: e9097afc0b2d1243aed35f740f3cc28c
+      id: 1324211945
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv1PlayPlace
+        ObjectType: 12
+        guid: 12b42068bed917478fc83b39aa786769
+      - ElementName: Play_SlideDoorOpen_1
+        ObjectType: 3
+        guid: e9097afc0b2d1243aed35f740f3cc28c
+      Path: Events\Lv1PlayPlace\Play_SlideDoorOpen_1
+      maxAttenuation: 0
+      maxDuration: 1.7018958
+      minDuration: 1.7018958
+    - name: Play_XyloC
+      guid: a28700ab35fd5d49983bc49708db6c74
+      id: 4153846227
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv1PlayPlace
+        ObjectType: 12
+        guid: 12b42068bed917478fc83b39aa786769
+      - ElementName: Play_XyloC
+        ObjectType: 3
+        guid: a28700ab35fd5d49983bc49708db6c74
+      Path: Events\Lv1PlayPlace\Play_XyloC
+      maxAttenuation: 0
+      maxDuration: 0.48026314
+      minDuration: 0.48026314
+    - name: Play_XyloD
+      guid: 181e067091c52a49949a709d1ea5a58f
+      id: 4153846228
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv1PlayPlace
+        ObjectType: 12
+        guid: 12b42068bed917478fc83b39aa786769
+      - ElementName: Play_XyloD
+        ObjectType: 3
+        guid: 181e067091c52a49949a709d1ea5a58f
+      Path: Events\Lv1PlayPlace\Play_XyloD
+      maxAttenuation: 0
+      maxDuration: 0.425
+      minDuration: 0.425
+    - name: Play_XyloE
+      guid: 8831dff8ef3928479bbab3f8f32579e4
+      id: 4153846229
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv1PlayPlace
+        ObjectType: 12
+        guid: 12b42068bed917478fc83b39aa786769
+      - ElementName: Play_XyloE
+        ObjectType: 3
+        guid: 8831dff8ef3928479bbab3f8f32579e4
+      Path: Events\Lv1PlayPlace\Play_XyloE
+      maxAttenuation: 0
+      maxDuration: 0.4381579
+      minDuration: 0.4381579
+    - name: Play_XyloG
+      guid: dc68cda129d2e248b502e0cb733a327b
+      id: 4153846231
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv1PlayPlace
+        ObjectType: 12
+        guid: 12b42068bed917478fc83b39aa786769
+      - ElementName: Play_XyloG
+        ObjectType: 3
+        guid: dc68cda129d2e248b502e0cb733a327b
+      Path: Events\Lv1PlayPlace\Play_XyloG
+      maxAttenuation: 0
+      maxDuration: 0.4526316
+      minDuration: 0.4526316
+    - name: Play_XyloSequence
+      guid: da5304f3021eb64584d1262cbdab2fac
+      id: 4293423455
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv1PlayPlace
+        ObjectType: 12
+        guid: 12b42068bed917478fc83b39aa786769
+      - ElementName: Play_XyloSequence
+        ObjectType: 3
+        guid: da5304f3021eb64584d1262cbdab2fac
+      Path: Events\Lv1PlayPlace\Play_XyloSequence
+      maxAttenuation: 0
+      maxDuration: 4
+      minDuration: 4
+    - name: Stop_LightOff_1
+      guid: dd4bbd6761f0ea4381e05285ba8eb280
+      id: 1219381739
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv1PlayPlace
+        ObjectType: 12
+        guid: 12b42068bed917478fc83b39aa786769
+      - ElementName: Stop_LightOff_1
+        ObjectType: 3
+        guid: dd4bbd6761f0ea4381e05285ba8eb280
+      Path: Events\Lv1PlayPlace\Stop_LightOff_1
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_LightOnSound
+      guid: 7031fd439dc08749ae6ee7d172b85332
+      id: 221383132
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv1PlayPlace
+        ObjectType: 12
+        guid: 12b42068bed917478fc83b39aa786769
+      - ElementName: Stop_LightOnSound
+        ObjectType: 3
+        guid: 7031fd439dc08749ae6ee7d172b85332
+      Path: Events\Lv1PlayPlace\Stop_LightOnSound
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Lv1_LightShowMusic
+      guid: 7818a42d0c3e7f4c8ff26cc5adba8bec
+      id: 4020215174
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv1PlayPlace
+        ObjectType: 12
+        guid: 12b42068bed917478fc83b39aa786769
+      - ElementName: Stop_Lv1_LightShowMusic
+        ObjectType: 3
+        guid: 7818a42d0c3e7f4c8ff26cc5adba8bec
+      Path: Events\Lv1PlayPlace\Stop_Lv1_LightShowMusic
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Lv1_PlayPlaceMusic
+      guid: db640eacbf037d4fa41455d3c475e7d7
+      id: 1754848386
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv1PlayPlace
+        ObjectType: 12
+        guid: 12b42068bed917478fc83b39aa786769
+      - ElementName: Stop_Lv1_PlayPlaceMusic
+        ObjectType: 3
+        guid: db640eacbf037d4fa41455d3c475e7d7
+      Path: Events\Lv1PlayPlace\Stop_Lv1_PlayPlaceMusic
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   - PhysicalPath: Events\Lv2Garden.wwu
     PathAndIcons:
     - ElementName: Events
@@ -1056,7 +1122,7 @@ MonoBehaviour:
     ParentPath: Events\Lv2Garden
     guid: 79f102072e2e844c90913baf4de5b1ea
     GuidInternal: 
-    m_lastTime: -8584907721424972204
+    m_lastTime: -8584901110771547738
     List:
     - name: Play_Birds
       guid: 83da1a64ae50fa4f8edb957f079b8173
@@ -1466,23 +1532,6 @@ MonoBehaviour:
       maxAttenuation: 100
       maxDuration: -1
       minDuration: -1
-    - name: Play_Win
-      guid: 7a2ed0c54ab05342b051ca1bb4f433fc
-      id: 2955987680
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Lv2Garden
-        ObjectType: 12
-        guid: 79f102072e2e844c90913baf4de5b1ea
-      - ElementName: Play_Win
-        ObjectType: 3
-        guid: 7a2ed0c54ab05342b051ca1bb4f433fc
-      Path: Events\Lv2Garden\Play_Win
-      maxAttenuation: 0
-      maxDuration: 1
-      minDuration: 1
     - name: Play_Wind_Blowing
       guid: c558e49cfdfe9146b8da1aa7094ad9b2
       id: 2075190801

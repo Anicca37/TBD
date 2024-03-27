@@ -14,14 +14,18 @@ public class Book : MonoBehaviour
     private GameObject crosshair;
     private fpsCameraControl cameraControlScript;
 
+    private GameObject theBook;
+
     void Awake()
     {
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.sceneLoaded += OnSceneLoaded;       
+
     }
 
     void Start()
     {
         InitialState();
+        theBook = GameObject.Find("book");
     }
 
     void OnDestroy()
@@ -100,6 +104,10 @@ public class Book : MonoBehaviour
         Quaternion endRotation = Quaternion.Euler(0, targetAngle, 0);
         float rotationProgress = 0f;
 
+
+        //play sound
+        AkSoundEngine.PostEvent("Play_PageTurn", this.gameObject);
+
         pages[index].SetAsLastSibling();
         while (rotationProgress < 1f)
         {
@@ -120,6 +128,9 @@ public class Book : MonoBehaviour
 
     public void CloseJournal()
     {
+        // play sound
+        AkSoundEngine.PostEvent("Play_BookClose", this.gameObject);
+        
         foreach (var page in pages)
         {
             page.rotation = Quaternion.identity;

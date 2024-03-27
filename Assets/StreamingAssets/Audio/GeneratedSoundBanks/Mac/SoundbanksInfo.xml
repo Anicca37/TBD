@@ -169,10 +169,14 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{23ED37C2-21FB-C3E2-F804-1AB4EFE63F47}">
+		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{99DAECEE-8436-315D-BE79-90C3C995C7AB}">
 			<ShortName>Level2Garden</ShortName>
 			<Path>Level2Garden.bnk</Path>
 			<Media>
+				<File Id="34888650" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BookOpen\BookOpen_3.wav</ShortName>
+					<CachePath>SFX/BookOpen/BookOpen_3_9A5230CA.wem</CachePath>
+				</File>
 				<File Id="39073760" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Fountain_Waterflow.wav</ShortName>
 					<CachePath>SFX/Fountain_Waterflow_56CEF360.wem</CachePath>
@@ -205,6 +209,10 @@
 					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Tran\mus_90bpm_Level2_Tran Chords.wav</ShortName>
 					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Tran/mus_90bpm_Level2_Tran Chords_239921B3.wem</CachePath>
 				</File>
+				<File Id="139687793" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PageTurn\PageTurn_5.wav</ShortName>
+					<CachePath>SFX/PageTurn/PageTurn_5_B3D1F082.wem</CachePath>
+				</File>
 				<File Id="141213406" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bird01-001.wav</ShortName>
 					<CachePath>SFX/Bird01-001_8E324C96.wem</CachePath>
@@ -212,6 +220,10 @@
 				<File Id="178935509" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section1\mus_90bpm_Level2_Section1_Bass.wav</ShortName>
 					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Section1/mus_90bpm_Level2_Section1_Bass_239921B3.wem</CachePath>
+				</File>
+				<File Id="204828531" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PageTurn\PageTurn_4.wav</ShortName>
+					<CachePath>SFX/PageTurn/PageTurn_4_4455226E.wem</CachePath>
 				</File>
 				<File Id="217621770" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bird02-003.wav</ShortName>
@@ -237,6 +249,10 @@
 					<ShortName>Statue_Loud.wav</ShortName>
 					<CachePath>SFX/Statue_Loud_8E324C96.wem</CachePath>
 				</File>
+				<File Id="276712555" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BookOpen\BookOpen_1.wav</ShortName>
+					<CachePath>SFX/BookOpen/BookOpen_1_5644DAE3.wem</CachePath>
+				</File>
 				<File Id="285637370" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Flower_PickUp_04.wav</ShortName>
 					<CachePath>SFX/Flower_PickUp_04_8E324C96.wem</CachePath>
@@ -260,6 +276,10 @@
 				<File Id="338319697" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section1\mus_90bpm_Level2_Section1_Percussion.wav</ShortName>
 					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Section1/mus_90bpm_Level2_Section1_Percussion_239921B3.wem</CachePath>
+				</File>
+				<File Id="338398156" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PageTurn\PageTurn_6.wav</ShortName>
+					<CachePath>SFX/PageTurn/PageTurn_6_02F2A8A5.wem</CachePath>
 				</File>
 				<File Id="354701458" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section1\mus_90bpm_Level2_Section1_Kick.wav</ShortName>
@@ -289,9 +309,17 @@
 					<ShortName>Flower_Wind_Blowing01.wav</ShortName>
 					<CachePath>SFX/Flower_Wind_Blowing01_8E324C96.wem</CachePath>
 				</File>
+				<File Id="476236753" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BookOpen\BookOpen_2.wav</ShortName>
+					<CachePath>SFX/BookOpen/BookOpen_2_2FCC6FC1.wem</CachePath>
+				</File>
 				<File Id="492836723" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PickUp_Pinecone_1.wav</ShortName>
 					<CachePath>SFX/PickUp_Pinecone_1_8E324C96.wem</CachePath>
+				</File>
+				<File Id="500101580" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PageTurn\PageTurn_2.wav</ShortName>
+					<CachePath>SFX/PageTurn/PageTurn_2_3D09BA20.wem</CachePath>
 				</File>
 				<File Id="523653084" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WaterFlooding.wav</ShortName>
@@ -361,6 +389,10 @@
 					<ShortName>PickUp_Pinecone_2.wav</ShortName>
 					<CachePath>SFX/PickUp_Pinecone_2_8E324C96.wem</CachePath>
 				</File>
+				<File Id="776713045" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PageTurn\PageTurn_3.wav</ShortName>
+					<CachePath>SFX/PageTurn/PageTurn_3_FA9BAB52.wem</CachePath>
+				</File>
 				<File Id="785447792" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section2\mus_90bpm_Level2_Section2_Bass.wav</ShortName>
 					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Section2/mus_90bpm_Level2_Section2_Bass_239921B3.wem</CachePath>
@@ -397,6 +429,10 @@
 					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Tran\mus_90bpm_Level2_Tran_Percussion.wav</ShortName>
 					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Tran/mus_90bpm_Level2_Tran_Percussion_239921B3.wem</CachePath>
 				</File>
+				<File Id="879919748" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PageTurn\PageTurn_1.wav</ShortName>
+					<CachePath>SFX/PageTurn/PageTurn_1_0908AF58.wem</CachePath>
+				</File>
 				<File Id="898317160" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section2\mus_90bpm_Level2_Section2_MelodyCello.wav</ShortName>
 					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Section2/mus_90bpm_Level2_Section2_MelodyCello_239921B3.wem</CachePath>
@@ -421,6 +457,10 @@
 					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Tran\mus_90bpm_Level2_Tran_Bass.wav</ShortName>
 					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Tran/mus_90bpm_Level2_Tran_Bass_239921B3.wem</CachePath>
 				</File>
+				<File Id="972672379" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BookClose_2.wav</ShortName>
+					<CachePath>SFX/BookClose_2_8E324C96.wem</CachePath>
+				</File>
 				<File Id="985095586" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Clock_Tick_Reverse.wav</ShortName>
 					<CachePath>SFX/Clock_Tick_Reverse_61B65DE5.wem</CachePath>
@@ -436,6 +476,10 @@
 				<File Id="1027777248" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WrongSequence.wav</ShortName>
 					<CachePath>SFX/WrongSequence_8E324C96.wem</CachePath>
+				</File>
+				<File Id="1067518328" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BookClose_1.wav</ShortName>
+					<CachePath>SFX/BookClose_1_8E324C96.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -471,6 +515,19 @@
 				<Event Id="3584090578" Name="Play_BirdWing" MaxAttenuation="100" DurationType="OneShot" DurationMin="3.1929376" DurationMax="3.1929376">
 					<MediaRefs>
 						<MediaRef Id="960283345"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1720188539" Name="Play_BookClose" DurationType="OneShot" DurationMin="1.2046041" DurationMax="1.4449792">
+					<MediaRefs>
+						<MediaRef Id="972672379"/>
+						<MediaRef Id="1067518328"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2244407197" Name="Play_BookOpen" DurationType="OneShot" DurationMin="0.67442" DurationMax="0.8070264">
+					<MediaRefs>
+						<MediaRef Id="34888650"/>
+						<MediaRef Id="276712555"/>
+						<MediaRef Id="476236753"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2099555730" Name="Play_Button" DurationType="OneShot" DurationMin="0.2940787" DurationMax="0.2940787">
@@ -577,6 +634,16 @@
 						<MediaRef Id="965482483"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2771828150" Name="Play_PageTurn" DurationType="OneShot" DurationMin="0.53894883" DurationMax="0.78540945">
+					<MediaRefs>
+						<MediaRef Id="139687793"/>
+						<MediaRef Id="204828531"/>
+						<MediaRef Id="338398156"/>
+						<MediaRef Id="500101580"/>
+						<MediaRef Id="776713045"/>
+						<MediaRef Id="879919748"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3549239601" Name="Play_PineconePickup" DurationType="OneShot" DurationMin="1.4421458" DurationMax="1.7328959">
 					<MediaRefs>
 						<MediaRef Id="492836723"/>
@@ -648,10 +715,14 @@
 				<Event Id="1663839887" Name="Stop_Wind_Blowing" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{1ED646F4-52C1-BB38-0A6F-521CDEC1A9C5}">
+		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{757F819F-79B4-F411-DC16-8FFCAC613697}">
 			<ShortName>Level1PlayPlace</ShortName>
 			<Path>Level1PlayPlace.bnk</Path>
 			<Media>
+				<File Id="34888650" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BookOpen\BookOpen_3.wav</ShortName>
+					<CachePath>SFX/BookOpen/BookOpen_3_9A5230CA.wem</CachePath>
+				</File>
 				<File Id="36334361" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Confetti_3.wav</ShortName>
 					<CachePath>SFX/Confetti_3_8E324C96.wem</CachePath>
@@ -683,6 +754,10 @@
 				<File Id="139417961" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran1\mus_3-4_125bpm_Level1_Tran1_Kick.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran1/mus_3-4_125bpm_Level1_Tran1_Kick_239921B3.wem</CachePath>
+				</File>
+				<File Id="139687793" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PageTurn\PageTurn_5.wav</ShortName>
+					<CachePath>SFX/PageTurn/PageTurn_5_B3D1F082.wem</CachePath>
 				</File>
 				<File Id="140344036" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran1\mus_3-4_125bpm_Level1_Tran1_CMelody_CelloL.wav</ShortName>
@@ -724,6 +799,10 @@
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S1\mus_3-4_125bpm_Level1_S1_Chords.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S1/mus_3-4_125bpm_Level1_S1_Chords_239921B3.wem</CachePath>
 				</File>
+				<File Id="204828531" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PageTurn\PageTurn_4.wav</ShortName>
+					<CachePath>SFX/PageTurn/PageTurn_4_4455226E.wem</CachePath>
+				</File>
 				<File Id="211807823" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BallImpact\Ball_Impact_09.wav</ShortName>
 					<CachePath>SFX/BallImpact/Ball_Impact_09_DF3B0901.wem</CachePath>
@@ -744,6 +823,10 @@
 					<ShortName>XyloD.wav</ShortName>
 					<CachePath>SFX/XyloD_53F1CEEA.wem</CachePath>
 				</File>
+				<File Id="276712555" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BookOpen\BookOpen_1.wav</ShortName>
+					<CachePath>SFX/BookOpen/BookOpen_1_5644DAE3.wem</CachePath>
+				</File>
 				<File Id="283047273" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S2\mus_3-4_125bpm_Level1_S2_Bass.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S2/mus_3-4_125bpm_Level1_S2_Bass_239921B3.wem</CachePath>
@@ -751,6 +834,10 @@
 				<File Id="336039053" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Clock_Tick.wav</ShortName>
 					<CachePath>SFX/Clock_Tick_56CEF360.wem</CachePath>
+				</File>
+				<File Id="338398156" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PageTurn\PageTurn_6.wav</ShortName>
+					<CachePath>SFX/PageTurn/PageTurn_6_02F2A8A5.wem</CachePath>
 				</File>
 				<File Id="343139440" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Intro\mus_3-4_125bpm_Level1_Intro_CBass.wav</ShortName>
@@ -784,6 +871,10 @@
 					<ShortName>BlockDrop_2.wav</ShortName>
 					<CachePath>SFX/BlockDrop_2_8E324C96.wem</CachePath>
 				</File>
+				<File Id="476236753" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BookOpen\BookOpen_2.wav</ShortName>
+					<CachePath>SFX/BookOpen/BookOpen_2_2FCC6FC1.wem</CachePath>
+				</File>
 				<File Id="484366609" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S1\mus_3-4_125bpm_Level1_S1_Bass.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S1/mus_3-4_125bpm_Level1_S1_Bass_239921B3.wem</CachePath>
@@ -791,6 +882,10 @@
 				<File Id="490951819" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BallImpact\Ball_Impact_04.wav</ShortName>
 					<CachePath>SFX/BallImpact/Ball_Impact_04_6F0B6638.wem</CachePath>
+				</File>
+				<File Id="500101580" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PageTurn\PageTurn_2.wav</ShortName>
+					<CachePath>SFX/PageTurn/PageTurn_2_3D09BA20.wem</CachePath>
 				</File>
 				<File Id="535759648" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BallImpact\Ball_Impact_07.wav</ShortName>
@@ -900,9 +995,17 @@
 					<ShortName>BallImpact\Ball_Impact_11.wav</ShortName>
 					<CachePath>SFX/BallImpact/Ball_Impact_11_5AF2D7FA.wem</CachePath>
 				</File>
+				<File Id="776713045" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PageTurn\PageTurn_3.wav</ShortName>
+					<CachePath>SFX/PageTurn/PageTurn_3_FA9BAB52.wem</CachePath>
+				</File>
 				<File Id="834838996" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Chords.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran2/mus_3-4_125bpm_Level1_Tran2_Chords_239921B3.wem</CachePath>
+				</File>
+				<File Id="879919748" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PageTurn\PageTurn_1.wav</ShortName>
+					<CachePath>SFX/PageTurn/PageTurn_1_0908AF58.wem</CachePath>
 				</File>
 				<File Id="883217290" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Snare.wav</ShortName>
@@ -932,6 +1035,10 @@
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Melody_Cello.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran2/mus_3-4_125bpm_Level1_Tran2_Melody_Cello_239921B3.wem</CachePath>
 				</File>
+				<File Id="972672379" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BookClose_2.wav</ShortName>
+					<CachePath>SFX/BookClose_2_8E324C96.wem</CachePath>
+				</File>
 				<File Id="978309557" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S1\mus_3-4_125bpm_Level1_S1_Kick.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S1/mus_3-4_125bpm_Level1_S1_Kick_239921B3.wem</CachePath>
@@ -955,6 +1062,10 @@
 				<File Id="1062718881" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BlockDrop_1.wav</ShortName>
 					<CachePath>SFX/BlockDrop_1_8E324C96.wem</CachePath>
+				</File>
+				<File Id="1067518328" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BookClose_1.wav</ShortName>
+					<CachePath>SFX/BookClose_1_8E324C96.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -999,6 +1110,19 @@
 					<MediaRefs>
 						<MediaRef Id="171567581"/>
 						<MediaRef Id="700689704"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1720188539" Name="Play_BookClose" DurationType="OneShot" DurationMin="1.2046041" DurationMax="1.4449792">
+					<MediaRefs>
+						<MediaRef Id="972672379"/>
+						<MediaRef Id="1067518328"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2244407197" Name="Play_BookOpen" DurationType="OneShot" DurationMin="0.67442" DurationMax="0.8070264">
+					<MediaRefs>
+						<MediaRef Id="34888650"/>
+						<MediaRef Id="276712555"/>
+						<MediaRef Id="476236753"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2797822332" Name="Play_Clock_Tick" MaxAttenuation="100" DurationType="Infinite">
@@ -1076,6 +1200,16 @@
 						<MediaRef Id="1048775046"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2771828150" Name="Play_PageTurn" DurationType="OneShot" DurationMin="0.53894883" DurationMax="0.78540945">
+					<MediaRefs>
+						<MediaRef Id="139687793"/>
+						<MediaRef Id="204828531"/>
+						<MediaRef Id="338398156"/>
+						<MediaRef Id="500101580"/>
+						<MediaRef Id="776713045"/>
+						<MediaRef Id="879919748"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1324211945" Name="Play_SlideDoorOpen_1" DurationType="OneShot" DurationMin="1.7018958" DurationMax="1.7018958">
 					<MediaRefs>
 						<MediaRef Id="374259416"/>
@@ -1127,13 +1261,17 @@
 				<GameParameter Id="185769106" Name="Lv1_LightOn"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{2A1FE8D5-D774-3652-1100-E090F00286F2}">
+		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{11DB8BB3-F3B4-E8C0-5D18-D60FCE7AE3C3}">
 			<ShortName>Level0</ShortName>
 			<Path>Level0.bnk</Path>
 			<Media>
 				<File Id="12980260" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Quest_Game_Crafting_Wood_Bo.wav</ShortName>
 					<CachePath>SFX/Quest_Game_Crafting_Wood_Bo_8E324C96.wem</CachePath>
+				</File>
+				<File Id="34888650" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BookOpen\BookOpen_3.wav</ShortName>
+					<CachePath>SFX/BookOpen/BookOpen_3_9A5230CA.wem</CachePath>
 				</File>
 				<File Id="36496989" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>20 - Door,Wood Open.wav</ShortName>
@@ -1143,36 +1281,93 @@
 					<ShortName>20 - Door,Wood Open.wav</ShortName>
 					<CachePath>SFX/20 - Door,Wood Open_35FF5F71.wem</CachePath>
 				</File>
+				<File Id="139687793" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PageTurn\PageTurn_5.wav</ShortName>
+					<CachePath>SFX/PageTurn/PageTurn_5_B3D1F082.wem</CachePath>
+				</File>
 				<File Id="181112472" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Quest_Game_Action_Wood_Box_.wav</ShortName>
 					<CachePath>SFX/Quest_Game_Action_Wood_Box__8E324C96.wem</CachePath>
+				</File>
+				<File Id="204828531" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PageTurn\PageTurn_4.wav</ShortName>
+					<CachePath>SFX/PageTurn/PageTurn_4_4455226E.wem</CachePath>
+				</File>
+				<File Id="276712555" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BookOpen\BookOpen_1.wav</ShortName>
+					<CachePath>SFX/BookOpen/BookOpen_1_5644DAE3.wem</CachePath>
 				</File>
 				<File Id="336039053" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Clock_Tick.wav</ShortName>
 					<CachePath>SFX/Clock_Tick_56CEF360.wem</CachePath>
 				</File>
+				<File Id="338398156" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PageTurn\PageTurn_6.wav</ShortName>
+					<CachePath>SFX/PageTurn/PageTurn_6_02F2A8A5.wem</CachePath>
+				</File>
 				<File Id="414646934" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Quest_Game_Crafting_Wood_-2.wav</ShortName>
 					<CachePath>SFX/Quest_Game_Crafting_Wood_-2_8E324C96.wem</CachePath>
+				</File>
+				<File Id="476236753" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BookOpen\BookOpen_2.wav</ShortName>
+					<CachePath>SFX/BookOpen/BookOpen_2_2FCC6FC1.wem</CachePath>
+				</File>
+				<File Id="500101580" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PageTurn\PageTurn_2.wav</ShortName>
+					<CachePath>SFX/PageTurn/PageTurn_2_3D09BA20.wem</CachePath>
 				</File>
 				<File Id="515135351" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Quest_Game_Crafting_Wood_-1.wav</ShortName>
 					<CachePath>SFX/Quest_Game_Crafting_Wood_-1_2D61A4DB.wem</CachePath>
 				</File>
+				<File Id="776713045" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PageTurn\PageTurn_3.wav</ShortName>
+					<CachePath>SFX/PageTurn/PageTurn_3_FA9BAB52.wem</CachePath>
+				</File>
 				<File Id="790702576" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Quest_Game_Action_Wood_Bo-1.wav</ShortName>
 					<CachePath>SFX/Quest_Game_Action_Wood_Bo-1_8E324C96.wem</CachePath>
+				</File>
+				<File Id="879919748" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PageTurn\PageTurn_1.wav</ShortName>
+					<CachePath>SFX/PageTurn/PageTurn_1_0908AF58.wem</CachePath>
 				</File>
 				<File Id="909003059" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Win.wav</ShortName>
 					<CachePath>SFX/Win_818F3B66.wem</CachePath>
 				</File>
+				<File Id="972672379" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BookClose_2.wav</ShortName>
+					<CachePath>SFX/BookClose_2_8E324C96.wem</CachePath>
+				</File>
 				<File Id="985095586" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Clock_Tick_Reverse.wav</ShortName>
 					<CachePath>SFX/Clock_Tick_Reverse_61B65DE5.wem</CachePath>
 				</File>
+				<File Id="1027777248" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WrongSequence.wav</ShortName>
+					<CachePath>SFX/WrongSequence_8E324C96.wem</CachePath>
+				</File>
+				<File Id="1067518328" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BookClose_1.wav</ShortName>
+					<CachePath>SFX/BookClose_1_8E324C96.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
+				<Event Id="1720188539" Name="Play_BookClose" DurationType="OneShot" DurationMin="1.2046041" DurationMax="1.4449792">
+					<MediaRefs>
+						<MediaRef Id="972672379"/>
+						<MediaRef Id="1067518328"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2244407197" Name="Play_BookOpen" DurationType="OneShot" DurationMin="0.67442" DurationMax="0.8070264">
+					<MediaRefs>
+						<MediaRef Id="34888650"/>
+						<MediaRef Id="276712555"/>
+						<MediaRef Id="476236753"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2797822332" Name="Play_Clock_Tick" MaxAttenuation="100" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="336039053"/>
@@ -1193,6 +1388,16 @@
 						<MediaRef Id="52226118"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2771828150" Name="Play_PageTurn" DurationType="OneShot" DurationMin="0.53894883" DurationMax="0.78540945">
+					<MediaRefs>
+						<MediaRef Id="139687793"/>
+						<MediaRef Id="204828531"/>
+						<MediaRef Id="338398156"/>
+						<MediaRef Id="500101580"/>
+						<MediaRef Id="776713045"/>
+						<MediaRef Id="879919748"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1525201045" Name="Play_TableDrop" DurationType="OneShot" DurationMin="0.4191475" DurationMax="0.5105013">
 					<MediaRefs>
 						<MediaRef Id="181112472"/>
@@ -1211,10 +1416,15 @@
 						<MediaRef Id="909003059"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3661318894" Name="Play_WrongSequence" DurationType="OneShot" DurationMin="0.5" DurationMax="0.5">
+					<MediaRefs>
+						<MediaRef Id="1027777248"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2897827502" Name="Stop_Clock_Tick" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3434769657" Name="Stop_Clock_Tick_Reverse" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{47864074-D291-FBBF-D61F-0F221FCE92F2}</FileHash>
+	<FileHash>{46D7FD92-3D35-063D-20DA-1C40DA5E91C0}</FileHash>
 </SoundBanksInfo>

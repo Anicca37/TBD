@@ -1,13 +1,17 @@
 Event	ID	Name			Wwise Object Path	Notes
 	1525201045	Play_TableDrop			\Level0\Tut_office\Play_TableDrop	
 	1660008929	Play_Door_Open			\Level0\Tut_office\Play_Door_Open	
+	1720188539	Play_BookClose			\Default Work Unit\Play_BookClose	
+	2244407197	Play_BookOpen			\Default Work Unit\Play_BookOpen	
 	2292458263	Play_Door_Close			\Level0\Tut_office\Play_Door_Close	
-	2797822332	Play_Clock_Tick			\Level0\Tut_office\Clock\Play_Clock_Tick	
-	2897827502	Stop_Clock_Tick			\Level0\Tut_office\Clock\Stop_Clock_Tick	
-	2955987680	Play_Win			\Lv2Garden\Play_Win	
+	2771828150	Play_PageTurn			\Default Work Unit\Play_PageTurn	
+	2797822332	Play_Clock_Tick			\Default Work Unit\Clock\Play_Clock_Tick	
+	2897827502	Stop_Clock_Tick			\Default Work Unit\Clock\Stop_Clock_Tick	
+	2955987680	Play_Win			\Default Work Unit\Play_Win	
 	3370429210	Play_TablePickUp			\Level0\Tut_office\Play_TablePickUp	
-	3434769657	Stop_Clock_Tick_Reverse			\Level0\Tut_office\Clock\Stop_Clock_Tick_Reverse	
-	3830889987	Play_Clock_Tick_Reverse			\Level0\Tut_office\Clock\Play_Clock_Tick_Reverse	
+	3434769657	Stop_Clock_Tick_Reverse			\Default Work Unit\Clock\Stop_Clock_Tick_Reverse	
+	3661318894	Play_WrongSequence			\Default Work Unit\Play_WrongSequence	
+	3830889987	Play_Clock_Tick_Reverse			\Default Work Unit\Clock\Play_Clock_Tick_Reverse	
 
 Modulator Envelope	ID	Name			Wwise Object Path	Notes
 	19438176	ReverseTick			\Default Work Unit\ReverseTick	
@@ -15,13 +19,25 @@ Modulator Envelope	ID	Name			Wwise Object Path	Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	12980260	Table_PickUp3	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\Quest_Game_Crafting_Wood_Bo_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Lv0_Office\Level0_Office\Table\PickUp\Table_PickUp3		5142
+	34888650	BookOpen_3	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\BookOpen\BookOpen_3_9A5230CA.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Journal\BookOpen\BookOpen_3		9585
 	36496989	Door_Close	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\20 - Door,Wood Open_F1EA67B3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Lv0_Office\Level0_Office\Door\Door_Close		12933
 	52226118	Door_Open	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\20 - Door,Wood Open_35FF5F71.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Lv0_Office\Level0_Office\Door\Door_Open		16233
+	139687793	PageTurn_5	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\PageTurn\PageTurn_5_B3D1F082.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Journal\PageTurn\PageTurn_5		8429
 	181112472	Table_Drop1	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\Quest_Game_Action_Wood_Box__8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Lv0_Office\Level0_Office\Table\Drop\Table_Drop1		8698
+	204828531	PageTurn_4	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\PageTurn\PageTurn_4_4455226E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Journal\PageTurn\PageTurn_4		10497
+	276712555	BookOpen_1	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\BookOpen\BookOpen_1_5644DAE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Journal\BookOpen\BookOpen_1		11310
 	336039053	Clock_Tick	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\Clock_Tick_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Lv0_Office\Level0_Office\Clock\Clock_Tick\Clock_Tick		52975
+	338398156	PageTurn_6	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\PageTurn\PageTurn_6_02F2A8A5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Journal\PageTurn\PageTurn_6		7893
 	414646934	Table_PickUp2	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\Quest_Game_Crafting_Wood_-2_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Lv0_Office\Level0_Office\Table\PickUp\Table_PickUp2		6294
+	476236753	BookOpen_2	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\BookOpen\BookOpen_2_2FCC6FC1.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Journal\BookOpen\BookOpen_2		8785
+	500101580	PageTurn_2	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\PageTurn\PageTurn_2_3D09BA20.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Journal\PageTurn\PageTurn_2		8982
 	515135351	Table_PickUp1	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\Quest_Game_Crafting_Wood_-1_2D61A4DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Lv0_Office\Level0_Office\Table\PickUp\Table_PickUp1		5523
+	776713045	PageTurn_3	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\PageTurn\PageTurn_3_FA9BAB52.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Journal\PageTurn\PageTurn_3		10908
 	790702576	Table_Drop2	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\Quest_Game_Action_Wood_Bo-1_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Lv0_Office\Level0_Office\Table\Drop\Table_Drop2		8736
+	879919748	PageTurn_1	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\PageTurn\PageTurn_1_0908AF58.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Journal\PageTurn\PageTurn_1		9819
 	909003059	Win	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\Win_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Win		192096
+	972672379	BookClose_2	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\BookClose_2_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Journal\BookClose\BookClose_2		5005
 	985095586	Clock_Tick_Reverse	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\Clock_Tick_Reverse_61B65DE5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Lv0_Office\Level0_Office\Clock\Clock_Reverse\Clock_Tick_Reverse		35953
+	1027777248	WrongSequence	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\WrongSequence_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\WrongSequence		5150
+	1067518328	BookClose_1	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\BookClose_1_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Journal\BookClose\BookClose_1		10911
 
