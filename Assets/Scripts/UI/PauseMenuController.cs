@@ -160,7 +160,7 @@ public class PauseMenuController : MonoBehaviour
                 {
                     TutorialManager.Instance.ResetPuzzles();
                 }
-                else if (SceneManager.GetActiveScene().name == "PlayPlace")
+                else if (SceneManager.GetActiveScene().name == "PlayPlace Remap")
                 {
                     PlayPlaceManager.Instance.ResetPuzzles();
                 }

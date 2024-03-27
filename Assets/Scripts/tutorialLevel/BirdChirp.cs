@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BirdChirp : MonoBehaviour
+public class BirdChirp : MonoBehaviour, IInteract
 {
     public void OnMouseDown()
     {

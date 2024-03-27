@@ -127,7 +127,7 @@ public class EscapeMenuController : MonoBehaviour
                 {
                     TutorialManager.Instance.ResetPuzzles();
                 }
-                else if (SceneManager.GetActiveScene().name == "PlayPlace")
+                else if (SceneManager.GetActiveScene().name == "PlayPlace Remap")
                 {
                     PlayPlaceManager.Instance.ResetPuzzles();
                 }
@@ -141,7 +141,7 @@ public class EscapeMenuController : MonoBehaviour
                 {
                    SceneManager.LoadScene("PlayPlaceIntro");
                 }
-                else if (SceneManager.GetActiveScene().name == "PlayPlace")
+                else if (SceneManager.GetActiveScene().name == "PlayPlace Remap")
                 {
                     SceneManager.LoadScene("GardenIntro");
                 }                

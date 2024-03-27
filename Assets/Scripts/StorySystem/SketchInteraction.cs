@@ -20,7 +20,7 @@ public class SketchInteraction : MonoBehaviour, IInteract
         if (bookReference != null)
         {
             bookReference.UpdatePageSprites(inactivePageSprite, activePageSprite);
-            if (SceneManager.GetActiveScene().name == "PlayPlace")
+            if (SceneManager.GetActiveScene().name == "PlayPlace Remap")
             {
                 bookReference.OpenPage(2);  
             }
