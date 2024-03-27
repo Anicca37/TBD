@@ -52,7 +52,7 @@ public class IntroVideoController : MonoBehaviour
         }
         else if (nextSceneName == "GardenEnd")
         {
-            Invoke("playGardenCutSceneSound", 0.4f);
+            Invoke("playGardenEndCutSceneSound", 0.4f);
         }
 
     }
@@ -106,5 +106,9 @@ public class IntroVideoController : MonoBehaviour
     void playGardenCutSceneSound()
     {
         AkSoundEngine.PostEvent("Play_GardenCutScene", this.gameObject);
+    }
+    void playGardenEndCutSceneSound()
+    {
+        AkSoundEngine.PostEvent("Play_GardenEndCutScene", this.gameObject);
     }
 }

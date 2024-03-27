@@ -9,10 +9,14 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1182958561" Type="User" Language="SFX" Hash="{F7E00DA5-15FF-67E6-42CE-34F17FEB7BBF}">
+		<SoundBank Id="1182958561" Type="User" Language="SFX" Hash="{3443B75F-0139-DDBF-B3EB-241D9B736818}">
 			<ShortName>CutScene</ShortName>
 			<Path>CutScene.bnk</Path>
 			<Media>
+				<File Id="284433259" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>GardenEndCutScene.wav</ShortName>
+					<CachePath>SFX/GardenEndCutScene_8E324C96.wem</CachePath>
+				</File>
 				<File Id="395583999" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>IntroCutscene.wav</ShortName>
 					<CachePath>SFX/IntroCutscene_8E324C96.wem</CachePath>
@@ -37,6 +41,11 @@
 						<MediaRef Id="901048502"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2696761744" Name="Play_GardenEndCutScene" DurationType="OneShot" DurationMin="16.205938" DurationMax="16.205938">
+					<MediaRefs>
+						<MediaRef Id="284433259"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3476743960" Name="Play_IntroCutscene" DurationType="OneShot" DurationMin="18.386667" DurationMax="18.386667">
 					<MediaRefs>
 						<MediaRef Id="395583999"/>
@@ -44,6 +53,7 @@
 				</Event>
 				<Event Id="3739524462" Name="Stop_BallPitCutScene" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="571755607" Name="Stop_GardenCutScene" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="648099770" Name="Stop_GardenEndCutScene" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="692624126" Name="Stop_IntroCutscene" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
@@ -1570,5 +1580,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{856A32B4-8F57-391B-52F3-9559C9F72D47}</FileHash>
+	<FileHash>{CF9100B5-D696-AA0F-09A2-5337D0C13C32}</FileHash>
 </SoundBanksInfo>
