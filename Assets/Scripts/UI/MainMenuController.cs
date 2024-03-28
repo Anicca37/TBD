@@ -22,6 +22,9 @@ public class MainMenuController : MonoBehaviour
         selectLevelController.GetComponent<SelectLevelController>().enabled = false;
         optionsMenuController.GetComponent<OptionsMenuController>().enabled = false;
         InitializeMenu();
+
+        //play music
+        AkSoundEngine.PostEvent("Play_MainMenu", this.gameObject);
     }
 
     public void InitializeMenu()

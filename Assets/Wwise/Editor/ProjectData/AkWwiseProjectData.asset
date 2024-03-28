@@ -382,7 +382,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 724273f56b5e06438af07ac6a6b97f15
     GuidInternal: 
-    m_lastTime: -8584900472807058586
+    m_lastTime: -8584900337320366101
     List:
     - name: CutScene
       guid: 55a4c57222aa9144a0a5ef0e81781081
@@ -440,6 +440,20 @@ MonoBehaviour:
         ObjectType: 7
         guid: 4e2ca4e8d7a0944b9a0940e42b33309a
       Path: SoundBanks\Default Work Unit\Level2Garden
+    - name: MainMenu
+      guid: 8f26b42506fa6f488ff0bb9a78b9a5c2
+      id: 3604647259
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 724273f56b5e06438af07ac6a6b97f15
+      - ElementName: MainMenu
+        ObjectType: 7
+        guid: 8f26b42506fa6f488ff0bb9a78b9a5c2
+      Path: SoundBanks\Default Work Unit\MainMenu
   EventWwu:
   - PhysicalPath: Events\CutScenes.wwu
     PathAndIcons:
@@ -601,7 +615,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c829b83be71c8a4d9fc3b43dae098d9f
     GuidInternal: 
-    m_lastTime: -8584900437361555981
+    m_lastTime: -8584900337716880747
     List:
     - name: Bird
       guid: 5f720a9b671b8842a9e19381cb155dca
@@ -1871,6 +1885,53 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+  - PhysicalPath: Events\MainMenu.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: MainMenu
+      ObjectType: 12
+      guid: 76f79335db2d9842bfe38a04ea1e21e2
+    ParentPath: Events\MainMenu
+    guid: 76f79335db2d9842bfe38a04ea1e21e2
+    GuidInternal: 
+    m_lastTime: -8584900337716790730
+    List:
+    - name: Play_MainMenu
+      guid: d4109ec6298e5942b97dec279e44ec27
+      id: 3738780720
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MainMenu
+        ObjectType: 12
+        guid: 76f79335db2d9842bfe38a04ea1e21e2
+      - ElementName: Play_MainMenu
+        ObjectType: 3
+        guid: d4109ec6298e5942b97dec279e44ec27
+      Path: Events\MainMenu\Play_MainMenu
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_MainMenu
+      guid: 9c4d4f7f908476438817a3958f00a066
+      id: 890527358
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MainMenu
+        ObjectType: 12
+        guid: 76f79335db2d9842bfe38a04ea1e21e2
+      - ElementName: Stop_MainMenu
+        ObjectType: 3
+        guid: 9c4d4f7f908476438817a3958f00a066
+      Path: Events\MainMenu\Stop_MainMenu
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -2137,7 +2198,7 @@ MonoBehaviour:
     m_lastTime: -8584949682095063988
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 48000000490000004a0000004b0000004c0000004d0000004e0000004f000000
+  ExpandedWaapiItemIds: 48000000490000004a0000004b0000004c0000004d0000004e0000004f0000005100000052000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
