@@ -217,13 +217,13 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{DE138610-E364-97DA-306D-4F5DCF53A76B}">
+		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{1D0CB3EC-51C5-F578-8027-189B6E557A3B}">
 			<ShortName>Level2Garden</ShortName>
 			<Path>Level2Garden.bnk</Path>
 			<Media>
 				<File Id="34888650" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BookOpen\BookOpen_3.wav</ShortName>
-					<CachePath>SFX/BookOpen/BookOpen_3_9A5230CA.wem</CachePath>
+					<CachePath>SFX/BookOpen/BookOpen_3_1CEAC29E.wem</CachePath>
 				</File>
 				<File Id="39073760" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Fountain_Waterflow.wav</ShortName>
@@ -259,7 +259,7 @@
 				</File>
 				<File Id="139687793" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PageTurn\PageTurn_5.wav</ShortName>
-					<CachePath>SFX/PageTurn/PageTurn_5_B3D1F082.wem</CachePath>
+					<CachePath>SFX/PageTurn/PageTurn_5_537E647F.wem</CachePath>
 				</File>
 				<File Id="141213406" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bird01-001.wav</ShortName>
@@ -271,7 +271,7 @@
 				</File>
 				<File Id="204828531" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PageTurn\PageTurn_4.wav</ShortName>
-					<CachePath>SFX/PageTurn/PageTurn_4_4455226E.wem</CachePath>
+					<CachePath>SFX/PageTurn/PageTurn_4_55F4A0A0.wem</CachePath>
 				</File>
 				<File Id="217621770" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bird02-003.wav</ShortName>
@@ -299,7 +299,7 @@
 				</File>
 				<File Id="276712555" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BookOpen\BookOpen_1.wav</ShortName>
-					<CachePath>SFX/BookOpen/BookOpen_1_5644DAE3.wem</CachePath>
+					<CachePath>SFX/BookOpen/BookOpen_1_17006C55.wem</CachePath>
 				</File>
 				<File Id="285637370" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Flower_PickUp_04.wav</ShortName>
@@ -327,7 +327,7 @@
 				</File>
 				<File Id="338398156" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PageTurn\PageTurn_6.wav</ShortName>
-					<CachePath>SFX/PageTurn/PageTurn_6_02F2A8A5.wem</CachePath>
+					<CachePath>SFX/PageTurn/PageTurn_6_EFE1F247.wem</CachePath>
 				</File>
 				<File Id="354701458" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section1\mus_90bpm_Level2_Section1_Kick.wav</ShortName>
@@ -359,7 +359,7 @@
 				</File>
 				<File Id="476236753" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BookOpen\BookOpen_2.wav</ShortName>
-					<CachePath>SFX/BookOpen/BookOpen_2_2FCC6FC1.wem</CachePath>
+					<CachePath>SFX/BookOpen/BookOpen_2_745C738E.wem</CachePath>
 				</File>
 				<File Id="492836723" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PickUp_Pinecone_1.wav</ShortName>
@@ -367,7 +367,7 @@
 				</File>
 				<File Id="500101580" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PageTurn\PageTurn_2.wav</ShortName>
-					<CachePath>SFX/PageTurn/PageTurn_2_3D09BA20.wem</CachePath>
+					<CachePath>SFX/PageTurn/PageTurn_2_C5FD14C3.wem</CachePath>
 				</File>
 				<File Id="523653084" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WaterFlooding.wav</ShortName>
@@ -439,7 +439,7 @@
 				</File>
 				<File Id="776713045" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PageTurn\PageTurn_3.wav</ShortName>
-					<CachePath>SFX/PageTurn/PageTurn_3_FA9BAB52.wem</CachePath>
+					<CachePath>SFX/PageTurn/PageTurn_3_7DCC9A8D.wem</CachePath>
 				</File>
 				<File Id="785447792" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section2\mus_90bpm_Level2_Section2_Bass.wav</ShortName>
@@ -479,7 +479,7 @@
 				</File>
 				<File Id="879919748" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PageTurn\PageTurn_1.wav</ShortName>
-					<CachePath>SFX/PageTurn/PageTurn_1_0908AF58.wem</CachePath>
+					<CachePath>SFX/PageTurn/PageTurn_1_900C8A5A.wem</CachePath>
 				</File>
 				<File Id="898317160" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section2\mus_90bpm_Level2_Section2_MelodyCello.wav</ShortName>
@@ -763,13 +763,13 @@
 				<Event Id="1663839887" Name="Stop_Wind_Blowing" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{11BBC6D1-A6B6-6AE8-03D7-3AA83E7F2274}">
+		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{A7E61A1D-CD4A-0D48-0B86-6DD2B1304345}">
 			<ShortName>Level1PlayPlace</ShortName>
 			<Path>Level1PlayPlace.bnk</Path>
 			<Media>
 				<File Id="34888650" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BookOpen\BookOpen_3.wav</ShortName>
-					<CachePath>SFX/BookOpen/BookOpen_3_9A5230CA.wem</CachePath>
+					<CachePath>SFX/BookOpen/BookOpen_3_1CEAC29E.wem</CachePath>
 				</File>
 				<File Id="36334361" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Confetti_3.wav</ShortName>
@@ -805,7 +805,7 @@
 				</File>
 				<File Id="139687793" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PageTurn\PageTurn_5.wav</ShortName>
-					<CachePath>SFX/PageTurn/PageTurn_5_B3D1F082.wem</CachePath>
+					<CachePath>SFX/PageTurn/PageTurn_5_537E647F.wem</CachePath>
 				</File>
 				<File Id="140344036" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran1\mus_3-4_125bpm_Level1_Tran1_CMelody_CelloL.wav</ShortName>
@@ -853,7 +853,7 @@
 				</File>
 				<File Id="204828531" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PageTurn\PageTurn_4.wav</ShortName>
-					<CachePath>SFX/PageTurn/PageTurn_4_4455226E.wem</CachePath>
+					<CachePath>SFX/PageTurn/PageTurn_4_55F4A0A0.wem</CachePath>
 				</File>
 				<File Id="211807823" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BallImpact\Ball_Impact_09.wav</ShortName>
@@ -881,7 +881,7 @@
 				</File>
 				<File Id="276712555" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BookOpen\BookOpen_1.wav</ShortName>
-					<CachePath>SFX/BookOpen/BookOpen_1_5644DAE3.wem</CachePath>
+					<CachePath>SFX/BookOpen/BookOpen_1_17006C55.wem</CachePath>
 				</File>
 				<File Id="283047273" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S2\mus_3-4_125bpm_Level1_S2_Bass.wav</ShortName>
@@ -901,7 +901,7 @@
 				</File>
 				<File Id="338398156" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PageTurn\PageTurn_6.wav</ShortName>
-					<CachePath>SFX/PageTurn/PageTurn_6_02F2A8A5.wem</CachePath>
+					<CachePath>SFX/PageTurn/PageTurn_6_EFE1F247.wem</CachePath>
 				</File>
 				<File Id="343139440" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Intro\mus_3-4_125bpm_Level1_Intro_CBass.wav</ShortName>
@@ -937,7 +937,7 @@
 				</File>
 				<File Id="476236753" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BookOpen\BookOpen_2.wav</ShortName>
-					<CachePath>SFX/BookOpen/BookOpen_2_2FCC6FC1.wem</CachePath>
+					<CachePath>SFX/BookOpen/BookOpen_2_745C738E.wem</CachePath>
 				</File>
 				<File Id="484366609" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S1\mus_3-4_125bpm_Level1_S1_Bass.wav</ShortName>
@@ -949,7 +949,7 @@
 				</File>
 				<File Id="500101580" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PageTurn\PageTurn_2.wav</ShortName>
-					<CachePath>SFX/PageTurn/PageTurn_2_3D09BA20.wem</CachePath>
+					<CachePath>SFX/PageTurn/PageTurn_2_C5FD14C3.wem</CachePath>
 				</File>
 				<File Id="535759648" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BallImpact\Ball_Impact_07.wav</ShortName>
@@ -1069,7 +1069,7 @@
 				</File>
 				<File Id="776713045" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PageTurn\PageTurn_3.wav</ShortName>
-					<CachePath>SFX/PageTurn/PageTurn_3_FA9BAB52.wem</CachePath>
+					<CachePath>SFX/PageTurn/PageTurn_3_7DCC9A8D.wem</CachePath>
 				</File>
 				<File Id="821236829" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bird03-002.wav</ShortName>
@@ -1081,7 +1081,7 @@
 				</File>
 				<File Id="879919748" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PageTurn\PageTurn_1.wav</ShortName>
-					<CachePath>SFX/PageTurn/PageTurn_1_0908AF58.wem</CachePath>
+					<CachePath>SFX/PageTurn/PageTurn_1_900C8A5A.wem</CachePath>
 				</File>
 				<File Id="883217290" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Snare.wav</ShortName>
@@ -1362,7 +1362,7 @@
 				<GameParameter Id="185769106" Name="Lv1_LightOn"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{96FD6A46-9F42-F77C-D9E0-7677B290CBC8}">
+		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{B38C9F4E-3FEE-55FC-CA4B-404A003B1ED9}">
 			<ShortName>Level0</ShortName>
 			<Path>Level0.bnk</Path>
 			<Media>
@@ -1372,7 +1372,7 @@
 				</File>
 				<File Id="34888650" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BookOpen\BookOpen_3.wav</ShortName>
-					<CachePath>SFX/BookOpen/BookOpen_3_9A5230CA.wem</CachePath>
+					<CachePath>SFX/BookOpen/BookOpen_3_1CEAC29E.wem</CachePath>
 				</File>
 				<File Id="36496989" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>20 - Door,Wood Open.wav</ShortName>
@@ -1384,7 +1384,7 @@
 				</File>
 				<File Id="139687793" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PageTurn\PageTurn_5.wav</ShortName>
-					<CachePath>SFX/PageTurn/PageTurn_5_B3D1F082.wem</CachePath>
+					<CachePath>SFX/PageTurn/PageTurn_5_537E647F.wem</CachePath>
 				</File>
 				<File Id="141213406" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bird01-001.wav</ShortName>
@@ -1396,7 +1396,7 @@
 				</File>
 				<File Id="204828531" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PageTurn\PageTurn_4.wav</ShortName>
-					<CachePath>SFX/PageTurn/PageTurn_4_4455226E.wem</CachePath>
+					<CachePath>SFX/PageTurn/PageTurn_4_55F4A0A0.wem</CachePath>
 				</File>
 				<File Id="217621770" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bird02-003.wav</ShortName>
@@ -1404,7 +1404,7 @@
 				</File>
 				<File Id="276712555" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BookOpen\BookOpen_1.wav</ShortName>
-					<CachePath>SFX/BookOpen/BookOpen_1_5644DAE3.wem</CachePath>
+					<CachePath>SFX/BookOpen/BookOpen_1_17006C55.wem</CachePath>
 				</File>
 				<File Id="333540284" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bird01-003.wav</ShortName>
@@ -1420,7 +1420,7 @@
 				</File>
 				<File Id="338398156" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PageTurn\PageTurn_6.wav</ShortName>
-					<CachePath>SFX/PageTurn/PageTurn_6_02F2A8A5.wem</CachePath>
+					<CachePath>SFX/PageTurn/PageTurn_6_EFE1F247.wem</CachePath>
 				</File>
 				<File Id="414646934" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Quest_Game_Crafting_Wood_-2.wav</ShortName>
@@ -1428,11 +1428,11 @@
 				</File>
 				<File Id="476236753" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BookOpen\BookOpen_2.wav</ShortName>
-					<CachePath>SFX/BookOpen/BookOpen_2_2FCC6FC1.wem</CachePath>
+					<CachePath>SFX/BookOpen/BookOpen_2_745C738E.wem</CachePath>
 				</File>
 				<File Id="500101580" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PageTurn\PageTurn_2.wav</ShortName>
-					<CachePath>SFX/PageTurn/PageTurn_2_3D09BA20.wem</CachePath>
+					<CachePath>SFX/PageTurn/PageTurn_2_C5FD14C3.wem</CachePath>
 				</File>
 				<File Id="515135351" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Quest_Game_Crafting_Wood_-1.wav</ShortName>
@@ -1448,7 +1448,7 @@
 				</File>
 				<File Id="776713045" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PageTurn\PageTurn_3.wav</ShortName>
-					<CachePath>SFX/PageTurn/PageTurn_3_FA9BAB52.wem</CachePath>
+					<CachePath>SFX/PageTurn/PageTurn_3_7DCC9A8D.wem</CachePath>
 				</File>
 				<File Id="790702576" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Quest_Game_Action_Wood_Bo-1.wav</ShortName>
@@ -1460,7 +1460,7 @@
 				</File>
 				<File Id="879919748" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PageTurn\PageTurn_1.wav</ShortName>
-					<CachePath>SFX/PageTurn/PageTurn_1_0908AF58.wem</CachePath>
+					<CachePath>SFX/PageTurn/PageTurn_1_900C8A5A.wem</CachePath>
 				</File>
 				<File Id="909003059" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Win.wav</ShortName>
@@ -1579,6 +1579,24 @@
 				<Event Id="3434769657" Name="Stop_Clock_Tick_Reverse" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
+		<SoundBank Id="3604647259" Type="User" Language="SFX" Hash="{768A0487-31EF-D974-FA09-C933F9BA8B6C}">
+			<ShortName>MainMenu</ShortName>
+			<Path>MainMenu.bnk</Path>
+			<Media>
+				<File Id="994665873" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_3-3_110bpm_Menu_lp_V2.wav</ShortName>
+					<CachePath>SFX/mus_3-3_110bpm_Menu_lp_V2_FBC78EF0.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3738780720" Name="Play_MainMenu" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="994665873"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="890527358" Name="Stop_MainMenu" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
 	</SoundBanks>
-	<FileHash>{30FA146C-CC39-0CA8-ADF9-E4FAEF242948}</FileHash>
+	<FileHash>{53A00354-1ECA-4EC1-45EB-9C5D6BD5D389}</FileHash>
 </SoundBanksInfo>

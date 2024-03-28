@@ -46,6 +46,7 @@ namespace AK
         static const AkUniqueID PLAY_LIGHTONSOUND = 3765524326U;
         static const AkUniqueID PLAY_LV1_LIGHTSHOWMUSIC = 1153064896U;
         static const AkUniqueID PLAY_LV1_PLAYPLACEMUSIC = 1852343440U;
+        static const AkUniqueID PLAY_MAINMENU = 3738780720U;
         static const AkUniqueID PLAY_PAGETURN = 2771828150U;
         static const AkUniqueID PLAY_PINECONEPICKUP = 3549239601U;
         static const AkUniqueID PLAY_PLAYEREATEN = 3659914468U;
@@ -80,6 +81,7 @@ namespace AK
         static const AkUniqueID STOP_LIGHTONSOUND = 221383132U;
         static const AkUniqueID STOP_LV1_LIGHTSHOWMUSIC = 4020215174U;
         static const AkUniqueID STOP_LV1_PLAYPLACEMUSIC = 1754848386U;
+        static const AkUniqueID STOP_MAINMENU = 890527358U;
         static const AkUniqueID STOP_WATERFLOW = 2135762577U;
         static const AkUniqueID STOP_WIND_BLOWING = 1663839887U;
     } // namespace EVENTS
@@ -109,6 +111,7 @@ namespace AK
         static const AkUniqueID LEVEL0 = 2678230383U;
         static const AkUniqueID LEVEL1PLAYPLACE = 2631894517U;
         static const AkUniqueID LEVEL2GARDEN = 2029599918U;
+        static const AkUniqueID MAINMENU = 3604647259U;
     } // namespace BANKS
 
     namespace BUSSES
