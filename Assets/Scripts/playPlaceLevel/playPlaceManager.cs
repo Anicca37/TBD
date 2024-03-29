@@ -34,6 +34,11 @@ public class PlayPlaceManager : MonoBehaviour
             Destroy(gameObject);
         }
         ballsinitialPosition = balls.transform.position;
+
+                if (VoiceLineManager.Instance != null)
+        {
+            VoiceLineManager.Instance.AssignSubtitleTextComponent();
+        }
     }
 
     public void CompletePuzzle(string puzzleName)

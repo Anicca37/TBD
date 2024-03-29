@@ -16,6 +16,8 @@ public class TutorialManager : MonoBehaviour
     private CharacterController playerController;
     private GameObject[] children;
 
+    [SerializeField] private VoiceLine enterOffice;
+
     void Awake()
     {
         if (Instance == null)
@@ -39,6 +41,8 @@ public class TutorialManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        VoiceLineManager.Instance.PlayVoiceLine(enterOffice);
     }
 
     void Update()

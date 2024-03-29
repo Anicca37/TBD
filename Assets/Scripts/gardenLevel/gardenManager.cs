@@ -54,6 +54,9 @@ public class GardenManager : MonoBehaviour
 
     private bool isScaleBalanceSoundPlayed = false;
 
+    [SerializeField] private VoiceLine sampleVoiceLine;
+
+
 
     void Awake()
     {
@@ -76,6 +79,11 @@ public class GardenManager : MonoBehaviour
         else if (Instance != this)
         {
             Destroy(gameObject);
+        }
+
+        if (VoiceLineManager.Instance != null)
+        {
+            VoiceLineManager.Instance.AssignSubtitleTextComponent();
         }
     }
 
