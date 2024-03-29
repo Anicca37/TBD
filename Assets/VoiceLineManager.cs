@@ -58,7 +58,7 @@ public class VoiceLineManager : MonoBehaviour
             player = GameObject.FindGameObjectWithTag("Player");
         }
         // Post the Wwise event
-        AkSoundEngine.PostEvent(voiceLine.wwiseEventName, gameObject);
+        AkSoundEngine.PostEvent(voiceLine.wwiseEventName, player);
 
         // Assume we have a way to get the duration of the audio event here
         // For now, let's use a placeholder duration value

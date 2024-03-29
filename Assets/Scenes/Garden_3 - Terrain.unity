@@ -22364,6 +22364,7 @@ MonoBehaviour:
   birdAnimator: {fileID: 1296807786}
   shockwaveCooldown: 1
   isReset: 0
+  sampleVoiceLine: {fileID: 11400000, guid: d0272c9d81fb044d18842263da475d11, type: 2}
 --- !u!4 &1070179845
 Transform:
   m_ObjectHideFlags: 0

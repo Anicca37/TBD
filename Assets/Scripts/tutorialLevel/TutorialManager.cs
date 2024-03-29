@@ -42,6 +42,16 @@ public class TutorialManager : MonoBehaviour
             Destroy(gameObject);
         }
 
+        StartCoroutine(WaitForVoiceLineManager());
+    }
+
+    IEnumerator WaitForVoiceLineManager()
+    {
+        // Wait until VoiceLineManager is no longer null
+        yield return new WaitUntil(() => VoiceLineManager.Instance != null);
+        VoiceLineManager.Instance.AssignSubtitleTextComponent();
+
+        // Now it's safe to use VoiceLineManager.Instance
         VoiceLineManager.Instance.PlayVoiceLine(enterOffice);
     }
 

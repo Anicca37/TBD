@@ -19,6 +19,9 @@ public class PlayPlaceManager : MonoBehaviour
     [SerializeField] private Animator doorAnimator;
     public GameObject player;
 
+    [SerializeField] private VoiceLine sampleVoiceLine;
+
+
     void Awake()
     {
         if (Instance == null)
@@ -35,12 +38,18 @@ public class PlayPlaceManager : MonoBehaviour
         }
         ballsinitialPosition = balls.transform.position;
 
-                if (VoiceLineManager.Instance != null)
-        {
-            VoiceLineManager.Instance.AssignSubtitleTextComponent();
-        }
+        StartCoroutine(WaitForVoiceLineManager());
     }
 
+    IEnumerator WaitForVoiceLineManager()
+    {
+        // Wait until VoiceLineManager is no longer null
+        yield return new WaitUntil(() => VoiceLineManager.Instance != null);
+        VoiceLineManager.Instance.AssignSubtitleTextComponent();
+
+        // Now it's safe to use VoiceLineManager.Instance
+        VoiceLineManager.Instance.PlayVoiceLine(sampleVoiceLine);
+    }
     public void CompletePuzzle(string puzzleName)
     {
         switch (puzzleName)
