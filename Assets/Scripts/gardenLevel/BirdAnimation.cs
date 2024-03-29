@@ -23,5 +23,9 @@ public class BirdAnimation : MonoBehaviour, IInteract
             pinecone.tag = "Pickupable";
             jointToModify.connectedBody = null;
         }
+
+        Rigidbody pineconeRb = pinecone.GetComponent<Rigidbody>();
+        pineconeRb.drag = 0.3f;
+        
     }
 }
