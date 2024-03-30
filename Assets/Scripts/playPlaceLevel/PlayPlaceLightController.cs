@@ -8,6 +8,9 @@ public class PlayPlaceLightController : MonoBehaviour
     private Light currentLight;
     public GameObject[] flouresLights;
     public GameObject[] cameras;
+    public GameObject[] blocks;
+    public Material[] defaultMaterials;
+    public Material[] glowingMaterials;
     public ClockManipulation clockController;
     public GameObject openSign;
     public GameObject openSignOn;
@@ -94,6 +97,7 @@ public class PlayPlaceLightController : MonoBehaviour
         currentLight.intensity = 1f;
         openSign.SetActive(!isOpen);
         openSignOn.SetActive(isOpen);
+        UpdateBlockMaterial(isOpen);
     }
 
     private void BlinkAndToggle(bool isOpen)
@@ -132,6 +136,18 @@ public class PlayPlaceLightController : MonoBehaviour
         {
             camera.GetComponent<PostProcessLayer>().enabled = !isOpen;
             camera.GetComponent<PostProcessVolume>().enabled = !isOpen;
+        }
+    }
+
+    private void UpdateBlockMaterial(bool isOpen)
+    {
+        for (int i = 0; i < blocks.Length; i++)
+        {
+            Transform[] children = blocks[i].GetComponentsInChildren<Transform>();
+            foreach (Transform child in children)
+            {
+                child.gameObject.GetComponent<Renderer>().material = isOpen ? defaultMaterials[i] : glowingMaterials[i];
+            }
         }
     }
 
