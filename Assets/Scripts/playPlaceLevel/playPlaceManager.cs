@@ -48,7 +48,7 @@ public class PlayPlaceManager : MonoBehaviour
                 RevealXylophoneSequence();
                 break;
             case "Xylophone":
-                if (!areBlocksSorted) // Xylophone played too early
+                if (!areBlocksSorted && !isClockInteracted) // Xylophone played too early
                 {
                     TriggerBallAvalanche();
                 }
