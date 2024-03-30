@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class VenusFlytrapController : MonoBehaviour
 {
-    private bool PlayerEaten = false; //For OneTimeSound
     private Animator venusFlytrapAnimator;
-
+    private bool IsGrowed = false;
 
     // Start is called before the first frame update
     void Start()
@@ -17,15 +16,18 @@ public class VenusFlytrapController : MonoBehaviour
     public void VenusFlytrapGrow()
     {
         venusFlytrapAnimator.SetTrigger("grow");
+        IsGrowed = true;
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            venusFlytrapAnimator.SetTrigger("eat");
-            Debug.Log("Player entered the Venus Flytrap");
-            GardenManager.Instance.CompletePuzzle("Escape");
+            if (IsGrowed)
+            {
+                venusFlytrapAnimator.SetTrigger("eat");
+                GardenManager.Instance.CompletePuzzle("Escape");
+            }
         }
     }
 }
