@@ -217,7 +217,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{1D0CB3EC-51C5-F578-8027-189B6E557A3B}">
+		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{7CB30F1B-4773-54CD-CF7B-350177DE4885}">
 			<ShortName>Level2Garden</ShortName>
 			<Path>Level2Garden.bnk</Path>
 			<Media>
@@ -372,6 +372,10 @@
 				<File Id="523653084" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WaterFlooding.wav</ShortName>
 					<CachePath>SFX/WaterFlooding_FD5F1BBD.wem</CachePath>
+				</File>
+				<File Id="545651926" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>What_just_happened_1.wav</ShortName>
+					<CachePath>SFX/What_just_happened_1_40593100.wem</CachePath>
 				</File>
 				<File Id="558199229" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section2\mus_90bpm_Level2_Section2_Kick.wav</ShortName>
@@ -729,6 +733,11 @@
 						<MediaRef Id="39073760"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3233041731" Name="Play_What_just_happened_1" DurationType="OneShot" DurationMin="1.840842" DurationMax="1.840842">
+					<MediaRefs>
+						<MediaRef Id="545651926"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2955987680" Name="Play_Win" DurationType="OneShot" DurationMin="1" DurationMax="1">
 					<MediaRefs>
 						<MediaRef Id="909003059"/>
@@ -763,7 +772,7 @@
 				<Event Id="1663839887" Name="Stop_Wind_Blowing" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{A7E61A1D-CD4A-0D48-0B86-6DD2B1304345}">
+		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{07A28488-7D84-2A19-5439-F0CDE4E8E6A4}">
 			<ShortName>Level1PlayPlace</ShortName>
 			<Path>Level1PlayPlace.bnk</Path>
 			<Media>
@@ -962,6 +971,10 @@
 				<File Id="545226739" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Confetti_2.wav</ShortName>
 					<CachePath>SFX/Confetti_2_8E324C96.wem</CachePath>
+				</File>
+				<File Id="545651926" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>What_just_happened_1.wav</ShortName>
+					<CachePath>SFX/What_just_happened_1_40593100.wem</CachePath>
 				</File>
 				<File Id="545916312" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>XyloE.wav</ShortName>
@@ -1316,6 +1329,11 @@
 						<MediaRef Id="374259416"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3233041731" Name="Play_What_just_happened_1" DurationType="OneShot" DurationMin="1.840842" DurationMax="1.840842">
+					<MediaRefs>
+						<MediaRef Id="545651926"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2955987680" Name="Play_Win" DurationType="OneShot" DurationMin="1" DurationMax="1">
 					<MediaRefs>
 						<MediaRef Id="909003059"/>
@@ -1362,7 +1380,7 @@
 				<GameParameter Id="185769106" Name="Lv1_LightOn"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{B38C9F4E-3FEE-55FC-CA4B-404A003B1ED9}">
+		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{3FA37308-4539-7564-5218-AC5168506CC9}">
 			<ShortName>Level0</ShortName>
 			<Path>Level0.bnk</Path>
 			<Media>
@@ -1437,6 +1455,10 @@
 				<File Id="515135351" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Quest_Game_Crafting_Wood_-1.wav</ShortName>
 					<CachePath>SFX/Quest_Game_Crafting_Wood_-1_2D61A4DB.wem</CachePath>
+				</File>
+				<File Id="545651926" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>What_just_happened_1.wav</ShortName>
+					<CachePath>SFX/What_just_happened_1_40593100.wem</CachePath>
 				</File>
 				<File Id="583454713" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bird01-002.wav</ShortName>
@@ -1565,6 +1587,11 @@
 						<MediaRef Id="515135351"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3233041731" Name="Play_What_just_happened_1" DurationType="OneShot" DurationMin="1.840842" DurationMax="1.840842">
+					<MediaRefs>
+						<MediaRef Id="545651926"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2955987680" Name="Play_Win" DurationType="OneShot" DurationMin="1" DurationMax="1">
 					<MediaRefs>
 						<MediaRef Id="909003059"/>
@@ -1598,5 +1625,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{53A00354-1ECA-4EC1-45EB-9C5D6BD5D389}</FileHash>
+	<FileHash>{B273323E-5C91-C621-E732-77638350B333}</FileHash>
 </SoundBanksInfo>

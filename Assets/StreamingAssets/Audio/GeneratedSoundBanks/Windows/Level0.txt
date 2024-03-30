@@ -9,6 +9,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2897827502	Stop_Clock_Tick			\Default Work Unit\Clock\Stop_Clock_Tick	
 	2955987680	Play_Win			\Default Work Unit\Play_Win	
 	3025897706	Play_Birds			\Default Work Unit\Bird\Play_Birds	
+	3233041731	Play_What_just_happened_1			\Default Work Unit\Play_What_just_happened_1	
 	3370429210	Play_TablePickUp			\Level0\Tut_office\Play_TablePickUp	
 	3434769657	Stop_Clock_Tick_Reverse			\Default Work Unit\Clock\Stop_Clock_Tick_Reverse	
 	3584090578	Play_BirdWing			\Default Work Unit\Bird\Play_BirdWing	
@@ -38,6 +39,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	476236753	BookOpen_2	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\BookOpen\BookOpen_2_745C738E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Journal\BookOpen\BookOpen_2		8785
 	500101580	PageTurn_2	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\PageTurn\PageTurn_2_C5FD14C3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Journal\PageTurn\PageTurn_2		8982
 	515135351	Table_PickUp1	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\Quest_Game_Crafting_Wood_-1_2D61A4DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Lv0_Office\Level0_Office\Table\PickUp\Table_PickUp1		5523
+	545651926	What_just_happened_1	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\What_just_happened_1_40593100.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogues\All\What_just_happened_1		353536
 	583454713	Bird01-002	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\Bird01-002_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Birds\Birds\Bird01-002		14198
 	670277016	Bird02-001	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\Bird02-001_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Birds\Birds\Bird02-001		20807
 	776713045	PageTurn_3	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\PageTurn\PageTurn_3_7DCC9A8D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Journal\PageTurn\PageTurn_3		10908
