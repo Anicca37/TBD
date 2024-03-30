@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 public class PlayPlaceLightController : MonoBehaviour
 {
     private Light currentLight;
+    public GameObject[] flouresLights;
+    public GameObject[] cameras;
     public ClockManipulation clockController;
     public GameObject openSign;
     public GameObject openSignOn;
@@ -24,15 +27,15 @@ public class PlayPlaceLightController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        PlayPlaceManager.Instance.CompletePuzzle("ClockInteraction");
         GameObject theCelling = GameObject.Find("LightSoundEmitter");
         if (CanPlayPlaceOpen())
         {
             if (!isPlayPlaceOpen)
             {
-                currentLight.color = Color.white;
-                openSign.SetActive(false);
-                openSignOn.SetActive(true);
                 isPlayPlaceOpen = true;
+                BlinkAndToggle(isPlayPlaceOpen);
+                Invoke("DelayedPlayPlaceOperations", 1f);
 
                 // Play playplace open sound
                 if (isLvlMusicPlayed == false)
@@ -59,10 +62,9 @@ public class PlayPlaceLightController : MonoBehaviour
         {
             if (isPlayPlaceOpen)
             {
-                currentLight.color = Color.black;
-                openSign.SetActive(true);
-                openSignOn.SetActive(false);
                 isPlayPlaceOpen = false;
+                BlinkAndToggle(isPlayPlaceOpen);
+                Invoke("DelayedPlayPlaceOperations", 1f);
 
                 // Play playplace close sound
                 if (isLightSoundPlayed == true)
@@ -78,7 +80,59 @@ public class PlayPlaceLightController : MonoBehaviour
                 AkSoundEngine.SetRTPCValue("Lv1_LightOn", 0);
             }
         }
-        PlayPlaceManager.Instance.CompletePuzzle("ClockInteraction");
+    }
+    
+    private void DelayedPlayPlaceOperations()
+    {
+        PlayPlaceOperations(isPlayPlaceOpen);
+    }
+
+    private void PlayPlaceOperations(bool isOpen)
+    {
+        CameraEffect(isOpen);
+        currentLight.color = isOpen ? Color.white : Color.black;
+        currentLight.intensity = 1f;
+        openSign.SetActive(!isOpen);
+        openSignOn.SetActive(isOpen);
+    }
+
+    private void BlinkAndToggle(bool isOpen)
+    {
+        StartCoroutine(BlinkCoroutine(isOpen));
+    }
+
+    IEnumerator BlinkCoroutine(bool isOpen)
+    {
+        int blinkCount = 7;
+        float blinkInterval = 0.1f;
+        bool isLightOn = false;
+
+        for (int i = 0; i < blinkCount; i++)
+        {
+            foreach (GameObject light in flouresLights)
+            {
+                light.SetActive(!isLightOn);
+            }
+            isLightOn = !isLightOn;
+            if (i != blinkCount - 1)
+            {
+                yield return new WaitForSeconds(blinkInterval);
+            }
+        }
+
+        foreach (GameObject light in flouresLights)
+        {
+            light.SetActive(false);
+        }
+    }
+
+    private void CameraEffect(bool isOpen)
+    {
+        foreach (GameObject camera in cameras)
+        {
+            camera.GetComponent<PostProcessLayer>().enabled = !isOpen;
+            camera.GetComponent<PostProcessVolume>().enabled = !isOpen;
+        }
     }
 
     private void LightSoundReset()
