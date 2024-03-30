@@ -327,4 +327,9 @@ public class ClockManipulation : MonoBehaviour, IInteract
         }
         return false;
     }
+
+    public void CancelClockPlay()
+    {
+        OnMouseUp();
+    }
 }

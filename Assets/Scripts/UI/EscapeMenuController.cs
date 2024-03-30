@@ -39,13 +39,18 @@ public class EscapeMenuController : MonoBehaviour
         return isEscaped;
     }
 
+    public static void ReserveEscape()
+    {
+        isEscaped = true;
+    }
+
     public void OnEscapeActivated()
     {
         if (!isEscaped)
         {
             isEscaped = true;
-            InitializeEscapeMenu();
         }
+        InitializeEscapeMenu();
     }
 
     private void Update()

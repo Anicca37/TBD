@@ -14,10 +14,9 @@ public class VenusFlytrapController : MonoBehaviour
         venusFlytrapAnimator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void VenusFlytrapGrow()
     {
-        
+        venusFlytrapAnimator.SetTrigger("grow");
     }
 
     void OnTriggerEnter(Collider other)
@@ -27,16 +26,6 @@ public class VenusFlytrapController : MonoBehaviour
             venusFlytrapAnimator.SetTrigger("eat");
             Debug.Log("Player entered the Venus Flytrap");
             GardenManager.Instance.CompletePuzzle("Escape");
-
-            if (PlayerEaten == false)
-            {
-                // play sound
-                AkSoundEngine.PostEvent("Play_PlayerEaten", this.gameObject);
-
-                AkSoundEngine.PostEvent("Play_Win", this.gameObject);
-            }
-
-            PlayerEaten = true;
         }
     }
 }
