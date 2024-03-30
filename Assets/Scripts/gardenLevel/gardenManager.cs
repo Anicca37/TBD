@@ -16,11 +16,13 @@ public class GardenManager : MonoBehaviour
     public Camera playerCamera;
     public Camera scalesCamera;
     public Camera birdCamera;
+    public Camera venusFlytrapCamera;
 
     public bool isFloralMatched = false;
     public bool isWindChimesPlayed = false;
     public bool isScaleBalanced = false;
     public bool isClockSet = false;
+    public bool PlayerEaten = false;
 
     public GameObject waterObject;
     public VineGrowthController vineGrowthController;
@@ -61,9 +63,6 @@ public class GardenManager : MonoBehaviour
         {
             Instance = this;
             // DontDestroyOnLoad(gameObject);
-
-            // set VenusFlytrap to inactive
-            VenusFlytrap.SetActive(false);
 
             //Play BGM
             AkSoundEngine.PostEvent("Play_Level2_NewGardenMusic", this.gameObject);
@@ -123,7 +122,8 @@ public class GardenManager : MonoBehaviour
                     {
                         Debug.Log("clock being set");
                         isClockSet = true;
-                        MakeVenusFlytrapBloom(); // Sequence correct
+                        ClockController.CancelClockPlay();
+                        MakeVenusFlytrapBloom();
                     }
                 }
                 else
@@ -144,7 +144,8 @@ public class GardenManager : MonoBehaviour
             case "Escape":
                 if (isClockSet)
                 {
-                    EscapeGarden();
+                    StartCoroutine(PlayerEnable(false, 0f));
+                    EscapeGardenDelay(2.5f);
                 }
                 break;
         }
@@ -203,17 +204,17 @@ public class GardenManager : MonoBehaviour
     void MakeVenusFlytrapBloom()
     {
         Debug.Log("Venus flytrap blooms, revealing escape path.");
-
-        // set VenusFlytrap to active
-        VenusFlytrap.SetActive(true);
-
+        VenusFlytrap.GetComponent<VenusFlytrapController>().VenusFlytrapGrow();
         if (isTrapActive == false)
         {
             // play sound
             AkSoundEngine.PostEvent("Play_FlyTrapPopedUp", VenusFlytrap.gameObject);
         }
-
         isTrapActive = true;
+        StartCoroutine(PlayerEnable(false, 0f));
+        StartCoroutine(SwitchCamera(playerCamera, venusFlytrapCamera, 0f));
+        StartCoroutine(SwitchCamera(venusFlytrapCamera, playerCamera, 9f));
+        StartCoroutine(PlayerEnable(true, 9f));
     }
 
     void AttractBirds()
@@ -351,9 +352,22 @@ public class GardenManager : MonoBehaviour
         }
     }
 
+    private void EscapeGardenDelay(float delay)
+    {
+        EscapeMenuController.ReserveEscape();
+        Invoke("EscapeGarden", delay);
+    }
+
     void EscapeGarden()
     {
-        Debug.Log("Escaping the garden.");
+        if (PlayerEaten == false)
+        {
+            // play sound
+            AkSoundEngine.PostEvent("Play_PlayerEaten", this.gameObject);
+
+            AkSoundEngine.PostEvent("Play_Win", this.gameObject);
+        }
+        PlayerEaten = true;
         EscapeController.GetComponent<EscapeMenuController>().OnEscapeActivated();
     }
 

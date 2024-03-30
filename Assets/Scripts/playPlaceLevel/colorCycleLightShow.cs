@@ -38,6 +38,7 @@ public class ColorCycleLightShow : MonoBehaviour
         {
             // Cycle through colors
             directionalLight.color = colors[colorIndex % colors.Length];
+            directionalLight.intensity = 5f;
             colorIndex++;
 
             // Wait a little before changing colors to make it a rapid color change effect
