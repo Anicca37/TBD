@@ -15,6 +15,10 @@ public class TutorialManager : MonoBehaviour
     private GameObject player;
     private CharacterController playerController;
     private GameObject[] children;
+    public Transform playerTransform; // Assign in inspector
+    public Transform shockwaveItem; // Assign the clock object's transform in inspector
+    public float shockwaveCooldown = 1f; // Cooldown in seconds
+    private float lastShockwaveTime = -Mathf.Infinity; // Initialize with a value that allows immediate use
 
     void Awake()
     {
@@ -100,5 +104,53 @@ public class TutorialManager : MonoBehaviour
         {
             child.SetActive(active);
         }
+    }
+
+    void BirdPush()
+    {
+        if (Time.time >= lastShockwaveTime + shockwaveCooldown)
+        {
+            // ClockController.LockGameControl(false);
+            Debug.Log("Big push.");
+            // AkSoundEngine.PostEvent("Play_Statue_Loud", Statue.gameObject);
+            StartCoroutine(Shockwave()); // Initiate the shockwave coroutine
+            lastShockwaveTime = Time.time; // Update the last shockwave time
+        }
+        else
+        {
+            Debug.Log("Shockwave is on cooldown.");
+            //StatueLoudPlayed = false;
+        }
+    }
+
+    IEnumerator Shockwave()
+    {
+        float shockwaveDuration = 1f; // Duration of the shockwave effect
+        float startTime = Time.time; // Record the start time
+        float shockwaveUpwardSpeed = 10.0f; // Speed at which the player is pushed upward
+        float shockwaveBackwardSpeed = -20.0f; // Speed at which the player is pushed backward
+
+        //play sound
+        // if (StatueLoudPlayed == false)
+        // {
+        //     GameObject Statue = GameObject.Find("Statue");
+        //     AkSoundEngine.PostEvent("Play_Statue_Loud", Statue.gameObject);
+        //     StatueLoudPlayed = true;
+        // }
+
+        while (Time.time < startTime + shockwaveDuration)
+        {
+            // move the player with character controller
+            CharacterController controller = playerTransform.GetComponent<CharacterController>();
+            Vector3 moveDirection = playerTransform.forward * shockwaveBackwardSpeed + Vector3.up * shockwaveUpwardSpeed;
+            controller.Move(moveDirection * Time.deltaTime);
+
+            yield return null; // Wait until the next frame
+        }
+
+        // StatueLoudPlayed = false;
+
+        // After the shockwave, the player stops moving
+        // Optionally, you can smoothly stop the player's movement by reducing the speed over time
     }
 }

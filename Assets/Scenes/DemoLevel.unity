@@ -242,15 +242,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 26b604a7cdd654c4fb01a123149df256, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.8
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 26b604a7cdd654c4fb01a123149df256, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.8
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 26b604a7cdd654c4fb01a123149df256, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.8
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 26b604a7cdd654c4fb01a123149df256, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6491,6 +6491,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EscapeController: {fileID: 324464321}
   doorMovement: {fileID: 1747489722}
+  playerTransform: {fileID: 1748710804}
+  shockwaveItem: {fileID: 1024892394}
 --- !u!65 &622973578
 BoxCollider:
   m_ObjectHideFlags: 0
