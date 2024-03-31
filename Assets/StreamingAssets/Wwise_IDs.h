@@ -50,6 +50,7 @@ namespace AK
         static const AkUniqueID PLAY_PAGETURN = 2771828150U;
         static const AkUniqueID PLAY_PINECONEPICKUP = 3549239601U;
         static const AkUniqueID PLAY_PLAYEREATEN = 3659914468U;
+        static const AkUniqueID PLAY_POOF = 1551805630U;
         static const AkUniqueID PLAY_SCALE_BALANCING = 2809285424U;
         static const AkUniqueID PLAY_SLIDEDOOROPEN_1 = 1324211945U;
         static const AkUniqueID PLAY_STATUE_LOUD = 976664737U;
