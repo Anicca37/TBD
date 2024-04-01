@@ -15,10 +15,11 @@ public class TutorialManager : MonoBehaviour
     private GameObject player;
     private CharacterController playerController;
     private GameObject[] children;
-    public Transform playerTransform; // Assign in inspector
-    public Transform shockwaveItem; // Assign the clock object's transform in inspector
-    public float shockwaveCooldown = 1f; // Cooldown in seconds
-    private float lastShockwaveTime = -Mathf.Infinity; // Initialize with a value that allows immediate use
+
+    public Transform playerTransform;
+    public Transform pushyBird;
+    public float pushCooldown = 1f;
+    private float lastPushTime = -Mathf.Infinity;
 
     void Awake()
     {
@@ -106,51 +107,36 @@ public class TutorialManager : MonoBehaviour
         }
     }
 
-    void BirdPush()
+    public void BirdPush()
     {
-        if (Time.time >= lastShockwaveTime + shockwaveCooldown)
+        if (Time.time >= lastPushTime + pushCooldown)
         {
-            // ClockController.LockGameControl(false);
             Debug.Log("Big push.");
-            // AkSoundEngine.PostEvent("Play_Statue_Loud", Statue.gameObject);
-            StartCoroutine(Shockwave()); // Initiate the shockwave coroutine
-            lastShockwaveTime = Time.time; // Update the last shockwave time
+            StartCoroutine(PushPlayer());
+            lastPushTime = Time.time;
         }
         else
         {
-            Debug.Log("Shockwave is on cooldown.");
-            //StatueLoudPlayed = false;
+            Debug.Log("Push cooldown.");
         }
     }
 
-    IEnumerator Shockwave()
+    IEnumerator PushPlayer()
     {
-        float shockwaveDuration = 1f; // Duration of the shockwave effect
-        float startTime = Time.time; // Record the start time
-        float shockwaveUpwardSpeed = 10.0f; // Speed at which the player is pushed upward
-        float shockwaveBackwardSpeed = -20.0f; // Speed at which the player is pushed backward
+        float duration = 1f;
+        float startTime = Time.time; // start time
+        float upwardSpeed = 10.0f; // speed player is pushed upward
+        float backwardSpeed = -20.0f; // speed player is pushed backward
 
         //play sound
-        // if (StatueLoudPlayed == false)
-        // {
-        //     GameObject Statue = GameObject.Find("Statue");
-        //     AkSoundEngine.PostEvent("Play_Statue_Loud", Statue.gameObject);
-        //     StatueLoudPlayed = true;
-        // }
 
-        while (Time.time < startTime + shockwaveDuration)
+        while (Time.time < startTime + duration)
         {
-            // move the player with character controller
             CharacterController controller = playerTransform.GetComponent<CharacterController>();
-            Vector3 moveDirection = playerTransform.forward * shockwaveBackwardSpeed + Vector3.up * shockwaveUpwardSpeed;
+            Vector3 moveDirection = playerTransform.forward * backwardSpeed + Vector3.up * upwardSpeed;
             controller.Move(moveDirection * Time.deltaTime);
 
             yield return null; // Wait until the next frame
         }
-
-        // StatueLoudPlayed = false;
-
-        // After the shockwave, the player stops moving
-        // Optionally, you can smoothly stop the player's movement by reducing the speed over time
     }
 }
