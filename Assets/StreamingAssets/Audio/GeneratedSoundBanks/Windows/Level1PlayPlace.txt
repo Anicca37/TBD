@@ -5,6 +5,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1153064896	Play_Lv1_LightShowMusic			\Lv1PlayPlace\Play_Lv1_LightShowMusic	
 	1219381739	Stop_LightOff_1			\Lv1PlayPlace\Stop_LightOff_1	
 	1324211945	Play_SlideDoorOpen_1			\Lv1PlayPlace\Play_SlideDoorOpen_1	
+	1551805630	Play_Poof			\Default Work Unit\Bird\Play_Poof	
 	1720188539	Play_BookClose			\Default Work Unit\Play_BookClose	
 	1754848386	Stop_Lv1_PlayPlaceMusic			\Lv1PlayPlace\Stop_Lv1_PlayPlaceMusic	
 	1852343440	Play_Lv1_PlayPlaceMusic			\Lv1PlayPlace\Play_Lv1_PlayPlaceMusic	
@@ -109,6 +110,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	645157359	XyloG	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\XyloG_7A9E5A1E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Lv1_PlayPlace\Xylophone\XyloG		5383
 	661109498	BallBounceNew_4	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\BallBounceNew_4_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Lv1_PlayPlace\Ball\BallBouncy\BallBounceB\BallBounceNew_4		22591
 	670277016	Bird02-001	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\Bird02-001_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Birds\Birds\Bird02-001		20807
+	680841763	Poof_3	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\Poof\Poof_3_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Birds\Poof\Poof_3		9134
 	700689704	BlockPickup_1	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\BlockPickup_1_B9F32486.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Lv1_PlayPlace\Blocks\BlockPickUp\BlockPickup_1		12835
 	703767957	mus_3-4_125bpm_Level1_S2_CMelody_CelloL	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S2\mus_3-4_125bpm_Level1_S2_CMelody_CelloL_239921B3.wem		\Interactive Music Hierarchy\Default Work Unit\Lv1_PlayPlace\Lv1_PlayPlaceMusic\mus_3-4_125bpm_Level1_S2\mus_3-4_125bpm_Level1_S2_CMelody_CelloL		692811
 	708645545	mus_3-4_125bpm_Level1_Tran1_Melody_Flute	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran1\mus_3-4_125bpm_Level1_Tran1_Melody_Flute_239921B3.wem		\Interactive Music Hierarchy\Default Work Unit\Lv1_PlayPlace\Lv1_PlayPlaceMusic\mus_3-4_125bpm_Level1_Tran1\mus_3-4_125bpm_Level1_Tran1_Melody_Flute		686587
@@ -119,6 +121,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	761293489	mus_3-4_125bpm_Level1_Tran1_Bass	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran1\mus_3-4_125bpm_Level1_Tran1_Bass_239921B3.wem		\Interactive Music Hierarchy\Default Work Unit\Lv1_PlayPlace\Lv1_PlayPlaceMusic\mus_3-4_125bpm_Level1_Tran1\mus_3-4_125bpm_Level1_Tran1_Bass		689716
 	762738001	mus_3-4_125bpm_Level1_S2_Melody_VL	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S2\mus_3-4_125bpm_Level1_S2_Melody_VL_239921B3.wem		\Interactive Music Hierarchy\Default Work Unit\Lv1_PlayPlace\Lv1_PlayPlaceMusic\mus_3-4_125bpm_Level1_S2\mus_3-4_125bpm_Level1_S2_Melody_VL		727828
 	763579394	Ball_Impact_11	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\BallImpact\Ball_Impact_11_5AF2D7FA.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Lv1_PlayPlace\Ball\BallBouncy\BallImpact\Ball_Impact_11		10998
+	773465686	Poof_2	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\Poof\Poof_2_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Birds\Poof\Poof_2		9404
 	776713045	PageTurn_3	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\PageTurn\PageTurn_3_7DCC9A8D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Journal\PageTurn\PageTurn_3		10908
 	821236829	Bird03-002	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\Bird03-002_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Birds\Birds\Bird03-002		10519
 	834838996	mus_3-4_125bpm_Level1_Tran2_Chords	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Chords_239921B3.wem		\Interactive Music Hierarchy\Default Work Unit\Lv1_PlayPlace\Lv1_PlayPlaceMusic\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Chords		703781

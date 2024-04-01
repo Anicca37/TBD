@@ -1,5 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	1525201045	Play_TableDrop			\Level0\Tut_office\Play_TableDrop	
+	1551805630	Play_Poof			\Default Work Unit\Bird\Play_Poof	
 	1660008929	Play_Door_Open			\Level0\Tut_office\Play_Door_Open	
 	1720188539	Play_BookClose			\Default Work Unit\Play_BookClose	
 	2244407197	Play_BookOpen			\Default Work Unit\Play_BookOpen	
@@ -42,6 +43,8 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	545651926	What_just_happened_1	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\What_just_happened_1_40593100.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogues\All\What_just_happened_1		353536
 	583454713	Bird01-002	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\Bird01-002_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Birds\Birds\Bird01-002		14198
 	670277016	Bird02-001	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\Bird02-001_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Birds\Birds\Bird02-001		20807
+	680841763	Poof_3	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\Poof\Poof_3_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Birds\Poof\Poof_3		9134
+	773465686	Poof_2	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\Poof\Poof_2_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Birds\Poof\Poof_2		9404
 	776713045	PageTurn_3	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\PageTurn\PageTurn_3_7DCC9A8D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Journal\PageTurn\PageTurn_3		10908
 	790702576	Table_Drop2	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\Quest_Game_Action_Wood_Bo-1_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Lv0_Office\Level0_Office\Table\Drop\Table_Drop2		8736
 	821236829	Bird03-002	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\Bird03-002_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Birds\Birds\Bird03-002		10519
