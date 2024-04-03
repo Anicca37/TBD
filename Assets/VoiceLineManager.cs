@@ -9,8 +9,10 @@ public class VoiceLineManager : MonoBehaviour
 
     public TextMeshProUGUI subtitleText; // Assign in the inspector
     public float additionalDisplayTime = 3f; // Time to display subtitles after audio ends
+    public float timePerCharacter = 0.025f;
 
     private GameObject player;
+    private bool isVoiceLinePlaying = false; // Flag to indicate if a voice line is currently playing
 
     private void Awake()
     {
@@ -24,7 +26,6 @@ public class VoiceLineManager : MonoBehaviour
             Destroy(gameObject);
         }
         player = GameObject.FindGameObjectWithTag("Player");
-        
     }
 
     public void AssignSubtitleTextComponent()
@@ -32,8 +33,6 @@ public class VoiceLineManager : MonoBehaviour
         // Find the TextMeshProUGUI component in the current scene
         // Make sure you have exactly one TextMeshProUGUI component tagged or named uniquely in your UI
         subtitleText = GameObject.FindGameObjectWithTag("SubtitleTextTag").GetComponent<TextMeshProUGUI>();
-        // or if you're using the name to find it:
-        // subtitleText = GameObject.Find("SubtitleTextName").GetComponent<TextMeshProUGUI>();
 
         if (subtitleText == null)
         {
@@ -43,13 +42,20 @@ public class VoiceLineManager : MonoBehaviour
 
     public void PlayVoiceLine(VoiceLine voiceLine)
     {
+        if (isVoiceLinePlaying)
+        {
+            Debug.Log("Voice line is already playing. Ignoring request to play another voice line.");
+            return;
+        }
+
         // Start the coroutine that will show subtitles and play audio
-        
         StartCoroutine(PlayVoiceLineCoroutine(voiceLine));
     }
 
     private IEnumerator PlayVoiceLineCoroutine(VoiceLine voiceLine)
     {
+        isVoiceLinePlaying = true; // Set the flag to indicate that a voice line is now playing
+
         // Wait for any specified delay before playing the voice line
         yield return new WaitForSeconds(voiceLine.delayBeforePlaying);
 
@@ -57,12 +63,12 @@ public class VoiceLineManager : MonoBehaviour
         {
             player = GameObject.FindGameObjectWithTag("Player");
         }
+        
         // Post the Wwise event
         AkSoundEngine.PostEvent(voiceLine.wwiseEventName, player);
 
-        // Assume we have a way to get the duration of the audio event here
-        // For now, let's use a placeholder duration value
-        float placeholderAudioDuration = 5f; // Placeholder: you will need to determine the actual duration
+        // Get the actual duration of the audio clip
+        float audioDuration = (voiceLine.subtitle.Length * timePerCharacter) + additionalDisplayTime;
 
         if (subtitleText != null)
         {
@@ -70,10 +76,12 @@ public class VoiceLineManager : MonoBehaviour
             subtitleText.text = voiceLine.subtitle;
 
             // Wait for the duration of the audio plus any additional time for the subtitles to display
-            yield return new WaitForSeconds(placeholderAudioDuration + additionalDisplayTime);
+            yield return new WaitForSeconds(audioDuration + additionalDisplayTime);
 
             // Clear the subtitles
             subtitleText.text = "";
         }
+
+        isVoiceLinePlaying = false; // Reset the flag since the voice line has finished playing
     }
 }
