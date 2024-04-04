@@ -12,7 +12,7 @@ public class XylophoneClick : MonoBehaviour, IInteract
     {
         xyloAnimator.SetTrigger($"Hit {xyloID}"); // animate hit
         PlayXyloSound(xyloID);
-        StartCoroutine(ResetAnimation(xyloID, 1f));
+        StartCoroutine(ResetAnimation(xyloID, 0.5f));
         if (floatingText)
         {
             ShowDing();
