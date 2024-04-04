@@ -145,7 +145,7 @@ public class GardenManager : MonoBehaviour
                 if (isClockSet)
                 {
                     StartCoroutine(PlayerEnable(false, 0f));
-                    EscapeGardenDelay(2.5f);
+                    EscapeGardenDelay(2f);
                 }
                 break;
         }
