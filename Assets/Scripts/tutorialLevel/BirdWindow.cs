@@ -14,6 +14,7 @@ public class BirdWindow : MonoBehaviour
         {
             Debug.Log("Chirp");
             bird.SetTrigger("Warn");
+            Invoke("Push", 4.5f);
 
             if (soundPlayed == false)
             {
@@ -28,6 +29,10 @@ public class BirdWindow : MonoBehaviour
         bird.SetTrigger("Warn Rest");
     }
 
+    private void Push()
+    {
+        TutorialManager.Instance.BirdPush();
+    }
     private void playBirdWing()
     {
         GameObject theBird = GameObject.Find("smallBird");
