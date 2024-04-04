@@ -16,6 +16,11 @@ public class TutorialManager : MonoBehaviour
     private CharacterController playerController;
     private GameObject[] children;
 
+    public Transform playerTransform;
+    public Transform pushyBird;
+    public float pushCooldown = 1f;
+    private float lastPushTime = -Mathf.Infinity;
+
     void Awake()
     {
         if (Instance == null)
@@ -99,6 +104,39 @@ public class TutorialManager : MonoBehaviour
         foreach (GameObject child in children)
         {
             child.SetActive(active);
+        }
+    }
+
+    public void BirdPush()
+    {
+        if (Time.time >= lastPushTime + pushCooldown)
+        {
+            Debug.Log("Big push.");
+            StartCoroutine(PushPlayer());
+            lastPushTime = Time.time;
+        }
+        else
+        {
+            Debug.Log("Push cooldown.");
+        }
+    }
+
+    IEnumerator PushPlayer()
+    {
+        float duration = 1f;
+        float startTime = Time.time; // start time
+        float upwardSpeed = 10.0f; // speed player is pushed upward
+        float backwardSpeed = -20.0f; // speed player is pushed backward
+
+        //play sound
+
+        while (Time.time < startTime + duration)
+        {
+            CharacterController controller = playerTransform.GetComponent<CharacterController>();
+            Vector3 moveDirection = playerTransform.forward * backwardSpeed + Vector3.up * upwardSpeed;
+            controller.Move(moveDirection * Time.deltaTime);
+
+            yield return null; // Wait until the next frame
         }
     }
 }
