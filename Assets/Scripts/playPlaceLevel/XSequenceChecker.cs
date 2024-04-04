@@ -76,14 +76,4 @@ public class XSequenceChecker : MonoBehaviour
     {
         textAnimator.SetTrigger("Hint Return");
     }
-
-    // private void DropKetchup()
-    // {
-    //     ketchupToDrop.SetActive(true);
-    //     Rigidbody rb = ketchupToDrop.GetComponent<Rigidbody>();
-    //     if (rb != null)
-    //     {
-    //         rb.isKinematic = false;
-    //     }
-    // }
 }
