@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0a5bb035952b4cfd8bed2b056d9009a, type: 3}
   m_Name: EnterPlayPlace
   m_EditorClassIdentifier: 
-  wwiseEventName: Play_Birds
+  wwiseEventName: Play_When_Entering_Play_Place
   subtitle: It's so dark in here, is it... opened yet?
   delayBeforePlaying: 1

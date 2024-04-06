@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a0a5bb035952b4cfd8bed2b056d9009a, type: 3}
-  m_Name: PlayPlaceLightshowSecond
+  m_Name: OfficeBird
   m_EditorClassIdentifier: 
-  wwiseEventName: Play_When_Triggering_Light_Show_v2
-  subtitle: Don't wake me up...it's not work time yet...
+  wwiseEventName: Play_When_Pushed_By_Bird
+  subtitle: Hey, hey, hey! Wrong way!
   delayBeforePlaying: 0
