@@ -10,9 +10,17 @@ public class windChime : MonoBehaviour, IInteract
     public SequenceChecker sequenceChecker;
     public int chimeID;
     [SerializeField] private Animator chimeAnimator;
+    private float lastKeyPressTime = 0f;
+    public float cooldownDuration = 1f;
 
     public void OnMouseDown()
     {
+        // check if enough times passed
+        if (Time.time - lastKeyPressTime < cooldownDuration || !SequenceChecker.CanClickChime)
+        {
+            return; // not long enough / playing sequence hint :(
+        }
+        lastKeyPressTime = Time.time;
         chimeAnimator.SetTrigger($"Hit {chimeID}"); // animate hit
         // check if the floral puzzle is matched
         // if (!true)
