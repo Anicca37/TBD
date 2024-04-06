@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4397549, g: 0.4881792, b: 0.5683983, a: 1}
+  m_IndirectSpecularColor: {r: 0.43975514, g: 0.48817998, b: 0.5683994, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3634,6 +3634,53 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 188381552}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &189423581
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 189423583}
+  - component: {fileID: 189423582}
+  m_Layer: 0
+  m_Name: VoiceLineManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &189423582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189423581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c78c5c08ff51488ebb057930ebc6869, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  subtitleText: {fileID: 0}
+  additionalDisplayTime: 3
+  timePerCharacter: 0.025
+--- !u!4 &189423583
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189423581}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 259.70523, y: 23.701952, z: 176.62466}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &193669793
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22349,10 +22396,6 @@ MonoBehaviour:
   playerCamera: {fileID: 1399906519}
   scalesCamera: {fileID: 1924483801}
   birdCamera: {fileID: 824133545}
-  isFloralMatched: 0
-  isWindChimesPlayed: 0
-  isScaleBalanced: 0
-  isClockSet: 0
   waterObject: {fileID: 2095376089}
   vineGrowthController: {fileID: 2048882562}
   riseSpeed: 3.5
@@ -22364,7 +22407,7 @@ MonoBehaviour:
   birdAnimator: {fileID: 1296807786}
   shockwaveCooldown: 1
   isReset: 0
-  sampleVoiceLine: {fileID: 11400000, guid: d0272c9d81fb044d18842263da475d11, type: 2}
+  enterGarden: {fileID: 11400000, guid: af0a44920f0cd74459f7e051be04e6c2, type: 2}
 --- !u!4 &1070179845
 Transform:
   m_ObjectHideFlags: 0
@@ -49242,6 +49285,7 @@ SceneRoots:
   - {fileID: 1805985172}
   - {fileID: 1217032251}
   - {fileID: 1070179845}
+  - {fileID: 189423583}
   - {fileID: 523503969}
   - {fileID: 720330132}
   - {fileID: 1984765166}

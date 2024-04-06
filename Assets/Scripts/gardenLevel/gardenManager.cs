@@ -17,10 +17,10 @@ public class GardenManager : MonoBehaviour
     public Camera scalesCamera;
     public Camera birdCamera;
 
-    public bool isFloralMatched = false;
-    public bool isWindChimesPlayed = false;
-    public bool isScaleBalanced = false;
-    public bool isClockSet = false;
+    private bool isFloralMatched = false;
+    private bool isWindChimesPlayed = false;
+    private bool isScaleBalanced = false;
+    private bool isClockSet = false;
 
     public GameObject waterObject;
     public VineGrowthController vineGrowthController;
@@ -54,7 +54,7 @@ public class GardenManager : MonoBehaviour
 
     private bool isScaleBalanceSoundPlayed = false;
 
-    [SerializeField] private VoiceLine sampleVoiceLine;
+    [SerializeField] private VoiceLine enterGarden;
 
 
 
@@ -91,13 +91,14 @@ public class GardenManager : MonoBehaviour
         VoiceLineManager.Instance.AssignSubtitleTextComponent();
 
         // Now it's safe to use VoiceLineManager.Instance
-        VoiceLineManager.Instance.PlayVoiceLine(sampleVoiceLine);
+        VoiceLineManager.Instance.PlayVoiceLine(enterGarden);
     }
 
     public bool IsFloralMatched()
     {
         return isFloralMatched;
     }
+    
     public bool IsWindChimesPlayed
     { get { return isWindChimesPlayed; } }
 

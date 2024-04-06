@@ -23,7 +23,6 @@ public class TutorialManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            // DontDestroyOnLoad(gameObject);
             player = GameObject.Find("Player");
             playerController = player.GetComponent<CharacterController>();
 

@@ -19,7 +19,8 @@ public class PlayPlaceManager : MonoBehaviour
     [SerializeField] private Animator doorAnimator;
     public GameObject player;
 
-    [SerializeField] private VoiceLine sampleVoiceLine;
+    [SerializeField] private VoiceLine enterPlayPlace;
+    [SerializeField] private VoiceLine completeClock;
 
 
     void Awake()
@@ -48,14 +49,19 @@ public class PlayPlaceManager : MonoBehaviour
         VoiceLineManager.Instance.AssignSubtitleTextComponent();
 
         // Now it's safe to use VoiceLineManager.Instance
-        VoiceLineManager.Instance.PlayVoiceLine(sampleVoiceLine);
+        VoiceLineManager.Instance.PlayVoiceLine(enterPlayPlace);
     }
+
     public void CompletePuzzle(string puzzleName)
     {
         switch (puzzleName)
         {
             case "ClockInteraction":
                 isClockInteracted = playPlaceLightController.IsPlayPlaceOpen();
+                if (isClockInteracted)
+                {
+                    VoiceLineManager.Instance.PlayVoiceLine(completeClock);
+                }
                 break;
             case "BlockSorting":
                 areBlocksSorted = true;
