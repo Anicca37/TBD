@@ -68,13 +68,15 @@ public class PlayPlaceManager : MonoBehaviour
                 RevealXylophoneSequence();
                 break;
             case "Xylophone":
-                if (!areBlocksSorted) // Xylophone played too early
+                if (!isClockInteracted || !areBlocksSorted) // Xylophone played too early
                 {
+                    // Debug.Log("Balls!!!");
                     TriggerBallAvalanche();
                 }
                 else
                 {
-                    if (!isXylophoneSequenceCorrect)
+                    // Debug.Log($"Correct sequence!!!");
+                    if (areBlocksSorted && !isXylophoneSequenceCorrect)
                     {
                         isXylophoneSequenceCorrect = true;
                         OpenTunnel(); // Unlock the escape mechanism

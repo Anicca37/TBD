@@ -50,6 +50,7 @@ namespace AK
         static const AkUniqueID PLAY_PAGETURN = 2771828150U;
         static const AkUniqueID PLAY_PINECONEPICKUP = 3549239601U;
         static const AkUniqueID PLAY_PLAYEREATEN = 3659914468U;
+        static const AkUniqueID PLAY_POOF = 1551805630U;
         static const AkUniqueID PLAY_SCALE_BALANCING = 2809285424U;
         static const AkUniqueID PLAY_SLIDEDOOROPEN_1 = 1324211945U;
         static const AkUniqueID PLAY_STATUE_LOUD = 976664737U;
@@ -58,6 +59,7 @@ namespace AK
         static const AkUniqueID PLAY_VINE_GROWING = 4090890880U;
         static const AkUniqueID PLAY_WATERFLOODING = 2908863451U;
         static const AkUniqueID PLAY_WATERFLOW = 518242827U;
+        static const AkUniqueID PLAY_WHAT_JUST_HAPPENED_1 = 3233041731U;
         static const AkUniqueID PLAY_WIN = 2955987680U;
         static const AkUniqueID PLAY_WIND_BLOWING = 2075190801U;
         static const AkUniqueID PLAY_WINDCHIME = 4235265352U;

@@ -217,7 +217,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{1D0CB3EC-51C5-F578-8027-189B6E557A3B}">
+		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{CDB27874-D62C-49EC-58F5-6B75D68191D3}">
 			<ShortName>Level2Garden</ShortName>
 			<Path>Level2Garden.bnk</Path>
 			<Media>
@@ -373,6 +373,10 @@
 					<ShortName>WaterFlooding.wav</ShortName>
 					<CachePath>SFX/WaterFlooding_FD5F1BBD.wem</CachePath>
 				</File>
+				<File Id="545651926" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>What_just_happened_1.wav</ShortName>
+					<CachePath>SFX/What_just_happened_1_40593100.wem</CachePath>
+				</File>
 				<File Id="558199229" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section2\mus_90bpm_Level2_Section2_Kick.wav</ShortName>
 					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Section2/mus_90bpm_Level2_Section2_Kick_239921B3.wem</CachePath>
@@ -421,6 +425,10 @@
 					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section1\mus_90bpm_Level2_Section1_Chords.wav</ShortName>
 					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Section1/mus_90bpm_Level2_Section1_Chords_239921B3.wem</CachePath>
 				</File>
+				<File Id="680841763" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Poof\Poof_3.wav</ShortName>
+					<CachePath>SFX/Poof/Poof_3_8E324C96.wem</CachePath>
+				</File>
 				<File Id="690728280" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Tran\mus_90bpm_Level2_Tran Kick.wav</ShortName>
 					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Tran/mus_90bpm_Level2_Tran Kick_239921B3.wem</CachePath>
@@ -436,6 +444,10 @@
 				<File Id="747524387" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PickUp_Pinecone_2.wav</ShortName>
 					<CachePath>SFX/PickUp_Pinecone_2_8E324C96.wem</CachePath>
+				</File>
+				<File Id="773465686" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Poof\Poof_2.wav</ShortName>
+					<CachePath>SFX/Poof/Poof_2_8E324C96.wem</CachePath>
 				</File>
 				<File Id="776713045" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PageTurn\PageTurn_3.wav</ShortName>
@@ -704,6 +716,12 @@
 						<MediaRef Id="433162066"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1551805630" Name="Play_Poof" DurationType="OneShot" DurationMin="1.7236667" DurationMax="1.75375">
+					<MediaRefs>
+						<MediaRef Id="680841763"/>
+						<MediaRef Id="773465686"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2809285424" Name="Play_Scale_Balancing" MaxAttenuation="100" DurationType="OneShot" DurationMin="2.8929884" DurationMax="2.8929884">
 					<MediaRefs>
 						<MediaRef Id="863478286"/>
@@ -727,6 +745,11 @@
 				<Event Id="518242827" Name="Play_Waterflow" MaxAttenuation="100" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="39073760"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3233041731" Name="Play_What_just_happened_1" DurationType="OneShot" DurationMin="1.840842" DurationMax="1.840842">
+					<MediaRefs>
+						<MediaRef Id="545651926"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2955987680" Name="Play_Win" DurationType="OneShot" DurationMin="1" DurationMax="1">
@@ -763,7 +786,7 @@
 				<Event Id="1663839887" Name="Stop_Wind_Blowing" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{A7E61A1D-CD4A-0D48-0B86-6DD2B1304345}">
+		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{B8FB585C-054E-1AAD-3D57-0F5EDE81DED8}">
 			<ShortName>Level1PlayPlace</ShortName>
 			<Path>Level1PlayPlace.bnk</Path>
 			<Media>
@@ -963,6 +986,10 @@
 					<ShortName>Confetti_2.wav</ShortName>
 					<CachePath>SFX/Confetti_2_8E324C96.wem</CachePath>
 				</File>
+				<File Id="545651926" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>What_just_happened_1.wav</ShortName>
+					<CachePath>SFX/What_just_happened_1_40593100.wem</CachePath>
+				</File>
 				<File Id="545916312" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>XyloE.wav</ShortName>
 					<CachePath>SFX/XyloE_188F0B08.wem</CachePath>
@@ -1027,6 +1054,10 @@
 					<ShortName>Bird02-001.wav</ShortName>
 					<CachePath>SFX/Bird02-001_8E324C96.wem</CachePath>
 				</File>
+				<File Id="680841763" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Poof\Poof_3.wav</ShortName>
+					<CachePath>SFX/Poof/Poof_3_8E324C96.wem</CachePath>
+				</File>
 				<File Id="700689704" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BlockPickup_1.wav</ShortName>
 					<CachePath>SFX/BlockPickup_1_B9F32486.wem</CachePath>
@@ -1066,6 +1097,10 @@
 				<File Id="763579394" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BallImpact\Ball_Impact_11.wav</ShortName>
 					<CachePath>SFX/BallImpact/Ball_Impact_11_5AF2D7FA.wem</CachePath>
+				</File>
+				<File Id="773465686" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Poof\Poof_2.wav</ShortName>
+					<CachePath>SFX/Poof/Poof_2_8E324C96.wem</CachePath>
 				</File>
 				<File Id="776713045" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PageTurn\PageTurn_3.wav</ShortName>
@@ -1311,9 +1346,20 @@
 						<MediaRef Id="879919748"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1551805630" Name="Play_Poof" DurationType="OneShot" DurationMin="1.7236667" DurationMax="1.75375">
+					<MediaRefs>
+						<MediaRef Id="680841763"/>
+						<MediaRef Id="773465686"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1324211945" Name="Play_SlideDoorOpen_1" DurationType="OneShot" DurationMin="1.7018958" DurationMax="1.7018958">
 					<MediaRefs>
 						<MediaRef Id="374259416"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3233041731" Name="Play_What_just_happened_1" DurationType="OneShot" DurationMin="1.840842" DurationMax="1.840842">
+					<MediaRefs>
+						<MediaRef Id="545651926"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2955987680" Name="Play_Win" DurationType="OneShot" DurationMin="1" DurationMax="1">
@@ -1362,7 +1408,7 @@
 				<GameParameter Id="185769106" Name="Lv1_LightOn"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{B38C9F4E-3FEE-55FC-CA4B-404A003B1ED9}">
+		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{5312B81C-D837-FA1F-37AD-6DFC4B51256B}">
 			<ShortName>Level0</ShortName>
 			<Path>Level0.bnk</Path>
 			<Media>
@@ -1438,6 +1484,10 @@
 					<ShortName>Quest_Game_Crafting_Wood_-1.wav</ShortName>
 					<CachePath>SFX/Quest_Game_Crafting_Wood_-1_2D61A4DB.wem</CachePath>
 				</File>
+				<File Id="545651926" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>What_just_happened_1.wav</ShortName>
+					<CachePath>SFX/What_just_happened_1_40593100.wem</CachePath>
+				</File>
 				<File Id="583454713" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bird01-002.wav</ShortName>
 					<CachePath>SFX/Bird01-002_8E324C96.wem</CachePath>
@@ -1445,6 +1495,14 @@
 				<File Id="670277016" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bird02-001.wav</ShortName>
 					<CachePath>SFX/Bird02-001_8E324C96.wem</CachePath>
+				</File>
+				<File Id="680841763" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Poof\Poof_3.wav</ShortName>
+					<CachePath>SFX/Poof/Poof_3_8E324C96.wem</CachePath>
+				</File>
+				<File Id="773465686" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Poof\Poof_2.wav</ShortName>
+					<CachePath>SFX/Poof/Poof_2_8E324C96.wem</CachePath>
 				</File>
 				<File Id="776713045" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PageTurn\PageTurn_3.wav</ShortName>
@@ -1552,6 +1610,12 @@
 						<MediaRef Id="879919748"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1551805630" Name="Play_Poof" DurationType="OneShot" DurationMin="1.7236667" DurationMax="1.75375">
+					<MediaRefs>
+						<MediaRef Id="680841763"/>
+						<MediaRef Id="773465686"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1525201045" Name="Play_TableDrop" DurationType="OneShot" DurationMin="0.4191475" DurationMax="0.5105013">
 					<MediaRefs>
 						<MediaRef Id="181112472"/>
@@ -1563,6 +1627,11 @@
 						<MediaRef Id="12980260"/>
 						<MediaRef Id="414646934"/>
 						<MediaRef Id="515135351"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3233041731" Name="Play_What_just_happened_1" DurationType="OneShot" DurationMin="1.840842" DurationMax="1.840842">
+					<MediaRefs>
+						<MediaRef Id="545651926"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2955987680" Name="Play_Win" DurationType="OneShot" DurationMin="1" DurationMax="1">
@@ -1598,5 +1667,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{DD91CFB3-0B95-2B32-8758-28839614C34D}</FileHash>
+	<FileHash>{071F267B-FAEA-216A-AB62-D13186456E96}</FileHash>
 </SoundBanksInfo>
