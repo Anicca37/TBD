@@ -21,6 +21,7 @@ public class PlayPlaceManager : MonoBehaviour
 
     [SerializeField] private VoiceLine enterPlayPlace;
     [SerializeField] private VoiceLine completeClock;
+    private bool completeClockPlayed = false;
 
 
     void Awake()
@@ -58,9 +59,14 @@ public class PlayPlaceManager : MonoBehaviour
         {
             case "ClockInteraction":
                 isClockInteracted = playPlaceLightController.IsPlayPlaceOpen();
-                if (isClockInteracted)
+                if (isClockInteracted && !completeClockPlayed)
                 {
                     VoiceLineManager.Instance.PlayVoiceLine(completeClock);
+                    completeClockPlayed = true;
+                }
+                if (!isClockInteracted && completeClockPlayed)
+                {
+                    completeClockPlayed = false;
                 }
                 break;
             case "BlockSorting":
