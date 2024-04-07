@@ -9,6 +9,7 @@ public class PlayPlaceLightController : MonoBehaviour
     public GameObject[] flouresLights;
     public GameObject[] cameras;
     public GameObject[] blocks;
+    public GameObject signPlane;
     public Material[] defaultMaterials;
     public Material[] glowingMaterials;
     public ClockManipulation clockController;
@@ -97,7 +98,7 @@ public class PlayPlaceLightController : MonoBehaviour
         currentLight.intensity = 1f;
         openSign.SetActive(!isOpen);
         openSignOn.SetActive(isOpen);
-        UpdateBlockMaterial(isOpen);
+        UpdateGlowMaterial(isOpen);
     }
 
     private void BlinkAndToggle(bool isOpen)
@@ -139,7 +140,7 @@ public class PlayPlaceLightController : MonoBehaviour
         }
     }
 
-    private void UpdateBlockMaterial(bool isOpen)
+    private void UpdateGlowMaterial(bool isOpen)
     {
         for (int i = 0; i < blocks.Length; i++)
         {
@@ -149,6 +150,7 @@ public class PlayPlaceLightController : MonoBehaviour
                 child.gameObject.GetComponent<Renderer>().material = isOpen ? defaultMaterials[i] : glowingMaterials[i];
             }
         }
+        signPlane.GetComponent<Renderer>().material = isOpen ? defaultMaterials[5] : glowingMaterials[3];
     }
 
     private void LightSoundReset()
