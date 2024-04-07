@@ -550,7 +550,7 @@ MonoBehaviour:
   videoPlayer: {fileID: 669308435}
   nextSceneName: GardenIntro
   loadingScreen: {fileID: 0}
-  EscapeController: {fileID: 1567885239}
+  EscapeController: {fileID: 2066891971}
 --- !u!1 &669308434
 GameObject:
   m_ObjectHideFlags: 0
@@ -702,11 +702,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1567885239 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6915117582056611999, guid: 4e77891da6235c544874e211040bf806, type: 3}
-  m_PrefabInstance: {fileID: 2066891970}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2035575818
 GameObject:
   m_ObjectHideFlags: 0
@@ -952,7 +947,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2239580874078345831, guid: 4e77891da6235c544874e211040bf806, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4717434637486546091, guid: 4e77891da6235c544874e211040bf806, type: 3}
       propertyPath: m_Pivot.x
@@ -1046,6 +1041,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4972451022016031364, guid: 4e77891da6235c544874e211040bf806, type: 3}
+      propertyPath: optionMenuController
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6727456748951716550, guid: 4e77891da6235c544874e211040bf806, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
@@ -1055,10 +1054,38 @@ PrefabInstance:
       value: Screen UI
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1848298761665054588, guid: 4e77891da6235c544874e211040bf806, type: 3}
+    - {fileID: 8856032812779514927, guid: 4e77891da6235c544874e211040bf806, type: 3}
+    - {fileID: 2487103001531743563, guid: 4e77891da6235c544874e211040bf806, type: 3}
+    - {fileID: 3146105956324141502, guid: 4e77891da6235c544874e211040bf806, type: 3}
+    - {fileID: 4981603693616437664, guid: 4e77891da6235c544874e211040bf806, type: 3}
+    - {fileID: 2158679880684848594, guid: 4e77891da6235c544874e211040bf806, type: 3}
+    - {fileID: 4016883350021936513, guid: 4e77891da6235c544874e211040bf806, type: 3}
+    - {fileID: 8644578162015035510, guid: 4e77891da6235c544874e211040bf806, type: 3}
+    - {fileID: 1404876069602382394, guid: 4e77891da6235c544874e211040bf806, type: 3}
+    - {fileID: 5045474383867425675, guid: 4e77891da6235c544874e211040bf806, type: 3}
+    - {fileID: 3927515885531913549, guid: 4e77891da6235c544874e211040bf806, type: 3}
+    - {fileID: 7601043337222683184, guid: 4e77891da6235c544874e211040bf806, type: 3}
+    - {fileID: 8872320893814109825, guid: 4e77891da6235c544874e211040bf806, type: 3}
+    - {fileID: 2538427188689252481, guid: 4e77891da6235c544874e211040bf806, type: 3}
+    - {fileID: 7032179025579556369, guid: 4e77891da6235c544874e211040bf806, type: 3}
+    - {fileID: 8051573863330611934, guid: 4e77891da6235c544874e211040bf806, type: 3}
+    - {fileID: 5644000486559965449, guid: 4e77891da6235c544874e211040bf806, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e77891da6235c544874e211040bf806, type: 3}
+--- !u!114 &2066891971 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8473310225756458433, guid: 4e77891da6235c544874e211040bf806, type: 3}
+  m_PrefabInstance: {fileID: 2066891970}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a9eca22d8848fe4e9535d49e1e4898e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2116484842
 GameObject:
   m_ObjectHideFlags: 0
