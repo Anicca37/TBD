@@ -43,8 +43,6 @@ public class GardenManager : MonoBehaviour
 
     public AttachPineconeToScale attachPinecone;
 
-    public GameObject scaleBeam;
-
     [SerializeField] private Animator scaleAnimator;
     [SerializeField] private Animator birdAnimator;
 
