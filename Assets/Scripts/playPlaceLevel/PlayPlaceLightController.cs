@@ -9,6 +9,7 @@ public class PlayPlaceLightController : MonoBehaviour
     public GameObject[] flouresLights;
     public GameObject[] cameras;
     public GameObject[] blocks;
+    public GameObject[] xylophones;
     public GameObject signPlane;
     public Material[] defaultMaterials;
     public Material[] glowingMaterials;
@@ -151,6 +152,10 @@ public class PlayPlaceLightController : MonoBehaviour
             }
         }
         signPlane.GetComponent<Renderer>().material = isOpen ? defaultMaterials[5] : glowingMaterials[3];
+        for (int i = 0; i < xylophones.Length; i++)
+        {
+            xylophones[i].GetComponent<Renderer>().material = isOpen ? defaultMaterials[6+i] : glowingMaterials[5+i];
+        }
     }
 
     private void LightSoundReset()
