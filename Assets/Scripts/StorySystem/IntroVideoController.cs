@@ -9,13 +9,14 @@ public class IntroVideoController : MonoBehaviour
     public VideoPlayer videoPlayer;
     public string nextSceneName = "DemoLevel";
     public GameObject loadingScreen;
-    public GameObject EscapeController;
+    public EscapeMenuController EscapeController;
 
+    private bool IsEndReached = false;
 
     void Start()
     {
         videoPlayer.playOnAwake = false;
-
+        IsEndReached = false;
         if (videoPlayer == null)
         {
             videoPlayer = GetComponent<VideoPlayer>();
@@ -61,7 +62,7 @@ public class IntroVideoController : MonoBehaviour
     void Update()
     {
         // Check for the Enter key to skip the video
-        if (InputManager.instance.ConfirmInput)
+        if (InputManager.instance.ConfirmInput && !IsEndReached)
         {
             SkipVideo();
 
@@ -86,6 +87,7 @@ public class IntroVideoController : MonoBehaviour
 
     void EndReached(VideoPlayer vp)
     {
+        IsEndReached = true;
         LoadNextScene();
     }
 
@@ -100,17 +102,23 @@ public class IntroVideoController : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "PlayPlaceEnd")
         {
             StartCoroutine(DelayedEscapeActivation());
-        } else {
+        }
+        else if (SceneManager.GetActiveScene().name == "GardenEnd")
+        {
+            StartCoroutine(DelayedEscapeActivation());
+        }
+        else {
             SceneManager.LoadScene(nextSceneName);
         }
     }
-
+    
     IEnumerator DelayedEscapeActivation()
     {
         yield return new WaitForSeconds(0.5f); 
-        EscapeController.GetComponent<EscapeMenuController>().OnEscapeActivated();
+        EscapeMenuController.ReserveEscape();
+        EscapeController.InitializeEscapeMenu();
     }
-    
+
     void playPlayPlaceCutSceneSound()
     {
         AkSoundEngine.PostEvent("Play_BallPitCutScene", this.gameObject);
