@@ -50,6 +50,7 @@ public class GardenManager : MonoBehaviour
     private float lastShockwaveTime = -Mathf.Infinity; // Initialize with a value that allows immediate use
     private bool StatueLoudPlayed = false;
     private bool isTrapActive = false;
+    private bool isVenusFlytrapBloomed = false;
     public bool isReset = false;
 
     private bool isScaleBalanceSoundPlayed = false;
@@ -201,6 +202,11 @@ public class GardenManager : MonoBehaviour
 
     void MakeVenusFlytrapBloom()
     {
+        if (isVenusFlytrapBloomed)
+        {
+            return;
+        }
+        isVenusFlytrapBloomed = true;
         Debug.Log("Venus flytrap blooms, revealing escape path.");
         VenusFlytrap.GetComponent<VenusFlytrapController>().VenusFlytrapGrow();
         if (isTrapActive == false)
