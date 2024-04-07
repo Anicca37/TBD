@@ -9,6 +9,7 @@ public class IntroVideoController : MonoBehaviour
     public VideoPlayer videoPlayer;
     public string nextSceneName = "DemoLevel";
     public GameObject loadingScreen;
+    public GameObject EscapeController;
 
 
     void Start()
@@ -96,7 +97,18 @@ public class IntroVideoController : MonoBehaviour
 
     void LoadNextScene()
     {
-        SceneManager.LoadScene(nextSceneName);
+        if (SceneManager.GetActiveScene().name == "PlayPlaceEnd")
+        {
+            StartCoroutine(DelayedEscapeActivation());
+        } else {
+            SceneManager.LoadScene(nextSceneName);
+        }
+    }
+
+    IEnumerator DelayedEscapeActivation()
+    {
+        yield return new WaitForSeconds(0.5f); 
+        EscapeController.GetComponent<EscapeMenuController>().OnEscapeActivated();
     }
     
     void playPlayPlaceCutSceneSound()
@@ -112,3 +124,4 @@ public class IntroVideoController : MonoBehaviour
         AkSoundEngine.PostEvent("Play_GardenEndCutScene", this.gameObject);
     }
 }
+

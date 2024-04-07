@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ColorMatch : MonoBehaviour
 {
-    public string colorName; 
-    public GameObject windEffectPrefab; 
+    public string colorName;
+    public GameObject windEffectPrefab;
     public static int matchedFlowersCount = 0;
     private const int totalFlowers = 5;
     public ParticleSystem windParticleSystem;
@@ -75,8 +75,10 @@ public class ColorMatch : MonoBehaviour
 
     public void playCorrectSound()
     {
+        SequenceChecker.CanClickChime = false; // disable clicking on chimes
         GameObject TheChimes = GameObject.Find("Wind Chime");
         AkSoundEngine.PostEvent("Play_Chime_Melody", TheChimes.gameObject);
+        Invoke("EnableChimeClicking", 3f); // enable clicking on chimes
     }
 
     void AutomaticallyDropFlower(GameObject flower)
@@ -84,6 +86,11 @@ public class ColorMatch : MonoBehaviour
         playerPickup playerPickupScript = flower.GetComponentInParent<playerPickup>();
         playerPickupScript.DropObject();
         flower.tag = "Untagged";
-      
+
+    }
+
+    void EnableChimeClicking()
+    {
+        SequenceChecker.CanClickChime = true;
     }
 }

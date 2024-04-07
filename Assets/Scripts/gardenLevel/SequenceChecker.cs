@@ -14,6 +14,7 @@ public class SequenceChecker : MonoBehaviour
     public Camera actionCamera;
     public Animator birdAnimator;
     [SerializeField] private Animator textAnimator;
+    public static bool CanClickChime = true;
 
     public void ChimeClicked(int chimeID)
     {
@@ -38,6 +39,7 @@ public class SequenceChecker : MonoBehaviour
             currentSequenceIndex = 0; // reset if wrong is clicked
             wrongAttempts++;
             Debug.Log($"Wrong attempt #{wrongAttempts}");
+            CanClickChime = false; // disable clicking
             //play sound
             if (ifCorrectSoundPlayed == false)
             {
@@ -75,6 +77,7 @@ public class SequenceChecker : MonoBehaviour
             textAnimator.SetTrigger("Hint C");
             Invoke("resetHintAnimation", 2.75f);
         }
+        Invoke("EnableChimeClicking", 2.75f);
     }
     void resetHintAnimation()
     {
@@ -110,5 +113,10 @@ public class SequenceChecker : MonoBehaviour
         cameraToDisable.gameObject.SetActive(false);
         cameraToEnable.gameObject.SetActive(true);
 
+    }
+
+    void EnableChimeClicking()
+    {
+        CanClickChime = true;
     }
 }
