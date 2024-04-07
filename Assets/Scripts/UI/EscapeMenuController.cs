@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class EscapeMenuController : MonoBehaviour
 {
@@ -61,13 +62,22 @@ public class EscapeMenuController : MonoBehaviour
         }
         if (SceneManager.GetActiveScene().name == "Garden_3 - Terrain")
         {
-            SceneManager.LoadScene("GardenEnd");
+            StartCoroutine(DelayedLoadGardenEndScene());
         }
-        if (SceneManager.GetActiveScene().name == "PlayPlace Remap")
+        else if (SceneManager.GetActiveScene().name == "PlayPlace Remap")
         {
             SceneManager.LoadScene("PlayPlaceEnd");
         }
-        InitializeEscapeMenu();
+        else 
+        {
+            InitializeEscapeMenu();
+        }
+    }
+
+    IEnumerator DelayedLoadGardenEndScene()
+    {
+        yield return new WaitForSeconds(2.5f); 
+        SceneManager.LoadScene("GardenEnd");
     }
 
     private void Update()
@@ -155,7 +165,7 @@ public class EscapeMenuController : MonoBehaviour
                 {
                     SceneManager.LoadScene("IntroCutScene");
                 }
-                else if (SceneManager.GetActiveScene().name == "PlayPlace Remap" || SceneManager.GetActiveScene().name == "PlayPlaceEnd")
+                else if (SceneManager.GetActiveScene().name.Contains("PlayPlace"))
                 {
                     SceneManager.LoadScene("PlayPlaceIntro");
                 }
@@ -165,10 +175,14 @@ public class EscapeMenuController : MonoBehaviour
                 {
                    SceneManager.LoadScene("PlayPlaceIntro");
                 }
-                else if (SceneManager.GetActiveScene().name == "PlayPlaceEnd")
+                else if (SceneManager.GetActiveScene().name.Contains("PlayPlace"))
                 {
                     SceneManager.LoadScene("GardenIntro");
-                }                
+                }
+                else if (SceneManager.GetActiveScene().name.Contains("Garden"))
+                {
+                    SceneManager.LoadScene("UI");
+                }              
                 break;
             case MenuOption.Menu:
                 SceneManager.LoadScene("UI");

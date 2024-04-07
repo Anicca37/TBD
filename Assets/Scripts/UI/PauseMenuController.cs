@@ -23,6 +23,7 @@ public class PauseMenuController : MonoBehaviour
     {
         playerBody = GameObject.Find("Player");
         GameObject journalObject = GameObject.Find("Journal");
+
         if (journalObject != null)
         {
             book = journalObject.GetComponent<Book>();
@@ -31,11 +32,13 @@ public class PauseMenuController : MonoBehaviour
                 book.enabled = true;
             }
         }
-        isPaused = false;
+
         if (optionMenuController != null)
         {
             optionMenuController.GetComponent<OptionsMenuController>().enabled = false;
         }
+
+        isPaused = false;
     }
 
     public void InitializePauseMenu()
@@ -54,7 +57,7 @@ public class PauseMenuController : MonoBehaviour
 
     private void LockCameraRotation(bool lockRotation)
     {
-        if (Camera.main == null || SceneManager.GetActiveScene().name == "PlayPlaceEnd")
+        if (Camera.main == null)
         {
             return;
         }
@@ -81,6 +84,7 @@ public class PauseMenuController : MonoBehaviour
             {
                 book.enabled = false;
             }
+
             // handle input
             if (InputManager.instance.SelectionUpInput)
             {
@@ -186,11 +190,6 @@ public class PauseMenuController : MonoBehaviour
                 {
                     SceneManager.LoadScene("PlayPlaceIntro");
                 }
-                else if (SceneManager.GetActiveScene().name == "PlayPlaceEnd")
-                {
-                    SceneManager.LoadScene("PlayPlaceIntro");
-                }
-            
                 break;
             case MenuOption.Options:
                 optionsOptionSelectedSprite.SetActive(false);
