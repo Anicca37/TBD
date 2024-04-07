@@ -159,7 +159,7 @@ public class GardenManager : MonoBehaviour
 
             if (isScaleBalanceSoundPlayed == false)
             {
-                GameObject theScale = GameObject.Find("scale");
+                GameObject theScale = GameObject.Find("Scale");
                 AkSoundEngine.PostEvent("Play_Scale_Balancing", theScale.gameObject);
                 isScaleBalanceSoundPlayed = true;
             }

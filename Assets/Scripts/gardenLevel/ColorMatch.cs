@@ -67,8 +67,8 @@ public class ColorMatch : MonoBehaviour
             // windParticleSystem.Play();
             windHint.SetActive(true);
 
-            //play sound
-            GameObject TheWind = GameObject.Find("wind");
+            // play sound
+            GameObject TheWind = GameObject.Find("WindHint");
             AkSoundEngine.PostEvent("Play_Wind_Blowing", TheWind.gameObject);
             GameObject TheChimes = GameObject.Find("Wind Chime");
             AkSoundEngine.PostEvent("Play_WindChime", TheChimes.gameObject);
