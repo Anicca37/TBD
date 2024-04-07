@@ -22,8 +22,15 @@ public class PauseMenuController : MonoBehaviour
     private void Start()
     {
         playerBody = GameObject.Find("Player");
-        book = GameObject.Find("Journal").GetComponent<Book>();
-        book.enabled = true;
+        GameObject journalObject = GameObject.Find("Journal");
+        if (journalObject != null)
+        {
+            book = journalObject.GetComponent<Book>();
+            if (book != null)
+            {
+                book.enabled = true;
+            }
+        }
         isPaused = false;
         if (optionMenuController != null)
         {
@@ -47,7 +54,7 @@ public class PauseMenuController : MonoBehaviour
 
     private void LockCameraRotation(bool lockRotation)
     {
-        if (Camera.main == null)
+        if (Camera.main == null || SceneManager.GetActiveScene().name == "PlayPlaceEnd")
         {
             return;
         }
@@ -63,12 +70,17 @@ public class PauseMenuController : MonoBehaviour
         }
         if (isPaused)
         {
-            playerBody.GetComponent<playerMovement>().enabled = false;
-            playerBody.GetComponent<playerPickup>().DropObject();
+            if (playerBody != null){
+                playerBody.GetComponent<playerMovement>().enabled = false;
+                playerBody.GetComponent<playerPickup>().DropObject();
+            }
             Crosshair.SetActive(false);
             HandGrab.SetActive(false);
             LockCameraRotation(true);
-            book.enabled = false;
+            if (book != null)
+            {
+                book.enabled = false;
+            }
             // handle input
             if (InputManager.instance.SelectionUpInput)
             {
@@ -154,7 +166,9 @@ public class PauseMenuController : MonoBehaviour
             case MenuOption.Resume:
                 isPaused = false;
                 resumeOptionSelectedSprite.SetActive(false);
-                playerBody.GetComponent<playerMovement>().enabled = true;
+                if (playerBody!=null){
+                    playerBody.GetComponent<playerMovement>().enabled = true;
+                }
                 Crosshair.SetActive(true);
                 LockCameraRotation(false);
                 book.enabled = true;
@@ -162,16 +176,21 @@ public class PauseMenuController : MonoBehaviour
             case MenuOption.Restart:
                 if (SceneManager.GetActiveScene().name.Contains("Garden"))
                 {
-                    GardenManager.Instance.ResetPuzzles();
+                    SceneManager.LoadScene("GardenIntro");
                 }
                 else if (SceneManager.GetActiveScene().name == "DemoLevel")
                 {
-                    TutorialManager.Instance.ResetPuzzles();
+                    SceneManager.LoadScene("IntroCutScene");
                 }
                 else if (SceneManager.GetActiveScene().name == "PlayPlace Remap")
                 {
-                    PlayPlaceManager.Instance.ResetPuzzles();
+                    SceneManager.LoadScene("PlayPlaceIntro");
                 }
+                else if (SceneManager.GetActiveScene().name == "PlayPlaceEnd")
+                {
+                    SceneManager.LoadScene("PlayPlaceIntro");
+                }
+            
                 break;
             case MenuOption.Options:
                 optionsOptionSelectedSprite.SetActive(false);

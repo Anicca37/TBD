@@ -20,12 +20,21 @@ public class EscapeMenuController : MonoBehaviour
     private void Start()
     {
         playerBody = GameObject.Find("Player");
-        book = GameObject.Find("Journal").GetComponent<Book>();
-        book.enabled = true;
+        GameObject journalObject = GameObject.Find("Journal");
+
+        if (journalObject != null)
+        {
+            book = journalObject.GetComponent<Book>();
+            if (book != null)
+            {
+                book.enabled = true;
+            }
+        }
+
         isEscaped = false;
     }
 
-    private void InitializeEscapeMenu()
+    public void InitializeEscapeMenu()
     {
         Crosshair.SetActive(false);
         HandGrab.SetActive(false);
@@ -50,6 +59,14 @@ public class EscapeMenuController : MonoBehaviour
         {
             isEscaped = true;
         }
+        if (SceneManager.GetActiveScene().name == "Garden_3 - Terrain")
+        {
+            SceneManager.LoadScene("GardenEnd");
+        }
+        if (SceneManager.GetActiveScene().name == "PlayPlace Remap")
+        {
+            SceneManager.LoadScene("PlayPlaceEnd");
+        }
         InitializeEscapeMenu();
     }
 
@@ -57,8 +74,14 @@ public class EscapeMenuController : MonoBehaviour
     {
         if (isEscaped)
         {
-            playerBody.GetComponent<playerMovement>().enabled = false;
-            book.enabled = false;
+            if (playerBody != null){
+                playerBody.GetComponent<playerMovement>().enabled = false;
+            }
+            
+            if (book != null)
+            {
+                book.enabled = true;
+            }
             // handle input
             if (InputManager.instance.SelectionUpInput)
             {
@@ -73,7 +96,7 @@ public class EscapeMenuController : MonoBehaviour
                 SelectOption();
             }
         }
-    }
+    } 
 
     private void MoveSelectionUp()
     {
@@ -126,27 +149,23 @@ public class EscapeMenuController : MonoBehaviour
             case MenuOption.Restart:
                 if (SceneManager.GetActiveScene().name.Contains("Garden"))
                 {
-                    GardenManager.Instance.ResetPuzzles();
+                    SceneManager.LoadScene("GardenIntro");
                 }
                 else if (SceneManager.GetActiveScene().name == "DemoLevel")
                 {
-                    TutorialManager.Instance.ResetPuzzles();
+                    SceneManager.LoadScene("IntroCutScene");
                 }
-                else if (SceneManager.GetActiveScene().name == "PlayPlace Remap")
+                else if (SceneManager.GetActiveScene().name == "PlayPlace Remap" || SceneManager.GetActiveScene().name == "PlayPlaceEnd")
                 {
-                    PlayPlaceManager.Instance.ResetPuzzles();
+                    SceneManager.LoadScene("PlayPlaceIntro");
                 }
                 break;
             case MenuOption.Next:
-                if (SceneManager.GetActiveScene().name == "Garden_3 - Terrain")
-                {
-                    SceneManager.LoadScene("GardenEnd");
-                }
-                else if (SceneManager.GetActiveScene().name == "DemoLevel")
+                if (SceneManager.GetActiveScene().name == "DemoLevel")
                 {
                    SceneManager.LoadScene("PlayPlaceIntro");
                 }
-                else if (SceneManager.GetActiveScene().name == "PlayPlace Remap")
+                else if (SceneManager.GetActiveScene().name == "PlayPlaceEnd")
                 {
                     SceneManager.LoadScene("GardenIntro");
                 }                

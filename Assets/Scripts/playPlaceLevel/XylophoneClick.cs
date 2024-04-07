@@ -7,9 +7,18 @@ public class XylophoneClick : MonoBehaviour, IInteract
     public int xyloID;
     [SerializeField] private Animator xyloAnimator;
     public GameObject floatingText;
+    private float lastKeyPressTime = 0f;
+    public float cooldownDuration = 1f;
 
     public void OnMouseDown()
     {
+        // check if enough times passed
+        if (Time.time - lastKeyPressTime < cooldownDuration || !XSequenceChecker.CanClickXylo)
+        {
+            return; // not long enough / playing sequence hint :(
+        }
+
+        lastKeyPressTime = Time.time;
         xyloAnimator.SetTrigger($"Hit {xyloID}"); // animate hit
         PlayXyloSound(xyloID);
         StartCoroutine(ResetAnimation(xyloID, 0.5f));

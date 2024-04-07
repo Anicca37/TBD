@@ -7,6 +7,7 @@ public class XSequenceChecker : MonoBehaviour
     private int[] targetSequence = { 1, 3, 2, 4 };
     private int currentSequenceIndex = 0;
     private int wrongAttempts = 0;
+    public static bool CanClickXylo = true;
     // public bool ifXyloCorrectSoundPlayed = false;
     [SerializeField] private Animator textAnimator;
 
@@ -30,6 +31,8 @@ public class XSequenceChecker : MonoBehaviour
                 currentSequenceIndex = 0; // reset if wrong is clicked
                 wrongAttempts++;
                 Debug.Log($"Wrong attempt #{wrongAttempts}");
+
+                CanClickXylo = false; // disable clicking
                 //play sound
                 // if (ifXyloCorrectSoundPlayed == false)
                 // {
@@ -70,10 +73,16 @@ public class XSequenceChecker : MonoBehaviour
             textAnimator.SetTrigger("Hint");
             Invoke("resetHintAnimation", 2.75f);
         }
+        Invoke("EnableXyloClicking", 2.75f);
     }
 
     void resetHintAnimation()
     {
         textAnimator.SetTrigger("Hint Return");
+    }
+
+    void EnableXyloClicking()
+    {
+        CanClickXylo = true;
     }
 }

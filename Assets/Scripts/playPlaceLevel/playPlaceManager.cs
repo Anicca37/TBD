@@ -122,12 +122,12 @@ public class PlayPlaceManager : MonoBehaviour
 
     void RevealXylophoneSequence()
     {
+        XSequenceChecker.CanClickXylo = false; // disable clicking on xylophone
         Debug.Log("Balls sorted, revealing xylophone sequence.");
-        // Insert logic to reveal the xylophone sequence here
-
         // play sound of xylo
         GameObject theXylo = GameObject.Find("Xylo");
         AkSoundEngine.PostEvent("Play_XyloSequence", theXylo.gameObject);
+        Invoke("EnableXyloClicking", 2.75f); // enable clicking on xylophone
     }
 
     void TriggerBallAvalanche()
@@ -205,5 +205,10 @@ public class PlayPlaceManager : MonoBehaviour
     public bool GetIsXylophoneSequenceCorrect()
     {
         return isXylophoneSequenceCorrect;
+    }
+
+    void EnableXyloClicking()
+    {
+        XSequenceChecker.CanClickXylo = true;
     }
 }
