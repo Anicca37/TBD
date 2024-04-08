@@ -322,7 +322,7 @@ public class GardenManager : MonoBehaviour
                 if (newYPosition >= targetYPosition)
                 {
                     startFlood = true; // Mark the flooding as complete
-                    startSink = true; // Immediately enable sinking after reaching max height
+                    StartCoroutine(WaitBeforeSink(3f));
                 }
             }
             else if (startSink)
@@ -342,6 +342,11 @@ public class GardenManager : MonoBehaviour
                 }
             }
         }
+    }
+    IEnumerator WaitBeforeSink(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        startSink = true;
     }
 
     void AdjustFountainParticles()
