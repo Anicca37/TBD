@@ -72,7 +72,6 @@ public class blockMatch : MonoBehaviour
     {
         playerPickup playerPickupScript = block.GetComponentInParent<playerPickup>();
         playerPickupScript.DropObject();
-        block.tag = "Untagged";
-      
+        block.tag = "attached";   
     }
 }

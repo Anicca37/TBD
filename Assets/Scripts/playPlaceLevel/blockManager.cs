@@ -18,7 +18,7 @@ public class blockManager : MonoBehaviour
             // play lightshow music
             AkSoundEngine.PostEvent("Play_Lv1_LightShowMusic", this.gameObject);
         }
-        else if (PlayPlaceManager.Instance.IsClockInteracted() && !lightShowActive)
+        else if (PlayPlaceManager.Instance.IsClockInteracted() && !lightShowActive && block.tag != "attached")
         {
             block.tag = pickupableTag;
         }
