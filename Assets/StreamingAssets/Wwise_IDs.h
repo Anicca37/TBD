@@ -59,7 +59,14 @@ namespace AK
         static const AkUniqueID PLAY_VINE_GROWING = 4090890880U;
         static const AkUniqueID PLAY_WATERFLOODING = 2908863451U;
         static const AkUniqueID PLAY_WATERFLOW = 518242827U;
-        static const AkUniqueID PLAY_WHAT_JUST_HAPPENED_1 = 3233041731U;
+        static const AkUniqueID PLAY_WHEN_COMPLETING_CLOCK = 2404945126U;
+        static const AkUniqueID PLAY_WHEN_ENTERING_GARDEN = 957649133U;
+        static const AkUniqueID PLAY_WHEN_ENTERING_OFFICE = 60874006U;
+        static const AkUniqueID PLAY_WHEN_ENTERING_PLAY_PLACE = 1179790440U;
+        static const AkUniqueID PLAY_WHEN_INTERACTING_IN_FALSE_ORDER_1ST_TIME = 4069141843U;
+        static const AkUniqueID PLAY_WHEN_INTERACTING_IN_FALSE_ORDER_2ND_TIME = 2894070431U;
+        static const AkUniqueID PLAY_WHEN_OFFICE_NO_PROG_25S = 885707271U;
+        static const AkUniqueID PLAY_WHEN_OFFICE_NO_PROG_60S = 2849277068U;
         static const AkUniqueID PLAY_WIN = 2955987680U;
         static const AkUniqueID PLAY_WIND_BLOWING = 2075190801U;
         static const AkUniqueID PLAY_WINDCHIME = 4235265352U;
