@@ -615,7 +615,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c829b83be71c8a4d9fc3b43dae098d9f
     GuidInternal: 
-    m_lastTime: -8584897508644372966
+    m_lastTime: -8584889943813109210
     List:
     - name: Bird
       guid: 5f720a9b671b8842a9e19381cb155dca
@@ -802,9 +802,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.75375
       minDuration: 1.7236667
-    - name: Play_What_just_happened_1
-      guid: ed86053e5097bb41bc88e7cf670f59ca
-      id: 3233041731
+    - name: Play_When_interacting_in_false_order_1st_time
+      guid: b9a01acea52f5a4f880a642dc30b1809
+      id: 4069141843
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -812,13 +812,36 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: c829b83be71c8a4d9fc3b43dae098d9f
-      - ElementName: Play_What_just_happened_1
+      - ElementName: Voicelines
+        ObjectType: 4
+        guid: ab1cf2646230f047b300e62534b375f4
+      - ElementName: Play_When_interacting_in_false_order_1st_time
         ObjectType: 3
-        guid: ed86053e5097bb41bc88e7cf670f59ca
-      Path: Events\Default Work Unit\Play_What_just_happened_1
+        guid: b9a01acea52f5a4f880a642dc30b1809
+      Path: Events\Default Work Unit\Voicelines\Play_When_interacting_in_false_order_1st_time
       maxAttenuation: 0
       maxDuration: 1.840842
       minDuration: 1.840842
+    - name: Play_When_interacting_in_false_order_2nd_time
+      guid: a5ed197d6c36ca46ab2de3223d2bb9fa
+      id: 2894070431
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Voicelines
+        ObjectType: 4
+        guid: ab1cf2646230f047b300e62534b375f4
+      - ElementName: Play_When_interacting_in_false_order_2nd_time
+        ObjectType: 3
+        guid: a5ed197d6c36ca46ab2de3223d2bb9fa
+      Path: Events\Default Work Unit\Voicelines\Play_When_interacting_in_false_order_2nd_time
+      maxAttenuation: 0
+      maxDuration: 3.0150208
+      minDuration: 1.9016666
     - name: Play_Win
       guid: 7a2ed0c54ab05342b051ca1bb4f433fc
       id: 2955987680
@@ -893,6 +916,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Voicelines
+      guid: ab1cf2646230f047b300e62534b375f4
+      id: 2292057722
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c829b83be71c8a4d9fc3b43dae098d9f
+      - ElementName: Voicelines
+        ObjectType: 4
+        guid: ab1cf2646230f047b300e62534b375f4
+      Path: Events\Default Work Unit\Voicelines
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   - PhysicalPath: Events\Level0.wwu
     PathAndIcons:
     - ElementName: Events
@@ -904,7 +944,7 @@ MonoBehaviour:
     ParentPath: Events\Level0
     guid: 241c5182ec754a49a8160c059dc386bb
     GuidInternal: 
-    m_lastTime: -8584897508644277878
+    m_lastTime: -8584889944448700451
     List:
     - name: Play_CarpetFootStep
       guid: 9084dd75288be6469e6cac232472baaf
@@ -1026,6 +1066,86 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.51240325
       minDuration: 0.3321867
+    - name: Play_When_Completing_Clock
+      guid: 3498363b9e676e41ab81ee9b1d81297e
+      id: 2404945126
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level0
+        ObjectType: 12
+        guid: 241c5182ec754a49a8160c059dc386bb
+      - ElementName: Voicelines
+        ObjectType: 4
+        guid: 609cb30f8746da4fa229ea4aca78bbc9
+      - ElementName: Play_When_Completing_Clock
+        ObjectType: 3
+        guid: 3498363b9e676e41ab81ee9b1d81297e
+      Path: Events\Level0\Voicelines\Play_When_Completing_Clock
+      maxAttenuation: 0
+      maxDuration: 3.849729
+      minDuration: 3.849729
+    - name: Play_When_Entering_Office
+      guid: aef3938e7010294380ed409292524419
+      id: 60874006
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level0
+        ObjectType: 12
+        guid: 241c5182ec754a49a8160c059dc386bb
+      - ElementName: Voicelines
+        ObjectType: 4
+        guid: 609cb30f8746da4fa229ea4aca78bbc9
+      - ElementName: Play_When_Entering_Office
+        ObjectType: 3
+        guid: aef3938e7010294380ed409292524419
+      Path: Events\Level0\Voicelines\Play_When_Entering_Office
+      maxAttenuation: 0
+      maxDuration: 4.155
+      minDuration: 4.155
+    - name: Play_When_Office_No_Prog_25s
+      guid: f6d730c84d34314b9c6de9fb8ff2f5f9
+      id: 885707271
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level0
+        ObjectType: 12
+        guid: 241c5182ec754a49a8160c059dc386bb
+      - ElementName: Voicelines
+        ObjectType: 4
+        guid: 609cb30f8746da4fa229ea4aca78bbc9
+      - ElementName: Play_When_Office_No_Prog_25s
+        ObjectType: 3
+        guid: f6d730c84d34314b9c6de9fb8ff2f5f9
+      Path: Events\Level0\Voicelines\Play_When_Office_No_Prog_25s
+      maxAttenuation: 0
+      maxDuration: 4.9466877
+      minDuration: 4.9466877
+    - name: Play_When_Office_No_Prog_60s
+      guid: 71ee4dc3f6399047af3df6e2232a6dd6
+      id: 2849277068
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level0
+        ObjectType: 12
+        guid: 241c5182ec754a49a8160c059dc386bb
+      - ElementName: Voicelines
+        ObjectType: 4
+        guid: 609cb30f8746da4fa229ea4aca78bbc9
+      - ElementName: Play_When_Office_No_Prog_60s
+        ObjectType: 3
+        guid: 71ee4dc3f6399047af3df6e2232a6dd6
+      Path: Events\Level0\Voicelines\Play_When_Office_No_Prog_60s
+      maxAttenuation: 0
+      maxDuration: 4.868292
+      minDuration: 4.868292
     - name: Stop_Level0Music
       guid: 32a41875ab710445a93fef5e6791cb26
       id: 4144809523
@@ -1063,6 +1183,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Voicelines
+      guid: 609cb30f8746da4fa229ea4aca78bbc9
+      id: 2292057722
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Level0
+        ObjectType: 12
+        guid: 241c5182ec754a49a8160c059dc386bb
+      - ElementName: Voicelines
+        ObjectType: 4
+        guid: 609cb30f8746da4fa229ea4aca78bbc9
+      Path: Events\Level0\Voicelines
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   - PhysicalPath: Events\Lv1PlayPlace.wwu
     PathAndIcons:
     - ElementName: Events
@@ -1074,7 +1211,7 @@ MonoBehaviour:
     ParentPath: Events\Lv1PlayPlace
     guid: 12b42068bed917478fc83b39aa786769
     GuidInternal: 
-    m_lastTime: -8584901110771752915
+    m_lastTime: -8584889943813199287
     List:
     - name: Play_BallImpact
       guid: d84aeadbee68d0469912f9e57a2302e1
@@ -1229,6 +1366,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.7018958
       minDuration: 1.7018958
+    - name: Play_When_Entering_Play_Place
+      guid: f015c3c068c7ea4ea0d43b79ca4c5002
+      id: 1179790440
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv1PlayPlace
+        ObjectType: 12
+        guid: 12b42068bed917478fc83b39aa786769
+      - ElementName: Voicelines
+        ObjectType: 4
+        guid: 9f49989e497a4a43826573ecaf2e5541
+      - ElementName: Play_When_Entering_Play_Place
+        ObjectType: 3
+        guid: f015c3c068c7ea4ea0d43b79ca4c5002
+      Path: Events\Lv1PlayPlace\Voicelines\Play_When_Entering_Play_Place
+      maxAttenuation: 0
+      maxDuration: 4.622354
+      minDuration: 4.622354
     - name: Play_XyloC
       guid: a28700ab35fd5d49983bc49708db6c74
       id: 4153846227
@@ -1382,6 +1539,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Voicelines
+      guid: 9f49989e497a4a43826573ecaf2e5541
+      id: 2292057722
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv1PlayPlace
+        ObjectType: 12
+        guid: 12b42068bed917478fc83b39aa786769
+      - ElementName: Voicelines
+        ObjectType: 4
+        guid: 9f49989e497a4a43826573ecaf2e5541
+      Path: Events\Lv1PlayPlace\Voicelines
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   - PhysicalPath: Events\Lv2Garden.wwu
     PathAndIcons:
     - ElementName: Events
@@ -1393,7 +1567,7 @@ MonoBehaviour:
     ParentPath: Events\Lv2Garden
     guid: 79f102072e2e844c90913baf4de5b1ea
     GuidInternal: 
-    m_lastTime: -8584900472806933476
+    m_lastTime: -8584889943813064167
     List:
     - name: Play_BirdsCrazy
       guid: 3fdadab55a4b8a4481ad38102b6cc050
@@ -1769,6 +1943,26 @@ MonoBehaviour:
       maxAttenuation: 100
       maxDuration: -1
       minDuration: -1
+    - name: Play_When_Entering_Garden
+      guid: 2d530cb022ee014f81b122fc4ff127c2
+      id: 957649133
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Voiceline
+        ObjectType: 4
+        guid: 9d597150f9b6d74798390875b24c13c7
+      - ElementName: Play_When_Entering_Garden
+        ObjectType: 3
+        guid: 2d530cb022ee014f81b122fc4ff127c2
+      Path: Events\Lv2Garden\Voiceline\Play_When_Entering_Garden
+      maxAttenuation: 0
+      maxDuration: 7.0294166
+      minDuration: 7.0294166
     - name: Play_Wind_Blowing
       guid: c558e49cfdfe9146b8da1aa7094ad9b2
       id: 2075190801
@@ -1922,6 +2116,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Voiceline
+      guid: 9d597150f9b6d74798390875b24c13c7
+      id: 1002703731
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Voiceline
+        ObjectType: 4
+        guid: 9d597150f9b6d74798390875b24c13c7
+      Path: Events\Lv2Garden\Voiceline
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   - PhysicalPath: Events\MainMenu.wwu
     PathAndIcons:
     - ElementName: Events
@@ -2204,7 +2415,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 36b75a50e9d9804589f2328192c42f54
     GuidInternal: 
-    m_lastTime: -8584907780817083934
+    m_lastTime: -8584893381010136796
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
