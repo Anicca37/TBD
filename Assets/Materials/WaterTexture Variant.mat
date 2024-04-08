@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WaterTexture
+  m_Name: WaterTexture Variant
   m_Shader: {fileID: 4800000, guid: 39cf68574afc7f248bd78a99c3800e00, type: 3}
-  m_Parent: {fileID: 2100000, guid: 3e36df56c6fa5f64085c14d9d4f6f8d9, type: 2}
+  m_Parent: {fileID: 2100000, guid: d1f277bd77961c74291968a4b4cea767, type: 2}
   m_ModifiedSerializedProperties: 4
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -25,8 +25,8 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _Depth: 0.1
-    - _DepthStrength: 0.1
+    - _Depth: 0.3
+    - _DepthStrength: 0.3
     - _FoamAmount: 1.5
     - _FoamNoiseScale: 150
     - _FoamPower: 0.5
