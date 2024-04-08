@@ -3,6 +3,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	221383132	Stop_LightOnSound			\Lv1PlayPlace\Stop_LightOnSound	
 	831234954	Play_Confetti			\Lv1PlayPlace\Play_Confetti	
 	1153064896	Play_Lv1_LightShowMusic			\Lv1PlayPlace\Play_Lv1_LightShowMusic	
+	1179790440	Play_When_Entering_Play_Place			\Lv1PlayPlace\Voicelines\Play_When_Entering_Play_Place	
 	1219381739	Stop_LightOff_1			\Lv1PlayPlace\Stop_LightOff_1	
 	1324211945	Play_SlideDoorOpen_1			\Lv1PlayPlace\Play_SlideDoorOpen_1	
 	1551805630	Play_Poof			\Default Work Unit\Bird\Play_Poof	
@@ -14,17 +15,18 @@ Event	ID	Name			Wwise Object Path	Notes
 	2280438399	Play_BallImpact			\Lv1PlayPlace\Play_BallImpact	
 	2771828150	Play_PageTurn			\Default Work Unit\Play_PageTurn	
 	2797822332	Play_Clock_Tick			\Default Work Unit\Clock\Play_Clock_Tick	
+	2894070431	Play_When_interacting_in_false_order_2nd_time			\Default Work Unit\Voicelines\Play_When_interacting_in_false_order_2nd_time	
 	2897827502	Stop_Clock_Tick			\Default Work Unit\Clock\Stop_Clock_Tick	
 	2955987680	Play_Win			\Default Work Unit\Play_Win	
 	3025897706	Play_Birds			\Default Work Unit\Bird\Play_Birds	
 	3140573545	Play_LightOff_1			\Lv1PlayPlace\Play_LightOff_1	
-	3233041731	Play_What_just_happened_1			\Default Work Unit\Play_What_just_happened_1	
 	3434769657	Stop_Clock_Tick_Reverse			\Default Work Unit\Clock\Stop_Clock_Tick_Reverse	
 	3584090578	Play_BirdWing			\Default Work Unit\Bird\Play_BirdWing	
 	3661318894	Play_WrongSequence			\Default Work Unit\Play_WrongSequence	
 	3765524326	Play_LightOnSound			\Lv1PlayPlace\Play_LightOnSound	
 	3830889987	Play_Clock_Tick_Reverse			\Default Work Unit\Clock\Play_Clock_Tick_Reverse	
 	4020215174	Stop_Lv1_LightShowMusic			\Lv1PlayPlace\Stop_Lv1_LightShowMusic	
+	4069141843	Play_When_interacting_in_false_order_1st_time			\Default Work Unit\Voicelines\Play_When_interacting_in_false_order_1st_time	
 	4153846227	Play_XyloC			\Lv1PlayPlace\Play_XyloC	
 	4153846228	Play_XyloD			\Lv1PlayPlace\Play_XyloD	
 	4153846229	Play_XyloE			\Lv1PlayPlace\Play_XyloE	
@@ -74,6 +76,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	259781958	XyloD	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\XyloD_53F1CEEA.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Lv1_PlayPlace\Xylophone\XyloD		5393
 	276712555	BookOpen_1	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\BookOpen\BookOpen_1_17006C55.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Journal\BookOpen\BookOpen_1		11310
 	283047273	mus_3-4_125bpm_Level1_S2_Bass	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S2\mus_3-4_125bpm_Level1_S2_Bass_239921B3.wem		\Interactive Music Hierarchy\Default Work Unit\Lv1_PlayPlace\Lv1_PlayPlaceMusic\mus_3-4_125bpm_Level1_S2\mus_3-4_125bpm_Level1_S2_Bass		713075
+	289275323	When_Entering_Play_Place	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\When_Entering_Play_Place_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogues\Lv1\When_Entering_Play_Place		887588
 	333540284	Bird01-003	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\Bird01-003_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Birds\Birds\Bird01-003		15543
 	336039053	Clock_Tick	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\Clock_Tick_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Lv0_Office\Level0_Office\Clock\Clock_Tick\Clock_Tick		52975
 	336129854	Bird02-002	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\Bird02-002_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Birds\Birds\Bird02-002		15325
@@ -93,7 +96,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	535759648	Ball_Impact_07	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\BallImpact\Ball_Impact_07_FAA83704.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Lv1_PlayPlace\Ball\BallBouncy\BallImpact\Ball_Impact_07		7579
 	541156274	mus_3-4_125bpm_Level1_Tran2_Bass	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Bass_239921B3.wem		\Interactive Music Hierarchy\Default Work Unit\Lv1_PlayPlace\Lv1_PlayPlaceMusic\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Bass		712485
 	545226739	Confetti_2	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\Confetti_2_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Lv1_PlayPlace\Confetti\Confetti_2		6211
-	545651926	What_just_happened_1	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\What_just_happened_1_40593100.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogues\All\What_just_happened_1		353536
+	545651926	When_interacting_in_false_order_1st_time	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\What_just_happened_1_E45E4672.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogues\All\When_interacting_in_false_order_1st_time		353536
 	545916312	XyloE	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\XyloE_188F0B08.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Lv1_PlayPlace\Xylophone\XyloE		5266
 	545992109	mus_3-4_125bpm_Level1_Tran1_Melody_Cello	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran1\mus_3-4_125bpm_Level1_Tran1_Melody_Cello_239921B3.wem		\Interactive Music Hierarchy\Default Work Unit\Lv1_PlayPlace\Lv1_PlayPlaceMusic\mus_3-4_125bpm_Level1_Tran1\mus_3-4_125bpm_Level1_Tran1_Melody_Cello		685181
 	550106120	BallBounceNew_3	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\BallBounceNew_3_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Lv1_PlayPlace\Ball\BallBouncy\BallBounceB\BallBounceNew_3		27681
@@ -125,9 +128,11 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	776713045	PageTurn_3	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\PageTurn\PageTurn_3_7DCC9A8D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Journal\PageTurn\PageTurn_3		10908
 	821236829	Bird03-002	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\Bird03-002_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Birds\Birds\Bird03-002		10519
 	834838996	mus_3-4_125bpm_Level1_Tran2_Chords	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Chords_239921B3.wem		\Interactive Music Hierarchy\Default Work Unit\Lv1_PlayPlace\Lv1_PlayPlaceMusic\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Chords		703781
+	836297824	When_interacting_in_false_order_2nd_time_v1	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\When_interacting_in_false_order_2nd_time_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogues\All\When_interacting_in_false_order_2nd_time\When_interacting_in_false_order_2nd_time_v1		365216
 	879919748	PageTurn_1	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\PageTurn\PageTurn_1_900C8A5A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Journal\PageTurn\PageTurn_1		9819
 	883217290	mus_3-4_125bpm_Level1_Tran2_Snare	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Snare_239921B3.wem		\Interactive Music Hierarchy\Default Work Unit\Lv1_PlayPlace\Lv1_PlayPlaceMusic\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Snare		746974
 	886951341	mus_3-4_125bpm_Level1_S1_Snare	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S1\mus_3-4_125bpm_Level1_S1_Snare_239921B3.wem		\Interactive Music Hierarchy\Default Work Unit\Lv1_PlayPlace\Lv1_PlayPlaceMusic\mus_3-4_125bpm_Level1_S1\mus_3-4_125bpm_Level1_S1_Snare		742760
+	906925346	When_interacting_in_false_order_2nd_time_v3	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\When_interacting_in_false_order_2nd_time_v3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogues\All\When_interacting_in_false_order_2nd_time\When_interacting_in_false_order_2nd_time_v3		569948
 	909003059	Win	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\Win_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Win		192096
 	928212570	Ball_Impact_01	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\BallImpact\Ball_Impact_01_276E93A7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Lv1_PlayPlace\Ball\BallBouncy\BallImpact\Ball_Impact_01		13027
 	928421190	Bird03-001	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\Bird03-001_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Birds\Birds\Bird03-001		16832
@@ -141,6 +146,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	1027777248	WrongSequence	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\WrongSequence_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\WrongSequence		5150
 	1043953703	mus_3-4_125bpm_Level1_Tran2_CBass	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_CBass_239921B3.wem		\Interactive Music Hierarchy\Default Work Unit\Lv1_PlayPlace\Lv1_PlayPlaceMusic\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_CBass		713147
 	1048775046	mus_3-4_125bpm_Level1_Tran2_Kick	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Kick_239921B3.wem		\Interactive Music Hierarchy\Default Work Unit\Lv1_PlayPlace\Lv1_PlayPlaceMusic\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Kick		674865
+	1062062802	When_interacting_in_false_order_2nd_time_v2	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\When_interacting_in_false_order_2nd_time_v2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogues\All\When_interacting_in_false_order_2nd_time\When_interacting_in_false_order_2nd_time_v2		578980
 	1062718881	BlockDrop_1	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\BlockDrop_1_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Lv1_PlayPlace\Blocks\BlockDrop\BlockDrop_1		9715
 	1067518328	BookClose_1	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\BookClose_1_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Journal\BookClose\BookClose_1		10911
 

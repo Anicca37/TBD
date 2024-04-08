@@ -217,7 +217,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{CDB27874-D62C-49EC-58F5-6B75D68191D3}">
+		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{ACED0F78-0228-4324-6DDA-EA8A95482EA8}">
 			<ShortName>Level2Garden</ShortName>
 			<Path>Level2Garden.bnk</Path>
 			<Media>
@@ -353,6 +353,10 @@
 					<ShortName>Flower_PickUp_08.wav</ShortName>
 					<CachePath>SFX/Flower_PickUp_08_8E324C96.wem</CachePath>
 				</File>
+				<File Id="447525412" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>When_Entering_Garden.wav</ShortName>
+					<CachePath>SFX/When_Entering_Garden_818F3B66.wem</CachePath>
+				</File>
 				<File Id="462888902" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Flower_Wind_Blowing01.wav</ShortName>
 					<CachePath>SFX/Flower_Wind_Blowing01_8E324C96.wem</CachePath>
@@ -375,7 +379,7 @@
 				</File>
 				<File Id="545651926" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>What_just_happened_1.wav</ShortName>
-					<CachePath>SFX/What_just_happened_1_40593100.wem</CachePath>
+					<CachePath>SFX/What_just_happened_1_E45E4672.wem</CachePath>
 				</File>
 				<File Id="558199229" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section2\mus_90bpm_Level2_Section2_Kick.wav</ShortName>
@@ -473,6 +477,10 @@
 					<ShortName>Bird03-002.wav</ShortName>
 					<CachePath>SFX/Bird03-002_8E324C96.wem</CachePath>
 				</File>
+				<File Id="836297824" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>When_interacting_in_false_order_2nd_time_v1.wav</ShortName>
+					<CachePath>SFX/When_interacting_in_false_order_2nd_time_v1_818F3B66.wem</CachePath>
+				</File>
 				<File Id="862302749" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Intro\mus_90bpm_Level2_Intro_NoiseDown.wav</ShortName>
 					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Intro/mus_90bpm_Level2_Intro_NoiseDown_239921B3.wem</CachePath>
@@ -496,6 +504,10 @@
 				<File Id="898317160" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section2\mus_90bpm_Level2_Section2_MelodyCello.wav</ShortName>
 					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Section2/mus_90bpm_Level2_Section2_MelodyCello_239921B3.wem</CachePath>
+				</File>
+				<File Id="906925346" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>When_interacting_in_false_order_2nd_time_v3.wav</ShortName>
+					<CachePath>SFX/When_interacting_in_false_order_2nd_time_v3_818F3B66.wem</CachePath>
 				</File>
 				<File Id="909003059" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Win.wav</ShortName>
@@ -536,6 +548,10 @@
 				<File Id="1027777248" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WrongSequence.wav</ShortName>
 					<CachePath>SFX/WrongSequence_8E324C96.wem</CachePath>
+				</File>
+				<File Id="1062062802" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>When_interacting_in_false_order_2nd_time_v2.wav</ShortName>
+					<CachePath>SFX/When_interacting_in_false_order_2nd_time_v2_818F3B66.wem</CachePath>
 				</File>
 				<File Id="1067518328" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BookClose_1.wav</ShortName>
@@ -747,9 +763,21 @@
 						<MediaRef Id="39073760"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3233041731" Name="Play_What_just_happened_1" DurationType="OneShot" DurationMin="1.840842" DurationMax="1.840842">
+				<Event Id="957649133" Name="Play_When_Entering_Garden" DurationType="OneShot" DurationMin="7.0294166" DurationMax="7.0294166">
+					<MediaRefs>
+						<MediaRef Id="447525412"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4069141843" Name="Play_When_interacting_in_false_order_1st_time" DurationType="OneShot" DurationMin="1.840842" DurationMax="1.840842">
 					<MediaRefs>
 						<MediaRef Id="545651926"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2894070431" Name="Play_When_interacting_in_false_order_2nd_time" DurationType="OneShot" DurationMin="1.9016666" DurationMax="3.0150208">
+					<MediaRefs>
+						<MediaRef Id="836297824"/>
+						<MediaRef Id="906925346"/>
+						<MediaRef Id="1062062802"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2955987680" Name="Play_Win" DurationType="OneShot" DurationMin="1" DurationMax="1">
@@ -786,7 +814,7 @@
 				<Event Id="1663839887" Name="Stop_Wind_Blowing" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{B8FB585C-054E-1AAD-3D57-0F5EDE81DED8}">
+		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{B9269E22-AAF5-2C0B-4B61-4863FC0F7654}">
 			<ShortName>Level1PlayPlace</ShortName>
 			<Path>Level1PlayPlace.bnk</Path>
 			<Media>
@@ -910,6 +938,10 @@
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S2\mus_3-4_125bpm_Level1_S2_Bass.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S2/mus_3-4_125bpm_Level1_S2_Bass_239921B3.wem</CachePath>
 				</File>
+				<File Id="289275323" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>When_Entering_Play_Place.wav</ShortName>
+					<CachePath>SFX/When_Entering_Play_Place_818F3B66.wem</CachePath>
+				</File>
 				<File Id="333540284" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bird01-003.wav</ShortName>
 					<CachePath>SFX/Bird01-003_8E324C96.wem</CachePath>
@@ -988,7 +1020,7 @@
 				</File>
 				<File Id="545651926" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>What_just_happened_1.wav</ShortName>
-					<CachePath>SFX/What_just_happened_1_40593100.wem</CachePath>
+					<CachePath>SFX/What_just_happened_1_E45E4672.wem</CachePath>
 				</File>
 				<File Id="545916312" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>XyloE.wav</ShortName>
@@ -1114,6 +1146,10 @@
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Chords.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran2/mus_3-4_125bpm_Level1_Tran2_Chords_239921B3.wem</CachePath>
 				</File>
+				<File Id="836297824" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>When_interacting_in_false_order_2nd_time_v1.wav</ShortName>
+					<CachePath>SFX/When_interacting_in_false_order_2nd_time_v1_818F3B66.wem</CachePath>
+				</File>
 				<File Id="879919748" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PageTurn\PageTurn_1.wav</ShortName>
 					<CachePath>SFX/PageTurn/PageTurn_1_900C8A5A.wem</CachePath>
@@ -1125,6 +1161,10 @@
 				<File Id="886951341" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S1\mus_3-4_125bpm_Level1_S1_Snare.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S1/mus_3-4_125bpm_Level1_S1_Snare_239921B3.wem</CachePath>
+				</File>
+				<File Id="906925346" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>When_interacting_in_false_order_2nd_time_v3.wav</ShortName>
+					<CachePath>SFX/When_interacting_in_false_order_2nd_time_v3_818F3B66.wem</CachePath>
 				</File>
 				<File Id="909003059" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Win.wav</ShortName>
@@ -1177,6 +1217,10 @@
 				<File Id="1048775046" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_Kick.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_Tran2/mus_3-4_125bpm_Level1_Tran2_Kick_239921B3.wem</CachePath>
+				</File>
+				<File Id="1062062802" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>When_interacting_in_false_order_2nd_time_v2.wav</ShortName>
+					<CachePath>SFX/When_interacting_in_false_order_2nd_time_v2_818F3B66.wem</CachePath>
 				</File>
 				<File Id="1062718881" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BlockDrop_1.wav</ShortName>
@@ -1357,9 +1401,21 @@
 						<MediaRef Id="374259416"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3233041731" Name="Play_What_just_happened_1" DurationType="OneShot" DurationMin="1.840842" DurationMax="1.840842">
+				<Event Id="1179790440" Name="Play_When_Entering_Play_Place" DurationType="OneShot" DurationMin="4.622354" DurationMax="4.622354">
+					<MediaRefs>
+						<MediaRef Id="289275323"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4069141843" Name="Play_When_interacting_in_false_order_1st_time" DurationType="OneShot" DurationMin="1.840842" DurationMax="1.840842">
 					<MediaRefs>
 						<MediaRef Id="545651926"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2894070431" Name="Play_When_interacting_in_false_order_2nd_time" DurationType="OneShot" DurationMin="1.9016666" DurationMax="3.0150208">
+					<MediaRefs>
+						<MediaRef Id="836297824"/>
+						<MediaRef Id="906925346"/>
+						<MediaRef Id="1062062802"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2955987680" Name="Play_Win" DurationType="OneShot" DurationMin="1" DurationMax="1">
@@ -1408,7 +1464,7 @@
 				<GameParameter Id="185769106" Name="Lv1_LightOn"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{5312B81C-D837-FA1F-37AD-6DFC4B51256B}">
+		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{EDFE8390-C263-B512-0205-CF8663AF5289}">
 			<ShortName>Level0</ShortName>
 			<Path>Level0.bnk</Path>
 			<Media>
@@ -1452,6 +1508,10 @@
 					<ShortName>BookOpen\BookOpen_1.wav</ShortName>
 					<CachePath>SFX/BookOpen/BookOpen_1_17006C55.wem</CachePath>
 				</File>
+				<File Id="307472616" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>When_Entering_Office.wav</ShortName>
+					<CachePath>SFX/When_Entering_Office_818F3B66.wem</CachePath>
+				</File>
 				<File Id="333540284" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bird01-003.wav</ShortName>
 					<CachePath>SFX/Bird01-003_8E324C96.wem</CachePath>
@@ -1468,9 +1528,17 @@
 					<ShortName>PageTurn\PageTurn_6.wav</ShortName>
 					<CachePath>SFX/PageTurn/PageTurn_6_EFE1F247.wem</CachePath>
 				</File>
+				<File Id="409550975" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>When_Office_No_Prog_25s.wav</ShortName>
+					<CachePath>SFX/When_Office_No_Prog_25s_818F3B66.wem</CachePath>
+				</File>
 				<File Id="414646934" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Quest_Game_Crafting_Wood_-2.wav</ShortName>
 					<CachePath>SFX/Quest_Game_Crafting_Wood_-2_8E324C96.wem</CachePath>
+				</File>
+				<File Id="474015806" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>When_Completing_Clock.wav</ShortName>
+					<CachePath>SFX/When_Completing_Clock_818F3B66.wem</CachePath>
 				</File>
 				<File Id="476236753" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BookOpen\BookOpen_2.wav</ShortName>
@@ -1486,7 +1554,7 @@
 				</File>
 				<File Id="545651926" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>What_just_happened_1.wav</ShortName>
-					<CachePath>SFX/What_just_happened_1_40593100.wem</CachePath>
+					<CachePath>SFX/What_just_happened_1_E45E4672.wem</CachePath>
 				</File>
 				<File Id="583454713" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bird01-002.wav</ShortName>
@@ -1499,6 +1567,10 @@
 				<File Id="680841763" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Poof\Poof_3.wav</ShortName>
 					<CachePath>SFX/Poof/Poof_3_8E324C96.wem</CachePath>
+				</File>
+				<File Id="750217263" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>When_Office_No_Prog_60s.wav</ShortName>
+					<CachePath>SFX/When_Office_No_Prog_60s_818F3B66.wem</CachePath>
 				</File>
 				<File Id="773465686" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Poof\Poof_2.wav</ShortName>
@@ -1516,9 +1588,17 @@
 					<ShortName>Bird03-002.wav</ShortName>
 					<CachePath>SFX/Bird03-002_8E324C96.wem</CachePath>
 				</File>
+				<File Id="836297824" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>When_interacting_in_false_order_2nd_time_v1.wav</ShortName>
+					<CachePath>SFX/When_interacting_in_false_order_2nd_time_v1_818F3B66.wem</CachePath>
+				</File>
 				<File Id="879919748" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PageTurn\PageTurn_1.wav</ShortName>
 					<CachePath>SFX/PageTurn/PageTurn_1_900C8A5A.wem</CachePath>
+				</File>
+				<File Id="906925346" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>When_interacting_in_false_order_2nd_time_v3.wav</ShortName>
+					<CachePath>SFX/When_interacting_in_false_order_2nd_time_v3_818F3B66.wem</CachePath>
 				</File>
 				<File Id="909003059" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Win.wav</ShortName>
@@ -1543,6 +1623,10 @@
 				<File Id="1027777248" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WrongSequence.wav</ShortName>
 					<CachePath>SFX/WrongSequence_8E324C96.wem</CachePath>
+				</File>
+				<File Id="1062062802" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>When_interacting_in_false_order_2nd_time_v2.wav</ShortName>
+					<CachePath>SFX/When_interacting_in_false_order_2nd_time_v2_818F3B66.wem</CachePath>
 				</File>
 				<File Id="1067518328" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BookClose_1.wav</ShortName>
@@ -1629,9 +1713,36 @@
 						<MediaRef Id="515135351"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3233041731" Name="Play_What_just_happened_1" DurationType="OneShot" DurationMin="1.840842" DurationMax="1.840842">
+				<Event Id="2404945126" Name="Play_When_Completing_Clock" DurationType="OneShot" DurationMin="3.849729" DurationMax="3.849729">
+					<MediaRefs>
+						<MediaRef Id="474015806"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="60874006" Name="Play_When_Entering_Office" DurationType="OneShot" DurationMin="4.155" DurationMax="4.155">
+					<MediaRefs>
+						<MediaRef Id="307472616"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4069141843" Name="Play_When_interacting_in_false_order_1st_time" DurationType="OneShot" DurationMin="1.840842" DurationMax="1.840842">
 					<MediaRefs>
 						<MediaRef Id="545651926"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2894070431" Name="Play_When_interacting_in_false_order_2nd_time" DurationType="OneShot" DurationMin="1.9016666" DurationMax="3.0150208">
+					<MediaRefs>
+						<MediaRef Id="836297824"/>
+						<MediaRef Id="906925346"/>
+						<MediaRef Id="1062062802"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="885707271" Name="Play_When_Office_No_Prog_25s" DurationType="OneShot" DurationMin="4.9466877" DurationMax="4.9466877">
+					<MediaRefs>
+						<MediaRef Id="409550975"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2849277068" Name="Play_When_Office_No_Prog_60s" DurationType="OneShot" DurationMin="4.868292" DurationMax="4.868292">
+					<MediaRefs>
+						<MediaRef Id="750217263"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2955987680" Name="Play_Win" DurationType="OneShot" DurationMin="1" DurationMax="1">
@@ -1667,5 +1778,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{071F267B-FAEA-216A-AB62-D13186456E96}</FileHash>
+	<FileHash>{A31CE578-1BF3-E9A0-69D0-1A6152FABC44}</FileHash>
 </SoundBanksInfo>
