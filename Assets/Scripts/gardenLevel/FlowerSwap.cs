@@ -12,6 +12,7 @@ public class FlowerSwap : MonoBehaviour
         {
             // Activate the alternative flower
             alternativeFlower.SetActive(true);
+            alternativeFlower.tag = "attached";
 
             // Deactivate the current flower
             gameObject.SetActive(false);

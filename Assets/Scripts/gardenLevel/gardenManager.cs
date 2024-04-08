@@ -43,8 +43,6 @@ public class GardenManager : MonoBehaviour
 
     public AttachPineconeToScale attachPinecone;
 
-    public GameObject scaleBeam;
-
     [SerializeField] private Animator scaleAnimator;
     [SerializeField] private Animator birdAnimator;
 
@@ -52,6 +50,7 @@ public class GardenManager : MonoBehaviour
     private float lastShockwaveTime = -Mathf.Infinity; // Initialize with a value that allows immediate use
     private bool StatueLoudPlayed = false;
     private bool isTrapActive = false;
+    private bool isVenusFlytrapBloomed = false;
     public bool isReset = false;
 
     private bool isScaleBalanceSoundPlayed = false;
@@ -138,7 +137,6 @@ public class GardenManager : MonoBehaviour
                     {
                         Debug.Log("clock being set");
                         isClockSet = true;
-                        ClockController.CancelClockPlay();
                         MakeVenusFlytrapBloom();
                     }
                 }
@@ -177,7 +175,7 @@ public class GardenManager : MonoBehaviour
 
             if (isScaleBalanceSoundPlayed == false)
             {
-                GameObject theScale = GameObject.Find("scale");
+                GameObject theScale = GameObject.Find("Scale");
                 AkSoundEngine.PostEvent("Play_Scale_Balancing", theScale.gameObject);
                 isScaleBalanceSoundPlayed = true;
             }
@@ -219,6 +217,12 @@ public class GardenManager : MonoBehaviour
 
     void MakeVenusFlytrapBloom()
     {
+        if (isVenusFlytrapBloomed)
+        {
+            return;
+        }
+        ClockController.CancelClockPlay();
+        isVenusFlytrapBloomed = true;
         Debug.Log("Venus flytrap blooms, revealing escape path.");
         VenusFlytrap.GetComponent<VenusFlytrapController>().VenusFlytrapGrow();
         if (isTrapActive == false)
@@ -334,7 +338,7 @@ public class GardenManager : MonoBehaviour
                 if (newYPosition >= targetYPosition)
                 {
                     startFlood = true; // Mark the flooding as complete
-                    startSink = true; // Immediately enable sinking after reaching max height
+                    StartCoroutine(WaitBeforeSink(3f));
                 }
             }
             else if (startSink)
@@ -354,6 +358,11 @@ public class GardenManager : MonoBehaviour
                 }
             }
         }
+    }
+    IEnumerator WaitBeforeSink(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        startSink = true;
     }
 
     void AdjustFountainParticles()

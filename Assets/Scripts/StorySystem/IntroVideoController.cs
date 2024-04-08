@@ -9,6 +9,7 @@ public class IntroVideoController : MonoBehaviour
     public VideoPlayer videoPlayer;
     public string nextSceneName = "DemoLevel";
     public GameObject loadingScreen;
+    public GameObject EscapeBackground;
     public EscapeMenuController EscapeController;
 
     private bool IsEndReached = false;
@@ -115,6 +116,7 @@ public class IntroVideoController : MonoBehaviour
     IEnumerator DelayedEscapeActivation()
     {
         yield return new WaitForSeconds(0.5f); 
+        EscapeBackground.SetActive(true);
         EscapeMenuController.ReserveEscape();
         EscapeController.InitializeEscapeMenu();
     }

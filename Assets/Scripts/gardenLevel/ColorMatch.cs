@@ -9,6 +9,7 @@ public class ColorMatch : MonoBehaviour
     public static int matchedFlowersCount = 0;
     private const int totalFlowers = 5;
     public ParticleSystem windParticleSystem;
+    public GameObject windHint;
     private SequenceChecker chimeController;
 
     public static void ResetMatchedFlowersCount()
@@ -53,7 +54,8 @@ public class ColorMatch : MonoBehaviour
 
     void TriggerWindEffect()
     {
-        Instantiate(windEffectPrefab, transform.position, Quaternion.identity);
+        // Instantiate(windEffectPrefab, transform.position, Quaternion.identity);
+        windEffectPrefab.SetActive(true);
         AkSoundEngine.PostEvent("Play_FlowerWindBlow", this.gameObject);
     }
 
@@ -62,10 +64,11 @@ public class ColorMatch : MonoBehaviour
         if (matchedFlowersCount >= totalFlowers)
         {
             GardenManager.Instance.CompletePuzzle("Floral");
-            windParticleSystem.Play();
+            // windParticleSystem.Play();
+            windHint.SetActive(true);
 
-            //play sound
-            GameObject TheWind = GameObject.Find("wind");
+            // play sound
+            GameObject TheWind = GameObject.Find("WindHint");
             AkSoundEngine.PostEvent("Play_Wind_Blowing", TheWind.gameObject);
             GameObject TheChimes = GameObject.Find("Wind Chime");
             AkSoundEngine.PostEvent("Play_WindChime", TheChimes.gameObject);

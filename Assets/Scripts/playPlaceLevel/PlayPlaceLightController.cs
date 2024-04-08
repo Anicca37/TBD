@@ -9,7 +9,9 @@ public class PlayPlaceLightController : MonoBehaviour
     public GameObject[] flouresLights;
     public GameObject[] cameras;
     public GameObject[] blocks;
-    public GameObject signPlane;
+    public GameObject[] xylophones;
+    public GameObject[] signPlanes;
+    public GameObject[] clockComponents;
     public Material[] defaultMaterials;
     public Material[] glowingMaterials;
     public ClockManipulation clockController;
@@ -150,7 +152,25 @@ public class PlayPlaceLightController : MonoBehaviour
                 child.gameObject.GetComponent<Renderer>().material = isOpen ? defaultMaterials[i] : glowingMaterials[i];
             }
         }
-        signPlane.GetComponent<Renderer>().material = isOpen ? defaultMaterials[5] : glowingMaterials[3];
+        foreach (GameObject signPlane in signPlanes)
+        {
+            signPlane.GetComponent<Renderer>().material = isOpen ? defaultMaterials[5] : glowingMaterials[3];
+        }
+        for (int i = 0; i < xylophones.Length; i++)
+        {
+            xylophones[i].GetComponent<Renderer>().material = isOpen ? defaultMaterials[6+i] : glowingMaterials[5+i];
+        }
+        foreach (GameObject clock in clockComponents)
+        {
+            if (clock.name.Contains("Clock"))
+            {
+                clock.GetComponent<Renderer>().material = isOpen ? defaultMaterials[11] : glowingMaterials[1];
+            }
+            else
+            {
+                clock.GetComponent<Renderer>().material = isOpen ? defaultMaterials[10] : glowingMaterials[1];
+            }
+        }
     }
 
     private void LightSoundReset()
