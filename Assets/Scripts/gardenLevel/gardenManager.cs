@@ -121,7 +121,6 @@ public class GardenManager : MonoBehaviour
                     {
                         Debug.Log("clock being set");
                         isClockSet = true;
-                        ClockController.CancelClockPlay();
                         MakeVenusFlytrapBloom();
                     }
                 }
@@ -206,6 +205,7 @@ public class GardenManager : MonoBehaviour
         {
             return;
         }
+        ClockController.CancelClockPlay();
         isVenusFlytrapBloomed = true;
         Debug.Log("Venus flytrap blooms, revealing escape path.");
         VenusFlytrap.GetComponent<VenusFlytrapController>().VenusFlytrapGrow();
