@@ -3119,6 +3119,18 @@ PrefabInstance:
       propertyPath: m_text
       value: 'Objective: Eaten by Venus Flytrap'
       objectReference: {fileID: 0}
+    - target: {fileID: 3417199633767100107, guid: b6d4afa9667bbba4c912ee68dd2f983f, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 6db1f3479f5ec8a4eb2ba9f339fac03e, type: 2}
+    - target: {fileID: 3417199633767100107, guid: b6d4afa9667bbba4c912ee68dd2f983f, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2051223189568697224, guid: 6db1f3479f5ec8a4eb2ba9f339fac03e, type: 2}
+    - target: {fileID: 3417199633767100107, guid: b6d4afa9667bbba4c912ee68dd2f983f, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5210101017272747846, guid: b6d4afa9667bbba4c912ee68dd2f983f, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
@@ -59900,8 +59912,8 @@ MonoBehaviour:
 
     active after 6'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: bbb2552a447b2469581c41f16a322477, type: 2}
-  m_sharedMaterial: {fileID: -2121183325642090797, guid: bbb2552a447b2469581c41f16a322477, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6db1f3479f5ec8a4eb2ba9f339fac03e, type: 2}
+  m_sharedMaterial: {fileID: -2051223189568697224, guid: 6db1f3479f5ec8a4eb2ba9f339fac03e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
