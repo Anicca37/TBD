@@ -11,6 +11,7 @@ public class buttonScript : MonoBehaviour
     }
 
     public GardenManager GardenManager;
+    [SerializeField] private VoiceLine clickBird;
 
     void Update()
     {
@@ -34,6 +35,7 @@ public class buttonScript : MonoBehaviour
                         //play sound
                         // TODO: switch to bird chirp
                         AkSoundEngine.PostEvent("Play_Birds", this.gameObject);
+                        VoiceLineManager.Instance.PlayVoiceLine(clickBird);
                     }
                 }
             }
