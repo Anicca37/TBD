@@ -615,7 +615,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c829b83be71c8a4d9fc3b43dae098d9f
     GuidInternal: 
-    m_lastTime: -8584889870466977485
+    m_lastTime: -8584889861362494081
     List:
     - name: Bird
       guid: 5f720a9b671b8842a9e19381cb155dca
@@ -840,8 +840,8 @@ MonoBehaviour:
         guid: a5ed197d6c36ca46ab2de3223d2bb9fa
       Path: Events\Default Work Unit\Voicelines\Play_When_interacting_in_false_order_2nd_time
       maxAttenuation: 0
-      maxDuration: 3.0150208
-      minDuration: 1.9016666
+      maxDuration: -1
+      minDuration: -1
     - name: Play_When_interacting_in_false_order_2nd_time_v1
       guid: 980b36c394f93b4da6bc38c817e58555
       id: 4020069969
@@ -860,8 +860,8 @@ MonoBehaviour:
         guid: 980b36c394f93b4da6bc38c817e58555
       Path: Events\Default Work Unit\Voicelines\Play_When_interacting_in_false_order_2nd_time_v1
       maxAttenuation: 0
-      maxDuration: 1.9016666
-      minDuration: 1.9016666
+      maxDuration: 0.82320917
+      minDuration: 0.82320917
     - name: Play_When_interacting_in_false_order_2nd_time_v2
       guid: 1751da4bf1932948b20d2cfdd14eba15
       id: 4020069970
@@ -880,8 +880,8 @@ MonoBehaviour:
         guid: 1751da4bf1932948b20d2cfdd14eba15
       Path: Events\Default Work Unit\Voicelines\Play_When_interacting_in_false_order_2nd_time_v2
       maxAttenuation: 0
-      maxDuration: 3.0150208
-      minDuration: 3.0150208
+      maxDuration: 1.5530641
+      minDuration: 1.5530641
     - name: Play_When_interacting_in_false_order_2nd_time_v3
       guid: dc0f41b01a206446897756a4ff5a2695
       id: 4020069971
@@ -900,8 +900,8 @@ MonoBehaviour:
         guid: dc0f41b01a206446897756a4ff5a2695
       Path: Events\Default Work Unit\Voicelines\Play_When_interacting_in_false_order_2nd_time_v3
       maxAttenuation: 0
-      maxDuration: 2.9679792
-      minDuration: 2.9679792
+      maxDuration: 1.9793481
+      minDuration: 1.9793481
     - name: Play_Win
       guid: 7a2ed0c54ab05342b051ca1bb4f433fc
       id: 2955987680
@@ -1144,8 +1144,8 @@ MonoBehaviour:
         guid: aef3938e7010294380ed409292524419
       Path: Events\Level0\Voicelines\Play_When_Entering_Office
       maxAttenuation: 0
-      maxDuration: 4.155
-      minDuration: 4.155
+      maxDuration: 2.385548
+      minDuration: 2.385548
     - name: Play_When_Office_No_Prog_25s
       guid: f6d730c84d34314b9c6de9fb8ff2f5f9
       id: 885707271
@@ -1164,8 +1164,8 @@ MonoBehaviour:
         guid: f6d730c84d34314b9c6de9fb8ff2f5f9
       Path: Events\Level0\Voicelines\Play_When_Office_No_Prog_25s
       maxAttenuation: 0
-      maxDuration: 4.9466877
-      minDuration: 4.9466877
+      maxDuration: 2.3047462
+      minDuration: 2.3047462
     - name: Play_When_Office_No_Prog_60s
       guid: 71ee4dc3f6399047af3df6e2232a6dd6
       id: 2849277068
@@ -1184,8 +1184,8 @@ MonoBehaviour:
         guid: 71ee4dc3f6399047af3df6e2232a6dd6
       Path: Events\Level0\Voicelines\Play_When_Office_No_Prog_60s
       maxAttenuation: 0
-      maxDuration: 4.868292
-      minDuration: 4.868292
+      maxDuration: 2.4632256
+      minDuration: 2.4632256
     - name: Play_When_Pushed_By_Bird
       guid: c5e2c6c1fd01d846916f9fa441afc24c
       id: 3371290448
@@ -1204,8 +1204,8 @@ MonoBehaviour:
         guid: c5e2c6c1fd01d846916f9fa441afc24c
       Path: Events\Level0\Voicelines\Play_When_Pushed_By_Bird
       maxAttenuation: 0
-      maxDuration: 3.5078125
-      minDuration: 3.5078125
+      maxDuration: 2.4823382
+      minDuration: 2.4823382
     - name: Stop_Level0Music
       guid: 32a41875ab710445a93fef5e6791cb26
       id: 4144809523
@@ -1271,7 +1271,7 @@ MonoBehaviour:
     ParentPath: Events\Lv1PlayPlace
     guid: 12b42068bed917478fc83b39aa786769
     GuidInternal: 
-    m_lastTime: -8584889868756034911
+    m_lastTime: -8584889865730808548
     List:
     - name: Play_BallImpact
       guid: d84aeadbee68d0469912f9e57a2302e1
@@ -1444,8 +1444,8 @@ MonoBehaviour:
         guid: 3498363b9e676e41ab81ee9b1d81297e
       Path: Events\Lv1PlayPlace\Voicelines\Play_When_Completing_Clock
       maxAttenuation: 0
-      maxDuration: 3.849729
-      minDuration: 3.849729
+      maxDuration: 2.029021
+      minDuration: 2.029021
     - name: Play_When_Entering_Play_Place
       guid: f015c3c068c7ea4ea0d43b79ca4c5002
       id: 1179790440
@@ -1464,8 +1464,28 @@ MonoBehaviour:
         guid: f015c3c068c7ea4ea0d43b79ca4c5002
       Path: Events\Lv1PlayPlace\Voicelines\Play_When_Entering_Play_Place
       maxAttenuation: 0
-      maxDuration: 4.622354
-      minDuration: 4.622354
+      maxDuration: 3.7647986
+      minDuration: 3.7647986
+    - name: Play_When_Playplace_Clicking_On_Bird
+      guid: a209038886de494f9d9c525afdf3ea5b
+      id: 1440198381
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv1PlayPlace
+        ObjectType: 12
+        guid: 12b42068bed917478fc83b39aa786769
+      - ElementName: Voicelines
+        ObjectType: 4
+        guid: 9f49989e497a4a43826573ecaf2e5541
+      - ElementName: Play_When_Playplace_Clicking_On_Bird
+        ObjectType: 3
+        guid: a209038886de494f9d9c525afdf3ea5b
+      Path: Events\Lv1PlayPlace\Voicelines\Play_When_Playplace_Clicking_On_Bird
+      maxAttenuation: 0
+      maxDuration: 1.7904705
+      minDuration: 1.7904705
     - name: Play_When_Triggering_Light_Show
       guid: d59da50d6d313145968519c86c7294ec
       id: 1508118684
@@ -1504,8 +1524,8 @@ MonoBehaviour:
         guid: ab3c69fdb365654fb2476f9713d486df
       Path: Events\Lv1PlayPlace\Voicelines\Play_When_Triggering_Light_Show_v1
       maxAttenuation: 0
-      maxDuration: 4.8769794
-      minDuration: 4.8769794
+      maxDuration: 4.0818567
+      minDuration: 4.0818567
     - name: Play_When_Triggering_Light_Show_v2
       guid: 075036c8b46af44cab1cd85a1ffa2c29
       id: 35571095
@@ -1524,8 +1544,8 @@ MonoBehaviour:
         guid: 075036c8b46af44cab1cd85a1ffa2c29
       Path: Events\Lv1PlayPlace\Voicelines\Play_When_Triggering_Light_Show_v2
       maxAttenuation: 0
-      maxDuration: 4.492625
-      minDuration: 4.492625
+      maxDuration: 3.6023085
+      minDuration: 3.6023085
     - name: Play_XyloC
       guid: a28700ab35fd5d49983bc49708db6c74
       id: 4153846227
@@ -1739,7 +1759,7 @@ MonoBehaviour:
     ParentPath: Events\Lv2Garden
     guid: 79f102072e2e844c90913baf4de5b1ea
     GuidInternal: 
-    m_lastTime: -8584889897321901548
+    m_lastTime: -8584889861362409002
     List:
     - name: Chime
       guid: c19fd83680b1734885dc9ef71bf226bc
@@ -2147,6 +2167,46 @@ MonoBehaviour:
       maxAttenuation: 100
       maxDuration: -1
       minDuration: -1
+    - name: Play_When_Clicking_On_Bird
+      guid: a5e86e8468d9424598c1faf7b39e947d
+      id: 2611948227
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Voiceline
+        ObjectType: 4
+        guid: 9d597150f9b6d74798390875b24c13c7
+      - ElementName: Play_When_Clicking_On_Bird
+        ObjectType: 3
+        guid: a5e86e8468d9424598c1faf7b39e947d
+      Path: Events\Lv2Garden\Voiceline\Play_When_Clicking_On_Bird
+      maxAttenuation: 0
+      maxDuration: 3.321416
+      minDuration: 2.7826898
+    - name: Play_When_Completing_Scale
+      guid: 8d64f2aa49000d46854e9fdef2b4e352
+      id: 2996903162
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Voiceline
+        ObjectType: 4
+        guid: 9d597150f9b6d74798390875b24c13c7
+      - ElementName: Play_When_Completing_Scale
+        ObjectType: 3
+        guid: 8d64f2aa49000d46854e9fdef2b4e352
+      Path: Events\Lv2Garden\Voiceline\Play_When_Completing_Scale
+      maxAttenuation: 0
+      maxDuration: 2.3189135
+      minDuration: 2.3081136
     - name: Play_When_Entering_Garden
       guid: 2d530cb022ee014f81b122fc4ff127c2
       id: 957649133
@@ -2165,8 +2225,8 @@ MonoBehaviour:
         guid: 2d530cb022ee014f81b122fc4ff127c2
       Path: Events\Lv2Garden\Voiceline\Play_When_Entering_Garden
       maxAttenuation: 0
-      maxDuration: 7.0294166
-      minDuration: 7.0294166
+      maxDuration: 6.2785583
+      minDuration: 6.2785583
     - name: Play_Wind_Blowing
       guid: c558e49cfdfe9146b8da1aa7094ad9b2
       id: 2075190801
