@@ -21,6 +21,8 @@ public class PlayPlaceManager : MonoBehaviour
 
     [SerializeField] private VoiceLine enterPlayPlace;
     [SerializeField] private VoiceLine completeClock;
+    [SerializeField] private VoiceLine noProgress25;
+    [SerializeField] private VoiceLine noProgress60;
     private bool completeClockPlayed = false;
 
 
@@ -41,6 +43,8 @@ public class PlayPlaceManager : MonoBehaviour
         ballsinitialPosition = balls.transform.position;
 
         StartCoroutine(WaitForVoiceLineManager());
+        StartCoroutine(NoProgress25());
+        StartCoroutine(NoProgress60());
     }
 
     IEnumerator WaitForVoiceLineManager()
@@ -210,5 +214,25 @@ public class PlayPlaceManager : MonoBehaviour
     void EnableXyloClicking()
     {
         XSequenceChecker.CanClickXylo = true;
+    }
+
+    IEnumerator NoProgress25()
+    {
+        yield return new WaitForSeconds(25f); // wait 25 seconds
+
+        if (!isClockInteracted) // clock not interacted
+        {
+            VoiceLineManager.Instance.PlayVoiceLine(noProgress25);
+        }
+    }
+
+    IEnumerator NoProgress60()
+    {
+        yield return new WaitForSeconds(60f); // wait 60 seconds
+
+        if (!isClockInteracted) // clock not interacted
+        {
+            VoiceLineManager.Instance.PlayVoiceLine(noProgress60);
+        }
     }
 }
