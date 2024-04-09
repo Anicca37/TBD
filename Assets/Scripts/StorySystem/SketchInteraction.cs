@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class SketchInteraction : MonoBehaviour, IInteract
 {
-    public GameObject inactivePageSprite;
-    public GameObject activePageSprite;
+    public List<GameObject> inactivePageSprites;
+    public List<GameObject> activePageSprites;
+    public int pageNumberToOpen;
 
     private Book bookReference; 
 
@@ -19,19 +20,8 @@ public class SketchInteraction : MonoBehaviour, IInteract
     {
         if (bookReference != null)
         {
-            bookReference.UpdatePageSprites(inactivePageSprite, activePageSprite);
-            if (SceneManager.GetActiveScene().name == "PlayPlace Remap")
-            {
-                bookReference.OpenPage(2);  
-            }
-            else if (SceneManager.GetActiveScene().name == "Garden_3 - Terrain")
-            {
-                bookReference.OpenPage(3);
-            }
-            else
-            {
-                bookReference.ToggleJournal(true);
-            }
+            bookReference.UpdatePageSprites(inactivePageSprites, activePageSprites);
+            bookReference.OpenPage(pageNumberToOpen + 1);
         }
         gameObject.SetActive(false);
     }

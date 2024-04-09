@@ -154,16 +154,22 @@ public class Book : MonoBehaviour
         }
     }
 
-    public void UpdatePageSprites(GameObject inactive, GameObject active)
+    public void UpdatePageSprites(List<GameObject> inactiveSprites, List<GameObject> activeSprites)
     {
-        if (inactive != null)
+        foreach (var inactiveSprite in inactiveSprites)
         {
-            inactive.SetActive(false); // Hide the inactive sprite
+            if (inactiveSprite != null)
+            {
+                inactiveSprite.SetActive(false); // Hide the inactive sprite
+            }
         }
         
-        if (active != null)
+        foreach (var activeSprite in activeSprites)
         {
-            active.SetActive(true); // Show the active sprite
+            if (activeSprite != null)
+            {
+                activeSprite.SetActive(true); // Show the active sprite
+            }
         }
     }
 
