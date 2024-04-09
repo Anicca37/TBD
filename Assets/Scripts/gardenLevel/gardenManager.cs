@@ -56,7 +56,7 @@ public class GardenManager : MonoBehaviour
     private bool isScaleBalanceSoundPlayed = false;
 
     [SerializeField] private VoiceLine enterGarden;
-
+    [SerializeField] private VoiceLine balanced;
 
 
     void Awake()
@@ -96,7 +96,7 @@ public class GardenManager : MonoBehaviour
     {
         return isFloralMatched;
     }
-    
+
     public bool IsWindChimesPlayed
     { get { return isWindChimesPlayed; } }
 
@@ -169,6 +169,7 @@ public class GardenManager : MonoBehaviour
     {
         if (!isScaleBalanced)
         {
+            VoiceLineManager.Instance.PlayVoiceLine(balanced);
             scaleAnimator.SetTrigger("Balance");
             StartCoroutine(SwitchCamera(playerCamera, scalesCamera, 0f));
             StartCoroutine(PlayerEnable(false, 0f));
