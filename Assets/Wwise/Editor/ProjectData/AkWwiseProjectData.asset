@@ -615,7 +615,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c829b83be71c8a4d9fc3b43dae098d9f
     GuidInternal: 
-    m_lastTime: -8584889861362494081
+    m_lastTime: -8584889788750471179
     List:
     - name: Bird
       guid: 5f720a9b671b8842a9e19381cb155dca
@@ -1444,8 +1444,8 @@ MonoBehaviour:
         guid: 3498363b9e676e41ab81ee9b1d81297e
       Path: Events\Lv1PlayPlace\Voicelines\Play_When_Completing_Clock
       maxAttenuation: 0
-      maxDuration: 2.029021
-      minDuration: 2.029021
+      maxDuration: 1.8618553
+      minDuration: 1.8618553
     - name: Play_When_Entering_Play_Place
       guid: f015c3c068c7ea4ea0d43b79ca4c5002
       id: 1179790440
@@ -1759,7 +1759,7 @@ MonoBehaviour:
     ParentPath: Events\Lv2Garden
     guid: 79f102072e2e844c90913baf4de5b1ea
     GuidInternal: 
-    m_lastTime: -8584889861362409002
+    m_lastTime: -8584889788750296026
     List:
     - name: Chime
       guid: c19fd83680b1734885dc9ef71bf226bc
@@ -2227,6 +2227,46 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 6.2785583
       minDuration: 6.2785583
+    - name: Play_When_Garden_No_Prog_25s
+      guid: 6542a1465982e54ead879f4fb8fd43d4
+      id: 285119704
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Voiceline
+        ObjectType: 4
+        guid: 9d597150f9b6d74798390875b24c13c7
+      - ElementName: Play_When_Garden_No_Prog_25s
+        ObjectType: 3
+        guid: 6542a1465982e54ead879f4fb8fd43d4
+      Path: Events\Lv2Garden\Voiceline\Play_When_Garden_No_Prog_25s
+      maxAttenuation: 0
+      maxDuration: 3.662625
+      minDuration: 3.662625
+    - name: Play_When_Garden_No_Prog_60s
+      guid: 1e176c37f152284b80668f4e585f91d5
+      id: 2079633331
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Voiceline
+        ObjectType: 4
+        guid: 9d597150f9b6d74798390875b24c13c7
+      - ElementName: Play_When_Garden_No_Prog_60s
+        ObjectType: 3
+        guid: 1e176c37f152284b80668f4e585f91d5
+      Path: Events\Lv2Garden\Voiceline\Play_When_Garden_No_Prog_60s
+      maxAttenuation: 0
+      maxDuration: 4.4640417
+      minDuration: 4.4640417
     - name: Play_Wind_Blowing
       guid: c558e49cfdfe9146b8da1aa7094ad9b2
       id: 2075190801
