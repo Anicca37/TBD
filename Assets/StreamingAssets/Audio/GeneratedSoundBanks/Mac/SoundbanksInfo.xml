@@ -9,10 +9,14 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1182958561" Type="User" Language="SFX" Hash="{3443B75F-0139-DDBF-B3EB-241D9B736818}">
+		<SoundBank Id="1182958561" Type="User" Language="SFX" Hash="{0C668802-434A-8575-F7C3-F94F043E375A}">
 			<ShortName>CutScene</ShortName>
 			<Path>CutScene.bnk</Path>
 			<Media>
+				<File Id="181755434" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BallPitEndCutScene.wav</ShortName>
+					<CachePath>SFX/BallPitEndCutScene_39EF0DFC.wem</CachePath>
+				</File>
 				<File Id="284433259" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>GardenEndCutScene.wav</ShortName>
 					<CachePath>SFX/GardenEndCutScene_8E324C96.wem</CachePath>
@@ -36,6 +40,11 @@
 						<MediaRef Id="580018237"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2851654491" Name="Play_BallPitEndCutScene" DurationType="OneShot" DurationMin="12.412095" DurationMax="12.412095">
+					<MediaRefs>
+						<MediaRef Id="181755434"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2365141837" Name="Play_GardenCutScene" DurationType="OneShot" DurationMin="15.72" DurationMax="15.72">
 					<MediaRefs>
 						<MediaRef Id="901048502"/>
@@ -52,6 +61,7 @@
 					</MediaRefs>
 				</Event>
 				<Event Id="3739524462" Name="Stop_BallPitCutScene" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="43014761" Name="Stop_BallPitEndCutScene" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="571755607" Name="Stop_GardenCutScene" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="648099770" Name="Stop_GardenEndCutScene" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="692624126" Name="Stop_IntroCutscene" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
@@ -2051,5 +2061,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{8DB23A1C-5DE0-2DB2-525E-0779D2AE15F5}</FileHash>
+	<FileHash>{22C92AA1-13B2-9028-90B7-72258038A0BB}</FileHash>
 </SoundBanksInfo>

@@ -1,14 +1,17 @@
 Event	ID	Name			Wwise Object Path	Notes
+	43014761	Stop_BallPitEndCutScene			\CutScenes\Stop_BallPitEndCutScene	
 	571755607	Stop_GardenCutScene			\CutScenes\Stop_GardenCutScene	
 	648099770	Stop_GardenEndCutScene			\CutScenes\Stop_GardenEndCutScene	
 	692624126	Stop_IntroCutscene			\CutScenes\Stop_IntroCutscene	
 	2365141837	Play_GardenCutScene			\CutScenes\Play_GardenCutScene	
 	2454336936	Play_BallPitCutScene			\CutScenes\Play_BallPitCutScene	
 	2696761744	Play_GardenEndCutScene			\CutScenes\Play_GardenEndCutScene	
+	2851654491	Play_BallPitEndCutScene			\CutScenes\Play_BallPitEndCutScene	
 	3476743960	Play_IntroCutscene			\CutScenes\Play_IntroCutscene	
 	3739524462	Stop_BallPitCutScene			\CutScenes\Stop_BallPitCutScene	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	181755434	BallPitEndCutScene	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\BallPitEndCutScene_39EF0DFC.wem		\Actor-Mixer Hierarchy\Default Work Unit\CutScenes\BallPitEndCutScene		158289
 	284433259	GardenEndCutScene	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\GardenEndCutScene_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\CutScenes\GardenEndCutScene		200647
 	395583999	IntroCutscene	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\IntroCutscene_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\CutScenes\IntroCutscene		128281
 	580018237	BallPitCutScene	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Windows\SFX\BallPitCutScene_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\CutScenes\BallPitCutScene		125476
