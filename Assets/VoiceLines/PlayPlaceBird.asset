@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0a5bb035952b4cfd8bed2b056d9009a, type: 3}
   m_Name: PlayPlaceBird
   m_EditorClassIdentifier: 
-  wwiseEventName: When_Playplace_Clicking_On_Bird
+  wwiseEventName: Play_When_Playplace_Clicking_On_Bird
   subtitle: Ahh I'm stuck!
   delayBeforePlaying: 0

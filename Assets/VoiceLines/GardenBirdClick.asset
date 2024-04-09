@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0a5bb035952b4cfd8bed2b056d9009a, type: 3}
   m_Name: GardenBirdClick
   m_EditorClassIdentifier: 
-  wwiseEventName: When_Garden_Clicking_On_Bird
+  wwiseEventName: Play_When_Garden_Clicking_On_Bird
   subtitle: Where is seed? Where is seed?
   delayBeforePlaying: 0
