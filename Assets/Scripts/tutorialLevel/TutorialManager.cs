@@ -22,6 +22,9 @@ public class TutorialManager : MonoBehaviour
     private float lastPushTime = -Mathf.Infinity;
 
     [SerializeField] private VoiceLine enterOffice;
+    [SerializeField] private VoiceLine noProgress25;
+    [SerializeField] private VoiceLine noProgress60;
+
 
     void Awake()
     {
@@ -47,6 +50,8 @@ public class TutorialManager : MonoBehaviour
         }
 
         StartCoroutine(WaitForVoiceLineManager());
+        StartCoroutine(NoProgress25());
+        StartCoroutine(NoProgress60());
     }
 
     IEnumerator WaitForVoiceLineManager()
@@ -150,6 +155,26 @@ public class TutorialManager : MonoBehaviour
             controller.Move(moveDirection * Time.deltaTime);
 
             yield return null; // Wait until the next frame
+        }
+    }
+
+    IEnumerator NoProgress25()
+    {
+        yield return new WaitForSeconds(25f); // wait 25 seconds
+
+        if (!doorMovement.IsDoorOpen()) // if door not open
+        {
+            VoiceLineManager.Instance.PlayVoiceLine(noProgress25);
+        }
+    }
+
+    IEnumerator NoProgress60()
+    {
+        yield return new WaitForSeconds(60f); // wait 60 seconds
+
+        if (!doorMovement.IsDoorOpen()) // if door not open
+        {
+            VoiceLineManager.Instance.PlayVoiceLine(noProgress60);
         }
     }
 }
