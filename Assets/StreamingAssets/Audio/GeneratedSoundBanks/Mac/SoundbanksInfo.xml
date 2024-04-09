@@ -217,7 +217,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{4ADADE8F-7416-D117-70A2-DBF001CF1B6D}">
+		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{928C61F2-604B-4ECE-3AFB-28BF644538E1}">
 			<ShortName>Level2Garden</ShortName>
 			<Path>Level2Garden.bnk</Path>
 			<Media>
@@ -461,6 +461,10 @@
 					<ShortName>Wind_Blowing.wav</ShortName>
 					<CachePath>SFX/Wind_Blowing_56CEF360.wem</CachePath>
 				</File>
+				<File Id="726456648" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>When_Garden_No_Prog_60s.wav</ShortName>
+					<CachePath>SFX/When_Garden_No_Prog_60s_818F3B66.wem</CachePath>
+				</File>
 				<File Id="747524387" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PickUp_Pinecone_2.wav</ShortName>
 					<CachePath>SFX/PickUp_Pinecone_2_8E324C96.wem</CachePath>
@@ -516,6 +520,10 @@
 				<File Id="879919748" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PageTurn\PageTurn_1.wav</ShortName>
 					<CachePath>SFX/PageTurn/PageTurn_1_900C8A5A.wem</CachePath>
+				</File>
+				<File Id="882743648" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>When_Garden_No_Prog_25s.wav</ShortName>
+					<CachePath>SFX/When_Garden_No_Prog_25s_818F3B66.wem</CachePath>
 				</File>
 				<File Id="898317160" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section2\mus_90bpm_Level2_Section2_MelodyCello.wav</ShortName>
@@ -809,6 +817,28 @@
 				<Event Id="957649133" Name="Play_When_Entering_Garden" DurationType="OneShot" DurationMin="6.2785583" DurationMax="6.2785583">
 					<MediaRefs>
 						<MediaRef Id="447525412"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="3326204090"/>
+							<PluginRef Id="3538682082"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="285119704" Name="Play_When_Garden_No_Prog_25s" DurationType="OneShot" DurationMin="3.662625" DurationMax="3.662625">
+					<MediaRefs>
+						<MediaRef Id="882743648"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="3326204090"/>
+							<PluginRef Id="3538682082"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="2079633331" Name="Play_When_Garden_No_Prog_60s" DurationType="OneShot" DurationMin="4.4640417" DurationMax="4.4640417">
+					<MediaRefs>
+						<MediaRef Id="726456648"/>
 					</MediaRefs>
 					<PluginRefs>
 						<ShareSets>
@@ -2021,5 +2051,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{25BE0902-7F46-624A-BFEB-8033CC6A195E}</FileHash>
+	<FileHash>{8DB23A1C-5DE0-2DB2-525E-0779D2AE15F5}</FileHash>
 </SoundBanksInfo>
