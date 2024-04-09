@@ -57,6 +57,10 @@ public class IntroVideoController : MonoBehaviour
         {
             Invoke("playGardenEndCutSceneSound", 0.4f);
         }
+        else if (nextSceneName == "GardenIntro")
+        {
+            Invoke("playBallPitEndCutScene", 0.4f);
+        }
 
     }
 
@@ -82,6 +86,10 @@ public class IntroVideoController : MonoBehaviour
             else if (nextSceneName == "UI")
             {
                 AkSoundEngine.PostEvent("Stop_GardenEndCutScene", this.gameObject);
+            }
+            else if (nextSceneName == "GardenIntro")
+            {
+                AkSoundEngine.PostEvent("Stop_BallPitEndCutScene", this.gameObject);
             }
         }
     }
@@ -132,6 +140,10 @@ public class IntroVideoController : MonoBehaviour
     void playGardenEndCutSceneSound()
     {
         AkSoundEngine.PostEvent("Play_GardenEndCutScene", this.gameObject);
+    }
+    void playBallPitEndCutScene()
+    {
+        AkSoundEngine.PostEvent("Play_BallPitEndCutScene", this.gameObject);
     }
 }
 

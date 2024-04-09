@@ -19,6 +19,13 @@ public class PlayPlaceManager : MonoBehaviour
     [SerializeField] private Animator doorAnimator;
     public GameObject player;
 
+    [SerializeField] private VoiceLine enterPlayPlace;
+    [SerializeField] private VoiceLine completeClock;
+    [SerializeField] private VoiceLine noProgress25;
+    [SerializeField] private VoiceLine noProgress60;
+    private bool completeClockPlayed = false;
+
+
     void Awake()
     {
         if (Instance == null)
@@ -34,6 +41,20 @@ public class PlayPlaceManager : MonoBehaviour
             Destroy(gameObject);
         }
         ballsinitialPosition = balls.transform.position;
+
+        StartCoroutine(WaitForVoiceLineManager());
+        StartCoroutine(NoProgress25());
+        StartCoroutine(NoProgress60());
+    }
+
+    IEnumerator WaitForVoiceLineManager()
+    {
+        // Wait until VoiceLineManager is no longer null
+        yield return new WaitUntil(() => VoiceLineManager.Instance != null);
+        VoiceLineManager.Instance.AssignSubtitleTextComponent();
+
+        // Now it's safe to use VoiceLineManager.Instance
+        VoiceLineManager.Instance.PlayVoiceLine(enterPlayPlace);
     }
 
     public void CompletePuzzle(string puzzleName)
@@ -42,6 +63,15 @@ public class PlayPlaceManager : MonoBehaviour
         {
             case "ClockInteraction":
                 isClockInteracted = playPlaceLightController.IsPlayPlaceOpen();
+                if (isClockInteracted && !completeClockPlayed)
+                {
+                    VoiceLineManager.Instance.PlayVoiceLine(completeClock);
+                    completeClockPlayed = true;
+                }
+                if (!isClockInteracted && completeClockPlayed)
+                {
+                    completeClockPlayed = false;
+                }
                 break;
             case "BlockSorting":
                 areBlocksSorted = true;
@@ -184,5 +214,25 @@ public class PlayPlaceManager : MonoBehaviour
     void EnableXyloClicking()
     {
         XSequenceChecker.CanClickXylo = true;
+    }
+
+    IEnumerator NoProgress25()
+    {
+        yield return new WaitForSeconds(25f); // wait 25 seconds
+
+        if (!isClockInteracted) // clock not interacted
+        {
+            VoiceLineManager.Instance.PlayVoiceLine(noProgress25);
+        }
+    }
+
+    IEnumerator NoProgress60()
+    {
+        yield return new WaitForSeconds(60f); // wait 60 seconds
+
+        if (!isClockInteracted) // clock not interacted
+        {
+            VoiceLineManager.Instance.PlayVoiceLine(noProgress60);
+        }
     }
 }

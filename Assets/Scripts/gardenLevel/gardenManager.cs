@@ -18,10 +18,10 @@ public class GardenManager : MonoBehaviour
     public Camera birdCamera;
     public Camera venusFlytrapCamera;
 
-    public bool isFloralMatched = false;
-    public bool isWindChimesPlayed = false;
-    public bool isScaleBalanced = false;
-    public bool isClockSet = false;
+    private bool isFloralMatched = false;
+    private bool isWindChimesPlayed = false;
+    private bool isScaleBalanced = false;
+    private bool isClockSet = false;
     public bool PlayerEaten = false;
 
     public GameObject waterObject;
@@ -55,6 +55,11 @@ public class GardenManager : MonoBehaviour
 
     private bool isScaleBalanceSoundPlayed = false;
 
+    [SerializeField] private VoiceLine enterGarden;
+    [SerializeField] private VoiceLine balanced;
+    [SerializeField] private VoiceLine noProgress25;
+    [SerializeField] private VoiceLine noProgress60;
+
 
     void Awake()
     {
@@ -75,12 +80,27 @@ public class GardenManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        StartCoroutine(WaitForVoiceLineManager());
+        StartCoroutine(NoProgress25());
+        StartCoroutine(NoProgress60());
+    }
+
+    IEnumerator WaitForVoiceLineManager()
+    {
+        // Wait until VoiceLineManager is no longer null
+        yield return new WaitUntil(() => VoiceLineManager.Instance != null);
+        VoiceLineManager.Instance.AssignSubtitleTextComponent();
+
+        // Now it's safe to use VoiceLineManager.Instance
+        VoiceLineManager.Instance.PlayVoiceLine(enterGarden);
     }
 
     public bool IsFloralMatched()
     {
         return isFloralMatched;
     }
+
     public bool IsWindChimesPlayed
     { get { return isWindChimesPlayed; } }
 
@@ -153,6 +173,7 @@ public class GardenManager : MonoBehaviour
     {
         if (!isScaleBalanced)
         {
+            VoiceLineManager.Instance.PlayVoiceLine(balanced);
             scaleAnimator.SetTrigger("Balance");
             StartCoroutine(SwitchCamera(playerCamera, scalesCamera, 0f));
             StartCoroutine(PlayerEnable(false, 0f));
@@ -394,6 +415,25 @@ public class GardenManager : MonoBehaviour
         player.GetComponent<playerMovement>().enabled = enable;
     }
 
+    IEnumerator NoProgress25()
+    {
+        yield return new WaitForSeconds(25f); // wait 25 seconds
+
+        if (!isFloralMatched) // if door not open
+        {
+            VoiceLineManager.Instance.PlayVoiceLine(noProgress25);
+        }
+    }
+
+    IEnumerator NoProgress60()
+    {
+        yield return new WaitForSeconds(60f); // wait 60 seconds
+
+        if (!isFloralMatched) // if door not open
+        {
+            VoiceLineManager.Instance.PlayVoiceLine(noProgress60);
+        }
+    }
 
     public void ResetPuzzles()
     {

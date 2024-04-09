@@ -7,24 +7,30 @@ Event	ID	Name			Wwise Object Path	Notes
 	1720188539	Play_BookClose			\Default Work Unit\Play_BookClose	
 	2244407197	Play_BookOpen			\Default Work Unit\Play_BookOpen	
 	2292458263	Play_Door_Close			\Level0\Tut_office\Play_Door_Close	
-	2404945126	Play_When_Completing_Clock			\Level0\Voicelines\Play_When_Completing_Clock	
 	2771828150	Play_PageTurn			\Default Work Unit\Play_PageTurn	
 	2797822332	Play_Clock_Tick			\Default Work Unit\Clock\Play_Clock_Tick	
 	2849277068	Play_When_Office_No_Prog_60s			\Level0\Voicelines\Play_When_Office_No_Prog_60s	
-	2894070431	Play_When_interacting_in_false_order_2nd_time			\Default Work Unit\Voicelines\Play_When_interacting_in_false_order_2nd_time	
 	2897827502	Stop_Clock_Tick			\Default Work Unit\Clock\Stop_Clock_Tick	
 	2955987680	Play_Win			\Default Work Unit\Play_Win	
 	3025897706	Play_Birds			\Default Work Unit\Bird\Play_Birds	
 	3370429210	Play_TablePickUp			\Level0\Tut_office\Play_TablePickUp	
+	3371290448	Play_When_Pushed_By_Bird			\Level0\Voicelines\Play_When_Pushed_By_Bird	
 	3434769657	Stop_Clock_Tick_Reverse			\Default Work Unit\Clock\Stop_Clock_Tick_Reverse	
 	3584090578	Play_BirdWing			\Default Work Unit\Bird\Play_BirdWing	
 	3661318894	Play_WrongSequence			\Default Work Unit\Play_WrongSequence	
 	3830889987	Play_Clock_Tick_Reverse			\Default Work Unit\Clock\Play_Clock_Tick_Reverse	
+	4020069969	Play_When_interacting_in_false_order_2nd_time_v1			\Default Work Unit\Voicelines\Play_When_interacting_in_false_order_2nd_time_v1	
+	4020069970	Play_When_interacting_in_false_order_2nd_time_v2			\Default Work Unit\Voicelines\Play_When_interacting_in_false_order_2nd_time_v2	
+	4020069971	Play_When_interacting_in_false_order_2nd_time_v3			\Default Work Unit\Voicelines\Play_When_interacting_in_false_order_2nd_time_v3	
 	4069141843	Play_When_interacting_in_false_order_1st_time			\Default Work Unit\Voicelines\Play_When_interacting_in_false_order_1st_time	
 
 Modulator Envelope	ID	Name			Wwise Object Path	Notes
 	19438176	ReverseTick			\Default Work Unit\ReverseTick	
 	1033209168	ReverseTick (Custom)				
+
+Effect plug-ins	ID	Name	Type				Notes
+	3326204090	CompressorVoiceline	Wwise Compressor			
+	3538682082	VoicelineEQKetro	Wwise Parametric EQ			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	12980260	Table_PickUp3	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\Quest_Game_Crafting_Wood_Bo_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Lv0_Office\Level0_Office\Table\PickUp\Table_PickUp3		5142
@@ -37,14 +43,13 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	204828531	PageTurn_4	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\PageTurn\PageTurn_4_55F4A0A0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Journal\PageTurn\PageTurn_4		10497
 	217621770	Bird02-003	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\Bird02-003_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Birds\Birds\Bird02-003		14973
 	276712555	BookOpen_1	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\BookOpen\BookOpen_1_17006C55.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Journal\BookOpen\BookOpen_1		11310
-	307472616	When_Entering_Office	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\When_Entering_Office_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogues\Lv0\When_Entering_Office		797856
+	307472616	When_Entering_Office	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\When_Entering_Office_68532F24.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogues\Lv0\When_Entering_Office		458120
 	333540284	Bird01-003	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\Bird01-003_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Birds\Birds\Bird01-003		15543
 	336039053	Clock_Tick	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\Clock_Tick_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Lv0_Office\Level0_Office\Clock\Clock_Tick\Clock_Tick		52975
 	336129854	Bird02-002	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\Bird02-002_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Birds\Birds\Bird02-002		15325
 	338398156	PageTurn_6	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\PageTurn\PageTurn_6_EFE1F247.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Journal\PageTurn\PageTurn_6		7893
-	409550975	When_Office_No_Prog_25s	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\When_Office_No_Prog_25s_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogues\Lv0\When_Office_No_Prog_25s		949860
+	409550975	When_Office_No_Prog_25s	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\When_Office_No_Prog_25s_2FC7367A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogues\Lv0\When_Office_No_Prog_25s		442608
 	414646934	Table_PickUp2	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\Quest_Game_Crafting_Wood_-2_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Lv0_Office\Level0_Office\Table\PickUp\Table_PickUp2		6294
-	474015806	When_Completing_Clock	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\When_Completing_Clock_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogues\Lv0\When_Completing_Clock		739244
 	476236753	BookOpen_2	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\BookOpen\BookOpen_2_745C738E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Journal\BookOpen\BookOpen_2		8785
 	500101580	PageTurn_2	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\PageTurn\PageTurn_2_C5FD14C3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Journal\PageTurn\PageTurn_2		8982
 	515135351	Table_PickUp1	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\Quest_Game_Crafting_Wood_-1_2D61A4DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Lv0_Office\Level0_Office\Table\PickUp\Table_PickUp1		5523
@@ -52,20 +57,21 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	583454713	Bird01-002	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\Bird01-002_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Birds\Birds\Bird01-002		14198
 	670277016	Bird02-001	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\Bird02-001_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Birds\Birds\Bird02-001		20807
 	680841763	Poof_3	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\Poof\Poof_3_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Birds\Poof\Poof_3		9134
-	750217263	When_Office_No_Prog_60s	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\When_Office_No_Prog_60s_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogues\Lv0\When_Office_No_Prog_60s		934808
+	750217263	When_Office_No_Prog_60s	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\When_Office_No_Prog_60s_C0B93844.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogues\Lv0\When_Office_No_Prog_60s		473036
 	773465686	Poof_2	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\Poof\Poof_2_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Birds\Poof\Poof_2		9404
 	776713045	PageTurn_3	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\PageTurn\PageTurn_3_7DCC9A8D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Journal\PageTurn\PageTurn_3		10908
 	790702576	Table_Drop2	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\Quest_Game_Action_Wood_Bo-1_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Lv0_Office\Level0_Office\Table\Drop\Table_Drop2		8736
 	821236829	Bird03-002	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\Bird03-002_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Birds\Birds\Bird03-002		10519
-	836297824	When_interacting_in_false_order_2nd_time_v1	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\When_interacting_in_false_order_2nd_time_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogues\All\When_interacting_in_false_order_2nd_time\When_interacting_in_false_order_2nd_time_v1		365216
+	836297824	When_interacting_in_false_order_2nd_time_v1	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\When_interacting_in_false_order_2nd_time_v1_03796B6E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogues\All\When_interacting_in_false_order_2nd_time\When_interacting_in_false_order_2nd_time_v1		158152
 	879919748	PageTurn_1	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\PageTurn\PageTurn_1_900C8A5A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Journal\PageTurn\PageTurn_1		9819
-	906925346	When_interacting_in_false_order_2nd_time_v3	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\When_interacting_in_false_order_2nd_time_v3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogues\All\When_interacting_in_false_order_2nd_time\When_interacting_in_false_order_2nd_time_v3		569948
+	906925346	When_interacting_in_false_order_2nd_time_v3	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\When_interacting_in_false_order_2nd_time_v3_494DEDE0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogues\All\When_interacting_in_false_order_2nd_time\When_interacting_in_false_order_2nd_time_v3		380132
 	909003059	Win	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\Win_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Win		192096
 	928421190	Bird03-001	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\Bird03-001_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Birds\Birds\Bird03-001		16832
 	960283345	BirdWing	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\BirdWing_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Birds\BirdWing		38075
 	972672379	BookClose_2	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\BookClose_2_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Journal\BookClose\BookClose_2		5005
+	984106833	When_Pushed_By_Bird	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\When_Pushed_By_Bird_ED3B18CC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogues\Lv0\When_Pushed_By_Bird		476704
 	985095586	Clock_Tick_Reverse	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\Clock_Tick_Reverse_61B65DE5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Lv0_Office\Level0_Office\Clock\Clock_Reverse\Clock_Tick_Reverse		35953
 	1027777248	WrongSequence	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\WrongSequence_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\WrongSequence		5150
-	1062062802	When_interacting_in_false_order_2nd_time_v2	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\When_interacting_in_false_order_2nd_time_v2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogues\All\When_interacting_in_false_order_2nd_time\When_interacting_in_false_order_2nd_time_v2		578980
+	1062062802	When_interacting_in_false_order_2nd_time_v2	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\When_interacting_in_false_order_2nd_time_v2_D15A4D6D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogues\All\When_interacting_in_false_order_2nd_time\When_interacting_in_false_order_2nd_time_v2		298284
 	1067518328	BookClose_1	D:\NVSWork\Gmae Audio\TruamaWwise\.cache\Mac\SFX\BookClose_1_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Journal\BookClose\BookClose_1		10911
 

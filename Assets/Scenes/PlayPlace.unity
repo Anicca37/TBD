@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44300267, g: 0.49219555, b: 0.5719251, a: 1}
+  m_IndirectSpecularColor: {r: 0.44300318, g: 0.49219626, b: 0.57192606, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -25089,6 +25089,8 @@ MonoBehaviour:
   - {fileID: 7164777}
   pickupableTag: Pickupable
   tempTag: TempUntagged
+  lightshow: {fileID: 11400000, guid: 68e96a20c212d1f45b12d9c59348038d, type: 2}
+  lightshow1: {fileID: 11400000, guid: 37fb899bd2fc9e34eb4d1708b501c828, type: 2}
 --- !u!1 &645058175
 GameObject:
   m_ObjectHideFlags: 0
@@ -30604,6 +30606,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clockController: {fileID: 159945451}
+  openSign: {fileID: 0}
+  openSignOn: {fileID: 0}
 --- !u!1 &805575509
 GameObject:
   m_ObjectHideFlags: 0
@@ -65313,6 +65317,7 @@ MonoBehaviour:
   tunnelCamera: {fileID: 1782469416}
   doorAnimator: {fileID: 309405548}
   player: {fileID: 419380315}
+  sampleVoiceLine: {fileID: 0}
 --- !u!4 &1711599611
 Transform:
   m_ObjectHideFlags: 0

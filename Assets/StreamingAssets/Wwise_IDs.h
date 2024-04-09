@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID PLAY_BALLIMPACT = 2280438399U;
         static const AkUniqueID PLAY_BALLPITCUTSCENE = 2454336936U;
+        static const AkUniqueID PLAY_BALLPITENDCUTSCENE = 2851654491U;
         static const AkUniqueID PLAY_BIRDS = 3025897706U;
         static const AkUniqueID PLAY_BIRDSCRAZY = 1125237609U;
         static const AkUniqueID PLAY_BIRDWING = 3584090578U;
@@ -59,14 +60,24 @@ namespace AK
         static const AkUniqueID PLAY_VINE_GROWING = 4090890880U;
         static const AkUniqueID PLAY_WATERFLOODING = 2908863451U;
         static const AkUniqueID PLAY_WATERFLOW = 518242827U;
+        static const AkUniqueID PLAY_WHEN_CLICKING_ON_BIRD = 2611948227U;
         static const AkUniqueID PLAY_WHEN_COMPLETING_CLOCK = 2404945126U;
+        static const AkUniqueID PLAY_WHEN_COMPLETING_SCALE = 2996903162U;
         static const AkUniqueID PLAY_WHEN_ENTERING_GARDEN = 957649133U;
         static const AkUniqueID PLAY_WHEN_ENTERING_OFFICE = 60874006U;
         static const AkUniqueID PLAY_WHEN_ENTERING_PLAY_PLACE = 1179790440U;
+        static const AkUniqueID PLAY_WHEN_GARDEN_NO_PROG_25S = 285119704U;
+        static const AkUniqueID PLAY_WHEN_GARDEN_NO_PROG_60S = 2079633331U;
         static const AkUniqueID PLAY_WHEN_INTERACTING_IN_FALSE_ORDER_1ST_TIME = 4069141843U;
-        static const AkUniqueID PLAY_WHEN_INTERACTING_IN_FALSE_ORDER_2ND_TIME = 2894070431U;
+        static const AkUniqueID PLAY_WHEN_INTERACTING_IN_FALSE_ORDER_2ND_TIME_V1 = 4020069969U;
+        static const AkUniqueID PLAY_WHEN_INTERACTING_IN_FALSE_ORDER_2ND_TIME_V2 = 4020069970U;
+        static const AkUniqueID PLAY_WHEN_INTERACTING_IN_FALSE_ORDER_2ND_TIME_V3 = 4020069971U;
         static const AkUniqueID PLAY_WHEN_OFFICE_NO_PROG_25S = 885707271U;
         static const AkUniqueID PLAY_WHEN_OFFICE_NO_PROG_60S = 2849277068U;
+        static const AkUniqueID PLAY_WHEN_PLAYPLACE_CLICKING_ON_BIRD = 1440198381U;
+        static const AkUniqueID PLAY_WHEN_PUSHED_BY_BIRD = 3371290448U;
+        static const AkUniqueID PLAY_WHEN_TRIGGERING_LIGHT_SHOW_V1 = 35571092U;
+        static const AkUniqueID PLAY_WHEN_TRIGGERING_LIGHT_SHOW_V2 = 35571095U;
         static const AkUniqueID PLAY_WIN = 2955987680U;
         static const AkUniqueID PLAY_WIND_BLOWING = 2075190801U;
         static const AkUniqueID PLAY_WINDCHIME = 4235265352U;
@@ -78,6 +89,7 @@ namespace AK
         static const AkUniqueID PLAY_XYLOG = 4153846231U;
         static const AkUniqueID PLAY_XYLOSEQUENCE = 4293423455U;
         static const AkUniqueID STOP_BALLPITCUTSCENE = 3739524462U;
+        static const AkUniqueID STOP_BALLPITENDCUTSCENE = 43014761U;
         static const AkUniqueID STOP_CHIME_MELODY = 184097815U;
         static const AkUniqueID STOP_CLOCK_TICK = 2897827502U;
         static const AkUniqueID STOP_CLOCK_TICK_REVERSE = 3434769657U;

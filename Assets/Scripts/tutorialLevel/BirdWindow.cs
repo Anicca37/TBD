@@ -5,15 +5,16 @@ using UnityEngine;
 public class BirdWindow : MonoBehaviour
 {
     [SerializeField] private Animator bird;
-
+    [SerializeField] private VoiceLine officeBird;
     private bool soundPlayed = false;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Chirp");
+            // Debug.Log("Chirp");
             bird.SetTrigger("Warn");
+            Invoke("Warn", 2f);
             Invoke("Push", 4.5f);
 
             if (soundPlayed == false)
@@ -29,10 +30,16 @@ public class BirdWindow : MonoBehaviour
         bird.SetTrigger("Warn Rest");
     }
 
+    private void Warn()
+    {
+        VoiceLineManager.Instance.PlayVoiceLine(officeBird);
+    }
+
     private void Push()
     {
         TutorialManager.Instance.BirdPush();
     }
+
     private void playBirdWing()
     {
         GameObject theBird = GameObject.Find("smallBird");

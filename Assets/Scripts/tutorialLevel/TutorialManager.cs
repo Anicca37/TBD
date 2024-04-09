@@ -21,12 +21,16 @@ public class TutorialManager : MonoBehaviour
     public float pushCooldown = 1f;
     private float lastPushTime = -Mathf.Infinity;
 
+    [SerializeField] private VoiceLine enterOffice;
+    [SerializeField] private VoiceLine noProgress25;
+    [SerializeField] private VoiceLine noProgress60;
+
+
     void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            // DontDestroyOnLoad(gameObject);
             player = GameObject.Find("Player");
             playerController = player.GetComponent<CharacterController>();
 
@@ -44,6 +48,20 @@ public class TutorialManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        StartCoroutine(WaitForVoiceLineManager());
+        StartCoroutine(NoProgress25());
+        StartCoroutine(NoProgress60());
+    }
+
+    IEnumerator WaitForVoiceLineManager()
+    {
+        // Wait until VoiceLineManager is no longer null
+        yield return new WaitUntil(() => VoiceLineManager.Instance != null);
+        VoiceLineManager.Instance.AssignSubtitleTextComponent();
+
+        // Now it's safe to use VoiceLineManager.Instance
+        VoiceLineManager.Instance.PlayVoiceLine(enterOffice);
     }
 
     void Update()
@@ -137,6 +155,26 @@ public class TutorialManager : MonoBehaviour
             controller.Move(moveDirection * Time.deltaTime);
 
             yield return null; // Wait until the next frame
+        }
+    }
+
+    IEnumerator NoProgress25()
+    {
+        yield return new WaitForSeconds(25f); // wait 25 seconds
+
+        if (!doorMovement.IsDoorOpen()) // if door not open
+        {
+            VoiceLineManager.Instance.PlayVoiceLine(noProgress25);
+        }
+    }
+
+    IEnumerator NoProgress60()
+    {
+        yield return new WaitForSeconds(60f); // wait 60 seconds
+
+        if (!doorMovement.IsDoorOpen()) // if door not open
+        {
+            VoiceLineManager.Instance.PlayVoiceLine(noProgress60);
         }
     }
 }
