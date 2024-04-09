@@ -57,6 +57,8 @@ public class GardenManager : MonoBehaviour
 
     [SerializeField] private VoiceLine enterGarden;
     [SerializeField] private VoiceLine balanced;
+    [SerializeField] private VoiceLine noProgress25;
+    [SerializeField] private VoiceLine noProgress60;
 
 
     void Awake()
@@ -80,6 +82,8 @@ public class GardenManager : MonoBehaviour
         }
 
         StartCoroutine(WaitForVoiceLineManager());
+        StartCoroutine(NoProgress25());
+        StartCoroutine(NoProgress60());
     }
 
     IEnumerator WaitForVoiceLineManager()
@@ -411,6 +415,25 @@ public class GardenManager : MonoBehaviour
         player.GetComponent<playerMovement>().enabled = enable;
     }
 
+    IEnumerator NoProgress25()
+    {
+        yield return new WaitForSeconds(25f); // wait 25 seconds
+
+        if (!isFloralMatched) // if door not open
+        {
+            VoiceLineManager.Instance.PlayVoiceLine(noProgress25);
+        }
+    }
+
+    IEnumerator NoProgress60()
+    {
+        yield return new WaitForSeconds(60f); // wait 60 seconds
+
+        if (!isFloralMatched) // if door not open
+        {
+            VoiceLineManager.Instance.PlayVoiceLine(noProgress60);
+        }
+    }
 
     public void ResetPuzzles()
     {

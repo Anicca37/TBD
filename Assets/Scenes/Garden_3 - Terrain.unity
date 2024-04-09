@@ -23997,6 +23997,9 @@ MonoBehaviour:
   shockwaveCooldown: 1
   isReset: 0
   enterGarden: {fileID: 11400000, guid: af0a44920f0cd74459f7e051be04e6c2, type: 2}
+  balanced: {fileID: 11400000, guid: 8fbab816b3c41420bb88cf602c473ac9, type: 2}
+  noProgress25: {fileID: 11400000, guid: 9be679bf7c1774c1f8f7a85d8814df17, type: 2}
+  noProgress60: {fileID: 11400000, guid: a908210b27f174fff812392588d8d87b, type: 2}
 --- !u!4 &1070179845
 Transform:
   m_ObjectHideFlags: 0
