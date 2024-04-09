@@ -466,7 +466,7 @@ MonoBehaviour:
     ParentPath: Events\CutScenes
     guid: dd96f06193a2eb4ca11452c627dfe650
     GuidInternal: 
-    m_lastTime: -8584900437361886259
+    m_lastTime: -8584889770178530964
     List:
     - name: Play_BallPitCutScene
       guid: 8d741ea89d1268419fadfa5de7398a0d
@@ -485,6 +485,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 15.72
       minDuration: 15.72
+    - name: Play_BallPitEndCutScene
+      guid: 41329ea5a1fdec41b9ea0c4360f830fa
+      id: 2851654491
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: CutScenes
+        ObjectType: 12
+        guid: dd96f06193a2eb4ca11452c627dfe650
+      - ElementName: Play_BallPitEndCutScene
+        ObjectType: 3
+        guid: 41329ea5a1fdec41b9ea0c4360f830fa
+      Path: Events\CutScenes\Play_BallPitEndCutScene
+      maxAttenuation: 0
+      maxDuration: 12.412095
+      minDuration: 12.412095
     - name: Play_GardenCutScene
       guid: 80c59e01bceda74ea91072a16aea1d89
       id: 2365141837
@@ -553,6 +570,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Stop_BallPitEndCutScene
+      guid: 45c511a411858c44a10a7cdcfe0a4b83
+      id: 43014761
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: CutScenes
+        ObjectType: 12
+        guid: dd96f06193a2eb4ca11452c627dfe650
+      - ElementName: Stop_BallPitEndCutScene
+        ObjectType: 3
+        guid: 45c511a411858c44a10a7cdcfe0a4b83
+      Path: Events\CutScenes\Stop_BallPitEndCutScene
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_GardenCutScene
       guid: af86ca417c70df4eba3a33c94f5218b8
       id: 571755607
@@ -615,7 +649,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c829b83be71c8a4d9fc3b43dae098d9f
     GuidInternal: 
-    m_lastTime: -8584889788750471179
+    m_lastTime: -8584889770178390844
     List:
     - name: Bird
       guid: 5f720a9b671b8842a9e19381cb155dca
