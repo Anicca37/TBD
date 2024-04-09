@@ -895,7 +895,7 @@
 				<Event Id="1663839887" Name="Stop_Wind_Blowing" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{3F61EF4C-1BC9-7335-17AF-ABF4C9131E2F}">
+		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{CAE903A1-B460-5961-C089-834FE3B26ED7}">
 			<ShortName>Level1PlayPlace</ShortName>
 			<Path>Level1PlayPlace.bnk</Path>
 			<Media>
@@ -1081,7 +1081,7 @@
 				</File>
 				<File Id="474015806" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>When_Completing_Clock.wav</ShortName>
-					<CachePath>SFX/When_Completing_Clock_93C9D6C1.wem</CachePath>
+					<CachePath>SFX/When_Completing_Clock_3469CC5E.wem</CachePath>
 				</File>
 				<File Id="476236753" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BookOpen\BookOpen_2.wav</ShortName>
@@ -1501,7 +1501,7 @@
 						<MediaRef Id="374259416"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2404945126" Name="Play_When_Completing_Clock" DurationType="OneShot" DurationMin="2.029021" DurationMax="2.029021">
+				<Event Id="2404945126" Name="Play_When_Completing_Clock" DurationType="OneShot" DurationMin="1.8618553" DurationMax="1.8618553">
 					<MediaRefs>
 						<MediaRef Id="474015806"/>
 					</MediaRefs>
@@ -2021,5 +2021,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{6BCE628A-F283-B4C6-9763-B8F6A53BF5FA}</FileHash>
+	<FileHash>{608EA644-E694-1220-883A-8E4D6CC8C0DC}</FileHash>
 </SoundBanksInfo>
