@@ -874,8 +874,8 @@ MonoBehaviour:
         guid: a5ed197d6c36ca46ab2de3223d2bb9fa
       Path: Events\Default Work Unit\Voicelines\Play_When_interacting_in_false_order_2nd_time
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 3.0150208
+      minDuration: 1.9016666
     - name: Play_When_interacting_in_false_order_2nd_time_v1
       guid: 980b36c394f93b4da6bc38c817e58555
       id: 4020069969

@@ -60,12 +60,12 @@ namespace AK
         static const AkUniqueID PLAY_VINE_GROWING = 4090890880U;
         static const AkUniqueID PLAY_WATERFLOODING = 2908863451U;
         static const AkUniqueID PLAY_WATERFLOW = 518242827U;
-        static const AkUniqueID PLAY_WHEN_CLICKING_ON_BIRD = 2611948227U;
         static const AkUniqueID PLAY_WHEN_COMPLETING_CLOCK = 2404945126U;
         static const AkUniqueID PLAY_WHEN_COMPLETING_SCALE = 2996903162U;
         static const AkUniqueID PLAY_WHEN_ENTERING_GARDEN = 957649133U;
         static const AkUniqueID PLAY_WHEN_ENTERING_OFFICE = 60874006U;
         static const AkUniqueID PLAY_WHEN_ENTERING_PLAY_PLACE = 1179790440U;
+        static const AkUniqueID PLAY_WHEN_GARDEN_CLICKING_ON_BIRD = 149280155U;
         static const AkUniqueID PLAY_WHEN_GARDEN_NO_PROG_25S = 285119704U;
         static const AkUniqueID PLAY_WHEN_GARDEN_NO_PROG_60S = 2079633331U;
         static const AkUniqueID PLAY_WHEN_INTERACTING_IN_FALSE_ORDER_1ST_TIME = 4069141843U;

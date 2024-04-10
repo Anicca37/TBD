@@ -227,7 +227,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{928C61F2-604B-4ECE-3AFB-28BF644538E1}">
+		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{AFFC3483-C7F1-0432-2D7D-72B4F1317028}">
 			<ShortName>Level2Garden</ShortName>
 			<Path>Level2Garden.bnk</Path>
 			<Media>
@@ -800,18 +800,6 @@
 						<MediaRef Id="39073760"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2611948227" Name="Play_When_Clicking_On_Bird" DurationType="OneShot" DurationMin="2.7826898" DurationMax="3.321416">
-					<MediaRefs>
-						<MediaRef Id="564617994"/>
-						<MediaRef Id="582825741"/>
-					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="3326204090"/>
-							<PluginRef Id="4146709168"/>
-						</ShareSets>
-					</PluginRefs>
-				</Event>
 				<Event Id="2996903162" Name="Play_When_Completing_Scale" DurationType="OneShot" DurationMin="2.3081136" DurationMax="2.3189135">
 					<MediaRefs>
 						<MediaRef Id="22805682"/>
@@ -832,6 +820,18 @@
 						<ShareSets>
 							<PluginRef Id="3326204090"/>
 							<PluginRef Id="3538682082"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="149280155" Name="Play_When_Garden_Clicking_On_Bird" DurationType="OneShot" DurationMin="2.7826898" DurationMax="3.321416">
+					<MediaRefs>
+						<MediaRef Id="564617994"/>
+						<MediaRef Id="582825741"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="3326204090"/>
+							<PluginRef Id="4146709168"/>
 						</ShareSets>
 					</PluginRefs>
 				</Event>
@@ -2061,5 +2061,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{22C92AA1-13B2-9028-90B7-72258038A0BB}</FileHash>
+	<FileHash>{83FF22AC-1540-4D7F-7740-17D37E60A7D6}</FileHash>
 </SoundBanksInfo>

@@ -115,7 +115,7 @@ void PickUpObject()
         {
             soundEventName = isPickingUp ? "Play_TablePickUp" : "Play_TableDrop";
         }
-        else if (objectName.Contains("pinecone"))
+        else if (objectName.Contains("inecone"))
         {
             soundEventName = isPickingUp ? "Play_PineconePickup" : "";
         }
