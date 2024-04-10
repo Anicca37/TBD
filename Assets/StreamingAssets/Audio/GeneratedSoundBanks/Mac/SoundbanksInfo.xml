@@ -227,7 +227,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{AFFC3483-C7F1-0432-2D7D-72B4F1317028}">
+		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{5D35519E-C683-B078-1209-328DA5FC5EF2}">
 			<ShortName>Level2Garden</ShortName>
 			<Path>Level2Garden.bnk</Path>
 			<Media>
@@ -473,7 +473,7 @@
 				</File>
 				<File Id="726456648" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>When_Garden_No_Prog_60s.wav</ShortName>
-					<CachePath>SFX/When_Garden_No_Prog_60s_818F3B66.wem</CachePath>
+					<CachePath>SFX/When_Garden_No_Prog_60s_05B69F4F.wem</CachePath>
 				</File>
 				<File Id="747524387" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PickUp_Pinecone_2.wav</ShortName>
@@ -533,7 +533,7 @@
 				</File>
 				<File Id="882743648" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>When_Garden_No_Prog_25s.wav</ShortName>
-					<CachePath>SFX/When_Garden_No_Prog_25s_818F3B66.wem</CachePath>
+					<CachePath>SFX/When_Garden_No_Prog_25s_EE887177.wem</CachePath>
 				</File>
 				<File Id="898317160" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section2\mus_90bpm_Level2_Section2_MelodyCello.wav</ShortName>
@@ -835,7 +835,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="285119704" Name="Play_When_Garden_No_Prog_25s" DurationType="OneShot" DurationMin="3.662625" DurationMax="3.662625">
+				<Event Id="285119704" Name="Play_When_Garden_No_Prog_25s" DurationType="OneShot" DurationMin="2.7270887" DurationMax="2.7270887">
 					<MediaRefs>
 						<MediaRef Id="882743648"/>
 					</MediaRefs>
@@ -846,7 +846,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="2079633331" Name="Play_When_Garden_No_Prog_60s" DurationType="OneShot" DurationMin="4.4640417" DurationMax="4.4640417">
+				<Event Id="2079633331" Name="Play_When_Garden_No_Prog_60s" DurationType="OneShot" DurationMin="3.352307" DurationMax="3.352307">
 					<MediaRefs>
 						<MediaRef Id="726456648"/>
 					</MediaRefs>
@@ -2061,5 +2061,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{83FF22AC-1540-4D7F-7740-17D37E60A7D6}</FileHash>
+	<FileHash>{BA1C69F3-60FB-C68D-AA1F-FEA763F46B64}</FileHash>
 </SoundBanksInfo>

@@ -46,7 +46,7 @@ public class PlayPlaceLightController : MonoBehaviour
                 // Play playplace open sound
                 if (isLvlMusicPlayed == false)
                 {
-                    AkSoundEngine.PostEvent("Play_Lv1_PlayPlaceMusic", this.gameObject);
+                    AkSoundEngine.PostEvent("Play_Lv1_PlayPlaceMusic", theCelling.gameObject);
                 }
                 isLvlMusicPlayed = true;
                 AkSoundEngine.SetRTPCValue("Lv1_LightOn", 100);

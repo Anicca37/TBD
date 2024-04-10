@@ -180,6 +180,10 @@ public class PauseMenuController : MonoBehaviour
             case MenuOption.Restart:
                 if (SceneManager.GetActiveScene().name.Contains("Garden"))
                 {
+                    GameObject MusicObj = GameObject.Find("GardenManager");
+                    AkSoundEngine.PostEvent("Stop_Level2_NewGardenMusic", MusicObj.gameObject);
+                    GameObject AmbientObj = GameObject.Find("GardenAmbience");
+                    AkSoundEngine.PostEvent("Stop_Level2_GardenAmbience", AmbientObj.gameObject);
                     SceneManager.LoadScene("GardenIntro");
                 }
                 else if (SceneManager.GetActiveScene().name == "DemoLevel")
@@ -188,6 +192,8 @@ public class PauseMenuController : MonoBehaviour
                 }
                 else if (SceneManager.GetActiveScene().name == "PlayPlace Remap")
                 {
+                    GameObject MusicObj = GameObject.Find("LightSoundEmitter");
+                    AkSoundEngine.PostEvent("Stop_Lv1_PlayPlaceMusic", MusicObj.gameObject);
                     SceneManager.LoadScene("PlayPlaceIntro");
                 }
                 break;

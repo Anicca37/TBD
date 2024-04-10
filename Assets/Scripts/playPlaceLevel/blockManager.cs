@@ -28,10 +28,11 @@ public class blockManager : MonoBehaviour
             {
                 VoiceLineManager.Instance.PlayVoiceLine(lightshow1);
             }
-            interactionCount++; 
+            interactionCount++;
 
             // play lightshow music
-            AkSoundEngine.PostEvent("Play_Lv1_LightShowMusic", this.gameObject);
+            GameObject MusicObj = GameObject.Find("LightSoundEmitter");
+            AkSoundEngine.PostEvent("Play_Lv1_LightShowMusic", MusicObj.gameObject);
         }
         else if (PlayPlaceManager.Instance.IsClockInteracted() && !lightShowActive && block.tag != "attached")
         {
