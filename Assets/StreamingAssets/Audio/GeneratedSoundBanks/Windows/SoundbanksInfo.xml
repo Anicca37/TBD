@@ -227,7 +227,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{44687C53-2AFE-63B3-92A6-18161AD128CE}">
+		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{641DABEC-EB3D-3F9B-C44B-C9232E949456}">
 			<ShortName>Level2Garden</ShortName>
 			<Path>Level2Garden.bnk</Path>
 			<Media>
@@ -1715,7 +1715,7 @@
 				<GameParameter Id="185769106" Name="Lv1_LightOn"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{2A995F43-6F0E-0C66-B36C-9423625AE82D}">
+		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{7C785ABC-1B71-75E3-477C-8323C4F702D9}">
 			<ShortName>Level0</ShortName>
 			<Path>Level0.bnk</Path>
 			<Media>
@@ -2091,5 +2091,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{5E761365-8556-6602-6206-351333EC5D7A}</FileHash>
+	<FileHash>{D4DAE5CA-4260-F62F-194F-8ED1B2E17C0D}</FileHash>
 </SoundBanksInfo>
