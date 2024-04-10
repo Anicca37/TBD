@@ -75,6 +75,8 @@ namespace AK
         static const AkUniqueID PLAY_WHEN_OFFICE_NO_PROG_25S = 885707271U;
         static const AkUniqueID PLAY_WHEN_OFFICE_NO_PROG_60S = 2849277068U;
         static const AkUniqueID PLAY_WHEN_PLAYPLACE_CLICKING_ON_BIRD = 1440198381U;
+        static const AkUniqueID PLAY_WHEN_PLAYPLACE_NO_PROG_25S = 499752558U;
+        static const AkUniqueID PLAY_WHEN_PLAYPLACE_NO_PROG_60S = 2696928905U;
         static const AkUniqueID PLAY_WHEN_PUSHED_BY_BIRD = 3371290448U;
         static const AkUniqueID PLAY_WHEN_TRIGGERING_LIGHT_SHOW_V1 = 35571092U;
         static const AkUniqueID PLAY_WHEN_TRIGGERING_LIGHT_SHOW_V2 = 35571095U;

@@ -649,7 +649,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c829b83be71c8a4d9fc3b43dae098d9f
     GuidInternal: 
-    m_lastTime: -8584888866355867975
+    m_lastTime: -8584888818464921961
     List:
     - name: Bird
       guid: 5f720a9b671b8842a9e19381cb155dca
@@ -1305,7 +1305,7 @@ MonoBehaviour:
     ParentPath: Events\Lv1PlayPlace
     guid: 12b42068bed917478fc83b39aa786769
     GuidInternal: 
-    m_lastTime: -8584889865730808548
+    m_lastTime: -8584888818464791842
     List:
     - name: Play_BallImpact
       guid: d84aeadbee68d0469912f9e57a2302e1
@@ -1520,6 +1520,46 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.7904705
       minDuration: 1.7904705
+    - name: Play_When_PlayPlace_No_Prog_25s
+      guid: 8e7f1a0ca67a3f4dac7161505904a864
+      id: 499752558
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv1PlayPlace
+        ObjectType: 12
+        guid: 12b42068bed917478fc83b39aa786769
+      - ElementName: Voicelines
+        ObjectType: 4
+        guid: 9f49989e497a4a43826573ecaf2e5541
+      - ElementName: Play_When_PlayPlace_No_Prog_25s
+        ObjectType: 3
+        guid: 8e7f1a0ca67a3f4dac7161505904a864
+      Path: Events\Lv1PlayPlace\Voicelines\Play_When_PlayPlace_No_Prog_25s
+      maxAttenuation: 0
+      maxDuration: 1.3465519
+      minDuration: 1.3465519
+    - name: Play_When_PlayPlace_No_Prog_60s
+      guid: 8309096ba191d14488fe2f8c6ff582eb
+      id: 2696928905
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv1PlayPlace
+        ObjectType: 12
+        guid: 12b42068bed917478fc83b39aa786769
+      - ElementName: Voicelines
+        ObjectType: 4
+        guid: 9f49989e497a4a43826573ecaf2e5541
+      - ElementName: Play_When_PlayPlace_No_Prog_60s
+        ObjectType: 3
+        guid: 8309096ba191d14488fe2f8c6ff582eb
+      Path: Events\Lv1PlayPlace\Voicelines\Play_When_PlayPlace_No_Prog_60s
+      maxAttenuation: 0
+      maxDuration: 1.6871485
+      minDuration: 1.6871485
     - name: Play_When_Triggering_Light_Show
       guid: d59da50d6d313145968519c86c7294ec
       id: 1508118684
