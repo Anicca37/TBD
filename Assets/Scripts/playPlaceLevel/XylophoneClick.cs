@@ -19,7 +19,7 @@ public class XylophoneClick : MonoBehaviour, IInteract
         }
 
         lastKeyPressTime = Time.time;
-        xyloAnimator.SetTrigger($"Hit {xyloID}"); // animate hit
+        xyloAnimator.SetTrigger("Hit"); // animate hit
         PlayXyloSound(xyloID);
         StartCoroutine(ResetAnimation(xyloID, 0.5f));
         if (floatingText)
@@ -63,6 +63,6 @@ public class XylophoneClick : MonoBehaviour, IInteract
     IEnumerator ResetAnimation(int id, float delay)
     {
         yield return new WaitForSeconds(delay);
-        xyloAnimator.SetTrigger($"Return {id}");
+        xyloAnimator.SetTrigger("Return");
     }
 }
