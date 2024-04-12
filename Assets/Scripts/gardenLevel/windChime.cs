@@ -21,7 +21,7 @@ public class windChime : MonoBehaviour, IInteract
             return; // not long enough / playing sequence hint :(
         }
         lastKeyPressTime = Time.time;
-        chimeAnimator.SetTrigger($"Hit {chimeID}"); // animate hit
+        chimeAnimator.SetTrigger("Hit"); // animate hit
         // check if the floral puzzle is matched
         // if (!true)
         if (GardenManager.Instance.IsFloralMatched())
@@ -45,7 +45,7 @@ public class windChime : MonoBehaviour, IInteract
     IEnumerator ResetAnimation(int id, float delay)
     {
         yield return new WaitForSeconds(delay);
-        chimeAnimator.SetTrigger($"Return {id}");
+        chimeAnimator.SetTrigger("Return");
     }
 
     void ChangeWindDirection(int chimeID)

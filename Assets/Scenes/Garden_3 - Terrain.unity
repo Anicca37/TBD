@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43975514, g: 0.48817998, b: 0.5683994, a: 1}
+  m_IndirectSpecularColor: {r: 0.4397549, g: 0.4881792, b: 0.5683983, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2820,7 +2820,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 287200013}
+    m_TransformParent: {fileID: 341151542}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: b99db40858b204edeb2fce925355c3e8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3366,7 +3366,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 287200013}
+    m_TransformParent: {fileID: 1675775880}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: b99db40858b204edeb2fce925355c3e8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5796,10 +5796,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1925350588}
-  - {fileID: 1473152246}
-  - {fileID: 1557289926}
-  - {fileID: 1014919436}
+  - {fileID: 600606894}
+  - {fileID: 1675775880}
+  - {fileID: 341151542}
+  - {fileID: 1248163885}
   m_Father: {fileID: 2057929056}
   m_LocalEulerAnglesHint: {x: 0, y: 44.588, z: 0}
 --- !u!1001 &293263001
@@ -6568,7 +6568,7 @@ MonoBehaviour:
   windDirectionIndicator: {fileID: 1831152972}
   sequenceChecker: {fileID: 1681733950}
   chimeID: 3
-  chimeAnimator: {fileID: 2057929057}
+  chimeAnimator: {fileID: 341151543}
   cooldownDuration: 1
 --- !u!136 &334206621
 CapsuleCollider:
@@ -6741,6 +6741,60 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7142122417593800428, guid: eaea56da31203be49ba8401ade319be8, type: 3}
   m_PrefabInstance: {fileID: 337755493}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &341151541
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 341151542}
+  - component: {fileID: 341151543}
+  m_Layer: 0
+  m_Name: Chime3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &341151542
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341151541}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1557289926}
+  m_Father: {fileID: 287200013}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &341151543
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341151541}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 03554aaa6591d4ef5b3cd7c35aa03621, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &341650174
 GameObject:
   m_ObjectHideFlags: 0
@@ -12926,7 +12980,7 @@ MonoBehaviour:
   windDirectionIndicator: {fileID: 1831152972}
   sequenceChecker: {fileID: 1681733950}
   chimeID: 2
-  chimeAnimator: {fileID: 2057929057}
+  chimeAnimator: {fileID: 1675775881}
   cooldownDuration: 1
 --- !u!136 &420280421
 CapsuleCollider:
@@ -16120,6 +16174,60 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.013212125
   m_Center: {x: 0.00005196592, y: -0.0010761498, z: -0.00003511782}
+--- !u!1 &600606893
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 600606894}
+  - component: {fileID: 600606895}
+  m_Layer: 0
+  m_Name: Chime1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &600606894
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600606893}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1925350588}
+  m_Father: {fileID: 287200013}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &600606895
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600606893}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3e7ac09ae98c1411cbdcd015d1e7f0bc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &603471191 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f0d790e26607b454fb4e73e2be386416, type: 3}
@@ -24013,6 +24121,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4939908597231328845, guid: 91c6ab7dde2a34fa2a32719c5062774c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 91c6ab7dde2a34fa2a32719c5062774c, type: 3}
       propertyPath: m_Name
       value: WindChimesBase
@@ -24026,6 +24138,10 @@ PrefabInstance:
     - {fileID: 8737450038121644740, guid: 91c6ab7dde2a34fa2a32719c5062774c, type: 3}
     - {fileID: -5888765467670135288, guid: 91c6ab7dde2a34fa2a32719c5062774c, type: 3}
     - {fileID: -629040171299544851, guid: 91c6ab7dde2a34fa2a32719c5062774c, type: 3}
+    - {fileID: -8123979890533442926, guid: 91c6ab7dde2a34fa2a32719c5062774c, type: 3}
+    - {fileID: 7259795037509529632, guid: 91c6ab7dde2a34fa2a32719c5062774c, type: 3}
+    - {fileID: -4330596319515333164, guid: 91c6ab7dde2a34fa2a32719c5062774c, type: 3}
+    - {fileID: -4939908597231328845, guid: 91c6ab7dde2a34fa2a32719c5062774c, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 91c6ab7dde2a34fa2a32719c5062774c, type: 3}
@@ -31035,6 +31151,60 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1921884836}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1248163884
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1248163885}
+  - component: {fileID: 1248163886}
+  m_Layer: 0
+  m_Name: Chime4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1248163885
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248163884}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.25, y: 0, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1014919436}
+  m_Father: {fileID: 287200013}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1248163886
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248163884}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6df9bc6e20b5548809dbef7e6295ec35, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1251652649
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33409,7 +33579,7 @@ MonoBehaviour:
   windDirectionIndicator: {fileID: 1831152972}
   sequenceChecker: {fileID: 1681733950}
   chimeID: 1
-  chimeAnimator: {fileID: 2057929057}
+  chimeAnimator: {fileID: 600606895}
   cooldownDuration: 1
 --- !u!136 &1367890774
 CapsuleCollider:
@@ -42245,7 +42415,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 287200013}
+    m_TransformParent: {fileID: 1248163885}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: b99db40858b204edeb2fce925355c3e8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -43518,6 +43688,60 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7142122417593800428, guid: eaea56da31203be49ba8401ade319be8, type: 3}
   m_PrefabInstance: {fileID: 1674305649}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1675775879
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1675775880}
+  - component: {fileID: 1675775881}
+  m_Layer: 0
+  m_Name: Chime2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1675775880
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675775879}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1473152246}
+  m_Father: {fileID: 287200013}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1675775881
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675775879}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 18b2fc5ff4cf54ae08ca70f35bafd235, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1681733949
 GameObject:
   m_ObjectHideFlags: 0
@@ -55693,7 +55917,7 @@ MonoBehaviour:
   windDirectionIndicator: {fileID: 1831152972}
   sequenceChecker: {fileID: 1681733950}
   chimeID: 4
-  chimeAnimator: {fileID: 2057929057}
+  chimeAnimator: {fileID: 1248163886}
   cooldownDuration: 1
 --- !u!136 &2043570714
 CapsuleCollider:
@@ -56089,7 +56313,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2057929056}
-  - component: {fileID: 2057929057}
   m_Layer: 0
   m_Name: Wind Chime
   m_TagString: Interactable
@@ -56116,27 +56339,6 @@ Transform:
   - {fileID: 287200013}
   m_Father: {fileID: 1502928236}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &2057929057
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057929055}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9d3079310ac2641c9a089c413f0702f6, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &2061106110
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58416,7 +58618,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 287200013}
+    m_TransformParent: {fileID: 600606894}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: b99db40858b204edeb2fce925355c3e8, type: 3}
       propertyPath: m_LocalPosition.x
