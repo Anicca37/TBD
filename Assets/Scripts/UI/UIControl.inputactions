@@ -127,6 +127,17 @@
                 },
                 {
                     "name": "",
+                    "id": "4a1f3b25-888e-45ab-9a3d-7f5d98640a34",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "SelectionUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "adb95491-bb30-477c-b3b9-0d5cc1342f55",
                     "path": "<Keyboard>/downArrow",
                     "interactions": "",
@@ -154,6 +165,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
+                    "action": "SelectionDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4259f7de-ad96-4dcc-abab-c72695a054e1",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
                     "action": "SelectionDown",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -193,6 +215,17 @@
                 },
                 {
                     "name": "",
+                    "id": "c5843d50-38b6-4802-a7e8-17625a16fe31",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "SelectionLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "0a7ae84d-11fd-4a70-83e7-5f02a65a328e",
                     "path": "<Keyboard>/rightArrow",
                     "interactions": "",
@@ -220,6 +253,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
+                    "action": "SelectionRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6c23543e-5bd8-41f8-8d10-2e88d0d2e3e4",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
                     "action": "SelectionRight",
                     "isComposite": false,
                     "isPartOfComposite": false
