@@ -7,8 +7,8 @@ public class XylophoneClick : MonoBehaviour, IInteract
     public int xyloID;
     [SerializeField] private Animator xyloAnimator;
     public GameObject floatingText;
-    private float lastKeyPressTime = 0f;
-    public float cooldownDuration = 1f;
+    private static float lastKeyPressTime = 0f;
+    public float cooldownDuration = .5f;
 
     public void OnMouseDown()
     {

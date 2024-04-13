@@ -161,8 +161,8 @@ public class PlayPlaceManager : MonoBehaviour
             //play sound        
             Invoke("playDoorSound", 1f);
 
-            StartCoroutine(SwitchCamera(tunnelCamera, playerCamera, 5f));
-            StartCoroutine(PlayerEnable(true, 5f));
+            StartCoroutine(SwitchCamera(tunnelCamera, playerCamera, 3.5f));
+            StartCoroutine(PlayerEnable(true, 3.5f));
         }
     }
 
