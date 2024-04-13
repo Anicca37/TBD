@@ -97,7 +97,7 @@ public class SequenceChecker : MonoBehaviour
         // switch camera
         StartCoroutine(SwitchCamera(playerCamera, actionCamera, 0.5f));
 
-        StartCoroutine(SwitchCamera(actionCamera, playerCamera, 7f));
+        StartCoroutine(SwitchCamera(actionCamera, playerCamera, 5.5f));
         Invoke("ReturnBird", 5f);
         GardenManager.Instance.CompletePuzzle("WindChimes");
     }
