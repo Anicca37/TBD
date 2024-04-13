@@ -22,11 +22,11 @@ public class windChime : MonoBehaviour, IInteract
         }
         lastKeyPressTime = Time.time;
         chimeAnimator.SetTrigger("Hit"); // animate hit
-        // check if the floral puzzle is matched
-        // if (!true)
+                                         // check if the floral puzzle is matched
+                                         // if (!true)
+        ChangeWindDirection(chimeID);
         if (GardenManager.Instance.IsFloralMatched())
         {
-            ChangeWindDirection(chimeID);
             // Debug.Log($"curr index: {currentSequenceIndex}");
             // Debug.Log($"{chimeID} = {targetSequence[currentSequenceIndex]} is {chimeID == targetSequence[currentSequenceIndex]}");
             if (!GardenManager.Instance.IsWindChimesPlayed)
