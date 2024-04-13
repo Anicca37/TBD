@@ -227,7 +227,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{641DABEC-EB3D-3F9B-C44B-C9232E949456}">
+		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{FE96766E-F106-202E-3CA1-1EE79FF4BC11}">
 			<ShortName>Level2Garden</ShortName>
 			<Path>Level2Garden.bnk</Path>
 			<Media>
@@ -330,10 +330,6 @@
 				<File Id="333540284" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bird01-003.wav</ShortName>
 					<CachePath>SFX/Bird01-003_8E324C96.wem</CachePath>
-				</File>
-				<File Id="336039053" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Clock_Tick.wav</ShortName>
-					<CachePath>SFX/Clock_Tick_56CEF360.wem</CachePath>
 				</File>
 				<File Id="336129854" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bird02-002.wav</ShortName>
@@ -535,6 +531,10 @@
 					<ShortName>When_Garden_No_Prog_25s.wav</ShortName>
 					<CachePath>SFX/When_Garden_No_Prog_25s_EAA1E623.wem</CachePath>
 				</File>
+				<File Id="890437059" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ClockTickNew.wav</ShortName>
+					<CachePath>SFX/ClockTickNew_E20A328D.wem</CachePath>
+				</File>
 				<File Id="898317160" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section2\mus_90bpm_Level2_Section2_MelodyCello.wav</ShortName>
 					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Section2/mus_90bpm_Level2_Section2_MelodyCello_239921B3.wem</CachePath>
@@ -675,7 +675,7 @@
 				</Event>
 				<Event Id="2797822332" Name="Play_Clock_Tick" MaxAttenuation="100" DurationType="Infinite">
 					<MediaRefs>
-						<MediaRef Id="336039053"/>
+						<MediaRef Id="890437059"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3830889987" Name="Play_Clock_Tick_Reverse" MaxAttenuation="100" DurationType="Infinite">
@@ -935,7 +935,7 @@
 				<Event Id="1663839887" Name="Stop_Wind_Blowing" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{F324E8FB-32F9-913F-760C-B1FB4D62B8C9}">
+		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{51290E05-1101-49DB-B627-48C325C1C4A3}">
 			<ShortName>Level1PlayPlace</ShortName>
 			<Path>Level1PlayPlace.bnk</Path>
 			<Media>
@@ -1074,10 +1074,6 @@
 				<File Id="333540284" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bird01-003.wav</ShortName>
 					<CachePath>SFX/Bird01-003_8E324C96.wem</CachePath>
-				</File>
-				<File Id="336039053" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Clock_Tick.wav</ShortName>
-					<CachePath>SFX/Clock_Tick_56CEF360.wem</CachePath>
 				</File>
 				<File Id="336129854" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bird02-002.wav</ShortName>
@@ -1303,6 +1299,10 @@
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_S1\mus_3-4_125bpm_Level1_S1_Snare.wav</ShortName>
 					<CachePath>SFX/mus_3-4_125bpm_Level1/mus_3-4_125bpm_Level1_S1/mus_3-4_125bpm_Level1_S1_Snare_239921B3.wem</CachePath>
 				</File>
+				<File Id="890437059" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ClockTickNew.wav</ShortName>
+					<CachePath>SFX/ClockTickNew_E20A328D.wem</CachePath>
+				</File>
 				<File Id="906925346" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>When_interacting_in_false_order_2nd_time_v3.wav</ShortName>
 					<CachePath>SFX/When_interacting_in_false_order_2nd_time_v3_17BD14CC.wem</CachePath>
@@ -1455,7 +1455,7 @@
 				</Event>
 				<Event Id="2797822332" Name="Play_Clock_Tick" MaxAttenuation="100" DurationType="Infinite">
 					<MediaRefs>
-						<MediaRef Id="336039053"/>
+						<MediaRef Id="890437059"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3830889987" Name="Play_Clock_Tick_Reverse" MaxAttenuation="100" DurationType="Infinite">
@@ -1715,7 +1715,7 @@
 				<GameParameter Id="185769106" Name="Lv1_LightOn"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{7C785ABC-1B71-75E3-477C-8323C4F702D9}">
+		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{2E43011F-597E-2FEA-3D67-0242567CB38D}">
 			<ShortName>Level0</ShortName>
 			<Path>Level0.bnk</Path>
 			<Media>
@@ -1766,10 +1766,6 @@
 				<File Id="333540284" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bird01-003.wav</ShortName>
 					<CachePath>SFX/Bird01-003_8E324C96.wem</CachePath>
-				</File>
-				<File Id="336039053" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Clock_Tick.wav</ShortName>
-					<CachePath>SFX/Clock_Tick_56CEF360.wem</CachePath>
 				</File>
 				<File Id="336129854" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bird02-002.wav</ShortName>
@@ -1842,6 +1838,10 @@
 				<File Id="879919748" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PageTurn\PageTurn_1.wav</ShortName>
 					<CachePath>SFX/PageTurn/PageTurn_1_900C8A5A.wem</CachePath>
+				</File>
+				<File Id="890437059" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ClockTickNew.wav</ShortName>
+					<CachePath>SFX/ClockTickNew_E20A328D.wem</CachePath>
 				</File>
 				<File Id="906925346" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>When_interacting_in_false_order_2nd_time_v3.wav</ShortName>
@@ -1923,7 +1923,7 @@
 				</Event>
 				<Event Id="2797822332" Name="Play_Clock_Tick" MaxAttenuation="100" DurationType="Infinite">
 					<MediaRefs>
-						<MediaRef Id="336039053"/>
+						<MediaRef Id="890437059"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3830889987" Name="Play_Clock_Tick_Reverse" MaxAttenuation="100" DurationType="Infinite">
@@ -2091,5 +2091,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{BB6CC6D3-2050-F594-EF44-B61BE115AA6E}</FileHash>
+	<FileHash>{1F5FE4B3-1141-B048-1A37-764A6A0974A8}</FileHash>
 </SoundBanksInfo>
