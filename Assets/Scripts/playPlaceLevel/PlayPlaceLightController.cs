@@ -11,7 +11,7 @@ public class PlayPlaceLightController : MonoBehaviour
     public GameObject[] blocks;
     public GameObject[] xylophones;
     public GameObject[] signPlanes;
-    public GameObject[] clockComponents;
+    public GameObject clockLight;
     public Material[] defaultMaterials;
     public Material[] glowingMaterials;
     public ClockManipulation clockController;
@@ -160,17 +160,7 @@ public class PlayPlaceLightController : MonoBehaviour
         {
             xylophones[i].GetComponent<Renderer>().material = isOpen ? defaultMaterials[6+i] : glowingMaterials[5+i];
         }
-        foreach (GameObject clock in clockComponents)
-        {
-            if (clock.name.Contains("Clock"))
-            {
-                clock.GetComponent<Renderer>().material = isOpen ? defaultMaterials[11] : glowingMaterials[1];
-            }
-            else
-            {
-                clock.GetComponent<Renderer>().material = isOpen ? defaultMaterials[10] : glowingMaterials[1];
-            }
-        }
+        clockLight.SetActive(!isOpen);
     }
 
     private void LightSoundReset()
