@@ -40,34 +40,34 @@ public class SequenceChecker : MonoBehaviour
             wrongAttempts++;
             Debug.Log($"Wrong attempt #{wrongAttempts}");
             CanClickChime = false; // disable clicking
-            //play sound
-            if (ifCorrectSoundPlayed == false)
-            {
-                ifCorrectSoundPlayed = true;
+                                   //play sound
+                                   // if (ifCorrectSoundPlayed == false)
+                                   // {
+                                   //     ifCorrectSoundPlayed = true;
 
-                Invoke("playWrongSound", 0.3f);
-                Invoke("playCorrectSound", 1.3f); // play correct after 0.5s;
-                Invoke("makePlayedFalse", 5f);
-            }
+            Invoke("playWrongSound", 0.3f);
+            Invoke("playCorrectSound", 1.3f); // play correct after 0.5s;
+            //     Invoke("makePlayedFalse", 5f);
+            // }
         }
     }
-    public bool IsCorrectSequencePlayed()
-    {
-        return ifCorrectSoundPlayed;
-    }
+    // public bool IsCorrectSequencePlayed()
+    // {
+    //     return ifCorrectSoundPlayed;
+    // }
     private void playWrongSound()
     {
         AkSoundEngine.PostEvent("Play_WrongSequence", this.gameObject);
     }
 
-    private void makePlayedTrue()
-    {
-        ifCorrectSoundPlayed = true;
-    }
-    private void makePlayedFalse()
-    {
-        ifCorrectSoundPlayed = false;
-    }
+    // private void makePlayedTrue()
+    // {
+    //     ifCorrectSoundPlayed = true;
+    // }
+    // private void makePlayedFalse()
+    // {
+    //     ifCorrectSoundPlayed = false;
+    // }
 
     private void playCorrectSound()
     {
