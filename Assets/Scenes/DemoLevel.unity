@@ -22266,12 +22266,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3215759113787702287, guid: 0182f02c68258c44598755453f599d2c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6415778453640681509, guid: 0182f02c68258c44598755453f599d2c, type: 3}
       propertyPath: m_Name
       value: Chair
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3215759113787702287, guid: 0182f02c68258c44598755453f599d2c, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6415778453640681509, guid: 0182f02c68258c44598755453f599d2c, type: 3}
@@ -23863,8 +23868,8 @@ Transform:
   m_GameObject: {fileID: 1857031503}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.3235058, y: 0.61053956, z: -0.52139854}
-  m_LocalScale: {x: 0.13333333, y: 0.10526315, z: 1}
+  m_LocalPosition: {x: 1.194, y: 0.604, z: -0.52}
+  m_LocalScale: {x: 0.12036932, y: 0.092587136, z: 0.90277}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 276871285}

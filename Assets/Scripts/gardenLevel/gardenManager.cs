@@ -17,10 +17,10 @@ public class GardenManager : MonoBehaviour
     public Camera birdCamera;
     public Camera venusFlytrapCamera;
 
-    private bool isFloralMatched = true;
-    private bool isWindChimesPlayed = true;
-    private bool isScaleBalanced = true;
-    private bool isClockSet = true;
+    private bool isFloralMatched = false;
+    private bool isWindChimesPlayed = false;
+    private bool isScaleBalanced = false;
+    private bool isClockSet = false;
     public bool PlayerEaten = false;
 
     public GameObject waterObject;
