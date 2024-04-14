@@ -236,6 +236,7 @@ public class GardenManager : MonoBehaviour
             AkSoundEngine.PostEvent("Play_FlyTrapPopedUp", VenusFlytrap.gameObject);
         }
         isTrapActive = true;
+        EnableGardenLights();
         StartCoroutine(PlayerEnable(false, 0f));
         StartCoroutine(SwitchCamera(playerCamera, venusFlytrapCamera, 0f));
         StartCoroutine(SwitchCamera(venusFlytrapCamera, playerCamera, 9f));
@@ -460,6 +461,32 @@ public class GardenManager : MonoBehaviour
 
         // Optionally, reload the scene to visually reset everything
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+    }
+
+    public void EnableGardenLights()
+    {
+        foreach (GameObject obj in FindObjectsOfType<GameObject>(true))
+        {
+            // Check if the object's name is "yeah"
+            if (obj.name == "Point")
+            {
+                // Enable the game object
+                obj.SetActive(true);
+            }
+        }
+        // // Assuming "Garden Lights" is the name of the parent GameObject
+        // // and it's attached to this script
+        // foreach (Transform gardenLightTransform in transform)
+        // {
+        //     // Find the "Point" object within the current "GardenLight"
+        //     Transform pointTransform = gardenLightTransform.Find("Point");
+
+        //     if (pointTransform != null)
+        //     {
+        //         // Disable the "Point" GameObject
+        //         pointTransform.gameObject.SetActive(true);
+        //     }
+        // }
     }
 
     public bool IsScaleBalanced()

@@ -1045,6 +1045,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 57da4073905944f399fa6c36383f2ff7, type: 2}
+    - target: {fileID: 587401294588148076, guid: 2ddedeec8390c714e8841034487acfad, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1868421744814498135, guid: 2ddedeec8390c714e8841034487acfad, type: 3}
       propertyPath: m_Name
       value: GardenLight (8)
@@ -13438,6 +13442,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 57da4073905944f399fa6c36383f2ff7, type: 2}
+    - target: {fileID: 587401294588148076, guid: 2ddedeec8390c714e8841034487acfad, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1868421744814498135, guid: 2ddedeec8390c714e8841034487acfad, type: 3}
       propertyPath: m_Name
       value: GardenLight (7)
@@ -18491,6 +18499,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 57da4073905944f399fa6c36383f2ff7, type: 2}
+    - target: {fileID: 587401294588148076, guid: 2ddedeec8390c714e8841034487acfad, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1868421744814498135, guid: 2ddedeec8390c714e8841034487acfad, type: 3}
       propertyPath: m_Name
       value: GardenLight (5)
@@ -19909,6 +19921,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 57da4073905944f399fa6c36383f2ff7, type: 2}
+    - target: {fileID: 587401294588148076, guid: 2ddedeec8390c714e8841034487acfad, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1868421744814498135, guid: 2ddedeec8390c714e8841034487acfad, type: 3}
       propertyPath: m_Name
       value: GardenLight (4)
@@ -23854,6 +23870,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 57da4073905944f399fa6c36383f2ff7, type: 2}
+    - target: {fileID: 587401294588148076, guid: 2ddedeec8390c714e8841034487acfad, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1868421744814498135, guid: 2ddedeec8390c714e8841034487acfad, type: 3}
       propertyPath: m_Name
       value: GardenLight (9)
@@ -30357,6 +30377,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 57da4073905944f399fa6c36383f2ff7, type: 2}
+    - target: {fileID: 587401294588148076, guid: 2ddedeec8390c714e8841034487acfad, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1868421744814498135, guid: 2ddedeec8390c714e8841034487acfad, type: 3}
       propertyPath: m_Name
       value: GardenLight (2)
@@ -35014,6 +35038,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 57da4073905944f399fa6c36383f2ff7, type: 2}
+    - target: {fileID: 587401294588148076, guid: 2ddedeec8390c714e8841034487acfad, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1868421744814498135, guid: 2ddedeec8390c714e8841034487acfad, type: 3}
       propertyPath: m_Name
       value: GardenLight (3)
@@ -48853,6 +48881,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 57da4073905944f399fa6c36383f2ff7, type: 2}
+    - target: {fileID: 587401294588148076, guid: 2ddedeec8390c714e8841034487acfad, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1868421744814498135, guid: 2ddedeec8390c714e8841034487acfad, type: 3}
       propertyPath: m_Name
       value: GardenLight (6)
