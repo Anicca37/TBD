@@ -37,6 +37,7 @@ namespace AK
         static const AkUniqueID PLAY_FLOWERPICKUP = 1678695831U;
         static const AkUniqueID PLAY_FLOWERPLANT = 1321543350U;
         static const AkUniqueID PLAY_FLOWERWINDBLOW = 1831549045U;
+        static const AkUniqueID PLAY_FLYTRAPBREATH = 1087380358U;
         static const AkUniqueID PLAY_FLYTRAPPOPEDUP = 531081561U;
         static const AkUniqueID PLAY_GARDENCUTSCENE = 2365141837U;
         static const AkUniqueID PLAY_GARDENENDCUTSCENE = 2696761744U;

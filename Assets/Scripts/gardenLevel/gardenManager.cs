@@ -133,7 +133,7 @@ public class GardenManager : MonoBehaviour
                         if (vineSoundPlayed == false)
                         {
                             GameObject theVines = GameObject.Find("vines");
-                            AkSoundEngine.PostEvent("Play_Vine_Growing", theVines.gameObject);
+                            //AkSoundEngine.PostEvent("Play_Vine_Growing", theVines.gameObject);
                             vineSoundPlayed = true;
                         }
                     }

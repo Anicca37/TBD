@@ -67,7 +67,7 @@
 				<Event Id="692624126" Name="Stop_IntroCutscene" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{A0B9808C-F9C9-3579-6DC1-96FA04119DB3}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F43C6F8A-241B-6EE8-AC7F-1352612EF932}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -227,13 +227,13 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{FE96766E-F106-202E-3CA1-1EE79FF4BC11}">
+		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{53E3416B-420F-A1B9-C013-9F6D86C20C99}">
 			<ShortName>Level2Garden</ShortName>
 			<Path>Level2Garden.bnk</Path>
 			<Media>
 				<File Id="22805682" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ImASeedYay1.wav</ShortName>
-					<CachePath>SFX/ImASeedYay1_1E034170.wem</CachePath>
+					<CachePath>SFX/ImASeedYay1_BA4D4DD3.wem</CachePath>
 				</File>
 				<File Id="34888650" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BookOpen\BookOpen_3.wav</ShortName>
@@ -245,7 +245,7 @@
 				</File>
 				<File Id="41536281" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ImASeedYay2.wav</ShortName>
-					<CachePath>SFX/ImASeedYay2_84A2793C.wem</CachePath>
+					<CachePath>SFX/ImASeedYay2_21389D27.wem</CachePath>
 				</File>
 				<File Id="59226223" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Flower_Wind_Blowing02.wav</ShortName>
@@ -359,6 +359,10 @@
 					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section1\mus_90bpm_Level2_Section1_Melody.wav</ShortName>
 					<CachePath>SFX/mus_90bpm_Level2/mus_90bpm_Level2_Section1/mus_90bpm_Level2_Section1_Melody_239921B3.wem</CachePath>
 				</File>
+				<File Id="407370386" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FlytrapBreath\FlytrapBreath_1.wav</ShortName>
+					<CachePath>SFX/FlytrapBreath/FlytrapBreath_1_A86287BF.wem</CachePath>
+				</File>
 				<File Id="433162066" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PlayerEaten.wav</ShortName>
 					<CachePath>SFX/PlayerEaten_8E324C96.wem</CachePath>
@@ -369,7 +373,7 @@
 				</File>
 				<File Id="447525412" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>When_Entering_Garden.wav</ShortName>
-					<CachePath>SFX/When_Entering_Garden_51BEEE7A.wem</CachePath>
+					<CachePath>SFX/When_Entering_Garden_8723EEBD.wem</CachePath>
 				</File>
 				<File Id="462888902" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Flower_Wind_Blowing01.wav</ShortName>
@@ -393,7 +397,7 @@
 				</File>
 				<File Id="545651926" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>What_just_happened_1.wav</ShortName>
-					<CachePath>SFX/What_just_happened_1_E45E4672.wem</CachePath>
+					<CachePath>SFX/What_just_happened_1_325A3565.wem</CachePath>
 				</File>
 				<File Id="558199229" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section2\mus_90bpm_Level2_Section2_Kick.wav</ShortName>
@@ -401,7 +405,7 @@
 				</File>
 				<File Id="564617994" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WhereIsSeed1MorePanic.wav</ShortName>
-					<CachePath>SFX/WhereIsSeed1MorePanic_4C57B99A.wem</CachePath>
+					<CachePath>SFX/WhereIsSeed1MorePanic_124ACB69.wem</CachePath>
 				</File>
 				<File Id="577840437" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Flower_PickUp_01.wav</ShortName>
@@ -409,7 +413,7 @@
 				</File>
 				<File Id="582825741" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WhereIsSeed2.wav</ShortName>
-					<CachePath>SFX/WhereIsSeed2_105AC685.wem</CachePath>
+					<CachePath>SFX/WhereIsSeed2_DE0AE102.wem</CachePath>
 				</File>
 				<File Id="583454713" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bird01-002.wav</ShortName>
@@ -469,7 +473,11 @@
 				</File>
 				<File Id="726456648" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>When_Garden_No_Prog_60s.wav</ShortName>
-					<CachePath>SFX/When_Garden_No_Prog_60s_AB922F02.wem</CachePath>
+					<CachePath>SFX/When_Garden_No_Prog_60s_BEDB5635.wem</CachePath>
+				</File>
+				<File Id="736969765" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FlytrapBreath\FlytrapBreath_5.wav</ShortName>
+					<CachePath>SFX/FlytrapBreath/FlytrapBreath_5_A38EDA36.wem</CachePath>
 				</File>
 				<File Id="747524387" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PickUp_Pinecone_2.wav</ShortName>
@@ -482,6 +490,10 @@
 				<File Id="776713045" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PageTurn\PageTurn_3.wav</ShortName>
 					<CachePath>SFX/PageTurn/PageTurn_3_7DCC9A8D.wem</CachePath>
+				</File>
+				<File Id="782405123" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FlytrapBreath\FlytrapBreath_2.wav</ShortName>
+					<CachePath>SFX/FlytrapBreath/FlytrapBreath_2_ACC587B7.wem</CachePath>
 				</File>
 				<File Id="785447792" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section2\mus_90bpm_Level2_Section2_Bass.wav</ShortName>
@@ -505,7 +517,7 @@
 				</File>
 				<File Id="836297824" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>When_interacting_in_false_order_2nd_time_v1.wav</ShortName>
-					<CachePath>SFX/When_interacting_in_false_order_2nd_time_v1_D9849F19.wem</CachePath>
+					<CachePath>SFX/When_interacting_in_false_order_2nd_time_v1_A5A678C6.wem</CachePath>
 				</File>
 				<File Id="862302749" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Intro\mus_90bpm_Level2_Intro_NoiseDown.wav</ShortName>
@@ -529,11 +541,11 @@
 				</File>
 				<File Id="882743648" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>When_Garden_No_Prog_25s.wav</ShortName>
-					<CachePath>SFX/When_Garden_No_Prog_25s_EAA1E623.wem</CachePath>
+					<CachePath>SFX/When_Garden_No_Prog_25s_18DEDAAC.wem</CachePath>
 				</File>
 				<File Id="890437059" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ClockTickNew.wav</ShortName>
-					<CachePath>SFX/ClockTickNew_E20A328D.wem</CachePath>
+					<CachePath>SFX/ClockTickNew_2683B186.wem</CachePath>
 				</File>
 				<File Id="898317160" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Section2\mus_90bpm_Level2_Section2_MelodyCello.wav</ShortName>
@@ -541,11 +553,15 @@
 				</File>
 				<File Id="906925346" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>When_interacting_in_false_order_2nd_time_v3.wav</ShortName>
-					<CachePath>SFX/When_interacting_in_false_order_2nd_time_v3_17BD14CC.wem</CachePath>
+					<CachePath>SFX/When_interacting_in_false_order_2nd_time_v3_E0E99343.wem</CachePath>
 				</File>
 				<File Id="909003059" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Win.wav</ShortName>
 					<CachePath>SFX/Win_818F3B66.wem</CachePath>
+				</File>
+				<File Id="910169751" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FlytrapBreath\FlytrapBreath_4.wav</ShortName>
+					<CachePath>SFX/FlytrapBreath/FlytrapBreath_4_436B319E.wem</CachePath>
 				</File>
 				<File Id="928421190" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bird03-001.wav</ShortName>
@@ -558,6 +574,10 @@
 				<File Id="960283345" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BirdWing.wav</ShortName>
 					<CachePath>SFX/BirdWing_8E324C96.wem</CachePath>
+				</File>
+				<File Id="960576685" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FlytrapBreath\FlytrapBreath_3.wav</ShortName>
+					<CachePath>SFX/FlytrapBreath/FlytrapBreath_3_63FD4112.wem</CachePath>
 				</File>
 				<File Id="965482483" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_90bpm_Level2\mus_90bpm_Level2_Tran\mus_90bpm_Level2_Tran_Bass.wav</ShortName>
@@ -585,7 +605,7 @@
 				</File>
 				<File Id="1062062802" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>When_interacting_in_false_order_2nd_time_v2.wav</ShortName>
-					<CachePath>SFX/When_interacting_in_false_order_2nd_time_v2_65245187.wem</CachePath>
+					<CachePath>SFX/When_interacting_in_false_order_2nd_time_v2_11BA47B0.wem</CachePath>
 				</File>
 				<File Id="1067518328" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BookClose_1.wav</ShortName>
@@ -594,10 +614,7 @@
 			</Media>
 			<Plugins>
 				<ShareSets>
-					<Plugin Id="3326204090" Name="CompressorVoiceline" LibName="Wwise Compressor" LibId="7077891"/>
-					<Plugin Id="3538682082" Name="VoicelineEQKetro" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="3604890626" Name="High_Pass_60Hz" LibName="Wwise Parametric EQ" LibId="6881283"/>
-					<Plugin Id="4146709168" Name="VoicelineEQBojana" LibName="Wwise Parametric EQ" LibId="6881283"/>
 				</ShareSets>
 			</Plugins>
 			<Events>
@@ -711,6 +728,15 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
+				<Event Id="1087380358" Name="Play_FlytrapBreath" MaxAttenuation="130" DurationType="OneShot" DurationMin="0.5210949" DurationMax="1.5095457">
+					<MediaRefs>
+						<MediaRef Id="407370386"/>
+						<MediaRef Id="736969765"/>
+						<MediaRef Id="782405123"/>
+						<MediaRef Id="910169751"/>
+						<MediaRef Id="960576685"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="531081561" Name="Play_FlyTrapPopedUp" MaxAttenuation="200" DurationType="OneShot" DurationMin="0.18133333" DurationMax="0.18133333">
 					<MediaRefs>
 						<MediaRef Id="304640499"/>
@@ -805,101 +831,47 @@
 						<MediaRef Id="22805682"/>
 						<MediaRef Id="41536281"/>
 					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="3326204090"/>
-							<PluginRef Id="4146709168"/>
-						</ShareSets>
-					</PluginRefs>
 				</Event>
 				<Event Id="957649133" Name="Play_When_Entering_Garden" DurationType="OneShot" DurationMin="6.2785583" DurationMax="6.2785583">
 					<MediaRefs>
 						<MediaRef Id="447525412"/>
 					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="3326204090"/>
-							<PluginRef Id="3538682082"/>
-						</ShareSets>
-					</PluginRefs>
 				</Event>
 				<Event Id="149280155" Name="Play_When_Garden_Clicking_On_Bird" DurationType="OneShot" DurationMin="2.7826898" DurationMax="3.321416">
 					<MediaRefs>
 						<MediaRef Id="564617994"/>
 						<MediaRef Id="582825741"/>
 					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="3326204090"/>
-							<PluginRef Id="4146709168"/>
-						</ShareSets>
-					</PluginRefs>
 				</Event>
 				<Event Id="285119704" Name="Play_When_Garden_No_Prog_25s" DurationType="OneShot" DurationMin="2.7270887" DurationMax="2.7270887">
 					<MediaRefs>
 						<MediaRef Id="882743648"/>
 					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="3326204090"/>
-							<PluginRef Id="3538682082"/>
-						</ShareSets>
-					</PluginRefs>
 				</Event>
 				<Event Id="2079633331" Name="Play_When_Garden_No_Prog_60s" DurationType="OneShot" DurationMin="3.352307" DurationMax="3.352307">
 					<MediaRefs>
 						<MediaRef Id="726456648"/>
 					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="3326204090"/>
-							<PluginRef Id="3538682082"/>
-						</ShareSets>
-					</PluginRefs>
 				</Event>
 				<Event Id="4069141843" Name="Play_When_interacting_in_false_order_1st_time" DurationType="OneShot" DurationMin="1.840842" DurationMax="1.840842">
 					<MediaRefs>
 						<MediaRef Id="545651926"/>
 					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="3326204090"/>
-							<PluginRef Id="3538682082"/>
-						</ShareSets>
-					</PluginRefs>
 				</Event>
 				<Event Id="4020069969" Name="Play_When_interacting_in_false_order_2nd_time_v1" DurationType="OneShot" DurationMin="0.82320917" DurationMax="0.82320917">
 					<MediaRefs>
 						<MediaRef Id="836297824"/>
 					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="3326204090"/>
-							<PluginRef Id="3538682082"/>
-						</ShareSets>
-					</PluginRefs>
 				</Event>
 				<Event Id="4020069970" Name="Play_When_interacting_in_false_order_2nd_time_v2" DurationType="OneShot" DurationMin="1.5530641" DurationMax="1.5530641">
 					<MediaRefs>
 						<MediaRef Id="1062062802"/>
 					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="3326204090"/>
-							<PluginRef Id="3538682082"/>
-						</ShareSets>
-					</PluginRefs>
 				</Event>
 				<Event Id="4020069971" Name="Play_When_interacting_in_false_order_2nd_time_v3" DurationType="OneShot" DurationMin="1.9793481" DurationMax="1.9793481">
 					<MediaRefs>
 						<MediaRef Id="906925346"/>
 					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="3326204090"/>
-							<PluginRef Id="3538682082"/>
-						</ShareSets>
-					</PluginRefs>
 				</Event>
 				<Event Id="2955987680" Name="Play_Win" DurationType="OneShot" DurationMin="1" DurationMax="1">
 					<MediaRefs>
@@ -935,7 +907,7 @@
 				<Event Id="1663839887" Name="Stop_Wind_Blowing" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{51290E05-1101-49DB-B627-48C325C1C4A3}">
+		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{D0C157A5-259C-F025-316E-DC28989850AD}">
 			<ShortName>Level1PlayPlace</ShortName>
 			<Path>Level1PlayPlace.bnk</Path>
 			<Media>
@@ -1053,7 +1025,7 @@
 				</File>
 				<File Id="253896970" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>When_PlayPlace_No_Prog_60s.wav</ShortName>
-					<CachePath>SFX/When_PlayPlace_No_Prog_60s_C7ADDFA9.wem</CachePath>
+					<CachePath>SFX/When_PlayPlace_No_Prog_60s_57103D55.wem</CachePath>
 				</File>
 				<File Id="259781958" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>XyloD.wav</ShortName>
@@ -1069,7 +1041,7 @@
 				</File>
 				<File Id="289275323" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>When_Entering_Play_Place.wav</ShortName>
-					<CachePath>SFX/When_Entering_Play_Place_70B78C91.wem</CachePath>
+					<CachePath>SFX/When_Entering_Play_Place_055E156E.wem</CachePath>
 				</File>
 				<File Id="333540284" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bird01-003.wav</ShortName>
@@ -1113,7 +1085,7 @@
 				</File>
 				<File Id="444563830" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Don't wake me.wav</ShortName>
-					<CachePath>SFX/Don't wake me_EC699376.wem</CachePath>
+					<CachePath>SFX/Don't wake me_FC431099.wem</CachePath>
 				</File>
 				<File Id="459346347" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BlockDrop_2.wav</ShortName>
@@ -1121,7 +1093,7 @@
 				</File>
 				<File Id="474015806" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>When_Completing_Clock.wav</ShortName>
-					<CachePath>SFX/When_Completing_Clock_43F1F603.wem</CachePath>
+					<CachePath>SFX/When_Completing_Clock_A7D8B9CC.wem</CachePath>
 				</File>
 				<File Id="476236753" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BookOpen\BookOpen_2.wav</ShortName>
@@ -1153,7 +1125,7 @@
 				</File>
 				<File Id="545651926" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>What_just_happened_1.wav</ShortName>
-					<CachePath>SFX/What_just_happened_1_E45E4672.wem</CachePath>
+					<CachePath>SFX/What_just_happened_1_325A3565.wem</CachePath>
 				</File>
 				<File Id="545916312" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>XyloE.wav</ShortName>
@@ -1181,7 +1153,7 @@
 				</File>
 				<File Id="584254598" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>When_PlayPlace_No_Prog_25s.wav</ShortName>
-					<CachePath>SFX/When_PlayPlace_No_Prog_25s_9D0F6DFB.wem</CachePath>
+					<CachePath>SFX/When_PlayPlace_No_Prog_25s_98A54F5A.wem</CachePath>
 				</File>
 				<File Id="597621904" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BallBounceNew_1.wav</ShortName>
@@ -1285,7 +1257,7 @@
 				</File>
 				<File Id="836297824" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>When_interacting_in_false_order_2nd_time_v1.wav</ShortName>
-					<CachePath>SFX/When_interacting_in_false_order_2nd_time_v1_D9849F19.wem</CachePath>
+					<CachePath>SFX/When_interacting_in_false_order_2nd_time_v1_A5A678C6.wem</CachePath>
 				</File>
 				<File Id="879919748" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PageTurn\PageTurn_1.wav</ShortName>
@@ -1301,11 +1273,11 @@
 				</File>
 				<File Id="890437059" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ClockTickNew.wav</ShortName>
-					<CachePath>SFX/ClockTickNew_E20A328D.wem</CachePath>
+					<CachePath>SFX/ClockTickNew_2683B186.wem</CachePath>
 				</File>
 				<File Id="906925346" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>When_interacting_in_false_order_2nd_time_v3.wav</ShortName>
-					<CachePath>SFX/When_interacting_in_false_order_2nd_time_v3_17BD14CC.wem</CachePath>
+					<CachePath>SFX/When_interacting_in_false_order_2nd_time_v3_E0E99343.wem</CachePath>
 				</File>
 				<File Id="909003059" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Win.wav</ShortName>
@@ -1313,7 +1285,7 @@
 				</File>
 				<File Id="917529019" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>I don't wanna work overtime.wav</ShortName>
-					<CachePath>SFX/I don't wanna work overtime_FA071FFD.wem</CachePath>
+					<CachePath>SFX/I don't wanna work overtime_DA02F45A.wem</CachePath>
 				</File>
 				<File Id="928212570" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BallImpact\Ball_Impact_01.wav</ShortName>
@@ -1365,7 +1337,7 @@
 				</File>
 				<File Id="1062062802" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>When_interacting_in_false_order_2nd_time_v2.wav</ShortName>
-					<CachePath>SFX/When_interacting_in_false_order_2nd_time_v2_65245187.wem</CachePath>
+					<CachePath>SFX/When_interacting_in_false_order_2nd_time_v2_11BA47B0.wem</CachePath>
 				</File>
 				<File Id="1062718881" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BlockDrop_1.wav</ShortName>
@@ -1379,8 +1351,6 @@
 			<Plugins>
 				<ShareSets>
 					<Plugin Id="2650249192" Name="Ball_Flanger" LibName="Wwise Flanger" LibId="8192003"/>
-					<Plugin Id="3326204090" Name="CompressorVoiceline" LibName="Wwise Compressor" LibId="7077891"/>
-					<Plugin Id="3538682082" Name="VoicelineEQKetro" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="4146709168" Name="VoicelineEQBojana" LibName="Wwise Parametric EQ" LibId="6881283"/>
 				</ShareSets>
 			</Plugins>
@@ -1553,67 +1523,31 @@
 					<MediaRefs>
 						<MediaRef Id="474015806"/>
 					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="3326204090"/>
-							<PluginRef Id="3538682082"/>
-						</ShareSets>
-					</PluginRefs>
 				</Event>
 				<Event Id="1179790440" Name="Play_When_Entering_Play_Place" DurationType="OneShot" DurationMin="3.7647986" DurationMax="3.7647986">
 					<MediaRefs>
 						<MediaRef Id="289275323"/>
 					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="3326204090"/>
-							<PluginRef Id="3538682082"/>
-						</ShareSets>
-					</PluginRefs>
 				</Event>
 				<Event Id="4069141843" Name="Play_When_interacting_in_false_order_1st_time" DurationType="OneShot" DurationMin="1.840842" DurationMax="1.840842">
 					<MediaRefs>
 						<MediaRef Id="545651926"/>
 					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="3326204090"/>
-							<PluginRef Id="3538682082"/>
-						</ShareSets>
-					</PluginRefs>
 				</Event>
 				<Event Id="4020069969" Name="Play_When_interacting_in_false_order_2nd_time_v1" DurationType="OneShot" DurationMin="0.82320917" DurationMax="0.82320917">
 					<MediaRefs>
 						<MediaRef Id="836297824"/>
 					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="3326204090"/>
-							<PluginRef Id="3538682082"/>
-						</ShareSets>
-					</PluginRefs>
 				</Event>
 				<Event Id="4020069970" Name="Play_When_interacting_in_false_order_2nd_time_v2" DurationType="OneShot" DurationMin="1.5530641" DurationMax="1.5530641">
 					<MediaRefs>
 						<MediaRef Id="1062062802"/>
 					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="3326204090"/>
-							<PluginRef Id="3538682082"/>
-						</ShareSets>
-					</PluginRefs>
 				</Event>
 				<Event Id="4020069971" Name="Play_When_interacting_in_false_order_2nd_time_v3" DurationType="OneShot" DurationMin="1.9793481" DurationMax="1.9793481">
 					<MediaRefs>
 						<MediaRef Id="906925346"/>
 					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="3326204090"/>
-							<PluginRef Id="3538682082"/>
-						</ShareSets>
-					</PluginRefs>
 				</Event>
 				<Event Id="1440198381" Name="Play_When_Playplace_Clicking_On_Bird" DurationType="OneShot" DurationMin="1.7904705" DurationMax="1.7904705">
 					<MediaRefs>
@@ -1629,45 +1563,21 @@
 					<MediaRefs>
 						<MediaRef Id="584254598"/>
 					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="3326204090"/>
-							<PluginRef Id="3538682082"/>
-						</ShareSets>
-					</PluginRefs>
 				</Event>
 				<Event Id="2696928905" Name="Play_When_PlayPlace_No_Prog_60s" DurationType="OneShot" DurationMin="1.6871485" DurationMax="1.6871485">
 					<MediaRefs>
 						<MediaRef Id="253896970"/>
 					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="3326204090"/>
-							<PluginRef Id="3538682082"/>
-						</ShareSets>
-					</PluginRefs>
 				</Event>
 				<Event Id="35571092" Name="Play_When_Triggering_Light_Show_v1" DurationType="OneShot" DurationMin="4.0818567" DurationMax="4.0818567">
 					<MediaRefs>
 						<MediaRef Id="917529019"/>
 					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="3326204090"/>
-							<PluginRef Id="3538682082"/>
-						</ShareSets>
-					</PluginRefs>
 				</Event>
 				<Event Id="35571095" Name="Play_When_Triggering_Light_Show_v2" DurationType="OneShot" DurationMin="3.6023085" DurationMax="3.6023085">
 					<MediaRefs>
 						<MediaRef Id="444563830"/>
 					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="3326204090"/>
-							<PluginRef Id="3538682082"/>
-						</ShareSets>
-					</PluginRefs>
 				</Event>
 				<Event Id="2955987680" Name="Play_Win" DurationType="OneShot" DurationMin="1" DurationMax="1">
 					<MediaRefs>
@@ -1715,7 +1625,7 @@
 				<GameParameter Id="185769106" Name="Lv1_LightOn"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{2E43011F-597E-2FEA-3D67-0242567CB38D}">
+		<SoundBank Id="2678230383" Type="User" Language="SFX" Hash="{63E9AA0D-A406-5342-1B43-AA9872197C00}">
 			<ShortName>Level0</ShortName>
 			<Path>Level0.bnk</Path>
 			<Media>
@@ -1761,7 +1671,7 @@
 				</File>
 				<File Id="307472616" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>When_Entering_Office.wav</ShortName>
-					<CachePath>SFX/When_Entering_Office_0EA610E2.wem</CachePath>
+					<CachePath>SFX/When_Entering_Office_CC0070D5.wem</CachePath>
 				</File>
 				<File Id="333540284" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bird01-003.wav</ShortName>
@@ -1777,7 +1687,7 @@
 				</File>
 				<File Id="409550975" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>When_Office_No_Prog_25s.wav</ShortName>
-					<CachePath>SFX/When_Office_No_Prog_25s_8D714873.wem</CachePath>
+					<CachePath>SFX/When_Office_No_Prog_25s_FAF021BC.wem</CachePath>
 				</File>
 				<File Id="414646934" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Quest_Game_Crafting_Wood_-2.wav</ShortName>
@@ -1797,7 +1707,7 @@
 				</File>
 				<File Id="545651926" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>What_just_happened_1.wav</ShortName>
-					<CachePath>SFX/What_just_happened_1_E45E4672.wem</CachePath>
+					<CachePath>SFX/What_just_happened_1_325A3565.wem</CachePath>
 				</File>
 				<File Id="583454713" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bird01-002.wav</ShortName>
@@ -1813,7 +1723,7 @@
 				</File>
 				<File Id="750217263" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>When_Office_No_Prog_60s.wav</ShortName>
-					<CachePath>SFX/When_Office_No_Prog_60s_05E1D726.wem</CachePath>
+					<CachePath>SFX/When_Office_No_Prog_60s_CAE11889.wem</CachePath>
 				</File>
 				<File Id="773465686" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Poof\Poof_2.wav</ShortName>
@@ -1833,7 +1743,7 @@
 				</File>
 				<File Id="836297824" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>When_interacting_in_false_order_2nd_time_v1.wav</ShortName>
-					<CachePath>SFX/When_interacting_in_false_order_2nd_time_v1_D9849F19.wem</CachePath>
+					<CachePath>SFX/When_interacting_in_false_order_2nd_time_v1_A5A678C6.wem</CachePath>
 				</File>
 				<File Id="879919748" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PageTurn\PageTurn_1.wav</ShortName>
@@ -1841,11 +1751,11 @@
 				</File>
 				<File Id="890437059" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ClockTickNew.wav</ShortName>
-					<CachePath>SFX/ClockTickNew_E20A328D.wem</CachePath>
+					<CachePath>SFX/ClockTickNew_2683B186.wem</CachePath>
 				</File>
 				<File Id="906925346" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>When_interacting_in_false_order_2nd_time_v3.wav</ShortName>
-					<CachePath>SFX/When_interacting_in_false_order_2nd_time_v3_17BD14CC.wem</CachePath>
+					<CachePath>SFX/When_interacting_in_false_order_2nd_time_v3_E0E99343.wem</CachePath>
 				</File>
 				<File Id="909003059" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Win.wav</ShortName>
@@ -1865,7 +1775,7 @@
 				</File>
 				<File Id="984106833" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>When_Pushed_By_Bird.wav</ShortName>
-					<CachePath>SFX/When_Pushed_By_Bird_E53E49D3.wem</CachePath>
+					<CachePath>SFX/When_Pushed_By_Bird_FFF5EB5C.wem</CachePath>
 				</File>
 				<File Id="985095586" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Clock_Tick_Reverse.wav</ShortName>
@@ -1877,19 +1787,13 @@
 				</File>
 				<File Id="1062062802" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>When_interacting_in_false_order_2nd_time_v2.wav</ShortName>
-					<CachePath>SFX/When_interacting_in_false_order_2nd_time_v2_65245187.wem</CachePath>
+					<CachePath>SFX/When_interacting_in_false_order_2nd_time_v2_11BA47B0.wem</CachePath>
 				</File>
 				<File Id="1067518328" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BookClose_1.wav</ShortName>
 					<CachePath>SFX/BookClose_1_8E324C96.wem</CachePath>
 				</File>
 			</Media>
-			<Plugins>
-				<ShareSets>
-					<Plugin Id="3326204090" Name="CompressorVoiceline" LibName="Wwise Compressor" LibId="7077891"/>
-					<Plugin Id="3538682082" Name="VoicelineEQKetro" LibName="Wwise Parametric EQ" LibId="6881283"/>
-				</ShareSets>
-			</Plugins>
 			<Events>
 				<Event Id="3025897706" Name="Play_Birds" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.75628006" DurationMax="1.431963">
 					<MediaRefs>
@@ -1974,89 +1878,41 @@
 					<MediaRefs>
 						<MediaRef Id="307472616"/>
 					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="3326204090"/>
-							<PluginRef Id="3538682082"/>
-						</ShareSets>
-					</PluginRefs>
 				</Event>
 				<Event Id="4069141843" Name="Play_When_interacting_in_false_order_1st_time" DurationType="OneShot" DurationMin="1.840842" DurationMax="1.840842">
 					<MediaRefs>
 						<MediaRef Id="545651926"/>
 					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="3326204090"/>
-							<PluginRef Id="3538682082"/>
-						</ShareSets>
-					</PluginRefs>
 				</Event>
 				<Event Id="4020069969" Name="Play_When_interacting_in_false_order_2nd_time_v1" DurationType="OneShot" DurationMin="0.82320917" DurationMax="0.82320917">
 					<MediaRefs>
 						<MediaRef Id="836297824"/>
 					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="3326204090"/>
-							<PluginRef Id="3538682082"/>
-						</ShareSets>
-					</PluginRefs>
 				</Event>
 				<Event Id="4020069970" Name="Play_When_interacting_in_false_order_2nd_time_v2" DurationType="OneShot" DurationMin="1.5530641" DurationMax="1.5530641">
 					<MediaRefs>
 						<MediaRef Id="1062062802"/>
 					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="3326204090"/>
-							<PluginRef Id="3538682082"/>
-						</ShareSets>
-					</PluginRefs>
 				</Event>
 				<Event Id="4020069971" Name="Play_When_interacting_in_false_order_2nd_time_v3" DurationType="OneShot" DurationMin="1.9793481" DurationMax="1.9793481">
 					<MediaRefs>
 						<MediaRef Id="906925346"/>
 					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="3326204090"/>
-							<PluginRef Id="3538682082"/>
-						</ShareSets>
-					</PluginRefs>
 				</Event>
 				<Event Id="885707271" Name="Play_When_Office_No_Prog_25s" DurationType="OneShot" DurationMin="2.3047462" DurationMax="2.3047462">
 					<MediaRefs>
 						<MediaRef Id="409550975"/>
 					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="3326204090"/>
-							<PluginRef Id="3538682082"/>
-						</ShareSets>
-					</PluginRefs>
 				</Event>
 				<Event Id="2849277068" Name="Play_When_Office_No_Prog_60s" DurationType="OneShot" DurationMin="2.4632256" DurationMax="2.4632256">
 					<MediaRefs>
 						<MediaRef Id="750217263"/>
 					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="3326204090"/>
-							<PluginRef Id="3538682082"/>
-						</ShareSets>
-					</PluginRefs>
 				</Event>
 				<Event Id="3371290448" Name="Play_When_Pushed_By_Bird" DurationType="OneShot" DurationMin="2.4823382" DurationMax="2.4823382">
 					<MediaRefs>
 						<MediaRef Id="984106833"/>
 					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="3326204090"/>
-							<PluginRef Id="3538682082"/>
-						</ShareSets>
-					</PluginRefs>
 				</Event>
 				<Event Id="2955987680" Name="Play_Win" DurationType="OneShot" DurationMin="1" DurationMax="1">
 					<MediaRefs>
@@ -2091,5 +1947,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{1F5FE4B3-1141-B048-1A37-764A6A0974A8}</FileHash>
+	<FileHash>{5E8027D6-D647-E54A-D03A-963CE9E7A87C}</FileHash>
 </SoundBanksInfo>
