@@ -8,7 +8,6 @@ public class GardenManager : MonoBehaviour
     public Transform playerTransform; // Assign in inspector
     public Transform shockwaveItem; // Assign the clock object's transform in inspector
 
-
     public GameObject player;
     public GameObject VenusFlytrap;
     public ClockManipulation ClockController;
@@ -18,10 +17,10 @@ public class GardenManager : MonoBehaviour
     public Camera birdCamera;
     public Camera venusFlytrapCamera;
 
-    private bool isFloralMatched = false;
-    private bool isWindChimesPlayed = false;
-    private bool isScaleBalanced = false;
-    private bool isClockSet = false;
+    private bool isFloralMatched = true;
+    private bool isWindChimesPlayed = true;
+    private bool isScaleBalanced = true;
+    private bool isClockSet = true;
     public bool PlayerEaten = false;
 
     public GameObject waterObject;
@@ -30,8 +29,6 @@ public class GardenManager : MonoBehaviour
 
     private bool isGardenFlooded = false;
     [SerializeField] private float riseSpeed = 0.15f;
-
-    // private float floodDelay = 1.0f;
     [SerializeField] private float riseAmount = 20f;
 
     private float initialYPosition;
@@ -60,13 +57,14 @@ public class GardenManager : MonoBehaviour
     [SerializeField] private VoiceLine noProgress25;
     [SerializeField] private VoiceLine noProgress60;
 
+    public GameObject[] gardenLights;
+    private bool gardenLightsEnabled = false;
 
     void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            // DontDestroyOnLoad(gameObject);
 
             //Play BGM
             AkSoundEngine.PostEvent("Play_Level2_NewGardenMusic", this.gameObject);
@@ -236,7 +234,6 @@ public class GardenManager : MonoBehaviour
             AkSoundEngine.PostEvent("Play_FlyTrapPopedUp", VenusFlytrap.gameObject);
         }
         isTrapActive = true;
-        EnableGardenLights();
         StartCoroutine(PlayerEnable(false, 0f));
         StartCoroutine(SwitchCamera(playerCamera, venusFlytrapCamera, 0f));
         StartCoroutine(SwitchCamera(venusFlytrapCamera, playerCamera, 9f));
@@ -364,7 +361,18 @@ public class GardenManager : MonoBehaviour
                 }
             }
         }
+
+        // enable/disable garden lights based on day/night
+        if (GetIsNight() && !gardenLightsEnabled)
+        {
+            EnableGardenLights(true);
+        }
+        else if (!GetIsNight() && gardenLightsEnabled)
+        {
+            EnableGardenLights(false);
+        }
     }
+
     IEnumerator WaitBeforeSink(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
@@ -463,30 +471,19 @@ public class GardenManager : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 
-    public void EnableGardenLights()
+    private void EnableGardenLights(bool enable)
     {
-        foreach (GameObject obj in FindObjectsOfType<GameObject>(true))
+        foreach (GameObject light in gardenLights)
         {
-            // Check if the object's name is "yeah"
-            if (obj.name == "Point")
-            {
-                // Enable the game object
-                obj.SetActive(true);
-            }
+            light.SetActive(enable);
         }
-        // // Assuming "Garden Lights" is the name of the parent GameObject
-        // // and it's attached to this script
-        // foreach (Transform gardenLightTransform in transform)
-        // {
-        //     // Find the "Point" object within the current "GardenLight"
-        //     Transform pointTransform = gardenLightTransform.Find("Point");
+        gardenLightsEnabled = enable;
+    }
 
-        //     if (pointTransform != null)
-        //     {
-        //         // Disable the "Point" GameObject
-        //         pointTransform.gameObject.SetActive(true);
-        //     }
-        // }
+    private bool GetIsNight()
+    {
+        float rotationAmount = Mathf.Abs(ClockController.GetRotationAmount());
+        return rotationAmount > 180f && rotationAmount < 540f;
     }
 
     public bool IsScaleBalanced()

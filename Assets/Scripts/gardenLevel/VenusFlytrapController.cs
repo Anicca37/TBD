@@ -32,10 +32,8 @@ public class VenusFlytrapController : MonoBehaviour
 
     private IEnumerator PlayFlytrapBreathSound()
     {
-        //GameObject theFlytrap = GameObject.Find("body.002");
         while (IsGrowed && !IsPlayerEaten)
         {
-            
             AkSoundEngine.PostEvent("Play_FlytrapBreath", theFlytrap.gameObject);
 
             yield return new WaitForSeconds(15f);
@@ -57,7 +55,6 @@ public class VenusFlytrapController : MonoBehaviour
 
     void playFlytrapSound()
     {
-        //GameObject theFlytrap = GameObject.Find("body.002");
         AkSoundEngine.PostEvent("Play_Vine_Growing", theFlytrap.gameObject);
     }
 }
