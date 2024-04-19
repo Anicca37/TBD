@@ -32,6 +32,7 @@ namespace AK
         static const AkUniqueID PLAY_CLOCK_TICK = 2797822332U;
         static const AkUniqueID PLAY_CLOCK_TICK_REVERSE = 3830889987U;
         static const AkUniqueID PLAY_CONFETTI = 831234954U;
+        static const AkUniqueID PLAY_CREDITS = 2970769112U;
         static const AkUniqueID PLAY_DOOR_CLOSE = 2292458263U;
         static const AkUniqueID PLAY_DOOR_OPEN = 1660008929U;
         static const AkUniqueID PLAY_FLOWERPICKUP = 1678695831U;
@@ -96,6 +97,7 @@ namespace AK
         static const AkUniqueID STOP_CHIME_MELODY = 184097815U;
         static const AkUniqueID STOP_CLOCK_TICK = 2897827502U;
         static const AkUniqueID STOP_CLOCK_TICK_REVERSE = 3434769657U;
+        static const AkUniqueID STOP_CREDITS = 873807182U;
         static const AkUniqueID STOP_GARDENCUTSCENE = 571755607U;
         static const AkUniqueID STOP_GARDENENDCUTSCENE = 648099770U;
         static const AkUniqueID STOP_INTROCUTSCENE = 692624126U;
@@ -131,6 +133,7 @@ namespace AK
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
+        static const AkUniqueID CREDITS = 2201105581U;
         static const AkUniqueID CUTSCENE = 1182958561U;
         static const AkUniqueID LEVEL0 = 2678230383U;
         static const AkUniqueID LEVEL1PLAYPLACE = 2631894517U;

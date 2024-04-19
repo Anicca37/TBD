@@ -8,6 +8,7 @@ public class CreditsController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        AkSoundEngine.PostEvent("Play_Credits", this.gameObject);
         StartCoroutine(LoadNextScene());
     }
 
@@ -16,6 +17,7 @@ public class CreditsController : MonoBehaviour
     {
         if (InputManager.instance.ConfirmInput)
         {
+            AkSoundEngine.PostEvent("Stop_Credits", this.gameObject);
             SceneManager.LoadScene("UI");
         }
     }
@@ -24,6 +26,7 @@ public class CreditsController : MonoBehaviour
     {
         yield return new WaitForSeconds(25f);
         // Load the next scene
+        AkSoundEngine.PostEvent("Stop_Credits", this.gameObject);
         SceneManager.LoadScene("UI");
     }
 }

@@ -649,7 +649,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c829b83be71c8a4d9fc3b43dae098d9f
     GuidInternal: 
-    m_lastTime: -8584886292938257329
+    m_lastTime: -8584885275250980061
     List:
     - name: Bird
       guid: 5f720a9b671b8842a9e19381cb155dca
@@ -1833,7 +1833,7 @@ MonoBehaviour:
     ParentPath: Events\Lv2Garden
     guid: 79f102072e2e844c90913baf4de5b1ea
     GuidInternal: 
-    m_lastTime: -8584888866355757870
+    m_lastTime: -8584885275250874978
     List:
     - name: Chime
       guid: c19fd83680b1734885dc9ef71bf226bc
@@ -2037,6 +2037,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.8393321
       minDuration: 1.5756125
+    - name: Play_FlytrapBreath
+      guid: 0b9416dc65a71845870416afd26f5d30
+      id: 1087380358
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Lv2Garden
+        ObjectType: 12
+        guid: 79f102072e2e844c90913baf4de5b1ea
+      - ElementName: Play_FlytrapBreath
+        ObjectType: 3
+        guid: 0b9416dc65a71845870416afd26f5d30
+      Path: Events\Lv2Garden\Play_FlytrapBreath
+      maxAttenuation: 130
+      maxDuration: 1.5095457
+      minDuration: 0.5210949
     - name: Play_FlyTrapPopedUp
       guid: e52bfc67e66d0942ba698c9f3658ed0c
       id: 531081561

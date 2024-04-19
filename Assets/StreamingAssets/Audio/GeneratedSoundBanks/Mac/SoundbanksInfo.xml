@@ -227,7 +227,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{53E3416B-420F-A1B9-C013-9F6D86C20C99}">
+		<SoundBank Id="2029599918" Type="User" Language="SFX" Hash="{99582B16-393C-E195-1AFE-A2FC1DFC94DB}">
 			<ShortName>Level2Garden</ShortName>
 			<Path>Level2Garden.bnk</Path>
 			<Media>
@@ -593,7 +593,7 @@
 				</File>
 				<File Id="1015123158" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Garden_Ambience.wav</ShortName>
-					<CachePath>SFX/Garden_Ambience_FBC78EF0.wem</CachePath>
+					<CachePath>SFX/Garden_Ambience_56CEF360.wem</CachePath>
 				</File>
 				<File Id="1023893752" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Flower_PickUp_07.wav</ShortName>
@@ -907,7 +907,25 @@
 				<Event Id="1663839887" Name="Stop_Wind_Blowing" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{D0C157A5-259C-F025-316E-DC28989850AD}">
+		<SoundBank Id="2201105581" Type="User" Language="SFX" Hash="{7DE24564-E3B5-893A-D8E5-6198EB7B798F}">
+			<ShortName>Credits</ShortName>
+			<Path>Credits.bnk</Path>
+			<Media>
+				<File Id="185843449" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_4-4_100bpm_Credits_lp.wav</ShortName>
+					<CachePath>SFX/mus_4-4_100bpm_Credits_lp_239921B3.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2970769112" Name="Play_Credits" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="185843449"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="873807182" Name="Stop_Credits" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="2631894517" Type="User" Language="SFX" Hash="{CE6758F0-F35E-175C-5DFE-65CF0878CF30}">
 			<ShortName>Level1PlayPlace</ShortName>
 			<Path>Level1PlayPlace.bnk</Path>
 			<Media>
@@ -1077,7 +1095,7 @@
 				</File>
 				<File Id="377200440" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>LightShow_1.wav</ShortName>
-					<CachePath>SFX/LightShow_1_FBC78EF0.wem</CachePath>
+					<CachePath>SFX/LightShow_1_56CEF360.wem</CachePath>
 				</File>
 				<File Id="433731441" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-4_125bpm_Level1\mus_3-4_125bpm_Level1_Tran2\mus_3-4_125bpm_Level1_Tran2_CMelody_VL.wav</ShortName>
@@ -1928,13 +1946,13 @@
 				<Event Id="3434769657" Name="Stop_Clock_Tick_Reverse" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3604647259" Type="User" Language="SFX" Hash="{768A0487-31EF-D974-FA09-C933F9BA8B6C}">
+		<SoundBank Id="3604647259" Type="User" Language="SFX" Hash="{DB3AAFE1-B0CF-F1EB-427D-F93763E37096}">
 			<ShortName>MainMenu</ShortName>
 			<Path>MainMenu.bnk</Path>
 			<Media>
 				<File Id="994665873" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_3-3_110bpm_Menu_lp_V2.wav</ShortName>
-					<CachePath>SFX/mus_3-3_110bpm_Menu_lp_V2_FBC78EF0.wem</CachePath>
+					<CachePath>SFX/mus_3-3_110bpm_Menu_lp_V2_239921B3.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -1947,5 +1965,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{5E8027D6-D647-E54A-D03A-963CE9E7A87C}</FileHash>
+	<FileHash>{77037306-7746-D23C-6379-5AB4347038B3}</FileHash>
 </SoundBanksInfo>
