@@ -40,24 +40,25 @@ public class IntroVideoController : MonoBehaviour
         }
         videoPlayer.Play();
 
+        string currentScene = SceneManager.GetActiveScene().name;
         // play sound
-        if (nextSceneName == "DemoLevel")
+        if (currentScene == "IntroCutScene")
         {
             AkSoundEngine.PostEvent("Play_IntroCutscene", this.gameObject);
         } 
-        else if (nextSceneName == "PlayPlace Remap")
+        else if (currentScene == "PlayPlaceIntro")
         {
             Invoke("playPlayPlaceCutSceneSound", 0.4f);
         }
-        else if (nextSceneName == "Garden_3 - Terrain")
+        else if (currentScene == "GardenIntro")
         {
             Invoke("playGardenCutSceneSound", 0.4f);
         }
-        else if (nextSceneName == "UI")
+        else if (currentScene == "GardenEnd")
         {
             Invoke("playGardenEndCutSceneSound", 0.4f);
         }
-        else if (nextSceneName == "GardenIntro")
+        else if (currentScene == "PlayPlaceEnd")
         {
             Invoke("playBallPitEndCutScene", 0.4f);
         }
@@ -71,23 +72,24 @@ public class IntroVideoController : MonoBehaviour
         {
             SkipVideo();
 
-            if (nextSceneName == "DemoLevel")
+            string currentScene = SceneManager.GetActiveScene().name;
+            if (currentScene == "IntroCutScene")
             {
                 AkSoundEngine.PostEvent("Stop_IntroCutscene", this.gameObject);
             }
-            else if (nextSceneName == "PlayPlace Remap")
+            else if (currentScene == "PlayPlaceIntro")
             {
                 AkSoundEngine.PostEvent("Stop_BallPitCutScene", this.gameObject);
             }
-            else if (nextSceneName == "Garden_3 - Terrain")
+            else if (currentScene == "GardenIntro")
             {
                 AkSoundEngine.PostEvent("Stop_GardenCutScene", this.gameObject);
             }
-            else if (nextSceneName == "UI")
+            else if (currentScene == "GardenEnd")
             {
                 AkSoundEngine.PostEvent("Stop_GardenEndCutScene", this.gameObject);
             }
-            else if (nextSceneName == "GardenIntro")
+            else if (currentScene == "PlayPlaceEnd")
             {
                 AkSoundEngine.PostEvent("Stop_BallPitEndCutScene", this.gameObject);
             }
@@ -112,10 +114,6 @@ public class IntroVideoController : MonoBehaviour
         {
             StartCoroutine(DelayedEscapeActivation());
         }
-        else if (SceneManager.GetActiveScene().name == "GardenEnd")
-        {
-            StartCoroutine(DelayedEscapeActivation());
-        }
         else {
             SceneManager.LoadScene(nextSceneName);
         }
@@ -133,14 +131,17 @@ public class IntroVideoController : MonoBehaviour
     {
         AkSoundEngine.PostEvent("Play_BallPitCutScene", this.gameObject);
     }
+
     void playGardenCutSceneSound()
     {
         AkSoundEngine.PostEvent("Play_GardenCutScene", this.gameObject);
     }
+
     void playGardenEndCutSceneSound()
     {
         AkSoundEngine.PostEvent("Play_GardenEndCutScene", this.gameObject);
     }
+
     void playBallPitEndCutScene()
     {
         AkSoundEngine.PostEvent("Play_BallPitEndCutScene", this.gameObject);

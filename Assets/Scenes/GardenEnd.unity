@@ -547,7 +547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 669308435}
-  nextSceneName: UI
+  nextSceneName: Credits
   loadingScreen: {fileID: 0}
   EscapeBackground: {fileID: 1702319928}
   EscapeController: {fileID: 284164250}
