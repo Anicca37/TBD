@@ -382,8 +382,22 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 724273f56b5e06438af07ac6a6b97f15
     GuidInternal: 
-    m_lastTime: -8584900337320366101
+    m_lastTime: -8584881152901567260
     List:
+    - name: Credits
+      guid: 848c12e8edd6314dabe4fa03532cdf4d
+      id: 2201105581
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 724273f56b5e06438af07ac6a6b97f15
+      - ElementName: Credits
+        ObjectType: 7
+        guid: 848c12e8edd6314dabe4fa03532cdf4d
+      Path: SoundBanks\Default Work Unit\Credits
     - name: CutScene
       guid: 55a4c57222aa9144a0a5ef0e81781081
       id: 1182958561
@@ -455,6 +469,53 @@ MonoBehaviour:
         guid: 8f26b42506fa6f488ff0bb9a78b9a5c2
       Path: SoundBanks\Default Work Unit\MainMenu
   EventWwu:
+  - PhysicalPath: Events\Credits.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Credits
+      ObjectType: 12
+      guid: c6ed99857177764d95cdcd50266e2aa6
+    ParentPath: Events\Credits
+    guid: c6ed99857177764d95cdcd50266e2aa6
+    GuidInternal: 
+    m_lastTime: -8584881152901176922
+    List:
+    - name: Play_Credits
+      guid: 6cb61227197fac45b6d008b91a70bad3
+      id: 2970769112
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Credits
+        ObjectType: 12
+        guid: c6ed99857177764d95cdcd50266e2aa6
+      - ElementName: Play_Credits
+        ObjectType: 3
+        guid: 6cb61227197fac45b6d008b91a70bad3
+      Path: Events\Credits\Play_Credits
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Credits
+      guid: 52db26690ec3fc428386f38a9e9af8f5
+      id: 873807182
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Credits
+        ObjectType: 12
+        guid: c6ed99857177764d95cdcd50266e2aa6
+      - ElementName: Stop_Credits
+        ObjectType: 3
+        guid: 52db26690ec3fc428386f38a9e9af8f5
+      Path: Events\Credits\Stop_Credits
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   - PhysicalPath: Events\CutScenes.wwu
     PathAndIcons:
     - ElementName: Events
@@ -649,7 +710,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c829b83be71c8a4d9fc3b43dae098d9f
     GuidInternal: 
-    m_lastTime: -8584885275250980061
+    m_lastTime: -8584881152901432140
     List:
     - name: Bird
       guid: 5f720a9b671b8842a9e19381cb155dca
@@ -2841,7 +2902,7 @@ MonoBehaviour:
     m_lastTime: -8584949682095063988
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 5300000054000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

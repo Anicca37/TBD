@@ -37,7 +37,9 @@ public class buttonScript : MonoBehaviour
                         AkSoundEngine.PostEvent("Play_Birds", this.gameObject);
 
                         if (!GardenManager.IsScaleBalanced())
-                        { VoiceLineManager.Instance.PlayVoiceLine(clickBird); }
+                        { 
+                            VoiceLineManager.Instance.PlayVoiceLine(clickBird); 
+                        }
                     }
                 }
             }
