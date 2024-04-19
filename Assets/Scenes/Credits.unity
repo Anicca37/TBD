@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -480, y: -419}
+  m_AnchoredPosition: {x: -480, y: -420}
   m_SizeDelta: {x: 700, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &110605290
@@ -291,7 +291,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -480, y: -1911}
+  m_AnchoredPosition: {x: -480, y: -2060}
   m_SizeDelta: {x: 700, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &367109207
@@ -838,12 +838,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\nHuaizhi (Ketro) Yang\nIlia Jamasb\nInaas Asad\nMinh Nguyen\nHuaizhi
-    (Ketro) Yang\r\nInaas Asad\r\nBojana Tudorovic\r\n\n\nIlia Jamasb\r\nInaas Asad\r\nKathy
-    Lee\r\nLingfei (Sapphire) Li\r\n\n\nStephen Marrello\r\nBojana Tudorovic\r\nStephen
-    Marrello\r\nMihn Nguyen\r\nBojana Tudorovic\r\nStephen Marrello\r\nBojana Tudorovic\r\nStephen
-    Marrello\r\nKathy Lee\r\nBojana Tudorovic\nLingfei (Sapphire) Li\nStephen Marrello\n\n\nHuaizhi
-    (Ketro) Yang\t\nHuaizhi (Ketro) Yang\nZongfan Li\nJay  - Huaizhi (Ketro) Yang\t\r\nThe
-    Bird - Bojana Tudorovic\r\nBlocks - Minh Nguyen\r\n"
+    (Ketro) Yang\r\nInaas Asad\r\nBojana Tudorovic\r\n\n\nLingfei (Sapphire) Li\r\nInaas
+    Asad\r\nKathy Lee\r\nIlia Jamasb\r\n\n\n\nStephen Marrello\r\nBojana Tudorovic\r\nStephen
+    Marrello\r\nMihn Nguyen\r\nBojana Tudorovic\r\nStephen Marrello\r\nBojana Tudorovic\nInaas
+    Asad\r\nStephen Marrello\r\nKathy Lee\r\nBojana Tudorovic\nLingfei (Sapphire)
+    Li\nStephen Marrello\n\n\nHuaizhi (Ketro) Yang\t\nHuaizhi (Ketro) Yang\nZongfan
+    Li\nJay  - Huaizhi (Ketro) Yang\t\r\nThe Bird - Bojana Tudorovic\r\nBlocks -
+    Minh Nguyen\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bbb2552a447b2469581c41f16a322477, type: 2}
   m_sharedMaterial: {fileID: -2121183325642090797, guid: bbb2552a447b2469581c41f16a322477, type: 2}
@@ -1142,7 +1143,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -480, y: -852}
+  m_AnchoredPosition: {x: -480, y: -850}
   m_SizeDelta: {x: 700, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &918726366
@@ -1691,6 +1692,7 @@ MonoBehaviour:
     Art
 
 
+
     Animation
 
 
@@ -1701,14 +1703,15 @@ MonoBehaviour:
 
 
 
+
     Audio Programmer
 
-    Sound Designer
+    Sound
+    Designer
 
     Composer
 
-    Voice
-    Actors'
+    Voice Actors'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bbb2552a447b2469581c41f16a322477, type: 2}
   m_sharedMaterial: {fileID: -2121183325642090797, guid: bbb2552a447b2469581c41f16a322477, type: 2}
@@ -2086,7 +2089,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -480, y: 281}
+  m_AnchoredPosition: {x: -480, y: 280}
   m_SizeDelta: {x: 700, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1873392437
@@ -2220,7 +2223,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -480, y: -2493}
+  m_AnchoredPosition: {x: -480, y: -2670}
   m_SizeDelta: {x: 700, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1913231615
@@ -2354,7 +2357,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 55, y: -2629}
+  m_AnchoredPosition: {x: 55, y: -2810}
   m_SizeDelta: {x: 750, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1943269598
