@@ -110,6 +110,7 @@ public class MainMenuController : MonoBehaviour
         switch (selectedOption)
         {
             case MenuOption.Start:
+                AkSoundEngine.PostEvent("Stop_MainMenu", this.gameObject);
                 SceneManager.LoadScene("IntroCutScene");
                 break;
             case MenuOption.Levels:

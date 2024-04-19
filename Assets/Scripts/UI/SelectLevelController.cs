@@ -108,15 +108,20 @@ public class SelectLevelController : MonoBehaviour
 
     private void SelectOption()
     {
+        GameObject theMenu = GameObject.Find("Main Menu Controller");
+
         switch (selectedOption)
         {
             case MenuOption.Tutorial:
+                AkSoundEngine.PostEvent("Stop_MainMenu", theMenu.gameObject);
                 SceneManager.LoadScene("IntroCutScene");
                 break;
             case MenuOption.Ballpit:
+                AkSoundEngine.PostEvent("Stop_MainMenu", theMenu.gameObject);
                 SceneManager.LoadScene("PlayPlaceIntro");
                 break;
             case MenuOption.Garden:
+                AkSoundEngine.PostEvent("Stop_MainMenu", theMenu.gameObject);
                 SceneManager.LoadScene("GardenIntro");
                 break;
             case MenuOption.Menu:
